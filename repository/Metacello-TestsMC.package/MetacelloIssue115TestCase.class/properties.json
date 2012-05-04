@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"gofer" ],
+		 ],
 	"name" : "MetacelloIssue115TestCase",
 	"pools" : [
 		 ],
-	"super" : "TestCase",
+	"super" : "MetacelloIssueTestCase",
 	"type" : "normal" }

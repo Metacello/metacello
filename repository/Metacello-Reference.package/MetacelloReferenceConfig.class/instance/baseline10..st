@@ -3,10 +3,18 @@ baseline10: spec
 	<version: '1.0-baseline'>
 	
 	spec for: #common do: [
+		"alternate methods for specifying author, blessing, description, timestamp, preLoadDoIt, postLoadDoit (not recommended)"
+		spec blessing: [ spec value: #baseline. ].
+		spec description: [ spec value: 'Descriptive comment'. ].
+		spec author: [ spec value: 'dkh'. ].
+		spec timestamp: [ spec value: '10/7/2009 14:40'. ].
+		spec timestamp: [ spec value: (DateAndTime fromString: '10/7/2009 14:40'). ].
+		"recommended methods for specifying author, blessing, description, timestamp, preLoadDoIt, postLoadDoit"
 		"#development, #baseline, #release, #beta, etc."
 		spec blessing: #baseline.									
 		spec description: 'Descriptive comment'.
 		spec author: 'dkh'.
+		spec timestamp: (DateAndTime fromString: '10/7/2009 14:40').
 		spec timestamp: '10/7/2009 14:40'.
 		spec
 			"Before loading packages or projects in this version, send #preloadForVersion to an instance of this config"
@@ -29,11 +37,12 @@ baseline10: spec
 				repository: 'http://www.example.com/ar';
 				repository: 'http://www.example.com/private' username: 'foo' password: 'bar' ].
 		spec
-			"Create or update a project reference"
+			"Create or update a project reference named 'UI Support'"
 			project: 'UI Support' with: [							
 				"One or more of the following attributes may be defined or changed"
 				spec
-					"Name of config class (i.e., ConfigurationOfXXX)"
+					"OPTIONAL: Name of config class (i.e., ConfigurationOfXXX), if not specified, className is assumed to be the 
+					 name of the project prependended with 'ConfigurationOf'"
 					className: 'ConfigurationOfUI';
 					"Version of project to be loaded. if theversionString is not specified, then the latest version of the project is used."
 					versionString: '1.0';

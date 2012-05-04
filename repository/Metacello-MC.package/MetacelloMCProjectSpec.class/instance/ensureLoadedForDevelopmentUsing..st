@@ -5,26 +5,29 @@ ensureLoadedForDevelopmentUsing: mcLoader
 	| ensured |
 	ensured := mcLoader ensuredMap at: self name ifAbsent: [ nil ].
 	self projectClass ~~ nil
-		ifTrue: [  | vrsn |
+		ifTrue: [ 
+			| vrsn |
 			vrsn := self versionOrNil.
 			(vrsn ~~ nil and: [ vrsn blessing == #development ])
 				ifTrue: [ 
 					ensured ~~ #latest
-						ifTrue: [
+						ifTrue: [ 
 							mcLoader ensureForDevelopment
-								ifTrue: [  | pc |
+								ifTrue: [ 
+									| pc |
 									(pc := self projectClass) ~~ nil
-										ifTrue: [ MetacelloClearStackCacheNotification signal: #(#versionConstructor)].
-									self projectPackage loadUsing: mcLoader ]
+										ifTrue: [ MetacelloClearStackCacheNotification signal: #(#currentVersion #currentVersionAgainst: #currentVersionInfo #versionConstructor #loadableSpecNames), { pc} ].
+									self projectPackage ensureLoadUsing: mcLoader ]
 								ifFalse: [ self projectPackage fetchUsing: mcLoader ].
 							mcLoader ensuredMap at: self name put: #latest ].
-					^self]].
+					^ self ] ].
 	ensured == nil
-		ifTrue:  [
+		ifTrue: [ 
 			mcLoader ensureForDevelopment
-				ifTrue: [  | pc |
+				ifTrue: [ 
+					| pc |
 					(pc := self projectClass) ~~ nil
-						ifTrue: [ MetacelloClearStackCacheNotification signal: #(#versionConstructor)]. 
-					self projectPackage loadUsing: mcLoader ]
+						ifTrue: [ MetacelloClearStackCacheNotification signal: #(#currentVersion #currentVersionAgainst: #currentVersionInfo #versionConstructor #loadableSpecNames), { pc} ].
+					self projectPackage ensureLoadUsing: mcLoader ]
 				ifFalse: [ self projectPackage fetchUsing: mcLoader ].
 			mcLoader ensuredMap at: self name put: #present ]

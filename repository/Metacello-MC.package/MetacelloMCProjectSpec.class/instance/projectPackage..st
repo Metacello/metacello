@@ -1,3 +1,3 @@
 accessing
-projectPackage: anObject
-	projectPackage := anObject
+projectPackage: aProjectPackage
+    projectPackage := aProjectPackage

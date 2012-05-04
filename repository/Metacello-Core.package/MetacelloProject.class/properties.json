@@ -8,6 +8,7 @@
 	"instvars" : [
 		"versionMap",
 		"symbolicVersionMap",
+		"errorMap",
 		"loader",
 		"loaderClass",
 		"loadType",

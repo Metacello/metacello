@@ -1,1 +1,9 @@
-(name 'Metacello-TestsPlatform.squeakCommon-dkh.2' message '- progress display and ftp repository support ported to Squeak' id '018c63c9-0d82-4a8d-8bd9-c7b933fcc88f' date '8 December 2009' time '12:14:32.652 pm' author 'dkh' ancestors ((name 'Metacello-TestsPlatform.pharo-dkh.1' message '- initial version of pharo-specific tests' id 'dc388c7a-1023-49ad-8092-4782fc52ea38' date '7 December 2009' time '2:53:20 pm' author 'dkh' ancestors () stepChildren ())) stepChildren ())
+(name 'Metacello-TestsPlatform.squeakCommon-dkh.5' message '1.0-beta.32 (dkh.675):
+- comments for MetacelloAbstractVersionConstructor
+- support for filetree:// repositories
+- beginning of work to make className: optional in project reference spec (failing tests in MetacelloIssue154TestCase still need to be fixed)' id '35c16e7c-6fc5-41a9-9612-1873fecdfcb4' date '30 January 2012' time '3:26:04 pm' author 'dkh' ancestors ((name 'Metacello-TestsPlatform.squeakCommon-dkh.4' message '1.0-beta.32 (dkh.666):
+- fix Issue 109:	pkgSpec for Metacello configuration doesn''t work for GemStone ServerDirectory repository
+  http://code.google.com/p/metacello/issues/detail?id=109
+[pharo/squeak tests]' id '2e082319-f6a2-47ce-bb9b-e191f3d942f9' date '19 January 2012' time '3:26:07 pm' author 'dkh' ancestors ((name 'Metacello-TestsPlatform.squeakCommon-dkh.3' message '1.0-beta.32 (dkh.663):
+- fix Issue 109: pkgSpec for Metacello configuration doesn''t work for GemStone ServerDirectory repository
+  http://code.google.com/p/metacello/issues/detail?id=109' id '65dfd4c5-ad28-455d-9567-6fe3b5a49ca0' date '19 January 2012' time '10:00:46 am' author 'dkh' ancestors ((name 'Metacello-TestsPlatform.squeakCommon-dkh.2' message '- progress display and ftp repository support ported to Squeak' id '018c63c9-0d82-4a8d-8bd9-c7b933fcc88f' date '8 December 2009' time '12:14:32.652 pm' author 'dkh' ancestors ((name 'Metacello-TestsPlatform.pharo-dkh.1' message '- initial version of pharo-specific tests' id 'dc388c7a-1023-49ad-8092-4782fc52ea38' date '7 December 2009' time '2:53:20 pm' author 'dkh' ancestors () stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())

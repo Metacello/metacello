@@ -13,14 +13,15 @@ Warning reason codes:
 
 Critical Warning reason codes:
 
-	#duplicateVersionDefinitions 		- there are multiple pragma methods specifying the same version
-	#loadDeprecation					- deprecation warning signalled while loading configuration [load validation]
-	#noLoadableVersions 				- no non #baseline versions defined in configuration
-	#noTests 							- no test cases defined in loaded configuration [load validation]
-	#noVersionSpecified 				- no version defined for the project reference or package. The version specified in the baseline or the latest version of the project or package in the repository will be used.
-	#packageNameMismatch 			- the name in the packageSpec does not match the name of the mcz file
-	#projectClassNameFileMismatch 	- the class name of the configuration does not match the mcz file containing the configuration
-	#testDeprecation 					- deprecation warning signalled while running configuration tests [load validation]
+	#duplicateVersionDefinitions 		         - there are multiple pragma methods specifying the same version
+	#loadDeprecation					         - deprecation warning signalled while loading configuration [load validation]
+	#missingRecommendedProjectSpecField - missing recommended fields in project reference (versionString). The versionString should be specified so that #bleedingEdge loads will be predictable and repeatable
+	#noLoadableVersions 				         - no non #baseline versions defined in configuration
+	#noTests 							         - no test cases defined in loaded configuration [load validation]
+	#noVersionSpecified 				         - no version defined for the project reference or package. The version specified in the baseline or the latest version of the project or package in the repository will be used.
+	#packageNameMismatch 			         - the name in the packageSpec does not match the name of the mcz file
+	#projectClassNameFileMismatch 	         - the class name of the configuration does not match the mcz file containing the configuration
+	#testDeprecation 					         - deprecation warning signalled while running configuration tests [load validation]
 
 Error reason codes:
 

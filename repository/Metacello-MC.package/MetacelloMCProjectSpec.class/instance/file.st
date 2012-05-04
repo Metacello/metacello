@@ -1,4 +1,4 @@
 querying
 file
-	
-	^self projectPackage file
+    projectPackage ifNil: [ ^ nil ].
+    ^ self projectPackage file

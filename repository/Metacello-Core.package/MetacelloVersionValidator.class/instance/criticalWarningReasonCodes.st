@@ -1,3 +1,3 @@
 private
 criticalWarningReasonCodes
-	^ #(#packageNameMismatch #projectClassNameFileMismatch #duplicateVersionDefinitions)
+    ^ #(#'packageNameMismatch' #'projectClassNameFileMismatch' #'duplicateVersionDefinitions')
