@@ -1,0 +1,16 @@
+{
+	"category" : "Metacello-GitHub-Specs",
+	"classinstvars" : [
+		 ],
+	"classtraitcomposition" : "{}",
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MetacelloGitHubProjectSpec",
+	"pools" : [
+		 ],
+	"super" : "MetacelloGenericProjectSpec",
+	"traitcomposition" : "{}",
+	"type" : "normal" }

@@ -1,6 +1,5 @@
 api
 projectPackage: aBlock
-    | spec |
-    spec := self project packageSpec.
-    self root projectPackage: spec.
-    self with: spec during: aBlock
+    "projectPackage spec data folded into project spec"
+
+    self with: self root during: aBlock

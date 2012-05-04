@@ -2,6 +2,7 @@
 	"category" : "Metacello-TestsMC-Resources",
 	"classinstvars" : [
 		 ],
+	"classtraitcomposition" : "{}",
 	"classvars" : [
 		"ProjectAttributes" ],
 	"commentStamp" : "",
@@ -11,4 +12,5 @@
 	"pools" : [
 		 ],
 	"super" : "TestResource",
+	"traitcomposition" : "{}",
 	"type" : "normal" }

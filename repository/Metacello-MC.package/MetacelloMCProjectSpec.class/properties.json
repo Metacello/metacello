@@ -2,13 +2,15 @@
 	"category" : "Metacello-MC-Specs",
 	"classinstvars" : [
 		 ],
+	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"projectPackage" ],
+		"file" ],
 	"name" : "MetacelloMCProjectSpec",
 	"pools" : [
 		 ],
-	"super" : "MetacelloProjectSpec",
+	"super" : "MetacelloGenericProjectSpec",
+	"traitcomposition" : "{}",
 	"type" : "normal" }

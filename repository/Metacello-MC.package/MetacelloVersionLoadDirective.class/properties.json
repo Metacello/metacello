@@ -2,6 +2,7 @@
 	"category" : "Metacello-MC-Directives",
 	"classinstvars" : [
 		 ],
+	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
@@ -11,4 +12,5 @@
 	"pools" : [
 		 ],
 	"super" : "MetacelloDirective",
+	"traitcomposition" : "{}",
 	"type" : "normal" }

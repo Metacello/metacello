@@ -8,6 +8,6 @@ assertMetacelloExampleProjectReferenceSpec: projectReferenceSpec projectName: pr
     self assert: projectSpec versionString = '1.0'.
     self assert: projectSpec className = className.
     projectPackage := projectSpec projectPackage.
-    projectPackage name ifNotNil: [ self assert: projectPackage name = packageName ].
+    projectPackage name ifNotNil: [ self assert: projectPackage name = className ].
     projectPackage file ifNotNil: [ self assert: projectPackage file = fileName ].
     self assert: projectPackage repository description = 'dictionary://Metacello_Configuration_Test_Repository'

@@ -1,3 +1,4 @@
 accessing
 file: aString
-	self projectPackage file: aString
+    file := aString.
+    self projectPackage: nil

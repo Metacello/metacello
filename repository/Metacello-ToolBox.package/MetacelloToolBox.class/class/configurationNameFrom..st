@@ -1,8 +1,6 @@
 utility
 configurationNameFrom: baseName
-	"Return the fully-qualified configuration class name."
+    "Return the fully-qualified configuration class name."
 
-	<apiDocumentation>
-	^ (baseName indexOfSubCollection: 'ConfigurationOf') > 0
-		ifTrue: [ baseName ]
-		ifFalse: [ 'ConfigurationOf' , baseName ]
+    <apiDocumentation>
+    ^ MetacelloScriptEngine configurationNameFrom: baseName

@@ -1,7 +1,6 @@
 private
 version11CommonVersionSpecString
-
-	^'
+    ^ '
 spec description: ''''.
 spec author: ''TesterBob''.
 spec timestamp: ''''.
@@ -11,7 +10,7 @@ spec
 		spec
 			className: ''MetacelloTestConfigurationOfFoo'';
 			versionString: #''bleedingEdge'';
-			repository: ''cache'' ];
+			repository: ''dictionary://Metacello_Dev_Cycle_Repository'' ];
 	project: ''MetacelloTestConfigurationOfFoo'' with: ''4.0''.
 spec 
 	package: ''GeauxFaux'' with: [

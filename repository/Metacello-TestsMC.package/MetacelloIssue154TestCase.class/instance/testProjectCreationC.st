@@ -17,7 +17,7 @@ testProjectCreationC
         assertMetacelloExampleProjectReferenceSpec: projectReferenceSpec
         projectName: 'MetacelloExample'
         className: 'MetacelloExampleConfigurationClass'
-        packageName: 'MetacelloExampleConfigurationFile'
+        packageName: 'MetacelloExample'
         fileName: 'MetacelloExampleConfigurationFile'.
     self
         assert:
@@ -29,4 +29,4 @@ spec project: ''MetacelloExample'' with: [
 			className: ''MetacelloExampleConfigurationClass'';
 			file: ''MetacelloExampleConfigurationFile'';
 			versionString: ''1.0'';
-			repository: ''dictionary://Metacello_Configuration_Test_Repository'' ].'
+			repository: ''dictionary://Metacello_Configuration_Test_Repository'' ].'	"might need to cast these as versionSpecs so that the correct printing algorithms are used"

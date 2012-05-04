@@ -1,0 +1,16 @@
+{
+	"category" : "Metacello-Git-Model",
+	"classinstvars" : [
+		 ],
+	"classtraitcomposition" : "{}",
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MetacelloGitProject",
+	"pools" : [
+		 ],
+	"super" : "MetacelloFileTreeProject",
+	"traitcomposition" : "{}",
+	"type" : "normal" }

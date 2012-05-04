@@ -1,7 +1,9 @@
 *metacello-core
 setPostLoadDoItInMetacelloSpec: aMetacelloSpec
-
-	aMetacelloSpec setPostLoadDoIt: 
-		(aMetacelloSpec project valueHolderSpec
-			value: self;
-			yourself)
+    self precedence == 0
+        ifTrue: [ self error: 'Invalid selector' ].
+    aMetacelloSpec
+        setPostLoadDoIt:
+            (aMetacelloSpec project valueHolderSpec
+                value: self;
+                yourself)

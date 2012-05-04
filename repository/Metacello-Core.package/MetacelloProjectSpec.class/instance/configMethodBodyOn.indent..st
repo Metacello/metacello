@@ -1,11 +1,11 @@
 printing
 configMethodBodyOn: aStream indent: indent
     | hasVersionString hasOperator hasProjectPackage hasLoads hasClassName hasPreLoadDoIt hasPostLoadDoIt |
-    hasClassName := className ~~ nil.
+    hasClassName := className ~~ nil and: [ className ~= self constructClassName ].
     hasVersionString := self versionString ~~ nil.
     hasOperator := operator ~~ nil.
-    hasProjectPackage := self projectPackage ~~ nil
-        and: [ self projectPackage packageRepository ~~ nil or: [ self projectPackage name ~= className ] ].
+    hasProjectPackage := self packageRepository ~~ nil
+        or: [ hasClassName & (self getFile ~~ nil or: [ className ~= self name ]) ].
     hasLoads := self loads ~~ nil.
     hasPreLoadDoIt := self getPreLoadDoIt ~~ nil.
     hasPostLoadDoIt := self getPostLoadDoIt ~~ nil.
@@ -18,7 +18,7 @@ configMethodBodyOn: aStream indent: indent
                         tab: indent + 1 ]
                 ifFalse: [ aStream space ].
             aStream nextPutAll: 'className: ' , self className printString.
-            hasVersionString | hasPreLoadDoIt | hasPostLoadDoIt | hasOperator | hasProjectPackage | hasLoads
+            hasVersionString | hasPreLoadDoIt | hasPostLoadDoIt | hasOperator | hasLoads | hasProjectPackage
                 ifTrue: [ aStream nextPut: $; ] ].
     hasVersionString
         ifTrue: [ 
@@ -97,8 +97,8 @@ configMethodBodyOn: aStream indent: indent
     hasProjectPackage
         ifTrue: [ 
             | hasName hasRepo |
-            hasName := className notNil and: [ self projectPackage name ~= self className ].
-            hasRepo := self projectPackage packageRepository ~~ nil.
+            hasRepo := self packageRepository ~~ nil.
+            hasName := self file ~= self className.
             hasName
                 ifTrue: [ 
                     hasClassName | hasVersionString | hasOperator | hasLoads | hasPreLoadDoIt | hasPostLoadDoIt
@@ -107,22 +107,22 @@ configMethodBodyOn: aStream indent: indent
                                 cr;
                                 tab: indent + 1 ]
                         ifFalse: [ aStream space ].
-                    aStream nextPutAll: 'file: ' , self projectPackage name printString.
+                    aStream nextPutAll: 'file: ' , self file printString.
                     hasRepo
                         ifTrue: [ aStream nextPut: $; ] ].
             hasRepo
                 ifTrue: [ 
                     | repos |
-                    repos := self projectPackage repositories.
+                    repos := self repositories.
                     repos map values size = 1
                         ifTrue: [ 
-                            hasClassName | hasVersionString | hasOperator | hasLoads | hasPreLoadDoIt | hasPostLoadDoIt
+                            hasClassName | hasVersionString | hasOperator | hasLoads | hasPreLoadDoIt | hasPostLoadDoIt | hasName
                                 ifTrue: [ 
                                     aStream
                                         cr;
                                         tab: indent + 1 ]
                                 ifFalse: [ aStream space ].
-                            self projectPackage packageRepository configMethodCascadeOn: aStream lastCascade: true ]
+                            self packageRepository configMethodCascadeOn: aStream lastCascade: true ]
                         ifFalse: [ 
                             aStream cr.
-                            self projectPackage repositories configMethodCascadeOn: aStream indent: indent ] ] ]
+                            self repositories configMethodCascadeOn: aStream indent: indent ] ] ]

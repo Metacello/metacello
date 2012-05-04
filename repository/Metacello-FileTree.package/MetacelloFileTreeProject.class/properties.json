@@ -1,0 +1,16 @@
+{
+	"category" : "Metacello-FileTree-Model",
+	"classinstvars" : [
+		 ],
+	"classtraitcomposition" : "{}",
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MetacelloFileTreeProject",
+	"pools" : [
+		 ],
+	"super" : "MetacelloMCProject",
+	"traitcomposition" : "{}",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+scripting
+versionFrom: aScriptingEngine
+	self subclassResponsibility

@@ -1,0 +1,21 @@
+{
+	"category" : "Metacello-Core-Scripts",
+	"classinstvars" : [
+		 ],
+	"classtraitcomposition" : "{}",
+	"classvars" : [
+		"LoadedProjects" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"root",
+		"projectName",
+		"projectClass",
+		"repositoryDescription",
+		"versionString",
+		"goferCache" ],
+	"name" : "MetacelloScriptEngine",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"traitcomposition" : "{}",
+	"type" : "normal" }

@@ -2,6 +2,7 @@
 	"category" : "Metacello-Core-Specs",
 	"classinstvars" : [
 		 ],
+	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
@@ -17,4 +18,5 @@
 	"pools" : [
 		 ],
 	"super" : "MetacelloSpec",
+	"traitcomposition" : "{}",
 	"type" : "normal" }

@@ -10,7 +10,7 @@ complexBaseline11SourceString3
 				spec
 					className: ''MetacelloTestConfigurationOfFoo'';
 					versionString: #''bleedingEdge'';
-					repository: ''cache'' ].
+					repository: ''dictionary://Metacello_Dev_Cycle_Repository'' ].
 		spec 
 			package: ''GeauxFaux'' with: [
 				spec 

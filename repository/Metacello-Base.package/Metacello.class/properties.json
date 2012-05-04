@@ -1,0 +1,18 @@
+{
+	"category" : "Metacello-Base",
+	"classinstvars" : [
+		 ],
+	"classtraitcomposition" : "{}",
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"scriptEngine",
+		"ensureList",
+		"statements" ],
+	"name" : "Metacello",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"traitcomposition" : "{}",
+	"type" : "normal" }

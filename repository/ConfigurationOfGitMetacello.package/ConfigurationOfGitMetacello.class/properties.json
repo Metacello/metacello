@@ -1,0 +1,16 @@
+{
+	"category" : "ConfigurationOfGitMetacello",
+	"classinstvars" : [
+		 ],
+	"classtraitcomposition" : "{}",
+	"classvars" : [
+		"LastVersionLoad" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"project" ],
+	"name" : "ConfigurationOfGitMetacello",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"traitcomposition" : "{}",
+	"type" : "normal" }

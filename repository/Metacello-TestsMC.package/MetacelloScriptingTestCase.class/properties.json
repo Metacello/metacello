@@ -1,0 +1,20 @@
+{
+	"category" : "Metacello-TestsMC-Scripts",
+	"classinstvars" : [
+		 ],
+	"classtraitcomposition" : "{}",
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"configurationRepository",
+		"monticelloRepository",
+		"externalDirectory",
+		"sampleDirectory",
+		"loadedProjectsCache" ],
+	"name" : "MetacelloScriptingTestCase",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"traitcomposition" : "{}",
+	"type" : "normal" }

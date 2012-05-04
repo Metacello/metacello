@@ -15,7 +15,7 @@ testProjectCreationA
         assertMetacelloExampleProjectReferenceSpec: projectReferenceSpec
         projectName: 'MetacelloExample'
         className: 'ConfigurationOfMetacelloExample'
-        packageName: 'ConfigurationOfMetacelloExample'
+        packageName: 'MetacelloExample'
         fileName: 'ConfigurationOfMetacelloExample'.
     self
         assert:

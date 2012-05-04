@@ -1,0 +1,18 @@
+{
+	"category" : "Metacello-GitHub-Monticello",
+	"classinstvars" : [
+		 ],
+	"classtraitcomposition" : "{}",
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"projectPath",
+		"projectVersion",
+		"repoPath" ],
+	"name" : "MCGitHubRepository",
+	"pools" : [
+		 ],
+	"super" : "MCFileTreeRepository",
+	"traitcomposition" : "{}",
+	"type" : "normal" }

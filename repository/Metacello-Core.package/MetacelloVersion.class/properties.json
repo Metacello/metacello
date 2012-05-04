@@ -2,6 +2,7 @@
 	"category" : "Metacello-Core-Model",
 	"classinstvars" : [
 		 ],
+	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
@@ -14,4 +15,5 @@
 	"pools" : [
 		 ],
 	"super" : "Magnitude",
+	"traitcomposition" : "{}",
 	"type" : "normal" }

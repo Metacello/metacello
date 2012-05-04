@@ -1,4 +1,3 @@
 testing
 isPossibleBaseline
-
-	self subclassResponsibility
+    self subclassResponsibility

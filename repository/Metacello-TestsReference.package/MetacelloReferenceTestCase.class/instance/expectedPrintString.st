@@ -14,8 +14,7 @@ spec repositories: [
 		repository: ''ftp://ftp.example.com/repo'';
 		repository: ''http://www.example.com/ar'';
 		repository: ''http://www.example.com/private'' username: ''foo'' password: ''bar'';
-		repository: ''http://www.example.com/rr'';
-		repository: ''serverfile:///opt/mc/repository'' ].
+		repository: ''http://www.example.com/rr'' ].
 spec 
 	project: ''UI Support'' with: [
 		spec

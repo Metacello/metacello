@@ -1,0 +1,16 @@
+{
+	"category" : "Metacello-Core-Exceptions",
+	"classinstvars" : [
+		 ],
+	"classtraitcomposition" : "{}",
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"projectSpec" ],
+	"name" : "MetacelloLookupProjectSpecNotification",
+	"pools" : [
+		 ],
+	"super" : "Notification",
+	"traitcomposition" : "{}",
+	"type" : "normal" }

@@ -29,5 +29,12 @@ setUpVersionReferences
 		add: (GoferVersionReference name: 'GeauxFaux-tg.32');
 		add: (GoferVersionReference name: 'GeauxBeau-dkh.55');
 		add: (GoferVersionReference name: 'GeauxBeau-dkh.56');
+		add: (GoferVersionReference name: 'ConfigurationOfNautilusWithoutPackages-dkh.55');
+		add: (GoferVersionReference name: 'ConfigurationOfNautilusWithoutPackages-dkh.56');
+		add: (GoferVersionReference name: 'ConfigurationOfNautilusWithoutPackages-dkh.57');
+		add: (GoferVersionReference name: 'ConfigurationOfNautilus-dkh.56');
+		add: (GoferVersionReference name: 'ConfigurationOfGlamourSeaside-dkh.55');
+		add: (GoferVersionReference name: 'ConfigurationOfGlamourSeaside-dkh.56');
+		add: (GoferVersionReference name: 'ConfigurationOfGlamourSeaside-dkh.57');
+		add: (GoferVersionReference name: 'ConfigurationOfGlamour-dkh.56');
 		yourself
-	
