@@ -61,5 +61,20 @@ Gofer new
     package: 'ConfigurationOfGitMetacello';
     package: 'Metacello-TestsGitHub';
     load.
+
+Gofer new
+    repository: (MCFileTreeRepository new directory: 
+                (FileDirectory on: '/opt/git/external/repository/'));
+    package: 'External-Core';
+    package: 'External-Tests';
+    package: 'BaselineOfExternal';
+    load.
+
+Gofer new
+    repository: (MCFileTreeRepository new directory:
+                (FileDirectory on: '/opt/git/pharo/ston/repository/'));
+    package: 'Ston-Core';
+    package: 'Ston-Tests';
+    load.
 ```
 
