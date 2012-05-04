@@ -1,0 +1,14 @@
+{
+	"category" : "Metacello-TestsMC-Configurations",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MetacelloVersionQueryLatestVersionConfig",
+	"pools" : [
+		 ],
+	"super" : "MetacelloMCTestsAbstractConfig",
+	"type" : "normal" }

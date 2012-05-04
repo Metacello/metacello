@@ -1,0 +1,4 @@
+private
+selectedClass
+
+	^target theNonMetaClass

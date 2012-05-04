@@ -1,0 +1,14 @@
+{
+	"category" : "Metacello-Core-Constructors",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"attribute" ],
+	"name" : "MetacelloMethodSection",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

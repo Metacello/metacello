@@ -1,0 +1,4 @@
+private
+projectRefProject
+
+	^MetacelloProjectRefTutorialConfig project

@@ -1,0 +1,4 @@
+*ob-metacello
+isMetacelloConfig
+
+	^false

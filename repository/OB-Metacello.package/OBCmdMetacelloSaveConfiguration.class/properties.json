@@ -1,0 +1,14 @@
+{
+	"category" : "OB-Metacello",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "OBCmdMetacelloSaveConfiguration",
+	"pools" : [
+		 ],
+	"super" : "OBCmdMetacello",
+	"type" : "normal" }

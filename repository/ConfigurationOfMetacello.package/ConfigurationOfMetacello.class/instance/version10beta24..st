@@ -1,0 +1,43 @@
+versions
+version10beta24: spec
+	<version: '1.0-beta.24' imports: #('1.0-beta.22-baseline' )>
+
+	spec for: #'common' do: [
+		spec blessing: #'beta'.
+		spec description: '- fix a bug in MetacelloMCProjectSpec>>compareCurrentVersion:targetVersionStatus:using: related when calculating current version against a non-standard loader
+- tweak the loader API a bit for GemStone (performance improvements)
+- tweak transcript info for atomic load
+- start using Gofer 1.0.1
+- adjust conditions that lead to a load conflict error
+'.
+		spec author: 'DaleHenrichs'.
+		spec timestamp: '02/12/10 14:44:01'.
+		spec 
+			project: 'Gofer Core' with: '1.0.1';
+			project: 'Gofer Tests' with: '1.0.1'.
+		spec 
+			package: 'Metacello-Core' with: 'Metacello-Core-Dalehenrichs.349';
+			package: 'Metacello-MC' with: 'Metacello-MC-DaleHenrichs.335';
+			package: 'Metacello-Reference' with: 'Metacello-Reference-DaleHenrichs.28';
+			package: 'Metacello-Tutorial' with: 'Metacello-Tutorial-tbn.19';
+			package: 'OB-Metacello' with: 'OB-Metacello-dkh.40';
+			package: 'Metacello-TestsReference' with: 'Metacello-TestsReference-DaleHenrichs.13';
+			package: 'Metacello-TestsCore' with: 'Metacello-TestsCore-DaleHenrichs.8';
+			package: 'Metacello-TestsMC' with: 'Metacello-TestsMC-DaleHenrichs.66';
+			package: 'Metacello-TestsTutorial' with: 'Metacello-TestsTutorial-dkh.5'.].
+	spec for: #'gemstone' do: [
+		spec project: 'Monticello' with: '0.236'.
+		spec 
+			package: 'Metacello-MC' with: [
+				spec preLoadDoIt: #gemstone10beta24PreLoadDoIt ];
+			package: 'Metacello-Platform' with: 'Metacello-Platform.gemstone-DaleHenrichs.15'.].
+	spec for: #'squeakCommon' do: [
+		spec project: 'OB' with: '1.1'.
+		spec package: 'Metacello-TestsPlatform' with: 'Metacello-TestsPlatform.squeakCommon-dkh.2'.].
+	spec for: #'pharo' do: [
+		spec project: 'ProfStef' with: '1.0'.
+		spec 
+			package: 'Metacello-ProfStef' with: 'Metacello-ProfStef-DaleHenrichs.2';
+			package: 'Metacello-Platform' with: 'Metacello-Platform.pharo-DaleHenrichs.13'.].
+	spec for: #'squeak' do: [
+		spec package: 'Metacello-Platform' with: 'Metacello-Platform.squeak-dkh.5'.].

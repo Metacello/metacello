@@ -1,0 +1,4 @@
+accessing
+projectWith: projectAttributes
+
+	self subclassResponsibility

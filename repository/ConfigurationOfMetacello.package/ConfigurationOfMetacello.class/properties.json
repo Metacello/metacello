@@ -1,0 +1,14 @@
+{
+	"category" : "ConfigurationOfMetacello",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"LastVersionLoad" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"project" ],
+	"name" : "ConfigurationOfMetacello",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

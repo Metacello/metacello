@@ -1,0 +1,4 @@
+accessing
+projectProject
+
+	^MetacelloVersionQueryProjectConfig new project

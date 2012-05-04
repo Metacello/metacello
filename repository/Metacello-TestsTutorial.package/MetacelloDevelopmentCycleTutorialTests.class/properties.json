@@ -1,0 +1,15 @@
+{
+	"category" : "Metacello-TestsTutorial",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"authorName",
+		"tempRepositories" ],
+	"name" : "MetacelloDevelopmentCycleTutorialTests",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

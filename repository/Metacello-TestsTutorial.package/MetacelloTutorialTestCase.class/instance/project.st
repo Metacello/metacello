@@ -1,0 +1,4 @@
+private
+project
+
+	^MetacelloTutorialConfig project

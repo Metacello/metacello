@@ -1,0 +1,4 @@
+private
+atomicConfigurationRepository
+
+	^MetacelloAtomicConfigurationResource current monticelloRepository
