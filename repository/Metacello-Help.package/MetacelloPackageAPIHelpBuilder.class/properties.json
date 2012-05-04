@@ -1,0 +1,14 @@
+{
+	"category" : "Metacello-Help",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MetacelloPackageAPIHelpBuilder",
+	"pools" : [
+		 ],
+	"super" : "PackageAPIHelpBuilder",
+	"type" : "normal" }
