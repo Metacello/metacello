@@ -1,7 +1,6 @@
 testing
 expectedPrintString
-
-	^'spec blessing: #''baseline''.
+    ^ 'spec blessing: #''baseline''.
 spec description: ''Descriptive comment''.
 spec preLoadDoIt: #''preloadForVersion''.
 spec postLoadDoIt: #''postloadForVersion''.
@@ -15,7 +14,8 @@ spec repositories: [
 		repository: ''ftp://ftp.example.com/repo'';
 		repository: ''http://www.example.com/ar'';
 		repository: ''http://www.example.com/private'' username: ''foo'' password: ''bar'';
-		repository: ''http://www.example.com/rr'' ].
+		repository: ''http://www.example.com/rr'';
+		repository: ''serverfile:///opt/mc/repository'' ].
 spec 
 	project: ''UI Support'' with: [
 		spec
