@@ -1,0 +1,14 @@
+{
+	"category" : "Metacello-TestsProfStef",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MetacelloInsideToolBoxTutorialTests",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }
