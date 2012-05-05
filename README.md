@@ -32,8 +32,7 @@ Gofer new
     package: 'Metacello-Base';
     package: 'Metacello-Core';
     package: 'Metacello-FileTree';
-    package: 'Metacello-Git';
-    package: 'Metacello-GitHub';
+     package: 'Metacello-GitHub';
     package: 'Metacello-MC';
     package: 'Metacello-ToolBox';
     package: 'ConfigurationOfMetacello';
