@@ -1,16 +1,16 @@
 {
-	"category" : "Metacello-GitHub-Model",
+	"category" : "Metacello-Base",
 	"classinstvars" : [
 		 ],
 	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "dkh 5/5/2012 11:49",
 	"instvars" : [
 		 ],
-	"name" : "MetacelloGitHubProject",
+	"name" : "MetacelloBaseBaselineConfiguration",
 	"pools" : [
 		 ],
-	"super" : "MetacelloMCBaselineProject",
+	"super" : "MetacelloBaseConfiguration",
 	"traitcomposition" : "{}",
 	"type" : "normal" }

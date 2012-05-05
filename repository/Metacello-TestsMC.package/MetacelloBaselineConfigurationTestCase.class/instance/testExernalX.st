@@ -1,5 +1,7 @@
 tests
-testConstructor
+testExernalX
+    "no #for:do: in spec"
+
     | version expected repo constructor |
     repo := MetacelloScriptingResource current externalRepository.
     Gofer new

@@ -1,0 +1,3 @@
+*metacello-filetree
+metacelloProjectClass
+    ^ MetacelloMCBaselineProject

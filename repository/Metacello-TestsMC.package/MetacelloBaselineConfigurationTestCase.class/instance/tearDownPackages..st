@@ -1,4 +1,6 @@
 running
 tearDownPackages: aGoferInstance
-	(self hasPackage: 'BaselineOfExternalX')
-		ifTrue: [ aGoferInstance package: 'BaselineOfExternalX' ]
+    #('BaselineOfExternalX' 'BaselineOfExternalXX' 'BaselineOfExternalXXX')
+        do: [ :packageName | 
+            (self hasPackage: packageName)
+                ifTrue: [ aGoferInstance package: packageName ] ]

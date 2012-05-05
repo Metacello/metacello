@@ -1,3 +1,3 @@
 querying
 version
-    ^ self projectClassProject version: 'baseline'
+    ^ self projectClassProject version
