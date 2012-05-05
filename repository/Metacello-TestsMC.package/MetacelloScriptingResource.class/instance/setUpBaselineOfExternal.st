@@ -1,10 +1,10 @@
-sample repository
-setUpSampleCore
+external repository
+setUpBaselineOfExternal
 	"self reset"
 
 	| reference className definitionArray versionInfo |
-	reference := GoferVersionReference name: 'Sample-CoreX-dkh.1'.
-	className := #SampleCoreX.
+	reference := GoferVersionReference name: 'BaselineOfExternalX-dkh.1'.
+	className := #BaselineOfExternalX.
 	definitionArray := {(MCClassDefinition
 		name: className
 		superclassName: #Object
@@ -13,25 +13,12 @@ setUpSampleCore
 		comment: '').
 	(MCMethodDefinition
 		className: className asString
-		classIsMeta: true
-		selector: 'sampleAuthorName'
+		classIsMeta: false
+		selector: 'externalBaseline:'
 		category: 'cat'
 		timeStamp: ''
-		source: (self class sourceCodeAt: #sampleAuthorName) asString).
-	(MCClassDefinition
-		name: #Object
-		superclassName: #ProtoObject
-		category: reference packageName
-		instVarNames: #()
-		comment: '').
-	(MCMethodDefinition
-		className: 'Object'
-		classIsMeta: true
-		selector: 'isSample'
-		category: '*sample-core'
-		timeStamp: ''
-		source: (self class sourceCodeAt: #isSample) asString)}.
-	sampleRepository
+		source: (self class sourceCodeAt: #externalBaseline:) asString)}.
+	externalRepository
 		basicStoreVersion:
 			(MCVersion new
 				setPackage: (MetacelloTestsMCPackage new name: reference packageName)

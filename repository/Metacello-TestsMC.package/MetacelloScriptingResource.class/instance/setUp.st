@@ -1,10 +1,11 @@
 running
 setUp
-    "self reset"
+	"self reset"
 
-    super setUp.
-    self
-        setUpRepositories;
-        setUpExternalCore;
-        setUpSampleCore;
-        yourself
+	super setUp.
+	self
+		setUpRepositories;
+		setUpExternalCore;
+		setUpSampleCore;
+		setUpBaselineOfExternal;
+		yourself
