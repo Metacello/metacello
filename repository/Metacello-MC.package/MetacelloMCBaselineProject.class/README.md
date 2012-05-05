@@ -1,8 +1,8 @@
-The **MetacelloMCBaselineProject**  is a wrapper for the **BaselineOf **version specification for file-based repositories.
+The **MetacelloMCBaselineProject**  is a wrapper for the **BaselineOf** version specification for file-based repositories.
 
 There is a single version in a **MetacelloMCBaselineProject**, named *'baseline'*.
 
-A **BaselineOf** is specified like the following:
+A typical **BaselineOf** is specification:
 
 ```Smalltalk
 baseline: spec
