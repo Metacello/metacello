@@ -1,10 +1,6 @@
 tests
 testGitHubLoad1
 	| loaded |
-	true
-		ifTrue: [ 
-			"under construction: need to add metacello.json file"
-			^ self ].
 	Metacello new
 		project: 'External';
 		repository: 'github://dalehenrich/external:1.0-beta.32Tests/core';
