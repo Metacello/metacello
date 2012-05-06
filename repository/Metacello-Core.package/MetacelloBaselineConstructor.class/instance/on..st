@@ -1,3 +1,3 @@
 initialization
-on: aBaselineConfigurationClass
-    self on: aBaselineConfigurationClass project: nil
+on: aConfig
+    self calculate: aConfig project: nil

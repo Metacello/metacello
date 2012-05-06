@@ -5,16 +5,16 @@ externalBaselineXXX: spec
         for: #common
         do: [ 
             spec
-                package: 'External-Core';
-                package: 'External-Tests' with: [ spec requires: 'External-Core' ];
+                package: 'External-CoreX';
+                package: 'External-TestsX' with: [ spec requires: 'External-CoreX' ];
                 yourself.
             spec
-                group: 'Core' with: #('External-Core');
+                group: 'Core' with: #('External-CoreX');
                 group: 'default' with: #('Core');
-                group: 'Tests' with: #('External-Tests');
+                group: 'Tests' with: #('External-TestsX');
                 yourself ].
     spec
         for: #custom
         do: [ 
-            spec package: 'External-UI'.
-            spec group: 'UI' with: #('External-UI') ]
+            spec package: 'External-UIX'.
+            spec group: 'UI' with: #('External-UIX') ]

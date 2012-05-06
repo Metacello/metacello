@@ -8,13 +8,13 @@ testExernalXX
         repository: repo;
         package: 'BaselineOfExternalXX';
         load.
-    version := (constructor := MetacelloBaselineConstructor on: (Smalltalk at: #BaselineOfExternalXX)) project version.
+    version := (Smalltalk at: #BaselineOfExternalXX) project version.
     expected := 'spec 
-	package: ''External-Core'';
-	package: ''External-Tests'' with: [
-		spec requires: #(''External-Core'' ). ].
+	package: ''External-CoreX'';
+	package: ''External-TestsX'' with: [
+		spec requires: #(''External-CoreX'' ). ].
 spec 
-	group: ''Core'' with: #(''External-Core'' );
+	group: ''Core'' with: #(''External-CoreX'' );
 	group: ''default'' with: #(''Core'' );
-	group: ''Tests'' with: #(''External-Tests'' ).'.
+	group: ''Tests'' with: #(''External-TestsX'' ).'.
     self assert: version versionSpec printString = expected

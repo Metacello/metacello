@@ -11,16 +11,17 @@ testExernalXXXb
     project := MetacelloMCBaselineProject new
         projectAttributes: #(#custom);
         yourself.
-    version := (constructor := MetacelloBaselineConstructor on: (Smalltalk at: #BaselineOfExternalXXX) project: project)
-        project version.
+    version := (constructor := MetacelloBaselineConstructor
+        on: (Smalltalk at: #BaselineOfExternalXXX) new
+        project: project) project version.
     expected := 'spec 
-	package: ''External-Core'';
-	package: ''External-Tests'' with: [
-		spec requires: #(''External-Core'' ). ];
-	package: ''External-UI''.
+	package: ''External-CoreX'';
+	package: ''External-TestsX'' with: [
+		spec requires: #(''External-CoreX'' ). ];
+	package: ''External-UIX''.
 spec 
-	group: ''Core'' with: #(''External-Core'' );
+	group: ''Core'' with: #(''External-CoreX'' );
 	group: ''default'' with: #(''Core'' );
-	group: ''Tests'' with: #(''External-Tests'' );
-	group: ''UI'' with: #(''External-UI'' ).'.
+	group: ''Tests'' with: #(''External-TestsX'' );
+	group: ''UI'' with: #(''External-UIX'' ).'.
     self assert: version versionSpec printString = expected

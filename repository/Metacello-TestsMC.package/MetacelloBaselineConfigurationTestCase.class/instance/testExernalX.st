@@ -2,19 +2,19 @@ tests
 testExernalX
     "no #for:do: in spec"
 
-    | version expected repo constructor |
+    | version expected repo |
     repo := MetacelloScriptingResource current externalRepository.
     Gofer new
         repository: repo;
         package: 'BaselineOfExternalX';
         load.
-    version := (constructor := MetacelloBaselineConstructor on: (Smalltalk at: #BaselineOfExternalX)) project version.
+    version := (Smalltalk at: #BaselineOfExternalX) project version.
     expected := 'spec 
-	package: ''External-Core'';
-	package: ''External-Tests'' with: [
-		spec requires: #(''External-Core'' ). ].
+	package: ''External-CoreX'';
+	package: ''External-TestsX'' with: [
+		spec requires: #(''External-CoreX'' ). ].
 spec 
-	group: ''Core'' with: #(''External-Core'' );
+	group: ''Core'' with: #(''External-CoreX'' );
 	group: ''default'' with: #(''Core'' );
-	group: ''Tests'' with: #(''External-Tests'' ).'.
+	group: ''Tests'' with: #(''External-TestsX'' ).'.
     self assert: version versionSpec printString = expected

@@ -1,3 +1,6 @@
 scripting
 projectFrom: aScriptingEngine unconditionalLoad: aBool
-    ^ (aScriptingEngine getBaselineUnconditionalLoad: aBool) project
+    | project |
+    project := (aScriptingEngine getBaselineUnconditionalLoad: aBool) project.
+    project version spec repository: aScriptingEngine repositorySpec printString.
+    ^ project

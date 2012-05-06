@@ -7,7 +7,7 @@ setUpBaselineOfExternalXX
     className := #BaselineOfExternalXX.
     definitionArray := {(MCClassDefinition
         name: className
-        superclassName: #Object
+        superclassName: #MetacelloBaseBaselineConfiguration
         category: reference packageName
         instVarNames: #()
         comment: '').
