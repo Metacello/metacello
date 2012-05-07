@@ -2,7 +2,7 @@ tests
 testSampleLoad
     Metacello new
         project: 'Sample';
-        repository: 'github://dalehenrich/sample:1.0-beta.32Tests/core';
+        repository: 'github://dalehenrich/sample:1.0-beta.32Branch/core';
         load.
     Smalltalk at: #'ExternalCore'.
     Smalltalk at: #'SampleCore'.

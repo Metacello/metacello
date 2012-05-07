@@ -7,4 +7,4 @@ testFileTreeLoad
         load.
     loaded := Metacello loadedProjects.
     self assert: loaded size = 1.
-    self assert: ((loaded at: 'ExternalX') at: 2) = '1.0-beta.32Tests'
+    self assert: ((loaded at: 'ExternalX') at: 2) == nil
