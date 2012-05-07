@@ -46,6 +46,7 @@ Gofer new
     package: 'Metacello-MC';
     package: 'Metacello-ToolBox';
     package: 'ConfigurationOfMetacello';
+    package: 'BaselineOfMetacello';
     load.
 
 Gofer new
