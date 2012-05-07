@@ -1,5 +1,5 @@
 tests
-testFileTreeLoad
+testFileTreeLoadBaseline1
     | loaded |
     Metacello new
         project: 'ExternalX';

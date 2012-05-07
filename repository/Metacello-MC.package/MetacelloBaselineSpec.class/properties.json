@@ -1,5 +1,5 @@
 {
-	"category" : "Metacello-TestsMC-Resources",
+	"category" : "Metacello-MC-Specs",
 	"classinstvars" : [
 		 ],
 	"classtraitcomposition" : "{}",
@@ -7,12 +7,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"configurationRepository",
-		"externalRepository",
-		"sampleRepository" ],
-	"name" : "MetacelloScriptingResource",
+		"repositories" ],
+	"name" : "MetacelloBaselineSpec",
 	"pools" : [
 		 ],
-	"super" : "TestResource",
+	"super" : "MetacelloAbstractPackageSpec",
 	"traitcomposition" : "{}",
 	"type" : "normal" }

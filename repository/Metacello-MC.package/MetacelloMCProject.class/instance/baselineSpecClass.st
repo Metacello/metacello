@@ -1,0 +1,3 @@
+spec classes
+baselineSpecClass
+    ^ MetacelloBaselineSpec

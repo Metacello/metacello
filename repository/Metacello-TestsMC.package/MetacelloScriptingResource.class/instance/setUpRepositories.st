@@ -1,8 +1,7 @@
 running
 setUpRepositories
-    "This method builds a fake repository with the version references from #buildReferences."
-
     "self reset"
 
+    configurationRepository := MCDictionaryRepository new.
     externalRepository := MCDictionaryRepository new.
     sampleRepository := MCDictionaryRepository new
