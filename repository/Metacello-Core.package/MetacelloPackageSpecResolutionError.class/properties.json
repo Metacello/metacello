@@ -7,10 +7,12 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "MetacelloProjectSpecLoadConflict",
+		"packageSpec",
+		"repositories",
+		"repositoryError" ],
+	"name" : "MetacelloPackageSpecResolutionError",
 	"pools" : [
 		 ],
-	"super" : "MetacelloProjectSpecLoadError",
+	"super" : "Error",
 	"traitcomposition" : "{}",
 	"type" : "normal" }
