@@ -2,7 +2,6 @@ private
 collectAllBaselineOfVersionsFromVersionPragmasInto: versionMap using: executionBlock
     | defined versionPragmaDict |
     versionPragmaDict := self extractBaselineOfVersionPragmas.
-    self halt.
     versionPragmaDict
         keysAndValuesDo: [ :versionString :pragmaColl | 
             | versionSpec |
