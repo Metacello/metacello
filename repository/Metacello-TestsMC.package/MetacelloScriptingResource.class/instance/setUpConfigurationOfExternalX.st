@@ -17,7 +17,14 @@ setUpConfigurationOfExternalX
         selector: 'versionOfX:'
         category: 'cat'
         timeStamp: ''
-        source: (self class sourceCodeAt: #'versionOfX:') asString)}.
+        source: (self class sourceCodeAt: #'versionOfX:') asString).
+    (MCMethodDefinition
+        className: className asString
+        classIsMeta: false
+        selector: 'customProjectAttributes'
+        category: 'cat'
+        timeStamp: ''
+        source: (self class sourceCodeAt: #'customProjectAttributes') asString)}.
     configurationRepository
         basicStoreVersion:
             (MCVersion new
