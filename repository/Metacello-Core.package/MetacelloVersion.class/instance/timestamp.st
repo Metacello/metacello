@@ -1,4 +1,3 @@
 querying
 timestamp
-
-	^self spec timestamp value
+    ^ self basicSpec timestamp value
