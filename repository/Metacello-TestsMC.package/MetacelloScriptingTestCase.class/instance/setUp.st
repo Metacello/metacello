@@ -18,6 +18,8 @@ setUp
     repo := MetacelloScriptingResource current configurationRepository.
     versionInfo := repo versionInfoFromVersionNamed: 'ConfigurationOfExternalX-dkh.1'.
     configurationRepo storeVersion: (repo versionWithInfo: versionInfo ifAbsent: [ self assert: false ]).
+    versionInfo := repo versionInfoFromVersionNamed: 'ConfigurationOfExternalXX-dkh.1'.
+    configurationRepo storeVersion: (repo versionWithInfo: versionInfo ifAbsent: [ self assert: false ]).
     externalRepo := MCFileTreeRepository new directory: externalDirectory.
     repo := MetacelloScriptingResource current externalRepository.
     versionInfo := repo versionInfoFromVersionNamed: 'External-CoreX-dkh.1'.

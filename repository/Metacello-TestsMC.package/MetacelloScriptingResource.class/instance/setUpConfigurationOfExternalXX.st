@@ -4,7 +4,7 @@ setUpConfigurationOfExternalXX
 
     | reference className definitionArray versionInfo |
     reference := GoferVersionReference name: 'ConfigurationOfExternalXX-dkh.1'.
-    className := #'ConfigurationOfExternalX'.
+    className := #'ConfigurationOfExternalXX'.
     definitionArray := {(MCClassDefinition
         name: className
         superclassName: #'MetacelloBaseConfiguration'
