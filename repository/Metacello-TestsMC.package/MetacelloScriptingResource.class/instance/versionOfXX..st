@@ -1,5 +1,5 @@
 external repository
-versionOfX: spec
+versionOfXX: spec
     <version: '0.9' baselineOf: 'External'>
     spec
         for: #'common'
@@ -8,5 +8,5 @@ versionOfX: spec
             spec description: 'initial work'.
             spec author: 'dkh'.
             spec timestamp: '5/4/2012 14:16'.
-            spec repository: 'dictionary://Metacello_Configuration_Test_Repository' ].
-    spec for: #'custom' do: [ spec repository: 'dictionary://Metacello_Custon_Configuration_Test_Repository' ]
+            spec repository: 'github://dalehenrich/external/repository' ].
+    spec for: #'pharo' do: [ spec repositoryVersion: '5f5c3b9435de497f1ed92b553728ec2ec67530ca' ]

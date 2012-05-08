@@ -11,4 +11,5 @@ setUp
         setUpBaselineOfExternalXX;
         setUpBaselineOfExternalXXX;
         setUpConfigurationOfExternalX;
+        setUpConfigurationOfExternalXX;
         yourself

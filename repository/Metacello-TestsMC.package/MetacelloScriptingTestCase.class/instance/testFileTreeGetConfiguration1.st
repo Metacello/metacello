@@ -1,11 +1,11 @@
 tests
-testFileTreeGetConfiguration
+testFileTreeGetConfiguration1
     | project versionSpec expected |
     project := Metacello new
         project: 'ExternalX';
         repository: 'filetree://' , configurationDirectory fullName;
         get.
-    versionSpec := (project version: '0.9') versionSpec.	"do I get baseline project or configuration project and late bind the baseline?"
+    versionSpec := (project version: '0.9') versionSpec.
     self assert: (versionSpec repositorySpecs first description endsWith: self configurationPath).
     versionSpec repositories: nil.	"full path to disk-based repository varies from platform to platform"
     expected := 'spec 

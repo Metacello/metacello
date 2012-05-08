@@ -7,10 +7,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"repositories" ],
-	"name" : "MetacelloBaselineSpec",
+		"repositorySpec" ],
+	"name" : "MetacelloMCBaselineOfVersionSpec",
 	"pools" : [
 		 ],
-	"super" : "MetacelloAbstractPackageSpec",
+	"super" : "MetacelloVersionSpec",
 	"traitcomposition" : "{}",
 	"type" : "normal" }
