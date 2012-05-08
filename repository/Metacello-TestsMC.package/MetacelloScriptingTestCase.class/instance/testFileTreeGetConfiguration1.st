@@ -1,5 +1,7 @@
 tests
 testFileTreeGetConfiguration1
+    "avoid resolving to BaselineOf .... use basicSpec"
+
     | project basicSpec expected |
     project := Metacello new
         project: 'ExternalX';
@@ -10,5 +12,5 @@ testFileTreeGetConfiguration1
 spec description: ''initial work''.
 spec author: ''dkh''.
 spec timestamp: ''5/4/2012 14:16''.
-spec repository: ''dictionary://Metacello_Custon_Configuration_Test_Repository''.'.
+spec repository: ''dictionary://Metacello_Configuration_Test_Repository''.'.
     self assert: basicSpec printString = expected
