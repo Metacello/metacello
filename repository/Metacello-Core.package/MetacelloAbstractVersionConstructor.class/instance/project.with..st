@@ -1,4 +1,3 @@
 api
 project: aString with: aBlockOrString
-
-	aBlockOrString setProject: aString withInMetacelloConfig: self
+    self filter project: aString with: aBlockOrString

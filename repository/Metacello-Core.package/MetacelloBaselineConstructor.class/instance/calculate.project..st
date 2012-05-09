@@ -12,6 +12,11 @@ calculate: aConfig project: aProject
                         do: [ :ex | ex return: nil ] ]).
     versionSpec := self project versionSpec.
     self root: versionSpec.
+    self
+        filter:
+            (filter := versionSpec constructorFilterClass new
+                constructor: self;
+                yourself).
     self evaluatePragma: pragma.
     versionMap := Dictionary new.
     self project attributes

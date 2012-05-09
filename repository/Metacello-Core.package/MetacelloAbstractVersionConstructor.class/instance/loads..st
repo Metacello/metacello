@@ -1,4 +1,3 @@
 api
 loads: anObject
-
-	self root loads: anObject
+    self filter loads: anObject

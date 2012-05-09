@@ -28,4 +28,4 @@ file: aString
 			spec file: 'MyProject-Metacello'.
 	 "
 
-    self root file: aString
+    self filter file: aString

@@ -10,4 +10,4 @@ author: aBlockOrString
 			spec value: 'dkh'. ].
 	 "
 
-    aBlockOrString setAuthorInMetacelloConfig: self
+    self filter author: aBlockOrString

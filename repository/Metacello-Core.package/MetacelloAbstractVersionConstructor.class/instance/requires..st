@@ -1,4 +1,3 @@
 api
 requires: anObject
-
-	self root requires: anObject
+    self filter requires: anObject

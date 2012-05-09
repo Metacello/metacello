@@ -1,4 +1,3 @@
 accessing
 root: aMetacelloSpec
-
-	root := aMetacelloSpec
+    root := aMetacelloSpec

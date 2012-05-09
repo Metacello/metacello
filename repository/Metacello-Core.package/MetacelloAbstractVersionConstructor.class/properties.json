@@ -13,7 +13,8 @@
 		"attributeMap",
 		"attributeOrder",
 		"symbolicVersion",
-		"currentContext" ],
+		"currentContext",
+		"filter" ],
 	"name" : "MetacelloAbstractVersionConstructor",
 	"pools" : [
 		 ],

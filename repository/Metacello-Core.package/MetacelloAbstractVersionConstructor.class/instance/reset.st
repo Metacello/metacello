@@ -1,4 +1,3 @@
 initialization
 reset
-
-	attributeMap := attributeOrder := nil
+    attributeMap := attributeOrder := nil

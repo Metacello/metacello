@@ -10,4 +10,4 @@ description: aBlockOrString
 			spec value: 'Descriptive comment'.
 	 "
 
-    aBlockOrString setDescriptionInMetacelloConfig: self
+    self filter description: aBlockOrString

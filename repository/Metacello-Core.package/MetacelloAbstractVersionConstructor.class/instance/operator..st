@@ -1,4 +1,3 @@
 api
 operator: anObject
-
-	self root operator: anObject
+    self filter operator: anObject

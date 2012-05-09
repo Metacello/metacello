@@ -1,4 +1,3 @@
 api
 supplyingAnswers: aCollection
-
-	self root answers: aCollection
+    self filter supplyingAnswers: aCollection

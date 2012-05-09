@@ -1,4 +1,3 @@
 api
 value: anObject
-
-	self root value: anObject
+    self filter value: anObject

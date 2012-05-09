@@ -1,0 +1,16 @@
+{
+	"category" : "Metacello-Core-Constructors",
+	"classinstvars" : [
+		 ],
+	"classtraitcomposition" : "{}",
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 5/9/2012 16:13",
+	"instvars" : [
+		 ],
+	"name" : "MetacelloRepositoriesSpecFilter",
+	"pools" : [
+		 ],
+	"super" : "MetacelloVersionConstructorFilter",
+	"traitcomposition" : "{}",
+	"type" : "normal" }

@@ -1,4 +1,3 @@
 api
 project: aString
-
-	self project: aString with: ''
+    self filter project: aString

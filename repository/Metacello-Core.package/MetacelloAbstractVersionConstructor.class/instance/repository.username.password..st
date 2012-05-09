@@ -1,4 +1,3 @@
 api
 repository: description username: username password: password
-
-	self root repository: description username: username password: password
+    self filter repository: description username: username password: password

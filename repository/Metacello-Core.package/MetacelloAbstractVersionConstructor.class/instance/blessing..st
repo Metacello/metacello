@@ -15,4 +15,4 @@ blessing: aBlockOrString
 		#release - indicating that the version spec has stabilized and will NOT change over time
 	 "
 
-    aBlockOrString setBlessingInMetacelloConfig: self
+    self filter blessing: aBlockOrString
