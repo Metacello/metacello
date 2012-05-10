@@ -14,7 +14,7 @@ calculate: aConfig project: aProject
     self root: versionSpec.
     self
         filter:
-            (filter := versionSpec constructorFilterClass new
+            (versionSpec constructorFilterClass new
                 constructor: self;
                 yourself).
     self evaluatePragma: pragma.
