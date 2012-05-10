@@ -9,4 +9,4 @@ versionOfXX: spec
             spec author: 'dkh'.
             spec timestamp: '5/4/2012 14:16'.
             spec repository: 'github://dalehenrich/external/repository' ].
-    spec for: #'custom' do: [ spec repositoryVersion: '957492f31b77026d81dcb165c07c69b2ad897781' ]
+    spec for: #'custom' do: [ spec version: '957492f31b77026d81dcb165c07c69b2ad897781' ]

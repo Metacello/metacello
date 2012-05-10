@@ -1,3 +1,3 @@
 api
 version: anObject
-    self filter versionString: anObject
+    self filter version: anObject
