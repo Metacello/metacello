@@ -1,3 +1,3 @@
 api
 supplyingAnswers: aCollection
-    self filter supplyingAnswers: aCollection
+    self root supplyingAnswers: aCollection constructor: self

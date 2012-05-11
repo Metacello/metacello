@@ -1,3 +1,3 @@
 api
 removePackage: aString
-    self filter removePackage: aString
+    self root removePackage: aString constructor: self

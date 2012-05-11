@@ -1,3 +1,3 @@
 api
 preLoadDoIt: aSymbol
-    self filter preLoadDoIt: aSymbol
+    self root preLoadDoIt: aSymbol constructor: self

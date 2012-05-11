@@ -11,4 +11,4 @@ package: packageName with: aBlockOrString
 			spec repository: '/opt/gemstone/repository'.
 	 "
 
-    self filter package: packageName with: aBlockOrString
+    self root package: packageName with: aBlockOrString constructor: self

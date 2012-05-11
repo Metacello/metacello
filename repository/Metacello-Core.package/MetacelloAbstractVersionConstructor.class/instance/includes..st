@@ -1,3 +1,3 @@
 api
 includes: anObject
-    self filter includes: anObject
+    self root includes: anObject constructor: self

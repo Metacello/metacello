@@ -10,4 +10,4 @@ description: aBlockOrString
 			spec value: 'Descriptive comment'.
 	 "
 
-    self filter description: aBlockOrString
+    self root description: aBlockOrString constructor: self

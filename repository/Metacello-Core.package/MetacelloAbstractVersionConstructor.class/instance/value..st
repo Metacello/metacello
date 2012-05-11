@@ -1,3 +1,3 @@
 api
 value: anObject
-    self filter value: anObject
+    self root value: anObject constructor: self

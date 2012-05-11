@@ -62,6 +62,9 @@ Gofer new
     package: 'Metacello-TestsGitHub';
     load.
 
+"I like my categories sorted"
+SystemOrganization sortCategories.
+
 Gofer new
     repository: (MCFileTreeRepository new directory: 
                 (FileDirectory on: '/opt/git/external/repository/'));

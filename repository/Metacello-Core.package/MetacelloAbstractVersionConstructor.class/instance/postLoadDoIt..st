@@ -1,3 +1,3 @@
 api
 postLoadDoIt: aSymbol
-    self filter postLoadDoIt: aSymbol
+    self root postLoadDoIt: aSymbol constructor: self

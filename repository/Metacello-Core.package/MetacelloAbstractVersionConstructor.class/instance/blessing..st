@@ -15,4 +15,4 @@ blessing: aBlockOrString
 		#release - indicating that the version spec has stabilized and will NOT change over time
 	 "
 
-    self filter blessing: aBlockOrString
+    self root blessing: aBlockOrString constructor: self

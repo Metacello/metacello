@@ -1,3 +1,3 @@
 api
 operator: anObject
-    self filter operator: anObject
+    self root operator: anObject constructor: self

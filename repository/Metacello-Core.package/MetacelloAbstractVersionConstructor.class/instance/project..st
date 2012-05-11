@@ -1,3 +1,3 @@
 api
 project: aString
-    self filter project: aString
+    self root project: aString constructor: self

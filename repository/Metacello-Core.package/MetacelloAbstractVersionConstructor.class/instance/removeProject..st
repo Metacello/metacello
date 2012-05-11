@@ -1,3 +1,3 @@
 api
 removeProject: aString
-    self filter removeProject: aString
+    self root removeProject: aString constructor: self

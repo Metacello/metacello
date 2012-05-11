@@ -1,3 +1,3 @@
 api
 loads: anObject
-    self filter loads: anObject
+    self root loads: anObject constructor: self

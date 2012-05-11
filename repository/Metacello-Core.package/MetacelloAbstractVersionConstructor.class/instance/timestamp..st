@@ -13,4 +13,4 @@ timestamp: aBlockOrStringOrDateAndTime
 			spec value: '10/7/2009 14:40'. ].
     "
 
-    self filter timestamp: aBlockOrStringOrDateAndTime
+    self root timestamp: aBlockOrStringOrDateAndTime constructor: self

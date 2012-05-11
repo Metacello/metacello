@@ -10,4 +10,4 @@ author: aBlockOrString
 			spec value: 'dkh'. ].
 	 "
 
-    self filter author: aBlockOrString
+    self root author: aBlockOrString constructor: self

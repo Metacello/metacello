@@ -1,3 +1,3 @@
 api
 repositories: aBlock
-    self filter repositories: aBlock
+    self root repositories: aBlock constructor: self

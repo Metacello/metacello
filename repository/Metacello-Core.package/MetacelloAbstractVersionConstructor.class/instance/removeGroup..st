@@ -1,3 +1,3 @@
 api
 removeGroup: aString
-    self filter removeGroup: aString
+    self root removeGroup: aString constructor: self

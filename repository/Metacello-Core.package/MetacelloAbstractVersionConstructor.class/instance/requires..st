@@ -1,3 +1,3 @@
 api
 requires: anObject
-    self filter requires: anObject
+    self root requires: anObject constructor: self

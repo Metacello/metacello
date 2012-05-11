@@ -1,3 +1,3 @@
 api
 repository: anObject
-    self filter repository: anObject
+    self root repository: anObject constructor: self

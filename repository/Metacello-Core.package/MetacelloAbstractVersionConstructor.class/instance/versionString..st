@@ -1,3 +1,3 @@
 api
 versionString: anObject
-    self filter versionString: anObject
+    self root versionString: anObject constructor: self
