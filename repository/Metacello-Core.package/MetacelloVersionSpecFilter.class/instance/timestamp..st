@@ -1,3 +1,0 @@
-api
-timestamp: aBlockOrStringOrDateAndTime
-    aBlockOrStringOrDateAndTime setTimestampInMetacelloConfig: self constructor
