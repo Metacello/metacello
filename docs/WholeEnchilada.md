@@ -58,7 +58,6 @@ Gofer new
     package: 'Metacello-TestsProfStef';
     package: 'Metacello-TestsReference';
     package: 'Metacello-TestsTutorial';
-    package: 'ConfigurationOfGitMetacello';
     package: 'Metacello-TestsGitHub';
     load.
 
