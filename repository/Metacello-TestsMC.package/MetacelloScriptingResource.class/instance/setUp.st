@@ -13,4 +13,5 @@ setUp
         setUpConfigurationOfExternalX;
         setUpConfigurationOfExternalXX;
         setUpConfigurationOfExternalXXX;
+        setUpBaselineGithubReference;
         yourself
