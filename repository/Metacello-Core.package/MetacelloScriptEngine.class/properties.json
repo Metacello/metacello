@@ -12,7 +12,8 @@
 		"projectClass",
 		"repositoryDescription",
 		"versionString",
-		"goferCache" ],
+		"goferCache",
+		"options" ],
 	"name" : "MetacelloScriptEngine",
 	"pools" : [
 		 ],
