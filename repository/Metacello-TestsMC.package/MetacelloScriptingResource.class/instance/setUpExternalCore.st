@@ -3,8 +3,8 @@ setUpExternalCore
     "self reset"
 
     | reference className definitionArray versionInfo |
-    reference := GoferVersionReference name: 'External-Core-dkh.1'.
-    className := #'ExternalCore'.
+    reference := GoferVersionReference name: 'External-CoreX-dkh.1'.
+    className := #'ExternalCoreX'.
     definitionArray := {(MCClassDefinition
         name: className
         superclassName: #'Object'
@@ -18,17 +18,11 @@ setUpExternalCore
         category: 'cat'
         timeStamp: ''
         source: (self class sourceCodeAt: #'externalAuthorName') asString).
-    (MCClassDefinition
-        name: #'Object'
-        superclassName: #'ProtoObject'
-        category: reference packageName
-        instVarNames: #()
-        comment: '').
     (MCMethodDefinition
         className: 'Object'
         classIsMeta: true
         selector: 'isExternal'
-        category: '*external-core'
+        category: '*external-corex'
         timeStamp: ''
         source: (self class sourceCodeAt: #'isExternal') asString)}.
     externalRepository

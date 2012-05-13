@@ -8,4 +8,4 @@ projectFrom: aScriptingEngine unconditionalLoad: unconditionalLoad
         version: aScriptingEngine versionString
         forProject: aScriptingEngine projectName ]
         on: FileDoesNotExistException
-        do: [ :ex | (aScriptingEngine getConfigurationUnconditionalLoad: unconditionalLoad) project ]
+        do: [ :ex | aScriptingEngine getConfigurationProjectUnconditionalLoad: unconditionalLoad ]

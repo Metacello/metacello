@@ -12,4 +12,4 @@ projectFrom: aScriptingEngine unconditionalLoad: unconditionalLoad
         projectClass: self
         repository: aScriptingEngine repositorySpec ]
         on: FileDoesNotExistException
-        do: [ :ex | (aScriptingEngine getConfigurationUnconditionalLoad: unconditionalLoad) project ]
+        do: [ :ex | aScriptingEngine getConfigurationProjectUnconditionalLoad: unconditionalLoad ]

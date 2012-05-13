@@ -1,5 +1,6 @@
 SystemOrganization addCategory: #'Metacello-Core-Constructors'!
-SystemOrganization addCategory: #'Metacello-Core-Exceptions'!
+SystemOrganization addCategory: #'Metacello-Core-Exceptions-Errors'!
+SystemOrganization addCategory: #'Metacello-Core-Exceptions-Notifications'!
 SystemOrganization addCategory: #'Metacello-Core-Loaders'!
 SystemOrganization addCategory: #'Metacello-Core-Members'!
 SystemOrganization addCategory: #'Metacello-Core-Model'!

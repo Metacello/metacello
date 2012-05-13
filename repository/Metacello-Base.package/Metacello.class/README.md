@@ -1,0 +1,1 @@
+**Metacello** is The entry point for the *Metacello Scripting API*

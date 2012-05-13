@@ -46,6 +46,7 @@ Gofer new
     package: 'Metacello-MC';
     package: 'Metacello-ToolBox';
     package: 'ConfigurationOfMetacello';
+    package: 'BaselineOfMetacello';
     load.
 
 Gofer new
@@ -57,9 +58,11 @@ Gofer new
     package: 'Metacello-TestsProfStef';
     package: 'Metacello-TestsReference';
     package: 'Metacello-TestsTutorial';
-    package: 'ConfigurationOfGitMetacello';
     package: 'Metacello-TestsGitHub';
     load.
+
+"I like my categories sorted"
+SystemOrganization sortCategories.
 
 Gofer new
     repository: (MCFileTreeRepository new directory: 

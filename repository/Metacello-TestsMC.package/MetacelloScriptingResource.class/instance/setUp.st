@@ -7,4 +7,11 @@ setUp
         setUpRepositories;
         setUpExternalCore;
         setUpSampleCore;
+        setUpBaselineOfExternalX;
+        setUpBaselineOfExternalXX;
+        setUpBaselineOfExternalXXX;
+        setUpConfigurationOfExternalX;
+        setUpConfigurationOfExternalXX;
+        setUpConfigurationOfExternalXXX;
+        setUpBaselineGithubReference;
         yourself

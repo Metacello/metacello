@@ -2,7 +2,7 @@ actions api
 load: required
     [ 
     | version projectSpec basicVersionString |
-    version := self projectClass versionFrom: self.
+    version := self version.
     projectSpec := version project projectSpec.
     projectSpec
         name: self projectName;

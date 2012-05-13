@@ -11,6 +11,6 @@
 	"name" : "MetacelloGitHubProject",
 	"pools" : [
 		 ],
-	"super" : "MetacelloFileTreeProject",
+	"super" : "MetacelloMCBaselineProject",
 	"traitcomposition" : "{}",
 	"type" : "normal" }

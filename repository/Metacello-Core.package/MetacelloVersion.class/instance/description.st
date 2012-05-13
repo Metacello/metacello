@@ -1,4 +1,3 @@
 querying
 description
-
-	^self spec description value
+    ^ self basicSpec description value

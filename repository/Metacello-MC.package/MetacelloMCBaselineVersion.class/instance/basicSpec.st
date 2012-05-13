@@ -1,0 +1,3 @@
+accessing
+basicSpec
+    ^ super spec

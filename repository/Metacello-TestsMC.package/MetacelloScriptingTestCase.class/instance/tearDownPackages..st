@@ -1,10 +1,6 @@
 running
 tearDownPackages: aGoferInstance
-    (self hasPackage: 'External-Core')
-        ifTrue: [ aGoferInstance package: 'External-Core' ].
-    (self hasPackage: 'Sample-Core')
-        ifTrue: [ aGoferInstance package: 'Sample-Core' ].
-    (self hasPackage: 'ConfigurationOfMetacelloExample')
-        ifTrue: [ aGoferInstance package: 'ConfigurationOfMetacelloExample' ].
-    (self hasPackage: 'GoferFoo')
-        ifTrue: [ aGoferInstance package: 'GoferFoo' ]
+    #('ConfigurationOfExternal' 'ConfigurationOfExternalX' 'ConfigurationOfExternalXX' 'BaselineOfExternal' 'BaselineOfExternalX' 'External-CoreX' 'Sample-CoreX' 'ConfigurationOfMetacelloExample' 'GoferFoo' 'Sample-Core' 'Sample-Platform' 'Sample-Tests' 'External-Core' 'External-Tests')
+        do: [ :packageName | 
+            (self hasPackage: packageName)
+                ifTrue: [ aGoferInstance package: packageName ] ]

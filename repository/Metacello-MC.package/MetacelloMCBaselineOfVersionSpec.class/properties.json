@@ -1,0 +1,17 @@
+{
+	"category" : "Metacello-MC-Specs",
+	"classinstvars" : [
+		 ],
+	"classtraitcomposition" : "{}",
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"baselineBaseName",
+		"repositorySpec" ],
+	"name" : "MetacelloMCBaselineOfVersionSpec",
+	"pools" : [
+		 ],
+	"super" : "MetacelloVersionSpec",
+	"traitcomposition" : "{}",
+	"type" : "normal" }

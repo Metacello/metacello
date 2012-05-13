@@ -1,5 +1,5 @@
 *metacello-mc-accessing
 project
-
-	project == nil ifTrue: [ project := MetacelloMCProject new].
-	^project
+    project == nil
+        ifTrue: [ project := self projectClass new ].
+    ^ project

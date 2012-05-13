@@ -1,4 +1,3 @@
 querying
 blessing
-
-	^self spec blessing value
+    ^ self basicSpec blessing value

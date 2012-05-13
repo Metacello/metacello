@@ -1,6 +1,5 @@
 *metacello-mc
-resolvePackageSpecsNamedForMetacelloMCVersion: aMetacelloMCVersion visited: visited ifAbsent: aBlock 
-
-	^ aMetacelloMCVersion 
-		allPackagesForSpecs:  {aMetacelloMCVersion spec packageNamed: self ifAbsent: aBlock}
-		visited: visited
+resolvePackageSpecsNamedForMetacelloMCVersion: aMetacelloMCVersion visited: visited ifAbsent: aBlock
+    ^ aMetacelloMCVersion
+        allPackagesForSpecs: {(aMetacelloMCVersion packageNamed: self ifAbsent: aBlock)}
+        visited: visited

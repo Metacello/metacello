@@ -1,5 +1,5 @@
 instance creation
-on: aBaselineConfigurationClass
+on: aConfig
     ^ self new
-        on: aBaselineConfigurationClass;
+        on: aConfig;
         yourself

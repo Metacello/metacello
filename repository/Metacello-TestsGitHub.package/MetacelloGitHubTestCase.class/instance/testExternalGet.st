@@ -5,5 +5,5 @@ testExternalGet
         project: 'External';
         repository: 'github://dalehenrich/external:1.0-beta.32Tests/core';
         get.
-    version := project version: 'baseline'.
+    version := project version.
     version packageNamed: 'External-Core'

@@ -11,4 +11,4 @@ package: packageName with: aBlockOrString
 			spec repository: '/opt/gemstone/repository'.
 	 "
 
-    aBlockOrString setPackage: packageName withInMetacelloConfig: self
+    self root package: packageName with: aBlockOrString constructor: self

@@ -1,0 +1,16 @@
+{
+	"category" : "BaselineOfMetacello",
+	"classinstvars" : [
+		 ],
+	"classtraitcomposition" : "{}",
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "BaselineOfMetacello",
+	"pools" : [
+		 ],
+	"super" : "MetacelloBaseBaselineConfiguration",
+	"traitcomposition" : "{}",
+	"type" : "normal" }
