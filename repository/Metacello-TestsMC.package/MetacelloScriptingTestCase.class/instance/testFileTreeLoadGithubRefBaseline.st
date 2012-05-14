@@ -12,5 +12,7 @@ testFileTreeLoadGithubRefBaseline
         silently;
         load.
     loaded := Metacello loadedProjects.
-    self assert: loaded size = 1.
-    self assert: ((loaded at: 'BaselineOfGithubRef') at: 2) == nil
+    self assert: loaded size = 2.
+    self flag: 'better values for the loaded version, methinks'.
+    self assert: ((loaded at: 'BaselineOfGithubRef') at: 2) == nil.
+    self assert: ((loaded at: 'External') at: 2) = ''

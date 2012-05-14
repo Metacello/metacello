@@ -8,5 +8,5 @@ baselineGithubReference: spec
                 project: 'External'
                 with: [ 
                     spec
-                        version: '957492f31b77026d81dcb165c07c69b2ad897781';
-                        repository: 'github://dalehenrich/external/repository' ] ]
+                        className: 'BaselineOfExternal';
+                        repository: 'github://dalehenrich/external:957492f31b77026d81dcb165c07c69b2ad897781/repository' ] ]
