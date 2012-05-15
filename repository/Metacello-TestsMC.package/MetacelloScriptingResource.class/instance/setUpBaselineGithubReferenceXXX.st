@@ -4,7 +4,7 @@ setUpBaselineGithubReferenceXXX
 
     | reference className definitionArray versionInfo |
     reference := GoferVersionReference name: 'BaselineOfGithubRefXXX-dkh.1'.
-    className := #'BaselineOfGithubRefXX'.
+    className := #'BaselineOfGithubRefXXX'.
     definitionArray := {(MCClassDefinition
         name: className
         superclassName: #'MetacelloBaseBaselineConfiguration'
