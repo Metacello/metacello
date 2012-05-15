@@ -1,3 +1,0 @@
-descriptions
-directoryDescription
-    ^ directory pathName
