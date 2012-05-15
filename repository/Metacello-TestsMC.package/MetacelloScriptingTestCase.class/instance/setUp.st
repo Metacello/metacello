@@ -26,7 +26,11 @@ setUp
     externalRepo storeVersion: (repo versionWithInfo: versionInfo ifAbsent: [ self assert: false ]).
     versionInfo := repo versionInfoFromVersionNamed: 'BaselineOfExternalX-dkh.1'.
     externalRepo storeVersion: (repo versionWithInfo: versionInfo ifAbsent: [ self assert: false ]).
-    versionInfo := repo versionInfoFromVersionNamed: 'BaselineOfGithubRef-dkh.1'.
+    versionInfo := repo versionInfoFromVersionNamed: 'BaselineOfGithubRefX-dkh.1'.
+    externalRepo storeVersion: (repo versionWithInfo: versionInfo ifAbsent: [ self assert: false ]).
+    versionInfo := repo versionInfoFromVersionNamed: 'BaselineOfGithubRefXX-dkh.1'.
+    externalRepo storeVersion: (repo versionWithInfo: versionInfo ifAbsent: [ self assert: false ]).
+    versionInfo := repo versionInfoFromVersionNamed: 'BaselineOfGithubRefXXX-dkh.1'.
     externalRepo storeVersion: (repo versionWithInfo: versionInfo ifAbsent: [ self assert: false ]).
     sampleRepo := MCFileTreeRepository new directory: sampleDirectory.
     repo := MetacelloScriptingResource current sampleRepository.

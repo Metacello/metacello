@@ -1,10 +1,10 @@
 external repository
-setUpBaselineGithubReference
+setUpBaselineGithubReferenceXX
     "self reset"
 
     | reference className definitionArray versionInfo |
-    reference := GoferVersionReference name: 'BaselineOfGithubRef-dkh.1'.
-    className := #'BaselineOfGithubRef'.
+    reference := GoferVersionReference name: 'BaselineOfGithubRefXX-dkh.1'.
+    className := #'BaselineOfGithubRefXX'.
     definitionArray := {(MCClassDefinition
         name: className
         superclassName: #'MetacelloBaseBaselineConfiguration'
@@ -14,10 +14,10 @@ setUpBaselineGithubReference
     (MCMethodDefinition
         className: className asString
         classIsMeta: false
-        selector: 'baselineGithubReference:'
+        selector: 'baselineGithubReferenceXX:'
         category: 'cat'
         timeStamp: ''
-        source: (self class sourceCodeAt: #'baselineGithubReference:') asString)}.
+        source: (self class sourceCodeAt: #'baselineGithubReferenceXX:') asString)}.
     externalRepository
         basicStoreVersion:
             (MCVersion new

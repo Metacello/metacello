@@ -1,5 +1,5 @@
 external repository
-baselineGithubReference: spec
+baselineGithubReferenceX: spec
     <baseline>
     spec
         for: #'common'
