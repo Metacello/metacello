@@ -1,3 +1,0 @@
-*metacello-github
-githubProjectSpecClass
-    ^ MetacelloGitHubProjectSpec

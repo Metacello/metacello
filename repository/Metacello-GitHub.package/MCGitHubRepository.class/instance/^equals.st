@@ -1,3 +1,3 @@
-as yet unclassified
+comparing
 = other
     ^ super = other and: [ other directoryDescription = self directoryDescription ]

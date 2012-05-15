@@ -1,8 +1,8 @@
-as yet unclassified
+baseline
 baseline: spec
     <baseline>
     spec
-        for: #common
+        for: #'common'
         do: [ 
             spec
                 project: 'Gofer'
@@ -16,7 +16,7 @@ baseline: spec
                     with: [ 
                             spec
                                 className: 'ConfigurationOfOSProcess';
-                                versionString: #stable;
+                                versionString: #'stable';
                                 repository: 'http://www.squeaksource.com/MetacelloRepository' ];
                 yourself.
             spec
@@ -27,18 +27,17 @@ baseline: spec
                             spec
                                 requires: 'Metacello-Base';
                                 includes: #('Metacello-MC' 'Metacello-Platform') ];
-                package: 'Metacello-MC' with: [ spec requires: #('Metacello-Core' 'Gofer') ];
                 package: 'Metacello-FileTree' with: [ spec requires: #('Metacello-MC' 'FileTree') ];
                 package: 'Metacello-GitHub' with: [ spec requires: #('Metacello-MC' 'Metacello-FileTree' 'OSProcess') ];
+                package: 'Metacello-MC' with: [ spec requires: #('Metacello-Core' 'Gofer') ];
                 package: 'Metacello-Platform' with: [ spec requires: #('Metacello-MC') ];
                 package: 'Metacello-Reference' with: [ spec requires: #('Metacello-MC') ];
                 package: 'Metacello-Tutorial' with: [ spec requires: #('Metacello-Core') ];
                 package: 'Metacello-TestsCore' with: [ spec requires: #('Metacello-Core') ];
-                package: 'Metacello-TestsGitHub' with: [ spec requires: 'Metacello-GitHub' ];
                 package: 'Metacello-TestsMC'
                     with: [ 
                             spec
-                                postLoadDoIt: #testsMC10beta25PostLoadDoIt;
+                                postLoadDoIt: #'testsMC10beta25PostLoadDoIt';
                                 requires: #('Metacello-MC' 'Metacello-TestsCore' 'Gofer Tests') ];
                 package: 'Metacello-TestsReference' with: [ spec requires: #('Metacello-Reference') ];
                 package: 'Metacello-TestsTutorial' with: [ spec requires: #('Metacello-Tutorial' 'Metacello-TestsMC') ];
@@ -46,18 +45,17 @@ baseline: spec
                     with: [ spec requires: #('Metacello-Platform' 'Metacello-Core' 'Metacello-ToolBox') ];
                 yourself.
             spec
-                group: 'default' with: #('Metacello-Core' 'Metacello-ToolBox');
+                group: 'default' with: #('Metacello-Core' 'Metacello-ToolBox' 'Metacello-GitHub');
                 group: 'Base Configuration' with: #('Metacello-Base');
                 group: 'Core' with: #('default');
-                group: 'Git' with: #('Metacello-GitHub');
                 group: 'Tutorial' with: #('Metacello-Tutorial' 'Metacello-Reference');
                 group: 'UI' with: #('OB-Metacello');
                 group: 'Tests'
                     with:
-                        #('default' 'Metacello-TestsCore' 'Metacello-TestsTutorial' 'Metacello-TestsMC' 'Metacello-TestsReference' 'Metacello-TestsGitHub');
+                        #('default' 'Metacello-TestsCore' 'Metacello-TestsTutorial' 'Metacello-TestsMC' 'Metacello-TestsReference');
                 yourself ].
     spec
-        for: #squeakCommon
+        for: #'squeakCommon'
         do: [ 
             spec
                 project: 'HelpSystem'
@@ -69,7 +67,7 @@ baseline: spec
                 project: 'OmniBrowser'
                     with: [ 
                             spec
-                                versionString: #stable;
+                                versionString: #'stable';
                                 loads: #('Core');
                                 repository: 'http://www.squeaksource.com/MetacelloRepository' ];
                 yourself.
@@ -87,15 +85,15 @@ baseline: spec
                 group: 'Tests' with: #('Metacello-TestsPlatform');
                 yourself ].
     spec
-        for: #pharo
+        for: #'pharo'
         do: [ 
             spec
                 project: 'ProfStef'
                     with: [ 
                             spec
-                                versionString: #stable;
+                                versionString: #'stable';
                                 repository: 'http://www.squeaksource.com/MetacelloRepository' ];
-                github: 'FileTree' with: [ spec repository: 'github://dalehenrich/filetree:pharo1.3/repository' ];
+                baseline: 'FileTree' with: [ spec repository: 'github://dalehenrich/filetree:pharo1.3/repository' ];
                 yourself.
             spec
                 package: 'Metacello-ProfStef'
@@ -108,19 +106,19 @@ baseline: spec
                 group: 'Tutorial' with: #('Metacello-ProfStef');
                 yourself ].
     spec
-        for: #squeak
+        for: #'squeak'
         do: [ 
             spec
-                github: 'FileTree' with: [ spec repository: 'github://dalehenrich/filetree:squeak4.3/repository' ];
+                baseline: 'FileTree' with: [ spec repository: 'github://dalehenrich/filetree:squeak4.3/repository' ];
                 yourself.
             spec
                 package: 'Metacello-Platform' with: 'Metacello-Platform.squeak';
                 yourself ].
     spec
-        for: #gemstone
+        for: #'gemstone'
         do: [ 
             spec
-                github: 'FileTree' with: [ spec repository: 'github://dalehenrich/filetree:gemstone2.4/repository' ];
+                baseline: 'FileTree' with: [ spec repository: 'github://dalehenrich/filetree:gemstone2.4/repository' ];
                 project: 'GsMonticello'
                     with: [ 
                             spec
@@ -131,16 +129,16 @@ baseline: spec
                     with: [ 
                             spec
                                 className: 'ConfigurationOfGsOB';
-                                versionString: #stable;
+                                versionString: #'stable';
                                 repository: 'http://seaside.gemstone.com/ss/MetacelloRepository' ];
                 yourself.
             spec
-                package: 'Metacello-MC' with: [ spec preLoadDoIt: #gemstone10beta24PreLoadDoIt ];
+                package: 'Metacello-MC' with: [ spec preLoadDoIt: #'gemstone10beta24PreLoadDoIt' ];
                 package: 'Metacello-Platform'
                     with: [ 
                             spec
                                 file: 'Metacello-Platform.gemstone';
-                                postLoadDoIt: #gemstone10beta311PostLoadDoIt;
+                                postLoadDoIt: #'gemstone10beta311PostLoadDoIt';
                                 requires: 'GsMonticello' ];
                 package: 'Metacello-TestsPlatform'
                     with: [ 

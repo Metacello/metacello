@@ -1,3 +1,3 @@
 accessing
 projectVersion: anObject
-	projectVersion := anObject
+    projectVersion := anObject

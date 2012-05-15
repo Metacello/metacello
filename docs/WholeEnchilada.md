@@ -58,7 +58,6 @@ Gofer new
     package: 'Metacello-TestsProfStef';
     package: 'Metacello-TestsReference';
     package: 'Metacello-TestsTutorial';
-    package: 'Metacello-TestsGitHub';
     load.
 
 "I like my categories sorted"
