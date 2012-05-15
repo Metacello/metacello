@@ -27,8 +27,9 @@ baseline: spec
                             spec
                                 requires: 'Metacello-Base';
                                 includes: #('Metacello-MC' 'Metacello-Platform') ];
-                package: 'Metacello-MC' with: [ spec requires: #('Metacello-Core' 'Gofer') ];
                 package: 'Metacello-FileTree' with: [ spec requires: #('Metacello-MC' 'FileTree') ];
+                package: 'Metacello-GitHub' with: [ spec requires: #('Metacello-MC' 'Metacello-FileTree' 'OSProcess') ];
+                package: 'Metacello-MC' with: [ spec requires: #('Metacello-Core' 'Gofer') ];
                 package: 'Metacello-Platform' with: [ spec requires: #('Metacello-MC') ];
                 package: 'Metacello-Reference' with: [ spec requires: #('Metacello-MC') ];
                 package: 'Metacello-Tutorial' with: [ spec requires: #('Metacello-Core') ];
@@ -44,7 +45,7 @@ baseline: spec
                     with: [ spec requires: #('Metacello-Platform' 'Metacello-Core' 'Metacello-ToolBox') ];
                 yourself.
             spec
-                group: 'default' with: #('Metacello-Core' 'Metacello-ToolBox');
+                group: 'default' with: #('Metacello-Core' 'Metacello-ToolBox' 'Metacello-GitHub');
                 group: 'Base Configuration' with: #('Metacello-Base');
                 group: 'Core' with: #('default');
                 group: 'Tutorial' with: #('Metacello-Tutorial' 'Metacello-Reference');
