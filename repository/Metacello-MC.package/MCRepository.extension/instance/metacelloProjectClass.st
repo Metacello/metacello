@@ -1,3 +1,0 @@
-*metacello-mc
-metacelloProjectClass
-    ^ MetacelloMCProject
