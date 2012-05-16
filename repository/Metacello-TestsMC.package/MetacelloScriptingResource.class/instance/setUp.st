@@ -18,4 +18,6 @@ setUp
         setUpBaselineGithubReferenceXXX;
         setUpBaselineGithubReferenceIV;
         setUpBaselineGithubReferenceV;
+        setUpBaselineGithubReferenceVI;
+        setUpBaselineGithubReferenceVII;
         yourself

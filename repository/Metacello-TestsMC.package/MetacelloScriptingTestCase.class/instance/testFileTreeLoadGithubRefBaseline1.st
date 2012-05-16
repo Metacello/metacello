@@ -1,5 +1,7 @@
 tests
 testFileTreeLoadGithubRefBaseline1
+    "BaselineOfExternal reference from github://dalehenrich/external:957492f31b77026d81dcb165c07c69b2ad897781/repository using #project:with:"
+
     | loaded |
     Metacello new
         project: 'BaselineOfGithubRefX';
