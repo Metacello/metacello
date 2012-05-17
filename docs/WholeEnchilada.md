@@ -15,6 +15,7 @@
 
 ```Smalltalk
 Gofer new
+      disablePackageCache;
       url: 'http://ss3.gemstone.com/ss/FileTree';
       package: 'ConfigurationOfFileTree';
       load.
@@ -24,6 +25,7 @@ ConfigurationOfMetacello project updateProject.
 ConfigurationOfMetacello project latestVersion load: 'ALL'.
 
 Gofer new
+        disablePackageCache;
         repository: (MCFileTreeRepository new directory: 
                     (FileDirectory on: '/opt/git/filetree/repository/'));
         package: 'MonticelloFileTree-Core';
@@ -37,6 +39,7 @@ Gofer new
 ((Smalltalk at: #'ConfigurationOfOSProcess') project version: #stable) load.
 
 Gofer new
+    disablePackageCache;
     repository: (MCFileTreeRepository new directory: 
                     (FileDirectory on: '/opt/git/metacello-work/repository/'));
     package: 'Metacello-Base';
@@ -50,6 +53,7 @@ Gofer new
     load.
 
 Gofer new
+    disablePackageCache;
     repository: (MCFileTreeRepository new directory: 
                     (FileDirectory on: '/opt/git/metacello-work/repository/'));
     package: 'Metacello-Reference';
@@ -64,6 +68,7 @@ Gofer new
 SystemOrganization sortCategories.
 
 Gofer new
+    disablePackageCache;
     repository: (MCFileTreeRepository new directory: 
                 (FileDirectory on: '/opt/git/external/repository/'));
     package: 'External-Core';
@@ -72,6 +77,7 @@ Gofer new
     load.
 
 Gofer new
+    disablePackageCache;
     repository: (MCFileTreeRepository new directory:
                 (FileDirectory on: '/opt/git/pharo/ston/repository/'));
     package: 'Ston-Core';
