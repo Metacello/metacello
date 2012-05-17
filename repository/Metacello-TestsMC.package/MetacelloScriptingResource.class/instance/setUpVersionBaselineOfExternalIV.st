@@ -1,10 +1,12 @@
-external repository
-setUpConfigurationOfExternalXXX
+version:baselineOf: pragma
+setUpVersionBaselineOfExternalIV
+    "see https://github.com/dalehenrich/metacello-work/issues/6"
+
     "self reset"
 
     | reference className definitionArray versionInfo |
-    reference := GoferVersionReference name: 'ConfigurationOfExternalXXX-dkh.1'.
-    className := #'ConfigurationOfExternalXXX'.
+    reference := GoferVersionReference name: 'ConfigurationOfExternalIV-dkh.1'.
+    className := #'ConfigurationOfExternalIV'.
     definitionArray := {(MCClassDefinition
         name: className
         superclassName: #'MetacelloBaseConfiguration'
@@ -14,10 +16,17 @@ setUpConfigurationOfExternalXXX
     (MCMethodDefinition
         className: className asString
         classIsMeta: false
-        selector: 'versionOfXXX:'
+        selector: 'baselineOfIV:'
         category: 'cat'
         timeStamp: ''
-        source: (self class sourceCodeAt: #'versionOfXXX:') asString)}.
+        source: (self class sourceCodeAt: #'baselineOfIV:') asString).
+    (MCMethodDefinition
+        className: className asString
+        classIsMeta: false
+        selector: 'customProjectAttributes'
+        category: 'cat'
+        timeStamp: ''
+        source: (self class sourceCodeAt: #'customProjectAttributes') asString)}.
     configurationRepository
         basicStoreVersion:
             (MCVersion new

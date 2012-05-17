@@ -1,4 +1,4 @@
-external repository
+external core
 setUpExternalCore
     "self reset"
 

@@ -1,16 +1,19 @@
 tests
-testFileTreeGetConfiguration2
+testFileTreeGetConfigurationBasicSpecIV
     "avoid resolving to BaselineOf .... use basicSpec"
 
     | project basicSpec expected |
     project := Metacello new
-        project: 'ExternalXX';
+        project: 'ExternalIV';
         repository: 'filetree://' , configurationDirectory fullName;
         get.
     basicSpec := (project version: '0.9') basicSpec.
     expected := 'spec blessing: #''development''.
-spec description: ''initial work: first commit on custom branch''.
+spec description: ''initial work''.
 spec author: ''dkh''.
 spec timestamp: ''5/4/2012 14:16''.
-spec repository: ''github://dalehenrich/external:957492f31b77026d81dcb165c07c69b2ad897781/repository''.'.
+spec project: ''ExternalX'' with: [
+		spec
+			className: ''BaselineOfExternalX'';
+			repository: ''dictionary://Metacello_Configuration_Test_Repository'' ].'.
     self assert: basicSpec printString = expected

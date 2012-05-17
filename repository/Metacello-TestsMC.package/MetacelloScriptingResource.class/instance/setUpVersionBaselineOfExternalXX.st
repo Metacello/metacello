@@ -1,24 +1,31 @@
-baseline pragma - external
-setUpBaselineOfExternalXX
+version:baselineOf: pragma
+setUpVersionBaselineOfExternalXX
     "self reset"
 
     | reference className definitionArray versionInfo |
-    reference := GoferVersionReference name: 'BaselineOfExternalXX-dkh.1'.
-    className := #BaselineOfExternalXX.
+    reference := GoferVersionReference name: 'ConfigurationOfExternalXX-dkh.1'.
+    className := #'ConfigurationOfExternalXX'.
     definitionArray := {(MCClassDefinition
         name: className
-        superclassName: #MetacelloBaseBaselineConfiguration
+        superclassName: #'MetacelloBaseConfiguration'
         category: reference packageName
         instVarNames: #()
         comment: '').
     (MCMethodDefinition
         className: className asString
         classIsMeta: false
-        selector: 'externalBaselineXX:'
+        selector: 'versionOfXX:'
         category: 'cat'
         timeStamp: ''
-        source: (self class sourceCodeAt: #externalBaselineXX:) asString)}.
-    externalRepository
+        source: (self class sourceCodeAt: #'versionOfXX:') asString).
+    (MCMethodDefinition
+        className: className asString
+        classIsMeta: false
+        selector: 'customProjectAttributes'
+        category: 'cat'
+        timeStamp: ''
+        source: (self class sourceCodeAt: #'customProjectAttributes') asString)}.
+    configurationRepository
         basicStoreVersion:
             (MCVersion new
                 setPackage: (MetacelloTestsMCPackage new name: reference packageName)

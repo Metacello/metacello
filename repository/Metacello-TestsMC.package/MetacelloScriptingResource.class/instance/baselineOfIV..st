@@ -1,6 +1,6 @@
 version:baselineOf: pragma
-versionOfX: spec
-    <version: '0.9' baselineOf: 'ExternalX'>
+baselineOfIV: spec
+    <version: '0.9'>
     spec
         for: #'common'
         do: [ 
@@ -8,4 +8,6 @@ versionOfX: spec
             spec description: 'initial work'.
             spec author: 'dkh'.
             spec timestamp: '5/4/2012 14:16' ].
-    spec for: #'custom' do: [ spec repository: 'dictionary://Metacello_Configuration_Test_Repository' ]
+    spec
+        for: #'custom'
+        do: [ spec baseline: 'ExternalX' with: [ spec repository: 'dictionary://Metacello_Configuration_Test_Repository' ] ]

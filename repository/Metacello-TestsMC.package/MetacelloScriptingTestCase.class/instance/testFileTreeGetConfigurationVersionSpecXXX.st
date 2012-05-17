@@ -1,10 +1,10 @@
 tests
-testFileTreeGetConfiguration4
+testFileTreeGetConfigurationVersionSpecXXX
     "resolve to BaselineOf ... use spec or versionSpec"
 
     | project versionSpec expected |
     project := Metacello new
-        project: 'ExternalXX';
+        project: 'ExternalXXX';
         repository: 'filetree://' , configurationDirectory fullName;
         get.
     versionSpec := (project version: '0.9') versionSpec.

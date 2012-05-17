@@ -1,4 +1,4 @@
-external repository
+baseline pragma - github reference
 setUpBaselineGithubReferenceVI
     "self reset"
 

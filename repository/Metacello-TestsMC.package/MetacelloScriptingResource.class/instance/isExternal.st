@@ -1,3 +1,3 @@
-external repository
+external core
 isExternal
     ^ false

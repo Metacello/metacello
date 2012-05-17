@@ -1,4 +1,4 @@
-external repository
+baseline pragma - external
 externalBaselineX: spec
     <baseline>
     spec

@@ -10,9 +10,10 @@ setUp
         setUpBaselineOfExternalX;
         setUpBaselineOfExternalXX;
         setUpBaselineOfExternalXXX;
-        setUpConfigurationOfExternalX;
-        setUpConfigurationOfExternalXX;
-        setUpConfigurationOfExternalXXX;
+        setUpVersionBaselineOfExternalX;
+        setUpVersionBaselineOfExternalXX;
+        setUpVersionBaselineOfExternalXXX;
+        setUpVersionBaselineOfExternalIV;
         setUpBaselineGithubReferenceX;
         setUpBaselineGithubReferenceXX;
         setUpBaselineGithubReferenceXXX;

@@ -1,4 +1,4 @@
-external repository
+version:baselineOf: pragma
 versionOfXXX: spec
     <version: '0.9' baselineOf: 'External'>
     spec

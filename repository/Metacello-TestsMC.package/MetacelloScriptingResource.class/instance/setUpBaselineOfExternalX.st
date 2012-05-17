@@ -1,4 +1,4 @@
-external repository
+baseline pragma - external
 setUpBaselineOfExternalX
     "self reset"
 

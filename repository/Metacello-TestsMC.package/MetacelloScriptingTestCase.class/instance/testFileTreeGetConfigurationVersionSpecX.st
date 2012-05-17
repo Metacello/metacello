@@ -1,5 +1,5 @@
 tests
-testFileTreeGetConfiguration3
+testFileTreeGetConfigurationVersionSpecX
     "resolve to BaselineOf ... use spec or versionSpec"
 
     | project versionSpec expected |

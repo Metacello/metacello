@@ -1,10 +1,10 @@
-external repository
-setUpConfigurationOfExternalXX
+version:baselineOf: pragma
+setUpVersionBaselineOfExternalX
     "self reset"
 
     | reference className definitionArray versionInfo |
-    reference := GoferVersionReference name: 'ConfigurationOfExternalXX-dkh.1'.
-    className := #'ConfigurationOfExternalXX'.
+    reference := GoferVersionReference name: 'ConfigurationOfExternalX-dkh.1'.
+    className := #'ConfigurationOfExternalX'.
     definitionArray := {(MCClassDefinition
         name: className
         superclassName: #'MetacelloBaseConfiguration'
@@ -14,10 +14,10 @@ setUpConfigurationOfExternalXX
     (MCMethodDefinition
         className: className asString
         classIsMeta: false
-        selector: 'versionOfXX:'
+        selector: 'versionOfX:'
         category: 'cat'
         timeStamp: ''
-        source: (self class sourceCodeAt: #'versionOfXX:') asString).
+        source: (self class sourceCodeAt: #'versionOfX:') asString).
     (MCMethodDefinition
         className: className asString
         classIsMeta: false

@@ -16,10 +16,10 @@ setUp
     sampleDirectory assureExistence.
     configurationRepo := MCFileTreeRepository new directory: configurationDirectory.
     repo := MetacelloScriptingResource current configurationRepository.
-    versionInfo := repo versionInfoFromVersionNamed: 'ConfigurationOfExternalX-dkh.1'.
-    configurationRepo storeVersion: (repo versionWithInfo: versionInfo ifAbsent: [ self assert: false ]).
-    versionInfo := repo versionInfoFromVersionNamed: 'ConfigurationOfExternalXX-dkh.1'.
-    configurationRepo storeVersion: (repo versionWithInfo: versionInfo ifAbsent: [ self assert: false ]).
+    #('ConfigurationOfExternalX-dkh.1' 'ConfigurationOfExternalXX-dkh.1' 'ConfigurationOfExternalXXX-dkh.1' 'ConfigurationOfExternalIV-dkh.1')
+        do: [ :package | 
+            versionInfo := repo versionInfoFromVersionNamed: package.
+            configurationRepo storeVersion: (repo versionWithInfo: versionInfo ifAbsent: [ self assert: false ]) ].
     externalRepo := MCFileTreeRepository new directory: externalDirectory.
     repo := MetacelloScriptingResource current externalRepository.
     #('External-CoreX-dkh.1' 'BaselineOfExternalX-dkh.1' 'BaselineOfGithubRefX-dkh.1' 'BaselineOfGithubRefXX-dkh.1' 'BaselineOfGithubRefXXX-dkh.1' 'BaselineOfGithubRefIV-dkh.1' 'BaselineOfGithubRefV-dkh.1' 'BaselineOfGithubRefVI-dkh.1' 'BaselineOfGithubRefVII-dkh.1')
