@@ -1,4 +1,4 @@
-version:baselineOf: pragma
+baseline:with:
 setUpVersionBaselineOfExternalIV
     "see https://github.com/dalehenrich/metacello-work/issues/6"
 

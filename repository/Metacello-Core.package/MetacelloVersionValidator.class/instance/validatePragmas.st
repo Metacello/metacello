@@ -3,13 +3,12 @@ validatePragmas
     "Ensure that versions are Strings and symbolic versions are symbols.
 	 Ensure that imported versions are defined"
 
-    | versionPragmas versionImportPragmas symbolicVersionPragmas versionStrings baselineOfVersionPragmas |
+    | versionPragmas versionImportPragmas symbolicVersionPragmas versionStrings |
     versionPragmas := self extractVersionPragmas.
-    baselineOfVersionPragmas := self extractBaselineOfVersionPragmas.
     versionImportPragmas := self extractVersionImportPragmas.
     symbolicVersionPragmas := self extractSymbolicVersionPragmas.
     versionStrings := Set new.
-    versionPragmas keys , baselineOfVersionPragmas keys , versionImportPragmas keys , symbolicVersionPragmas keys
+    versionPragmas keys , versionImportPragmas keys , symbolicVersionPragmas keys
         do: [ :versionString | 
             (versionStrings includes: versionString)
                 ifTrue: [ 

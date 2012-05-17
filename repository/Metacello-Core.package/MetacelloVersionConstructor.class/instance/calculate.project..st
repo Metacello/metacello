@@ -7,7 +7,6 @@ calculate: aConfig project: aProject
     symbolicVersionMap := Dictionary new.
     executionBlock := self specResolverBlock.
     self collectAllVersionsFromVersionPragmasInto: versionMap using: executionBlock.
-    self collectAllBaselineOfVersionsFromVersionPragmasInto: versionMap using: self baselineOfResolverBlock.
     pragmaDict := self extractVersionImportPragmas.
     self verifyVersionImportPragmas: pragmaDict definedIn: versionMap.
     self collectAllVersionsFromVersionImportPragmasInto: versionMap using: executionBlock satisfiedPragmas: pragmaDict.

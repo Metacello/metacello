@@ -1,4 +1,4 @@
-version:baselineOf: pragma
+baseline:with:
 baselineOfIV: spec
     <version: '0.9'>
     spec

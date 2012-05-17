@@ -1,4 +1,4 @@
-version:baselineOf: pragma
+baseline:with:
 setUpVersionBaselineOfExternalX
     "self reset"
 
