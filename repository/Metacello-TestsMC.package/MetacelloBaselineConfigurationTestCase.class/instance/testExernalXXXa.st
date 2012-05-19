@@ -12,9 +12,10 @@ testExernalXXXa
         projectAttributes: #();
         yourself.
     version := (constructor := MetacelloBaselineConstructor
-        on: (Smalltalk at: #BaselineOfExternalXXX) new
+        on: (Smalltalk at: #'BaselineOfExternalXXX') new
         project: project) project version.
-    expected := 'spec 
+    expected := 'spec description: ''MetacelloScriptingResource>>externalBaselineXXX:''.
+spec 
 	package: ''External-CoreX'';
 	package: ''External-TestsX'' with: [
 		spec requires: #(''External-CoreX'' ). ].

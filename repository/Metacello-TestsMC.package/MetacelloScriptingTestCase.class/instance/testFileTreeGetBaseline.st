@@ -8,7 +8,8 @@ testFileTreeGetBaseline
     versionSpec := project version versionSpec.
     self assert: (versionSpec repositorySpecs first description endsWith: self externalPath).
     versionSpec repositories: nil.	"full path to disk-based repository varies from platform to platform"
-    expected := 'spec 
+    expected :=  'spec description: ''MetacelloScriptingResource>>externalBaselineX:''.
+spec 
 	package: ''External-CoreX'';
 	package: ''External-TestsX'' with: [
 		spec requires: #(''External-CoreX'' ). ].

@@ -8,8 +8,9 @@ testExernalX
         repository: repo;
         package: 'BaselineOfExternalX';
         load.
-    version := (Smalltalk at: #BaselineOfExternalX) project version.
-    expected := 'spec 
+    version := (Smalltalk at: #'BaselineOfExternalX') project version.
+    expected := 'spec description: ''MetacelloScriptingResource>>externalBaselineX:''.
+spec 
 	package: ''External-CoreX'';
 	package: ''External-TestsX'' with: [
 		spec requires: #(''External-CoreX'' ). ].
