@@ -2,8 +2,9 @@ baseline pragma - external
 externalBaselineXX: spec
     <baseline>
     spec
-        for: #common
+        for: #'common'
         do: [ 
+            spec description: 'MetacelloScriptingResource>>externalBaselineXX:'.
             spec
                 package: 'External-CoreX';
                 package: 'External-TestsX' with: [ spec requires: 'External-CoreX' ];

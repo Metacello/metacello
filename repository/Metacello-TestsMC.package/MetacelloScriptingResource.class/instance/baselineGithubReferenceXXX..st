@@ -4,6 +4,7 @@ baselineGithubReferenceXXX: spec
     spec
         for: #'common'
         do: [ 
+            spec description: 'MetacelloScriptingResource>>baselineGithubReferenceXXX:'.
             spec
                 baseline: 'External'
                 with: [ 

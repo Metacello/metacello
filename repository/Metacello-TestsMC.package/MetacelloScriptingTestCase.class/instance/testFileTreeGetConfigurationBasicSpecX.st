@@ -9,8 +9,9 @@ testFileTreeGetConfigurationBasicSpecX
         get.
     basicSpec := (project version: '0.9') basicSpec.
     expected := 'spec blessing: #''development''.
-spec description: ''initial work''.
+spec description: ''MetacelloScriptingResource>>versionOfX:''.
 spec author: ''dkh''.
 spec timestamp: ''5/4/2012 14:16''.
-spec repository: ''dictionary://Metacello_Configuration_Test_Repository''.'.
+spec baseline: ''ExternalX'' with: [
+		spec repository: ''dictionary://Metacello_Configuration_Test_Repository'' ].'.
     self assert: basicSpec printString = expected

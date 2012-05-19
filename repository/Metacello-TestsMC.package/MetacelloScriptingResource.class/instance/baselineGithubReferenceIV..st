@@ -3,4 +3,6 @@ baselineGithubReferenceIV: spec
     <baseline>
     spec
         for: #'common'
-        do: [ spec baseline: 'External' with: [ spec repository: 'http://ss3.gemstone.com/ss/external' ] ]
+        do: [ 
+            spec description: 'MetacelloScriptingResource>>baselineGithubReferenceIV:'.
+            spec baseline: 'External' with: [ spec repository: 'http://ss3.gemstone.com/ss/external' ] ]

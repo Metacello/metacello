@@ -4,6 +4,7 @@ configurationGithubReferenceX: spec
     spec
         for: #'common'
         do: [ 
+            spec description: 'MetacelloScriptingResource>>configurationGithubReferenceX:'.
             spec
                 project: 'External'
                 with: [ 

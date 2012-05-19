@@ -5,7 +5,7 @@ versionOfX: spec
         for: #'common'
         do: [ 
             spec blessing: #'development'.
-            spec description: 'initial work'.
+            spec description: 'MetacelloScriptingResource>>versionOfX:'.
             spec author: 'dkh'.
             spec timestamp: '5/4/2012 14:16' ].
     spec

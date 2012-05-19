@@ -8,13 +8,10 @@ testFileTreeGetConfigurationVersionSpecX
         repository: 'filetree://' , configurationDirectory fullName;
         get.
     versionSpec := (project version: '0.9') versionSpec.
-    expected := 'spec repository: ''dictionary://Metacello_Configuration_Test_Repository''.
-spec 
-	package: ''External-CoreX'';
-	package: ''External-TestsX'' with: [
-		spec requires: #(''External-CoreX'' ). ].
-spec 
-	group: ''Core'' with: #(''External-CoreX'' );
-	group: ''default'' with: #(''Core'' );
-	group: ''Tests'' with: #(''External-TestsX'' ).'.
+    expected := 'spec blessing: #''development''.
+spec description: ''MetacelloScriptingResource>>versionOfX:''.
+spec author: ''dkh''.
+spec timestamp: ''5/4/2012 14:16''.
+spec baseline: ''ExternalX'' with: [
+		spec repository: ''dictionary://Metacello_Configuration_Test_Repository'' ].'.
     self assert: versionSpec printString = expected

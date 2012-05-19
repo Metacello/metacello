@@ -1,6 +1,7 @@
 baseline pragma - external
 externalBaselineX: spec
     <baseline>
+    spec description: 'MetacelloScriptingResource>>externalBaselineX:'.
     spec
         package: 'External-CoreX';
         package: 'External-TestsX' with: [ spec requires: 'External-CoreX' ];
