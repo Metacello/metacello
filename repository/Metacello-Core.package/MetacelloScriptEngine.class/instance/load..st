@@ -1,7 +1,7 @@
 actions api
 load: required
     [ 
-    | version projectSpec |
+    | version projectSpec registration |
     version := self version.
     projectSpec := version project projectSpec.
     projectSpec
@@ -11,11 +11,12 @@ load: required
         yourself.
     required notEmpty
         ifTrue: [ projectSpec loads: required ].
-    self loadedProjects at: self projectName put: projectSpec.
+    registration := MetacelloProjectRegistration registerProjectSpec: projectSpec ifPresent: [:existing :new | self halt].
     Transcript
         cr;
         show:
-                'Expicitly loaded version ' , version versionString printString , ' or project ' , projectSpec name printString.
+                'Expicitly loaded version ' , registration versionString printString , ' or project '
+                        , registration projectName printString.
     self
         root:
             (required isEmpty
@@ -29,22 +30,25 @@ load: required
                 ifTrue: [ ex resume: ((self lookupConfigurationPackageSpecFrom: ex packageSpec) ifNil: [ ^ ex resume: ex packageSpec ]) ].
             (ex isKindOf: MetacelloLookupProjectSpecNotification)
                 ifTrue: [ 
-                    | loadedProjectspec |
-                    loadedProjectspec := self loadedProjects
-                        at: ex projectSpec name
-                        ifAbsent: [ ex resume: ex projectSpec ].	"this is wrong for MetacelloScriptingTestCase>>testFileTreeLoadConfiguration:
+                    | existing new |
+                    existing := MetacelloProjectRegistration
+                        registrationForProjectSpec: ex projectSpec
+                        ifAbsent: [ ex resume: ex projectSpec ].
+                    new := ex projectSpec asProjectRegistration.
+                    self halt.	"this is wrong for MetacelloScriptingTestCase>>testFileTreeLoadConfiguration:
   we registered as loaded the ConfigurationOfExternalX and this call is for
   BaselineOfExternalX ... the real one and the one that should drive the load"
-                    self halt.
                     Transcript
                         cr;
                         show:
-                                'Would have used version ' , loadedProjectspec versionString printString , ' for ' , loadedProjectspec name printString.
+                                'Would have used version ' , existing versionString printString , ' for ' , existing projectName printString.
                     ex resume: ex projectSpec ].
             (ex isKindOf: MetacelloLoadProjectSpecVersionNotification)
                 ifTrue: [ 
-                    | ar |
-                    self halt loadedProjects at: ex projectSpec name put: ex projectSpec copy.
+                    | registration |
+                    registration := MetacelloProjectRegistration
+                        registerProjectSpec: ex projectSpec
+                        ifPresent: [ :existing :new | self halt ].
                     Transcript
                         cr;
                         show:

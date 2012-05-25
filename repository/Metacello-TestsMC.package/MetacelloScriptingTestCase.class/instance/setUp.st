@@ -30,8 +30,8 @@ setUp
     repo := MetacelloScriptingResource current sampleRepository.
     versionInfo := repo versionInfoFromVersionNamed: 'Sample-CoreX-dkh.1'.
     sampleRepo storeVersion: (repo versionWithInfo: versionInfo ifAbsent: [ self assert: false ]).
-    loadedProjectsCache := MetacelloScriptEngine loadedProjects.
-    MetacelloScriptEngine resetLoadedProjects.
+    loadedProjectsCache := MetacelloProjectRegistration registry.
+    MetacelloProjectRegistration resetRegistry.
     configurationRepository := MetacelloScriptingResource current externalRepository.
     Smalltalk at: #'Metacello_Configuration_Test_Repository' put: configurationRepository.
     monticelloRepository := MetacelloMonticelloResource current monticelloRepository.
