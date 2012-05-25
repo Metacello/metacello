@@ -7,4 +7,4 @@ testFileTreeLoadBaseline1
         load.
     loaded := Metacello loadedProjects.
     self assert: loaded size = 1.
-    self assert: ((loaded at: 'ExternalX') at: 2) == nil
+    self assert: (loaded at: 'ExternalX') versionString = 'baseline'

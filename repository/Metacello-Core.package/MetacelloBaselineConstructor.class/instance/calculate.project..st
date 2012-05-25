@@ -19,5 +19,6 @@ calculate: aConfig project: aProject
             | blockList |
             (blockList := self attributeMap at: attribute ifAbsent: [  ]) ~~ nil
                 ifTrue: [ blockList do: [ :block | self with: versionSpec during: block ] ] ].
-    versionMap at: self project singletonVersionName put: versionSpec createVersion.
+    versionSpec versionString: self project singletonVersionName.
+    versionMap at: versionSpec versionString put: versionSpec createVersion.
     self project map: versionMap
