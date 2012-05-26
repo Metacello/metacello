@@ -1,7 +1,7 @@
 loading
 load
     | displayString |
-    displayString := 'BEFORE->>>Project: ' , self name.
+    displayString := 'Project: ' , self name.
     self versionString ~~ nil
         ifTrue: [ displayString := displayString , ' ' , self versionString ].
     Transcript

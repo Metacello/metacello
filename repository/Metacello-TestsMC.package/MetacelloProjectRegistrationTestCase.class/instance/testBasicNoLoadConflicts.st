@@ -1,5 +1,12 @@
 tests
-testBasicHasLoadConflicts
+testBasicNoLoadConflicts
+    "5 combinations of loads with no load conflicts:
+        No configs and baselines =
+        configs = and no baselines
+        configs = and baselines =
+        configs = and no baseline   loaded with a baseline to load
+        config loaded, no config to load and no baseline loaded with a baseline to load "
+
     | registrationA registrationB baselineProjectSpecA configurationProjectSpecA baselineProjectSpecB configurationProjectSpecB |
     baselineProjectSpecA := self baselineProjectSpec.
     configurationProjectSpecA := self configurationProjectSpec.
@@ -7,32 +14,30 @@ testBasicHasLoadConflicts
     configurationProjectSpecB := self configurationProjectSpec name: 'NotDiscGolf'.
     registrationA := MetacelloProjectRegistration new.
     registrationB := MetacelloProjectRegistration new.
-    self assert: (registrationA hasLoadConflicts: registrationB).
     registrationA projectName: baselineProjectSpecA name.
     registrationB projectName: baselineProjectSpecA name.
-    self assert: (registrationA hasLoadConflicts: registrationB).
     registrationA configurationProjectSpec: nil.
     registrationA baselineProjectSpec: baselineProjectSpecA.
     registrationB configurationProjectSpec: nil.
-    registrationB baselineProjectSpec: baselineProjectSpecB.
-    self assert: (registrationA hasLoadConflicts: registrationB).
-    registrationA configurationProjectSpec: configurationProjectSpecA.
-    registrationA baselineProjectSpec: baselineProjectSpecA.
-    registrationB configurationProjectSpec: configurationProjectSpecB.
     registrationB baselineProjectSpec: baselineProjectSpecA.
-    self assert: (registrationA hasLoadConflicts: registrationB).
-    registrationA configurationProjectSpec: configurationProjectSpecA.
-    registrationA baselineProjectSpec: baselineProjectSpecA.
-    registrationB configurationProjectSpec: configurationProjectSpecA.
-    registrationB baselineProjectSpec: baselineProjectSpecB.
-    self assert: (registrationA hasLoadConflicts: registrationB).
+    self deny: (registrationA hasLoadConflicts: registrationB).
     registrationA configurationProjectSpec: configurationProjectSpecA.
     registrationA baselineProjectSpec: nil.
-    registrationB configurationProjectSpec: configurationProjectSpecB.
-    registrationB baselineProjectSpec: nil.
-    self assert: (registrationA hasLoadConflicts: registrationB).
-    registrationA configurationProjectSpec: nil.
-    registrationA baselineProjectSpec: baselineProjectSpecA.
     registrationB configurationProjectSpec: configurationProjectSpecA.
     registrationB baselineProjectSpec: nil.
-    self assert: (registrationA hasLoadConflicts: registrationB)
+    self deny: (registrationA hasLoadConflicts: registrationB).
+    registrationA configurationProjectSpec: configurationProjectSpecA.
+    registrationA baselineProjectSpec: baselineProjectSpecA.
+    registrationB configurationProjectSpec: configurationProjectSpecA.
+    registrationB baselineProjectSpec: baselineProjectSpecA.
+    self deny: (registrationA hasLoadConflicts: registrationB).
+    registrationA configurationProjectSpec: configurationProjectSpecA.
+    registrationA baselineProjectSpec: nil.
+    registrationB configurationProjectSpec: configurationProjectSpecA.
+    registrationB baselineProjectSpec: baselineProjectSpecA.
+    self deny: (registrationA hasLoadConflicts: registrationB).
+    registrationA configurationProjectSpec: configurationProjectSpecA.
+    registrationA baselineProjectSpec: nil.
+    registrationB configurationProjectSpec: nil.
+    registrationB baselineProjectSpec: baselineProjectSpecA.
+    self deny: (registrationA hasLoadConflicts: registrationB)
