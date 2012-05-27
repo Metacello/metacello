@@ -33,9 +33,8 @@ loadVersion: aVersionOrNil
                             ^ self ]
                         ifFalse: [ projectCache at: vrsn put: list ] ].
             mcLoader preLoad: self.
-            (MetacelloLoadProjectSpecVersionNotification new
-                projectSpec: self;
-                versionString: vrsn versionString) signal.
+            (MetacelloLoadProjectSpecVersionNotification new projectSpec: (self copy versionString: vrsn versionString))
+                signal.
             vrsn fetchRequiredFromArray: list.
             mcLoader postLoad: self ]
         defaultDictionary: Dictionary new

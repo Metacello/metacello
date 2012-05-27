@@ -13,7 +13,5 @@ spec description: ''MetacelloScriptingResource>>versionOfXX:''.
 spec author: ''dkh''.
 spec timestamp: ''5/4/2012 14:16''.
 spec baseline: ''External'' with: [
-		spec
-			versionString: ''957492f31b77026d81dcb165c07c69b2ad897781'';
-			repository: ''github://dalehenrich/external/repository'' ].'.
+		spec repository: ''github://dalehenrich/external:957492f31b77026d81dcb165c07c69b2ad897781/repository'' ].'.
     self assert: basicSpec printString = expected

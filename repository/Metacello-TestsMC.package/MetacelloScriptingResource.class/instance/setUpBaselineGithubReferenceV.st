@@ -14,10 +14,10 @@ setUpBaselineGithubReferenceV
     (MCMethodDefinition
         className: className asString
         classIsMeta: false
-        selector: 'configurationGithubReferenceX:'
+        selector: 'configurationGithubReferenceXX:'
         category: 'cat'
         timeStamp: ''
-        source: (self class sourceCodeAt: #'configurationGithubReferenceX:') asString)}.
+        source: (self class sourceCodeAt: #'configurationGithubReferenceXX:') asString)}.
     externalRepository
         basicStoreVersion:
             (MCVersion new
