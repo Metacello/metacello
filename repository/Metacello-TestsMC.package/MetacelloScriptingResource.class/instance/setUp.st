@@ -14,11 +14,12 @@ setUp
         setUpVersionBaselineOfExternalXX;
         setUpVersionBaselineOfExternalXXX;
         setUpVersionBaselineOfExternalIV;
-        setUpBaselineGithubReferenceX;
         setUpBaselineGithubReferenceXX;
         setUpBaselineGithubReferenceXXX;
         setUpBaselineGithubReferenceIV;
         setUpBaselineGithubReferenceV;
         setUpBaselineGithubReferenceVI;
         setUpBaselineGithubReferenceVII;
+        setUpBaselineGithubReferenceVIII;
+        setUpBaselineGithubReferenceIX;
         yourself

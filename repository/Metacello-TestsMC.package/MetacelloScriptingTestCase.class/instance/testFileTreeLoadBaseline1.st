@@ -1,10 +1,14 @@
 tests
 testFileTreeLoadBaseline1
-    | loaded |
     Metacello new
         project: 'ExternalX';
         repository: 'filetree://' , externalDirectory fullName;
+        silently;
         load.
-    loaded := Metacello loadedProjects.
-    self assert: loaded size = 1.
-    self assert: (loaded at: 'ExternalX') versionString = 'baseline'
+    self
+        validate: 'ExternalX'
+        registrySize: 1
+        expectedConfigurationVersion: nil
+        expectedConfigurationRepository: nil
+        expectedBaselineVersion: 'baseline'
+        expectedBaselineRepository: 'filetree://' , externalDirectory fullName

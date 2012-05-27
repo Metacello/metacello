@@ -1,10 +1,10 @@
 baseline pragma - github reference
-setUpBaselineGithubReferenceV
+setUpBaselineGithubReferenceIX
     "self reset"
 
     | reference className definitionArray versionInfo |
-    reference := GoferVersionReference name: 'BaselineOfGithubRefV-dkh.1'.
-    className := #'BaselineOfGithubRefV'.
+    reference := GoferVersionReference name: 'BaselineOfGithubRefIX-dkh.1'.
+    className := #'BaselineOfGithubRefIX'.
     definitionArray := {(MCClassDefinition
         name: className
         superclassName: #'MetacelloBaseBaselineConfiguration'
@@ -14,10 +14,10 @@ setUpBaselineGithubReferenceV
     (MCMethodDefinition
         className: className asString
         classIsMeta: false
-        selector: 'configurationGithubReferenceXX:'
+        selector: 'configurationGithubReferenceIV:'
         category: 'cat'
         timeStamp: ''
-        source: (self class sourceCodeAt: #'configurationGithubReferenceXX:') asString)}.
+        source: (self class sourceCodeAt: #'configurationGithubReferenceIV:') asString)}.
     externalRepository
         basicStoreVersion:
             (MCVersion new

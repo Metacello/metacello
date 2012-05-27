@@ -22,7 +22,7 @@ setUp
             configurationRepo storeVersion: (repo versionWithInfo: versionInfo ifAbsent: [ self assert: false ]) ].
     externalRepo := MCFileTreeRepository new directory: externalDirectory.
     repo := MetacelloScriptingResource current externalRepository.
-    #('External-CoreX-dkh.1' 'BaselineOfExternalX-dkh.1' 'BaselineOfGithubRefX-dkh.1' 'BaselineOfGithubRefXX-dkh.1' 'BaselineOfGithubRefXXX-dkh.1' 'BaselineOfGithubRefIV-dkh.1' 'BaselineOfGithubRefV-dkh.1' 'BaselineOfGithubRefVI-dkh.1' 'BaselineOfGithubRefVII-dkh.1')
+    #('External-CoreX-dkh.1' 'BaselineOfExternalX-dkh.1' 'BaselineOfGithubRefXX-dkh.1' 'BaselineOfGithubRefXXX-dkh.1' 'BaselineOfGithubRefIV-dkh.1' 'BaselineOfGithubRefV-dkh.1' 'BaselineOfGithubRefVI-dkh.1' 'BaselineOfGithubRefVII-dkh.1' 'BaselineOfGithubRefVIII-dkh.1' 'BaselineOfGithubRefIX-dkh.1')
         do: [ :package | 
             versionInfo := repo versionInfoFromVersionNamed: package.
             externalRepo storeVersion: (repo versionWithInfo: versionInfo ifAbsent: [ self assert: false ]) ].

@@ -1,14 +1,19 @@
 tests
-testFileTreeLoadGithubRefBaseline6
-    "ConfigurationOfExternal reference from http://ss3.gemstone.com/ss/external.html using #configuration:with:"
+testFileTreeLoadGithubRefBaseline8
+    "BaselineOfExternal reference from github://dalehenrich/external:957492f31b77026d81dcb165c07c69b2ad897781/repository using #baseline:with:"
 
     Metacello new
-        project: 'BaselineOfGithubRefVI';
+        project: 'BaselineOfGithubRefVIII';
+        repository: 'filetree://' , externalDirectory fullName;
+        silently;
+        get.
+    Metacello new
+        project: 'BaselineOfGithubRefVIII';
         repository: 'filetree://' , externalDirectory fullName;
         silently;
         load.
     self
-        validate: 'BaselineOfGithubRefVI'
+        validate: 'BaselineOfGithubRefVIII'
         registrySize: 2
         expectedConfigurationVersion: nil
         expectedConfigurationRepository: nil
@@ -20,7 +25,7 @@ testFileTreeLoadGithubRefBaseline6
     self
         validate: 'External'
         registrySize: 2
-        expectedConfigurationVersion: '0.9'
-        expectedConfigurationRepository: 'http://ss3.gemstone.com/ss/external'
+        expectedConfigurationVersion: nil
+        expectedConfigurationRepository: nil
         expectedBaselineVersion: 'baseline'
         expectedBaselineRepository: 'github://dalehenrich/external:957492f31b77026d81dcb165c07c69b2ad897781/repository'

@@ -6,6 +6,10 @@ testMczLoad
         version: '1.0';
         repository: 'dictionary://Metacello_MczConfiguration_Test_Repository';
         load.
-    loaded := Metacello loadedProjects.
-    self assert: loaded size = 1.
-    self assert: ((loaded at: 'MetacelloExample') at: 2) = '1.0'
+    self
+        validate: 'MetacelloExample'
+        registrySize: 1
+        expectedConfigurationVersion: '1.0'
+        expectedConfigurationRepository: 'dictionary://Metacello_MczConfiguration_Test_Repository'
+        expectedBaselineVersion: nil
+        expectedBaselineRepository: nil
