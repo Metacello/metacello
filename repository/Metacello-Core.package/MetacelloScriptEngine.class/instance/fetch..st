@@ -6,5 +6,5 @@ fetch: required
             (required isEmpty
                 ifTrue: [ self version fetch ]
                 ifFalse: [ self version fetch: required ]) ]
-        on: MetacelloLookupConfigurationPackageSpecNotification
-        do: [ :ex | ex resume: ((self lookupConfigurationPackageSpecFrom: ex packageSpec) ifNil: [ ^ ex resume: ex packageSpec ]) ]
+        on: MetacelloLookupConfigurationProjectSpecNotification
+        do: [ :ex | ex resume: ((self lookupConfigurationProjectSpecFrom: ex projectSpec) ifNil: [ ^ ex resume: ex projectSpec ]) ]

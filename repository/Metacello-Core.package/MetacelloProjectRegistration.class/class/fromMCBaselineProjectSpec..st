@@ -1,6 +1,6 @@
 instance creation
 fromMCBaselineProjectSpec: aProjectSpec
     ^ self new
-        projectName: aProjectSpec name;
+        projectName: (MetacelloScriptEngine baselineProjectNameOf: aProjectSpec className);
         baselineProjectSpec: aProjectSpec;
         yourself

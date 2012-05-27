@@ -1,3 +1,3 @@
 registration
 registrationForProjectSpec: aProjectSpec ifAbsent: absentBlock
-    ^ self registry at: aProjectSpec name ifAbsent: absentBlock
+    ^ self registrationForProjectNamed: aProjectSpec asProjectRegistration projectName ifAbsent: absentBlock

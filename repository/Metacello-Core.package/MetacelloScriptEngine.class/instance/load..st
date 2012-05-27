@@ -13,11 +13,13 @@ load: required
         ifTrue: [ projectSpec loads: required ].
     registration := MetacelloProjectRegistration
         registerProjectSpec: projectSpec
-        ifPresent: [ :existing :new | self halt ].
+        ifPresent: [ :existing :new | 
+            (existing hasLoadConflicts: new)
+                ifTrue: [ self halt ] ].
     Transcript
         cr;
         show:
-                'Expicitly loaded version ' , registration versionString printString , ' or project '
+                'Expicitly loaded version ' , registration versionString printString , ' for project '
                         , registration projectName printString.
     self
         root:
@@ -25,11 +27,11 @@ load: required
                 ifTrue: [ version load ]
                 ifFalse: [ version load: required ]) ]
         on:
-            MetacelloLookupConfigurationPackageSpecNotification , MetacelloLoadProjectSpecVersionNotification
+            MetacelloLookupConfigurationProjectSpecNotification , MetacelloLoadProjectSpecVersionNotification
                 , MetacelloLookupProjectSpecNotification
         do: [ :ex | 
-            (ex isKindOf: MetacelloLookupConfigurationPackageSpecNotification)
-                ifTrue: [ ex resume: ((self lookupConfigurationPackageSpecFrom: ex packageSpec) ifNil: [ ^ ex resume: ex packageSpec ]) ].
+            (ex isKindOf: MetacelloLookupConfigurationProjectSpecNotification)
+                ifTrue: [ ex resume: ((self lookupConfigurationProjectSpecFrom: ex projectSpec) ifNil: [ ^ ex resume: ex projectSpec ]) ].
             (ex isKindOf: MetacelloLookupProjectSpecNotification)
                 ifTrue: [ 
                     | existing new |

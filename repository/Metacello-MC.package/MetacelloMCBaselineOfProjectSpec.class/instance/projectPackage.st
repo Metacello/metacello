@@ -2,8 +2,10 @@ accessing
 projectPackage
     projectPackage
         ifNil: [ 
+            | cName |
+            cName := self className.
             projectPackage := self project packageSpec.
-            projectPackage name: self className.
+            projectPackage name: cName.
             self getFile ifNotNil: [ projectPackage file: self file ].
             self getRepositories
                 do: [ :repoSpec | 

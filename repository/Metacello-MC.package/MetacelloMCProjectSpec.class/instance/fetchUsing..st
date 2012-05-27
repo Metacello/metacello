@@ -1,5 +1,5 @@
 loading
 fetchUsing: aLoader
-    (MetacelloLookupConfigurationPackageSpecNotification new
-        packageSpec: self projectPackage;
-        yourself) signal fetchUsing: aLoader
+    (MetacelloLookupConfigurationProjectSpecNotification new
+        projectSpec: self;
+        yourself) signal projectPackage fetchUsing: aLoader
