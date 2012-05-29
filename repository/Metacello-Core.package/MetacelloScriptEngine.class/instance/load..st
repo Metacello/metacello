@@ -1,5 +1,8 @@
 actions api
 load: required
+    self
+        flag:
+            'I am a little concerned that we are registering the project BEFORE the load completes ... deal with this when I have created a test case'.
     [ 
     | version projectSpec registration |
     version := self version.
@@ -15,7 +18,17 @@ load: required
         registerProjectSpec: projectSpec
         ifPresent: [ :existing :new | 
             (existing hasLoadConflicts: new)
-                ifTrue: [ self halt ] ].
+                ifTrue: [ 
+                    (existing canUpgradeTo: new)
+                        ifTrue: [ 
+                            self upgradesAllowed
+                                ifFalse: [ ^ self error: 'cannot upgrade ... to force upgrade use #upgradesAllowed option' ] ]
+                        ifFalse: [ ^ self error: 'cannot upgrade ...  must register project before load' ].
+                    Transcript
+                        cr;
+                        show:
+                                'Upgrading to version ' , new versionString printString , ' for project ' , new projectName printString.
+                    MetacelloProjectRegistration registerProjectRegistration: new ] ].
     Transcript
         cr;
         show:

@@ -5,8 +5,4 @@ registrationsCompareEqual: aMetacelloProjectSpec
     ^ self name = aMetacelloProjectSpec name
         and: [ 
             self className = aMetacelloProjectSpec className
-                and: [ 
-                    self versionString = aMetacelloProjectSpec versionString
-                        and: [ 
-                            self operator == aMetacelloProjectSpec operator
-                                and: [ self preLoadDoIt == aMetacelloProjectSpec preLoadDoIt and: [ self postLoadDoIt == aMetacelloProjectSpec postLoadDoIt ] ] ] ] ]
+                and: [ self versionString = aMetacelloProjectSpec versionString and: [ self operator == aMetacelloProjectSpec operator ] ] ]

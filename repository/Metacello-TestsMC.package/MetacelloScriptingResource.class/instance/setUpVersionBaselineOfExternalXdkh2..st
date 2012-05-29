@@ -4,7 +4,6 @@ setUpVersionBaselineOfExternalXdkh2: ancestors
 
     | reference className definitionArray versionInfo |
     reference := GoferVersionReference name: 'ConfigurationOfExternalX-dkh.2'.
-    self halt.
     className := #'ConfigurationOfExternalX'.
     definitionArray := {(MCClassDefinition
         name: className
