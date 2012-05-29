@@ -1,11 +1,11 @@
 baseline:with:
-versionOfX: spec
-    <version: '0.9'>
+versionOfX091: spec
+    <version: '0.9.1'>
     spec
         for: #'common'
         do: [ 
             spec blessing: #'development'.
-            spec description: 'MetacelloScriptingResource>>versionOfX:'.
+            spec description: 'MetacelloScriptingResource>>versionOfX091:'.
             spec author: 'dkh'.
             spec timestamp: '5/4/2012 14:16' ].
     spec
