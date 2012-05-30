@@ -7,7 +7,7 @@ setUpBaselineGithubReferenceIX
     className := #'BaselineOfGithubRefIX'.
     definitionArray := {(MCClassDefinition
         name: className
-        superclassName: #'MetacelloBaseBaselineConfiguration'
+        superclassName: #'BaselineOf'
         category: reference packageName
         instVarNames: #()
         comment: '').

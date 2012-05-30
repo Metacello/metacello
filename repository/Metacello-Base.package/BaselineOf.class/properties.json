@@ -5,12 +5,12 @@
 	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
-	"commentStamp" : "dkh 5/5/2012 11:49",
+	"commentStamp" : "dkh 5/30/2012 13:51",
 	"instvars" : [
 		 ],
-	"name" : "MetacelloBaseBaselineConfiguration",
+	"name" : "BaselineOf",
 	"pools" : [
 		 ],
-	"super" : "MetacelloBaseConfiguration",
+	"super" : "ConfigurationOf",
 	"traitcomposition" : "{}",
 	"type" : "normal" }

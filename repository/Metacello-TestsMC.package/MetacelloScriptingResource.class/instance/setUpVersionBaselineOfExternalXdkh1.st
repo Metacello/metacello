@@ -7,7 +7,7 @@ setUpVersionBaselineOfExternalXdkh1
     className := #'ConfigurationOfExternalX'.
     definitionArray := {(MCClassDefinition
         name: className
-        superclassName: #'MetacelloBaseConfiguration'
+        superclassName: #'ConfigurationOf'
         category: reference packageName
         instVarNames: #()
         comment: '').

@@ -5,10 +5,10 @@
 	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
-	"commentStamp" : "<historical>",
+	"commentStamp" : "dkh 5/30/2012 13:52",
 	"instvars" : [
 		"project" ],
-	"name" : "MetacelloBaseConfiguration",
+	"name" : "ConfigurationOf",
 	"pools" : [
 		 ],
 	"super" : "Object",

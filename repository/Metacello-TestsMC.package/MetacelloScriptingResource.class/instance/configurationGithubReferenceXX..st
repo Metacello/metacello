@@ -10,4 +10,4 @@ configurationGithubReferenceXX: spec
                 with: [ 
                     spec
                         version: '0.9';
-                        repository: 'github://dalehenrich/external:configuration/repository' ] ]
+                        repository: 'github://dalehenrich/external:', MetacelloScriptingResource externalConfigurationSHA, '/repository' ] ]

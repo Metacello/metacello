@@ -1,1 +1,0 @@
-**MetacelloBaseBaselineConfiguration** is the common superclass for **BaselineOf** configurations. 

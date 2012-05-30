@@ -2,7 +2,7 @@ private
 ensureMetacelloBaseConfiguration
 
 	Smalltalk
-		at: #MetacelloBaseConfiguration
+		at: #'ConfigurationOf'
 		ifAbsent: [ 
 			| repository version |
 			repository := MCHttpRepository location: 'http://seaside.gemstone.com/ss/metacello' user: '' password: ''.

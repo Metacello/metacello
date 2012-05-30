@@ -10,5 +10,5 @@ scriptEngineClass: loadList
                     | allPresent |
                     list add: assoc value ] ].
     list notEmpty
-        ifTrue: [ MetacelloBaseConfiguration ensureMetacello: list ].
+        ifTrue: [ ConfigurationOf ensureMetacello: list ].
     ^ Smalltalk at: #'MetacelloScriptEngine'

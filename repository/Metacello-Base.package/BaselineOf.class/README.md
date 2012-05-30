@@ -1,0 +1,1 @@
+**BaselineOf** is the common superclass for all Metacello baselines.
