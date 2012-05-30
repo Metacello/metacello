@@ -8,8 +8,8 @@ testFileTreeGetConfigurationVersionSpecX
         repository: 'filetree://' , configurationDirectory fullName;
         get.
     versionSpec := (project version: '0.9') versionSpec.
-    expected := 'spec blessing: #''development''.
-spec description: ''MetacelloScriptingResource>>versionOfX:''.
+    expected :=  'spec blessing: #''development''.
+spec description: ''MetacelloScriptingResource>>versionOfX090:''.
 spec author: ''dkh''.
 spec timestamp: ''5/4/2012 14:16''.
 spec baseline: ''ExternalX'' with: [

@@ -3,12 +3,12 @@ testFileTreeLoadGithubRefBaseline6
     "ConfigurationOfExternal reference from http://ss3.gemstone.com/ss/external.html using #configuration:with:"
 
     Metacello new
-        project: 'BaselineOfGithubRefVI';
+        project: 'GithubRefVI';
         repository: 'filetree://' , externalDirectory fullName;
         silently;
         load.
     self
-        validate: 'BaselineOfGithubRefVI'
+        validate: 'GithubRefVI'
         registrySize: 2
         expectedConfigurationVersion: nil
         expectedConfigurationRepository: nil

@@ -1,3 +1,3 @@
 running
 tearDownPackageList
-    ^ #('ConfigurationOfExternalX-dkh.2')
+    ^ #('ConfigurationOfExternalX' 'BaselineOfExternalX' 'External-CoreX')

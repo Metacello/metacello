@@ -1,8 +1,5 @@
 actions api
 load: required
-    self
-        flag:
-            'I am a little concerned that we are registering the project BEFORE the load completes ... deal with this when I have created a test case'.
     [ 
     | version projectSpec registration |
     version := self version.
@@ -22,13 +19,24 @@ load: required
                     (existing canUpgradeTo: new)
                         ifTrue: [ 
                             self upgradesAllowed
-                                ifFalse: [ ^ self error: 'cannot upgrade ... to force upgrade use #upgradesAllowed option' ] ]
-                        ifFalse: [ ^ self error: 'cannot upgrade ...  must register project before load' ].
-                    Transcript
-                        cr;
-                        show:
-                                'Upgrading to version ' , new versionString printString , ' for project ' , new projectName printString.
-                    MetacelloProjectRegistration registerProjectRegistration: new ] ].
+                                ifTrue: [ 
+                                    Transcript
+                                        cr;
+                                        show:
+                                                'Upgrading to version ' , new versionString printString , ' for project ' , new projectName printString.
+                                    MetacelloProjectRegistration registerProjectRegistration: new ]
+                                ifFalse: [ 
+                                    MetacelloSkippedProjectSpecLoadUpgradeNotAllowedNotification new
+                                        existingProjectRegistration: existing;
+                                        newProjectRegistration: new;
+                                        signal ] ]
+                        ifFalse: [ 
+                            MetacelloSkippedProjectSpecLoadConflictsNotification new
+                                existingProjectRegistration: existing;
+                                newProjectRegistration: new;
+                                signal ] ] ].
+    version := registration version.
+    version ifNil: [ self halt ].
     Transcript
         cr;
         show:

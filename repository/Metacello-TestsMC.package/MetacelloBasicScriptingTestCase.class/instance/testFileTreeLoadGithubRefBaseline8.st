@@ -3,17 +3,17 @@ testFileTreeLoadGithubRefBaseline8
     "BaselineOfExternal reference from github://dalehenrich/external:957492f31b77026d81dcb165c07c69b2ad897781/repository using #baseline:with:"
 
     Metacello new
-        project: 'BaselineOfGithubRefVIII';
+        project: 'GithubRefVIII';
         repository: 'filetree://' , externalDirectory fullName;
         silently;
         get.
     Metacello new
-        project: 'BaselineOfGithubRefVIII';
+        project: 'GithubRefVIII';
         repository: 'filetree://' , externalDirectory fullName;
         silently;
         load.
     self
-        validate: 'BaselineOfGithubRefVIII'
+        validate: 'GithubRefVIII'
         registrySize: 2
         expectedConfigurationVersion: nil
         expectedConfigurationRepository: nil

@@ -7,10 +7,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"projectSpec" ],
+		 ],
 	"name" : "MetacelloLookupConfigurationProjectSpecNotification",
 	"pools" : [
 		 ],
-	"super" : "Notification",
+	"super" : "MetacelloScriptProjectSpecNotification",
 	"traitcomposition" : "{}",
 	"type" : "normal" }

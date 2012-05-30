@@ -9,7 +9,7 @@ projectPackage
             self getFile ifNotNil: [ projectPackage file: self file ].
             self getRepositories
                 do: [ :repoSpec | 
-                    self versionString isEmptyOrNil
+                    versionString isEmptyOrNil
                         ifTrue: [ projectPackage repositories: self getRepositories ]
                         ifFalse: [ 
                             projectPackage

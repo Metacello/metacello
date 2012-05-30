@@ -3,12 +3,12 @@ testFileTreeLoadGithubRefBaseline9
     "ConfigurationOfExternal reference from github://dalehenrich/external:configuration/repository using #project:with: no className:"
 
     Metacello new
-        project: 'BaselineOfGithubRefIX';
+        project: 'GithubRefIX';
         repository: 'filetree://' , externalDirectory fullName;
         silently;
         load.
     self
-        validate: 'BaselineOfGithubRefIX'
+        validate: 'GithubRefIX'
         registrySize: 2
         expectedConfigurationVersion: nil
         expectedConfigurationRepository: nil
