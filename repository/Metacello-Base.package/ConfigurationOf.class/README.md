@@ -1,5 +1,7 @@
 **ConfigurationOf** is the common superclass for all Metacello configurations.
 
+A short description of why you would want to use a **ConfigurationOf**.
+
 To create a new Metacello configuration:
 
 1. Create a subclass of the class ConfigurationOf appending the name of
@@ -42,3 +44,4 @@ To create a new Metacello configuration:
           package: 'Example-Tests' with: 'Example-Tests' ].
     ```
 
+4. Create a Monticello package for your **ConfigurationOf** class and save it in the repository where your packages are stored. 

@@ -5,7 +5,7 @@
 	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
-	"commentStamp" : "dkh 5/7/2012 11:05",
+	"commentStamp" : "dkh 5/30/2012 16:46",
 	"instvars" : [
 		"scriptEngine",
 		"ensureList",
