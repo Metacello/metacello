@@ -6,7 +6,7 @@ bootstrap into an image that you care about:)
 Assuming Pharo 1.3
 
 ### Install FileTree
-follow [FileTree installation insructions][1]
+follow [FileTree installation instructions][1]
 
 ### Clone the metacello repository:
 ```shell
@@ -32,7 +32,7 @@ Gofer new
     package: 'Metacello-Base';
     package: 'Metacello-Core';
     package: 'Metacello-FileTree';
-     package: 'Metacello-GitHub';
+    package: 'Metacello-GitHub';
     package: 'Metacello-MC';
     package: 'Metacello-ToolBox';
     package: 'ConfigurationOfMetacello';
