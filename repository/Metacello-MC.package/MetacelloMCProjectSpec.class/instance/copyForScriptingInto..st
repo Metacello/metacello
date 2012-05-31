@@ -1,11 +1,11 @@
 scripting
 copyForScriptingInto: aProjectSpec
     aProjectSpec
-        name: name;
+        setName: name;
         className: className;
         versionString: versionString;
         operator: operator;
-        loads: loads;
+        setLoads: loads;
         preLoadDoIt: preLoadDoIt;
         postLoadDoIt: postLoadDoIt;
         repositories: repositories copy;

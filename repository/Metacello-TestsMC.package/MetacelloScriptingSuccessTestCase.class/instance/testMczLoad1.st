@@ -1,5 +1,5 @@
 tests
-testMczLoad
+testMczLoad1
     | loaded |
     Metacello new
         project: 'MetacelloExample';

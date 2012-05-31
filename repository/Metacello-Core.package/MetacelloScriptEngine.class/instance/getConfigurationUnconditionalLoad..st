@@ -1,7 +1,7 @@
 project lookup
 getConfigurationUnconditionalLoad: unconditionalLoad
     | spec |
-    spec := self halt configurationProjectSpec.
+    spec := self configurationProjectSpec.
     Smalltalk
         at: spec className asSymbol
         ifPresent: [ :cl | 
