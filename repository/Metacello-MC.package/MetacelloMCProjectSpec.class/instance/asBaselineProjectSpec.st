@@ -1,3 +1,3 @@
-conversion
+scripting
 asBaselineProjectSpec
-    ^ self copySelfInto: (MetacelloMCBaselineOfProjectSpec for: self project)
+    ^ self copyForScriptingInto: (MetacelloMCBaselineOfProjectSpec for: self project asBaselineProject)

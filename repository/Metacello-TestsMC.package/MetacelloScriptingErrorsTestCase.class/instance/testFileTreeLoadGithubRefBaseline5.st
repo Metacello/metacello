@@ -21,6 +21,8 @@ testFileTreeLoadGithubRefBaseline5
         validate: 'External'
         registrySize: 2
         expectedConfigurationVersion: '0.9'
-        expectedConfigurationRepository: 'github://dalehenrich/external:', MetacelloScriptingResource externalConfigurationSHA, '/repository'
+        expectedConfigurationRepository:
+            'github://dalehenrich/external:' , MetacelloScriptingResource externalConfigurationSHA , '/repository'
         expectedBaselineVersion: 'baseline'
-        expectedBaselineRepository: 'github://dalehenrich/external:' , MetacelloScriptingResource externalCustomSHA , '/repository'
+        expectedBaselineRepository:
+            'github://dalehenrich/external:' , MetacelloScriptingResource externalCustomSHA , '/repository'

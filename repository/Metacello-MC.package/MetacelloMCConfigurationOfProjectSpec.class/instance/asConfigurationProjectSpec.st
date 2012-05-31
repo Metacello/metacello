@@ -1,3 +1,3 @@
-conversion
+scripting
 asConfigurationProjectSpec
     ^ self

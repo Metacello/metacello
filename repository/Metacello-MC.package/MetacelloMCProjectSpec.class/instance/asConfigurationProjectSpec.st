@@ -1,3 +1,3 @@
-conversion
+scripting
 asConfigurationProjectSpec
-    ^ self copySelfInto: (MetacelloMCConfigurationOfProjectSpec for: self project)
+    ^ self copyForScriptingInto: (MetacelloMCConfigurationOfProjectSpec for: self project asConfigurationProject)

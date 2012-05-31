@@ -1,5 +1,5 @@
-conversion
-copySelfInto: aProjectSpec
+scripting
+copyForScriptingInto: aProjectSpec
     aProjectSpec
         name: name;
         className: className;

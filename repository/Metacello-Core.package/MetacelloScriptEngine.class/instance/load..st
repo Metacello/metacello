@@ -29,7 +29,7 @@ load: required
                                 existingProjectRegistration: existing;
                                 newProjectRegistration: new;
                                 signal ] ] ].
-    version := registration version.
+    version := registration versionForScriptEngine: self.
     version ifNil: [ self halt ].
     Transcript
         cr;

@@ -1,3 +1,3 @@
 scripting
-asProjectSpec
+asBaselineProject
     ^ self

@@ -1,3 +1,3 @@
 actions api
 get
-    self root: (self projectClass projectFrom: self unconditionalLoad: true)
+    self root: (self projectSpec project projectForScriptEngine: self unconditionalLoad: true)
