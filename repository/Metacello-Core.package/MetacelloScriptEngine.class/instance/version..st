@@ -1,3 +1,3 @@
 api
 version: aVersionString
-    self versionString: aVersionString
+    self projectSpec versionString: aVersionString

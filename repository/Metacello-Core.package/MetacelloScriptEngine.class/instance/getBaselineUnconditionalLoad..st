@@ -1,11 +1,11 @@
 project lookup
 getBaselineUnconditionalLoad: unconditionalLoad
-    | projectSpec |
-    projectSpec := self baselineProjectSpec.
+    | spec |
+    spec := self projectSpec asBaselineProjectSpec.
     Smalltalk
-        at: projectSpec className asSymbol
+        at: spec className asSymbol
         ifPresent: [ :cl | 
             unconditionalLoad
                 ifFalse: [ ^ cl ] ].
-    (projectSpec := self lookupBaselineProjectSpecFrom: projectSpec) projectPackage load.
-    ^ Smalltalk at: projectSpec className asSymbol
+    (spec := self lookupBaselineProjectSpecFrom: spec) projectPackage load.
+    ^ Smalltalk at: spec className asSymbol

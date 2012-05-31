@@ -1,3 +1,3 @@
 api
 repository: aStringOrRepository
-    self repositoryDescription: aStringOrRepository
+    self projectSpec repository: aStringOrRepository

@@ -1,0 +1,3 @@
+conversion
+asBaselineProjectSpec
+    ^ self

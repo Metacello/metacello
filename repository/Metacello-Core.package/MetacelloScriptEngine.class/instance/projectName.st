@@ -1,3 +1,3 @@
 accessing
 projectName
-	^ projectName
+    ^ self projectSpec name

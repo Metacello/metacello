@@ -1,18 +1,12 @@
 actions api
 load: required
     [ 
-    | version projectSpec registration |
-    version := self version.
-    projectSpec := version project projectSpec.
-    projectSpec
-        name: self projectName;
-        versionString: version versionString;
-        repository: self repositoryDescription;
-        yourself.
+    | version theProjectSpec registration |
+    theProjectSpec := self projectSpec.
     required notEmpty
-        ifTrue: [ projectSpec loads: required ].
+        ifTrue: [ theProjectSpec loads: required ].
     registration := MetacelloProjectRegistration
-        registerProjectSpec: projectSpec
+        registerProjectSpec: theProjectSpec
         ifPresent: [ :existing :new | 
             (existing hasLoadConflicts: new)
                 ifTrue: [ 

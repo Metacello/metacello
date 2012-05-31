@@ -1,3 +1,5 @@
 api
 project: aProjectName
-    self projectName: aProjectName
+    (projectSpec := self projectSpec asProjectSpec copy)
+        for: MetacelloMCProject new;
+        name: (self class configurationProjectNameOf: aProjectName)

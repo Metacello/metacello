@@ -1,6 +1,6 @@
-version accessing
+accessing
 version
     | version |
-    version := self projectClass versionFrom: self.
+    version := self projectSpec version.
     version silently: self silently.
     ^ version
