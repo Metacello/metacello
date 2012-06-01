@@ -36,9 +36,8 @@ loadVersion: aVersionOrNil
             vrsn versionString ~= self versionString
                 ifTrue: [ Transcript show: ' [' , vrsn versionString , ']' ].
             mcLoader preLoad: self.
+            vrsn fetchRequiredFromArray: list.	"do the load"
             (MetacelloProjectSpecLoadedNotification new projectSpec: (self copy versionString: vrsn versionString))
                 signal.
-            vrsn fetchRequiredFromArray: list.	"do the load"	"            (MetacelloProjectSpecLoadedNotification new projectSpec: (self copy versionString: vrsn versionString))
-                signal."
             mcLoader postLoad: self ]
         defaultDictionary: Dictionary new

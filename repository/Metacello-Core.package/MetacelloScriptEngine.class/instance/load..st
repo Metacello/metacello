@@ -58,10 +58,9 @@ load: required
                     registration := MetacelloProjectRegistration
                         registerProjectSpec: ex projectSpec
                         ifPresent: [ :existing :new | 
-                            (existing hasLoadConflicts: new)
-                                ifFalse: [ 
-                                    MetacelloProjectRegistration mergeRegistration: existing with: new.
-                                    ex resume ].
-                            self halt.	"we shouldn't really get here, unless we allowed the load to proceed during the lookup"
-                            ex resume ] ].
-            ex pass	"shouldn't get here" ]
+                            "unconditionally merge new with existing (updates registration"
+                            MetacelloProjectRegistration mergeRegistration: existing with: new.
+                            ex resume ].
+                    ex resume ].
+            self error: 'Unexpected exception'.
+            ex pass ]
