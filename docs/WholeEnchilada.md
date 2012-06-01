@@ -64,6 +64,13 @@ Gofer new
     package: 'Metacello-TestsTutorial';
     load.
 
+"post load doit ... tests"
+    #(#'MetacelloAlternateResource' #'MetacelloAtomicConfigurationResource' 
+      #'MetacelloAtomicMonticelloResource' #'MetacelloConfigurationResource' 
+      #'MetacelloMonticelloResource' #'MetacelloScriptingResource' 
+      #'MetacelloIssue108Resource')
+        do: [ :className | Smalltalk at: className ifPresent: [ :cls | cls reset ] ]
+
 "I like my categories sorted"
 SystemOrganization sortCategories.
 
