@@ -1,21 +1,20 @@
 tests
-testConflict2
+testConfigurationConflict3
     "Conflict must show up in a configuration loaded from a project spec"
 
-    self testFileTreeLoadConfigurationVersion.
-    [ 
+    "variant of testFileTreeLoadConfigurationVersionsNotification3"
+
+    self testFileTreeLoadConfigurationVersions.
     Metacello new
         project: 'Conflict';
-        version: '1.0';
+        version: '1.1';
         repository: 'filetree://' , configurationDirectory fullName;
         silently;
-        load ]
-        on: MetacelloSkippedProjectSpecLoadUpgradeNotAllowedNotification
-        do: [ :ex | ex useNewProjectRegistration ].
+        load.
     self
         validate: 'Conflict'
         registrySize: 2
-        expectedConfigurationVersion: '1.0'
+        expectedConfigurationVersion: '1.1'
         expectedConfigurationRepository: 'filetree://' , configurationDirectory fullName
         expectedBaselineVersion: nil
         expectedBaselineRepository: nil.
@@ -23,6 +22,6 @@ testConflict2
         validate: 'ExternalX'
         registrySize: 2
         expectedConfigurationVersion: '0.9.1'
-        expectedConfigurationRepository: 'dictionary://Metacello_Conflict_Test_Repository'
+        expectedConfigurationRepository: 'filetree://' , configurationDirectory fullName
         expectedBaselineVersion: 'baseline'
         expectedBaselineRepository: 'dictionary://Metacello_Configuration_Test_Repository'

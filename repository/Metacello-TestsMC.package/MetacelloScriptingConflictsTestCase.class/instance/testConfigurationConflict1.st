@@ -1,6 +1,8 @@
 tests
-testConflict1
+testConfigurationConflict1
     "Conflict must show up in a configuration loaded from a project spec"
+
+    "variant of testFileTreeLoadConfigurationVersionsNotification1"
 
     self testFileTreeLoadConfigurationVersion.
     Metacello new

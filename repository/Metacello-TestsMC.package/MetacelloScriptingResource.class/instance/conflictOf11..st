@@ -1,11 +1,11 @@
 baseline:with:
-conflictOf: spec
-    <version: '1.0'>
+conflictOf11: spec
+    <version: '1.1'>
     spec
         for: #'common'
         do: [ 
             spec blessing: #'development'.
-            spec description: 'MetacelloScriptingResource>>conflictOf:'.
+            spec description: 'MetacelloScriptingResource>>conflictOf11:'.
             spec author: 'dkh'.
             spec timestamp: '6/1/2012 14:46' ].
     spec
@@ -15,5 +15,5 @@ conflictOf: spec
                 configuration: 'ExternalX'
                 with: [ 
                     spec
-                        version: '0.9.1';
+                        version: '0.9';
                         repository: 'dictionary://Metacello_Conflict_Test_Repository' ] ]

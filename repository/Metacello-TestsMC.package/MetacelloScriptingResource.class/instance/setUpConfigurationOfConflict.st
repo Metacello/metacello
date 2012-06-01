@@ -14,10 +14,17 @@ setUpConfigurationOfConflict
     (MCMethodDefinition
         className: className asString
         classIsMeta: false
-        selector: 'conflictOf:'
+        selector: 'conflictOf10:'
         category: 'cat'
         timeStamp: ''
-        source: (self class sourceCodeAt: #'conflictOf:') asString).
+        source: (self class sourceCodeAt: #'conflictOf10:') asString).
+    (MCMethodDefinition
+        className: className asString
+        classIsMeta: false
+        selector: 'conflictOf11:'
+        category: 'cat'
+        timeStamp: ''
+        source: (self class sourceCodeAt: #'conflictOf11:') asString).
     (MCMethodDefinition
         className: className asString
         classIsMeta: false
