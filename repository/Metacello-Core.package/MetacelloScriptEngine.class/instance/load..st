@@ -1,9 +1,10 @@
 actions api
 load: required
     [ 
-    | version registration |
+    | version registration loadededSpec |
     registration := MetacelloProjectRegistration
-        registerProjectSpec: self projectSpec
+        registrationForProjectSpec: self projectSpec
+        ifAbsent: [ :new | new ]
         ifPresent: [ :existing :new | 
             (existing hasLoadConflicts: new)
                 ifTrue: [ 
@@ -21,13 +22,15 @@ load: required
                                 existingProjectRegistration: existing;
                                 newProjectRegistration: new;
                                 signal ] ] ].
-    version := (self projectSpec lookupProjectSpecIn: registration) versionForScriptEngine: self.
-    version ifNil: [ self halt ].
+    version := (loadededSpec := self projectSpec lookupProjectSpecIn: registration) versionForScriptEngine: self.
     self
         root:
             (required isEmpty
                 ifTrue: [ version load ]
-                ifFalse: [ version load: required ]) ]
+                ifFalse: [ version load: required ]).
+    MetacelloProjectRegistration
+        registerProjectSpec: loadededSpec
+        ifPresent: [ :existing :new | MetacelloProjectRegistration mergeRegistration: existing with: new ] ]
         on: MetacelloLookupProjectSpec , MetacelloLookupProjectSpecForLoad , MetacelloProjectSpecLoadedNotification
         do: [ :ex | 
             (ex isKindOf: MetacelloLookupProjectSpec)
