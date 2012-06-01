@@ -7,10 +7,11 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"versionString" ],
-	"name" : "MetacelloLoadProjectSpecVersionNotification",
+		"projectSpec",
+		"overrideProjectSpec" ],
+	"name" : "MetacelloProjectSpecForLoad",
 	"pools" : [
 		 ],
-	"super" : "MetacelloScriptProjectSpecNotification",
+	"super" : "Object",
 	"traitcomposition" : "{}",
 	"type" : "normal" }

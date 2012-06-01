@@ -10,12 +10,7 @@ load: required
                     (existing canUpgradeTo: new)
                         ifTrue: [ 
                             self upgradesAllowed
-                                ifTrue: [ 
-                                    Transcript
-                                        cr;
-                                        show:
-                                                'Upgrading to version ' , new versionString printString , ' for project ' , new projectName printString.
-                                    MetacelloProjectRegistration registerProjectRegistration: new ]
+                                ifTrue: [ MetacelloProjectRegistration registerProjectRegistration: new ]
                                 ifFalse: [ 
                                     MetacelloSkippedProjectSpecLoadUpgradeNotAllowedNotification new
                                         existingProjectRegistration: existing;
@@ -28,46 +23,44 @@ load: required
                                 signal ] ] ].
     version := (self projectSpec lookupProjectSpecIn: registration) versionForScriptEngine: self.
     version ifNil: [ self halt ].
-    Transcript
-        cr;
-        show:
-                'Expicitly loaded version ' , registration versionString printString , ' for project '
-                        , registration projectName printString.
     self
         root:
             (required isEmpty
                 ifTrue: [ version load ]
                 ifFalse: [ version load: required ]) ]
-        on:
-            MetacelloLookupConfigurationProjectSpecNotification , MetacelloLoadProjectSpecVersionNotification
-                , MetacelloLookupProjectSpecNotification
+        on: MetacelloLookupProjectSpec , MetacelloLookupProjectSpecForLoad , MetacelloProjectSpecLoadedNotification
         do: [ :ex | 
-            (ex isKindOf: MetacelloLookupConfigurationProjectSpecNotification)
+            (ex isKindOf: MetacelloLookupProjectSpec)
                 ifTrue: [ ex resume: ((self lookupConfigurationProjectSpecFrom: ex projectSpec) ifNil: [ ^ ex resume: ex projectSpec ]) ].
-            (ex isKindOf: MetacelloLookupProjectSpecNotification)
+            (ex isKindOf: MetacelloLookupProjectSpecForLoad)
                 ifTrue: [ 
-                    | existing new |
+                    | spec specForLoad existing new |
+                    "this logic should end up being very similar to lookupConfigurationProjectSpecFrom: ...."
+                    spec := ex projectSpec.
+                    specForLoad := MetacelloProjectSpecForLoad new
+                        projectSpec: spec;
+                        yourself.
                     existing := MetacelloProjectRegistration
-                        registrationForProjectSpec: ex projectSpec
-                        ifAbsent: [ ex resume: ex projectSpec ].
-                    new := ex projectSpec asProjectRegistration.
-                    (existing hasLoadConflicts: new)
-                        ifFalse: [ ex resume: ex projectSpec ].
-                    self halt.	"would have load conflict ... so this is where the rubber meets the road and we skip loading or not"
-                    ex resume: ex projectSpec ].
-            (ex isKindOf: MetacelloLoadProjectSpecVersionNotification)
+                        registrationForProjectSpec: spec
+                        ifAbsent: [ ^ ex resume: specForLoad ].
+                    (existing hasLoadConflicts: (new := spec asProjectRegistration))
+                        ifTrue: [ 
+                            "would have load conflict ... so this is where the rubber meets the road and we skip loading or not"
+                            self halt ]
+                        ifFalse: [ 
+                            "do not check image for currentVersion"
+                            specForLoad overrideProjectSpec: (self projectSpec lookupProjectSpecIn: new) ].
+                    ex resume: specForLoad ].
+            (ex isKindOf: MetacelloProjectSpecLoadedNotification)
                 ifTrue: [ 
                     | registration |
+                    "This is when we should register the project spec, since this is the moment when the project has been successfully loaded"
                     registration := MetacelloProjectRegistration
                         registerProjectSpec: ex projectSpec
                         ifPresent: [ :existing :new | 
                             (existing hasLoadConflicts: new)
                                 ifFalse: [ 
                                     MetacelloProjectRegistration mergeRegistration: existing with: new.
-                                    Transcript
-                                        cr;
-                                        show:
-                                                'Loaded version ' , existing versionString printString , ' for ' , existing name printString.
                                     ex resume ].
                             self halt.	"we shouldn't really get here, unless we allowed the load to proceed during the lookup"
                             ex resume ] ].

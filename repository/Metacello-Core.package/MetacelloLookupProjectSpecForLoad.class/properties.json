@@ -5,10 +5,10 @@
 	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "dkh 6/1/2012 10:55",
 	"instvars" : [
 		 ],
-	"name" : "MetacelloLookupProjectSpecNotification",
+	"name" : "MetacelloLookupProjectSpecForLoad",
 	"pools" : [
 		 ],
 	"super" : "MetacelloScriptProjectSpecNotification",

@@ -3,6 +3,7 @@ loadVersion: aVersionOrNil
     "Load the correct version of the project"
 
     | vrsn mcLoader list |
+    self ensureProjectLoaded.
     vrsn := aVersionOrNil.
     vrsn == nil
         ifTrue: [ 
@@ -32,9 +33,12 @@ loadVersion: aVersionOrNil
                             "no need to refetch list ... recursion stoppper (Issue 95)"
                             ^ self ]
                         ifFalse: [ projectCache at: vrsn put: list ] ].
+            vrsn versionString ~= self versionString
+                ifTrue: [ Transcript show: ' [' , vrsn versionString , ']' ].
             mcLoader preLoad: self.
-            (MetacelloLoadProjectSpecVersionNotification new projectSpec: (self copy versionString: vrsn versionString))
+            (MetacelloProjectSpecLoadedNotification new projectSpec: (self copy versionString: vrsn versionString))
                 signal.
-            vrsn fetchRequiredFromArray: list.
+            vrsn fetchRequiredFromArray: list.	"do the load"	"            (MetacelloProjectSpecLoadedNotification new projectSpec: (self copy versionString: vrsn versionString))
+                signal."
             mcLoader postLoad: self ]
         defaultDictionary: Dictionary new
