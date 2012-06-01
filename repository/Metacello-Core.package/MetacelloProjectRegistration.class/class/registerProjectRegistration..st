@@ -4,4 +4,4 @@ registerProjectRegistration: newRegistration
 
     ^ self
         registerProjectRegistration: newRegistration
-        ifPresent: [ :existing :new | self registry at: new projectName put: new ]
+        ifPresent: [ :existing :new | self registryAt: new projectName put: new ]

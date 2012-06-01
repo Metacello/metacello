@@ -66,7 +66,7 @@ load: required
                         ifPresent: [ :existing :new | 
                             (existing hasLoadConflicts: new)
                                 ifFalse: [ 
-                                    existing merge: new.
+                                    MetacelloProjectRegistration mergeRegistration: existing with: new.
                                     Transcript
                                         cr;
                                         show:

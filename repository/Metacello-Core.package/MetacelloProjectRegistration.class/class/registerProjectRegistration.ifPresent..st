@@ -3,5 +3,5 @@ registerProjectRegistration: newRegistration ifPresent: absentBlock
     | existingRegistration |
     existingRegistration := self registry
         at: newRegistration projectName
-        ifAbsent: [ ^ self registry at: newRegistration projectName put: newRegistration ].
+        ifAbsent: [ ^ self registryAt: newRegistration projectName put: newRegistration ].
     ^ absentBlock value: existingRegistration value: newRegistration

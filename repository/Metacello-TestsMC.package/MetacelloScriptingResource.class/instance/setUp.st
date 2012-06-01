@@ -22,4 +22,5 @@ setUp
         setUpBaselineGithubReferenceVII;
         setUpBaselineGithubReferenceVIII;
         setUpBaselineGithubReferenceIX;
+        setUpMarianosImage;
         yourself

@@ -1,3 +1,3 @@
 accessing
 resetRegistry
-    Registry := nil
+    ProjectSpecRegistry := Registry := nil

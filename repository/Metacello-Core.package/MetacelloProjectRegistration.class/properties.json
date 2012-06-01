@@ -4,6 +4,7 @@
 		 ],
 	"classtraitcomposition" : "{}",
 	"classvars" : [
+		"ProjectSpecRegistry",
 		"Registry" ],
 	"commentStamp" : "",
 	"instvars" : [

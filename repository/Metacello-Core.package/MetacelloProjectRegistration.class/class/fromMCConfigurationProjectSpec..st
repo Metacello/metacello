@@ -1,6 +1,6 @@
 instance creation
 fromMCConfigurationProjectSpec: aProjectSpec
     ^ self new
-        projectName: (MetacelloScriptEngine configurationProjectNameOf: aProjectSpec className);
+        projectName: aProjectSpec name;
         configurationProjectSpec: aProjectSpec;
         yourself
