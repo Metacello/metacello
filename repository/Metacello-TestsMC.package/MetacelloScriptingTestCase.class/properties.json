@@ -9,6 +9,7 @@
 	"instvars" : [
 		"projectRegistry",
 		"projectSpecRegistry",
+		"configurationRepository",
 		"externalRepository",
 		"mczConfigurationRepository",
 		"monticelloRepository",

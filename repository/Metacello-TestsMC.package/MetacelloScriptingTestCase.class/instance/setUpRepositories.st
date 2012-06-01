@@ -12,6 +12,7 @@ setUpRepositories
     sampleDirectory exists
         ifTrue: [ sampleDirectory recursiveDelete ].
     sampleDirectory assureExistence.
+    configurationRepository := MetacelloScriptingResource current configurationRepository.
     externalRepository := MetacelloScriptingResource current externalRepository.
     Smalltalk at: #'Metacello_Configuration_Test_Repository' put: externalRepository.
     monticelloRepository := MetacelloMonticelloResource current monticelloRepository.

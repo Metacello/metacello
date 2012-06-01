@@ -12,4 +12,5 @@ tearDownRepositories
     MCRepositoryGroup default
         removeRepository: externalRepository;
         removeRepository: monticelloRepository;
-        removeRepository: mczConfigurationRepository
+        removeRepository: mczConfigurationRepository;
+        removeRepository: configurationRepository

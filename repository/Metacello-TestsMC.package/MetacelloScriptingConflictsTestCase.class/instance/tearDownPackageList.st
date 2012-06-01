@@ -1,3 +1,3 @@
 running
 tearDownPackageList
-    ^ #('ConfigurationOfExternalX' 'BaselineOfExternalX' 'External-CoreX')
+    ^ #('ConfigurationOfExternalX' 'BaselineOfExternalX' 'External-CoreX' 'ConfigurationOfConflict')

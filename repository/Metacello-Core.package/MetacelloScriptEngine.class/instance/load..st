@@ -1,28 +1,8 @@
 actions api
 load: required
     [ 
-    | version registration loadededSpec |
-    registration := MetacelloProjectRegistration
-        registrationForProjectSpec: self projectSpec
-        ifAbsent: [ :new | new ]
-        ifPresent: [ :existing :new | 
-            (existing hasLoadConflicts: new)
-                ifTrue: [ 
-                    (existing canUpgradeTo: new)
-                        ifTrue: [ 
-                            self upgradesAllowed
-                                ifTrue: [ MetacelloProjectRegistration registerProjectRegistration: new ]
-                                ifFalse: [ 
-                                    MetacelloSkippedProjectSpecLoadUpgradeNotAllowedNotification new
-                                        existingProjectRegistration: existing;
-                                        newProjectRegistration: new;
-                                        signal ] ]
-                        ifFalse: [ 
-                            MetacelloSkippedProjectSpecLoadConflictsNotification new
-                                existingProjectRegistration: existing;
-                                newProjectRegistration: new;
-                                signal ] ] ].
-    version := (loadededSpec := self projectSpec lookupProjectSpecIn: registration) versionForScriptEngine: self.
+    | version loadededSpec |
+    version := (loadededSpec := self lookupProjectSpecFor: self projectSpec) versionForScriptEngine: self.
     self
         root:
             (required isEmpty
@@ -34,26 +14,16 @@ load: required
         on: MetacelloLookupProjectSpec , MetacelloLookupProjectSpecForLoad , MetacelloProjectSpecLoadedNotification
         do: [ :ex | 
             (ex isKindOf: MetacelloLookupProjectSpec)
-                ifTrue: [ ex resume: ((self lookupConfigurationProjectSpecFrom: ex projectSpec) ifNil: [ ^ ex resume: ex projectSpec ]) ].
+                ifTrue: [ ex resume: ((self lookupProjectSpecFor: ex projectSpec) ifNil: [ ^ ex resume: ex projectSpec ]) ].
             (ex isKindOf: MetacelloLookupProjectSpecForLoad)
                 ifTrue: [ 
-                    | spec specForLoad existing new |
-                    "this logic should end up being very similar to lookupConfigurationProjectSpecFrom: ...."
-                    spec := ex projectSpec.
-                    specForLoad := MetacelloProjectSpecForLoad new
-                        projectSpec: spec;
-                        yourself.
-                    existing := MetacelloProjectRegistration
-                        registrationForProjectSpec: spec
-                        ifAbsent: [ ^ ex resume: specForLoad ].
-                    (existing hasLoadConflicts: (new := spec asProjectRegistration))
-                        ifTrue: [ 
-                            "would have load conflict ... so this is where the rubber meets the road and we skip loading or not"
-                            self halt ]
-                        ifFalse: [ 
-                            "do not check image for currentVersion"
-                            specForLoad overrideProjectSpec: (self projectSpec lookupProjectSpecIn: new) ].
-                    ex resume: specForLoad ].
+                    "don't look up currentVersion in image"
+                    ex
+                        resume:
+                            (MetacelloProjectSpecForLoad new
+                                projectSpec: ex projectSpec;
+                                overrideProjectSpec: (self lookupProjectSpecFor: ex projectSpec);
+                                yourself) ].
             (ex isKindOf: MetacelloProjectSpecLoadedNotification)
                 ifTrue: [ 
                     | registration |
