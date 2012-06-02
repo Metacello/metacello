@@ -69,7 +69,7 @@ Gofer new
       #'MetacelloAtomicMonticelloResource' #'MetacelloConfigurationResource' 
       #'MetacelloMonticelloResource' #'MetacelloScriptingResource' 
       #'MetacelloIssue108Resource')
-        do: [ :className | Smalltalk at: className ifPresent: [ :cls | cls reset ] ]
+        do: [ :className | Smalltalk at: className ifPresent: [ :cls | cls reset ] ].
 
 "I like my categories sorted"
 SystemOrganization sortCategories.
