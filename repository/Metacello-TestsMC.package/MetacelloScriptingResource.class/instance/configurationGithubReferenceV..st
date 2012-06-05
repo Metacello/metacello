@@ -9,6 +9,7 @@ configurationGithubReferenceV: spec
                 project: 'External'
                     with: [ 
                             spec
+                                className: 'ConfigurationOfExternal';
                                 version: '0.9';
                                 loads: 'Core';
                                 repository:

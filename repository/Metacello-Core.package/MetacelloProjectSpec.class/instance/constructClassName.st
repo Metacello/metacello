@@ -1,3 +1,3 @@
 private
 constructClassName
-    ^ 'ConfigurationOf' , self name
+    ^ nil
