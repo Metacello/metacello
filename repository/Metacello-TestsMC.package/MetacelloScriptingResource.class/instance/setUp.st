@@ -22,6 +22,7 @@ setUp
         setUpBaselineGithubReferenceVII;
         setUpBaselineGithubReferenceVIII;
         setUpBaselineGithubReferenceIX;
+        setUpBaselineGithubReferenceXI;
         setUpMarianosImage;
         setUpConfigurationOfConflict;
         yourself
