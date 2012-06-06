@@ -3,7 +3,7 @@ testFileTreeLoadGithubRefBaseline2
     self
         should: [ 
             Metacello new
-                project: 'GithubRefXX';
+                configuration: 'GithubRefXX';
                 repository: 'filetree://' , externalDirectory fullName;
                 silently;
                 load ]

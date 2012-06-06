@@ -5,6 +5,7 @@ baselineProjectSpec
     projectSpec := project projectSpec.
     ^ projectSpec
         name: 'DiscGolf';
+        className: 'ConfigurationOfDiscGolf';
         versionString: project singletonVersionName;
         repository: 'http://example.com/repository/OrchardPark';
         yourself
