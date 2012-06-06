@@ -25,4 +25,5 @@ setUp
         setUpBaselineGithubReferenceXI;
         setUpMarianosImage;
         setUpConfigurationOfConflict;
+        setUpInvalidConfigurations;
         yourself

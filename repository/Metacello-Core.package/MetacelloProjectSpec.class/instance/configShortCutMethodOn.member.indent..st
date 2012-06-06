@@ -1,7 +1,7 @@
 printing
 configShortCutMethodOn: aStream member: aMember indent: indent
     | hasVersionString hasOperator hasProjectPackage hasLoads hasClassName hasPreLoadDoIt hasPostLoadDoIt |
-    hasClassName := className ~~ nil and: [ className ~= self constructClassName ].
+    hasClassName := self hasClassName.
     hasVersionString := self versionString ~~ nil.
     hasOperator := operator ~~ nil.
     hasProjectPackage := self packageRepository ~~ nil

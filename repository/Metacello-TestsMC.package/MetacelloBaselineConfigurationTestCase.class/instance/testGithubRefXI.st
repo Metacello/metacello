@@ -1,4 +1,4 @@
-tests
+tests project spec
 testGithubRefXI
     "project:copyFrom:with:"
 
@@ -11,8 +11,9 @@ testGithubRefXI
     version := (Smalltalk at: #'BaselineOfGithubRefXI') project version.
     expected := 'spec description: ''MetacelloScriptingResource>>configurationGithubReferenceV:''.
 spec 
-	configuration: ''External'' with: [
+	project: ''External'' with: [
 		spec
+			className: ''ConfigurationOfExternal'';
 			versionString: ''0.9'';
 			loads: #(''Core'' );
 			repository: ''github://dalehenrich/external:' , MetacelloScriptingResource externalConfigurationSHA
@@ -20,5 +21,4 @@ spec
             '/repository'' ];
 	project: ''External Tests'' copyFrom: ''External'' with: [
 		spec loads: #(''Tests'' ) ].'.
-    self halt.
     self assert: version versionSpec printString = expected

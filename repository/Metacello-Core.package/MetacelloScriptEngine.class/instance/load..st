@@ -2,6 +2,7 @@ actions api
 load: required
     [ 
     | version loadededSpec |
+    self validateProjectSpec: #'validateForScriptLoad:'.
     version := (loadededSpec := self lookupProjectSpecFor: self projectSpec) versionForScriptEngine: self.
     self
         root:

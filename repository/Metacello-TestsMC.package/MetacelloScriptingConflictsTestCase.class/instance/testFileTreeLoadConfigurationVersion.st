@@ -1,7 +1,7 @@
 tests
 testFileTreeLoadConfigurationVersion
     Metacello new
-        project: 'ExternalX';
+        configuration: 'ExternalX';
         version: '0.9';
         repository: 'filetree://' , configurationDirectory fullName;
         silently;

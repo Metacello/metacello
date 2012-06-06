@@ -7,7 +7,7 @@ testConfigurationConflict2
     self testFileTreeLoadConfigurationVersion.
     [ 
     Metacello new
-        project: 'Conflict';
+        configuration: 'Conflict';
         version: '1.0';
         repository: 'filetree://' , configurationDirectory fullName;
         silently;
