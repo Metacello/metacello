@@ -1,15 +1,15 @@
 tests
-testGithubRefBaselineLoad1
-    "loading 'Core' group only"
+testGithubRefBaselineLoad2
+    "loading 'Core' and 'Tests' groups "
 
     Metacello new
         baseline: 'GithubRefXII';
         repository: 'filetree://' , externalDirectory fullName;
         silently;
-        load: 'External Core'.
+        load: #('External Core' 'External Tests').
     self
         validate: 'GithubRefXII'
-        registrySize: 2
+        registrySize: 3
         expectedConfigurationVersion: nil
         expectedConfigurationRepository: nil
         expectedBaselineVersion: 'baseline'
@@ -17,10 +17,20 @@ testGithubRefBaselineLoad1
     self
         verify: 'External-Core'
         loadedFrom: 'github://dalehenrich/external:' , MetacelloScriptingResource externalCustomSHA , '/repository'.
-    self verifyPackageNotLoaded: 'External-Tests'.
+    self
+        verify: 'External-Tests'
+        loadedFrom: 'github://dalehenrich/external:' , MetacelloScriptingResource externalCustomSHA , '/repository'.
     self
         validate: 'External Core'
-        registrySize: 2
+        registrySize: 3
+        expectedConfigurationVersion: nil
+        expectedConfigurationRepository: nil
+        expectedBaselineVersion: 'baseline'
+        expectedBaselineRepository:
+            'github://dalehenrich/external:' , MetacelloScriptingResource externalCustomSHA , '/repository'.
+    self
+        validate: 'External Tests'
+        registrySize: 3
         expectedConfigurationVersion: nil
         expectedConfigurationRepository: nil
         expectedBaselineVersion: 'baseline'

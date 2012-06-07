@@ -3,8 +3,8 @@ testBasicHasLoadConflicts
     | registrationA registrationB baselineProjectSpecA configurationProjectSpecA baselineProjectSpecB configurationProjectSpecB |
     baselineProjectSpecA := self baselineProjectSpec.
     configurationProjectSpecA := self configurationProjectSpec.
-    baselineProjectSpecB := self baselineProjectSpec name: 'NotDiscGolf'.
-    configurationProjectSpecB := self configurationProjectSpec name: 'NotDiscGolf'.
+    baselineProjectSpecB := self baselineProjectSpec className: 'BaselineOfNotDiscGolf'.
+    configurationProjectSpecB := self configurationProjectSpec className: 'ConfigurationOfNotDiscGolf'.
     registrationA := MetacelloProjectRegistration new.
     registrationB := MetacelloProjectRegistration new.
     self assert: (registrationA hasLoadConflicts: registrationB).

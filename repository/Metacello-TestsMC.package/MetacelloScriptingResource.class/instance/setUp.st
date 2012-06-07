@@ -23,6 +23,7 @@ setUp
         setUpBaselineGithubReferenceVIII;
         setUpBaselineGithubReferenceIX;
         setUpBaselineGithubReferenceXI;
+        setUpBaselineGithubReferenceXII;
         setUpMarianosImage;
         setUpConfigurationOfConflict;
         setUpInvalidConfigurations;
