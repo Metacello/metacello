@@ -17,7 +17,7 @@ follow [FileTree installation instructions][1]
 ```
 
 ### Attach to the metacello repository and load Metacello files that have changed for git
-(assuming your stating with Metacello 1.0-beta.31.1)
+(assuming you are starting with Metacello 1.0-beta.31.1)
 
 ```Smalltalk
 Gofer new
