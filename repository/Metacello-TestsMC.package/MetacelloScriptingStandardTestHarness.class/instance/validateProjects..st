@@ -1,4 +1,4 @@
-private
+utilities
 validateProjects: specArrays
     | registrySize |
     registrySize := specArrays size.

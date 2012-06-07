@@ -8,7 +8,9 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"projectRegistry",
-		"projectSpecRegistry" ],
+		"projectSpecRegistry",
+		"monticelloRepository",
+		"configurationRepository" ],
 	"name" : "MetacelloScriptingStandardTestHarness",
 	"pools" : [
 		 ],

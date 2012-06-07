@@ -7,10 +7,8 @@
 		 ],
 	"commentStamp" : "dkh 5/5/2012 19:52",
 	"instvars" : [
-		"configurationRepository",
 		"externalRepository",
 		"mczConfigurationRepository",
-		"monticelloRepository",
 		"configurationDirectory",
 		"externalDirectory",
 		"sampleDirectory" ],
