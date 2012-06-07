@@ -3,6 +3,8 @@ ensureProjectLoaded
     "Ensure that the MetacelloProject is loaded in image. 
 	 projectClass == nil or requested version non-existent warrants a project package load."
 
+    "answer true if the projectClass exists"
+
     (self projectClass == nil or: [ self versionOrNil == nil ])
         ifTrue: [ 
             | pc |
@@ -11,6 +13,6 @@ ensureProjectLoaded
                     MetacelloClearStackCacheNotification
                         signal:
                             #(#'currentVersion' #'currentVersionAgainst:' #'currentVersionInfo' #'versionConstructor' #'loadableSpecNames') , {pc} ].
-            self ensureLoadUsing: self loader.
-            ^ true ].
-    ^ false
+            self projectPackage ifNil: [ ^ true ].
+            self ensureLoadUsing: self loader ].
+    ^ self projectClass ~~ nil

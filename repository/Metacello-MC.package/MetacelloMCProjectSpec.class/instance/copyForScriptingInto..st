@@ -1,6 +1,6 @@
 scripting
 copyForScriptingInto: aProjectSpec
-    aProjectSpec
+    ^aProjectSpec
         setName: name;
         className: className;
         versionString: versionString;

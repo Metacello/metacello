@@ -1,4 +1,4 @@
-tests
+tests configurations
 testFileTreeGetConfigurationBasicSpecIV
     self
         should: [ 

@@ -4,6 +4,7 @@ projectPackage
         ifNil: [ 
             | cName |
             cName := self className.
+            cName ifNil: [ ^ nil ].
             projectPackage := self project packageSpec.
             projectPackage name: cName.
             self getFile ifNotNil: [ projectPackage file: self file ].

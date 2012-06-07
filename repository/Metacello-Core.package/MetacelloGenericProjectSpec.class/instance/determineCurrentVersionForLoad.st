@@ -1,3 +1,3 @@
 loading
 determineCurrentVersionForLoad
-    ^ self version
+    self subclassResponsibility

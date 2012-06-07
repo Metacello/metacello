@@ -9,5 +9,7 @@ configurationGithubReferenceIV: spec
                 project: 'External'
                 with: [ 
                     spec
+                        className: 'ConfigurationOfExternal';
                         version: '0.9';
-                        repository: 'github://dalehenrich/external:', MetacelloScriptingResource externalConfigurationSHA, '/repository' ] ]
+                        repository:
+                                'github://dalehenrich/external:' , MetacelloScriptingResource externalConfigurationSHA , '/repository' ] ]

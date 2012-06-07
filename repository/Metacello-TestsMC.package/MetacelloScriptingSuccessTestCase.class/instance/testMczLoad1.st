@@ -3,6 +3,7 @@ testMczLoad1
     | loaded |
     Metacello new
         project: 'MetacelloExample';
+        className: 'ConfigurationOfMetacelloExample';
         version: '1.0';
         repository: 'dictionary://Metacello_MczConfiguration_Test_Repository';
         load.

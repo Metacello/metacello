@@ -1,0 +1,16 @@
+{
+	"category" : "Metacello-TestsMC-Scripts",
+	"classinstvars" : [
+		 ],
+	"classtraitcomposition" : "{}",
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 6/7/2012 10:15",
+	"instvars" : [
+		 ],
+	"name" : "MetacelloCurrentVersionScriptTestCase",
+	"pools" : [
+		 ],
+	"super" : "MetacelloScriptingStandardTestHarness",
+	"traitcomposition" : "{}",
+	"type" : "normal" }

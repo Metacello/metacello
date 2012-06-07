@@ -5,6 +5,7 @@ configurationProjectSpec
     projectSpec := project projectSpec.
     ^ projectSpec
         name: 'DiscGolf';
+        className: 'ConfigurationOfDiscGolf';
         versionString: '1.0';
         repository: 'http://example.com/repository/OrchardPark';
         yourself

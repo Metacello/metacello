@@ -7,17 +7,14 @@
 		 ],
 	"commentStamp" : "dkh 5/5/2012 19:52",
 	"instvars" : [
-		"projectRegistry",
-		"projectSpecRegistry",
 		"externalRepository",
 		"mczConfigurationRepository",
-		"monticelloRepository",
 		"configurationDirectory",
 		"externalDirectory",
 		"sampleDirectory" ],
 	"name" : "MetacelloScriptingTestCase",
 	"pools" : [
 		 ],
-	"super" : "TestCase",
+	"super" : "MetacelloScriptingStandardTestHarness",
 	"traitcomposition" : "{}",
 	"type" : "normal" }

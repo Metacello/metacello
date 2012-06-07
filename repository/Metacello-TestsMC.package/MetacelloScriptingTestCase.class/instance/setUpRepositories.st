@@ -1,5 +1,6 @@
 running
 setUpRepositories
+    super setUpRepositories.
     configurationDirectory := FileDirectory default directoryNamed: self configurationPath.
     externalDirectory := FileDirectory default directoryNamed: self externalPath.
     sampleDirectory := FileDirectory default directoryNamed: self samplePath.
@@ -12,6 +13,7 @@ setUpRepositories
     sampleDirectory exists
         ifTrue: [ sampleDirectory recursiveDelete ].
     sampleDirectory assureExistence.
+    configurationRepository := MetacelloScriptingResource current configurationRepository.
     externalRepository := MetacelloScriptingResource current externalRepository.
     Smalltalk at: #'Metacello_Configuration_Test_Repository' put: externalRepository.
     monticelloRepository := MetacelloMonticelloResource current monticelloRepository.

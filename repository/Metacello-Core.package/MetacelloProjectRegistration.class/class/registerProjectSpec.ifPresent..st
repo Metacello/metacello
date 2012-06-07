@@ -1,3 +1,3 @@
 registration
-registerProjectSpec: aProjectSpec ifPresent: absentBlock
-    ^ self registerProjectRegistration: aProjectSpec asProjectRegistration ifPresent: absentBlock
+registerProjectSpec: aProjectSpec ifPresent: presentBlock
+    ^ self registerProjectRegistration: aProjectSpec asProjectRegistration ifPresent: presentBlock

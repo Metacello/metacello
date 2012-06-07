@@ -11,6 +11,15 @@ validateBaselineVersionSpec: versionSpec
     versionMessage := ' in version ' , versionSpec versionString printString.
     versionSpec
         projectDo: [ :projectSpec | 
+            projectSpec resolveProjectSpec className == nil
+                ifTrue: [ 
+                    self
+                        recordValidationError:
+                            'Missing required field (className:) for project reference ' , projectSpec name printString , ' in version '
+                                , versionSpec versionString printString
+                        versionString: versionSpec versionString
+                        callSite: #'validateBaselineVersionSpec:'
+                        reasonCode: #'incompleteProjectSpec' ].
             projectSpec resolveProjectSpec versionString == nil
                 ifTrue: [ 
                     self

@@ -1,5 +1,6 @@
 running
 tearDownRepositories
+    super tearDownRepositories.
     configurationDirectory exists
         ifTrue: [ configurationDirectory recursiveDelete ].
     externalDirectory exists
@@ -12,4 +13,5 @@ tearDownRepositories
     MCRepositoryGroup default
         removeRepository: externalRepository;
         removeRepository: monticelloRepository;
-        removeRepository: mczConfigurationRepository
+        removeRepository: mczConfigurationRepository;
+        removeRepository: configurationRepository

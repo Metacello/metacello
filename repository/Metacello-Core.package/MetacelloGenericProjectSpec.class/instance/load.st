@@ -1,13 +1,5 @@
 loading
 load
-    | displayString |
-    displayString := 'Project: ' , self name.
-    self versionString ~~ nil
-        ifTrue: [ displayString := displayString , ' ' , self versionString ].
-    Transcript
-        cr;
-        show: displayString.
-    self ensureProjectLoaded.
-    (MetacelloLookupProjectSpecNotification new
+    (MetacelloLookupProjectSpecForLoad new
         projectSpec: self;
-        yourself) signal privateLoad
+        yourself) signal performLoad
