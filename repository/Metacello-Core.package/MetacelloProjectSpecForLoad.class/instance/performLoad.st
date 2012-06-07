@@ -12,6 +12,6 @@ performLoad
         ifTrue: [ 
             | override |
             override := self overrideProjectSpec copy.
-            override setLoads: spec loads.
+            override mergeScriptLoads: spec.
             override loadVersion: nil ]
         ifFalse: [ spec loadVersion: spec determineCurrentVersionForLoad ]
