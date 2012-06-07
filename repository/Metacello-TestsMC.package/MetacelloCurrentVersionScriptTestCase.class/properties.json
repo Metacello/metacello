@@ -5,10 +5,11 @@
 	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
-	"commentStamp" : "dkh 5/4/2012 17:06",
+	"commentStamp" : "dkh 6/7/2012 10:15",
 	"instvars" : [
-		 ],
-	"name" : "MetacelloBaselineConfigurationTestCase",
+		"monticelloRepository",
+		"configurationRepository" ],
+	"name" : "MetacelloCurrentVersionScriptTestCase",
 	"pools" : [
 		 ],
 	"super" : "MetacelloScriptingStandardTestHarness",

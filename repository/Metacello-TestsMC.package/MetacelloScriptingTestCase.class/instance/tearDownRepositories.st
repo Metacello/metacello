@@ -1,5 +1,6 @@
 running
 tearDownRepositories
+    super tearDownRepositories.
     configurationDirectory exists
         ifTrue: [ configurationDirectory recursiveDelete ].
     externalDirectory exists

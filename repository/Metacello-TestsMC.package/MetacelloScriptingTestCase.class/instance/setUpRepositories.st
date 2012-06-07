@@ -1,5 +1,6 @@
 running
 setUpRepositories
+    super setUpRepositories.
     configurationDirectory := FileDirectory default directoryNamed: self configurationPath.
     externalDirectory := FileDirectory default directoryNamed: self externalPath.
     sampleDirectory := FileDirectory default directoryNamed: self samplePath.

@@ -5,12 +5,13 @@
 	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
-	"commentStamp" : "dkh 5/4/2012 17:06",
+	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "MetacelloBaselineConfigurationTestCase",
+		"projectRegistry",
+		"projectSpecRegistry" ],
+	"name" : "MetacelloScriptingStandardTestHarness",
 	"pools" : [
 		 ],
-	"super" : "MetacelloScriptingStandardTestHarness",
+	"super" : "TestCase",
 	"traitcomposition" : "{}",
 	"type" : "normal" }

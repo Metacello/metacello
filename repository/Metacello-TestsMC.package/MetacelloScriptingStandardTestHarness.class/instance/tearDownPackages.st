@@ -1,7 +1,6 @@
 running
 tearDownPackages
     | aGofer |
-    super tearDown.
     aGofer := Gofer new.
     self tearDownPackageList
         do: [ :packageName | 
