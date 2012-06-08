@@ -8,4 +8,4 @@ testOriginalFie40Feaux35FeauxLoad
         load: 'Feaux'.
     self validateBlockFie40FeauxLoad value.
     ((Smalltalk at: #'MetacelloTestConfigurationOfProjectFie') project version: '3.5') load: 'Feaux'.
-    self validateOriginalBlockFie35FeauxLoad value
+    self validateBlockOriginalFie4035FeauxFeauxLoad value
