@@ -1,8 +1,7 @@
 private
 validateBlockFie40FeauxLoad
     ^ [ 
-    self verify: 'GeauxFoo' version: 'GeauxFoo-lr.1'.
-    self verify: 'GeauxBar' version: 'GeauxBar.branch-lr.2'.
+    self validateBlockOriginalFie40FeauxLoad value.
     self
         validateProjects:
             {{'Fie'.

@@ -11,6 +11,6 @@
 	"name" : "MetacelloScriptProjectSpecNotification",
 	"pools" : [
 		 ],
-	"super" : "Notification",
+	"super" : "MetacelloScriptNotification",
 	"traitcomposition" : "{}",
 	"type" : "normal" }

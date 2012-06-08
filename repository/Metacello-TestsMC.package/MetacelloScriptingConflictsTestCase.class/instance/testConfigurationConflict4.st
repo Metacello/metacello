@@ -4,7 +4,7 @@ testConfigurationConflict4
 
     "variant of testFileTreeLoadConfigurationVersionsNotification4"
 
-    "effectively a downgrade"
+    "explicitly a downgrade"
 
     self testFileTreeLoadConfigurationVersions.
     [ 
@@ -14,8 +14,8 @@ testConfigurationConflict4
         repository: 'filetree://' , configurationDirectory fullName;
         silently;
         load ]
-        on: MetacelloSkippedProjectSpecLoadConflictsNotification
-        do: [ :ex | ex useNewProjectRegistration ].
+        on: MetacelloAllowProjectDowngrade
+        do: [ :ex | ex allow ].
     self
         validate: 'Conflict'
         registrySize: 2

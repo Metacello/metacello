@@ -7,19 +7,14 @@ lookupProjectSpecFor: aProjectSpec
         ifPresent: [ :existing :new | 
             (existing hasLoadConflicts: new)
                 ifTrue: [ 
-                    (existing canUpgradeTo: new)
-                        ifTrue: [ 
-                            self upgradesAllowed
-                                ifTrue: [ new ]
-                                ifFalse: [ 
-                                    MetacelloSkippedProjectSpecLoadUpgradeNotAllowedNotification new
-                                        existingProjectRegistration: existing;
-                                        newProjectRegistration: new;
-                                        signal ] ]
+                    ((existing canUpgradeTo: new)
+                        ifTrue: [ MetacelloAllowProjectUpgrade new ]
                         ifFalse: [ 
-                            MetacelloSkippedProjectSpecLoadConflictsNotification new
-                                existingProjectRegistration: existing;
-                                newProjectRegistration: new;
-                                signal ] ]
+                            (existing canDowngradeTo: new)
+                                ifTrue: [ MetacelloAllowProjectDowngrade new ]
+                                ifFalse: [ MetacelloAllowConflictingProjectUpgrade new ] ])
+                        existingProjectRegistration: existing;
+                        newProjectRegistration: new;
+                        signal ]
                 ifFalse: [ new ] ].
     ^ aProjectSpec lookupProjectSpecIn: registration
