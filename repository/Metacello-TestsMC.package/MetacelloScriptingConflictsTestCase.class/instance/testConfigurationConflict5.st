@@ -4,14 +4,18 @@ testConfigurationConflict5
 
     "variant of testFileTreeLoadConfigurationVersionsNotification2"
 
+    | baseName |
     self testFileTreeLoadConfigurationVersion.
     Metacello new
         configuration: 'Conflict';
         version: '1.0';
         repository: 'filetree://' , configurationDirectory fullName;
-        onUpgrade: [ :ex | ex allow ];
+        onUpgrade: [ :ex :existing | 
+                    baseName := existing baseName.
+                    ex allow ];
         silently;
         load.
+    self assert: baseName = 'ExternalX'.
     self
         validate: 'Conflict'
         registrySize: 2

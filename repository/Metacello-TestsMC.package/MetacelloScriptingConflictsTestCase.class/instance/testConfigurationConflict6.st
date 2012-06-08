@@ -6,14 +6,22 @@ testConfigurationConflict6
 
     "effectively a downgrade"
 
+    | newVersion existingVersion baseName |
     self testFileTreeLoadConfigurationVersions.
     Metacello new
         configuration: 'Conflict';
         version: '1.1';
         repository: 'filetree://' , configurationDirectory fullName;
-        onConflict: [ :ex | ex allow ];
+        onConflict: [ :ex :existing :new | 
+                    baseName := existing baseName.
+                    existingVersion := existing configurationProjectSpec versionString.
+                    newVersion := new configurationProjectSpec versionString.
+                    ex allow ];
         silently;
         load.
+    self assert: baseName = 'ExternalX'.
+    self assert: existingVersion = '0.9.1'.
+    self assert: newVersion = '0.9'.
     self
         validate: 'Conflict'
         registrySize: 2
