@@ -9,7 +9,10 @@ lookupProjectSpecFor: aProjectSpec
                 ifTrue: [ 
                     ((existing canUpgradeTo: new)
                         ifTrue: [ MetacelloAllowProjectUpgrade new ]
-                        ifFalse: [ MetacelloAllowConflictingProjectUpgrade new ])
+                        ifFalse: [ 
+                            (existing canDowngradeTo: new)
+                                ifTrue: [ MetacelloAllowProjectDowngrade new ]
+                                ifFalse: [ MetacelloAllowConflictingProjectUpgrade new ] ])
                         existingProjectRegistration: existing;
                         newProjectRegistration: new;
                         signal ]

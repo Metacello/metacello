@@ -28,6 +28,13 @@ setUpConfigurationOfConflict
     (MCMethodDefinition
         className: className asString
         classIsMeta: false
+        selector: 'conflictOf12:'
+        category: 'cat'
+        timeStamp: ''
+        source: (self class sourceCodeAt: #'conflictOf12:') asString).
+    (MCMethodDefinition
+        className: className asString
+        classIsMeta: false
         selector: 'customProjectAttributes'
         category: 'cat'
         timeStamp: ''

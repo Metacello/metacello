@@ -1,21 +1,27 @@
 tests
-testConfigurationConflict4
+testConfigurationConflict8
     "Conflict must show up in a configuration loaded from a project spec"
 
     "variant of testFileTreeLoadConfigurationVersionsNotification4"
 
-    "explicitly a downgrade"
+    "explicitly adowngrade"
 
+    | newVersion existingVersion baseName |
     self testFileTreeLoadConfigurationVersions.
-    [ 
     Metacello new
         configuration: 'Conflict';
         version: '1.1';
         repository: 'filetree://' , configurationDirectory fullName;
+        onDowngrade: [ :ex :existing :new | 
+                    baseName := existing baseName.
+                    existingVersion := existing configurationProjectSpec versionString.
+                    newVersion := new configurationProjectSpec versionString.
+                    ex allow ];
         silently;
-        load ]
-        on: MetacelloAllowProjectDowngrade
-        do: [ :ex | ex allow ].
+        load.
+    self assert: baseName = 'ExternalX'.
+    self assert: existingVersion = '0.9.1'.
+    self assert: newVersion = '0.9'.
     self
         validate: 'Conflict'
         registrySize: 2

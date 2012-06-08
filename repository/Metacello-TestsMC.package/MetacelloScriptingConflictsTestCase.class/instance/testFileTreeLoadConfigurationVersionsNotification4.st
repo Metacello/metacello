@@ -2,7 +2,7 @@ tests
 testFileTreeLoadConfigurationVersionsNotification4
     "MetacelloSkippedProjectSpecLoadConflictsNotification not handled ... default action is to use existingRegistration"
 
-    "effectively a downgrade"
+    "explicitly a downgrade"
 
     self testFileTreeLoadConfigurationVersions.
     [ 
@@ -12,7 +12,7 @@ testFileTreeLoadConfigurationVersionsNotification4
         repository: 'filetree://' , configurationDirectory fullName;
         silently;
         load ]
-        on: MetacelloAllowConflictingProjectUpgrade
+        on: MetacelloAllowProjectDowngrade
         do: [ :ex | ex allow ].
     self
         validate: 'ExternalX'

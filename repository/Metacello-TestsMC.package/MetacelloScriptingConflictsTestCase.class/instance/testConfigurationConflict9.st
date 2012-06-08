@@ -1,21 +1,24 @@
 tests
-testConfigurationConflict4
+testConfigurationConflict9
     "Conflict must show up in a configuration loaded from a project spec"
 
-    "variant of testFileTreeLoadConfigurationVersionsNotification4"
+    "variant of testConfigurationConflict3"
 
-    "explicitly a downgrade"
-
+    | disallowed |
     self testFileTreeLoadConfigurationVersions.
-    [ 
     Metacello new
         configuration: 'Conflict';
         version: '1.1';
         repository: 'filetree://' , configurationDirectory fullName;
         silently;
-        load ]
-        on: MetacelloAllowProjectDowngrade
-        do: [ :ex | ex allow ].
+        onDowngrade: [ :ex :existing :new | 
+                    existing baseName = 'ExternalX'
+                        ifTrue: [ 
+                            disallowed := existing baseName.
+                            ex disallow ].
+                    ex pass ];
+        load.
+    self assert: disallowed = 'ExternalX'.
     self
         validate: 'Conflict'
         registrySize: 2
@@ -26,7 +29,7 @@ testConfigurationConflict4
     self
         validate: 'ExternalX'
         registrySize: 2
-        expectedConfigurationVersion: '0.9'
-        expectedConfigurationRepository: 'dictionary://Metacello_Conflict_Test_Repository'
+        expectedConfigurationVersion: '0.9.1'
+        expectedConfigurationRepository: 'filetree://' , configurationDirectory fullName
         expectedBaselineVersion: 'baseline'
         expectedBaselineRepository: 'dictionary://Metacello_Configuration_Test_Repository'
