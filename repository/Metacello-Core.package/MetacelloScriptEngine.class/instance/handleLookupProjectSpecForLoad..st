@@ -1,10 +1,13 @@
 handlers
 handleLookupProjectSpecForLoad: exception
-    "don't look up currentVersion in image"
+    "if overrideProjectSpec is nil, use currentVersion in image"
 
     ^ exception
         resume:
             (MetacelloProjectSpecForLoad new
                 projectSpec: exception projectSpec;
-                overrideProjectSpec: (self lookupProjectSpecFor: exception projectSpec);
+                overrideProjectSpec:
+                        (self classic
+                                ifTrue: [ nil ]
+                                ifFalse: [ self lookupProjectSpecFor: exception projectSpec ]);
                 yourself)
