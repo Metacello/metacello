@@ -6,7 +6,7 @@ testFileTreeLoadConfigurationVersions
         version: '0.9.1';
         repository: 'filetree://' , configurationDirectory fullName;
         silently;
-        upgradesAllowed;
+        onUpgrade: [ :ex | ex allow ];
         load.
     self
         validate: 'ExternalX'

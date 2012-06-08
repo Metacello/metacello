@@ -9,9 +9,9 @@
 	"instvars" : [
 		"existingProjectRegistration",
 		"newProjectRegistration" ],
-	"name" : "MetacelloScriptProjectRegistrationNotification",
+	"name" : "MetacelloResolveProjectUpgrade",
 	"pools" : [
 		 ],
-	"super" : "Notification",
+	"super" : "MetacelloScriptNotification",
 	"traitcomposition" : "{}",
 	"type" : "normal" }

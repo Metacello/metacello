@@ -1,32 +1,28 @@
 tests
-testConfigurationConflict4
-    "Conflict must show up in a configuration loaded from a project spec"
+testConfigurationConflict5
+    "Conflict must show up in a configuration loaded from a project spec ... using onUpgrade:"
 
-    "variant of testFileTreeLoadConfigurationVersionsNotification4"
+    "variant of testFileTreeLoadConfigurationVersionsNotification2"
 
-    "effectively a downgrade"
-
-    self testFileTreeLoadConfigurationVersions.
-    [ 
+    self testFileTreeLoadConfigurationVersion.
     Metacello new
         configuration: 'Conflict';
-        version: '1.1';
+        version: '1.0';
         repository: 'filetree://' , configurationDirectory fullName;
+        onUpgrade: [ :ex | ex allow ];
         silently;
-        load ]
-        on: MetacelloAllowConflictingProjectUpgrade
-        do: [ :ex | ex allow ].
+        load.
     self
         validate: 'Conflict'
         registrySize: 2
-        expectedConfigurationVersion: '1.1'
+        expectedConfigurationVersion: '1.0'
         expectedConfigurationRepository: 'filetree://' , configurationDirectory fullName
         expectedBaselineVersion: nil
         expectedBaselineRepository: nil.
     self
         validate: 'ExternalX'
         registrySize: 2
-        expectedConfigurationVersion: '0.9'
+        expectedConfigurationVersion: '0.9.1'
         expectedConfigurationRepository: 'dictionary://Metacello_Conflict_Test_Repository'
         expectedBaselineVersion: 'baseline'
         expectedBaselineRepository: 'dictionary://Metacello_Configuration_Test_Repository'

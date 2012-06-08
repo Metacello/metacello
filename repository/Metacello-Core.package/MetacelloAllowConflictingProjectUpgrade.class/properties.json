@@ -8,9 +8,9 @@
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "MetacelloSkippedProjectSpecLoadUpgradeNotAllowedNotification",
+	"name" : "MetacelloAllowConflictingProjectUpgrade",
 	"pools" : [
 		 ],
-	"super" : "MetacelloScriptProjectRegistrationNotification",
+	"super" : "MetacelloResolveProjectUpgrade",
 	"traitcomposition" : "{}",
 	"type" : "normal" }

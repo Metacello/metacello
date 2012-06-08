@@ -12,8 +12,8 @@ testConfigurationConflict2
         repository: 'filetree://' , configurationDirectory fullName;
         silently;
         load ]
-        on: MetacelloSkippedProjectSpecLoadUpgradeNotAllowedNotification
-        do: [ :ex | ex useNewProjectRegistration ].
+        on: MetacelloAllowProjectUpgrade
+        do: [ :ex | ex allow ].
     self
         validate: 'Conflict'
         registrySize: 2

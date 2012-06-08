@@ -7,10 +7,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"projectSpec" ],
-	"name" : "MetacelloScriptProjectSpecNotification",
+		 ],
+	"name" : "MetacelloAllowProjectUpgrade",
 	"pools" : [
 		 ],
-	"super" : "MetacelloScriptNotification",
+	"super" : "MetacelloResolveProjectUpgrade",
 	"traitcomposition" : "{}",
 	"type" : "normal" }

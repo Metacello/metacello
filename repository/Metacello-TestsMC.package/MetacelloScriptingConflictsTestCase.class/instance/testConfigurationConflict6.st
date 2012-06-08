@@ -1,5 +1,5 @@
 tests
-testConfigurationConflict4
+testConfigurationConflict6
     "Conflict must show up in a configuration loaded from a project spec"
 
     "variant of testFileTreeLoadConfigurationVersionsNotification4"
@@ -7,15 +7,13 @@ testConfigurationConflict4
     "effectively a downgrade"
 
     self testFileTreeLoadConfigurationVersions.
-    [ 
     Metacello new
         configuration: 'Conflict';
         version: '1.1';
         repository: 'filetree://' , configurationDirectory fullName;
+        onConflict: [ :ex | ex allow ];
         silently;
-        load ]
-        on: MetacelloAllowConflictingProjectUpgrade
-        do: [ :ex | ex allow ].
+        load.
     self
         validate: 'Conflict'
         registrySize: 2

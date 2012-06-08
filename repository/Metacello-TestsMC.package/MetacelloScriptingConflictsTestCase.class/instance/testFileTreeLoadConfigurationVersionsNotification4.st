@@ -12,8 +12,8 @@ testFileTreeLoadConfigurationVersionsNotification4
         repository: 'filetree://' , configurationDirectory fullName;
         silently;
         load ]
-        on: MetacelloSkippedProjectSpecLoadConflictsNotification
-        do: [ :ex | ex useNewProjectRegistration ].
+        on: MetacelloAllowConflictingProjectUpgrade
+        do: [ :ex | ex allow ].
     self
         validate: 'ExternalX'
         registrySize: 1
