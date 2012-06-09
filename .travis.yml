@@ -18,4 +18,5 @@ install:
 script:
    - ./build.sh -i PharoCore-1.3 -s buildtools -s Metacello-Tests -o Metacello
    - cd ~/builder/builds/Metacello/
+   - cat PharoDebug.log
    - cat Metacello-TestsCore-Test.xml Metacello-TestsProfStef-Test.xml Metacello-TestsTutorial-Test.xml Metacello-TestsMC-Test.xml Metacello-TestsReference-Test.xml

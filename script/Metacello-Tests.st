@@ -50,9 +50,9 @@ Gofer new
 
 HDTestReport runPackages: #(
      'Metacello-TestsCore'
-     'Metacello-TestsMC'
+     "'Metacello-TestsMC'
      'Metacello-TestsProfStef'
      'Metacello-TestsReference'
-     'Metacello-TestsTutorial'
+     'Metacello-TestsTutorial'"
   ).
 
