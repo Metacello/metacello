@@ -1,3 +1,5 @@
+## Build Status
+[![Build Status](https://secure.travis-ci.org/dalehenrich/metacello-work.png)](http://travis-ci.org/dalehenrich/metacello-work)
 ## HOW TO INSTALL
 
 Note that the the git work has not even achieved alpha, yet, so don't 
