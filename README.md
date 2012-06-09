@@ -1,4 +1,3 @@
-## Build Status
 [![Build Status](https://secure.travis-ci.org/dalehenrich/metacello-work.png)](http://travis-ci.org/dalehenrich/metacello-work)
 ## HOW TO INSTALL
 
