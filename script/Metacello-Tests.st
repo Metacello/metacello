@@ -1,5 +1,5 @@
 | filetreePath metacelloPath |
-filetreePath := '/home/vagrant/builds/filetree/repository'.
+filetreePath := '/home/vagrant/builds/dalehenrich/filetree/repository'.
 metacelloPath := '/home/vagrant/builds/dalehenrich/metacello-work/repository'.
 
 Gofer new
