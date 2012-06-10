@@ -10,6 +10,9 @@ Metacello new
 
 
 "Run the tests"
+
+Author fullName: 'testMonkey'. "These tests save code ... need an Author"
+
 TravisCIHarness
   value: #( 'Metacello' )
   value: 'TravisCISuccess.txt' 
