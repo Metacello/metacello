@@ -8,6 +8,7 @@ baseline: spec
                 project: 'Gofer'
                     with: [ 
                             spec
+                                className: 'ConfigurationOfGofer';
                                 versionString: '1.0.5.1';
                                 loads: #('Core');
                                 repository: 'http://seaside.gemstone.com/ss/metacello' ];
@@ -35,10 +36,7 @@ baseline: spec
                 package: 'Metacello-Tutorial' with: [ spec requires: #('Metacello-Core') ];
                 package: 'Metacello-TestsCore' with: [ spec requires: #('Metacello-Core') ];
                 package: 'Metacello-TestsMC'
-                    with: [ 
-                            spec
-                                postLoadDoIt: #'testsMC10beta25PostLoadDoIt';
-                                requires: #('Metacello-MC' 'Metacello-TestsCore' 'Gofer Tests') ];
+                    with: [ spec requires: #('Metacello-MC' 'Metacello-TestsCore' 'Gofer Tests')	"postLoadDoIt: #'testResourcePostLoadDoIt';" ];
                 package: 'Metacello-TestsReference' with: [ spec requires: #('Metacello-Reference') ];
                 package: 'Metacello-TestsTutorial' with: [ spec requires: #('Metacello-Tutorial' 'Metacello-TestsMC') ];
                 package: 'OB-Metacello'
@@ -50,6 +48,9 @@ baseline: spec
                 group: 'Core' with: #('default');
                 group: 'Tutorial' with: #('Metacello-Tutorial' 'Metacello-Reference');
                 group: 'UI' with: #('OB-Metacello');
+                group: 'TravisCI'
+                    with:
+                        #('Metacello-TestsCore' 'Metacello-TestsTutorial' 'Metacello-TestsMC' 'Metacello-TestsReference');
                 group: 'Tests'
                     with:
                         #('default' 'Metacello-TestsCore' 'Metacello-TestsTutorial' 'Metacello-TestsMC' 'Metacello-TestsReference');
@@ -61,12 +62,14 @@ baseline: spec
                 project: 'HelpSystem'
                     with: [ 
                             spec
-                                versionString: '1.1';
+                                className: 'ConfigurationOfHelpSystem';
+                                versionString: #'1.1';
                                 loads: #('Core');
                                 repository: 'http://www.squeaksource.com/MetacelloRepository' ];
                 project: 'OmniBrowser'
                     with: [ 
                             spec
+                                className: 'ConfigurationOfOmniBrowser';
                                 versionString: #'stable';
                                 loads: #('Core');
                                 repository: 'http://www.squeaksource.com/MetacelloRepository' ];
@@ -81,8 +84,8 @@ baseline: spec
                 package: 'OB-Metacello' with: [ spec requires: #('OmniBrowser') ];
                 yourself.
             spec
-                group: 'default' with: #('Metacello-Help');
                 group: 'Tests' with: #('Metacello-TestsPlatform');
+                group: 'TravisCI' with: #('Metacello-TestsPlatform');
                 yourself ].
     spec
         for: #'pharo'
@@ -91,6 +94,7 @@ baseline: spec
                 project: 'ProfStef'
                     with: [ 
                             spec
+                                className: 'ConfigurationOfProfStef';
                                 versionString: #'stable';
                                 repository: 'http://www.squeaksource.com/MetacelloRepository' ];
                 baseline: 'FileTree' with: [ spec repository: 'github://dalehenrich/filetree:pharo1.3/repository' ];
@@ -149,4 +153,5 @@ baseline: spec
                 yourself.
             spec
                 group: 'Tests' with: #('Metacello-TestsPlatform');
+                group: 'TravisCI' with: #('Metacello-TestsPlatform');
                 yourself ]
