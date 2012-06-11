@@ -1,4 +1,4 @@
 accessing
 ensureList
-    ensureList ifNil: [ ensureList := OrderedCollection with: #'MetacelloScriptEngine' -> 'default' ].
+    ensureList ifNil: [ ensureList := OrderedCollection with: #'MetacelloScriptEngine' -> 'bootstrap' ].
     ^ ensureList
