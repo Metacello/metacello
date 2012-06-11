@@ -12,7 +12,7 @@ ensureMetacello: loadList
                     [ 
                     "bootstrap Metacello"
                     self bootstrapMetacelloFrom: repositoryUrl.	"load latest version of Metacello"
-                    version := (Smalltalk at: #'ConfigurationOfMetacello') project latestVersion.
+                    version := (Smalltalk at: #'ConfigurationOfMetacello') project version: '1.0-beta.32'.
                     retry
                         ifTrue: [ 
                             "on retry, use #repositoryOverrides:"
