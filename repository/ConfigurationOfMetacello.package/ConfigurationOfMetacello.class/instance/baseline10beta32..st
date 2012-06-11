@@ -86,7 +86,8 @@ baseline10beta32: spec
                             spec
                                 className: 'ConfigurationOfOSProcess';
                                 versionString: #'stable';
-                                repository: 'http://www.squeaksource.com/MetacelloRepository' ];
+                                repository: 'http://www.squeaksource.com/MetacelloRepository';
+                                repository: 'http://seaside.gemstone.com/ss/metacello' ];
                 yourself.
             spec
                 package: 'Metacello-GitHub' with: [ spec requires: #('OSProcess') ];
