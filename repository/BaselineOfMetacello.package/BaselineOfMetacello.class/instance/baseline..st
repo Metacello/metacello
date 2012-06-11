@@ -5,11 +5,17 @@ baseline: spec
         for: #'common'
         do: [ 
             spec
+                project: 'FileTree'
+                    with: [ 
+                            spec
+                                className: 'ConfigurationOfFileTree';
+                                versionString: '1.0';
+                                repository: 'http://ss3.gemstone.com/ss/FileTree' ];
                 project: 'Gofer'
                     with: [ 
                             spec
                                 className: 'ConfigurationOfGofer';
-                                versionString: '1.0.5.1';
+                                versionString: #'stable';
                                 loads: #('Core');
                                 repository: 'http://seaside.gemstone.com/ss/metacello' ];
                 project: 'Gofer Tests' copyFrom: 'Gofer' with: [ spec loads: #('Tests') ];
@@ -30,7 +36,7 @@ baseline: spec
                 package: 'Metacello-Tutorial' with: [ spec requires: #('Metacello-Core') ];
                 package: 'Metacello-TestsCore' with: [ spec requires: #('Metacello-Core') ];
                 package: 'Metacello-TestsMC'
-                    with: [ spec requires: #('Metacello-MC' 'Metacello-TestsCore' 'Gofer Tests')	"postLoadDoIt: #'testResourcePostLoadDoIt';" ];
+                    with: [ spec requires: #('Metacello-MC' 'Metacello-TestsCore' 'Gofer Tests')	"postLoadDoIt: #'testsMC10beta25PostLoadDoIt';" ];
                 package: 'Metacello-TestsReference' with: [ spec requires: #('Metacello-Reference') ];
                 package: 'Metacello-TestsTutorial' with: [ spec requires: #('Metacello-Tutorial' 'Metacello-TestsMC') ];
                 package: 'OB-Metacello'
@@ -38,6 +44,8 @@ baseline: spec
                 yourself.
             spec
                 group: 'default' with: #('Metacello-Core' 'Metacello-ToolBox' 'Metacello-GitHub');
+                group: 'bootstrap' with: #('Metacello-Core');
+                group: 'batch' with: #('bootstrap' 'Metacello-GitHub');
                 group: 'Base Configuration' with: #('Metacello-Base');
                 group: 'Core' with: #('default');
                 group: 'Tutorial' with: #('Metacello-Tutorial' 'Metacello-Reference');
@@ -67,8 +75,16 @@ baseline: spec
                                 versionString: #'stable';
                                 loads: #('Core');
                                 repository: 'http://www.squeaksource.com/MetacelloRepository' ];
+                project: 'OSProcess'
+                    with: [ 
+                            spec
+                                className: 'ConfigurationOfOSProcess';
+                                versionString: #'stable';
+                                repository: 'http://www.squeaksource.com/MetacelloRepository';
+                                repository: 'http://seaside.gemstone.com/ss/metacello' ];
                 yourself.
             spec
+                package: 'Metacello-GitHub' with: [ spec requires: #('OSProcess') ];
                 package: 'Metacello-TestsPlatform'
                     with: [ 
                             spec
@@ -91,7 +107,6 @@ baseline: spec
                                 className: 'ConfigurationOfProfStef';
                                 versionString: #'stable';
                                 repository: 'http://www.squeaksource.com/MetacelloRepository' ];
-                baseline: 'FileTree' with: [ spec repository: 'github://dalehenrich/filetree:pharo1.3/repository' ];
                 yourself.
             spec
                 package: 'Metacello-ProfStef'
@@ -106,9 +121,7 @@ baseline: spec
     spec
         for: #'squeak'
         do: [ 
-            spec
-                baseline: 'FileTree' with: [ spec repository: 'github://dalehenrich/filetree:squeak4.3/repository' ];
-                yourself.
+            spec yourself.
             spec
                 package: 'Metacello-Platform' with: 'Metacello-Platform.squeak';
                 yourself ].
@@ -116,7 +129,6 @@ baseline: spec
         for: #'gemstone'
         do: [ 
             spec
-                baseline: 'FileTree' with: [ spec repository: 'github://dalehenrich/filetree:gemstone2.4/repository' ];
                 project: 'GsMonticello'
                     with: [ 
                             spec
