@@ -13,12 +13,6 @@ baseline: spec
                                 loads: #('Core');
                                 repository: 'http://seaside.gemstone.com/ss/metacello' ];
                 project: 'Gofer Tests' copyFrom: 'Gofer' with: [ spec loads: #('Tests') ];
-                project: 'OSProcess'
-                    with: [ 
-                            spec
-                                className: 'ConfigurationOfOSProcess';
-                                versionString: #'stable';
-                                repository: 'http://www.squeaksource.com/MetacelloRepository' ];
                 yourself.
             spec
                 package: 'Metacello-Base';
@@ -29,7 +23,7 @@ baseline: spec
                                 requires: 'Metacello-Base';
                                 includes: #('Metacello-MC' 'Metacello-Platform') ];
                 package: 'Metacello-FileTree' with: [ spec requires: #('Metacello-MC' 'FileTree') ];
-                package: 'Metacello-GitHub' with: [ spec requires: #('Metacello-MC' 'Metacello-FileTree' 'OSProcess') ];
+                package: 'Metacello-GitHub' with: [ spec requires: #('Metacello-MC' 'Metacello-FileTree') ];
                 package: 'Metacello-MC' with: [ spec requires: #('Metacello-Core' 'Gofer') ];
                 package: 'Metacello-Platform' with: [ spec requires: #('Metacello-MC') ];
                 package: 'Metacello-Reference' with: [ spec requires: #('Metacello-MC') ];

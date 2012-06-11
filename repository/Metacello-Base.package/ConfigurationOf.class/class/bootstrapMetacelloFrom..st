@@ -1,13 +1,13 @@
 private
 bootstrapMetacelloFrom: repositoryUrl
-    "Corresponds to version 1.0-beta.29"
+    "Corresponds to version 1.0-beta.32"
 
     | platformPkg |
     self ensureGoferVersion: 'Gofer-Core-lr.115' repositoryUrl: repositoryUrl.
-    #('Metacello-Base-DaleHenrichs.19' 'Metacello-Core-dkh.465' 'Metacello-MC-dkh.522')
+    #('Metacello-Base-dkh.54' 'Metacello-Core-dkh.578' 'Metacello-MC-dkh.619')
         do: [ :pkg | self bootstrapPackage: pkg from: repositoryUrl ].
     platformPkg := Smalltalk
-        at: #SystemVersion
+        at: #'SystemVersion'
         ifPresent: [ :cl | 
             | versionString |
             versionString := cl current version.
