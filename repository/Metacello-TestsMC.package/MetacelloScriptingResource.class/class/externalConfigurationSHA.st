@@ -6,4 +6,4 @@ externalConfigurationSHA
 
     "self reset"
 
-    ^ 'acf4ebe6016276cc2c7e51a2b773fa4459670d5e'
+    ^ '7a8ac9c368d42d6828358a06fe61c9e466235239'
