@@ -6,7 +6,7 @@ setUpConfigurationOfFix
 	reference := GoferVersionReference name: 'MetacelloTestConfigurationOfFix-dkh.1'.
 	className := reference packageName asSymbol.
 	definitionArray := {
-					"MCOrganizationDefinition categories: (Array with: className)."
+					MCOrganizationDefinition categories: (Array with: className).
 					MCClassDefinition name: className superclassName: #Object category: className instVarNames: #() comment: ''.
 					MCMethodDefinition 
 						className: className asString

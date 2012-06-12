@@ -6,7 +6,7 @@ setUpConfigurationOfProjectIssue136dkh2: ancestors
 	reference := GoferVersionReference name: 'MetacelloTestConfigurationOfProjectIssue136-dkh.2'.
 	className := reference packageName asSymbol.
 	definitionArray := {
-					"MCOrganizationDefinition categories: (Array with: className)."
+					MCOrganizationDefinition categories: (Array with: className).
 					MCClassDefinition name: className superclassName: #Object category: className instVarNames: #() comment: ''.
 					MCMethodDefinition 
 						className: className asString

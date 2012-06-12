@@ -15,6 +15,6 @@ setUpMonticelloRepository
 				author: reference author
 				ancestors: #())
 			snapshot: (MCSnapshot fromDefinitions: (Array
-				"with: (MCOrganizationDefinition categories: (Array with: reference packageName asSymbol))"
+				with: (MCOrganizationDefinition categories: (Array with: reference packageName asSymbol))
 				with: (MCClassDefinition name: (reference packageName copyWithout: $-) asSymbol superclassName: #Object category: reference packageName asSymbol instVarNames: #() comment: '')))
 			dependencies: #()) ]
