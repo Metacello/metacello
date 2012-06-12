@@ -5,7 +5,8 @@ setUpBaselineGithubReferenceXIII
     | reference className definitionArray versionInfo |
     reference := GoferVersionReference name: 'BaselineOfGithubRefXIII-dkh.1'.
     className := #'BaselineOfGithubRefXIII'.
-    definitionArray := {(MCClassDefinition
+    definitionArray := {(MCOrganizationDefinition categories: (Array with: reference packageName asSymbol)).
+    (MCClassDefinition
         name: className
         superclassName: #'BaselineOf'
         category: reference packageName

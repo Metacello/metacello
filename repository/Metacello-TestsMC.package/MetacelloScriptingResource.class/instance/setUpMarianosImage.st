@@ -8,7 +8,8 @@ setUpMarianosImage
     | reference className definitionArray versionInfo |
     reference := GoferVersionReference name: 'MarianosImage-dkh.1'.
     className := #'MarianosImage'.
-    definitionArray := {(MCClassDefinition
+    definitionArray := {(MCOrganizationDefinition categories: (Array with: reference packageName asSymbol)).
+    (MCClassDefinition
         name: className
         superclassName: #'ConfigurationOf'
         category: reference packageName

@@ -7,7 +7,8 @@ setUpVersionBaselineOfExternalIV
     | reference className definitionArray versionInfo |
     reference := GoferVersionReference name: 'ConfigurationOfExternalIV-dkh.1'.
     className := #'ConfigurationOfExternalIV'.
-    definitionArray := {(MCClassDefinition
+    definitionArray := {(MCOrganizationDefinition categories: (Array with: reference packageName asSymbol)).
+    (MCClassDefinition
         name: className
         superclassName: #'ConfigurationOf'
         category: reference packageName

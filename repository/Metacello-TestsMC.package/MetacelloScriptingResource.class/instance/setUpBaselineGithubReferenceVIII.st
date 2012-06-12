@@ -5,7 +5,8 @@ setUpBaselineGithubReferenceVIII
     | reference className definitionArray versionInfo |
     reference := GoferVersionReference name: 'BaselineOfGithubRefVIII-dkh.1'.
     className := #'BaselineOfGithubRefVIII'.
-    definitionArray := {(MCClassDefinition
+    definitionArray := {(MCOrganizationDefinition categories: (Array with: reference packageName asSymbol)).
+    (MCClassDefinition
         name: className
         superclassName: #'BaselineOf'
         category: reference packageName

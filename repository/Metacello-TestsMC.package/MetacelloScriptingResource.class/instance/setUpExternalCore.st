@@ -5,7 +5,8 @@ setUpExternalCore
     | reference className definitionArray versionInfo |
     reference := GoferVersionReference name: 'External-CoreX-dkh.1'.
     className := #'ExternalCoreX'.
-    definitionArray := {(MCClassDefinition
+    definitionArray := {(MCOrganizationDefinition categories: (Array with: reference packageName asSymbol)).
+    (MCClassDefinition
         name: className
         superclassName: #'Object'
         category: reference packageName

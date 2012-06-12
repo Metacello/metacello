@@ -4,8 +4,9 @@ setUpBaselineOfExternalXXX
 
     | reference className definitionArray versionInfo |
     reference := GoferVersionReference name: 'BaselineOfExternalXXX-dkh.1'.
-    className := #BaselineOfExternalXXX.
-    definitionArray := {(MCClassDefinition
+    className := #'BaselineOfExternalXXX'.
+    definitionArray := {(MCOrganizationDefinition categories: (Array with: reference packageName asSymbol)).
+    (MCClassDefinition
         name: className
         superclassName: #'BaselineOf'
         category: reference packageName
@@ -17,14 +18,14 @@ setUpBaselineOfExternalXXX
         selector: 'externalBaselineXXX:'
         category: 'cat'
         timeStamp: ''
-        source: (self class sourceCodeAt: #externalBaselineXXX:) asString).
+        source: (self class sourceCodeAt: #'externalBaselineXXX:') asString).
     (MCMethodDefinition
         className: className asString
         classIsMeta: false
         selector: 'customProjectAttributes'
         category: 'cat'
         timeStamp: ''
-        source: (self class sourceCodeAt: #customProjectAttributes) asString)}.
+        source: (self class sourceCodeAt: #'customProjectAttributes') asString)}.
     externalRepository
         basicStoreVersion:
             (MCVersion new

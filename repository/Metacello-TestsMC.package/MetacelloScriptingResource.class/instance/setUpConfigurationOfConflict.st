@@ -5,7 +5,8 @@ setUpConfigurationOfConflict
     | reference className definitionArray versionInfo |
     reference := GoferVersionReference name: 'ConfigurationOfConflict-dkh.1'.
     className := #'ConfigurationOfConflict'.
-    definitionArray := {(MCClassDefinition
+    definitionArray := {(MCOrganizationDefinition categories: (Array with: reference packageName asSymbol)).
+    (MCClassDefinition
         name: className
         superclassName: #'ConfigurationOf'
         category: reference packageName

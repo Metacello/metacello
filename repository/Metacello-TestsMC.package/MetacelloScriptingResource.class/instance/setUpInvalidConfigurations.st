@@ -5,7 +5,8 @@ setUpInvalidConfigurations
     | reference className definitionArray versionInfo |
     reference := GoferVersionReference name: 'ConfigurationOfInvalidConfigurations-dkh.1'.
     className := #'ConfigurationOfInvalidConfigurations'.
-    definitionArray := {(MCClassDefinition
+    definitionArray := {(MCOrganizationDefinition categories: (Array with: reference packageName asSymbol)).
+    (MCClassDefinition
         name: className
         superclassName: #'ConfigurationOf'
         category: reference packageName
