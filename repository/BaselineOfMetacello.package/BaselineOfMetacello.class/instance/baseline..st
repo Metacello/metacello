@@ -36,7 +36,7 @@ baseline: spec
                 package: 'Metacello-Tutorial' with: [ spec requires: #('Metacello-Core') ];
                 package: 'Metacello-TestsCore' with: [ spec requires: #('Metacello-Core') ];
                 package: 'Metacello-TestsMC'
-                    with: [ spec requires: #('Metacello-MC' 'Metacello-TestsCore' 'Gofer Tests')	"postLoadDoIt: #'testsMC10beta25PostLoadDoIt';" ];
+                    with: [ spec requires: #('Metacello-MC' 'Metacello-TestsCore' 'Gofer Tests' 'Metacello-ToolBox')	"postLoadDoIt: #'testsMC10beta25PostLoadDoIt';" ];
                 package: 'Metacello-TestsReference' with: [ spec requires: #('Metacello-Reference') ];
                 package: 'Metacello-TestsTutorial' with: [ spec requires: #('Metacello-Tutorial' 'Metacello-TestsMC') ];
                 package: 'OB-Metacello'
