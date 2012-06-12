@@ -27,6 +27,8 @@ testIssue163PackageSpecCacheRepository
 		packageDirectivesDo: [ :pkgDirective | 
 			| file |
 			file := pkgDirective file.
-			self assert: (files indexOf: file) = 1.
+			(file includesSubString: 'Configuration')
+				ifTrue:  [ self assert: (files includes: file) ]
+				ifFalse: [ self assert: (files indexOf: file) = 1 ].
 			files remove: file ifAbsent: [ self assert: false ] ].
 	self assert: files isEmpty
