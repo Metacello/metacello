@@ -1,15 +1,14 @@
 [![Build Status](https://secure.travis-ci.org/dalehenrich/metacello-work.png)](http://travis-ci.org/dalehenrich/metacello-work)
-## HOW TO INSTALL
 
-Note that the the git work has not even achieved alpha, yet, so don't 
-bootstrap into an image that you care about:)
+Both **PharoCore 1.3** and **Squeak4.3** are currently supported.
 
-Assuming Pharo 1.3
+## INSTALL 
 
-### Install FileTree
-follow [FileTree installation instructions][1]
+*These instructions assume that no version of Metacello has been loaded
+into your image.*
 
-### Clone the metacello repository:
+### Clone the metacello repository (Pharo and Squeak):
+
 ```shell
   sudo mkdir /opt/git/
   sudo chmod og+rw /opt/git/
@@ -17,27 +16,45 @@ follow [FileTree installation instructions][1]
   git clone https://github.com/dalehenrich/metacello-work
 ```
 
-### Attach to the metacello repository and load Metacello files that have changed for git
-(assuming you are starting with Metacello 1.0-beta.31.1)
+### Clone the filetree repository and bootstrap Metacello (PharoCore1.3):
+
+```shell
+  sudo mkdir /opt/git/
+  sudo chmod og+rw /opt/git/
+  cd /opt/git/
+  git clone -b pharo1.3 https://github.com/dalehenrich/filetree.git
+```
 
 ```Smalltalk
 Gofer new
-  squeaksource: 'MetacelloRepository';
-  package: 'ConfigurationOfOSProcess';
+  gemsource: 'metacello';
+  package: 'Metacello-Base';
   load.
-((Smalltalk at: #'ConfigurationOfOSProcess') project version: #stable) load.
-
-Gofer new
-    repository: (MCFileTreeRepository new directory: 
-                    (FileDirectory on: '/opt/git/metacello-work/repository/'));
-    package: 'Metacello-Base';
-    package: 'Metacello-Core';
-    package: 'Metacello-FileTree';
-    package: 'Metacello-GitHub';
-    package: 'Metacello-MC';
-    package: 'Metacello-ToolBox';
-    package: 'ConfigurationOfMetacello';
-    load.
 ```
 
-[1]: https://github.com/dalehenrich/filetree/blob/master/README.md
+#### Clone the filetree repository and bootstrap Metacello (Squeak4.3):
+
+```shell
+  sudo mkdir /opt/git/
+  sudo chmod og+rw /opt/git/
+  cd /opt/git/
+  git clone -b squeak.3 https://github.com/dalehenrich/filetree.git
+```
+
+```Smalltalk
+Installer  gemsource
+    project: 'metacello';
+    install: 'Metacello-Base'. 
+```
+
+### Trigger the full Install
+
+```Smalltalk
+| gitPath |
+gitPath := '/opt/git/'.
+
+Metacello new
+  baseline: 'Metacello';
+  repository: 'filetree://', gitPath, '/metacello-work/repository';
+  load.
+```
