@@ -1,6 +1,6 @@
 registration
 registerProjectRegistration: newRegistration
-    "unconditionally register <aProjectSpec> ... use with care"
+    "unconditionally register <newRegistration> ... use with care"
 
     ^ self
         registerProjectRegistration: newRegistration

@@ -1,3 +1,3 @@
 versions
 singletonVersionName
-    ^ 'baseline'
+    ^ self class singletonVersionName
