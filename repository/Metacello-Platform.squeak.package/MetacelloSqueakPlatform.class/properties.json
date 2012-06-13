@@ -1,0 +1,16 @@
+{
+	"category" : "Metacello-Platform",
+	"classinstvars" : [
+		 ],
+	"classtraitcomposition" : "{}",
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MetacelloSqueakPlatform",
+	"pools" : [
+		 ],
+	"super" : "MetacelloPlatform",
+	"traitcomposition" : "{}",
+	"type" : "normal" }
