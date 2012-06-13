@@ -1,0 +1,15 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"configMethodOn:indent:" : "dkh 6/5/2012 19:01:24",
+		"mergeMap" : "dkh 6/5/2012 19:01:24",
+		"setAuthorInMetacelloVersion:" : "dkh 6/5/2012 19:01:24",
+		"setBlessingInMetacelloVersion:" : "dkh 6/5/2012 19:01:24",
+		"setDescriptionInMetacelloVersion:" : "dkh 6/5/2012 19:01:24",
+		"setPostLoadDoItInMetacelloSpec:" : "dkh 6/5/2012 19:01:24",
+		"setPreLoadDoItInMetacelloSpec:" : "dkh 6/5/2012 19:01:24",
+		"setTimestampInMetacelloVersion:" : "dkh 6/5/2012 19:01:24",
+		"value" : "dkh 6/5/2012 19:01:24",
+		"value:" : "dkh 6/5/2012 19:01:24",
+		"value:constructor:" : "dkh 6/5/2012 19:01:24" } }

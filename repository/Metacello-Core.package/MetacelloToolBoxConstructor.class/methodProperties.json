@@ -1,0 +1,15 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"evaluateMethodSection:version:" : "dkh 6/5/2012 19:01:24",
+		"extractMethodSectionsFor:" : "dkh 6/5/2012 19:01:24",
+		"extractSymbolicVersionSpecsFor:" : "dkh 6/5/2012 19:01:24",
+		"for:do:" : "dkh 6/5/2012 19:01:24",
+		"for:version:" : "dkh 6/5/2012 19:01:24",
+		"methodSection:do:" : "dkh 6/5/2012 19:01:24",
+		"methodSection:inEvaluationOrder:do:" : "dkh 6/5/2012 19:01:24",
+		"methodSections" : "dkh 6/5/2012 19:01:24",
+		"methodSectionsDo:" : "dkh 6/5/2012 19:01:24",
+		"methodSectionsInEvaluationOrder:do:" : "dkh 6/5/2012 19:01:24",
+		"reset" : "dkh 6/5/2012 19:01:24" } }

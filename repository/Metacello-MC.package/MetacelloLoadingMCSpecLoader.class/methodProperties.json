@@ -1,0 +1,21 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"actionLabel" : "dkh 6/8/2012 14:04:22",
+		"copySpec:from:to:" : "dkh 6/8/2012 14:04:22",
+		"copySpec:with:to:" : "dkh 6/8/2012 14:04:22",
+		"doLoad" : "dkh 6/8/2012 14:04:22",
+		"fetchingSpecLoader" : "dkh 6/8/2012 14:04:22",
+		"goferCommitBranchPackage:using:commitMessage:" : "dkh 6/8/2012 14:04:22",
+		"goferCommitPackageUsing:commitMessage:" : "dkh 6/8/2012 14:04:22",
+		"latestPackage:fromRepository:" : "dkh 6/8/2012 14:04:22",
+		"linearLoadPackageSpec:gofer:" : "dkh 6/8/2012 14:04:22",
+		"packagesNeedSavingUsing:into:" : "dkh 6/8/2012 14:04:22",
+		"postLoad:" : "dkh 6/8/2012 14:04:22",
+		"preLoad:" : "dkh 6/8/2012 14:04:22",
+		"repositoryFor:from:" : "dkh 6/8/2012 14:04:22",
+		"repositoryFor:with:" : "dkh 6/8/2012 14:04:22",
+		"resolveSpec:from:" : "dkh 6/8/2012 14:04:22",
+		"resolveSpec:with:" : "dkh 6/8/2012 14:04:22",
+		"savePackageUsing:" : "dkh 6/8/2012 14:04:22" } }

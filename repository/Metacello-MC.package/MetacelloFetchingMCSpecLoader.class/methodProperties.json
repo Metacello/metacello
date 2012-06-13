@@ -1,0 +1,27 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"actionLabel" : "dkh 6/8/2012 14:04:22",
+		"ancestorsFor:" : "dkh 6/8/2012 14:04:22",
+		"atomicLoadPackageSpecs:repositories:" : "dkh 6/8/2012 14:04:22",
+		"cacheRepository" : "dkh 6/8/2012 14:04:22",
+		"currentVersionInfoFor:" : "dkh 6/8/2012 14:04:22",
+		"doLoad" : "dkh 6/8/2012 14:04:22",
+		"ensureSpecLoader" : "dkh 6/8/2012 14:04:22",
+		"ensuredMap" : "dkh 6/8/2012 14:04:22",
+		"explicitLoadPackageSpecs:repositories:" : "dkh 6/8/2012 14:04:22",
+		"linearLoadPackageSpec:gofer:" : "dkh 6/8/2012 14:04:22",
+		"linearLoadPackageSpecs:repositories:" : "dkh 6/8/2012 14:04:22",
+		"loadData" : "dkh 6/8/2012 14:04:22",
+		"loadDirective" : "dkh 6/8/2012 14:04:22",
+		"loadingSpecLoader" : "dkh 6/8/2012 14:04:22",
+		"postLoad:" : "dkh 6/8/2012 14:04:22",
+		"preLoad:" : "dkh 6/8/2012 14:04:22",
+		"printOn:" : "dkh 6/8/2012 14:04:22",
+		"resolveDependencies:nearest:into:" : "dkh 6/8/2012 14:04:22",
+		"resolvePackageSpec:cachedGofer:" : "dkh 6/8/2012 14:04:22",
+		"scheduleFetchFor:cachedReference:" : "dkh 6/8/2012 14:04:22",
+		"scheduleFetchFor:externalReference:" : "dkh 6/8/2012 14:04:22",
+		"scheduleFetchFor:nearestReference:" : "dkh 6/8/2012 14:04:22",
+		"scheduleFetchFor:reference:message:" : "dkh 6/8/2012 14:04:22" } }

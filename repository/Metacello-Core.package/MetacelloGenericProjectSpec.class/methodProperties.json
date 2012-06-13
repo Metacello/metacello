@@ -1,0 +1,28 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"determineCurrentVersionForLoad" : "dkh 6/5/2012 19:01:24",
+		"getRepositories" : "dkh 6/5/2012 19:01:24",
+		"load" : "dkh 6/5/2012 19:01:24",
+		"loadVersion:" : "dkh 6/5/2012 19:01:24",
+		"mergeMap" : "dkh 6/5/2012 19:01:24",
+		"mergeSpec:" : "dkh 6/5/2012 19:01:24",
+		"metacelloRegistrationHash" : "dkh 6/5/2012 19:01:24",
+		"name:" : "dkh 6/5/2012 19:01:24",
+		"nonOverridable" : "dkh 6/5/2012 19:01:24",
+		"packageRepository" : "dkh 6/5/2012 19:01:24",
+		"postCopy" : "dkh 6/5/2012 19:01:24",
+		"projectPackage" : "dkh 6/5/2012 19:01:24",
+		"projectPackage:" : "dkh 6/5/2012 19:01:24",
+		"projectPackage:constructor:" : "dkh 6/5/2012 19:01:24",
+		"registrationsCompareEqual:" : "dkh 6/5/2012 19:01:24",
+		"repositories" : "dkh 6/5/2012 19:01:24",
+		"repositories:" : "dkh 6/5/2012 19:01:24",
+		"repositories:constructor:" : "dkh 6/5/2012 19:01:24",
+		"repository" : "dkh 6/5/2012 19:01:24",
+		"repository:" : "dkh 6/5/2012 19:01:24",
+		"repository:constructor:" : "dkh 6/5/2012 19:01:24",
+		"repository:username:password:" : "dkh 6/5/2012 19:01:24",
+		"repository:username:password:constructor:" : "dkh 6/5/2012 19:01:24",
+		"repositorySpecs" : "dkh 6/5/2012 19:01:24" } }

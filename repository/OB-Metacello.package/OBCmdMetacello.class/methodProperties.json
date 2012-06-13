@@ -1,0 +1,21 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"chooseVersion:message:" : "DaleHenrichs 11/8/2010 10:33",
+		"chooseVersion:message:includeSymbolicVersions:" : "DaleHenrichs 1/24/2011 17:07",
+		"commitPackageSpec:into:with:" : "DaleHenrichs 3/11/2010 17:35",
+		"currentVersion" : "dkh 11/3/2009 09:21",
+		"currentVersionString" : "dkh 11/3/2009 09:21",
+		"executeLoadLatestPackages" : "DaleHenrichs 08/30/2010 15:38",
+		"executeLoadProject" : "DaleHenrichs 08/30/2010 15:38",
+		"executeSaveProject:" : "DaleHenrichs 11/15/2010 18:33",
+		"executeUpdatePackageMethods:description:" : "DaleHenrichs 11/18/2010 11:20",
+		"isActive" : "dkh 6/13/2012 13:10",
+		"promptForBaselineVersion:" : "dkh 10/27/2009 11:43",
+		"promptForDevelopmentVersion:" : "DaleHenrichs 11/18/2010 10:36",
+		"promptForVersion:" : "DaleHenrichs 08/30/2010 15:36",
+		"reversedVersions" : "dkh 11/3/2009 09:20",
+		"selectedClass" : "dkh 7/24/2009 17:49",
+		"selectedProjectInstance" : "dkh 9/10/2009 15:00",
+		"versions" : "dkh 11/3/2009 09:20" } }

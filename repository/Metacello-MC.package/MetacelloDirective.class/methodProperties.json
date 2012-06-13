@@ -1,0 +1,28 @@
+{
+	"class" : {
+		"loadPackage:externalReference:loader:" : "dkh 6/8/2012 14:04:22",
+		"loader:" : "dkh 6/8/2012 14:04:22",
+		"postLoadSpec:loader:" : "dkh 6/8/2012 14:04:22",
+		"preLoadSpec:loader:" : "dkh 6/8/2012 14:04:22" },
+	"instance" : {
+		"addTo:" : "dkh 6/8/2012 14:04:22",
+		"directivesDo:" : "dkh 6/8/2012 14:04:22",
+		"label" : "dkh 6/8/2012 14:04:22",
+		"loadUsing:gofer:" : "dkh 6/8/2012 14:04:22",
+		"loader" : "dkh 6/8/2012 14:04:22",
+		"loader:" : "dkh 6/8/2012 14:04:22",
+		"packageDirectivesDo:" : "dkh 6/8/2012 14:04:22",
+		"packageDo:" : "dkh 6/8/2012 14:04:22",
+		"postLoadDo:" : "dkh 6/8/2012 14:04:22",
+		"preLoadDo:" : "dkh 6/8/2012 14:04:22",
+		"prepostLoadDirectivesDo:" : "dkh 6/8/2012 14:04:22",
+		"prepostLoadDo:" : "dkh 6/8/2012 14:04:22",
+		"printOn:" : "dkh 6/8/2012 14:04:22",
+		"printOn:indent:" : "dkh 6/8/2012 14:04:22",
+		"printString" : "dkh 6/8/2012 14:04:22",
+		"spec" : "dkh 6/8/2012 14:04:22",
+		"spec:loader:" : "dkh 6/8/2012 14:04:22",
+		"title" : "dkh 6/8/2012 14:04:22",
+		"versionDirectivesDepthFirstDo:" : "dkh 6/8/2012 14:04:22",
+		"versionDirectivesDo:" : "dkh 6/8/2012 14:04:22",
+		"versionDo:" : "dkh 6/8/2012 14:04:22" } }

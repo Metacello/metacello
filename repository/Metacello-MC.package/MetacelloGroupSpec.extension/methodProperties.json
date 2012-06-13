@@ -1,0 +1,8 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"loadUsing:gofer:" : "dkh 6/8/2012 14:04:22",
+		"resolveToLoadableSpec" : "dkh 6/8/2012 14:04:22",
+		"resolveToPackagesIn:into:visited:" : "dkh 6/8/2012 14:04:22",
+		"resolveToPackagesIn:visited:" : "dkh 6/8/2012 14:04:22" } }
