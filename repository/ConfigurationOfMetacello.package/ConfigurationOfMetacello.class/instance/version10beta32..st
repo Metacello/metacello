@@ -6,17 +6,17 @@ version10beta32: spec
         do: [ 
             spec blessing: #'development'.
             spec author: 'dkh'.
-            spec timestamp: '6/12/2012 09:37'.
+            spec timestamp: '6/14/2012 13:01'.
             spec
                 project: 'FileTree' with: '1.0';
                 project: 'Gofer' with: '1.0.5.1';
                 project: 'Gofer Tests' with: '1.0.5.1'.
             spec
-                package: 'Metacello-Base' with: 'Metacello-Base-dkh.64';
-                package: 'Metacello-Core' with: 'Metacello-Core-dkh.578';
+                package: 'Metacello-Base' with: 'Metacello-Base-dkh.66';
+                package: 'Metacello-Core' with: 'Metacello-Core-dkh.580';
                 package: 'Metacello-FileTree' with: 'Metacello-FileTree-dkh.28';
                 package: 'Metacello-GitHub' with: 'Metacello-GitHub-dkh.9';
-                package: 'Metacello-MC' with: 'Metacello-MC-dkh.619';
+                package: 'Metacello-MC' with: 'Metacello-MC-dkh.621';
                 package: 'Metacello-Reference' with: 'Metacello-Reference-dkh.33';
                 package: 'Metacello-Tutorial' with: 'Metacello-Tutorial-dkh.25';
                 package: 'OB-Metacello' with: 'OB-Metacello-dkh.82';
@@ -24,7 +24,7 @@ version10beta32: spec
                 package: 'Metacello-TestsCore' with: 'Metacello-TestsCore-dkh.16';
                 package: 'Metacello-TestsMC' with: 'Metacello-TestsMC-dkh.169';
                 package: 'Metacello-TestsTutorial' with: 'Metacello-TestsTutorial-dkh.32';
-                package: 'Metacello-ToolBox' with: 'Metacello-ToolBox-dkh.114' ].
+                package: 'Metacello-ToolBox' with: 'Metacello-ToolBox-dkh.115' ].
     spec
         for: #'gemstone'
         do: [ 
