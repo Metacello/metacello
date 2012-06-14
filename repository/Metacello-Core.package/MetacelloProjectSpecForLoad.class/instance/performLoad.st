@@ -1,4 +1,4 @@
-loading
+operations
 performLoad
     | displayString spec |
     spec := self projectSpec.
@@ -14,4 +14,9 @@ performLoad
             override := self overrideProjectSpec copy.
             override mergeScriptLoads: spec.
             override loadVersion: nil ]
-        ifFalse: [ spec loadVersion: spec determineCurrentVersionForLoad ]
+        ifFalse: [ 
+            spec
+                loadVersion:
+                    (self useDetermineVersionForLoad
+                        ifTrue: [ spec determineCurrentVersionForLoad ]
+                        ifFalse: [ spec versionOrNil ]) ]

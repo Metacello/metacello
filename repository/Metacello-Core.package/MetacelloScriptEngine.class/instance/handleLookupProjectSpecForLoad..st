@@ -6,10 +6,11 @@ handleLookupProjectSpecForLoad: exception
         resume:
             (MetacelloProjectSpecForLoad new
                 projectSpec: exception projectSpec;
+                useDetermineVersionForLoad: self useCurrentVersion;
                 overrideProjectSpec:
-                        (self ignoreImage
-                                ifTrue: [ self lookupProjectSpecFor: exception projectSpec ]
-                                ifFalse: [ 
-                                    "force use of determineVersionForLoad and  use image state for currentVersion calculation"
-                                    nil ]);
+                        (self useCurrentVersion
+                                ifTrue: [ 
+                                    "don't do lookup in registry if we expect to use the #currentVersion calculation"
+                                    nil ]
+                                ifFalse: [ self lookupProjectSpecFor: exception projectSpec ]);
                 yourself)
