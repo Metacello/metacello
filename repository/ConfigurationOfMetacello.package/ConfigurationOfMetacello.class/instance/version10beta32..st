@@ -19,11 +19,11 @@ version10beta32: spec
                 package: 'Metacello-MC' with: 'Metacello-MC-dkh.621';
                 package: 'Metacello-Reference' with: 'Metacello-Reference-dkh.33';
                 package: 'Metacello-Tutorial' with: 'Metacello-Tutorial-dkh.25';
-                package: 'OB-Metacello' with: 'OB-Metacello-dkh.82';
-                package: 'Metacello-TestsReference' with: 'Metacello-TestsReference-DaleHenrichs.17';
-                package: 'Metacello-TestsCore' with: 'Metacello-TestsCore-dkh.16';
-                package: 'Metacello-TestsMC' with: 'Metacello-TestsMC-dkh.169';
-                package: 'Metacello-TestsTutorial' with: 'Metacello-TestsTutorial-dkh.32';
+                package: 'OB-Metacello' with: 'OB-Metacello-dkh.83';
+                package: 'Metacello-TestsReference' with: 'Metacello-TestsReference-dkh.19';
+                package: 'Metacello-TestsCore' with: 'Metacello-TestsCore-dkh.1';
+                package: 'Metacello-TestsMC' with: 'Metacello-TestsMC-dkh.252';
+                package: 'Metacello-TestsTutorial' with: 'Metacello-TestsTutorial-dkh.36';
                 package: 'Metacello-ToolBox' with: 'Metacello-ToolBox-dkh.115' ].
     spec
         for: #'gemstone'
@@ -51,7 +51,7 @@ version10beta32: spec
             spec project: 'ProfStef' with: #'stable'.
             spec
                 package: 'Metacello-ProfStef' with: 'Metacello-ProfStef-DaleHenrichs.10';
-                package: 'Metacello-TestsProfStef' with: 'Metacello-TestsProfStef-DaleHenrichs.1';
+                package: 'Metacello-TestsProfStef' with: 'Metacello-TestsProfStef-dkh.2';
                 package: 'Metacello-Platform' with: 'Metacello-Platform.pharo-dkh.27' ].
     spec for: #'pharo1.2.x' do: [ spec package: 'Metacello-Issue3758' with: 'Metacello-Issue3758-dkh.2' ].
     spec for: #'pharo1.3.x' do: [ spec package: 'Metacello-Issue3758' with: 'Metacello-Issue3758-dkh.2' ].
