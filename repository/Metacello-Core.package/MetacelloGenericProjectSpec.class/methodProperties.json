@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"compareEqual:" : "dkh 6/15/2012 13:37",
 		"determineCurrentVersionForLoad" : "dkh 6/5/2012 19:01:24",
 		"getRepositories" : "dkh 6/5/2012 19:01:24",
 		"load" : "dkh 6/5/2012 19:01:24",

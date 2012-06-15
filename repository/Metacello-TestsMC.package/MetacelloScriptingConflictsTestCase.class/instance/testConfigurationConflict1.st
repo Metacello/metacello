@@ -13,8 +13,15 @@ testConfigurationConflict1
         load.
     self
         validateExpectedConfigurationClassName: 'ConfigurationOfConflict'
+        expectedConfigurationVersion: '1.0'
+        expectedConfigurationRepository: 'filetree://' , configurationDirectory fullName
+        expectedBaselineClassName: nil
+        expectedBaselineVersion: nil
+        expectedBaselineRepository: nil.
+    self
+        validateExpectedConfigurationClassName: 'ConfigurationOfExternalX'
         expectedConfigurationVersion: '0.9'
         expectedConfigurationRepository: 'filetree://' , configurationDirectory fullName
-        expectedBaselineClassName: 'BaselineOfConflict'
+        expectedBaselineClassName: 'BaselineOfExternalX'
         expectedBaselineVersion: 'baseline'
         expectedBaselineRepository: 'dictionary://Metacello_Configuration_Test_Repository'

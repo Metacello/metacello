@@ -8,9 +8,6 @@ test004new
         repository: 'dictionary://Metacello_Configuration_Test_Repository';
         silently;
         load: #('GoferBar' 'GoferFaux').
-    Transcript
-        cr;
-        show: 'FAN'.
     Metacello new
         project: 'Fan';
         version: '2.0';

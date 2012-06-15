@@ -11,4 +11,4 @@ testFileTreeLoadBaseline1
         expectedConfigurationRepository: nil
         expectedBaselineClassName: 'BaselineOfExternalX'
         expectedBaselineVersion: 'baseline'
-        expectedBaselineRepository: 'dictionary://Metacello_Configuration_Test_Repository'
+        expectedBaselineRepository: 'filetree://' , externalDirectory fullName

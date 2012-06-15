@@ -3,9 +3,9 @@ validateExpectedConfigurationClassName: expectedConfigurationClassName expectedC
     MetacelloProjectRegistration configurationRegistry
         at: expectedConfigurationClassName
         ifPresent: [ :existing | 
-            | spec |
+            | spec x |
             spec := existing configurationProjectSpec.
-            self assert: spec versionString = expectedConfigurationVersion.
+            self assert: (x := spec versionString) = expectedConfigurationVersion.
             self assert: spec repository description = expectedConfigurationRepository ]
         ifAbsent: [ self assert: expectedConfigurationVersion == nil ].
     MetacelloProjectRegistration baselineRegistry
