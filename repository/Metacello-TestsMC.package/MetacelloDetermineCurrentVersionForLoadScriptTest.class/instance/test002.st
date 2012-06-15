@@ -10,7 +10,7 @@ test002
     Gofer new
         repository: monticelloRepository;
         version: 'GoferFaux-tg.33';
-        load.
+        load.	"The maual load of a package changes the currentVersion of the image, so GoferFaux not reloaded"
     Metacello classic
         project: 'Fan';
         version: '2.0';

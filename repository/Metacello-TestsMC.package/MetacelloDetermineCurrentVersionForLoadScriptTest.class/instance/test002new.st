@@ -10,7 +10,7 @@ test002new
     Gofer new
         repository: monticelloRepository;
         version: 'GoferFaux-tg.33';
-        load.
+        load.	"The maual load of a package does not change the currentVersion recorded in the registry, so the net is no impact"
     Metacello new
         project: 'Fan';
         version: '2.0';
@@ -22,4 +22,4 @@ test002new
     wc := (GoferPackageReference name: 'GoferBeau') workingCopy.
     self assert: wc ancestry ancestors first name = 'GoferBeau-dkh.55'.
     wc := (GoferPackageReference name: 'GoferFaux') workingCopy.
-    self assert: wc ancestry ancestors first name = 'GoferFaux-tg.33'
+    self assert: wc ancestry ancestors first name = 'GoferFaux-tg.34'	"GoferFaux-tg.33 in classic"

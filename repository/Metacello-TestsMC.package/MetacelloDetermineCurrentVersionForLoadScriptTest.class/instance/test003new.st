@@ -10,7 +10,7 @@ test003new
     Gofer new
         repository: monticelloRepository;
         version: 'GoferFaux-tg.35';
-        load.
+        load.	"later version of pkg than in any configuration"
     Metacello new
         project: 'Fan';
         version: '2.0';
@@ -22,4 +22,4 @@ test003new
     wc := (GoferPackageReference name: 'GoferBeau') workingCopy.
     self assert: wc ancestry ancestors first name = 'GoferBeau-dkh.55'.
     wc := (GoferPackageReference name: 'GoferFaux') workingCopy.
-    self assert: wc ancestry ancestors first name = 'GoferFaux-tg.35'
+    self assert: wc ancestry ancestors first name = 'GoferFaux-tg.35'	"no downgrade of mcz file"
