@@ -8,17 +8,17 @@ testFileTreeLoadGithubRefBaseline7
         silently;
         load.
     self
-        validate: 'GithubRefVII'
-        registrySize: 2
+        validateExpectedConfigurationClassName: nil
         expectedConfigurationVersion: nil
         expectedConfigurationRepository: nil
+        expectedBaselineClassName: 'BaselineOfGithubRefVII'
         expectedBaselineVersion: 'baseline'
         expectedBaselineRepository: 'filetree://' , externalDirectory fullName.
     self verify: 'External-Core' loadedFrom: 'http://ss3.gemstone.com/ss/external'.
     self
-        validate: 'External'
-        registrySize: 2
+        validateExpectedConfigurationClassName: nil
         expectedConfigurationVersion: nil
         expectedConfigurationRepository: nil
+        expectedBaselineClassName: 'BaselineOfExternal'
         expectedBaselineVersion: 'baseline'
         expectedBaselineRepository: 'http://ss3.gemstone.com/ss/external'

@@ -8,10 +8,10 @@ testGithubRefBaselineLoad1
         silently;
         load: 'External Core'.
     self
-        validate: 'GithubRefXII'
-        registrySize: 2
+        validateExpectedConfigurationClassName: nil
         expectedConfigurationVersion: nil
         expectedConfigurationRepository: nil
+        expectedBaselineClassName: 'BaselineOfGithubRefXII'
         expectedBaselineVersion: 'baseline'
         expectedBaselineRepository: 'filetree://' , externalDirectory fullName.
     self
@@ -19,10 +19,10 @@ testGithubRefBaselineLoad1
         loadedFrom: 'github://dalehenrich/external:' , MetacelloScriptingResource externalCustomSHA , '/repository'.
     self verifyPackageNotLoaded: 'External-Tests'.
     self
-        validate: 'External Core'
-        registrySize: 2
+        validateExpectedConfigurationClassName: nil
         expectedConfigurationVersion: nil
         expectedConfigurationRepository: nil
+        expectedBaselineClassName: 'BaselineOfExternal'
         expectedBaselineVersion: 'baseline'
         expectedBaselineRepository:
             'github://dalehenrich/external:' , MetacelloScriptingResource externalCustomSHA , '/repository'

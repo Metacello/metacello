@@ -4,18 +4,21 @@ validateBlockFie35FooFeuxLoad
     self validateBlockOriginalFie35FooFeuxLoad value.
     self
         validateProjects:
-            {{'Fie'.
+            {{'MetacelloTestConfigurationOfProjectFie'.
             '3.5'.
             'dictionary://Metacello_Configuration_Test_Repository'.
             nil.
+            nil.
             nil}.
-            {'Foo'.
+            {'MetacelloTestConfigurationOfFoo'.
             '3.5'.
             'dictionary://Metacello_Configuration_Test_Repository'.
             nil.
+            nil.
             nil}.
-            {'Feaux'.
+            {'MetacelloTestConfigurationOfFeaux'.
             '4.0'.
             'dictionary://Metacello_Configuration_Test_Repository'.
+            nil.
             nil.
             nil}} ]
