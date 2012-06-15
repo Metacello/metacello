@@ -10,6 +10,7 @@
 		"fromMCConfigurationProjectSpec:" : "dkh 6/5/2012 19:01:24",
 		"mergeRegistration:with:" : "dkh 6/14/2012 21:14",
 		"primeRegistryFromImage" : "dkh 6/15/2012 07:05",
+		"projectSpecForClassNamed:ifAbsent:" : "dkh 6/15/2012 15:07",
 		"registerProjectRegistration:" : "dkh 6/14/2012 21:17",
 		"registerProjectSpec:" : "dkh 6/14/2012 21:27",
 		"registerProjectSpec:ifPresent:" : "dkh 6/14/2012 21:37",
