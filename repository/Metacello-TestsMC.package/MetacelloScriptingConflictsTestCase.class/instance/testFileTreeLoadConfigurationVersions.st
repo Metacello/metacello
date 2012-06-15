@@ -9,9 +9,9 @@ testFileTreeLoadConfigurationVersions
         onUpgrade: [ :ex | ex allow ];
         load.
     self
-        validate: 'ExternalX'
-        registrySize: 1
+        validateExpectedConfigurationClassName: 'ConfigurationOfExternalX'
         expectedConfigurationVersion: '0.9.1'
         expectedConfigurationRepository: 'filetree://' , configurationDirectory fullName
+        expectedBaselineClassName: 'BaselineOfExternalX'
         expectedBaselineVersion: 'baseline'
         expectedBaselineRepository: 'dictionary://Metacello_Configuration_Test_Repository'

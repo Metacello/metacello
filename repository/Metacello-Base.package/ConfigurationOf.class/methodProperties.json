@@ -1,0 +1,18 @@
+{
+	"class" : {
+		"bootstrapMetacelloFrom:" : "dkh 6/11/2012 13:10",
+		"bootstrapPackage:from:" : "dkh 5/31/2012 17:57:13",
+		"ensureGoferVersion:repositoryUrl:" : "dkh 6/10/2012 22:01",
+		"ensureMetacello" : "dkh 6/11/2012 11:05",
+		"ensureMetacello:" : "dkh 6/11/2012 10:10",
+		"project" : "dkh 5/31/2012 17:57:13",
+		"unloadMetacello" : "dkh 5/31/2012 17:57:13",
+		"validate" : "dkh 5/31/2012 17:57:13" },
+	"instance" : {
+		"bleedingEdge" : "dkh 5/31/2012 17:57:13",
+		"customProjectAttributes" : "dkh 5/31/2012 17:57:13",
+		"defaultBleedingEdgeVersion" : "dkh 5/31/2012 17:57:13",
+		"project" : "dkh 5/31/2012 17:57:13",
+		"project:" : "dkh 5/31/2012 17:57:13",
+		"projectClass" : "dkh 5/31/2012 17:57:13",
+		"versionDoesNotExistError:" : "dkh 5/31/2012 17:57:13" } }

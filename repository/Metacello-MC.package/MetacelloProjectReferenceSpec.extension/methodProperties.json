@@ -1,0 +1,14 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"loadUsing:gofer:" : "dkh 6/8/2012 14:04:22",
+		"packagesNeedSavingVisited:using:into:" : "dkh 6/8/2012 14:04:22",
+		"repository:" : "dkh 6/8/2012 14:04:22",
+		"resolveProjectSpec" : "dkh 6/8/2012 14:04:22",
+		"resolveToAllPackagesIn:into:visited:" : "dkh 6/8/2012 14:04:22",
+		"resolveToLoadableSpec" : "dkh 6/8/2012 14:04:22",
+		"resolveToPackagesIn:visited:" : "dkh 6/8/2012 14:04:22",
+		"updateForSpawnMethod:" : "dkh 6/8/2012 14:04:22",
+		"updatePackageSpec:using:" : "dkh 6/8/2012 14:04:22",
+		"versionString" : "dkh 6/8/2012 14:04:22" } }

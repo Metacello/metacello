@@ -7,13 +7,15 @@ validateBlockFie35FooLoad
     self verify: 'GoferBeau' version: 'GoferBeau-dkh.54'.
     self
         validateProjects:
-            {{'Fie'.
+            {{'MetacelloTestConfigurationOfProjectFie'.
             '3.5'.
             'dictionary://Metacello_Configuration_Test_Repository'.
             nil.
+            nil.
             nil}.
-            {'Foo'.
+            {'MetacelloTestConfigurationOfFoo'.
             '3.5'.
             'dictionary://Metacello_Configuration_Test_Repository'.
+            nil.
             nil.
             nil}} ]

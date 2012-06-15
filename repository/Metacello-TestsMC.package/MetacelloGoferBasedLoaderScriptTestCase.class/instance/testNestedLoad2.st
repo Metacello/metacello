@@ -14,8 +14,9 @@ testNestedLoad2
     self verifyPackageNotLoaded: 'GoferFaux'.
     self
         validateProjects:
-            {{'ToolBox'.
+            {{'MetacelloTestConfigurationOfProjectToolBox'.
             '1.3.2-baseline'.
             'dictionary://Metacello_Configuration_Test_Repository'.
+            nil.
             nil.
             nil}}

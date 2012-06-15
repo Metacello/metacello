@@ -15,6 +15,6 @@ conflictOf12: spec
                 configuration: 'ExternalX'
                 with: [ 
                     spec
-                        className: 'ConfigurationOfConflictX';
+                        operator: #'=';
                         version: '0.9.2';
-                        repository: 'dictionary://Metacello_Conflict_Test_Repository' ] ]
+                        repository: 'dictionary://Metacello_Conflict_Test_Repository'	"#= forces conflict" ] ]

@@ -4,8 +4,8 @@
 		 ],
 	"classtraitcomposition" : "{}",
 	"classvars" : [
-		"ProjectSpecRegistry",
-		"Registry" ],
+		"BaselineRegistry",
+		"ConfigurationRegistry" ],
 	"commentStamp" : "",
 	"instvars" : [
 		"projectName",

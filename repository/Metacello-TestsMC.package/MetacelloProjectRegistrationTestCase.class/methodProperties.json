@@ -1,0 +1,12 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"baselineProjectSpec" : "dkh 6/12/2012 15:41:23.319",
+		"configurationProjectSpec" : "dkh 6/12/2012 15:41:23.319",
+		"testBasicBaselineRegistration" : "dkh 6/12/2012 15:41:23.319",
+		"testBasicConfigurationRegistration" : "dkh 6/12/2012 15:41:23.319",
+		"testBasicHasLoadConflicts" : "dkh 6/12/2012 15:41:23.319",
+		"testBasicNoLoadConflicts" : "dkh 6/12/2012 15:41:23.319",
+		"testBasicRegistration" : "dkh 6/12/2012 15:41:23.319",
+		"testBasicValidRegistration" : "dkh 6/12/2012 15:41:23.319" } }

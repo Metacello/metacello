@@ -8,6 +8,7 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"projectSpec",
+		"useDetermineVersionForLoad",
 		"overrideProjectSpec" ],
 	"name" : "MetacelloProjectSpecForLoad",
 	"pools" : [

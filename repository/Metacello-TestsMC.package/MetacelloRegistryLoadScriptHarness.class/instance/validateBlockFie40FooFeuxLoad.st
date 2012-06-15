@@ -9,18 +9,21 @@ validateBlockFie40FooFeuxLoad
     self verify: 'GeauxBar' version: 'GeauxBar.branch-lr.2'.
     self
         validateProjects:
-            {{'Fie'.
+            {{'MetacelloTestConfigurationOfProjectFie'.
             '4.0'.
             'dictionary://Metacello_Configuration_Test_Repository'.
             nil.
+            nil.
             nil}.
-            {'Foo'.
+            {'MetacelloTestConfigurationOfFoo'.
             '4.0'.
             'dictionary://Metacello_Configuration_Test_Repository'.
             nil.
+            nil.
             nil}.
-            {'Feaux'.
+            {'MetacelloTestConfigurationOfFeaux'.
             '4.0'.
             'dictionary://Metacello_Configuration_Test_Repository'.
+            nil.
             nil.
             nil}} ]

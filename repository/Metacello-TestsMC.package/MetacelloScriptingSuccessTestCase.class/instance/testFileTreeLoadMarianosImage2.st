@@ -8,16 +8,16 @@ testFileTreeLoadMarianosImage2
         silently;
         load.
     self
-        validate: 'DifferentName'
-        registrySize: 2
+        validateExpectedConfigurationClassName: 'MarianosImage'
         expectedConfigurationVersion: '0.9'
         expectedConfigurationRepository: 'filetree://' , configurationDirectory fullName
+        expectedBaselineClassName: nil
         expectedBaselineVersion: nil
         expectedBaselineRepository: nil.
     self
-        validate: 'ExternalX'
-        registrySize: 2
+        validateExpectedConfigurationClassName: nil
         expectedConfigurationVersion: nil
         expectedConfigurationRepository: nil
+        expectedBaselineClassName: 'BaselineOfExternalX'
         expectedBaselineVersion: 'baseline'
         expectedBaselineRepository: 'dictionary://Metacello_Configuration_Test_Repository'

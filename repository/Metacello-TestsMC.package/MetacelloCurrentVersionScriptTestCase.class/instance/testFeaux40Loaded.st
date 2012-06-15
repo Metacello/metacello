@@ -10,13 +10,15 @@ testFeaux40Loaded
     self verify: 'GeauxBar' loadedFrom: 'dictionary://Metacello_Gofer_Test_Repository'.
     self
         validateProjects:
-            {{'Fum'.
+            {{'MetacelloTestConfigurationOfFum'.
             '4.0'.
             'dictionary://Metacello_Configuration_Test_Repository'.
             nil.
+            nil.
             nil}.
-            {'Feaux'.
+            {'MetacelloTestConfigurationOfFum'.
             '4.0'.
             'dictionary://Metacello_Configuration_Test_Repository'.
+            nil.
             nil.
             nil}}

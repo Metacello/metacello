@@ -17,16 +17,16 @@ testConfigurationConflict5
         load.
     self assert: baseName = 'ExternalX'.
     self
-        validate: 'Conflict'
-        registrySize: 2
+        validateExpectedConfigurationClassName: 'ConfigurationOfConflict'
         expectedConfigurationVersion: '1.0'
         expectedConfigurationRepository: 'filetree://' , configurationDirectory fullName
+        expectedBaselineClassName: nil
         expectedBaselineVersion: nil
         expectedBaselineRepository: nil.
     self
-        validate: 'ExternalX'
-        registrySize: 2
+        validateExpectedConfigurationClassName: 'ConfigurationOfExternalX'
         expectedConfigurationVersion: '0.9.1'
         expectedConfigurationRepository: 'dictionary://Metacello_Conflict_Test_Repository'
+        expectedBaselineClassName: 'BaselineOfExternalX'
         expectedBaselineVersion: 'baseline'
         expectedBaselineRepository: 'dictionary://Metacello_Configuration_Test_Repository'

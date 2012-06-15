@@ -9,9 +9,10 @@ testCompareCurrentVersion
     self verify: 'GeauxFoo' loadedFrom: 'dictionary://Metacello_Gofer_Test_Repository'.
     self
         validateProjects:
-            {{'Feaux'.
+            {{'MetacelloTestConfigurationOfFeaux'.
             '4.0'.
             'dictionary://Metacello_Configuration_Test_Repository'.
+            nil.
             nil.
             nil}}.
     Metacello new
@@ -25,18 +26,21 @@ testCompareCurrentVersion
     self verify: 'GoferBar' loadedFrom: 'dictionary://Metacello_Gofer_Test_Repository'.
     self
         validateProjects:
-            {{'Feaux'.
+            {{'MetacelloTestConfigurationOfFeaux'.
+             '4.0'.
+            'dictionary://Metacello_Configuration_Test_Repository'.
+            nil.
+            nil.
+            nil}.
+            {'MetacelloTestConfigurationOfProjectFoe'.
             '4.0'.
             'dictionary://Metacello_Configuration_Test_Repository'.
             nil.
+            nil.
             nil}.
-            {'Project Foe'.
+            {'MetacelloTestConfigurationOfFoo'.
             '4.0'.
             'dictionary://Metacello_Configuration_Test_Repository'.
             nil.
-            nil}.
-            {'Foo'.
-            '4.0'.
-            'dictionary://Metacello_Configuration_Test_Repository'.
             nil.
             nil}}

@@ -1,0 +1,20 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"defaultTimeout" : "dkh 6/12/2012 15:41:23.319",
+		"doSilently" : "dkh 6/12/2012 15:41:23.319",
+		"hasPackage:" : "dkh 6/12/2012 15:41:23.319",
+		"runCase" : "dkh 6/12/2012 15:41:23.319",
+		"setUp" : "dkh 6/14/2012 21:55",
+		"setUpRepositories" : "dkh 6/12/2012 15:41:23.319",
+		"setUpRepositoryContents" : "dkh 6/12/2012 15:41:23.319",
+		"tearDown" : "dkh 6/14/2012 21:57",
+		"tearDownPackageList" : "dkh 6/12/2012 15:41:23.319",
+		"tearDownPackages" : "dkh 6/12/2012 15:41:23.319",
+		"tearDownRepositories" : "dkh 6/12/2012 15:41:23.319",
+		"validateExpectedConfigurationClassName:expectedConfigurationVersion:expectedConfigurationRepository:expectedBaselineClassName:expectedBaselineVersion:expectedBaselineRepository:" : "dkh 6/15/2012 13:53",
+		"validateProjects:" : "dkh 6/15/2012 05:26",
+		"verify:loadedFrom:" : "dkh 6/12/2012 15:41:23.319",
+		"verify:version:" : "dkh 6/12/2012 15:41:23.319",
+		"verifyPackageNotLoaded:" : "dkh 6/12/2012 15:41:23.319" } }

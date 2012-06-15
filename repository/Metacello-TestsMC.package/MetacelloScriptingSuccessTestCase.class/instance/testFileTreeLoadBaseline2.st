@@ -10,9 +10,9 @@ testFileTreeLoadBaseline2
         silently;
         load.
     self
-        validate: 'ExternalX'
-        registrySize: 1
+        validateExpectedConfigurationClassName: nil
         expectedConfigurationVersion: nil
         expectedConfigurationRepository: nil
+        expectedBaselineClassName: 'BaselineOfExternalX'
         expectedBaselineVersion: 'baseline'
         expectedBaselineRepository: 'filetree://' , externalDirectory fullName

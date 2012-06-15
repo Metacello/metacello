@@ -12,8 +12,9 @@ testFoe40LoadedFoo50Loaded
     self verify: 'GoferBeau' loadedFrom: 'dictionary://Metacello_Gofer_Test_Repository'.
     self
         validateProjects:
-            {{'Foo'.
+            {{'MetacelloTestConfigurationOfFoo'.
             '5.0'.
             'dictionary://Metacello_Configuration_Test_Repository'.
+            nil.
             nil.
             nil}}

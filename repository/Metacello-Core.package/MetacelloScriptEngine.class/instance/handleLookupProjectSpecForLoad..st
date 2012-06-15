@@ -2,14 +2,22 @@ handlers
 handleLookupProjectSpecForLoad: exception
     "if overrideProjectSpec is nil, use currentVersion in image, ignoreImage is false"
 
+    | existing new override |
+    existing := exception projectSpec.
+    override := self useCurrentVersion
+        ifTrue: [ 
+            "don't do lookup in registry if we expect to use the #currentVersion calculation"
+            nil ]
+        ifFalse: [ 
+            new := self lookupProjectSpecFor: exception projectSpec.
+            (new compareEqual: existing)
+                ifFalse: [ 
+                    "counts as override, only if they differ in some aspect"
+                    override := new ] ].
     ^ exception
         resume:
             (MetacelloProjectSpecForLoad new
-                projectSpec: exception projectSpec;
-                overrideProjectSpec:
-                        (self ignoreImage
-                                ifTrue: [ self lookupProjectSpecFor: exception projectSpec ]
-                                ifFalse: [ 
-                                    "force use of determineVersionForLoad and  use image state for currentVersion calculation"
-                                    nil ]);
+                projectSpec: existing;
+                useDetermineVersionForLoad: self useCurrentVersion;
+                overrideProjectSpec: override;
                 yourself)
