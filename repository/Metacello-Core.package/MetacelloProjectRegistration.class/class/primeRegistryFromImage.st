@@ -4,7 +4,7 @@ primeRegistryFromImage
 
     self configurationClasses
         do: [ :cl | 
-            (self projectSpecRegistry includesKey: cl)
+            (self configurationRegistry includesKey: cl)
                 ifFalse: [ 
                     "not registered"
                     cl project currentVersion

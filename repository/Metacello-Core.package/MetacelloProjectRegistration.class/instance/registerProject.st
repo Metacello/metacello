@@ -8,7 +8,11 @@ registerProject
                 at: spec className
                 ifPresent: [ :existing | 
                     (existing configurationProjectSpec registrationsCompareEqual: spec)
-                        ifFalse: [ self error: 'unexpected existing project registration' ] ].
+                        ifFalse: [ 
+                            Transcript
+                                cr;
+                                show:
+                                        'REGISTRATION OF INCOMPATABLE PROJECTS: ' , existing printString , ' REPLACED BY ' , self printString ] ].
             self class configurationRegistry at: spec className put: self ].
     self baselineProjectSpec
         ifNotNil: [ :spec | 
@@ -16,5 +20,9 @@ registerProject
                 at: spec className
                 ifPresent: [ :existing | 
                     (existing baselineProjectSpec registrationsCompareEqual: spec)
-                        ifFalse: [ self error: 'unexpected existing project registration' ] ].
+                        ifFalse: [ 
+                            Transcript
+                                cr;
+                                show:
+                                        'REGISTRATION OF INCOMPATABLE PROJECTS: ' , existing printString , ' REPLACED BY ' , self printString ] ].
             self class baselineRegistry at: spec className put: self ]

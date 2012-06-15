@@ -1,7 +1,6 @@
 tests
 test004new
     | wc |
-    self halt.	"still working on this one ... need to resolve project lookup"
     Metacello new
         project: 'Foo';
         version: '5.0';

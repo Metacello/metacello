@@ -1,15 +1,16 @@
 printing
 printOn: aStream
+    | label versionString |
     self
-        configurationProjectSpecIfPresent: [ 
-            aStream
-                nextPutAll: self projectName;
-                space;
-                nextPutAll: self version ]
+        configurationProjectSpecIfPresent: [ :spec | 
+            label := spec className.
+            versionString := spec versionString ]
         ifAbsent: [ 
             "baseline"
-            aStream
-                nextPutAll: self projectName;
-                space;
-                nextPutAll: '[baseline]' ].
-    aStream nextPutAll: ' from ' , self repository description
+            label := self baselineProjectSpec className.
+            versionString := '[baseline]' ].
+    aStream
+        nextPutAll: label;
+        space;
+        nextPutAll: versionString;
+        nextPutAll: ' from ' , self repository description

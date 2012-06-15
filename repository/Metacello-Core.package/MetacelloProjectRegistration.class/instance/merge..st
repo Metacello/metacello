@@ -4,8 +4,8 @@ merge: aProjectRegistration
 
     "nil specs are ignored in the merge, otherwise aProjectRegistration specs win"
 
-    (self hasMergeConflicts: aProjectRegistration)
-        ifTrue: [ ^ self error: 'Attempt to merge registrations with conflicts' ].
+    "(self hasMergeConflicts: aProjectRegistration)
+        ifTrue: [ ^ self error: 'Attempt to merge registrations with conflicts' ]."
     configurationProjectSpec
         ifNil: [ configurationProjectSpec := aProjectRegistration configurationProjectSpec ]
         ifNotNil: [ 

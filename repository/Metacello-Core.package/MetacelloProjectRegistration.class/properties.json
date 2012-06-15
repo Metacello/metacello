@@ -5,9 +5,7 @@
 	"classtraitcomposition" : "{}",
 	"classvars" : [
 		"BaselineRegistry",
-		"ConfigurationRegistry",
-		"ProjectSpecRegistry",
-		"Registry" ],
+		"ConfigurationRegistry" ],
 	"commentStamp" : "",
 	"instvars" : [
 		"projectName",
