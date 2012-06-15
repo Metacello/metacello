@@ -16,8 +16,12 @@ performCurrentVersionTestAgainst: vrsn operator: anOperator targetVersionStatus:
             (targetVersionStatus includes: cv versionStatus)
                 ifTrue: [ ^ cv perform: anOperator with: vrsn ].
             ^ false ].
-    self hasOverride
-        ifFalse: [ ^ false ].
+    (self hasOverride not or: [ targetVersionStatus ~= #(#'allLoadedToSpec') ])
+        ifTrue: [ ^ false ].
+    (self overrideProjectSpec allPackagesLoaded: anMCLoader)
+        ifFalse: [ 
+            "roughly equivalent to versionStatus test above (#'allLoadedToSpec')"
+            ^ false ].
     (currentVersion := self overrideProjectSpec versionOrNil) ifNil: [ ^ false ].
     currentVersion = vrsn
         ifTrue: [ ^ true ].
@@ -25,13 +29,15 @@ performCurrentVersionTestAgainst: vrsn operator: anOperator targetVersionStatus:
     new := self projectSpec asProjectRegistration.
     currentVersion > vrsn
         ifTrue: [ 
-            "answer false if downgrade allowd"
+            "answer false if downgrade allowed"
+            self halt.
             (MetacelloAllowProjectDowngrade new
                 existingProjectRegistration: existing;
                 newProjectRegistration: new;
                 signal) == existing ]
         ifFalse: [ 
             "answer false if upgrade allowed"
+            self halt.
             (MetacelloAllowConflictingProjectUpgrade new
                 existingProjectRegistration: existing;
                 newProjectRegistration: new;

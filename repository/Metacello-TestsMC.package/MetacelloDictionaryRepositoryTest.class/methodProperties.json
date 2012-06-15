@@ -1,0 +1,18 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"alternateRepository" : "dkh 6/12/2012 15:41:23.319",
+		"configurationRepository" : "dkh 6/12/2012 15:41:23.319",
+		"defaultTimeout" : "dkh 6/12/2012 15:41:23.319",
+		"doSilently" : "dkh 6/12/2012 15:41:23.319",
+		"hasPackage:" : "dkh 6/12/2012 15:41:23.319",
+		"loadType" : "dkh 6/12/2012 15:41:23.319",
+		"monticelloRepository" : "dkh 6/12/2012 15:41:23.319",
+		"project" : "dkh 6/12/2012 15:41:23.319",
+		"projectWith:" : "dkh 6/12/2012 15:41:23.319",
+		"runCase" : "dkh 6/12/2012 15:41:23.319",
+		"setUp" : "dkh 6/12/2012 15:41:23.319",
+		"tearDown" : "dkh 6/12/2012 15:41:23.319",
+		"tearDownPackages:" : "dkh 6/12/2012 15:41:23.319",
+		"tempRepositories" : "dkh 6/12/2012 15:41:23.319" } }

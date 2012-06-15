@@ -1,0 +1,22 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"setUpRepositoryContents" : "dkh 6/12/2012 15:41:23.319",
+		"tearDownPackageList" : "dkh 6/12/2012 15:41:23.319",
+		"tearDownRepositories" : "dkh 6/12/2012 15:41:23.319",
+		"testConfigurationConflict1" : "dkh 6/12/2012 15:41:23.319",
+		"testConfigurationConflict2" : "dkh 6/12/2012 15:41:23.319",
+		"testConfigurationConflict3" : "dkh 6/12/2012 15:41:23.319",
+		"testConfigurationConflict4" : "dkh 6/12/2012 15:41:23.319",
+		"testConfigurationConflict5" : "dkh 6/12/2012 15:41:23.319",
+		"testConfigurationConflict6" : "dkh 6/12/2012 15:41:23.319",
+		"testConfigurationConflict7" : "dkh 6/12/2012 15:41:23.319",
+		"testConfigurationConflict8" : "dkh 6/12/2012 15:41:23.319",
+		"testConfigurationConflict9" : "dkh 6/12/2012 15:41:23.319",
+		"testFileTreeLoadConfigurationVersion" : "dkh 6/12/2012 15:41:23.319",
+		"testFileTreeLoadConfigurationVersions" : "dkh 6/12/2012 15:41:23.319",
+		"testFileTreeLoadConfigurationVersionsNotification1" : "dkh 6/12/2012 15:41:23.319",
+		"testFileTreeLoadConfigurationVersionsNotification2" : "dkh 6/12/2012 15:41:23.319",
+		"testFileTreeLoadConfigurationVersionsNotification3" : "dkh 6/12/2012 15:41:23.319",
+		"testFileTreeLoadConfigurationVersionsNotification4" : "dkh 6/12/2012 15:41:23.319" } }

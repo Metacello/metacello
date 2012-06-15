@@ -1,0 +1,17 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"projectClass" : "dkh 6/12/2012 15:41:23.319",
+		"testAddPackageA" : "dkh 6/12/2012 15:41:23.319",
+		"testAddPackageB" : "dkh 6/12/2012 15:41:23.319",
+		"testAddPackageC" : "dkh 6/12/2012 15:41:23.319",
+		"testAddPackageD" : "dkh 6/12/2012 15:41:23.319",
+		"testCopyToPackage" : "dkh 6/12/2012 15:41:23.319",
+		"testMergePackageA" : "dkh 6/12/2012 15:41:23.319",
+		"testMergePackageB" : "dkh 6/12/2012 15:41:23.319",
+		"testMergePackageD" : "dkh 6/12/2012 15:41:23.319",
+		"testRemovePackageA" : "dkh 6/12/2012 15:41:23.319",
+		"testRemovePackageB" : "dkh 6/12/2012 15:41:23.319",
+		"testRemovePackageC" : "dkh 6/12/2012 15:41:23.319",
+		"testRemovePackageD" : "dkh 6/12/2012 15:41:23.319" } }
