@@ -8,21 +8,21 @@ testFileTreeLoadGithubRefBaseline4
         silently;
         load.
     self
-        validate: 'GithubRefIV'
-        registrySize: 2
+        validateExpectedConfigurationClassName: nil
         expectedConfigurationVersion: nil
         expectedConfigurationRepository: nil
+        expectedBaselineClassName: 'BaselineOfGithubRefIV'
         expectedBaselineVersion: 'baseline'
         expectedBaselineRepository: 'filetree://' , externalDirectory fullName.
     self
         verify: 'External-Core'
         loadedFrom: 'github://dalehenrich/external:' , MetacelloScriptingResource externalCustomSHA , '/repository'.
     self
-        validate: 'External'
-        registrySize: 2
+        validateExpectedConfigurationClassName: 'ConfigurationOfExternal'
         expectedConfigurationVersion: '0.9'
         expectedConfigurationRepository:
             'github://dalehenrich/external:' , MetacelloScriptingResource externalConfigurationSHA , '/repository'
+        expectedBaselineClassName: 'BaselineOfExternal'
         expectedBaselineVersion: 'baseline'
         expectedBaselineRepository:
             'github://dalehenrich/external:' , MetacelloScriptingResource externalCustomSHA , '/repository'

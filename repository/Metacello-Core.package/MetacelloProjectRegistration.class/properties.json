@@ -4,6 +4,8 @@
 		 ],
 	"classtraitcomposition" : "{}",
 	"classvars" : [
+		"BaselineRegistry",
+		"ConfigurationRegistry",
 		"ProjectSpecRegistry",
 		"Registry" ],
 	"commentStamp" : "",

@@ -27,17 +27,15 @@ performCurrentVersionTestAgainst: vrsn operator: anOperator targetVersionStatus:
         ifTrue: [ ^ true ].
     existing := self overrideProjectSpec asProjectRegistration.
     new := self projectSpec asProjectRegistration.
-    currentVersion > vrsn
+    ^currentVersion > vrsn
         ifTrue: [ 
             "answer false if downgrade allowed"
-            self halt.
-            (MetacelloAllowProjectDowngrade new
+           (MetacelloAllowProjectDowngrade new
                 existingProjectRegistration: existing;
                 newProjectRegistration: new;
                 signal) == existing ]
         ifFalse: [ 
             "answer false if upgrade allowed"
-            self halt.
             (MetacelloAllowConflictingProjectUpgrade new
                 existingProjectRegistration: existing;
                 newProjectRegistration: new;
