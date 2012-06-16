@@ -58,3 +58,4 @@ Metacello new
   repository: 'filetree://', gitPath, '/metacello-work/repository';
   load.
 ```
+
