@@ -96,8 +96,7 @@ baseline: spec
         for: #'pharo'
         do: [ 
             spec
-                baseline: 'FileTree'
-                    with: [ spec repository: 'https://github.com/dalehenrich/filetree:pharo1.3/repository' ];
+                baseline: 'FileTree' with: [ spec repository: 'github://dalehenrich/filetree:pharo1.3/repository' ];
                 project: 'ProfStef'
                     with: [ 
                             spec
@@ -119,8 +118,7 @@ baseline: spec
         for: #'squeak'
         do: [ 
             spec
-                baseline: 'FileTree'
-                    with: [ spec repository: 'https://github.com/dalehenrich/filetree:squeak4.3/repository' ];
+                baseline: 'FileTree' with: [ spec repository: 'github://dalehenrich/filetree:squeak4.3/repository' ];
                 yourself.
             spec
                 package: 'Metacello-Platform' with: 'Metacello-Platform.squeak';
@@ -129,8 +127,7 @@ baseline: spec
         for: #'gemstone'
         do: [ 
             spec
-                baseline: 'FileTree'
-                    with: [ spec repository: 'https://github.com/dalehenrich/filetree:gemstone2.4/repository' ];
+                baseline: 'FileTree' with: [ spec repository: 'github://dalehenrich/filetree:gemstone2.4/repository' ];
                 project: 'GsMonticello'
                     with: [ 
                             spec
