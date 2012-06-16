@@ -1,0 +1,24 @@
+{
+	"class" : {
+		"cacheDirectory" : "dkh 5/16/2012 14:52:41",
+		"cacheDirectoryFor:" : "dkh 5/16/2012 14:52:41",
+		"description" : "dkh 5/16/2012 14:52:41",
+		"downloadFile:to:" : "dkh 5/16/2012 14:52:41",
+		"isAbstract" : "dkh 5/16/2012 14:52:41",
+		"location:" : "dkh 5/16/2012 14:52:41",
+		"location:version:" : "dkh 5/16/2012 14:52:41",
+		"parseLocation:version:" : "dkh 5/16/2012 14:52:41",
+		"projectDirectoryFrom:version:" : "dkh 5/16/2012 14:52:41" },
+	"instance" : {
+		"=" : "dkh 5/16/2012 14:52:41",
+		"asRepositorySpecFor:" : "dkh 5/16/2012 14:52:41",
+		"description" : "dkh 5/16/2012 14:52:41",
+		"directoryDescription" : "dkh 5/16/2012 14:52:41",
+		"initializeFromProject" : "dkh 5/16/2012 14:52:41",
+		"metacelloProjectClassFor:" : "dkh 5/16/2012 14:52:41",
+		"projectPath" : "dkh 5/16/2012 14:52:41",
+		"projectPath:" : "dkh 5/16/2012 14:52:41",
+		"projectVersion" : "dkh 5/16/2012 14:52:41",
+		"projectVersion:" : "dkh 5/16/2012 14:52:41",
+		"repoPath" : "dkh 5/16/2012 14:52:41",
+		"repoPath:" : "dkh 5/16/2012 14:52:41" } }
