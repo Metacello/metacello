@@ -13,9 +13,9 @@ Gofer new
   version: '1.0-beta.32') load.
 "Load the Preview version of Metacello"
 (Smalltalk at: #Metacello) new
-  configuration: 'MetacelloPreview'
+  configuration: 'MetacelloPreview';
   version: #stable;
-  repository: 'github://dalehenrich/metacello-work:configuration'
+  repository: 'github://dalehenrich/metacello-work:configuration';
   load.
 ```
 
