@@ -6,23 +6,24 @@ version10beta32: spec
         do: [ 
             spec blessing: #'development'.
             spec author: 'dkh'.
-            spec timestamp: '6/14/2012 13:01'.
+            spec timestamp: '6/15/2012 16:58'.
+            spec postLoadDoIt: #'metacelloPrimeRegistry'.
             spec
                 project: 'FileTree' with: '1.0';
                 project: 'Gofer' with: '1.0.5.1';
                 project: 'Gofer Tests' with: '1.0.5.1'.
             spec
                 package: 'Metacello-Base' with: 'Metacello-Base-dkh.66';
-                package: 'Metacello-Core' with: 'Metacello-Core-dkh.580';
+                package: 'Metacello-Core' with: 'Metacello-Core-dkh.587';
                 package: 'Metacello-FileTree' with: 'Metacello-FileTree-dkh.28';
                 package: 'Metacello-GitHub' with: 'Metacello-GitHub-dkh.9';
-                package: 'Metacello-MC' with: 'Metacello-MC-dkh.621';
+                package: 'Metacello-MC' with: 'Metacello-MC-dkh.624';
                 package: 'Metacello-Reference' with: 'Metacello-Reference-dkh.33';
                 package: 'Metacello-Tutorial' with: 'Metacello-Tutorial-dkh.25';
                 package: 'OB-Metacello' with: 'OB-Metacello-dkh.83';
                 package: 'Metacello-TestsReference' with: 'Metacello-TestsReference-dkh.19';
-                package: 'Metacello-TestsCore' with: 'Metacello-TestsCore-dkh.1';
-                package: 'Metacello-TestsMC' with: 'Metacello-TestsMC-dkh.252';
+                package: 'Metacello-TestsCore' with: 'Metacello-TestsCore-dkh.18';
+                package: 'Metacello-TestsMC' with: 'Metacello-TestsMC-dkh.259';
                 package: 'Metacello-TestsTutorial' with: 'Metacello-TestsTutorial-dkh.36';
                 package: 'Metacello-ToolBox' with: 'Metacello-ToolBox-dkh.115' ].
     spec
@@ -43,7 +44,7 @@ version10beta32: spec
                 project: 'OmniBrowser' with: #'stable';
                 project: 'HelpSystem' with: '1.1'.
             spec
-                package: 'Metacello-TestsPlatform' with: 'Metacello-TestsPlatform.squeakCommon-dkh.5';
+                package: 'Metacello-TestsPlatform' with: 'Metacello-TestsPlatform.squeakCommon-dkh.7';
                 package: 'Metacello-Help' with: 'Metacello-Help-dkh.11' ].
     spec
         for: #'pharo'

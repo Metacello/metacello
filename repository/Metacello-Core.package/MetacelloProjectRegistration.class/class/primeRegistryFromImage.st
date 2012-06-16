@@ -1,10 +1,10 @@
 accessing
 primeRegistryFromImage
-    "self primeRegistryFromImage"
+    "MetacelloProjectRegistration primeRegistryFromImage"
 
     self configurationClasses
         do: [ :cl | 
-            (self configurationRegistry includesKey: cl)
+            (self configurationRegistry includesKey: cl name asString)
                 ifFalse: [ 
                     "not registered"
                     cl project currentVersion
