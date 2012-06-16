@@ -5,7 +5,7 @@ baseline: spec
         for: #'common'
         do: [ 
             spec
-                baseline: 'FileTree';
+                baseline: 'FileTree' with: [ spec loads: 'default' ];
                 project: 'Gofer'
                     with: [ 
                             spec
