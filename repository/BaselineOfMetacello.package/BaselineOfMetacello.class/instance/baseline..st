@@ -65,7 +65,7 @@ baseline: spec
                     with: [ 
                             spec
                                 className: 'ConfigurationOfHelpSystem';
-                                versionString: #'1.1';
+                                versionString: '1.1';
                                 loads: #('Core');
                                 repository: 'http://www.squeaksource.com/MetacelloRepository' ];
                 project: 'OmniBrowser'

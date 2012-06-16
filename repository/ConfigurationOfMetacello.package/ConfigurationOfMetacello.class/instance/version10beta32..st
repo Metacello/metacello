@@ -6,14 +6,15 @@ version10beta32: spec
         do: [ 
             spec blessing: #'development'.
             spec author: 'dkh'.
-            spec timestamp: '6/14/2012 13:01'.
+            spec timestamp: '6/15/2012 16:58'.
+            spec postLoadDoIt: #'metacelloPrimeRegistry'.
             spec
                 project: 'FileTree' with: '1.0';
                 project: 'Gofer' with: '1.0.5.1';
                 project: 'Gofer Tests' with: '1.0.5.1'.
             spec
                 package: 'Metacello-Base' with: 'Metacello-Base-dkh.66';
-                package: 'Metacello-Core' with: 'Metacello-Core-dkh.586';
+                package: 'Metacello-Core' with: 'Metacello-Core-dkh.587';
                 package: 'Metacello-FileTree' with: 'Metacello-FileTree-dkh.28';
                 package: 'Metacello-GitHub' with: 'Metacello-GitHub-dkh.9';
                 package: 'Metacello-MC' with: 'Metacello-MC-dkh.624';
