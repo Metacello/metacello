@@ -5,12 +5,7 @@ baseline: spec
         for: #'common'
         do: [ 
             spec
-                project: 'FileTree'
-                    with: [ 
-                            spec
-                                className: 'ConfigurationOfFileTree';
-                                versionString: '1.0';
-                                repository: 'http://ss3.gemstone.com/ss/FileTree' ];
+                baseline: 'FileTree';
                 project: 'Gofer'
                     with: [ 
                             spec
@@ -101,6 +96,8 @@ baseline: spec
         for: #'pharo'
         do: [ 
             spec
+                baseline: 'FileTree'
+                    with: [ spec repository: 'https://github.com/dalehenrich/filetree:pharo1.3/repository' ];
                 project: 'ProfStef'
                     with: [ 
                             spec
@@ -121,7 +118,10 @@ baseline: spec
     spec
         for: #'squeak'
         do: [ 
-            spec yourself.
+            spec
+                baseline: 'FileTree'
+                    with: [ spec repository: 'https://github.com/dalehenrich/filetree:squeak4.3/repository' ];
+                yourself.
             spec
                 package: 'Metacello-Platform' with: 'Metacello-Platform.squeak';
                 yourself ].
@@ -129,6 +129,8 @@ baseline: spec
         for: #'gemstone'
         do: [ 
             spec
+                baseline: 'FileTree'
+                    with: [ spec repository: 'https://github.com/dalehenrich/filetree:gemstone2.4/repository' ];
                 project: 'GsMonticello'
                     with: [ 
                             spec
