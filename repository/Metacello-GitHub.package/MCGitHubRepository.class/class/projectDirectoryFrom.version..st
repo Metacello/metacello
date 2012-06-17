@@ -7,6 +7,7 @@ projectDirectoryFrom: projectPath version: versionString
         at: downloadCacheKey
         ifAbsent: [ 
             | url archive directory |
+            githubCacheDirectory assureExistence.
             url := 'https://github.com/' , projectPath , '/zipball/' , versionString.
             self downloadFile: url to: '/tmp/github.zip'.
             archive := ZipArchive new
@@ -14,6 +15,6 @@ projectDirectoryFrom: projectPath version: versionString
                 yourself.
             directory := githubCacheDirectory directoryNamed: archive members first fileName.
             directory exists
-                ifFalse: [ archive extractAllTo: githubCacheDirectory ].
+                ifFalse: [ self extractRepositoryFrom: '/tmp/github.zip' to: githubCacheDirectory fullName ].
             self downloadCache at: downloadCacheKey put: archive members first fileName ].
     ^ githubCacheDirectory directoryNamed: cachePath
