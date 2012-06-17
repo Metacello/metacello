@@ -1,3 +1,3 @@
 descriptions
 directoryDescription
-    ^ directory pathName
+    ^ self directory pathName
