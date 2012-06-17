@@ -22,4 +22,4 @@ Gofer new
 **PharoCore 1.3** and **Squeak4.3** are currently supported.
 
 ###TravisCI Status
-[![Build Status](https://secure.travis-ci.org/dalehenrich/metacello-work.png)](http://travis-ci.org/dalehenrich/metacello-work)
+[![Build Status](https://secure.travis-ci.org/dalehenrich/metacello-work.png?branch=master)](http://travis-ci.org/dalehenrich/metacello-work)
