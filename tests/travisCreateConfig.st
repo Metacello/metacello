@@ -10,4 +10,4 @@ Gofer new
   repository: (MCDirectoryRepository new directory: 
         (FileDirectory default directoryNamed:'mcz'));
   package: configName;
-  commit.
+  commit: 'testing'.
