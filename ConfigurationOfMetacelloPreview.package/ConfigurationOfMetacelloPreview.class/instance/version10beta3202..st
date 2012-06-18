@@ -12,7 +12,7 @@ version10beta3202: spec
             spec author: 'dkh'.
             spec timestamp: '6/16/2012 20:33' ].
     spec
-        for: #'pharo'
+        for: #'squeakCommon'
         do: [ 
             spec
                 baseline: 'Metacello'
