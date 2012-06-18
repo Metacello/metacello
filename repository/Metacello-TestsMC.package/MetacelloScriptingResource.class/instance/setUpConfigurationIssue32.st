@@ -17,6 +17,13 @@ setUpConfigurationIssue32
     (MCMethodDefinition
         className: className asString
         classIsMeta: false
+        selector: 'version10Issue47:'
+        category: 'cat'
+        timeStamp: ''
+        source: (self class sourceCodeAt: #'version10Issue47:') asString).
+    (MCMethodDefinition
+        className: className asString
+        classIsMeta: false
         selector: 'version09Issue32:'
         category: 'cat'
         timeStamp: ''
