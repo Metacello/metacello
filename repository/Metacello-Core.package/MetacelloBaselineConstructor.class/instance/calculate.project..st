@@ -21,4 +21,5 @@ calculate: aConfig project: aProject
                 ifTrue: [ blockList do: [ :block | self with: versionSpec during: block ] ] ].
     versionSpec versionString: self project singletonVersionName.
     versionMap at: versionSpec versionString put: versionSpec createVersion.
-    self project map: versionMap
+    self project map: versionMap.
+    self project configuration: aConfig
