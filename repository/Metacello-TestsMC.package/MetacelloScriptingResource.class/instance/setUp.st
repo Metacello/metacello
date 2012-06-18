@@ -28,4 +28,6 @@ setUp
         setUpMarianosImage;
         setUpConfigurationOfConflict;
         setUpInvalidConfigurations;
+        setUpConfigurationIssue32;
+        setUpBaselineIssue32;
         yourself
