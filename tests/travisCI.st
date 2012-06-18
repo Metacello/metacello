@@ -9,7 +9,7 @@ Metacello new
   load: 'TravisCI'.
 
 
-"Run the tests"
+"Run the Metacello tests"
 MetacelloPlatform current authorName: 'testMonkey'. "These tests save code ... need an Author"
 
 TravisCIHarness

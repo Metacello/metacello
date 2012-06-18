@@ -21,7 +21,7 @@ install:
 
 script:
 
-   - ./build.sh -i $ST -s latAmMirror.st -m -f "$PROJECT_HOME/tests/travisCI.st" -o travisCI
+   - ./build.sh -i $ST -s latAmMirror.st -m -f "$PROJECT_HOME/tests/travisCI.st" -f "$PROJECT_HOME/tests/travisCreateConfig.st" -o travisCI
    - cd "${BUILD_PATH}/travisCI/"
    - if ( test -e PharoDebug.log ); then cat PharoDebug.log; fi
    - if ( test -e PharoDebug.log ); then die; fi
@@ -30,3 +30,13 @@ script:
    - if ( test -e TravisCISuccess.txt ); then cat TravisCISuccess.txt; fi
    - if ( test -e TravisCIFailure.txt ); then cat TravisCIFailure.txt; fi
    - if ( test -e TravisCIFailure.txt ); then die; fi
+   - echo "test ensureMetacello"
+   - cd ${HOME}/dalehenrich-builderCI*
+   - ./build.sh -i $ST -s latAmMirror.st -f "$PROJECT_HOME/tests/travisEnsureMetacello.st" -o travisCI
+   - if ( test -e PharoDebug.log ); then cat PharoDebug.log; fi
+   - if ( test -e PharoDebug.log ); then die; fi
+   - if ( test -e SqueakDebug.log ); then cat SqueakDebug.log; fi
+   - if ( test -e SqueakDebug.log ); then die; fi
+   - echo "SUCCESSFUL test ensureMetacello"
+
+
