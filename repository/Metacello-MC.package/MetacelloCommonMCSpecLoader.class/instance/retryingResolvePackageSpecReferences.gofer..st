@@ -13,6 +13,8 @@ retryingResolvePackageSpecReferences: packageSpec gofer: gofer
             references := [ self resolvePackageSpecReferences: packageSpec gofer: gofer ]
                 on: Error , GoferRepositoryError
                 do: [ :ex | 
+                    self class retryPackageResolution
+                        ifFalse: [ ex pass ].
                     retryCount >= 2
                         ifTrue: [ 
                             (ex isKindOf: GoferRepositoryError)
