@@ -13,9 +13,9 @@ projectDirectoryFrom: projectPath version: versionString
             archive := ZipArchive new
                 readFrom: (FileStream readOnlyFileNamed: '/tmp/github.zip');
                 yourself.
-            directory := githubCacheDirectory directoryNamed: archive members first fileName.
+            directory := githubCacheDirectory directoryNamed: (cachePath := archive members first fileName).
             directory exists
                 ifFalse: [ self extractRepositoryFrom: '/tmp/github.zip' to: githubCacheDirectory fullName ].
-            self downloadCache at: downloadCacheKey put: archive members first fileName.
+            self downloadCache at: downloadCacheKey put: cachePath.
             projectDirectory := githubCacheDirectory directoryNamed: cachePath ].
     ^ projectDirectory

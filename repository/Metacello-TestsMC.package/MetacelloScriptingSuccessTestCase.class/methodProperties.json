@@ -19,5 +19,6 @@
 		"testGithubRefBaselineLoad1" : "dkh 6/15/2012 05:20",
 		"testGithubRefBaselineLoad2" : "dkh 6/15/2012 05:21",
 		"testGithubRefBaselineLoad3" : "dkh 6/15/2012 05:22",
+		"testIssue27Caching" : "dkh 6/19/2012 14:56",
 		"testMczLoad1" : "dkh 6/15/2012 05:23",
 		"testMczLoad2" : "dkh 6/15/2012 05:24" } }
