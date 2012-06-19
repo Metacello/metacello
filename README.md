@@ -23,3 +23,4 @@ Gofer new
 
 ###TravisCI Status
 [![Build Status](https://secure.travis-ci.org/dalehenrich/metacello-work.png?branch=master)](http://travis-ci.org/dalehenrich/metacello-work)
+
