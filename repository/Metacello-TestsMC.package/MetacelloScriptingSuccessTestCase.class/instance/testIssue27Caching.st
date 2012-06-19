@@ -12,5 +12,4 @@ testIssue27Caching
     Metacello new
         baseline: 'External';
         repository: repoDescription;
-        get.
-    self halt
+        get
