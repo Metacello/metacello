@@ -1,6 +1,6 @@
 tests
 testConfigurationConflict2
-    "Conflict must show up in a configuration loaded from a project spec"
+    "disallow upgrade (non-default)"
 
     "variant of testFileTreeLoadConfigurationVersionsNotification2"
 
@@ -13,7 +13,7 @@ testConfigurationConflict2
         silently;
         load ]
         on: MetacelloAllowProjectUpgrade
-        do: [ :ex | ex allow ].
+        do: [ :ex | ex disallow ].
     self
         validateExpectedConfigurationClassName: 'ConfigurationOfConflict'
         expectedConfigurationVersion: '1.0'

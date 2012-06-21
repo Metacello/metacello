@@ -1,6 +1,6 @@
 tests
 testFileTreeLoadConfigurationVersionsNotification2
-    "handle MetacelloSkippedProjectSpecLoadUpgradeNotAllowedNotification not handled ... use newRegistration"
+    "handle MetacelloSkippedProjectSpecLoadUpgradeNotAllowedNotification not handled ... use existingRegistration (non-default)"
 
     self testFileTreeLoadConfigurationVersion.
     [ 
@@ -11,7 +11,7 @@ testFileTreeLoadConfigurationVersionsNotification2
         silently;
         load ]
         on: MetacelloAllowProjectUpgrade
-        do: [ :ex | ex allow ].
+        do: [ :ex | ex disallow ].
     self
         validateExpectedConfigurationClassName: 'ConfigurationOfExternalX'
         expectedConfigurationVersion: '0.9.1'
