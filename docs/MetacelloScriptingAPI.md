@@ -148,17 +148,45 @@ command to refresh the configuration.
 * `filetree://` projects are implicitly [locked](#locking] when loaded
 unless loaded as a project dependency.
 
+* see the [Options](#options) section for additional information.
+
 ### Upgrading
+
+When you come back to an image that you've left dormant for awhile, it
+can be a real pain to upgrade all of the loaded projects to the latest
+version. With Metacello you can upgrade all of the projects with one
+command:
 
 ```Smalltalk
 Metacello upgrade.
 ```
+
+The `upgrade` command iterates over all loaded projects; refreshes
+the project configuration and loads the #stable version of the project.
+
+You can also selectively upgrade projects:
 
 ```Smalltalk
 Metacello new
   configuration: 'Seaside30';
   upgrade.
 ```
+
+Or upgrade a project to a specific version:
+
+```Smalltalk
+Metacello new
+  configuration: 'Seaside30';
+  version: '3.0.8';
+  upgrade.
+```
+
+In this case the project configuration is refreshed and the specified
+version is loaded.
+
+#### `upgrade` Notes
+
+* see the [Options](#options) section for additional information.
 
 ### Locking
 
