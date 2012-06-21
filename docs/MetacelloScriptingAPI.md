@@ -42,11 +42,57 @@ Gofer new
 
 ### Loading
 
+Metacello loads the packages and dependencies (*required projects*) for a project
+based on the specifications in the configuration of a project.
+
+```Smalltalk
+Metacello new
+  configuration: 'Seaside30';
+  squeaksource: 'MetacelloRepository';
+  version: '3.0.7';
+  load.
+```
+
+This will download the `ConfigurationOfSeaside30` package from
+`http:www.squeaksource.com/MetacelloRepository` and 
+proceed to load the *default* group of *Seaside 3.0.7* into your image.
+
+The expression is equivalent to the following old-style `Gofer-based`
+expression:
+
+```Smalltalk
+Gofer new
+  squeaksource: 'MetacelloRepository';
+  package: 'ConfigurationOfSeaside30';
+  load.
+((Smalltalk at: #ConfigurationOfSeaside30) project version: '3.0.7') load.
+``` 
+
+Besides being a bit more compact, the Metacello scripting API uses a few
+handy default values for the **version** and **repository** attributes.
+The default **version** attribute is **#stable** and the default
+**repository** attribute is **http:www.squeaksource.com/MetacelloRepository**.
+The following expression:
+
 ```Smalltalk
 Metacello new
   configuration: 'Seaside30';
   load.
 ```
+
+is equivalent to:
+
+```Smalltalk
+Metacello new
+  configuration: 'Seaside30';
+  squeaksource: 'MetacelloRepository';
+  version: #stable;
+  load.
+```
+
+Arguments to the **load** command may be used to specify which groups,
+packages or dependent projects should be loaded instead of the
+*default*.
 
 ```Smalltalk
 Metacello new
@@ -54,16 +100,26 @@ Metacello new
   load: 'Base'.
 ```
 
+This command loads the **Base** group.
+
 ```Smalltalk
 Metacello new
   configuration: 'Seaside30';
   load: #('Base' 'Seaside-HTML5' 'Zinc-Seaside').
 ```
+
+This command loads the **Base** group, the **Seaside-HTML5** package, 
+and the **Zinc-Seaside** package.
+
 #### `load` notes
 
-`github://`` projects are implicitly locked when loaded.
+If a configuration is already present in the image when the load command
+is executed, the existing configuration is used. Use the [get](#getting)
+command to refresh the configuration.
 
-`filetree://` projects are implicitly locked when loaded
+`github://`` projects are implicitly [locked](#locking) when loaded.
+
+`filetree://` projects are implicitly [locked](#locking] when loaded
 unless loaded as a project dependency.
 
 ### Upgrading
