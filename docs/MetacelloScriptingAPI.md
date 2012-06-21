@@ -1,4 +1,9 @@
-# Metacello Scripting API Documentation
+# Metacello Documentation
+
+* Installation
+* Using the Metacello Scripting API
+* Specifying Configurations
+* Help
 
 ## Installation
 
@@ -22,7 +27,18 @@ Gofer new
   repository: 'github://dalehenrich/metacello-work:configuration';
   load.
 ```
+
 ## Using the Metacello Scripting API
+
+* Loading
+* Upgrading
+* Locking
+* Linking
+* Fetching
+* Recording
+* Validating
+* Finding
+* Listing
 
 ### Loading
 
@@ -40,6 +56,15 @@ Metacello new
   upgrade.
 ```
 
+### Locking
+
+```Smalltalk
+Metacello new
+  project: 'Seaside30';
+  version: '3.0.7';
+  lock.
+```
+
 ### Linking (Registering)
 
 ```Smalltalk
@@ -49,20 +74,45 @@ Metacello new
   link.
 ```
 
-### Listing
-### Locking
 ### Fetching
+
+```Smalltalk
+Metacello new
+  project: 'Seaside30';
+  fetch.
+```
+
 ### Recording
-### Validating
-### Searching
-## Project Specs
-###project:
-###configuration:
-###baseline:
-###version:
-###repository:
-#### Repository descriptions
-####Repository Shortcuts
+
+```Smalltalk
+Metacello new
+  project: 'Seaside30';
+  record.
+```
+
+## Finding
+
+```Smalltalk
+Metacello new
+  project: 'Seaside30';
+  find.
+```
+
+### Listing
+
+```Smalltalk
+Metacello list.
+```
+
+### Project Specs
+####project:
+####configuration:
+####baseline:
+####version:
+####repository:
+##### Repository descriptions
+##### Repository Shortcuts
+
 * blueplane:
 * croquet:
 * gemsource:
@@ -72,12 +122,13 @@ Metacello new
 * squeakfoundation:
 * squeaksource:
 * wiresong:
-## Options
-###ignoreImage
-###onUpgrade:
-###onDowngrade:
-###onConflict:
-###silently
+
+### Options
+####ignoreImage
+####onUpgrade:
+####onDowngrade:
+####onConflict:
+####silently
 ## Specifying Configurations
 
 ### ConfigurationOf
