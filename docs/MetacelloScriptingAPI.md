@@ -1,9 +1,9 @@
 # Metacello Documentation
 
-* Installation
-* Using the Metacello Scripting API
-* Specifying Configurations
-* Help
+* [Installation](#installation)
+* [Using the Metacello Scripting API](#using-the-metacello-scripting-api)
+* [Specifying Configurations](#specifying-configurations)
+* [Help](#help)
 
 ## Installation
 
@@ -30,15 +30,15 @@ Gofer new
 
 ## Using the Metacello Scripting API
 
-* Loading
-* Upgrading
-* Locking
-* Linking
-* Fetching
-* Recording
-* Validating
-* Finding
-* Listing
+* [Loading](#loading)
+* [Upgrading](#upgrading)
+* [Locking](#locking)
+* [Linking](#linking)
+* [Getting](#getting)
+* [Fetching](#fetching)
+* [Recording](#recording)
+* [Finding](#finding)
+* [Listing](#listing)
 
 ### Loading
 
@@ -48,37 +48,82 @@ Metacello new
   load.
 ```
 
-### Upgrading
+```Smalltalk
+Metacello new
+  configuration: 'Seaside30';
+  load: 'Base'.
+```
 
 ```Smalltalk
 Metacello new
-  project: 'Seaside30';
+  configuration: 'Seaside30';
+  load: #('Base' 'Seaside-HTML5' 'Zinc-Seaside').
+```
+#### `load` notes
+
+`github://`` projects are implicitly locked when loaded.
+
+`filetree://` projects are implicitly locked when loaded
+unless loaded as a project dependency.
+
+### Upgrading
+
+```Smalltalk
+Metacello upgrade.
+```
+
+```Smalltalk
+Metacello new
+  configuration: 'Seaside30';
   upgrade.
 ```
 
 ### Locking
 
+Locking prevents `upgrade` and `load` commands from automatically
+upgrading a project when following project dependencies.
+
 ```Smalltalk
 Metacello new
-  project: 'Seaside30';
+  configuration: 'Seaside30';
   version: '3.0.7';
   lock.
 ```
 
-### Linking (Registering)
+```Smalltalk
+Metacello new
+  configuration: 'Seaside30';
+  lock.
+```
 
 ```Smalltalk
 Metacello new
-  project: 'Seaside30';
+  baseline: 'Seaside30';
+  lock.
+```
+
+### Linking
+
+```Smalltalk
+Metacello new
+  baseline: 'Seaside30';
   repository: 'filetree:///opt/git/Seaside30/repository';
   link.
+```
+
+### Getting
+
+```Smalltalk
+Metacello new
+  configuration: 'Seaside30';
+  get.
 ```
 
 ### Fetching
 
 ```Smalltalk
 Metacello new
-  project: 'Seaside30';
+  configuration: 'Seaside30';
   fetch.
 ```
 
@@ -86,15 +131,15 @@ Metacello new
 
 ```Smalltalk
 Metacello new
-  project: 'Seaside30';
+  configuration: 'Seaside30';
   record.
 ```
 
-## Finding
+### Finding
 
 ```Smalltalk
 Metacello new
-  project: 'Seaside30';
+  configuration: 'Seaside30';
   find.
 ```
 
@@ -105,9 +150,10 @@ Metacello list.
 ```
 
 ### Project Specs
-####project:
 ####configuration:
 ####baseline:
+####project:
+####className:
 ####version:
 ####repository:
 ##### Repository descriptions
