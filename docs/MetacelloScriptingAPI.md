@@ -1,4 +1,9 @@
-# Metacello Documentation
+# Metacello Scripting API Documentation
+
+The **Metacello Scripting API** provides a platform independent way for
+loading Metacello configurations into your image.
+
+Currently [Pharo1.3][1] and [Squeak4.3 image][2] are supported.
 
 * [Installation](#installation)
 * [Using the Metacello Scripting API](#using-the-metacello-scripting-api)
@@ -7,7 +12,7 @@
 
 ## Installation
 
-Install the **Metacello Preview** in your [Pharo1.3][1] or [Squeak4.3 image][2]:
+To get started we need to load the `ConfigurationOfMetacello`. In a Pharo1.3 image:
 
 ```Smalltalk
 "Get the Metacello configuration"
@@ -15,18 +20,32 @@ Gofer new
   gemsource: 'metacello';
   package: 'ConfigurationOfMetacello';
   load.
+```
 
-"Bootstrap Metacello 1.0-beta.32, using mcz files"
+or a Squeak4.3 image:
+
+```Smalltalk
+Installer gemsource
+    project: 'metacello';
+    install: 'ConfigurationOfMetacello'. 
+```
+
+then bootstrap `Metacello 1.-beta.32` and install the `Metacello Preview` code:
+
+```Smalltalk
 ((Smalltalk at: #ConfigurationOfMetacello) project 
   version: '1.0-beta.32') load.
 
-"Load the Preview version of Metacello from GitHub"
 (Smalltalk at: #Metacello) new
   configuration: 'MetacelloPreview';
   version: #stable;
   repository: 'github://dalehenrich/metacello-work:configuration';
   load.
 ```
+
+*Once the Metacello Scripting API is released, the Metacello class
+will be installed in the base images for GemStone, Pharo and Squeak and
+bootstrapping will no longer be necessary.*
 
 ## Using the Metacello Scripting API
 
@@ -57,7 +76,7 @@ Metacello new
 
 will download the `ConfigurationOfSeaside30` package from
 `http:www.squeaksource.com/MetacelloRepository` and 
-proceed to load the *default* group of *Seaside 3.0.7* into your image.
+proceed to load the `default` group of `Seaside 3.0.7` into your image.
 
 The above expression is equivalent to the following old-style `Gofer-based`
 expression:
@@ -73,7 +92,7 @@ Gofer new
 Besides being a bit more compact, the Metacello scripting API uses a few
 handy default values for the **version** and **repository** attributes.
 The default **version** attribute is `#stable` and the default
-**repository** attribute[*](#load-notes) is `http:www.squeaksource.com/MetacelloRepository`.
+**repository** attribute is [platform-dependent](#load-notes)
 
 Applying the default values, the following expression:
 
@@ -83,7 +102,7 @@ Metacello new
   load.
 ```
 
-is equivalent to:
+is equivalent to (assuming the platform-specific default repository is `http:www.squeaksource.com/MetacelloRepository`):
 
 ```Smalltalk
 Metacello new
@@ -120,8 +139,8 @@ Metacello new
 is executed, the existing configuration is used. Use the [get](#getting)
 command to refresh the configuration.
 
-* The default repository is actually platform-dependent. In the absense of
-a platform-specified default, `http:www.squeaksource.com/MetacelloRepository` is used.
+* The default repository is platform-dependent. See the documentation
+  for your platform to determine which repository is used.
 
 * `github://`` projects are implicitly [locked](#locking) when loaded.
 
