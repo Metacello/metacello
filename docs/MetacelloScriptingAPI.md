@@ -73,7 +73,7 @@ Gofer new
 Besides being a bit more compact, the Metacello scripting API uses a few
 handy default values for the **version** and **repository** attributes.
 The default **version** attribute is `#stable` and the default
-**repository** attribute is `http:www.squeaksource.com/MetacelloRepository`.
+**repository** attribute[*](#load-notes) is `http:www.squeaksource.com/MetacelloRepository`.
 
 Applying the default values, the following expression:
 
