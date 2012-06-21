@@ -3,7 +3,7 @@
 The **Metacello Scripting API** provides a platform independent way for
 loading Metacello configurations into your image.
 
-Currently [Pharo1.3][1] and [Squeak4.3 image][2] are supported.
+Currently [Pharo1.3][1] and [Squeak4.3][2] are supported.
 
 * [Installation](#installation)
 * [Using the Metacello Scripting API](#using-the-metacello-scripting-api)
@@ -30,7 +30,7 @@ Installer gemsource
     install: 'ConfigurationOfMetacello'. 
 ```
 
-then bootstrap `Metacello 1.-beta.32` and install the `Metacello Preview` code:
+then bootstrap `Metacello 1.-beta.32` and install the `Metacello Preview` code (both images):
 
 ```Smalltalk
 ((Smalltalk at: #ConfigurationOfMetacello) project 
