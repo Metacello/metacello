@@ -45,6 +45,8 @@ Gofer new
 Metacello loads the packages and dependencies (*required projects*) for a project
 based on the specifications in the configuration of a project.
 
+This statement: 
+
 ```Smalltalk
 Metacello new
   configuration: 'Seaside30';
@@ -53,11 +55,11 @@ Metacello new
   load.
 ```
 
-This will download the `ConfigurationOfSeaside30` package from
+will download the `ConfigurationOfSeaside30` package from
 `http:www.squeaksource.com/MetacelloRepository` and 
 proceed to load the *default* group of *Seaside 3.0.7* into your image.
 
-The expression is equivalent to the following old-style `Gofer-based`
+The above expression is equivalent to the following old-style `Gofer-based`
 expression:
 
 ```Smalltalk
@@ -70,9 +72,10 @@ Gofer new
 
 Besides being a bit more compact, the Metacello scripting API uses a few
 handy default values for the **version** and **repository** attributes.
-The default **version** attribute is **#stable** and the default
-**repository** attribute is **http:www.squeaksource.com/MetacelloRepository**.
-The following expression:
+The default **version** attribute is `#stable` and the default
+**repository** attribute is `http:www.squeaksource.com/MetacelloRepository`.
+
+Applying the default values, the following expression:
 
 ```Smalltalk
 Metacello new
@@ -92,7 +95,7 @@ Metacello new
 
 Arguments to the **load** command may be used to specify which groups,
 packages or dependent projects should be loaded instead of the
-*default*.
+*default* group.
 
 ```Smalltalk
 Metacello new
@@ -100,7 +103,7 @@ Metacello new
   load: 'Base'.
 ```
 
-This command loads the **Base** group.
+This command loads the `Base` group.
 
 ```Smalltalk
 Metacello new
@@ -108,14 +111,17 @@ Metacello new
   load: #('Base' 'Seaside-HTML5' 'Zinc-Seaside').
 ```
 
-This command loads the **Base** group, the **Seaside-HTML5** package, 
-and the **Zinc-Seaside** package.
+This command loads the `Base` group, the `Seaside-HTML5` package, 
+and the `Zinc-Seaside` package.
 
 #### `load` notes
 
 If a configuration is already present in the image when the load command
 is executed, the existing configuration is used. Use the [get](#getting)
 command to refresh the configuration.
+
+The default repository is actually platform-dependent. In the absense of
+a platform-specified default, `http:www.squeaksource.com/MetacelloRepository` is used.
 
 `github://`` projects are implicitly [locked](#locking) when loaded.
 
