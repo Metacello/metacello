@@ -95,7 +95,9 @@ Metacello new
 
 Arguments to the **load** command may be used to specify which groups,
 packages or dependent projects should be loaded instead of the
-*default* group.
+`default` group.
+
+This command loads the `Base` group:
 
 ```Smalltalk
 Metacello new
@@ -103,7 +105,8 @@ Metacello new
   load: 'Base'.
 ```
 
-This command loads the `Base` group.
+This command loads the `Base` group, the `Seaside-HTML5` package, 
+and the `Zinc-Seaside` package:
 
 ```Smalltalk
 Metacello new
@@ -111,21 +114,18 @@ Metacello new
   load: #('Base' 'Seaside-HTML5' 'Zinc-Seaside').
 ```
 
-This command loads the `Base` group, the `Seaside-HTML5` package, 
-and the `Zinc-Seaside` package.
+#### `load` Notes
 
-#### `load` notes
-
-If a configuration is already present in the image when the load command
+* If a configuration is already present in the image when the load command
 is executed, the existing configuration is used. Use the [get](#getting)
 command to refresh the configuration.
 
-The default repository is actually platform-dependent. In the absense of
+* The default repository is actually platform-dependent. In the absense of
 a platform-specified default, `http:www.squeaksource.com/MetacelloRepository` is used.
 
-`github://`` projects are implicitly [locked](#locking) when loaded.
+* `github://`` projects are implicitly [locked](#locking) when loaded.
 
-`filetree://` projects are implicitly [locked](#locking] when loaded
+* `filetree://` projects are implicitly [locked](#locking] when loaded
 unless loaded as a project dependency.
 
 ### Upgrading
