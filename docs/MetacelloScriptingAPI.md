@@ -140,7 +140,8 @@ is executed, the existing configuration is used. Use the [get](#getting)
 command to refresh the configuration.
 
 * The default repository is platform-dependent. See the documentation
-  for your platform to determine which repository is used.
+  for your platform to determine which repository is used. 
+  Currently `http:www.squeaksource.com/MetacelloRepository` is used as the default.
 
 * `github://`` projects are implicitly [locked](#locking) when loaded.
 
@@ -168,6 +169,15 @@ upgrading a project when following project dependencies.
 Metacello new
   configuration: 'Seaside30';
   version: '3.0.7';
+  lock.
+```
+
+```Smalltalk
+Metacello new
+  configuration: 'Seaside30';
+  version: [:version | 
+    '3.0.7' asMetacelloVersionNumber <= version 
+      and: [ version < '3.0.8' asMetacelloVersionNumber ]];
   lock.
 ```
 
