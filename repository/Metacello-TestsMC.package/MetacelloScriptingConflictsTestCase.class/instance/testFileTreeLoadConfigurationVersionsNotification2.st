@@ -14,7 +14,7 @@ testFileTreeLoadConfigurationVersionsNotification2
         do: [ :ex | ex disallow ].
     self
         validateExpectedConfigurationClassName: 'ConfigurationOfExternalX'
-        expectedConfigurationVersion: '0.9.1'
+        expectedConfigurationVersion: '0.9'
         expectedConfigurationRepository: 'filetree://' , configurationDirectory fullName
         expectedBaselineClassName: 'BaselineOfExternalX'
         expectedBaselineVersion: 'baseline'

@@ -186,12 +186,29 @@ version is loaded.
 
 #### `upgrade` Notes
 
+* [project locking](#locking) is respected by the upgrade command. 
+
 * see the [Options](#options) section for additional information.
 
 ### Locking
 
-Locking prevents `upgrade` and `load` commands from automatically
-upgrading a project when following project dependencies.
+Automaticall upgrading projects is not always desired. Of course, 
+in the normal course of loading and upgrading, you will want the correct
+version of dependent projects loaded. However under the following
+conditions:
+
+* Your application may depend upon a specific version (or 
+  range of versions) for a project.
+* You may be actively developing a particular version of a 
+  project and you don't want the
+  project upgraded out from under you.
+* You may be working with a git checkout of a project and you want to
+  continue using the git checkout.
+
+you many not want to have particular projects upgraded automatically.
+The `lock` command gives you control.
+
+You can lock a project to a particular version:
 
 ```Smalltalk
 Metacello new
@@ -200,20 +217,29 @@ Metacello new
   lock.
 ```
 
+Or you can specify a block to be evaluated against the `proposedVersion`
+and answer `false` if you want to disallow the upgrade:
+
 ```Smalltalk
 Metacello new
   configuration: 'Seaside30';
-  version: [:version | 
-    '3.0.7' asMetacelloVersionNumber <= version 
-      and: [ version < '3.0.8' asMetacelloVersionNumber ]];
+  version: [:proposedVersion | 
+    '3.0.7' asMetacelloVersionNumber <= proposedVersion 
+      and: [ proposedVersion < '3.0.8' asMetacelloVersionNumber ]];
   lock.
 ```
+
+If you don't specify an explicit version, then the currently loaded
+version of the project is locked:
 
 ```Smalltalk
 Metacello new
   configuration: 'Seaside30';
   lock.
-```
+``
+
+If you are locking a [baseline configuration](#baselineof) it is not
+necessary to specify a version:
 
 ```Smalltalk
 Metacello new
@@ -221,6 +247,7 @@ Metacello new
   lock.
 ```
 
+#### `lock` Notes
 ### Linking
 
 ```Smalltalk

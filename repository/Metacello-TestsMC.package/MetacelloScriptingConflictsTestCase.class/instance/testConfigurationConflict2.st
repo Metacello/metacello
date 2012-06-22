@@ -23,8 +23,8 @@ testConfigurationConflict2
         expectedBaselineRepository: nil.
     self
         validateExpectedConfigurationClassName: 'ConfigurationOfExternalX'
-        expectedConfigurationVersion: '0.9.1'
-        expectedConfigurationRepository: 'dictionary://Metacello_Conflict_Test_Repository'
+        expectedConfigurationVersion: '0.9'
+        expectedConfigurationRepository: 'filetree://' , configurationDirectory fullName
         expectedBaselineClassName: 'BaselineOfExternalX'
         expectedBaselineVersion: 'baseline'
         expectedBaselineRepository: 'dictionary://Metacello_Configuration_Test_Repository'

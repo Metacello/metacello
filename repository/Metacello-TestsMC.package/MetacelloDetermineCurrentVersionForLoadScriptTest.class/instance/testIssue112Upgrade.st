@@ -15,13 +15,13 @@ testIssue112Upgrade
     Metacello new
         project: 'Foo';
         version: '3.5';
-        onUpgrade: [ :ex | ex allow ];
+        onUpgrade: [ :ex | ex disallow ];
         className: 'MetacelloTestConfigurationOfFoo';
         repository: 'dictionary://Metacello_Configuration_Test_Repository';
         load: #('GoferBeau').
     wc := (GoferPackageReference name: 'GoferBar') workingCopy.
-    self assert: wc ancestry ancestors first name = 'GoferBar-lr.0'.
+    self assert: wc ancestry ancestors first name = 'GoferBar.branch-lr.1'.
     wc := (GoferPackageReference name: 'GoferBeau') workingCopy.
-    self assert: wc ancestry ancestors first name = 'GoferBeau-dkh.54'.
+    self assert: wc ancestry ancestors first name = 'GoferBeau-dkh.53'.
     wc := (GoferPackageReference name: 'GoferFaux') workingCopy.	"this is the crux of Issue 112"
-    self assert: wc ancestry ancestors first name = 'GoferFaux-tg.31'
+    self assert: wc ancestry ancestors first name = 'GoferFaux-tg.30'
