@@ -4,7 +4,8 @@ fromString: aString
     components := OrderedCollection new.
     preReleaseIndex := buildIndex := 0.
     preRelease := aString indexOf: $- startingAt: 1.
-    build := aString indexOf: $+ startingAt: (preRelease max: 1).
+    build := aString indexOf: $+ startingAt: 1.
+(build > 0 and: [preRelease > build]) ifTrue: [ preRelease := 0].
     normalEnd := preRelease = 0
         ifTrue: [ 
             build = 0

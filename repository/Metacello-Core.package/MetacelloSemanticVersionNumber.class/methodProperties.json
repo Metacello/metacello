@@ -1,7 +1,7 @@
 {
 	"class" : {
 		"extractNumericComponent:" : "dkh 6/21/2012 17:59",
-		"fromString:" : "dkh 6/21/2012 20:04",
+		"fromString:" : "dkh 6/21/2012 20:40",
 		"isSemanticIdentifier:" : "dkh 6/21/2012 18:43" },
 	"instance" : {
 		"<" : "dkh 6/21/2012 19:52",
@@ -11,7 +11,7 @@
 		"buildIndex" : "dkh 6/21/2012 19:43",
 		"buildIndex:" : "dkh 6/21/2012 18:49",
 		"compareEqualTo:" : "dkh 6/21/2012 17:59",
-		"compareLessThan:" : "dkh 6/21/2012 20:25",
+		"compareLessThan:" : "dkh 6/21/2012 20:33",
 		"copyFrom:to:" : "dkh 6/21/2012 17:59",
 		"decrementMinorVersionNumber" : "dkh 6/21/2012 17:59",
 		"do:" : "dkh 6/21/2012 17:59",
