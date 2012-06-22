@@ -2,10 +2,11 @@
 	"class" : {
 		 },
 	"instance" : {
-		"testEqualityComparison" : "dkh 6/21/2012 21:44",
+		"sampleVersionStrings" : "dkh 6/22/2012 09:03",
+		"testEqualityComparison" : "dkh 6/22/2012 09:00",
 		"testLessThanComparison" : "dkh 6/21/2012 21:43",
-		"testPrinting" : "dkh 6/21/2012 20:33",
-		"testSemanticVersioning" : "dkh 6/21/2012 21:43",
+		"testPrinting" : "dkh 6/22/2012 08:59",
+		"testSemanticVersioning" : "dkh 6/22/2012 10:22",
 		"testSemanticVersioningSpecItem10" : "dkh 6/21/2012 18:08",
 		"testSemanticVersioningSpecItem11" : "dkh 6/21/2012 18:08",
 		"testSemanticVersioningSpecItem12" : "dkh 6/21/2012 18:08",
