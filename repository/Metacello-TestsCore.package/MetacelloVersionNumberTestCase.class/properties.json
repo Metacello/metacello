@@ -11,6 +11,6 @@
 	"name" : "MetacelloVersionNumberTestCase",
 	"pools" : [
 		 ],
-	"super" : "TestCase",
+	"super" : "MetacelloCommonVersionNumberTestCase",
 	"traitcomposition" : "{}",
 	"type" : "normal" }

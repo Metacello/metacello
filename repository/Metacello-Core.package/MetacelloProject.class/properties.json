@@ -14,7 +14,8 @@
 		"loaderClass",
 		"loadType",
 		"configuration",
-		"projectAttributes" ],
+		"projectAttributes",
+		"versionNumberClass" ],
 	"name" : "MetacelloProject",
 	"pools" : [
 		 ],

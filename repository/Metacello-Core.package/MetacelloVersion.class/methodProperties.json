@@ -1,6 +1,6 @@
 {
 	"class" : {
-		"fromSpec:" : "dkh 6/5/2012 19:01:24",
+		"fromSpec:" : "dkh 6/22/2012 12:34",
 		"fromString:" : "dkh 6/5/2012 19:01:24" },
 	"instance" : {
 		"<" : "dkh 6/5/2012 19:01:24",
@@ -32,6 +32,7 @@
 		"versionKey" : "dkh 6/5/2012 19:01:24",
 		"versionNumber" : "dkh 6/5/2012 19:01:24",
 		"versionNumber:" : "dkh 6/5/2012 19:01:24",
+		"versionNumberFrom:" : "dkh 6/22/2012 12:38",
 		"versionSpec" : "dkh 6/5/2012 19:01:24",
 		"versionStatus" : "dkh 6/5/2012 19:01:24",
 		"versionStatus:" : "dkh 6/5/2012 19:01:24",

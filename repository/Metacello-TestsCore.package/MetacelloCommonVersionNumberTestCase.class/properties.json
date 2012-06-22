@@ -8,9 +8,9 @@
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "MetacelloSemanticVersionNumberTestCase",
+	"name" : "MetacelloCommonVersionNumberTestCase",
 	"pools" : [
 		 ],
-	"super" : "MetacelloCommonVersionNumberTestCase",
+	"super" : "TestCase",
 	"traitcomposition" : "{}",
 	"type" : "normal" }

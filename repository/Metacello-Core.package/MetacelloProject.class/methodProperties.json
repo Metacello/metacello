@@ -10,7 +10,7 @@
 		"baselineOfVersionSpecClass" : "dkh 6/5/2012 19:01:24",
 		"bleedingEdge" : "dkh 6/5/2012 19:01:24",
 		"configuration" : "dkh 6/5/2012 19:01:24",
-		"configuration:" : "dkh 6/5/2012 19:01:24",
+		"configuration:" : "dkh 6/22/2012 12:44",
 		"configurationOfProjectSpec" : "dkh 6/5/2012 19:01:24",
 		"configurationOfProjectSpecClass" : "dkh 6/5/2012 19:01:24",
 		"currentVersion" : "dkh 6/5/2012 19:01:24",
@@ -67,6 +67,8 @@
 		"valueHolderSpecClass" : "dkh 6/5/2012 19:01:24",
 		"version:" : "dkh 6/5/2012 19:01:24",
 		"version:ifAbsent:" : "dkh 6/5/2012 19:01:24",
+		"versionNumberClass" : "dkh 6/22/2012 12:41",
+		"versionNumberClass:" : "dkh 6/22/2012 12:41",
 		"versionSpec" : "dkh 6/5/2012 19:01:24",
 		"versionSpecClass" : "dkh 6/5/2012 19:01:24",
 		"versions" : "dkh 6/5/2012 19:01:24" } }
