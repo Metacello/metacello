@@ -14,9 +14,10 @@ match: aVersionPattern
 	 sequences are permitted once the '?' sequence is used. If used, it is the last version pattern
 	 sequence. "
 
-    | patternVersion mySize patternSize |
-    patternVersion := aVersionPattern asMetacelloSemanticVersionNumber.
-    mySize := self size.
+    | patternVersion mySize patternSize components |
+    patternVersion := (self class fromString: aVersionPattern forPattern: true) versionComponents.
+    components := self versionComponents.
+    mySize := components size.
     patternSize := patternVersion size.
     mySize = patternSize
         ifFalse: [ 
@@ -33,19 +34,6 @@ match: aVersionPattern
                 i = mySize
                     ifFalse: [ ^ self error: 'Invalid version match pattern: ' , aVersionPattern printString ] ]
             ifFalse: [ 
-                (pattern match: (self at: i) asString)
+                (pattern match: (components at: i) asString)
                     ifFalse: [ ^ false ] ] ].
-    ^ true	"
-  '1.1.1' asMetacelloVersionNumber match: '*.*.*'. -> true
-  '1.1.1' asMetacelloVersionNumber match: '*.#.*'. -> true
-  '1.10.1' asMetacelloVersionNumber match: '*.#.*'. -> false
-  '1.1.1' asMetacelloVersionNumber match: '*.*'. -> false
-  '1.1.1' asMetacelloVersionNumber match: '*.?'. -> true
-  '1.0' asMetacelloVersionNumber match: '1.?'. -> true
-  '2.0' asMetacelloVersionNumber match: '1.?'. -> false
-  '1.1.1' asMetacelloVersionNumber match: '?'. -> true
-  '1' asMetacelloVersionNumber match: '*.?'. -> false
-  '1-alpha5.0' asMetacelloVersionNumber match: '1-alpha*.?'. -> true
-  '1-alpha15.0.1' asMetacelloVersionNumber match: '1-alpha*.?'. -> true
-  '1.1' asMetacelloVersionNumber match: '?.?'. -> ERROR: invalid version match pattern
-"
+    ^ true

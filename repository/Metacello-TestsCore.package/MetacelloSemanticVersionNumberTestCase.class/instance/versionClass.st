@@ -1,4 +1,3 @@
 private
 versionClass
-
-	^MetacelloVersionNumber
+    ^ MetacelloSemanticVersionNumber
