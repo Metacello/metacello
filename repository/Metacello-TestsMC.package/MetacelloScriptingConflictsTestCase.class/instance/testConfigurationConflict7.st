@@ -31,7 +31,7 @@ testConfigurationConflict7
         expectedBaselineRepository: nil.
     self
         validateExpectedConfigurationClassName: 'ConfigurationOfExternalX'
-        expectedConfigurationVersion: '0.9'
+        expectedConfigurationVersion: '0.9.0'
         expectedConfigurationRepository: 'dictionary://Metacello_Conflict_Test_Repository'
         expectedBaselineClassName: 'BaselineOfExternalX'
         expectedBaselineVersion: 'baseline'

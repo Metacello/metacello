@@ -13,4 +13,5 @@ testFileTreeLoadConfiguration1
         expectedConfigurationRepository: 'filetree://' , configurationDirectory fullName
         expectedBaselineClassName: 'BaselineOfExternalX'
         expectedBaselineVersion: 'baseline'
-        expectedBaselineRepository: 'dictionary://Metacello_Configuration_Test_Repository'
+        expectedBaselineRepository: 'dictionary://Metacello_Configuration_Test_Repository'.
+    self halt

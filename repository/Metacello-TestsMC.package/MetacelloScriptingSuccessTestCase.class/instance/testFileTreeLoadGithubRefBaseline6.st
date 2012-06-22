@@ -19,7 +19,7 @@ testFileTreeLoadGithubRefBaseline6
         loadedFrom: 'github://dalehenrich/external:' , MetacelloScriptingResource externalCustomSHA , '/repository'.
     self
         validateExpectedConfigurationClassName: 'ConfigurationOfExternal'
-        expectedConfigurationVersion: '0.9'
+        expectedConfigurationVersion: '0.9.0'
         expectedConfigurationRepository: 'http://ss3.gemstone.com/ss/external'
         expectedBaselineClassName: 'BaselineOfExternal'
         expectedBaselineVersion: 'baseline'
