@@ -163,7 +163,7 @@ Metacello upgrade.
 ```
 
 The `upgrade` command iterates over all loaded projects; refreshes
-the project configuration and loads the #stable version of the project.
+the project configuration and loads the `#stable` version of the project.
 
 You can also selectively upgrade projects:
 
@@ -193,7 +193,7 @@ version is loaded.
 
 ### Locking
 
-Automaticall upgrading projects is not always desired. Of course, 
+Automatically upgrading projects is not always desirable. Of course, 
 in the normal course of loading and upgrading, you will want the correct
 version of dependent projects loaded. However under the following
 conditions:
@@ -237,7 +237,7 @@ version of the project is locked:
 Metacello new
   configuration: 'Seaside30';
   lock.
-``
+```
 
 If you are locking a [baseline configuration](#baselineof) it is not
 necessary to specify a version:
@@ -249,6 +249,15 @@ Metacello new
 ```
 
 #### `lock` Notes
+
+* To lock a git checkout for a project, you should lock the `baseline`:
+
+    ```Smalltalk
+    Metacello new
+      baseline: 'Seaside30';
+      lock.
+    ```
+
 ### Linking
 
 ```Smalltalk
