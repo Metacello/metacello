@@ -1,11 +1,13 @@
 instance creation
 fromString: aString
-    | new components tokens preRelease build versionString identifierCount normalEnd preReleaseEnd preReleaseIndex buildIndex |
-    components := OrderedCollection new.
-    preReleaseIndex := buildIndex := 0.
+    | new tokens preRelease build versionString identifierCount normalEnd preReleaseEnd normalComponents preReleaseComponents buildComponents |
+    normalComponents := OrderedCollection new.
+    preReleaseComponents := OrderedCollection new.
+    buildComponents := OrderedCollection new.
     preRelease := aString indexOf: $- startingAt: 1.
     build := aString indexOf: $+ startingAt: 1.
-(build > 0 and: [preRelease > build]) ifTrue: [ preRelease := 0].
+    (build > 0 and: [ preRelease > build ])
+        ifTrue: [ preRelease := 0 ].
     normalEnd := preRelease = 0
         ifTrue: [ 
             build = 0
@@ -20,36 +22,33 @@ fromString: aString
             integer := subString asInteger.
             integer < 0
                 ifTrue: [ self error: 'invalid version number' ].
-            components add: integer.
+            normalComponents add: integer.
             identifierCount := identifierCount + 1 ].
     identifierCount > 3
         ifTrue: [ self error: 'invalid version number' ].
     identifierCount < 3
-        ifTrue: [ identifierCount to: 3 do: [ :ignored | components add: 0 ] ].
+        ifTrue: [ identifierCount to: 3 do: [ :ignored | normalComponents add: 0 ] ].
     preReleaseEnd := build = 0
         ifTrue: [ aString size ]
         ifFalse: [ build - 1 ].
     preRelease > 0
         ifTrue: [ 
-            preReleaseIndex := components size + 1.
             versionString := aString copyFrom: preRelease + 1 to: preReleaseEnd.
             (versionString findTokens: '.')
                 do: [ :subString | 
                     (self isSemanticIdentifier: subString)
                         ifFalse: [ self error: 'invalid version number' ].
-                    components add: (self extractNumericComponent: subString) ] ].
+                    preReleaseComponents add: (self extractNumericComponent: subString) ] ].
     build > 0
         ifTrue: [ 
-            buildIndex := components size + 1.
             versionString := aString copyFrom: build + 1 to: aString size.
             (versionString findTokens: '.')
                 do: [ :subString | 
                     (self isSemanticIdentifier: subString)
                         ifFalse: [ self error: 'invalid version number' ].
-                    components add: (self extractNumericComponent: subString) ] ].
-    new := self new: components size.
-    1 to: components size do: [ :i | new at: i put: (components at: i) ].
-    new
-        preReleaseIndex: preReleaseIndex;
-        buildIndex: buildIndex.
-    ^ new
+                    buildComponents add: (self extractNumericComponent: subString) ] ].
+    ^ self new
+        normalVersion: normalComponents;
+        preReleaseVersion: preReleaseComponents;
+        buildVersion: buildComponents;
+        yourself

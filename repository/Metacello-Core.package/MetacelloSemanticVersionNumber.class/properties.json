@@ -7,11 +7,12 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"preReleaseIndex",
-		"buildIndex" ],
+		"normalVersion",
+		"preReleaseVersion",
+		"buildVersion" ],
 	"name" : "MetacelloSemanticVersionNumber",
 	"pools" : [
 		 ],
 	"super" : "Magnitude",
 	"traitcomposition" : "{}",
-	"type" : "variable" }
+	"type" : "normal" }
