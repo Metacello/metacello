@@ -1,0 +1,12 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"testPreReleaseComparison" : "dkh 6/21/2012 20:16",
+		"testPrinting" : "dkh 6/21/2012 19:36",
+		"testSemanticVersioning" : "dkh 6/21/2012 20:24",
+		"testSemanticVersioningSpecItem10" : "dkh 6/21/2012 18:08",
+		"testSemanticVersioningSpecItem11" : "dkh 6/21/2012 18:08",
+		"testSemanticVersioningSpecItem12" : "dkh 6/21/2012 18:08",
+		"testSemanticVersioningSubsetCompliance" : "dkh 6/21/2012 18:11",
+		"validateSemanticVersionStrings:" : "dkh 6/21/2012 18:08" } }

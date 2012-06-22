@@ -1,0 +1,17 @@
+{
+	"category" : "Metacello-Core-Model",
+	"classinstvars" : [
+		 ],
+	"classtraitcomposition" : "{}",
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"preReleaseIndex",
+		"buildIndex" ],
+	"name" : "MetacelloSemanticVersionNumber",
+	"pools" : [
+		 ],
+	"super" : "Magnitude",
+	"traitcomposition" : "{}",
+	"type" : "variable" }

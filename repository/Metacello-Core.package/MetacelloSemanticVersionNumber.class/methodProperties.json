@@ -1,0 +1,26 @@
+{
+	"class" : {
+		"extractNumericComponent:" : "dkh 6/21/2012 17:59",
+		"fromString:" : "dkh 6/21/2012 20:04",
+		"isSemanticIdentifier:" : "dkh 6/21/2012 18:43" },
+	"instance" : {
+		"<" : "dkh 6/21/2012 19:52",
+		"=" : "dkh 6/21/2012 19:53",
+		"approximateBase" : "dkh 6/21/2012 17:59",
+		"asMetacelloSemanticVersionNumber" : "dkh 6/21/2012 18:02",
+		"buildIndex" : "dkh 6/21/2012 19:43",
+		"buildIndex:" : "dkh 6/21/2012 18:49",
+		"compareEqualTo:" : "dkh 6/21/2012 17:59",
+		"compareLessThan:" : "dkh 6/21/2012 20:25",
+		"copyFrom:to:" : "dkh 6/21/2012 17:59",
+		"decrementMinorVersionNumber" : "dkh 6/21/2012 17:59",
+		"do:" : "dkh 6/21/2012 17:59",
+		"do:separatedBy:" : "dkh 6/21/2012 17:59",
+		"hash" : "dkh 6/21/2012 17:59",
+		"incrementMinorVersionNumber" : "dkh 6/21/2012 17:59",
+		"match:" : "dkh 6/21/2012 17:59",
+		"preReleaseIndex" : "dkh 6/21/2012 19:43",
+		"preReleaseIndex:" : "dkh 6/21/2012 18:49",
+		"printOn:" : "dkh 6/21/2012 19:43",
+		"versionString" : "dkh 6/21/2012 17:59",
+		"~>" : "dkh 6/21/2012 17:59" } }
