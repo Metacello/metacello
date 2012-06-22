@@ -3,8 +3,6 @@ compareLessThan: myComponents other: otherComponents
     | mySize aSize commonSize count more |
     mySize := myComponents size.
     aSize := otherComponents size.
-    (mySize = 0 and: [ aSize = 0 ])
-        ifTrue: [ ^ true ].
     commonSize := mySize min: aSize.
     count := 0.
     more := true.

@@ -1,16 +1,23 @@
 private
 compareLessThan: aMetacelloVersionNumber
+    | myComponents otherComponents defaultResult |
     aMetacelloVersionNumber species = self species
         ifFalse: [ ^ false ].
-    ^ (self compareEqualTo: self normalVersion other: aMetacelloVersionNumber normalVersion)
-        ifTrue: [ 
-            (self compareEqualTo: self preReleaseVersion other: aMetacelloVersionNumber preReleaseVersion)
-                ifTrue: [ self compareLessThan: self buildVersion other: aMetacelloVersionNumber buildVersion ]
-                ifFalse: [ 
-                    (self compareLessThan: self preReleaseVersion other: aMetacelloVersionNumber preReleaseVersion)
-                        and: [ self compareLessThan: self buildVersion other: aMetacelloVersionNumber buildVersion ] ] ]
+    myComponents := self normalVersion.
+    otherComponents := aMetacelloVersionNumber normalVersion.
+    defaultResult := true.
+    (self compareEqualTo: myComponents other: otherComponents)
+        ifTrue: [ defaultResult := false ]
         ifFalse: [ 
-            (self compareLessThan: self normalVersion other: aMetacelloVersionNumber normalVersion)
-                and: [ 
-                    (self compareLessThan: self preReleaseVersion other: aMetacelloVersionNumber preReleaseVersion)
-                        and: [ self compareLessThan: self buildVersion other: aMetacelloVersionNumber buildVersion ] ] ]
+            (self compareLessThan: myComponents other: otherComponents)
+                ifFalse: [ ^ false ] ].
+    myComponents := self preReleaseVersion.
+    otherComponents := aMetacelloVersionNumber preReleaseVersion.
+    (self compareEqualTo: myComponents other: otherComponents)
+        ifTrue: [ defaultResult := false ]
+        ifFalse: [ ^ self compareLessThan: myComponents other: otherComponents ].
+    myComponents := self buildVersion.
+    otherComponents := aMetacelloVersionNumber buildVersion.
+    ^ (self compareEqualTo: myComponents other: otherComponents)
+        ifTrue: [ defaultResult ]
+        ifFalse: [ self compareLessThan: myComponents other: otherComponents ]

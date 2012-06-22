@@ -1,7 +1,7 @@
 {
 	"class" : {
 		"extractNumericComponent:" : "dkh 6/21/2012 17:59",
-		"fromString:" : "dkh 6/21/2012 21:11",
+		"fromString:" : "dkh 6/22/2012 11:19",
 		"isSemanticIdentifier:" : "dkh 6/21/2012 18:43" },
 	"instance" : {
 		"<" : "dkh 6/21/2012 19:52",
@@ -10,10 +10,10 @@
 		"asMetacelloSemanticVersionNumber" : "dkh 6/21/2012 18:02",
 		"buildVersion" : "dkh 6/21/2012 21:06",
 		"buildVersion:" : "dkh 6/21/2012 21:05",
-		"compareEqualTo:" : "dkh 6/21/2012 21:21",
+		"compareEqualTo:" : "dkh 6/22/2012 11:02",
 		"compareEqualTo:other:" : "dkh 6/21/2012 21:26",
-		"compareLessThan:" : "dkh 6/21/2012 21:44",
-		"compareLessThan:other:" : "dkh 6/21/2012 21:41",
+		"compareLessThan:" : "dkh 6/22/2012 11:27",
+		"compareLessThan:other:" : "dkh 6/22/2012 10:30",
 		"copyFrom:to:" : "dkh 6/21/2012 17:59",
 		"decrementMinorVersionNumber" : "dkh 6/21/2012 17:59",
 		"do:" : "dkh 6/21/2012 17:59",
