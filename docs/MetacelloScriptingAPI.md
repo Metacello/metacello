@@ -62,9 +62,10 @@ bootstrapping will no longer be necessary.*
 ### Loading
 
 Metacello loads the packages and dependencies (*required projects*) for a project
-based on the specifications in the configuration of a project.
+based on the specifications in the [configuration of a
+project](#configurationof).
 
-This statement: 
+The statement: 
 
 ```Smalltalk
 Metacello new
@@ -116,7 +117,7 @@ Arguments to the **load** command may be used to specify which groups,
 packages or dependent projects should be loaded instead of the
 `default` group.
 
-This command loads the `Base` group:
+This command loads the `Base` group for the `#stable` version of `Seaside30`:
 
 ```Smalltalk
 Metacello new
@@ -125,7 +126,7 @@ Metacello new
 ```
 
 This command loads the `Base` group, the `Seaside-HTML5` package, 
-and the `Zinc-Seaside` package:
+and the `Zinc-Seaside` package for the `#stable` version of `Seaside30`:
 
 ```Smalltalk
 Metacello new
@@ -143,9 +144,9 @@ command to refresh the configuration.
   for your platform to determine which repository is used. 
   Currently `http:www.squeaksource.com/MetacelloRepository` is used as the default.
 
-* `github://`` projects are implicitly [locked](#locking) when loaded.
+* `github://` projects are implicitly [locked](#locking) when loaded.
 
-* `filetree://` projects are implicitly [locked](#locking] when loaded
+* `filetree://` projects are implicitly [locked](#locking) when loaded
 unless loaded as a project dependency.
 
 * see the [Options](#options) section for additional information.
