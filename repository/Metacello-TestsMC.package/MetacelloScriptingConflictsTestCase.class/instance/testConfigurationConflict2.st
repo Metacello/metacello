@@ -1,6 +1,6 @@
 tests
 testConfigurationConflict2
-    "Conflict must show up in a configuration loaded from a project spec"
+    "disallow upgrade (non-default)"
 
     "variant of testFileTreeLoadConfigurationVersionsNotification2"
 
@@ -13,7 +13,7 @@ testConfigurationConflict2
         silently;
         load ]
         on: MetacelloAllowProjectUpgrade
-        do: [ :ex | ex allow ].
+        do: [ :ex | ex disallow ].
     self
         validateExpectedConfigurationClassName: 'ConfigurationOfConflict'
         expectedConfigurationVersion: '1.0'
@@ -23,8 +23,8 @@ testConfigurationConflict2
         expectedBaselineRepository: nil.
     self
         validateExpectedConfigurationClassName: 'ConfigurationOfExternalX'
-        expectedConfigurationVersion: '0.9.1'
-        expectedConfigurationRepository: 'dictionary://Metacello_Conflict_Test_Repository'
+        expectedConfigurationVersion: '0.9'
+        expectedConfigurationRepository: 'filetree://' , configurationDirectory fullName
         expectedBaselineClassName: 'BaselineOfExternalX'
         expectedBaselineVersion: 'baseline'
         expectedBaselineRepository: 'dictionary://Metacello_Configuration_Test_Repository'

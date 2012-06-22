@@ -1,5 +1,5 @@
 tests
-testFie35Foo40FooLoad
+testFie35Foo40FooLoadDisallow
     Metacello new
         project: 'Fie';
         className: 'MetacelloTestConfigurationOfProjectFie';
@@ -11,6 +11,7 @@ testFie35Foo40FooLoad
         project: 'Fie';
         className: 'MetacelloTestConfigurationOfProjectFie';
         version: '4.0';
+        onUpgrade: [ :ex | ex disallow ];
         repository: 'dictionary://Metacello_Configuration_Test_Repository';
         load: 'Foo'.
-    self validateBlockFie40FooLoad value
+    self validateBlockFie35FooLoad value
