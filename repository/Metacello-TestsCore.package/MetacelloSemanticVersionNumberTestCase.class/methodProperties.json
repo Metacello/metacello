@@ -1,0 +1,27 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"sampleVersionStrings" : "dkh 6/22/2012 11:18",
+		"testEqualityComparison" : "dkh 6/22/2012 09:00",
+		"testInvalidSpecialMatch" : "dkh 6/22/2012 12:15",
+		"testLessThanComparison" : "dkh 6/22/2012 11:29",
+		"testPrinting" : "dkh 6/22/2012 08:59",
+		"testSemanticVersioning" : "dkh 6/22/2012 15:34",
+		"testSemanticVersioningSpecItem10" : "dkh 6/21/2012 18:08",
+		"testSemanticVersioningSpecItem11" : "dkh 6/21/2012 18:08",
+		"testSemanticVersioningSpecItem12" : "dkh 6/21/2012 18:08",
+		"testSemanticVersioningSubsetCompliance" : "dkh 6/21/2012 18:11",
+		"testSpecialMatch" : "dkh 6/22/2012 15:00",
+		"testStandardMatch" : "dkh 6/22/2012 16:50",
+		"testVersion05" : "dkh 6/22/2012 16:54",
+		"testVersion09" : "dkh 6/22/2012 16:55",
+		"testVersion10" : "dkh 6/22/2012 16:50",
+		"testVersion12" : "dkh 6/22/2012 16:55",
+		"testVersion15" : "dkh 6/22/2012 16:55",
+		"testVersion16" : "dkh 6/22/2012 16:56",
+		"testVersion17" : "dkh 6/22/2012 16:57",
+		"testVersion18" : "dkh 6/22/2012 16:51",
+		"testVersion19" : "dkh 6/22/2012 16:57",
+		"validateSemanticVersionStrings:" : "dkh 6/21/2012 18:08",
+		"versionClass" : "dkh 6/22/2012 14:41" } }

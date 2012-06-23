@@ -19,7 +19,7 @@ testFileTreeLoadGithubRefBaseline4
         loadedFrom: 'github://dalehenrich/external:' , MetacelloScriptingResource externalCustomSHA , '/repository'.
     self
         validateExpectedConfigurationClassName: 'ConfigurationOfExternal'
-        expectedConfigurationVersion: '0.9'
+        expectedConfigurationVersion: '0.9.0'
         expectedConfigurationRepository:
             'github://dalehenrich/external:' , MetacelloScriptingResource externalConfigurationSHA , '/repository'
         expectedBaselineClassName: 'BaselineOfExternal'

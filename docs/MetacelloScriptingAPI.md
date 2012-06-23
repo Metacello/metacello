@@ -225,8 +225,8 @@ and answer `false` if you want to disallow the upgrade:
 Metacello new
   configuration: 'Seaside30';
   version: [:proposedVersion | 
-    '3.0.7' asMetacelloVersionNumber <= proposedVersion 
-      and: [ proposedVersion < '3.0.8' asMetacelloVersionNumber ]];
+    (propsedVersion versionNumberFrom: '3.0.7') <= proposedVersion 
+      and: [ proposedVersion < (proposedVersion versionNumberFrom: '3.1.0') ]];
   lock.
 ```
 

@@ -10,7 +10,7 @@ configurationGithubReferenceV: spec
                     with: [ 
                             spec
                                 className: 'ConfigurationOfExternal';
-                                version: '0.9';
+                                version: '0.9.0';
                                 loads: 'Core';
                                 repository:
                                         'github://dalehenrich/external:' , MetacelloScriptingResource externalConfigurationSHA , '/repository' ];

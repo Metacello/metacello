@@ -1,6 +1,6 @@
 baseline:with:
 versionOfX090: spec
-    <version: '0.9'>
+    <version: '0.9.0'>
     spec
         for: #'common'
         do: [ 

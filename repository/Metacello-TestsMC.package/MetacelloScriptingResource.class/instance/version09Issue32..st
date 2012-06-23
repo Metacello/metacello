@@ -1,6 +1,6 @@
 issue 32
 version09Issue32: spec
-    <version: '0.9'>
+    <version: '0.9.0'>
     spec
         for: #'common'
         do: [ 

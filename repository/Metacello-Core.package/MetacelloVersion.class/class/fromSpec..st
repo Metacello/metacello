@@ -1,6 +1,5 @@
 instance creation
 fromSpec: aMetacelloVersionSpec
-
-	^(self fromString: aMetacelloVersionSpec versionString) 
-		spec: aMetacelloVersionSpec;
-		yourself
+    ^ (self new versionNumber: aMetacelloVersionSpec versionNumber)
+        spec: aMetacelloVersionSpec;
+        yourself

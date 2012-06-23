@@ -1,0 +1,18 @@
+{
+	"category" : "Metacello-Core-Model",
+	"classinstvars" : [
+		 ],
+	"classtraitcomposition" : "{}",
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 6/22/2012 11:57",
+	"instvars" : [
+		"normalVersion",
+		"preReleaseVersion",
+		"buildVersion" ],
+	"name" : "MetacelloSemanticVersionNumber",
+	"pools" : [
+		 ],
+	"super" : "Magnitude",
+	"traitcomposition" : "{}",
+	"type" : "normal" }

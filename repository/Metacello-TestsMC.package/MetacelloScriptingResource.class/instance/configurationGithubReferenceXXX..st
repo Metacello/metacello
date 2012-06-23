@@ -9,5 +9,5 @@ configurationGithubReferenceXXX: spec
                 configuration: 'External'
                 with: [ 
                     spec
-                        version: '0.9';
+                        version: '0.9.0';
                         repository: 'http://ss3.gemstone.com/ss/external' ] ]

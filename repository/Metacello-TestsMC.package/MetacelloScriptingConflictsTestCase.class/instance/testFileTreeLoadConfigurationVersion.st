@@ -2,13 +2,13 @@ tests
 testFileTreeLoadConfigurationVersion
     Metacello new
         configuration: 'ExternalX';
-        version: '0.9';
+        version: '0.9.0';
         repository: 'filetree://' , configurationDirectory fullName;
         silently;
         load.
     self
         validateExpectedConfigurationClassName: 'ConfigurationOfExternalX'
-        expectedConfigurationVersion: '0.9'
+        expectedConfigurationVersion: '0.9.0'
         expectedConfigurationRepository: 'filetree://' , configurationDirectory fullName
         expectedBaselineClassName: 'BaselineOfExternalX'
         expectedBaselineVersion: 'baseline'

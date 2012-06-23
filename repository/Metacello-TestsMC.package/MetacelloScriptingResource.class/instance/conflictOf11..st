@@ -1,6 +1,6 @@
 baseline:with:
 conflictOf11: spec
-    <version: '1.1'>
+    <version: '1.1.0'>
     spec
         for: #'common'
         do: [ 
@@ -15,5 +15,5 @@ conflictOf11: spec
                 configuration: 'ExternalX'
                 with: [ 
                     spec
-                        version: '0.9';
+                        version: '0.9.0';
                         repository: 'dictionary://Metacello_Conflict_Test_Repository' ] ]

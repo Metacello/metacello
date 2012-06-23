@@ -12,7 +12,7 @@ testGithubRefV
     expected := 'spec description: ''MetacelloScriptingResource>>configurationGithubReferenceXX:''.
 spec configuration: ''External'' with: [
 		spec
-			versionString: ''0.9'';
+			versionString: ''0.9.0'';
 			repository: ''github://dalehenrich/external:' , MetacelloScriptingResource externalConfigurationSHA
         , '/repository'' ].'.
     self assert: version versionSpec printString = expected

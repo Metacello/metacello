@@ -1,6 +1,6 @@
 invalid configurations
 invalidConfiguration10: spec
-    <version: '1.0'>
+    <version: '1.0.0'>
     spec
         for: #'common'
         do: [ 
@@ -10,6 +10,6 @@ invalidConfiguration10: spec
                 project: 'External'
                 with: [ 
                     spec
-                        version: '0.9';
+                        version: '0.9.0';
                         repository:
                                 'github://dalehenrich/external:' , MetacelloScriptingResource externalConfigurationSHA , '/repository' ] ]

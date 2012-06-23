@@ -1,0 +1,1 @@
+MetacelloSemanticVersionNumber conforms to version 2.0.0-rc.1 of  [Semantic Versioning 2.0.0-rc.1](http://semver.org/)
