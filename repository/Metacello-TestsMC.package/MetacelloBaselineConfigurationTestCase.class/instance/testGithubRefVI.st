@@ -12,6 +12,6 @@ testGithubRefVI
     expected := 'spec description: ''MetacelloScriptingResource>>configurationGithubReferenceXXX:''.
 spec configuration: ''External'' with: [
 		spec
-			versionString: ''0.9'';
+			versionString: ''0.9.0'';
 			repository: ''http://ss3.gemstone.com/ss/external'' ].'.
     self assert: version versionSpec printString = expected

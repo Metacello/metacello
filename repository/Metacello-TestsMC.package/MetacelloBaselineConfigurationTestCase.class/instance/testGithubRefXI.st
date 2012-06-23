@@ -14,7 +14,7 @@ spec
 	project: ''External'' with: [
 		spec
 			className: ''ConfigurationOfExternal'';
-			versionString: ''0.9'';
+			versionString: ''0.9.0'';
 			loads: #(''Core'' );
 			repository: ''github://dalehenrich/external:' , MetacelloScriptingResource externalConfigurationSHA
         ,

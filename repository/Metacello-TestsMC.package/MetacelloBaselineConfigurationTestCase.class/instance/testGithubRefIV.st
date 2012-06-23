@@ -13,7 +13,7 @@ testGithubRefIV
 spec project: ''External'' with: [
 		spec
 			className: ''ConfigurationOfExternal'';
-			versionString: ''0.9'';
+			versionString: ''0.9.0'';
 			repository: ''github://dalehenrich/external:' , MetacelloScriptingResource externalConfigurationSHA
         , '/repository'' ].'.
     self assert: version versionSpec printString = expected
