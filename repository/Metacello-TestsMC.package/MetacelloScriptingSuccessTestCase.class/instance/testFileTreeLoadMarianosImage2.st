@@ -3,13 +3,13 @@ testFileTreeLoadMarianosImage2
     Metacello new
         project: 'DifferentName';
         className: 'MarianosImage';
-        version: '0.9';
+        version: '0.9.0';
         repository: 'filetree://' , configurationDirectory fullName;
         silently;
         load.
     self
         validateExpectedConfigurationClassName: 'MarianosImage'
-        expectedConfigurationVersion: '0.9'
+        expectedConfigurationVersion: '0.9.0'
         expectedConfigurationRepository: 'filetree://' , configurationDirectory fullName
         expectedBaselineClassName: nil
         expectedBaselineVersion: nil

@@ -1,6 +1,6 @@
 invalid configurations
 invalidConfiguration30: spec
-    <version: '3.0'>
+    <version: '3.0.0'>
     spec
         for: #'common'
         do: [ 
@@ -11,4 +11,4 @@ invalidConfiguration30: spec
                 with: [ 
                     spec
                         className: 'ConfigurationOfExternal';
-                        version: '0.9' ] ]
+                        version: '0.9.0' ] ]

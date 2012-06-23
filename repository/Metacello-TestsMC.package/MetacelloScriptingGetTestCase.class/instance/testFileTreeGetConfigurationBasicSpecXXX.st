@@ -8,7 +8,7 @@ testFileTreeGetConfigurationBasicSpecXXX
         configuration: 'ExternalXXX';
         repository: 'filetree://' , configurationDirectory fullName;
         get.
-    basicSpec := (project version: '0.9') basicSpec ]
+    basicSpec := (project version: '0.9.0') basicSpec ]
         on: MetacelloErrorInProjectConstructionNotification
         do: [ :ex | ex resume: true ].
     expected := 'spec blessing: #''development''.

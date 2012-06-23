@@ -7,13 +7,13 @@ testConfigurationConflict1
     self testFileTreeLoadConfigurationVersion.
     Metacello new
         configuration: 'Conflict';
-        version: '1.0';
+        version: '1.0.0';
         repository: 'filetree://' , configurationDirectory fullName;
         silently;
         load.
     self
         validateExpectedConfigurationClassName: 'ConfigurationOfConflict'
-        expectedConfigurationVersion: '1.0'
+        expectedConfigurationVersion: '1.0.0'
         expectedConfigurationRepository: 'filetree://' , configurationDirectory fullName
         expectedBaselineClassName: nil
         expectedBaselineVersion: nil

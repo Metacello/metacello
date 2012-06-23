@@ -8,7 +8,7 @@ testConfigurationConflict5
     self testFileTreeLoadConfigurationVersion.
     Metacello new
         configuration: 'Conflict';
-        version: '1.0';
+        version: '1.0.0';
         repository: 'filetree://' , configurationDirectory fullName;
         onUpgrade: [ :ex :existing | 
                     baseName := existing baseName.
@@ -18,7 +18,7 @@ testConfigurationConflict5
     self assert: baseName = 'ExternalX'.
     self
         validateExpectedConfigurationClassName: 'ConfigurationOfConflict'
-        expectedConfigurationVersion: '1.0'
+        expectedConfigurationVersion: '1.0.0'
         expectedConfigurationRepository: 'filetree://' , configurationDirectory fullName
         expectedBaselineClassName: nil
         expectedBaselineVersion: nil

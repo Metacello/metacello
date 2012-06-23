@@ -8,7 +8,7 @@ testConfigurationConflict2
     [ 
     Metacello new
         configuration: 'Conflict';
-        version: '1.0';
+        version: '1.0.0';
         repository: 'filetree://' , configurationDirectory fullName;
         silently;
         load ]
@@ -16,14 +16,14 @@ testConfigurationConflict2
         do: [ :ex | ex disallow ].
     self
         validateExpectedConfigurationClassName: 'ConfigurationOfConflict'
-        expectedConfigurationVersion: '1.0'
+        expectedConfigurationVersion: '1.0.0'
         expectedConfigurationRepository: 'filetree://' , configurationDirectory fullName
         expectedBaselineClassName: nil
         expectedBaselineVersion: nil
         expectedBaselineRepository: nil.
     self
         validateExpectedConfigurationClassName: 'ConfigurationOfExternalX'
-        expectedConfigurationVersion: '0.9'
+        expectedConfigurationVersion: '0.9.0'
         expectedConfigurationRepository: 'filetree://' , configurationDirectory fullName
         expectedBaselineClassName: 'BaselineOfExternalX'
         expectedBaselineVersion: 'baseline'

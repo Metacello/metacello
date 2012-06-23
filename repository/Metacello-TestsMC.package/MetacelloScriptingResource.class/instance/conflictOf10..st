@@ -1,6 +1,6 @@
 baseline:with:
 conflictOf10: spec
-    <version: '1.0'>
+    <version: '1.0.0'>
     spec
         for: #'common'
         do: [ 

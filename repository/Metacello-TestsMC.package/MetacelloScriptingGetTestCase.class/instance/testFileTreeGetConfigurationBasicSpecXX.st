@@ -7,7 +7,7 @@ testFileTreeGetConfigurationBasicSpecXX
         configuration: 'ExternalXX';
         repository: 'filetree://' , configurationDirectory fullName;
         get.
-    basicSpec := (project version: '0.9') basicSpec.
+    basicSpec := (project version: '0.9.0') basicSpec.
     expected := 'spec blessing: #''development''.
 spec description: ''MetacelloScriptingResource>>versionOfXX:''.
 spec author: ''dkh''.

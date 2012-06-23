@@ -10,7 +10,7 @@ testConfigurationConflict7
     self testFileTreeLoadConfigurationVersions.
     Metacello new
         configuration: 'Conflict';
-        version: '1.1';
+        version: '1.1.0';
         repository: 'filetree://' , configurationDirectory fullName;
         onDowngrade: [ :ex :existing :new | 
                     baseName := existing baseName.
@@ -21,10 +21,10 @@ testConfigurationConflict7
         load.
     self assert: baseName = 'ExternalX'.
     self assert: existingVersion = '0.9.1'.
-    self assert: newVersion = '0.9'.
+    self assert: newVersion = '0.9.0'.
     self
         validateExpectedConfigurationClassName: 'ConfigurationOfConflict'
-        expectedConfigurationVersion: '1.1'
+        expectedConfigurationVersion: '1.1.0'
         expectedConfigurationRepository: 'filetree://' , configurationDirectory fullName
         expectedBaselineClassName: nil
         expectedBaselineVersion: nil

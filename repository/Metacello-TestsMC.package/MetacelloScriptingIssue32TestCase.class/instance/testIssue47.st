@@ -4,7 +4,7 @@ testIssue47
 
     Metacello new
         configuration: 'Issue32';
-        version: '1.0';
+        version: '1.0.0';
         repository: 'dictionary://Metacello_Configuration_Test_Repository';
         silently;
         load.
@@ -12,7 +12,7 @@ testIssue47
     self assert: (Smalltalk at: #'Metacello_Configuration_Test_DoIt_Result').
     self
         validateExpectedConfigurationClassName: 'ConfigurationOfIssue32'
-        expectedConfigurationVersion: '1.0'
+        expectedConfigurationVersion: '1.0.0'
         expectedConfigurationRepository: 'dictionary://Metacello_Configuration_Test_Repository'
         expectedBaselineClassName: 'BaselineOfIssue32'
         expectedBaselineVersion: 'baseline'

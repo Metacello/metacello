@@ -5,7 +5,7 @@ testFileTreeLoadConfigurationVersionsNotification3
     self testFileTreeLoadConfigurationVersions.
     Metacello new
         configuration: 'ExternalX';
-        version: '0.9';
+        version: '0.9.0';
         repository: 'filetree://' , configurationDirectory fullName;
         silently;
         load.
