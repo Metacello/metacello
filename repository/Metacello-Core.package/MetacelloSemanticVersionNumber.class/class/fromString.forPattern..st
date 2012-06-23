@@ -24,13 +24,11 @@ fromString: aString forPattern: forPattern
                 ifFalse: [ 
                     integer := subString asInteger.
                     integer < 0
-                        ifTrue: [ self error: 'invalid version number' ] ].
+                        ifTrue: [ self error: 'invalid version number: normal version component must be integer ' , subString printString ] ].
             normalComponents add: integer.
             identifierCount := identifierCount + 1 ].
-    identifierCount > 3
-        ifTrue: [ self error: 'invalid version number' ].
-    (forPattern not and: [ identifierCount < 3 ])
-        ifTrue: [ identifierCount + 1 to: 3 do: [ :ignored | normalComponents add: 0 ] ].
+    (forPattern not and: [ identifierCount ~= 3 ])
+        ifTrue: [ self error: 'invalid version number: normal version must have only 3 components' ].
     preReleaseEnd := build = 0
         ifTrue: [ aString size ]
         ifFalse: [ build - 1 ].
@@ -40,7 +38,7 @@ fromString: aString forPattern: forPattern
             (versionString findTokens: '.')
                 do: [ :subString | 
                     (forPattern or: [ self isSemanticIdentifier: subString ])
-                        ifFalse: [ self error: 'invalid version number' ].
+                        ifFalse: [ self error: 'invalid version number: preRelease version component must be one of [0-9A-Za-z-]' ].
                     preReleaseComponents add: (self extractNumericComponent: subString forPattern: forPattern) ] ].
     build > 0
         ifTrue: [ 
@@ -48,7 +46,7 @@ fromString: aString forPattern: forPattern
             (versionString findTokens: '.')
                 do: [ :subString | 
                     (forPattern or: [ self isSemanticIdentifier: subString ])
-                        ifFalse: [ self error: 'invalid version number' ].
+                        ifFalse: [ self error: 'invalid version number: build version component must be one of [0-9A-Za-z-]' ].
                     buildComponents add: (self extractNumericComponent: subString forPattern: forPattern) ] ].
     ^ self new
         normalVersion: normalComponents;
