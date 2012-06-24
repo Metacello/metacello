@@ -2,5 +2,8 @@ querying
 currentlyLoadedClassesInProject
     | classes |
     classes := Set new.
-    self configurationProjectSpecIfPresent: [ :configuration |  ] ifAbsent: [  ].
-    self baselineProjectSpecIfPresent: [ :baseline |  ] ifAbsent: [  ]
+    self
+        configurationProjectSpecIfPresent: [ :spec | classes addAll: spec currentlyLoadedClassesInVersion ]
+        ifAbsent: [  ].
+    self baselineProjectSpecIfPresent: [ :spec | classes addAll: spec currentlyLoadedClassesInVersion ] ifAbsent: [  ].
+    ^ classes
