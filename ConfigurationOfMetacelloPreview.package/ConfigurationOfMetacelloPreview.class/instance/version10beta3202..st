@@ -1,6 +1,6 @@
 versions
 version10beta3202: spec
-    <version: '1.0-beta.32.2'>
+    <version: '1.0.0-beta.32.2'>
     spec
         for: #'common'
         do: [ 

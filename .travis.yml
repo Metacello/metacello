@@ -3,8 +3,10 @@ language: erlang
 # build matrix: "PharoCore-1.3" or "Squeak4.3" ... parallel tests for
 #   all listed environments
 env:
-   - ST=PharoCore-1.3
-   - ST=Squeak4.3
+   - ST=PharoCore-1.3 TRAVIS_SCRIPT=travisCI.st
+   - ST=PharoCore-1.3 TRAVIS_SCRIPT=travisPreviewCI.st
+   - ST=Squeak4.3 TRAVIS_SCRIPT=travisCI.st
+   - ST=Squeak4.3 TRAVIS_SCRIPT=travisPreviewCI.st
 
 install:
    - export PROJECT_HOME="$(pwd)"
@@ -18,7 +20,8 @@ install:
 
 script:
 
-   - ./build.sh -i $ST -s latAmMirror.st -m -f "$PROJECT_HOME/tests/travisCI.st" -o travisCI
+   - echo "running: $PROJECT_HOME/tests/$TRAVIS_SCRIPT"
+   - ./build.sh -i $ST -s latAmMirror.st -m -f "$PROJECT_HOME/tests/$TRAVIS_SCRIPT" -o travisCI
    - cd "${BUILD_PATH}/travisCI/"
    - if ( test -e PharoDebug.log ); then cat PharoDebug.log; fi
    - if ( test -e PharoDebug.log ); then die; fi
