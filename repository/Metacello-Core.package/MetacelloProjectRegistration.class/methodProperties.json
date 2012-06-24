@@ -14,7 +14,7 @@
 		"registerProjectRegistration:" : "dkh 6/14/2012 21:17",
 		"registerProjectSpec:" : "dkh 6/14/2012 21:27",
 		"registerProjectSpec:ifPresent:" : "dkh 6/14/2012 21:37",
-		"registrationForClassNamed:ifAbsent:" : "dkh 6/24/2012 11:35",
+		"registrationForClassNamed:ifAbsent:" : "dkh 6/24/2012 14:32",
 		"registrationForProjectSpec:ifAbsent:ifPresent:" : "dkh 6/14/2012 21:35",
 		"resetRegistry" : "dkh 6/15/2012 07:01" },
 	"instance" : {
@@ -43,7 +43,7 @@
 		"projectName" : "dkh 6/5/2012 19:01:24",
 		"projectName:" : "dkh 6/5/2012 19:01:24",
 		"registerProject" : "dkh 6/15/2012 06:26",
-		"registrationIfPresent:ifAbsent:" : "dkh 6/14/2012 22:16",
+		"registrationIfPresent:ifAbsent:" : "dkh 6/24/2012 14:37",
 		"repository" : "dkh 6/13/2012 13:56",
 		"unregisterProject" : "dkh 6/14/2012 21:49",
 		"version" : "dkh 6/13/2012 13:52" } }
