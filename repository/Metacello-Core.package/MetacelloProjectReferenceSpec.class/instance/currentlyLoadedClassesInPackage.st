@@ -1,0 +1,3 @@
+querying
+currentlyLoadedClassesInPackage
+    ^ self projectReference currentlyLoadedClassesInPackage

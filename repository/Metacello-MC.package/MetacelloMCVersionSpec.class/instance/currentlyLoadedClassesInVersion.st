@@ -3,11 +3,7 @@ currentlyLoadedClassesInVersion
 	| classes |
 	classes := Set new.
 	self
-		projectDo: [ :ignored |  ]
-		packageDo: [ :packageSpec | 
-			| wc |
-			wc := [ packageSpec workingCopy ] on: Error do: [ :ex | ex return: nil ].
-			wc ~~ nil
-				ifTrue: [ classes addAll: wc packageInfo classes ] ]
+		projectDo: [ :projectSpec |  classes addAll: projectSpec currentlyLoadedClassesInPackage]
+		packageDo: [ :packageSpec |classes addAll: packageSpec currentlyLoadedClassesInPackage]
 		groupDo: [ :ignored |  ].
-	^ classes
+	^ classes 
