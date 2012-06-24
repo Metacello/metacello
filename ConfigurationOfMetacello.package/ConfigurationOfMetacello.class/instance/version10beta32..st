@@ -13,17 +13,17 @@ version10beta32: spec
                 project: 'Gofer' with: '1.0.5.1';
                 project: 'Gofer Tests' with: '1.0.5.1'.
             spec
-                package: 'Metacello-Base' with: 'Metacello-Base-dkh.67';
-                package: 'Metacello-Core' with: 'Metacello-Core-dkh.587';
+                package: 'Metacello-Base' with: 'Metacello-Base-dkh.71';
+                package: 'Metacello-Core' with: 'Metacello-Core-dkh.599';
                 package: 'Metacello-FileTree' with: 'Metacello-FileTree-dkh.28';
-                package: 'Metacello-GitHub' with: 'Metacello-GitHub-dkh.13';
-                package: 'Metacello-MC' with: 'Metacello-MC-dkh.624';
+                package: 'Metacello-GitHub' with: 'Metacello-GitHub-dkh.17';
+                package: 'Metacello-MC' with: 'Metacello-MC-dkh.627';
                 package: 'Metacello-Reference' with: 'Metacello-Reference-dkh.33';
                 package: 'Metacello-Tutorial' with: 'Metacello-Tutorial-dkh.25';
                 package: 'OB-Metacello' with: 'OB-Metacello-dkh.83';
                 package: 'Metacello-TestsReference' with: 'Metacello-TestsReference-dkh.19';
-                package: 'Metacello-TestsCore' with: 'Metacello-TestsCore-dkh.18';
-                package: 'Metacello-TestsMC' with: 'Metacello-TestsMC-dkh.259';
+                package: 'Metacello-TestsCore' with: 'Metacello-TestsCore-dkh.26';
+                package: 'Metacello-TestsMC' with: 'Metacello-TestsMC-dkh.270';
                 package: 'Metacello-TestsTutorial' with: 'Metacello-TestsTutorial-dkh.36';
                 package: 'Metacello-ToolBox' with: 'Metacello-ToolBox-dkh.115' ].
     spec
@@ -56,4 +56,4 @@ version10beta32: spec
                 package: 'Metacello-Platform' with: 'Metacello-Platform.pharo-dkh.27' ].
     spec for: #'pharo1.2.x' do: [ spec package: 'Metacello-Issue3758' with: 'Metacello-Issue3758-dkh.2' ].
     spec for: #'pharo1.3.x' do: [ spec package: 'Metacello-Issue3758' with: 'Metacello-Issue3758-dkh.2' ].
-    spec for: #'squeak' do: [ spec package: 'Metacello-Platform' with: 'Metacello-Platform.squeak-dkh.12' ]
+    spec for: #'squeak' do: [ spec package: 'Metacello-Platform' with: 'Metacello-Platform.squeak-dkh.13' ]

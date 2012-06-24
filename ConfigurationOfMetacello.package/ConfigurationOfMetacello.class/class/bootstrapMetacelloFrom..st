@@ -18,5 +18,5 @@ bootstrapMetacelloFrom: repositoryUrl
                         ifFalse: [ 'Metacello-Platform.squeak-dkh.10' ] ]
                 ifFalse: [ 
                     (versionString beginsWith: 'Pharo')
-                        ifTrue: [ 'Metacello-Platform.pharo-DaleHenrichs.25' ] ] ].
+                        ifTrue: [ 'Metacello-Platform.pharo-dkh.27' ] ] ].
     self bootstrapPackage: platformPkg from: repositoryUrl
