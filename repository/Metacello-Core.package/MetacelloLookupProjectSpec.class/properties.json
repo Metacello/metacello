@@ -2,6 +2,7 @@
 	"category" : "Metacello-Core-Scripts",
 	"classinstvars" : [
 		 ],
+	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
 	"commentStamp" : "dkh 6/1/2012 10:02",
@@ -11,4 +12,5 @@
 	"pools" : [
 		 ],
 	"super" : "MetacelloScriptProjectSpecNotification",
+	"traitcomposition" : "{}",
 	"type" : "normal" }

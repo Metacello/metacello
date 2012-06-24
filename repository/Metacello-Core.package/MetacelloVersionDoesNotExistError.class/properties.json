@@ -2,6 +2,7 @@
 	"category" : "Metacello-Core-Exceptions-Errors",
 	"classinstvars" : [
 		 ],
+	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
@@ -12,4 +13,5 @@
 	"pools" : [
 		 ],
 	"super" : "Error",
+	"traitcomposition" : "{}",
 	"type" : "normal" }

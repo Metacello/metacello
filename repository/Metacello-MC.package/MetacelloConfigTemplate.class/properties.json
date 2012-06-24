@@ -2,6 +2,7 @@
 	"category" : "Metacello-MC-Model",
 	"classinstvars" : [
 		 ],
+	"classtraitcomposition" : "{}",
 	"classvars" : [
 		"LastVersionLoad" ],
 	"commentStamp" : "<historical>",
@@ -11,4 +12,5 @@
 	"pools" : [
 		 ],
 	"super" : "Object",
+	"traitcomposition" : "{}",
 	"type" : "normal" }

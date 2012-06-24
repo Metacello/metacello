@@ -2,6 +2,7 @@
 	"category" : "Metacello-Core-Exceptions-Notifications",
 	"classinstvars" : [
 		 ],
+	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
@@ -11,4 +12,5 @@
 	"pools" : [
 		 ],
 	"super" : "MetacelloCleanNotification",
+	"traitcomposition" : "{}",
 	"type" : "normal" }
