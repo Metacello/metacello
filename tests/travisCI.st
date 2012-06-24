@@ -5,6 +5,7 @@ gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 "Load the Metacello Tests ... "
 Metacello new
 	configuration: 'Metacello';
+  vesion: '1.0-beta.32';
   repository: 'filetree://', gitPath, '/metacello-work/repository';
   load: 'Tests'.
 
