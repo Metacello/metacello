@@ -6,7 +6,7 @@ gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 Metacello new
 	configuration: 'MetacelloPreview';
   version: '1.0.0-beta.32.2';
-  repository: 'filetree://', gitPath, '/metacello-work/repository';
+  repository: 'filetree://', gitPath, '/metacello-work';
   load: 'Tests'.
 
 
