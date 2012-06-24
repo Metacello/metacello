@@ -2,7 +2,6 @@
 	"category" : "ConfigurationOfMetacelloPreview",
 	"classinstvars" : [
 		 ],
-	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
@@ -12,5 +11,4 @@
 	"pools" : [
 		 ],
 	"super" : "ConfigurationOf",
-	"traitcomposition" : "{}",
 	"type" : "normal" }

@@ -13,7 +13,7 @@ version10beta32: spec
                 project: 'Gofer' with: '1.0.5.1';
                 project: 'Gofer Tests' with: '1.0.5.1'.
             spec
-                package: 'Metacello-Base' with: 'Metacello-Base-dkh.73';
+                package: 'Metacello-Base' with: 'Metacello-Base-dkh.74';
                 package: 'Metacello-Core' with: 'Metacello-Core-dkh.599';
                 package: 'Metacello-FileTree' with: 'Metacello-FileTree-dkh.28';
                 package: 'Metacello-GitHub' with: 'Metacello-GitHub-dkh.17';

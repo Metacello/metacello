@@ -10,10 +10,18 @@ version10beta3202: spec
                     'use /usr/bin/unzip to extract archive
   https://github.com/dalehenrich/metacello-work/commit/1497087b787bc574cfb76dcd17c272b27e37556a'.
             spec author: 'dkh'.
-            spec timestamp: '6/16/2012 20:33' ].
+            spec timestamp: '6/24/2012 12:37' ].
     spec
         for: #'squeakCommon'
         do: [ 
             spec
                 baseline: 'Metacello'
-                with: [ spec repository: 'github://dalehenrich/metacello-work:1497087b787bc574cfb76dcd17c272b27e37556a/repository' ] ]
+                    with: [ 
+                            spec
+                                loads: #('batch');
+                                repository:
+                                        'github://dalehenrich/metacello-work:1497087b787bc574cfb76dcd17c272b27e37556a/repository' ];
+                project: 'batch' copyFrom: 'Metacello' with: [ spec loads: 'batch' ];
+                project: 'Tests' copyFrom: 'Metacello' with: [ spec loads: 'Tests' ];
+                yourself.
+            spec group: 'default' with: #('batch') ]
