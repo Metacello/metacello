@@ -12,6 +12,14 @@ ensureMetacello: loadList
                     [ 
                     "bootstrap Metacello"
                     self bootstrapMetacelloFrom: repositoryUrl.
+                    Smalltalk
+                        at: #'ConfigurationOfMetacello'
+                        ifAbsent: [ 
+                            gofer := (Smalltalk at: #'Gofer') new.
+                            gofer
+                                perform: #'url:' with: repositoryUrl;
+                                perform: #'package:' with: 'ConfigurationOfMetacello';
+                                perform: #'load' ].
                     version := (Smalltalk at: #'ConfigurationOfMetacello') project version: '1.0-beta.32'.	"bootstrap with 1.0-beta.32"
                     retry
                         ifTrue: [ 
@@ -21,10 +29,13 @@ ensureMetacello: loadList
                                     (Array with: (MCHttpRepository location: repositoryUrl user: '' password: '')) ].
                     version load: loadList.
                     gofer := (Smalltalk at: #'Gofer') new.
-                    gofer
-                        perform: #'gemsource:' with: 'metacello';
-                        perform: #'package:' with: 'ConfigurationOfMetacelloPreview';
-                        perform: #'load'.
+                    Smalltalk
+                        at: #'ConfigurationOfMetacelloPreview'
+                        ifAbsent: [ 
+                            gofer
+                                perform: #'url:' with: repositoryUrl;
+                                perform: #'package:' with: 'ConfigurationOfMetacelloPreview';
+                                perform: #'load' ].
                     version := (Smalltalk at: #'ConfigurationOfMetacelloPreview') project version: '1.0.0-beta.32.2'.	"load latest from GitHub"
                     version load: loadList.
                     ^ self ]
