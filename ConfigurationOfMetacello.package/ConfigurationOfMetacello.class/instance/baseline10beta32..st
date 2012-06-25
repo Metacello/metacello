@@ -50,8 +50,7 @@ baseline10beta32: spec
                 yourself.
             spec
                 group: 'default' with: #('Metacello-Core' 'Metacello-ToolBox' 'Metacello-GitHub');
-                group: 'bootstrap' with: #('Metacello-Core');
-                group: 'batch' with: #('bootstrap' 'Metacello-GitHub');
+                group: 'batch' with: #('Metacello-Core' 'Metacello-GitHub');
                 group: 'Base Configuration' with: #('Metacello-Base');
                 group: 'Core' with: #('default');
                 group: 'Tutorial' with: #('Metacello-Tutorial' 'Metacello-Reference');

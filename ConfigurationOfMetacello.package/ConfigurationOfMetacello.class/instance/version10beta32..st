@@ -6,18 +6,18 @@ version10beta32: spec
         do: [ 
             spec blessing: #'development'.
             spec author: 'dkh'.
-            spec timestamp: '6/24/2012 17:17'.
+            spec timestamp: '6/25/2012 10:17'.
             spec postLoadDoIt: #'metacelloPrimeRegistry'.
             spec
                 project: 'FileTree' with: '1.0';
                 project: 'Gofer' with: '1.0.5.1';
                 project: 'Gofer Tests' with: '1.0.5.1'.
             spec
-                package: 'Metacello-Base' with: 'Metacello-Base-dkh.76';
-                package: 'Metacello-Core' with: 'Metacello-Core-dkh.599';
+                package: 'Metacello-Base' with: 'Metacello-Base-dkh.78';
+                package: 'Metacello-Core' with: 'Metacello-Core-dkh.604';
                 package: 'Metacello-FileTree' with: 'Metacello-FileTree-dkh.28';
                 package: 'Metacello-GitHub' with: 'Metacello-GitHub-dkh.17';
-                package: 'Metacello-MC' with: 'Metacello-MC-dkh.627';
+                package: 'Metacello-MC' with: 'Metacello-MC-dkh.629';
                 package: 'Metacello-Reference' with: 'Metacello-Reference-dkh.33';
                 package: 'Metacello-Tutorial' with: 'Metacello-Tutorial-dkh.25';
                 package: 'OB-Metacello' with: 'OB-Metacello-dkh.83';
