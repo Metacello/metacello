@@ -1,4 +1,6 @@
-"Load and run tests to be performed by TravisCI"
+"Loading the preview, should be a simulation of the standard bootstrap
+after Metacello-Base has been loaded ... which is what the test harndess
+does"
 | gitPath |
 gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 
