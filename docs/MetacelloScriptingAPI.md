@@ -7,7 +7,9 @@ Currently [Pharo1.3][1] and [Squeak4.3][2] are supported.
 
 * [Installation](#installation)
 * [Using the Metacello Scripting API](#using-the-metacello-scripting-api)
+* [Best Practice](#best-practice)
 * [Specifying Configurations](#specifying-configurations)
+* [Metacello Version Numbers](*metacello-version-numbers)
 * [Help](#help)
 
 ## Installation
@@ -30,7 +32,7 @@ Installer gemsource
     install: 'ConfigurationOfMetacello'. 
 ```
 
-then bootstrap `Metacello 1.-beta.32` and install the `Metacello Preview` code (both images):
+then bootstrap `Metacello 1.0-beta.32` and install the `Metacello Preview` code (both images):
 
 ```Smalltalk
 ((Smalltalk at: #ConfigurationOfMetacello) project 
@@ -51,7 +53,9 @@ bootstrapping will no longer be necessary.*
 
 * [Loading](#loading)
 * [Upgrading](#upgrading)
+* [Downgrading](#downgrading)
 * [Locking](#locking)
+* [Unlocking](#unlocking)
 * [Linking](#linking)
 * [Getting](#getting)
 * [Fetching](#fetching)
@@ -163,9 +167,9 @@ Metacello upgrade.
 ```
 
 The `upgrade` command iterates over all loaded projects; refreshes
-the project configuration and loads the `#stable` version of the project.
+the project configuration and loads the `#stable` version of each project.
 
-You can also selectively upgrade projects:
+You can also selectively upgrade an individual project:
 
 ```Smalltalk
 Metacello new
@@ -183,13 +187,55 @@ Metacello new
 ```
 
 In this case the project configuration is refreshed and the specified
-version is loaded.
+version is loaded. If the project was previously [locked](*locking), the
+lock is changed to reflect the new version of the project.
+
+If you want to ensure that all dependent projects are upgraded along
+with the target project, you can write an [onUpgrade:](*onupgrade)
+clause:
+
+```Smalltalk
+Metacello new
+  configuration: 'Seaside30';
+  version: '3.0.8';
+  onUpgrade: [:ex | ex allow];
+  upgrade.
+```
+
+Otherwise, project locks for dependent projects are honored by the
+upgrade command. 
 
 #### `upgrade` Notes
 
-* [project locking](#locking) is respected by the upgrade command. 
+* [project locking](#locking) is respected for dependent projects.
 
 * see the [Options](#options) section for additional information.
+
+#### Downgrading
+
+The upgrade command can be used to `downgrade` the version of a
+project:
+
+```Smalltalk
+Metacello new
+  configuration: 'Seaside30';
+  version: '3.0.0';
+  upgrade.
+```
+
+If you want to ensure that all dependent projects are downgraded along
+with the target project, you can write an [onDowngrade:](*ondowngrade)
+clause:
+
+```Smalltalk
+Metacello new
+  configuration: 'Seaside30';
+  version: '3.0.0';
+  onDowngrade: [:ex | ex allow];
+  upgrade.
+```
+
+Otherwise, dependent projects are not normally downgraded.
 
 ### Locking
 
@@ -202,7 +248,7 @@ conditions:
   range of versions) for a project.
 * You may be actively developing a particular version of a 
   project and you don't want the
-  project upgraded out from under you.
+  project upgraded (or downgraded) out from under you.
 * You may be working with a git checkout of a project and you want to
   continue using the git checkout.
 
@@ -219,7 +265,7 @@ Metacello new
 ```
 
 Or you can specify a block to be evaluated against the `proposedVersion`
-and answer `false` if you want to disallow the upgrade:
+and answer `true` to allow limited upgrades:
 
 ```Smalltalk
 Metacello new
@@ -257,6 +303,8 @@ Metacello new
       baseline: 'Seaside30';
       lock.
     ```
+
+### Unlocking
 
 ### Linking
 
@@ -331,11 +379,17 @@ Metacello list.
 ####onDowngrade:
 ####onConflict:
 ####silently
+## Best Practice
+### Use #development and #release blessings
+#### Semantic Versioning
+### Validate configuration before commit
+### GitHub project structure
 ## Specifying Configurations
 
 ### ConfigurationOf
 ### BaselineOf
 
+## Metacello Version Numbers
 ## Help
 
 [1]: http://www.pharo-project.org/pharo-download/release-1-3
