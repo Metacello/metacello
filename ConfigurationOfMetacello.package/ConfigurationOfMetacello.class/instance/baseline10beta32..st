@@ -72,21 +72,23 @@ baseline10beta32: spec
                                 className: 'ConfigurationOfHelpSystem';
                                 versionString: #'1.0-baseline';
                                 loads: #('Core');
-                                repository: 'http://www.squeaksource.com/MetacelloRepository' ];
+                                repository: 'http://www.squeaksource.com/MetacelloRepository';
+                                repository: 'http://dsal.cl/squeaksource/MetacelloRepository' ];
                 project: 'OmniBrowser'
                     with: [ 
                             spec
                                 className: 'ConfigurationOfOmniBrowser';
                                 versionString: #'stable';
                                 loads: #('Core');
-                                repository: 'http://www.squeaksource.com/MetacelloRepository' ];
+                                repository: 'http://www.squeaksource.com/MetacelloRepository';
+                                repository: 'http://dsal.cl/squeaksource/MetacelloRepository' ];
                 project: 'OSProcess'
                     with: [ 
                             spec
                                 className: 'ConfigurationOfOSProcess';
                                 versionString: #'stable';
                                 repository: 'http://www.squeaksource.com/MetacelloRepository';
-                                repository: 'http://seaside.gemstone.com/ss/metacello' ];
+                                repository: 'http://dsal.cl/squeaksource/MetacelloRepository' ];
                 yourself.
             spec
                 package: 'Metacello-GitHub' with: [ spec requires: #('OSProcess') ];
@@ -111,7 +113,8 @@ baseline10beta32: spec
                             spec
                                 className: 'ConfigurationOfProfStef';
                                 versionString: #'stable';
-                                repository: 'http://www.squeaksource.com/MetacelloRepository' ];
+                                repository: 'http://www.squeaksource.com/MetacelloRepository';
+                                repository: 'http://dsal.cl/squeaksource/MetacelloRepository' ];
                 yourself.
             spec
                 package: 'Metacello-ProfStef'
