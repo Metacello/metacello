@@ -4,13 +4,10 @@ version10beta3202: spec
     spec
         for: #'common'
         do: [ 
-            spec blessing: #'release'.
-            spec
-                description:
-                    'use /usr/bin/unzip to extract archive
-  https://github.com/dalehenrich/metacello-work/commit/1497087b787bc574cfb76dcd17c272b27e37556a'.
+            spec blessing: #'development'.
+            spec description: 'pick up fix for Issue #60 from master branch'.
             spec author: 'dkh'.
-            spec timestamp: '6/24/2012 12:37' ].
+            spec timestamp: '6/24/2012 16:56' ].
     spec
         for: #'squeakCommon'
         do: [ 
@@ -20,7 +17,7 @@ version10beta3202: spec
                             spec
                                 loads: #('batch');
                                 repository:
-                                        'github://dalehenrich/metacello-work:1497087b787bc574cfb76dcd17c272b27e37556a/repository' ];
+                                        'github://dalehenrich/metacello-work:3af21fb16a3485b0924e091cd1f2a723d162cea5/repository' ];
                 project: 'batch' copyFrom: 'Metacello' with: [ spec loads: 'batch' ];
                 project: 'Tests' copyFrom: 'Metacello' with: [ spec loads: 'Tests' ];
                 yourself.
