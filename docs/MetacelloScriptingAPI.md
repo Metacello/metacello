@@ -56,7 +56,6 @@ bootstrapping will no longer be necessary.*
 * [Downgrading](#downgrading)
 * [Locking](#locking)
 * [Unlocking](#unlocking)
-* [Linking](#linking)
 * [Getting](#getting)
 * [Fetching](#fetching)
 * [Recording](#recording)
@@ -306,13 +305,10 @@ Metacello new
 
 ### Unlocking
 
-### Linking
-
 ```Smalltalk
 Metacello new
   baseline: 'Seaside30';
-  repository: 'filetree:///opt/git/Seaside30/repository';
-  link.
+  unlock.
 ```
 
 ### Getting
