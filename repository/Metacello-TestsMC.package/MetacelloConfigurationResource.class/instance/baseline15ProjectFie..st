@@ -2,6 +2,8 @@ ConfigurationOfProjectFie
 baseline15ProjectFie: spec
     "self reset"
 
+    "shouldn't affect anything ... the import: should only take effect on a load"
+
     <version: '1.5'>
     spec
         for: #'common'
@@ -13,9 +15,4 @@ baseline15ProjectFie: spec
                                 className: 'MetacelloTestConfigurationOfFoo';
                                 versionString: '3.5';
                                 repository: 'dictionary://Metacello_Configuration_Test_Repository' ];
-                package: 'GeauxBar'
-                    with: [ 
-                            spec
-                                repository: 'dictionary://Metacello_Gofer_Test_Repository';
-                                requires: '1' ];
                 import: 'Foo' ]
