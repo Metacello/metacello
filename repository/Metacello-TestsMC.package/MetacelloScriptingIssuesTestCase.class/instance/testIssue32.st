@@ -1,5 +1,5 @@
 tests
-test
+testIssue32
     Metacello new
         configuration: 'Issue32';
         version: '0.9.0';

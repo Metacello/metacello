@@ -1,21 +1,23 @@
 querying
-packageNamed: aString forMap: map ifAbsent: aBlock
-    | package |
-    package := map at: aString ifAbsent: [  ].
-    package == nil
-        ifTrue: [ 
-            (aString = 'default' or: [ aString = 'ALL' ])
-                ifTrue: [ 
-                    package := self project groupSpec
+packageNamed: aString forMap: map ifAbsent: absentBlock
+    | importSpec |
+    ^ map
+        at: aString
+        ifAbsent: [ 
+            self import
+                ifNil: [ 
+                    (aString = 'default' or: [ aString = 'ALL' ])
+                        ifTrue: [ 
+                            self project groupSpec
+                                name: aString;
+                                includes: self packageNames;
+                                yourself ]
+                        ifFalse: [ absentBlock value ] ]
+                ifNotNil: [ 
+                    "expect the 'missing' name to be satisfied within context of imported project"
+                    importSpec := (map at: self import ifAbsent: absentBlock) copy
                         name: aString;
-                        includes: self packageNames;
-                        yourself ]
-                ifFalse: [ 
-                    self import
-                        ifNil: [ ^ aBlock value ]
-                        ifNotNil: [ 
-                            "expect the 'missing' name to be satisfied within context of imported project"
-                            ^ (map at: self import ifAbsent: aBlock) copy
-                                mergeImportLoads: {aString};
-                                yourself ] ] ].
-    ^ package
+                        mergeImportLoads: {aString};
+                        yourself.
+                    importSpec projectReference name: aString.
+                    importSpec ] ]
