@@ -31,4 +31,5 @@ setUp
         setUpConfigurationIssue32;
         setUpBaselineIssue32;
         setUpConfigurationIssue59;
+        setUpConfiguration63;
         yourself

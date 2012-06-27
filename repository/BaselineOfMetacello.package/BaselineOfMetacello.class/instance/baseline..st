@@ -5,7 +5,7 @@ baseline: spec
         for: #'common'
         do: [ 
             spec
-                baseline: 'FileTree' with: [ spec loads: 'default' ];
+                baseline: 'FileTree';
                 project: 'Gofer'
                     with: [ 
                             spec
@@ -31,7 +31,10 @@ baseline: spec
                 package: 'Metacello-Tutorial' with: [ spec requires: #('Metacello-Core') ];
                 package: 'Metacello-TestsCore' with: [ spec requires: #('Metacello-Core') ];
                 package: 'Metacello-TestsMC'
-                    with: [ spec requires: #('Metacello-MC' 'Metacello-TestsCore' 'Gofer Tests' 'Metacello-ToolBox')	"postLoadDoIt: #'testsMC10beta25PostLoadDoIt';" ];
+                    with: [ 
+                            spec
+                                postLoadDoIt: #'testResourcePostLoadDoIt';
+                                requires: #('Metacello-MC' 'Metacello-TestsCore' 'Gofer Tests' 'Metacello-ToolBox') ];
                 package: 'Metacello-TestsReference' with: [ spec requires: #('Metacello-Reference') ];
                 package: 'Metacello-TestsTutorial' with: [ spec requires: #('Metacello-Tutorial' 'Metacello-TestsMC') ];
                 package: 'OB-Metacello'
@@ -39,8 +42,7 @@ baseline: spec
                 yourself.
             spec
                 group: 'default' with: #('Metacello-Core' 'Metacello-ToolBox' 'Metacello-GitHub');
-                group: 'bootstrap' with: #('Metacello-Core');
-                group: 'batch' with: #('bootstrap' 'Metacello-GitHub');
+                group: 'batch' with: #('Metacello-Core' 'Metacello-GitHub');
                 group: 'Base Configuration' with: #('Metacello-Base');
                 group: 'Core' with: #('default');
                 group: 'Tutorial' with: #('Metacello-Tutorial' 'Metacello-Reference');

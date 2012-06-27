@@ -1,4 +1,3 @@
 querying
 packageSpecsInLoadOrder
-
-	^self packages packageSpecsInLoadOrder
+    ^ self packages packageSpecsInLoadOrder
