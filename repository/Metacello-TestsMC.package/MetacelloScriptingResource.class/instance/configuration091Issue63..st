@@ -1,5 +1,5 @@
 issue 63
-configurationIssue63: spec
+configuration091Issue63: spec
     <version: '0.9.1'>
     spec
         for: #'common'

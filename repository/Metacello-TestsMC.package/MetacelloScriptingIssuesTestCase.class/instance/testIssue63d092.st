@@ -1,18 +1,21 @@
 tests
-testIssue63d
+testIssue63d092
     Metacello new
         configuration: 'Issue63';
-        version: '0.9.1';
+        version: '0.9.2';
         repository: 'dictionary://Metacello_Configuration_Test_Repository';
         silently;
         load: 'Core'.
     self
         verify: 'External-Core'
         loadedFrom: 'github://dalehenrich/external:' , MetacelloScriptingResource externalCustomSHA , '/repository'.
-    self verifyPackageNotLoaded: 'External-Tests'.
+    self
+        verifyPackageNotLoaded: 'External-Tests';
+        verifyPackageNotLoaded: 'GoferFoo';
+        verifyPackageNotLoaded: 'GoferBar'.
     self
         validateExpectedConfigurationClassName: 'ConfigurationOfIssue63'
-        expectedConfigurationVersion: '0.9.1'
+        expectedConfigurationVersion: '0.9.2'
         expectedConfigurationRepository: 'dictionary://Metacello_Configuration_Test_Repository'
         expectedBaselineClassName: 'BaselineOfExternal'
         expectedBaselineVersion: 'baseline'

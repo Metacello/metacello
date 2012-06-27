@@ -1,3 +1,3 @@
 importing
 mergeImportLoads: aLoadList
-    self error: 'import: can only be used for project specs'
+    self error: 'import: can only be used with baseline project specs'
