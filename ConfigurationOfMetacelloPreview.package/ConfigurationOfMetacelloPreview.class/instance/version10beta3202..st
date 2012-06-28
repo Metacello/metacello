@@ -5,7 +5,7 @@ version10beta3202: spec
         for: #'common'
         do: [ 
             spec blessing: #'development'.
-            spec description: 'pick up fix for Issue #60 from master branch'.
+            spec description: 'pick up fix for Issue #62 from master branch'.
             spec author: 'dkh'.
             spec timestamp: '6/24/2012 16:56' ].
     spec
@@ -17,7 +17,7 @@ version10beta3202: spec
                             spec
                                 loads: #('batch');
                                 repository:
-                                        'github://dalehenrich/metacello-work:ac8fcd705b59ca36c4c72ac3a27de0ddcae3a768/repository' ];
+                                        'github://dalehenrich/metacello-work:17cabeca3a0fc08ef0625ab46a1da630afe28da7/repository' ];
                 project: 'batch' copyFrom: 'Metacello' with: [ spec loads: 'batch' ];
                 project: 'Tests' copyFrom: 'Metacello' with: [ spec loads: 'Tests' ];
                 yourself.
