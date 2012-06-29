@@ -73,21 +73,21 @@ The statement:
 ```Smalltalk
 Metacello new
   configuration: 'Sample';
-  squeaksource: 'MetacelloRepository';
+  squeaksource3: 'Sample';
   version: '0.9.0';
   load.
 ```
 
 downloads the `ConfigurationOfSample` package from
-`http:www.squeaksource.com/MetacelloRepository` and 
-proceed to load the `default` group of `Sample 0.9.0` into your image.
+`http://ss3.gemstone.com/ss/Sample` and 
+proceeds to load the `default` group of `Sample 0.9.0` into your image.
 
 The above expression is equivalent to the following old-style `Gofer-based`
 expression:
 
 ```Smalltalk
 Gofer new
-  squeaksource: 'MetacelloRepository';
+  squeaksource3: 'Sample';
   package: 'ConfigurationOfSample';
   load.
 ((Smalltalk at: #ConfigurationOfSample) project version: '0.9.0') load.
@@ -113,18 +113,18 @@ is equivalent to (assuming the platform-specific default repository is `http:www
 ```Smalltalk
 Metacello new
   configuration: 'Sample';
-  squeaksource: 'MetacelloRepository';
+  squeaksource3: 'Sample';
   version: #stable;
   load.
 ```
 
-#### load: options
+#### load options
 
 Arguments to the **load** command may be used to specify which groups,
 packages or dependent projects should be loaded instead of the
 `default` group.
 
-This command loads the `Base` group for the `#stable` version of `Sample`:
+This command loads the `Core` group for the `#stable` version of `Sample`:
 
 ```Smalltalk
 Metacello new
@@ -132,7 +132,7 @@ Metacello new
   load: 'Core'.
 ```
 
-This command loads the `Core` group, the 'Sample-Tests' package
+This command loads the `Core` group and the 'Sample-Tests' package
 for the `#stable` version of `Sample`:
 
 ```Smalltalk
@@ -163,7 +163,7 @@ into your image.
 
 The following expression:
 
-```
+```Smalltalk
 Metacello new
   configuration: 'Sample';
   version: #stable;
@@ -261,7 +261,7 @@ into your image.
 
 * see the [Options](#options) section for additional information.
 
-#### Downgrading
+### Downgrading
 
 The upgrade command can be used to `downgrade` the version of a
 project:
@@ -411,7 +411,7 @@ You can specify an explicit repository from which to get the configuration:
 ```Smalltalk
 Metacello new
   configuration: 'Sample';
-  ss3: 'Sample';
+  squeaksource3: 'Sample';
   get.
 ```
 
@@ -503,7 +503,7 @@ Metacello new
 
 #### list return value
 
-### Scripting messages
+### General Script Command Structure
 ####configuration:
 ####baseline:
 ####project:
@@ -520,6 +520,7 @@ Metacello new
 * renggli:
 * saltypickle:
 * squeakfoundation:
+* squeaksource3:
 * squeaksource:
 * wiresong:
 
@@ -530,7 +531,7 @@ Metacello new
 #####onDowngrade:
 #####onConflict:
 #####silently
-### Return Value Classes
+### Classes
 #### MetacelloProjectRegistration
 #### MetacelloProjectSpec
 #### MetacelloVersionLoadDirective
