@@ -78,7 +78,7 @@ Metacello new
   load.
 ```
 
-will download the `ConfigurationOfSeaside30` package from
+downloads the `ConfigurationOfSeaside30` package from
 `http:www.squeaksource.com/MetacelloRepository` and 
 proceed to load the `default` group of `Seaside 3.0.7` into your image.
 
@@ -141,6 +141,16 @@ Metacello new
   load: #('Base' 'Seaside-HTML5' 'Zinc-Seaside').
 ```
 
+#### Return Value
+
+The load command returns an instance of 
+[MetacelloVersionLoadDirective](*metacelloversionloaddirective) 
+which when printed, gives you a report of the packages loaded 
+into your image:
+
+```
+```
+
 #### `load` Notes
 
 * If a configuration is already present in the image when the load command
@@ -156,7 +166,17 @@ command to refresh the configuration.
 * `filetree://` projects are implicitly [locked](#locking) when loaded
 unless loaded as a project dependency.
 
-* see the [Options](#options) section for additional information.
+* The load operation is performed in two phases. In the first phase, all
+  of the packages that are to be loaded into your image are fetched from their respective
+  repositories and stashed in the Monticello `package-cache`. If there
+  is an network error during the `fetch` phase, you can execute the
+  load commeand again, and Metacello will not attempt to re-fetch any
+  packages that are already present in the `package-cache`.
+
+    In the second phase the packages are loaded into your image. 
+
+
+* See the [Options](#options) section for additional information.
 
 ### Upgrading
 
@@ -243,7 +263,7 @@ Otherwise, dependent projects are not normally downgraded.
 ### Locking
 
 Automatically upgrading projects is not always desirable. Of course, 
-in the normal course of loading and upgrading, you will want the correct
+in the normal course of loading and upgrading, you want the correct
 version of dependent projects loaded. However under the following
 conditions:
 
@@ -313,20 +333,20 @@ To unlock a project, use the `unlock:` command:
 
 ```Smalltalk
 Metacello new
-  unlock: 'Seaside30'.
+  project: 'Seaside30';
+  unlock.
 ```
 
 ### Getting
 
-If you are interested in looking at a configuration you may use the get command to load only the configuration (or baseline) into your image:
+If you are interested in looking at a configuration you may use the get command to load 
+the configuration of a project into your image:
 
 ```Smalltalk
 Metacello new
   configuration: 'Seaside30';
   get.
 ```
-
-will download the `ConfigurationOfSeaside30` from the default repository.
 
 You can specify an explicit repository from which to get the configuration:
 
@@ -339,13 +359,20 @@ Metacello new
 
 ### Fetching
 
-The fetch command allows you to download the 
+The fetch command downloads all of the packages.
 
 ```Smalltalk
 Metacello new
   configuration: 'Seaside30';
   version: '3.0.7';
-  cacheRepository: '/opt/seasideRepository';
+  fetch.
+```
+
+```Smalltalk
+Metacello new
+  configuration: 'Seaside30';
+  version: '3.0.7';
+  cacheRepository: 'filetree:///opt/git/localSeasideRepository';
   fetch.
 ```
 
@@ -397,6 +424,9 @@ Metacello list.
 ####onDowngrade:
 ####onConflict:
 ####silently
+### Return Values
+#### MetacelloProjectSpec
+#### MetacelloVersionLoadDirective
 ## Best Practice
 ### Use #development and #release blessings
 #### Semantic Versioning
