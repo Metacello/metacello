@@ -4,4 +4,4 @@ load
 
 	"self load"
 
-	^ self project latestVersion load
+	^ self project latestVersion load: 'batch'.

@@ -54,6 +54,7 @@ version10beta32: spec
                 package: 'Metacello-ProfStef' with: 'Metacello-ProfStef-DaleHenrichs.10';
                 package: 'Metacello-TestsProfStef' with: 'Metacello-TestsProfStef-dkh.2';
                 package: 'Metacello-Platform' with: 'Metacello-Platform.pharo-dkh.27' ].
+    spec for: #'pharo2.x' do: [ spec package: 'Metacello-Platform' with: 'Metacello-Platform.pharo20-SeanDeNigris.28' ].
     spec for: #'pharo1.2.x' do: [ spec package: 'Metacello-Issue3758' with: 'Metacello-Issue3758-dkh.2' ].
     spec for: #'pharo1.3.x' do: [ spec package: 'Metacello-Issue3758' with: 'Metacello-Issue3758-dkh.2' ].
     spec for: #'squeak' do: [ spec package: 'Metacello-Platform' with: 'Metacello-Platform.squeak-dkh.13' ]
