@@ -93,6 +93,8 @@ Gofer new
 ((Smalltalk at: #ConfigurationOfSeaside30) project version: '3.0.7') load.
 ``` 
 
+#### defaults
+
 Besides being a bit more compact, the Metacello scripting API uses a few
 handy default values for the **version** and **repository** attributes.
 The default **version** attribute is `#stable` and the default
@@ -115,6 +117,8 @@ Metacello new
   version: #stable;
   load.
 ```
+
+#### load: options
 
 Arguments to the **load** command may be used to specify which groups,
 packages or dependent projects should be loaded instead of the
@@ -305,13 +309,16 @@ Metacello new
 
 ### Unlocking
 
+To unlock a project, use the `unlock:` command:
+
 ```Smalltalk
 Metacello new
-  baseline: 'Seaside30';
-  unlock.
+  unlock: 'Seaside30'.
 ```
 
 ### Getting
+
+If you are interested in looking at a configuration you may use the get command to load only the configuration (or baseline) into your image:
 
 ```Smalltalk
 Metacello new
@@ -319,11 +326,26 @@ Metacello new
   get.
 ```
 
-### Fetching
+will download the `ConfigurationOfSeaside30` from the default repository.
+
+You can specify an explicit repository from which to get the configuration:
 
 ```Smalltalk
 Metacello new
   configuration: 'Seaside30';
+  squeaksource: 'Seaside30';
+  get.
+```
+
+### Fetching
+
+The fetch command allows you to download the 
+
+```Smalltalk
+Metacello new
+  configuration: 'Seaside30';
+  version: '3.0.7';
+  cacheRepository: '/opt/seasideRepository';
   fetch.
 ```
 
