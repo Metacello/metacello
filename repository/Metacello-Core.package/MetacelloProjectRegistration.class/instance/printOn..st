@@ -1,6 +1,6 @@
 printing
 printOn: aStream
-    | label versionString |
+    | label versionString descriptions |
     self
         configurationProjectSpecIfPresent: [ :spec | 
             label := spec className.
@@ -12,5 +12,13 @@ printOn: aStream
     aStream
         nextPutAll: label;
         space;
-        nextPutAll: versionString;
-        nextPutAll: ' from ' , self repository description
+        nextPutAll: versionString.
+    (descriptions := self repositoryDescriptions) isEmpty
+        ifTrue: [ ^ self ].
+    aStream nextPutAll: ' from '.
+    descriptions size = 1
+        ifTrue: [ aStream nextPutAll: descriptions first ]
+        ifFalse: [ 
+            aStream nextPut: ${.
+            descriptions do: [ :description | aStream nextPutAll: description ].
+            aStream nextPut: $} ]

@@ -6,7 +6,7 @@ validateExpectedConfigurationClassName: expectedConfigurationClassName expectedC
             | spec x |
             spec := existing configurationProjectSpec.
             self assert: (x := spec versionString) = expectedConfigurationVersion.
-            self assert: spec repository description = expectedConfigurationRepository ]
+            self assert: (spec repositoryDescriptions includes: expectedConfigurationRepository) ]
         ifAbsent: [ self assert: expectedConfigurationVersion == nil ].
     MetacelloProjectRegistration baselineRegistry
         at: expectedBaselineClassName
@@ -14,5 +14,5 @@ validateExpectedConfigurationClassName: expectedConfigurationClassName expectedC
             | spec |
             spec := existing baselineProjectSpec.
             self assert: spec versionString = expectedBaselineVersion.
-            self assert: spec repository description = expectedBaselineRepository ]
+            self assert: (spec repositoryDescriptions includes: expectedBaselineRepository) ]
         ifAbsent: [ self assert: expectedBaselineVersion == nil ]

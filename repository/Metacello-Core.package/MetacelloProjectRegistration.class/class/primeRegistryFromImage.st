@@ -14,6 +14,6 @@ primeRegistryFromImage
                                 name: (MetacelloScriptEngine baseNameOf: cl name asString);
                                 className: cl name asString;
                                 versionString: version versionString;
-                                repository: version project projectPackage repository;
+                                repositories: version project projectPackage repositories copy;
                                 yourself) asConfigurationProjectSpec.
                             self registerProjectSpec: projectSpec ] ] ]
