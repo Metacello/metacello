@@ -17,17 +17,8 @@ validateVersionSpec: versionSpec
             referencedProjectSpec := projectSpec referencedSpec.
             versionSpec blessing value == #'baseline'
                 ifTrue: [ 
-                    referencedProjectSpec packageRepository == nil
+                    referencedProjectSpec hasRepository
                         ifTrue: [ 
-                            self
-                                recordValidationError:
-                                    'The specification for the project reference ' , projectSpec name printString , ' in version '
-                                        , versionSpec versionString printString
-                                        , ' is missing the required repository field'
-                                versionString: versionSpec versionString
-                                callSite: #'validateVersionSpec:'
-                                reasonCode: #'incompleteProjectSpec' ]
-                        ifFalse: [ 
                             (referencedProjectSpec file beginsWith: referencedProjectSpec className)
                                 ifFalse: [ 
                                     self
@@ -37,7 +28,16 @@ validateVersionSpec: versionSpec
                                                 , versionSpec versionString printString
                                         versionString: versionSpec versionString
                                         callSite: #'validateVersionSpec:'
-                                        reasonCode: #'projectClassNameFileMismatch' ] ] ].
+                                        reasonCode: #'projectClassNameFileMismatch' ] ]
+                        ifFalse: [ 
+                            self
+                                recordValidationError:
+                                    'The specification for the project reference ' , projectSpec name printString , ' in version '
+                                        , versionSpec versionString printString
+                                        , ' is missing the required repository field'
+                                versionString: versionSpec versionString
+                                callSite: #'validateVersionSpec:'
+                                reasonCode: #'incompleteProjectSpec' ] ].
             referencedProjectSpec ensureProjectLoaded
                 ifTrue: [ 
                     [ projectSpec version ]

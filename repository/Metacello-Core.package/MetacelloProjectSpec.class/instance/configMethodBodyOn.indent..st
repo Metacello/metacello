@@ -4,8 +4,7 @@ configMethodBodyOn: aStream indent: indent
     hasClassName := self hasClassName.
     hasVersionString := self versionString ~~ nil.
     hasOperator := operator ~~ nil.
-    hasProjectPackage := self packageRepository ~~ nil
-        or: [ hasClassName & (self getFile ~~ nil or: [ className ~= self name ]) ].
+    hasProjectPackage := self hasRepository or: [ hasClassName & (self getFile ~~ nil or: [ className ~= self name ]) ].
     hasLoads := self loads ~~ nil.
     hasPreLoadDoIt := self getPreLoadDoIt ~~ nil.
     hasPostLoadDoIt := self getPostLoadDoIt ~~ nil.
@@ -97,7 +96,7 @@ configMethodBodyOn: aStream indent: indent
     hasProjectPackage
         ifTrue: [ 
             | hasName hasRepo |
-            hasRepo := self packageRepository ~~ nil.
+            hasRepo := self hasRepository.
             hasName := self file ~= self className.
             hasName
                 ifTrue: [ 
@@ -113,8 +112,8 @@ configMethodBodyOn: aStream indent: indent
             hasRepo
                 ifTrue: [ 
                     | repos |
-                    repos := self repositories.
-                    repos map values size = 1
+                    repos := self repositories map values.
+                    repos size = 1
                         ifTrue: [ 
                             hasClassName | hasVersionString | hasOperator | hasLoads | hasPreLoadDoIt | hasPostLoadDoIt | hasName
                                 ifTrue: [ 
@@ -122,7 +121,7 @@ configMethodBodyOn: aStream indent: indent
                                         cr;
                                         tab: indent + 1 ]
                                 ifFalse: [ aStream space ].
-                            self packageRepository configMethodCascadeOn: aStream lastCascade: true ]
+                            repos first configMethodCascadeOn: aStream lastCascade: true ]
                         ifFalse: [ 
                             aStream cr.
                             self repositories configMethodCascadeOn: aStream indent: indent ] ] ]

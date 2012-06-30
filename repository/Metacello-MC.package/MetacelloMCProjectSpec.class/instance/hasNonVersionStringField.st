@@ -5,7 +5,7 @@ hasNonVersionStringField
     hasVersionString := self versionString ~~ nil.
     hasOperator := operator ~~ nil.
     hasProjectPackage := (self file ~~ nil and: [ hasClassName and: [ self className ~= self name ] ])
-        or: [ self packageRepository ~~ nil ].
+        or: [ self hasRepository ].
     hasLoads := self loads ~~ nil.
     hasPreLoadDoIt := self getPreLoadDoIt ~~ nil.
     hasPostLoadDoIt := self getPostLoadDoIt ~~ nil.
