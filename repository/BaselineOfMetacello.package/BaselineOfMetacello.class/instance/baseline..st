@@ -95,6 +95,12 @@ baseline: spec
                 group: 'TravisCI' with: #('Metacello-TestsPlatform');
                 yourself ].
     spec
+        for: #'pharo2.x'
+        do: [ 
+            spec
+                package: 'Metacello-Platform' with: 'Metacello-Platform.pharo20';
+                yourself ].
+    spec
         for: #'pharo'
         do: [ 
             spec

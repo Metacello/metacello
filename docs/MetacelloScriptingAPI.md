@@ -72,25 +72,25 @@ The statement:
 
 ```Smalltalk
 Metacello new
-  configuration: 'Seaside30';
-  squeaksource: 'MetacelloRepository';
-  version: '3.0.7';
+  configuration: 'Sample';
+  squeaksource3: 'Sample';
+  version: '0.9.0';
   load.
 ```
 
-downloads the `ConfigurationOfSeaside30` package from
-`http:www.squeaksource.com/MetacelloRepository` and 
-proceed to load the `default` group of `Seaside 3.0.7` into your image.
+downloads the `ConfigurationOfSample` package from
+`http://ss3.gemstone.com/ss/Sample` and 
+proceeds to load the `default` group of `Sample 0.9.0` into your image.
 
 The above expression is equivalent to the following old-style `Gofer-based`
 expression:
 
 ```Smalltalk
 Gofer new
-  squeaksource: 'MetacelloRepository';
-  package: 'ConfigurationOfSeaside30';
+  squeaksource3: 'Sample';
+  package: 'ConfigurationOfSample';
   load.
-((Smalltalk at: #ConfigurationOfSeaside30) project version: '3.0.7') load.
+((Smalltalk at: #ConfigurationOfSample) project version: '0.9.0') load.
 ``` 
 
 #### defaults
@@ -104,7 +104,7 @@ Applying the default values, the following expression:
 
 ```Smalltalk
 Metacello new
-  configuration: 'Seaside30';
+  configuration: 'Sample';
   load.
 ```
 
@@ -112,43 +112,73 @@ is equivalent to (assuming the platform-specific default repository is `http:www
 
 ```Smalltalk
 Metacello new
-  configuration: 'Seaside30';
-  squeaksource: 'MetacelloRepository';
+  configuration: 'Sample';
+  squeaksource3: 'Sample';
   version: #stable;
   load.
 ```
 
-#### load: options
+#### load options
 
 Arguments to the **load** command may be used to specify which groups,
 packages or dependent projects should be loaded instead of the
 `default` group.
 
-This command loads the `Base` group for the `#stable` version of `Seaside30`:
+This command loads the `Core` group for the `#stable` version of `Sample`:
 
 ```Smalltalk
 Metacello new
-  configuration: 'Seaside30';
-  load: 'Base'.
+  configuration: 'Sample';
+  load: 'Core'.
 ```
 
-This command loads the `Base` group, the `Seaside-HTML5` package, 
-and the `Zinc-Seaside` package for the `#stable` version of `Seaside30`:
+This command loads the `Core` group and the 'Sample-Tests' package
+for the `#stable` version of `Sample`:
 
 ```Smalltalk
 Metacello new
-  configuration: 'Seaside30';
-  load: #('Base' 'Seaside-HTML5' 'Zinc-Seaside').
+  configuration: 'Sample';
+  load: #('Core' 'Sample-Tests').
 ```
+#### load phases
+The load operation is performed in two phases. 
+##### fetch phase
+In the first phase, all
+  of the packages that are to be loaded into your image are fetched from their respective
+  repositories and stashed in the Monticello `package-cache`. If there
+  is an network error during the `fetch` phase, you can execute the
+  load commeand again, and Metacello will not attempt to re-fetch any
+  packages that are already present in the `package-cache`.
 
-#### Return Value
+##### load phase
+In the second phase the packages are loaded into your image.
+
+
+#### load return value
 
 The load command returns an instance of 
 [MetacelloVersionLoadDirective](*metacelloversionloaddirective) 
 which when printed, gives you a report of the packages loaded 
-into your image:
+into your image.
+
+The following expression:
+
+```Smalltalk
+Metacello new
+  configuration: 'Sample';
+  version: #stable;
+  repository: 'github://dalehenrich/sample:configuration';
+  load.
+```
+
+produces a `printString` of:
 
 ```
+linear load : 
+  explicit load : 0.8.0 [ConfigurationOfSample]
+  linear load : 0.8.0 [ConfigurationOfSample]
+    linear load : baseline [BaselineOfSample]
+      load : Sample-Core-dkh.2
 ```
 
 #### `load` Notes
@@ -165,16 +195,6 @@ command to refresh the configuration.
 
 * `filetree://` projects are implicitly [locked](#locking) when loaded
 unless loaded as a project dependency.
-
-* The load operation is performed in two phases. In the first phase, all
-  of the packages that are to be loaded into your image are fetched from their respective
-  repositories and stashed in the Monticello `package-cache`. If there
-  is an network error during the `fetch` phase, you can execute the
-  load commeand again, and Metacello will not attempt to re-fetch any
-  packages that are already present in the `package-cache`.
-
-    In the second phase the packages are loaded into your image. 
-
 
 * See the [Options](#options) section for additional information.
 
@@ -196,7 +216,7 @@ You can also selectively upgrade an individual project:
 
 ```Smalltalk
 Metacello new
-  configuration: 'Seaside30';
+  configuration: 'Sample';
   upgrade.
 ```
 
@@ -204,8 +224,8 @@ Or upgrade a project to a specific version:
 
 ```Smalltalk
 Metacello new
-  configuration: 'Seaside30';
-  version: '3.0.8';
+  configuration: 'Sample';
+  version: '0.9.1';
   upgrade.
 ```
 
@@ -219,8 +239,8 @@ clause:
 
 ```Smalltalk
 Metacello new
-  configuration: 'Seaside30';
-  version: '3.0.8';
+  configuration: 'Sample';
+  version: '0.9.1';
   onUpgrade: [:ex | ex allow];
   upgrade.
 ```
@@ -228,21 +248,28 @@ Metacello new
 Otherwise, project locks for dependent projects are honored by the
 upgrade command. 
 
+#### upgrade return value
+
+Like the [load command](#loading), the upgrade command returns an instance of
+[MetacelloVersionLoadDirective](*metacelloversionloaddirective)
+which when printed, gives you a report of the packages loaded
+into your image.
+
 #### `upgrade` Notes
 
 * [project locking](#locking) is respected for dependent projects.
 
 * see the [Options](#options) section for additional information.
 
-#### Downgrading
+### Downgrading
 
 The upgrade command can be used to `downgrade` the version of a
 project:
 
 ```Smalltalk
 Metacello new
-  configuration: 'Seaside30';
-  version: '3.0.0';
+  configuration: 'Sample';
+  version: '0.8.0';
   upgrade.
 ```
 
@@ -252,13 +279,21 @@ clause:
 
 ```Smalltalk
 Metacello new
-  configuration: 'Seaside30';
-  version: '3.0.0';
+  configuration: 'Sample';
+  version: '0.8.0';
   onDowngrade: [:ex | ex allow];
   upgrade.
 ```
 
 Otherwise, dependent projects are not normally downgraded.
+
+#### downgrade return value
+
+Like the [upgrade command](#upgrading), the downgrade command returns an instance of
+[MetacelloVersionLoadDirective](*metacelloversionloaddirective)
+which when printed, gives you a report of the packages loaded
+into your image.
+
 
 ### Locking
 
@@ -282,8 +317,8 @@ You can lock a project to a particular version:
 
 ```Smalltalk
 Metacello new
-  configuration: 'Seaside30';
-  version: '3.0.7';
+  configuration: 'Sample';
+  version: '0.9.0';
   lock.
 ```
 
@@ -292,10 +327,10 @@ and answer `true` to allow limited upgrades:
 
 ```Smalltalk
 Metacello new
-  configuration: 'Seaside30';
+  configuration: 'Sample';
   version: [:proposedVersion | 
-    (propsedVersion versionNumberFrom: '3.0.7') <= proposedVersion 
-      and: [ proposedVersion < (proposedVersion versionNumberFrom: '3.1.0') ]];
+    (propsedVersion versionNumberFrom: '0.8.0') <= proposedVersion 
+      and: [ proposedVersion < (proposedVersion versionNumberFrom: '1.0.0') ]];
   lock.
 ```
 
@@ -304,7 +339,7 @@ version of the project is locked:
 
 ```Smalltalk
 Metacello new
-  configuration: 'Seaside30';
+  configuration: 'Sample';
   lock.
 ```
 
@@ -313,8 +348,29 @@ necessary to specify a version:
 
 ```Smalltalk
 Metacello new
-  baseline: 'Seaside30';
+  baseline: 'Sample';
   lock.
+```
+
+#### lock return value
+
+The lock command returns an instance of the 
+[MetacelloProjectRegistration](#metacelloprojectregistration)
+class that when printed, displays the version and repository for the locked project.
+
+The following expression:
+
+```Smalltalk 
+Metacello new
+  configuration: 'Sample';
+  lock.
+```
+
+produces:
+
+
+```
+ConfigurationOfSample stable from github://dalehenrich/sample:configuration
 ```
 
 #### `lock` Notes
@@ -323,7 +379,7 @@ Metacello new
 
     ```Smalltalk
     Metacello new
-      baseline: 'Seaside30';
+      baseline: 'Sample';
       lock.
     ```
 
@@ -333,9 +389,11 @@ To unlock a project, use the `unlock:` command:
 
 ```Smalltalk
 Metacello new
-  project: 'Seaside30';
+  project: 'Sample';
   unlock.
 ```
+
+#### unlock return value
 
 ### Getting
 
@@ -344,7 +402,7 @@ the configuration of a project into your image:
 
 ```Smalltalk
 Metacello new
-  configuration: 'Seaside30';
+  configuration: 'Sample';
   get.
 ```
 
@@ -352,53 +410,100 @@ You can specify an explicit repository from which to get the configuration:
 
 ```Smalltalk
 Metacello new
-  configuration: 'Seaside30';
-  squeaksource: 'Seaside30';
+  configuration: 'Sample';
+  squeaksource3: 'Sample';
   get.
 ```
 
+#### get return value
+
 ### Fetching
 
-The fetch command downloads all of the packages.
+The fetch command downloads all of the packages without loading them. Basically the 
+fetch command performs the [first phase](#fetch-phase) of the [load command](#loading).
+
+This command downloads all of the Sample packages into the local `package-cache` directory: 
 
 ```Smalltalk
 Metacello new
-  configuration: 'Seaside30';
-  version: '3.0.7';
-  fetch.
+  configuration: 'Sample';
+  version: '0.8.0';
+  fetch: 'ALL'.
 ```
+
+You can specify a different repository to be used as the `cacheRepository`. 
+The following command copies all of the Sample packages into the filetree repository in 
+the directory `/opt/git/localSampleRepository`:
 
 ```Smalltalk
 Metacello new
-  configuration: 'Seaside30';
-  version: '3.0.7';
-  cacheRepository: 'filetree:///opt/git/localSeasideRepository';
-  fetch.
+  configuration: 'Sample';
+  version: '0.8.0';
+  cacheRepository: 'filetree:///opt/git/localSampleRepository';
+  fetch: 'ALL'.
 ```
+
+If a project has dependent projects, then the packages for the dependent projects that 
+would be loaded in the iamge are also copied.
+
+The fetch command duplicates what the [load command](#loading) would
+do, which means if a package is alrady loaded in the image, it will not be fetched.
+To fetch packages regardless of what is loaded in the image, use the `ignoreImage` option:
+
+```Smalltalk
+Metacello new
+  configuration: 'Sample';
+  version: '0.8.0';
+  cacheRepository: 'filetree:///opt/git/localSampleRepository';
+  ignoreImage;
+  fetch: 'ALL'.
+```
+
+If you have fetched your packages to a location on disk, you can use the following variant 
+of the [load command](#loading) to load your project from the disk location:
+
+```Smalltalk
+Metacello new
+  configuration: 'Sample';
+  version: '0.8.0';
+  cacheRepository: 'filetree:///opt/git/localSampleRepository';
+  load: 'ALL'.
+```
+
+#### fetch return value
+
+Like the [load command](#loading), the fetch command returns an instance of
+[MetacelloVersionLoadDirective](*metacelloversionloaddirective)
+which when printed, gives you a report of the packages fetched.
 
 ### Recording
 
 ```Smalltalk
 Metacello new
-  configuration: 'Seaside30';
+  configuration: 'Sample';
   record.
 ```
+
+#### record return value
 
 ### Finding
 
 ```Smalltalk
 Metacello new
-  configuration: 'Seaside30';
+  configuration: 'Sample';
   find.
 ```
 
 ### Listing
 
 ```Smalltalk
-Metacello list.
+Metacello new
+  list.
 ```
 
-### Project Specs
+#### list return value
+
+### General Script Command Structure
 ####configuration:
 ####baseline:
 ####project:
@@ -415,16 +520,19 @@ Metacello list.
 * renggli:
 * saltypickle:
 * squeakfoundation:
+* squeaksource3:
 * squeaksource:
 * wiresong:
 
-### Options
-####ignoreImage
-####onUpgrade:
-####onDowngrade:
-####onConflict:
-####silently
-### Return Values
+#### Options
+#####cacheRepository:
+#####ignoreImage
+#####onUpgrade:
+#####onDowngrade:
+#####onConflict:
+#####silently
+### Classes
+#### MetacelloProjectRegistration
 #### MetacelloProjectSpec
 #### MetacelloVersionLoadDirective
 ## Best Practice
