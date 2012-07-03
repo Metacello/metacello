@@ -1,0 +1,23 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"baseline10:" : "DaleHenrichs 1/20/2010 09:58",
+		"baseline20:" : "dkh 11/16/2011 11:08",
+		"doSilently" : "dkh 11/16/2011 10:43",
+		"repositorySpec" : "dkh 12/30/2009 10:37",
+		"tearDown" : "dkh 1/12/2010 14:18",
+		"testBasics" : "dkh 12/22/2009 11:48",
+		"testCommitNewPackageSpec" : "DaleHenrichs 12/18/2010 20:15",
+		"testCommitPackageSpec" : "DaleHenrichs 12/18/2010 14:01",
+		"testCommitPackageVersion" : "DaleHenrichs 12/18/2010 14:01",
+		"testComparison" : "dkh 10/11/2011 22:43",
+		"testComparison01" : "dkh 10/11/2011 22:22",
+		"testIssue155" : "dkh 11/16/2011 11:12",
+		"testIssue40PackageResolution" : "dkh 1/12/2010 15:00",
+		"testIssue40VersionResolution" : "dkh 1/12/2010 15:18",
+		"testMoosePackageResolution" : "DaleHenrichs 2/4/2010 15:14",
+		"testPackageResolution" : "dkh 1/12/2010 14:39",
+		"testPackagesNeedSaving" : "dkh 12/22/2009 11:49",
+		"version10:" : "dkh 01/14/2010 14:26",
+		"version20:" : "dkh 11/16/2011 11:08" } }

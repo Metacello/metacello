@@ -1,0 +1,23 @@
+{
+	"class" : {
+		"isAbstract" : "DaleHenrichs 12/20/2010 13:57" },
+	"instance" : {
+		"conditionResult:" : "dkh 01/07/2010 16:46",
+		"hasPackage:" : "dkh 3/21/2011 15:42",
+		"project" : "dkh 1/11/2010 14:43",
+		"projectWith:" : "DaleHenrichs 12/20/2010 13:59",
+		"testBlessing" : "dkh 12/30/2009 12:50",
+		"testBlessingBlock" : "dkh 12/30/2009 12:56",
+		"testIssue100" : "DaleHenrichs 11/4/2010 18:39",
+		"testNestedBaseline" : "dkh 1/11/2010 14:51",
+		"testNestedBaselineOrder" : "dkh 1/11/2010 15:15",
+		"testNestedVersionOrder" : "dkh 1/11/2010 15:32",
+		"testPackageIncludes" : "dkh 1/6/2010 18:29",
+		"testPackageIncludesRequiresSupplyingAnswers" : "DaleHenrichs 12/20/2010 15:55",
+		"testPackageRepositories" : "dkh 1/2/2010 17:01",
+		"testPackageRepository" : "dkh 1/2/2010 14:06",
+		"testPackageRequires" : "dkh 1/6/2010 18:21",
+		"testProjectPackage" : "DaleHenrichs 3/12/2010 11:16",
+		"testProjectPackageRepositories" : "DaleHenrichs 12/20/2010 14:07",
+		"testProjectPackageRepository" : "DaleHenrichs 12/20/2010 14:08",
+		"testVersionErrors" : "DaleHenrichs 9/24/2010 11:55" } }

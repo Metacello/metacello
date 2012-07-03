@@ -1,0 +1,17 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"alternateRepository" : "dkh 1/12/2010 14:46",
+		"configurationRepository" : "dkh 1/12/2010 14:46",
+		"doSilently" : "DaleHenrichs 12/21/2010 10:20",
+		"hasPackage:" : "dkh 12/30/2009 10:33",
+		"loadType" : "dkh 1/6/2010 20:43",
+		"monticelloRepository" : "dkh 1/12/2010 13:51",
+		"project" : "DaleHenrichs 9/22/2010 15:37",
+		"projectWith:" : "DaleHenrichs 12/22/2010 13:43",
+		"runCase" : "DaleHenrichs 12/21/2010 10:20",
+		"setUp" : "dkh 4/18/2011 15:21",
+		"tearDown" : "dkh 4/18/2011 15:22",
+		"tearDownPackages:" : "DaleHenrichs 2/8/2010 15:46",
+		"tempRepositories" : "dkh 4/18/2011 15:20" } }

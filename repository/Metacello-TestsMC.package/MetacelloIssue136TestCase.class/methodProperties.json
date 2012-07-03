@@ -1,0 +1,15 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"configurationRepository" : "dkh 9/7/2011 14:51",
+		"hasPackage:" : "dkh 9/7/2011 14:51",
+		"monticelloRepository" : "dkh 9/7/2011 14:51",
+		"project" : "dkh 9/7/2011 14:51",
+		"projectClass" : "dkh 9/7/2011 14:52",
+		"projectWith:" : "dkh 9/7/2011 14:51",
+		"runCase" : "dkh 9/7/2011 14:51",
+		"setUp" : "dkh 9/7/2011 14:51",
+		"tearDown" : "dkh 9/7/2011 14:52",
+		"testCachedIssue136" : "dkh 9/7/2011 15:37",
+		"testIssue136" : "dkh 9/7/2011 15:29" } }

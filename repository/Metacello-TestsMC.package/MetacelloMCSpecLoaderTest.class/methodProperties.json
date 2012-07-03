@@ -1,0 +1,15 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"baseline10:" : "DaleHenrichs 1/20/2010 09:57",
+		"baseline20:" : "dkh 01/14/2010 12:30",
+		"doSilently" : "DaleHenrichs 12/21/2010 10:29",
+		"tearDown" : "dkh 01/14/2010 16:53",
+		"testCopySpec" : "dkh 01/14/2010 12:46",
+		"testGoferCommit" : "DaleHenrichs 3/15/2010 11:38",
+		"testLatestPackage" : "DaleHenrichs 2/4/2010 15:15",
+		"testPackageSave" : "DaleHenrichs 01/16/2011 13:28",
+		"testPackageSpecLoad" : "DaleHenrichs 3/5/2010 14:17",
+		"testRepositoryFor" : "dkh 2/22/2011 20:08",
+		"version10:" : "DaleHenrichs 1/20/2010 09:57" } }

@@ -1,0 +1,25 @@
+{
+	"class" : {
+		"bootstrapPackage:from:" : "dkh 10/17/2009 10:31",
+		"ensureMetacello" : "DaleHenrichs 1/12/2010 19:06",
+		"isMetacelloConfig" : "dkh 10/17/2009 10:31",
+		"project" : "dkh 10/17/2009 10:31" },
+	"instance" : {
+		"baseline07:" : "dkh 10/24/2009 14:52",
+		"baseline10:" : "DaleHenrichs 3/10/2010 15:59",
+		"baseline11:" : "dkh 10/24/2009 14:53",
+		"baseline12:" : "dkh 10/24/2009 14:53",
+		"baseline14:" : "dkh 10/25/2009 10:43",
+		"lesson07" : "dkh 10/19/2009 13:46",
+		"lesson10" : "dkh 10/19/2009 13:46",
+		"lesson11" : "dkh 10/19/2009 13:47",
+		"lesson12" : "dkh 10/19/2009 13:47",
+		"lesson13" : "dkh 10/19/2009 13:48",
+		"lesson14" : "dkh 10/25/2009 10:56",
+		"project" : "dkh 10/17/2009 13:16",
+		"version07:" : "dkh 10/19/2009 12:40",
+		"version10:" : "dkh 10/19/2009 12:40",
+		"version11:" : "dkh 10/19/2009 12:39",
+		"version12:" : "dkh 10/19/2009 12:50",
+		"version13:" : "dkh 10/24/2009 17:52",
+		"version14:" : "dkh 10/25/2009 10:34" } }

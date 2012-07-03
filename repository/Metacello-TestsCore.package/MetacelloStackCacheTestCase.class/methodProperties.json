@@ -1,0 +1,18 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"cacheNil" : "DaleHenrichs 2/8/2010 12:45",
+		"cachedReturnOfValue" : "DaleHenrichs 1/31/2010 14:27",
+		"collectionCacheKey" : "DaleHenrichs 2/8/2010 12:44",
+		"directReturnOfValue" : "DaleHenrichs 1/31/2010 14:27",
+		"mixedStack" : "DaleHenrichs 1/31/2010 14:33",
+		"mixedStackCall" : "DaleHenrichs 1/31/2010 14:32",
+		"testCacheNil" : "DaleHenrichs 2/5/2010 22:12",
+		"testCachedReturn" : "DaleHenrichs 1/31/2010 13:02",
+		"testClearCache" : "DaleHenrichs 1/31/2010 15:16",
+		"testCollectionCacheKey" : "DaleHenrichs 2/5/2010 13:52",
+		"testDefaultDictionary" : "DaleHenrichs 2/8/2010 12:48",
+		"testDirectReturn" : "DaleHenrichs 1/31/2010 13:02",
+		"testMixedStack" : "DaleHenrichs 1/31/2010 14:32",
+		"testPrimeStackCache" : "DaleHenrichs 9/22/2010 15:00" } }

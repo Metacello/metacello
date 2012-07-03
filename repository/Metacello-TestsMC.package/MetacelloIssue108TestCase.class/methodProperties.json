@@ -1,0 +1,17 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"baseline10:" : "dkh 2/22/2011 21:01",
+		"baseline20:" : "dkh 2/22/2011 21:01",
+		"expectedFailures" : "dkh 4/18/2011 20:21",
+		"hasPackage:" : "dkh 2/22/2011 20:43",
+		"project" : "dkh 2/22/2011 20:54",
+		"repositoryName" : "dkh 2/22/2011 20:48",
+		"runCase" : "dkh 2/22/2011 20:43",
+		"setUp" : "dkh 4/18/2011 18:30",
+		"tearDown" : "dkh 7/11/2011 16:44",
+		"tempRepositories" : "dkh 4/18/2011 18:30",
+		"testBaseline10" : "dkh 2/22/2011 21:02",
+		"testBaseline20" : "dkh 2/22/2011 21:06",
+		"testLatestPackage" : "dkh 2/22/2011 21:33" } }

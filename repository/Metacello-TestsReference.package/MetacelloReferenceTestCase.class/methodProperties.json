@@ -1,0 +1,8 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"conditionResult:" : "DaleHenrichs 1/22/2010 10:25",
+		"expectedPrintString" : "DaleHenrichs 12/20/2010 17:01",
+		"testReferenceConfig" : "DaleHenrichs 12/20/2010 17:02",
+		"testReferenceConfigPrintString" : "DaleHenrichs 6/11/2010 10:48" } }

@@ -13,7 +13,7 @@ Gofer new
 "load Metacello from the git checkout"
 gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 repository := MCFileTreeRepository new 
-  directory: (FileDirectory on: gitPath, 'metacello-work/repository');
+  directory: (FileDirectory on: gitPath, '/metacello-work/repository');
   yourself.
 Gofer new
   repository: repository;

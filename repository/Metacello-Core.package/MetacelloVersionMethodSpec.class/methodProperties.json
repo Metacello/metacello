@@ -1,0 +1,12 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"addMethodSection:versionSpec:" : "DaleHenrichs 12/23/2010 13:40",
+		"findMethodSection:" : "DaleHenrichs 1/14/2011 15:52",
+		"imports" : "DaleHenrichs 11/14/2010 09:32",
+		"imports:" : "DaleHenrichs 11/14/2010 00:46",
+		"methodSection:pre:last:post:indent:" : "DaleHenrichs 12/23/2010 14:47",
+		"methodSelectorAndPragma:imports:versionString:on:" : "DaleHenrichs 11/16/2010 10:58",
+		"methodSource" : "DaleHenrichs 12/23/2010 14:47",
+		"versionString:" : "DaleHenrichs 11/19/2010 10:37" } }

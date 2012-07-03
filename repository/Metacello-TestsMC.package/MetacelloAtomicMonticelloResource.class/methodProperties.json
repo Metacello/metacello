@@ -1,0 +1,11 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"monticelloRepository" : "DaleHenrichs 3/16/2010 10:17",
+		"setUp" : "DaleHenrichs 6/9/2010 12:10",
+		"setUpDependency" : "DaleHenrichs 12/18/2010 20:13",
+		"setUpMonticelloRepository" : "DaleHenrichs 12/18/2010 20:13",
+		"setUpNewerDependency" : "DaleHenrichs 12/18/2010 20:13",
+		"setUpVersionReferences" : "DaleHenrichs 6/11/2010 10:18",
+		"versionReferences" : "DaleHenrichs 3/16/2010 10:17" } }
