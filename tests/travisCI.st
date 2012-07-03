@@ -1,4 +1,4 @@
-| versiontString gitPath repository version successFilename failFilename suite result resultsFileName |
+| versionString gitPath repository version successFilename failFilename suite result resultsFileName |
 
 [
 versionString := '1.0-beta.31.1'.
@@ -28,7 +28,7 @@ version load: 'Tests'.
 successFilename := 'TravisCISuccess.txt'.
 failFilename := 'TravisCIFailure.txt'.
 suite := TestCase suiteClass named: ' Metacello Test Suite'.
-version currentlyLoadedClassesInVersion
+(version currentlyLoadedClassesInVersion
     select: [ :cl | cl inheritsFrom: TestCase ])
     do: [ :cl | 
         cl isAbstract
@@ -83,4 +83,3 @@ FileDirectory default
         stream := Transcript.
         (Smalltalk associationAt: #'Transcript') value: (Smalltalk at: #'OLDTranscript').
         stream close ].
-
