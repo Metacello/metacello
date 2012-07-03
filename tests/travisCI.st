@@ -21,7 +21,8 @@ Gofer new
   load.
 version := (Smalltalk at: #ConfigurationOfMetacello) project version: versionString.
 version repositoryOverrides: {repository}.
-version load: 'Tests'.
+"don't want to require ProfStef..."
+version load: #('Metacello-TestsCore' 'Metacello-TestsTutorial' 'Metacello-TestsMC' 'Metacello-TestsReference').
 
 "Run the Metacello tests"
 (Smalltalk at: #MetacelloPlatform) current authorName: 'testMonkey'. "These tests save code ... need an Author"
