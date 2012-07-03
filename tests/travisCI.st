@@ -16,8 +16,36 @@ MetacelloPlatform current authorName: 'testMonkey'. "These tests save code ... n
 (Deprecation respondsTo: #raiseWarning:)
   ifTrue: [ Deprecation raiseWarning: true].
 
+[
 TravisCIHarness
   value: #( 'BaselineOfMetacello' )
   value: 'TravisCISuccess.txt' 
   value: 'TravisCIFailure.txt'.
+]
+        on: Deprecation
+        do: [ :ex | 
+            Transcript
+                cr;
+                show: '***Deprecation***************************************************';
+                cr;
+                show: ex description.
+            (ex signalerContext stackOfSize: 100)
+                do: [ :item | 
+                    Transcript
+                        cr;
+                        show: item printString asString.
+                    item tempScopedNames
+                        doWithIndex: [ :title :index | 
+                            Transcript
+                                cr;
+                                tab;
+                                nextPutAll: title;
+                                nextPut: $:;
+                                space;
+                                tab;
+                                nextPutAll: (item tempAt: index) printString ].
+                    Transcript
+                        cr;
+                        show: '***************************************************' ].
+            ex resume].
 
