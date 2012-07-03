@@ -37,8 +37,7 @@ testProjectRef14
 	name: ''Core'';
 	includes: #(''default'' ).'.
     self shouldnt: [ (version packageNamed: 'Project-Core') requires ] raise: Error.
-    string := (version packageNamed: 'Example Default') repository printString.
-    self assert: string = 'spec repository: ''http://seaside.gemstone.com/ss/metacello'''.
+    self assert: ((version packageNamed: 'Example Default') repositoryDescriptions) =#('http://seaside.gemstone.com/ss/metacello').
     self shouldnt: [ (version packageNamed: 'default') requires ] raise: Error.
     self shouldnt: [ version packagesForSpecNamed: 'Core' ] raise: Error.
     self shouldnt: [ version load: 'Core' ] raise: Error.
