@@ -23,7 +23,10 @@ TravisCIHarness
   value: 'TravisCIFailure.txt'.
 ]
         on: Deprecation
-        do: [ :ex | 
+        do: [ :ex |
+            "catch and throw Error ..."
+            true ifTrue: [self error: 'DEPRECATION WARNNG: ' ex description printString ].
+            "help for debugging Deprecation warnings"
             Transcript
                 cr;
                 show: '***Deprecation***************************************************';
