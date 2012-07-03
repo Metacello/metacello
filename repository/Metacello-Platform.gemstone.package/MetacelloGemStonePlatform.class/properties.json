@@ -1,0 +1,14 @@
+{
+	"category" : "Metacello-Platform",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 11/10/2011 09:52",
+	"instvars" : [
+		"stoneVersionAttribute" ],
+	"name" : "MetacelloGemStonePlatform",
+	"pools" : [
+		 ],
+	"super" : "MetacelloPlatform",
+	"type" : "normal" }
