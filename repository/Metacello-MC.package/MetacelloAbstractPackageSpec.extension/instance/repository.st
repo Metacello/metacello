@@ -1,4 +1,4 @@
 *metacello-mc-querying
 repository
-	
-	^nil
+    self deprecated: 'Use repositories or repositorySpecs'.
+    ^ nil

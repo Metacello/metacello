@@ -10,4 +10,4 @@ assertMetacelloExampleProjectReferenceSpec: projectReferenceSpec projectName: pr
     projectPackage := projectSpec projectPackage.
     projectPackage name ifNotNil: [ self assert: projectPackage name = className ].
     projectPackage file ifNotNil: [ self assert: projectPackage file = fileName ].
-    self assert: projectPackage repository description = 'dictionary://Metacello_Configuration_Test_Repository'
+    self assert: (projectPackage repositoryDescriptions includes: 'dictionary://Metacello_Configuration_Test_Repository')

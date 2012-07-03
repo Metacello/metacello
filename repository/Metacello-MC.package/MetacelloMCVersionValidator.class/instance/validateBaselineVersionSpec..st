@@ -29,16 +29,8 @@ validateBaselineVersionSpec: versionSpec
                         versionString: versionSpec versionString
                         callSite: #'validateBaselineVersionSpec:'
                         reasonCode: #'missingRecommendedProjectSpecField' ].
-            projectSpec resolveProjectSpec repository == nil
+            projectSpec hasRepository
                 ifTrue: [ 
-                    self
-                        recordValidationError:
-                            'Missing required field (repository:) for project reference ' , projectSpec name printString , ' in version '
-                                , versionSpec versionString printString
-                        versionString: versionSpec versionString
-                        callSite: #'validateBaselineVersionSpec:'
-                        reasonCode: #'incompleteProjectSpec' ]
-                ifFalse: [ 
                     (self recurse and: [ projectSpec versionString ~~ nil ])
                         ifTrue: [ 
                             | project |
@@ -61,7 +53,15 @@ validateBaselineVersionSpec: versionSpec
                                                 version: projectSpec versionString
                                                 debug: self debug
                                                 recurse: self recurse
-                                                visited: self visited) ] ] ].
+                                                visited: self visited) ] ] ]
+                ifFalse: [ 
+                    self
+                        recordValidationError:
+                            'Missing required field (repository:) for project reference ' , projectSpec name printString , ' in version '
+                                , versionSpec versionString printString
+                        versionString: versionSpec versionString
+                        callSite: #'validateBaselineVersionSpec:'
+                        reasonCode: #'incompleteProjectSpec' ].
             self
                 validateDoIts: projectSpec
                 versionString: versionSpec versionString
