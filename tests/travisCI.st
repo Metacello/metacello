@@ -10,6 +10,13 @@ Gofer new
     load.
 ((Smalltalk at: #ConfigurationOfFileTree) project version: '1.0') load.
 
+"bootstrap Gofer"
+Gofer new
+    url: 'http://seaside.gemstone.com/ss/metacello';
+    package: 'ConfigurationOfGofer';
+    load.
+((Smalltalk at: #ConfigurationOfGofer) project version: #stable) load: 'Tests'.
+
 "load Metacello from the git checkout"
 gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 repository := MCFileTreeRepository new 
