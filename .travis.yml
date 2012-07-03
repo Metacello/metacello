@@ -33,7 +33,7 @@ script:
    - if ( test -e TravisCIFailure.txt ); then cat TravisTranscript.txt; fi
    - if ( test -e TravisCIFailure.txt ); then cat TravisCIFailure.txt; fi
    - if ( test -e TravisCIFailure.txt ); then die; fi
-   - cat TravisTranscript.txt
+#   - cat TravisTranscript.txt
    - echo "test ensureMetacello"
    - cd ${HOME}/dalehenrich-builderCI*
    - ./build.sh -i $ST -s latAmMirror.st -f "$PROJECT_HOME/tests/travisEnsureMetacello.st" -o travisCI
