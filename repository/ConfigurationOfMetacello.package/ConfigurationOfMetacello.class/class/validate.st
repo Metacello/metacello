@@ -1,5 +1,6 @@
 development support
 validate
-	"self validate"
-	
-	(MetacelloToolBox validateConfiguration: self) explore
+    "self validate"
+
+    self ensureMetacello.
+    ^ ((Smalltalk at: #'MetacelloToolBox') validateConfiguration: self debug: #() recurse: false) explore
