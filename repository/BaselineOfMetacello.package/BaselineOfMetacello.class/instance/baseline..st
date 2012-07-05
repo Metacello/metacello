@@ -95,12 +95,6 @@ baseline: spec
                 group: 'TravisCI' with: #('Metacello-TestsPlatform');
                 yourself ].
     spec
-        for: #'pharo2.x'
-        do: [ 
-            spec
-                package: 'Metacello-Platform' with: 'Metacello-Platform.pharo20';
-                yourself ].
-    spec
         for: #'pharo'
         do: [ 
             spec
@@ -122,6 +116,14 @@ baseline: spec
                 group: 'Tests' with: #('Metacello-TestsProfStef');
                 group: 'Tutorial' with: #('Metacello-ProfStef');
                 yourself ].
+    spec
+        for: #'pharo1.4.x'
+        do: [ spec baseline: 'FileTree' with: [ spec repository: 'github://dalehenrich/filetree:pharo1.4/repository' ] ].
+    spec
+        for: #'pharo2.x'
+        do: [ 
+            spec package: 'Metacello-Platform' with: 'Metacello-Platform.pharo20'.
+            spec baseline: 'FileTree' with: [ spec repository: 'github://dalehenrich/filetree:pharo1.4/repository' ] ].
     spec
         for: #'squeak'
         do: [ 
