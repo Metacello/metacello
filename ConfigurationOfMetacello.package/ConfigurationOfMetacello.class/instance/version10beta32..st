@@ -40,7 +40,7 @@ version10beta32: spec
         for: #'squeakCommon'
         do: [ 
             spec
-                project: 'OSProcess' with: #'stable';
+                project: 'OSProcess' with: '4.4.5';
                 project: 'OmniBrowser' with: #'stable';
                 project: 'HelpSystem' with: '1.1'.
             spec
