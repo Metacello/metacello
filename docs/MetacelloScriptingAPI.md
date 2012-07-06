@@ -3,10 +3,11 @@
 The **Metacello Scripting API** provides a platform independent way for
 loading Metacello configurations into your image.
 
-Currently [Pharo1.3][1] and [Squeak4.3][2] are supported.
+Currently [Pharo-1.3, Pharo-1.4][1] and [Squeak4.3][2] are supported.
 
 * [Installation](#installation)
 * [Using the Metacello Scripting API](#using-the-metacello-scripting-api)
+* [Scripting API Referenece](*scripting-api-referenece)
 * [Best Practice](#best-practice)
 * [Specifying Configurations](#specifying-configurations)
 * [Metacello Version Numbers](*metacello-version-numbers)
@@ -59,8 +60,6 @@ bootstrapping will no longer be necessary.*
 * [Getting](#getting)
 * [Fetching](#fetching)
 * [Recording](#recording)
-* [Finding](#finding)
-* [Listing](#listing)
 
 ### Loading
 
@@ -241,7 +240,7 @@ clause:
 Metacello new
   configuration: 'Sample';
   version: '0.9.1';
-  onUpgrade: [:ex | ex allow];
+  onUpgrade: [:ex | ex allow ];
   upgrade.
 ```
 
@@ -281,7 +280,7 @@ clause:
 Metacello new
   configuration: 'Sample';
   version: '0.8.0';
-  onDowngrade: [:ex | ex allow];
+  onDowngrade: [:ex | ex allow ];
   upgrade.
 ```
 
@@ -340,15 +339,6 @@ version of the project is locked:
 ```Smalltalk
 Metacello new
   configuration: 'Sample';
-  lock.
-```
-
-If you are locking a [baseline configuration](#baselineof) it is not
-necessary to specify a version:
-
-```Smalltalk
-Metacello new
-  baseline: 'Sample';
   lock.
 ```
 
@@ -478,32 +468,38 @@ which when printed, gives you a report of the packages fetched.
 
 ### Recording
 
+The record command performs the same function as the [fetch](*fetching)
+command, without actually downloading any files. As a consequence, it
+can give you a quick report of what packages will be loaded into your
+image.
+
+#### record return value
+
+Like the [load](#loading) and [fetch](*fetch) commands, the record command returns an instance of
+[MetacelloVersionLoadDirective](*metacelloversionloaddirective)
+which when printed, gives you a report of the packages fetched.
+
+Printing the following expression:
+
 ```Smalltalk
 Metacello new
   configuration: 'Sample';
   record.
 ```
 
-#### record return value
+produces:
 
-### Finding
-
-```Smalltalk
-Metacello new
-  configuration: 'Sample';
-  find.
+```
+linear load : 
+	linear load : 0.8.0 [ConfigurationOfSample]
+		load : BaselineOfSample
+	linear load : 0.8.0 [ConfigurationOfSample]
+		linear load : baseline [BaselineOfSample]
+			load : Sample-Core
 ```
 
-### Listing
-
-```Smalltalk
-Metacello new
-  list.
-```
-
-#### list return value
-
-### General Script Command Structure
+## Scripting API Referenece
+###Project Specification
 ####configuration:
 ####baseline:
 ####project:
@@ -524,13 +520,13 @@ Metacello new
 * squeaksource:
 * wiresong:
 
-#### Options
-#####cacheRepository:
-#####ignoreImage
-#####onUpgrade:
-#####onDowngrade:
-#####onConflict:
-#####silently
+### Options
+####cacheRepository:
+####ignoreImage
+####onUpgrade:
+####onDowngrade:
+####onConflict:
+####silently
 ### Classes
 #### MetacelloProjectRegistration
 #### MetacelloProjectSpec
