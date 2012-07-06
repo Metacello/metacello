@@ -22,5 +22,5 @@ testIssue155
 			on: MetacelloSkipDirtyPackageLoad 
 			do: [:ex | ex resume: false ] ] 
 				on: Warning 
-				do: [:ex | ex resume ]].
+				do: [:ex | ex resume: true ]].
 	self assert: (dirty := project packagesNeedSaving: '2.0') isEmpty.

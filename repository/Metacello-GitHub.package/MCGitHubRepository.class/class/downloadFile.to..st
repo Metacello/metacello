@@ -13,7 +13,7 @@ downloadFile: url to: outputFileName
             url}
         environment: nil
         descriptors: (Array with: nil with: out with: err).
-    proc ifNil: [ self noAccessorAvailable ].
+    proc ifNil: [ OSProcess noAccessorAvailable ].
     [ proc isRunning ] whileTrue: [ (Delay forMilliseconds: 100) wait ].
     out close.
     err close

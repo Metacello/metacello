@@ -13,7 +13,7 @@ loadPackageDirective: aPackageLoadDirective gofer: aGofer
 					^ self ].
 			loadBlock := [ 
 			"mcLoader preLoad: packageSpec."
-			goferLoad := MetacelloGoferLoad on: MetacelloGofer new.
+			goferLoad := MetacelloGoferLoad on: aGofer.
 			goferLoad addResolved: resolvedReference.
 			goferLoad execute.
 			MetacelloPlatform current clearCurrentVersionCache	"mcLoader postLoad: packageSpec" ].
