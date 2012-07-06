@@ -76,7 +76,7 @@ baseline: spec
                     with: [ 
                             spec
                                 className: 'ConfigurationOfOSProcess';
-                                versionString: #'stable';
+                                versionString: '4.4.5';
                                 repository: 'http://www.squeaksource.com/MetacelloRepository';
                                 repository: 'http://seaside.gemstone.com/ss/metacello' ];
                 yourself.
