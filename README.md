@@ -19,9 +19,9 @@ Gofer new
   load.
 ```
 
-**PharoCore 1.3** and **Squeak4.3** are currently supported.
+**PharoCore 1.3**, **PharoCore 1.4** and **Squeak4.3** are currently supported.
 
 ###TravisCI Status
-[![Build Status](https://secure.travis-ci.org/dalehenrich/metacello-work.png?branch=master)](http://travis-ci.org/dalehenrich/metacello-work)
+**master branch**: [![Build Status](https://secure.travis-ci.org/dalehenrich/metacello-work.png?branch=master)](http://travis-ci.org/dalehenrich/metacello-work)
 
 **configuration branch**: [![Build Status](https://secure.travis-ci.org/dalehenrich/metacello-work.png?branch=configuration)](http://travis-ci.org/dalehenrich/metacello-work)
