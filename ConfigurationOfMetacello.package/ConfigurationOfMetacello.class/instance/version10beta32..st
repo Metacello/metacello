@@ -53,7 +53,7 @@ version10beta32: spec
         do: [ 
             spec
                 project: 'OmniBrowser' with: #'stable';
-                project: 'Monticello' with: '0.242'.
+                project: 'GsMonticello' with: '0.242'.
             spec
                 package: 'Metacello-MC' with: [ spec preLoadDoIt: #'gemstone10beta24PreLoadDoIt' ];
                 package: 'Metacello-TestsPlatform' with: 'Metacello-TestsPlatform.gemstone-dkh.4';
