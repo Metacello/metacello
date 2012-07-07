@@ -1,0 +1,15 @@
+{
+	"class" : {
+		"initialize" : "dkh 08/20/2009 15:32" },
+	"instance" : {
+		"authorName" : "dkh 11/10/2011 09:52",
+		"authorName:" : "dkh 11/10/2011 09:52",
+		"confirm:" : "dkh 01/06/2010 10:18",
+		"copyClass:as:inCategory:" : "dkh 11/10/2011 09:52",
+		"createRepository:" : "dkh 01/19/2012 12:06",
+		"defaultPlatformAttributes" : "dkh 11/13/2009 16:37",
+		"extractAtrributesFrom:" : "dkh 11/10/2011 09:52",
+		"extractTypeFromDescription:" : "DaleHenrichs 03/12/2010 01:24",
+		"stoneVersionAttributes" : "dkh 11/10/2011 09:52",
+		"timestamp" : "dkh 10/16/2009 11:53",
+		"transact:" : "dkh 01/06/2010 10:11" } }

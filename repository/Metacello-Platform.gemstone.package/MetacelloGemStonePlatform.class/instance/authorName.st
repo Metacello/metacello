@@ -1,0 +1,4 @@
+utilities
+authorName
+
+	^MCPlatformSupport authorInitials

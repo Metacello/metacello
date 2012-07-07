@@ -5,27 +5,27 @@ parseLocation: locationUrl version: versionString
 	version: nil
      "
 
-    | projectPath projectVersion repoPath headerSize description projectDelim repoDelim versionDelim |
+    | projectPath projectVersion repoPath headerSize desc projectDelim repoDelim versionDelim |
     headerSize := 'github://' size.
-    description := locationUrl.
-    description := description copyFrom: headerSize + 1 to: description size.
+    desc := locationUrl.
+    desc := desc copyFrom: headerSize + 1 to: desc size.
     projectVersion := repoPath := nil.
-    projectDelim := description indexOf: $/.
-    repoDelim := description indexOf: $/ startingAt: projectDelim + 1.
-    (versionDelim := description indexOf: $:) == 0
+    projectDelim := desc indexOf: $/.
+    repoDelim := desc indexOf: $/ startingAt: projectDelim + 1.
+    (versionDelim := desc indexOf: $:) == 0
         ifTrue: [ 
             repoDelim == 0
-                ifTrue: [ projectPath := description ]
+                ifTrue: [ projectPath := desc ]
                 ifFalse: [ 
-                    projectPath := description copyFrom: 1 to: repoDelim - 1.
-                    repoPath := description copyFrom: repoDelim + 1 to: description size ] ]
+                    projectPath := desc copyFrom: 1 to: repoDelim - 1.
+                    repoPath := desc copyFrom: repoDelim + 1 to: desc size ] ]
         ifFalse: [ 
-            projectPath := description copyFrom: 1 to: versionDelim - 1.
+            projectPath := desc copyFrom: 1 to: versionDelim - 1.
             repoDelim == 0
-                ifTrue: [ projectVersion := description copyFrom: versionDelim + 1 to: description size ]
+                ifTrue: [ projectVersion := desc copyFrom: versionDelim + 1 to: desc size ]
                 ifFalse: [ 
-                    projectVersion := description copyFrom: versionDelim + 1 to: repoDelim - 1.
-                    repoPath := description copyFrom: repoDelim + 1 to: description size ] ].
+                    projectVersion := desc copyFrom: versionDelim + 1 to: repoDelim - 1.
+                    repoPath := desc copyFrom: repoDelim + 1 to: desc size ] ].
     versionString ~~ nil
         ifTrue: [ projectVersion := versionString ].
     ^ self new
