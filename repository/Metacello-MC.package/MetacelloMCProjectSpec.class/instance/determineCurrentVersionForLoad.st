@@ -17,11 +17,6 @@ determineCurrentVersionForLoad
         ifTrue: [ ^ nil ].
     (cvs := currentVersion versionStatus) == #'somethingLoaded'
         ifTrue: [ ^ nil ].
-    self versionString == #'stable'
-        ifTrue: [ 
-            "Issue 150: don't upgrade if the project is already loaded"
-            version > currentVersion
-                ifTrue: [ ^ currentVersion ] ].
     (#(#'allLoadedToSpec' #'loadedToSpec' #'loadedMatchConstraints') includes: (cvs := currentVersion versionStatus))
         ifTrue: [ 
             (currentVersion perform: self operator with: version)
