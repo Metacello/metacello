@@ -91,7 +91,6 @@ baseline10beta32: spec
                                 repository: 'http://dsal.cl/squeaksource/MetacelloRepository' ];
                 yourself.
             spec
-                package: 'Metacello-GitHub' with: [ spec requires: #('OSProcess') ];
                 package: 'Metacello-TestsPlatform'
                     with: [ 
                             spec
@@ -120,18 +119,35 @@ baseline10beta32: spec
                 package: 'Metacello-ProfStef'
                     with: [ spec requires: #('Metacello-Core' 'ProfStef' 'Metacello-ToolBox') ];
                 package: 'Metacello-TestsProfStef' with: [ spec requires: #('Metacello-ProfStef') ];
-                package: 'Metacello-Platform' with: 'Metacello-Platform.pharo';
+                package: 'Metacello-Platform'
+                    with: [ 
+                            spec
+                                file: 'Metacello-Platform.pharo';
+                                requires: #('OSProcess') ];
                 yourself.
             spec
                 group: 'Tests' with: #('Metacello-TestsProfStef');
                 group: 'Tutorial' with: #('Metacello-ProfStef');
                 yourself ].
     spec
+        for: #'pharo2.x'
+        do: [ 
+            spec
+                package: 'Metacello-Platform'
+                with: [ 
+                    spec
+                        file: 'Metacello-Platform.pharo20';
+                        requires: #('OSProcess') ] ].
+    spec
         for: #'squeak'
         do: [ 
             spec yourself.
             spec
-                package: 'Metacello-Platform' with: 'Metacello-Platform.squeak';
+                package: 'Metacello-Platform'
+                    with: [ 
+                            spec
+                                file: 'Metacello-Platform.squeak';
+                                requires: #('OSProcess') ];
                 yourself ].
     spec
         for: #'gemstone'

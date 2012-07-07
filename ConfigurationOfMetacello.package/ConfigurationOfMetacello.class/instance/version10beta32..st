@@ -6,7 +6,7 @@ version10beta32: spec
         do: [ 
             spec blessing: #'development'.
             spec author: 'dkh'.
-            spec timestamp: '7/5/2012 16:42'.
+            spec timestamp: '7/7/2012 08:00'.
             spec postLoadDoIt: #'metacelloPrimeRegistry'.
             spec
                 project: 'FileTree' with: '1.0';
@@ -27,16 +27,6 @@ version10beta32: spec
                 package: 'Metacello-TestsTutorial' with: 'Metacello-TestsTutorial-dkh.36';
                 package: 'Metacello-ToolBox' with: 'Metacello-ToolBox-dkh.115' ].
     spec
-        for: #'gemstone'
-        do: [ 
-            spec
-                project: 'OmniBrowser' with: #'stable';
-                project: 'Monticello' with: '0.242'.
-            spec
-                package: 'Metacello-MC' with: [ spec preLoadDoIt: #'gemstone10beta24PreLoadDoIt' ];
-                package: 'Metacello-TestsPlatform' with: 'Metacello-TestsPlatform.gemstone-dkh.4';
-                package: 'Metacello-Platform' with: 'Metacello-Platform.gemstone-dkh.24' ].
-    spec
         for: #'squeakCommon'
         do: [ 
             spec
@@ -54,7 +44,17 @@ version10beta32: spec
                 package: 'Metacello-ProfStef' with: 'Metacello-ProfStef-DaleHenrichs.10';
                 package: 'Metacello-TestsProfStef' with: 'Metacello-TestsProfStef-dkh.2';
                 package: 'Metacello-Platform' with: 'Metacello-Platform.pharo-dkh.27' ].
-    spec for: #'pharo2.x' do: [ spec package: 'Metacello-Platform' with: 'Metacello-Platform.pharo20-SeanDeNigris.28' ].
     spec for: #'pharo1.2.x' do: [ spec package: 'Metacello-Issue3758' with: 'Metacello-Issue3758-dkh.2' ].
     spec for: #'pharo1.3.x' do: [ spec package: 'Metacello-Issue3758' with: 'Metacello-Issue3758-dkh.2' ].
-    spec for: #'squeak' do: [ spec package: 'Metacello-Platform' with: 'Metacello-Platform.squeak-dkh.13' ]
+    spec for: #'pharo2.x' do: [ spec package: 'Metacello-Platform' with: 'Metacello-Platform.pharo20-SeanDeNigris.28' ].
+    spec for: #'squeak' do: [ spec package: 'Metacello-Platform' with: 'Metacello-Platform.squeak-dkh.13' ].
+    spec
+        for: #'gemstone'
+        do: [ 
+            spec
+                project: 'OmniBrowser' with: #'stable';
+                project: 'Monticello' with: '0.242'.
+            spec
+                package: 'Metacello-MC' with: [ spec preLoadDoIt: #'gemstone10beta24PreLoadDoIt' ];
+                package: 'Metacello-TestsPlatform' with: 'Metacello-TestsPlatform.gemstone-dkh.4';
+                package: 'Metacello-Platform' with: 'Metacello-Platform.gemstone-dkh.24' ]
