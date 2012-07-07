@@ -17,6 +17,8 @@
 		"defaultPlatformAttributes" : "dkh 6/5/2012 19:01:24",
 		"defaultTimeout" : "dkh 6/5/2012 19:01:24",
 		"do:displaying:" : "dkh 6/5/2012 19:01:24",
+		"downloadFile:to:" : "dkh 7/7/2012 07:37",
+		"extractRepositoryFrom:to:" : "dkh 7/7/2012 07:36",
 		"extractTypeFromDescription:" : "dkh 6/5/2012 19:01:24",
 		"globalNamed:" : "dkh 6/5/2012 19:01:24",
 		"globalNamed:ifAbsent:" : "dkh 6/5/2012 19:01:24",

@@ -1,6 +1,6 @@
-private
+github support
 downloadFile: url to: outputFileName
-    " self downloadFile: 'https://github.com/dalehenrich/sample/zipball/1.0'"
+    "download from <url> into <outputFileName>"
 
     | in out err proc |
     in := (' -L ' , url) readStream.

@@ -1,6 +1,6 @@
-private
+github support
 extractRepositoryFrom: zipFile to: directory
-    "unzip zipFile -d directory"
+    "unzip <zipFile> into <directory>"
 
     | out err proc errorMessage |
     out := FileStream forceNewFileNamed: '/tmp/zip.out'.
