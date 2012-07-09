@@ -18,4 +18,15 @@ createRepository: aRepositorySpec
 			description := aRepositorySpec description.
 			^ MCServerDirectoryRepository new
 				directory: (ServerFileDirectory on: (description copyFrom: headerSize + 1 to: description size))].
+    Smalltalk
+        at: #'MCFileTreeRepository'
+        ifPresent: [ :cl | 
+            type = 'filetree'
+                ifTrue: [ 
+                    | description headerSize |
+                    description := aRepositorySpec description.
+                    headerSize := 'filetree://' size.
+                    ^ cl new
+                        directory:
+                            (ServerFileDirectory on: (aRepositorySpec description copyFrom: headerSize + 1 to: description size)) ] ].
 	^ super createRepository: aRepositorySpec

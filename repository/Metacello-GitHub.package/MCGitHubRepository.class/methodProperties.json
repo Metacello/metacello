@@ -1,6 +1,6 @@
 {
 	"class" : {
-		"cacheDirectory" : "dkh 5/16/2012 14:52:41",
+		"cacheDirectory" : "dkh 07/09/2012 04:47",
 		"cacheDirectoryFor:" : "dkh 5/16/2012 14:52:41",
 		"description" : "dkh 5/16/2012 14:52:41",
 		"downloadCache" : "dkh 6/16/2012 08:29",
@@ -10,12 +10,12 @@
 		"location:" : "dkh 5/16/2012 14:52:41",
 		"location:version:" : "dkh 6/16/2012 09:08",
 		"parseLocation:version:" : "dkh 5/16/2012 14:52:41",
-		"projectDirectoryFrom:version:" : "dkh 7/7/2012 07:39",
+		"projectDirectoryFrom:version:" : "dkh 07/09/2012 04:32",
 		"startUp:" : "dkh 6/16/2012 08:24" },
 	"instance" : {
 		"asRepositorySpecFor:" : "dkh 5/16/2012 14:52:41",
 		"description" : "dkh 5/16/2012 14:52:41",
-		"directory" : "dkh 6/16/2012 09:06",
+		"directory" : "dkh 07/09/2012 04:47",
 		"directoryDescription" : "dkh 6/16/2012 09:03",
 		"flushCache" : "dkh 6/16/2012 09:11",
 		"hash" : "dkh 6/16/2012 08:57",

@@ -2,4 +2,4 @@ versions
 version62: spec 
 	<version: '6.2'>
 	
-	super version62: spec 
+	super version62: spec

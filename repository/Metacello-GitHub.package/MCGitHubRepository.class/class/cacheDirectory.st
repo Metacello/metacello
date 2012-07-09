@@ -1,5 +1,5 @@
 private
 cacheDirectory
-    ^ (FileDirectory default directoryNamed: 'github-cache')
+    ^ (MetacelloPlatform current fileDirectoryClass default directoryNamed: 'github-cache')
         assureExistence;
         yourself
