@@ -153,6 +153,12 @@ baseline10beta32: spec
         for: #'gemstone'
         do: [ 
             spec
+                project: 'GsCore'
+                    with: [ 
+                            spec
+                                className: 'ConfigurationOfGsCore';
+                                versionString: '0.247';
+                                repository: 'http://seaside.gemstone.com/ss/MetacelloRepository' ];
                 project: 'GsMonticello'
                     with: [ 
                             spec
@@ -167,6 +173,7 @@ baseline10beta32: spec
                                 repository: 'http://seaside.gemstone.com/ss/MetacelloRepository' ];
                 yourself.
             spec
+                package: 'Metacello-GitHub' with: [ spec requires: #( 'GsCore') ];
                 package: 'Metacello-MC' with: [ spec preLoadDoIt: #'gemstone10beta24PreLoadDoIt' ];
                 package: 'Metacello-Platform'
                     with: [ 
