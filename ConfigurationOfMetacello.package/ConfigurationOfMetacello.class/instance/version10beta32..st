@@ -18,7 +18,7 @@ version10beta32: spec
                 package: 'Metacello-FileTree' with: 'Metacello-FileTree-dkh.29';
                 package: 'Metacello-GitHub' with: 'Metacello-GitHub-dkh.21';
                 package: 'Metacello-MC' with: 'Metacello-MC-dkh.642';
-                package: 'Metacello-Reference' with: 'Metacello-Reference-dkh.34';
+                package: 'Metacello-Reference' with: 'Metacello-Reference-dkh.35';
                 package: 'Metacello-Tutorial' with: 'Metacello-Tutorial-dkh.26';
                 package: 'OB-Metacello' with: 'OB-Metacello-dkh.83';
                 package: 'Metacello-TestsReference' with: 'Metacello-TestsReference-dkh.20';
