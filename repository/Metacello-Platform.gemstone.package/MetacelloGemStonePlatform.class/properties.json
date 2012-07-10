@@ -4,7 +4,7 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "DaleHenrichs 01/24/2011 11:29",
+	"commentStamp" : "dkh 11/17/2011 11:27",
 	"instvars" : [
 		"stoneVersionAttribute" ],
 	"name" : "MetacelloGemStonePlatform",
