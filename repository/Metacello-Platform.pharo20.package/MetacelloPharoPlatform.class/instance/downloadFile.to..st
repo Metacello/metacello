@@ -1,8 +1,8 @@
-private
+github support
 downloadFile: url to: outputFileName
-    " self downloadFile: 'https://github.com/dalehenrich/sample/zipball/1.0'"
+    "download from <url> into <outputFileName>"
 
-    | in out err proc |
+    | in out err proc archive zipfile |
     in := (' -L ' , url) readStream.
     out := FileStream forceNewFileNamed: outputFileName.
     err := FileStream forceNewFileNamed: '/tmp/curl.err'.
@@ -16,4 +16,8 @@ downloadFile: url to: outputFileName
     proc ifNil: [ OSProcess noAccessorAvailable ].
     [ proc isRunning ] whileTrue: [ (Delay forMilliseconds: 100) wait ].
     out close.
-    err close
+    err close.
+    archive := ZipArchive new.
+    zipfile := FileDirectory on: outputFileName.
+    zipfile containingDirectory readOnlyFileNamed: zipfile localName do: [ :fileStream | archive readFrom: fileStream ].
+    ^ archive

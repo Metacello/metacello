@@ -2,7 +2,6 @@
 	"category" : "Metacello-Base",
 	"classinstvars" : [
 		 ],
-	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
 	"commentStamp" : "dkh 6/25/2012 14:56",
@@ -14,5 +13,4 @@
 	"pools" : [
 		 ],
 	"super" : "Object",
-	"traitcomposition" : "{}",
 	"type" : "normal" }

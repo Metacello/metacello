@@ -9,13 +9,10 @@ projectDirectoryFrom: projectPath version: versionString
             | url archive directory |
             githubCacheDirectory assureExistence.
             url := 'https://github.com/' , projectPath , '/zipball/' , versionString.
-            self downloadFile: url to: '/tmp/github.zip'.
-            archive := ZipArchive new
-                readFrom: (FileStream readOnlyFileNamed: '/tmp/github.zip');
-                yourself.
+            archive := MetacelloPlatform current downloadFile: url to: '/tmp/github.zip'.
             directory := githubCacheDirectory directoryNamed: (cachePath := archive members first fileName).
             directory exists
-                ifFalse: [ self extractRepositoryFrom: '/tmp/github.zip' to: githubCacheDirectory fullName ].
+                ifFalse: [ MetacelloPlatform current extractRepositoryFrom: '/tmp/github.zip' to: githubCacheDirectory fullName ].
             self downloadCache at: downloadCacheKey put: cachePath.
             projectDirectory := githubCacheDirectory directoryNamed: cachePath ].
     ^ projectDirectory

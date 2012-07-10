@@ -1,9 +1,9 @@
 running
 setUpRepositories
     super setUpRepositories.
-    configurationDirectory := FileDirectory default directoryNamed: self configurationPath.
-    externalDirectory := FileDirectory default directoryNamed: self externalPath.
-    sampleDirectory := FileDirectory default directoryNamed: self samplePath.
+    configurationDirectory := MetacelloPlatform current fileDirectoryClass default directoryNamed: self configurationPath.
+    externalDirectory := MetacelloPlatform current fileDirectoryClass default directoryNamed: self externalPath.
+    sampleDirectory := MetacelloPlatform current fileDirectoryClass default directoryNamed: self samplePath.
     configurationDirectory exists
         ifTrue: [ configurationDirectory recursiveDelete ].
     configurationDirectory assureExistence.

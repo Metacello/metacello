@@ -2,7 +2,6 @@
 	"category" : "Metacello-Core-Constructors",
 	"classinstvars" : [
 		 ],
-	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
@@ -18,5 +17,4 @@
 	"pools" : [
 		 ],
 	"super" : "MetacelloAbstractConstructor",
-	"traitcomposition" : "{}",
 	"type" : "normal" }

@@ -1,0 +1,21 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"baseline10:" : "dkh 01/19/2012 12:32",
+		"baseline11:" : "dkh 01/19/2012 12:33",
+		"baseline12:" : "dkh 01/19/2012 12:33",
+		"baseline14:" : "dkh 01/19/2012 12:36",
+		"baseline15:" : "dkh 01/19/2012 14:35",
+		"baseline16:" : "dkh 01/30/2012 14:03",
+		"project" : "DaleHenrichs 03/12/2010 01:15",
+		"setUp" : "dkh 01/19/2012 14:51",
+		"tearDown" : "dkh 01/19/2012 14:36",
+		"testAsRepositorySpecFor" : "dkh 01/19/2012 14:40",
+		"testClientDirectoryRepository" : "dkh 01/19/2012 12:33",
+		"testDictionaryRepository" : "dkh 01/19/2012 14:36",
+		"testDirectoryRepository" : "dkh 01/19/2012 12:33",
+		"testExtractAttributesFrom" : "dkh 10/11/2011 14:07",
+		"testFileTreeRepository" : "dkh 01/30/2012 14:04",
+		"testHttpRepository" : "dkh 01/19/2012 12:35",
+		"testServerDirectoryRepository" : "dkh 01/19/2012 12:33" } }

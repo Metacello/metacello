@@ -1,0 +1,18 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"baseline10:" : "dkh 6/12/2012 10:19:43.983",
+		"baseline13:" : "dkh 6/12/2012 10:19:43.983",
+		"baseline14:" : "dkh 6/12/2012 10:19:43.983",
+		"baseline15:" : "dkh 6/12/2012 10:19:43.983",
+		"baseline16:" : "dkh 6/12/2012 10:19:43.983",
+		"project" : "dkh 6/12/2012 10:19:43.983",
+		"setUp" : "dkh 6/12/2012 10:19:43.983",
+		"tearDown" : "dkh 6/12/2012 10:19:43.983",
+		"testAsRepositorySpecFor" : "dkh 6/12/2012 10:19:43.983",
+		"testDictionaryRepository" : "dkh 6/12/2012 10:19:43.983",
+		"testDirectoryRepository" : "dkh 6/12/2012 10:19:43.983",
+		"testFileTreeRepository" : "dkh 6/12/2012 10:19:43.983",
+		"testFtpRepository" : "dkh 6/12/2012 10:19:43.983",
+		"testHttpRepository" : "dkh 6/12/2012 10:19:43.983" } }

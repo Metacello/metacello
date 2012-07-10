@@ -1,0 +1,14 @@
+{
+	"category" : "Metacello-TestsPlatform",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "DaleHenrichs 01/24/2011 14:13",
+	"instvars" : [
+		 ],
+	"name" : "MetacelloRepositoryGemStoneTestCase",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

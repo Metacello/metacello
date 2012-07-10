@@ -81,7 +81,6 @@ baseline: spec
                                 repository: 'http://seaside.gemstone.com/ss/metacello' ];
                 yourself.
             spec
-                package: 'Metacello-GitHub' with: [ spec requires: #('OSProcess') ];
                 package: 'Metacello-TestsPlatform'
                     with: [ 
                             spec
@@ -110,7 +109,11 @@ baseline: spec
                 package: 'Metacello-ProfStef'
                     with: [ spec requires: #('Metacello-Core' 'ProfStef' 'Metacello-ToolBox') ];
                 package: 'Metacello-TestsProfStef' with: [ spec requires: #('Metacello-ProfStef') ];
-                package: 'Metacello-Platform' with: 'Metacello-Platform.pharo';
+                package: 'Metacello-Platform'
+                    with: [ 
+                            spec
+                                file: 'Metacello-Platform.pharo';
+                                requires: #('OSProcess') ];
                 yourself.
             spec
                 group: 'Tests' with: #('Metacello-TestsProfStef');
@@ -122,8 +125,13 @@ baseline: spec
     spec
         for: #'pharo2.x'
         do: [ 
-            spec package: 'Metacello-Platform' with: 'Metacello-Platform.pharo20'.
-            spec baseline: 'FileTree' with: [ spec repository: 'github://dalehenrich/filetree:pharo1.4/repository' ] ].
+            spec
+                package: 'Metacello-Platform'
+                with: [ 
+                    spec
+                        file: 'Metacello-Platform.pharo20';
+                        requires: #('OSProcess') ].
+            spec baseline: 'FileTree' with: [ spec repository: 'github://dalehenrich/filetree:pharo2.0/repository' ] ].
     spec
         for: #'squeak'
         do: [ 
@@ -131,13 +139,23 @@ baseline: spec
                 baseline: 'FileTree' with: [ spec repository: 'github://dalehenrich/filetree:squeak4.3/repository' ];
                 yourself.
             spec
-                package: 'Metacello-Platform' with: 'Metacello-Platform.squeak';
+                package: 'Metacello-Platform'
+                    with: [ 
+                            spec
+                                file: 'Metacello-Platform.squeak';
+                                requires: #('OSProcess') ];
                 yourself ].
     spec
         for: #'gemstone'
         do: [ 
             spec
                 baseline: 'FileTree' with: [ spec repository: 'github://dalehenrich/filetree:gemstone2.4/repository' ];
+                project: 'GsCore'
+                    with: [ 
+                            spec
+                                className: 'ConfigurationOfGsCore';
+                                versionString: '0.247';
+                                repository: 'http://seaside.gemstone.com/ss/MetacelloRepository' ];
                 project: 'GsMonticello'
                     with: [ 
                             spec
@@ -152,6 +170,7 @@ baseline: spec
                                 repository: 'http://seaside.gemstone.com/ss/MetacelloRepository' ];
                 yourself.
             spec
+		    package: 'Metacello-GitHub' with: [ spec requires: #( 'GsCore') ];
                 package: 'Metacello-MC' with: [ spec preLoadDoIt: #'gemstone10beta24PreLoadDoIt' ];
                 package: 'Metacello-Platform'
                     with: [ 

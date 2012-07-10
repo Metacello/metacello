@@ -2,7 +2,6 @@
 	"category" : "Metacello-MC-Loaders",
 	"classinstvars" : [
 		 ],
-	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
@@ -12,5 +11,4 @@
 	"pools" : [
 		 ],
 	"super" : "MetacelloCommonMCSpecLoader",
-	"traitcomposition" : "{}",
 	"type" : "normal" }

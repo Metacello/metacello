@@ -2,7 +2,6 @@
 	"category" : "Metacello-Core-Scripts",
 	"classinstvars" : [
 		 ],
-	"classtraitcomposition" : "{}",
 	"classvars" : [
 		"BaselineRegistry",
 		"ConfigurationRegistry" ],
@@ -15,5 +14,4 @@
 	"pools" : [
 		 ],
 	"super" : "Object",
-	"traitcomposition" : "{}",
 	"type" : "normal" }
