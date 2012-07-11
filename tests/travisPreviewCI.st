@@ -14,11 +14,11 @@ Metacello new
     stream := Transcript. 
     Smalltalk globals associationAt: #Transcript) value: (Smalltalk at: #OLDTranscript).
     stream close .
-    ex pass]
+    ex pass].
 
 
 "Run the Metacello tests"
-MetacelloPlatform current authorName: 'testMonkey'. "These tests save code ... need an Author"
+(Smalltalk at: #MetacelloPlatform) current authorName: 'testMonkey'. "These tests save code ... need an Author"
 
 TravisCIHarness
   value: #( 'ConfigurationOfMetacelloPreview' )
