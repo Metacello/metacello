@@ -17,7 +17,7 @@ version10beta3202: spec
                             spec
                                 loads: #('batch');
                                 repository:
-                                        'github://dalehenrich/metacello-work:104a9f37849266e1a867566a4884c82a65cfdcd0/repository' ];
+                                        'github://dalehenrich/metacello-work:f622a6387110eb3c2b28a4f2f3e2d118e8775c44/repository' ];
                 project: 'batch' copyFrom: 'Metacello' with: [ spec loads: 'batch' ];
                 project: 'Tests' copyFrom: 'Metacello' with: [ spec loads: 'Tests' ];
                 yourself.
