@@ -5,9 +5,9 @@ version10beta3202: spec
         for: #'common'
         do: [ 
             spec blessing: #'development'.
-            spec description: 'pick up fix for Issue #39 from master branch'.
+            spec description: 'use import: statement'.
             spec author: 'dkh'.
-            spec timestamp: '7/10/2012 11:02' ].
+            spec timestamp: '7/10/2012 20:45' ].
     spec
         for: #'squeakCommon'
         do: [ 
@@ -18,7 +18,4 @@ version10beta3202: spec
                                 loads: #('batch');
                                 repository:
                                         'github://dalehenrich/metacello-work:f622a6387110eb3c2b28a4f2f3e2d118e8775c44/repository' ];
-                project: 'batch' copyFrom: 'Metacello' with: [ spec loads: 'batch' ];
-                project: 'Tests' copyFrom: 'Metacello' with: [ spec loads: 'Tests' ];
-                yourself.
-            spec group: 'default' with: #('batch') ]
+                import: 'Metacello' ]
