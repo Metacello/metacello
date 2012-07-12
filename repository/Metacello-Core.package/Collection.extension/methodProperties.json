@@ -3,6 +3,7 @@
 		 },
 	"instance" : {
 		"addToMetacelloPackages:" : "dkh 6/5/2012 19:01:24",
+		"execute:againstScriptExecutor:projectSpec:baseNameBlock:classNameBlock:" : "dkh 7/12/2012 16:08",
 		"mergeIntoMetacelloPackages:" : "dkh 6/5/2012 19:01:24",
 		"removeFromMetacelloPackages:" : "dkh 6/5/2012 19:01:24",
 		"setIncludesInMetacelloPackage:" : "dkh 6/5/2012 19:01:24",
