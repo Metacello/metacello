@@ -6,7 +6,7 @@
 		 ],
 	"commentStamp" : "dkh 6/25/2012 14:56",
 	"instvars" : [
-		"scriptEngine",
+		"scriptExecutor",
 		"ensureList",
 		"statements" ],
 	"name" : "Metacello",
