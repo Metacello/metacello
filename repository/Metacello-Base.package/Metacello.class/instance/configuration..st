@@ -1,3 +1,3 @@
 api
 configuration: projectName
-    self addStatement: #'configuration:' args: {projectName}
+    self addStatement: #'configurationArg:' args: {projectName}

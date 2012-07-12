@@ -1,4 +1,4 @@
 accessing
 projectSpec
-    projectSpec ifNil: [ projectSpec := MetacelloMCProject new projectSpec ].
+    projectSpec ifNil: [ self constructProjectSpec ].
     ^ projectSpec

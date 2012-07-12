@@ -7,6 +7,12 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"root",
+		"configurationArg",
+		"baselineArg",
+		"projectArg",
+		"classNameArg",
+		"versionArg",
+		"repositoryArg",
 		"projectSpec",
 		"options" ],
 	"name" : "MetacelloScriptEngine",

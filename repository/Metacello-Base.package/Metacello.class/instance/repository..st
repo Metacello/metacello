@@ -1,3 +1,3 @@
 api
 repository: repositoryDescription
-    self addStatement: #'repository:' args: {repositoryDescription}
+    self addStatement: #'repositoryArg:' args: {repositoryDescription}

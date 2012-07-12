@@ -1,3 +1,3 @@
 api
 version: versionString
-    self addStatement: #'version:' args: {versionString}
+    self addStatement: #'versionArg:' args: {versionString}
