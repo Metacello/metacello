@@ -23,7 +23,7 @@ projectSpecFromArgsDo: aBlock
             configurationArg ifNotNil: [ self error: ' project and configuration: are both be specified' ].
             baselineArg ifNotNil: [ self error: ' baseline: and project are both be specified' ].
             ^ aBlock
-                value: MetacelloMCProject new projectSpec
+                value: MetacelloMCProject new projectSpec asConfigurationProjectSpec
                 value: projectArg
                 value: [ :projectName | MetacelloScriptEngine configurationProjectNameOf: projectName ]
                 value: [ :projectName | MetacelloScriptEngine configurationNameFrom: projectName ] ].

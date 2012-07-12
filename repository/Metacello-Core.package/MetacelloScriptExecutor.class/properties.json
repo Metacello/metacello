@@ -14,8 +14,7 @@
 		"versionArg",
 		"repositoryArg",
 		"options",
-		"roots",
-		"projectSpecs" ],
+		"roots" ],
 	"name" : "MetacelloScriptExecutor",
 	"pools" : [
 		 ],
