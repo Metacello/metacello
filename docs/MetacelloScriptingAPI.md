@@ -183,8 +183,12 @@ linear load :
 #### `load` Notes
 
 * If a configuration is already present in the image when the load command
-is executed, the existing configuration is used. Use the [get](#getting)
-command to refresh the configuration.
+  is executed, the existing configuration is used. Use the [get](#getting)
+  command to refresh the configuration.
+
+* If a a newer version of a dependent project is called for during a load,
+  the [updgrade](*upgrading) of the project is allowed. Use the [onUpgrade:](*onupgrade)
+  block to disallow specific projects.
 
 * The default repository is platform-dependent. See the documentation
   for your platform to determine which repository is used. 
@@ -199,27 +203,10 @@ unless loaded as a project dependency.
 
 ### Upgrading
 
-When you come back to an image that you've left dormant for awhile, it
-can be a real pain to upgrade all of the loaded projects to the latest
-version. With Metacello you can upgrade all of the projects with one
-command:
+When a new version of a project is released or your are interested in refreshing your image to the 
+latest set of packages in a #development version of a project, use the upgrade command.
 
-```Smalltalk
-Metacello upgrade.
-```
-
-The `upgrade` command iterates over all loaded projects; refreshes
-the project configuration and loads the `#stable` version of each project.
-
-You can also selectively upgrade an individual project:
-
-```Smalltalk
-Metacello new
-  configuration: 'Sample';
-  upgrade.
-```
-
-Or upgrade a project to a specific version:
+The upgrade command allows you to upgrade to a new version of a [locked](#locking) project:
 
 ```Smalltalk
 Metacello new
@@ -228,24 +215,40 @@ Metacello new
   upgrade.
 ```
 
-In this case the project configuration is refreshed and the specified
+In this case the project configuration is refreshed (via [get](*getting)) and the specified
 version is loaded. If the project was previously [locked](*locking), the
-lock is changed to reflect the new version of the project.
+lock is update to reflect the new version of the project.
 
-If you want to ensure that all dependent projects are upgraded along
-with the target project, you can write an [onUpgrade:](*onupgrade)
-clause:
+If you want to upgrade all of the projects that are loaded in the image use the following 
+form of the upgrade command:
+
 
 ```Smalltalk
 Metacello new
-  configuration: 'Sample';
-  version: '0.9.1';
-  onUpgrade: [:ex | ex allow ];
+  configuration: [:projectSpec | true ];
   upgrade.
 ```
 
-Otherwise, project locks for dependent projects are honored by the
-upgrade command. 
+Using a block argument to the [configuration:](*configuration) or [baseline:](*baseline)
+message causes the command to be applied to all projects that are selected by the block.
+The `projectSpec` block argument is an instance of [MetacelloProjectSpec](#metacelloprojectspec).
+
+You may also pass a list of project names as the argument to the [configuration:](*configuration) 
+or [baseline:](*baseline) message:
+
+```Smalltalk
+Metacello new
+  configuration: #('Sample' 'Metacello');
+  upgrade.
+```
+
+as a shortcut for:
+
+```Smalltalk
+Metacello new
+  configuration: [:projectSpec | projectSpec name includes: #('Sample' 'Metacello') ];
+  upgrade.
+```
 
 #### upgrade return value
 
@@ -257,6 +260,14 @@ into your image.
 #### `upgrade` Notes
 
 * [project locking](#locking) is respected for dependent projects.
+
+* Like the [load](*loading) command, the upgrade command allows automatic 
+  upgrades on non-locked dependent projects. 
+
+  Using the [onUpgrade:](*onupgrade) block allows one to selectively disallow upgrades.
+
+  Using the [onConflict:](*onconflict) block allows one to selectively allow upgrades 
+  for [locked](*locking) dependent projects.
 
 * see the [Options](#options) section for additional information.
 
