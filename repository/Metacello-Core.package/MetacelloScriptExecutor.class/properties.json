@@ -4,17 +4,17 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "dkh 7/12/2012 14:49",
+	"commentStamp" : "",
 	"instvars" : [
+		"options",
+		"roots",
 		"actionArg",
 		"configurationArg",
 		"baselineArg",
 		"projectArg",
 		"classNameArg",
 		"versionArg",
-		"repositoryArg",
-		"options",
-		"roots" ],
+		"repositoryArg" ],
 	"name" : "MetacelloScriptExecutor",
 	"pools" : [
 		 ],

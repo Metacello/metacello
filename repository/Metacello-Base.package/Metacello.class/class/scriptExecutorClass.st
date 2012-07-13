@@ -1,3 +1,3 @@
 private
 scriptExecutorClass
-    ^ self scriptExecutorClass: {(#'MetacelloScriptExecutor' -> 'default')}
+    ^ self scriptExecutorClass: {(#'MetacelloScriptApiExecutor' -> 'batch')}

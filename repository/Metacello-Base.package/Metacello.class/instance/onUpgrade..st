@@ -1,3 +1,3 @@
-options api
+script api options
 onUpgrade: aBlock
     self addStatement: #'onUpgrade:' args: {aBlock}
