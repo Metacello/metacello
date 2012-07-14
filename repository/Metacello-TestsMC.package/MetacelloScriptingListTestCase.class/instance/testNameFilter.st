@@ -19,5 +19,6 @@ testNameFilter
     projectList := Metacello registry
         project: 'External';
         list.
-    self assert: projectList size = 1.
-    projectList do: [ :spec | self assert: (#('External') includes: spec name) ]
+    self assert: projectList size = 2.
+    projectList
+        do: [ :spec | self assert: (#('ConfigurationOfExternal' 'BaselineOfExternal') includes: spec className) ]

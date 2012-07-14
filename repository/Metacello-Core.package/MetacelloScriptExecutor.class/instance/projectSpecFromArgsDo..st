@@ -6,7 +6,7 @@ projectSpecFromArgsDo: aBlock
             projectArg ifNotNil: [ self error: ' baseline: and project are both be specified' ].
             ^ aBlock
                 value: baselineArg
-                value: MetacelloMCBaselineProject new baselineOfProjectSpec
+                value: [ :projectName | {(MetacelloMCBaselineProject new baselineOfProjectSpec name: projectName)} ]
                 value: [ :projectName | 
                     {(MetacelloProjectRegistration
                         projectSpecForClassNamed: (MetacelloScriptEngine baselineNameFrom: projectName)
@@ -18,7 +18,7 @@ projectSpecFromArgsDo: aBlock
             projectArg ifNotNil: [ self error: ' configuration and project are both be specified' ].
             ^ aBlock
                 value: configurationArg
-                value: MetacelloMCProject new configurationOfProjectSpec
+                value: [ :projectName | {(MetacelloMCProject new configurationOfProjectSpec name: projectName)} ]
                 value: [ :projectName | 
                     {(MetacelloProjectRegistration
                         projectSpecForClassNamed: (MetacelloScriptEngine configurationNameFrom: projectName)
@@ -30,7 +30,7 @@ projectSpecFromArgsDo: aBlock
             baselineArg ifNotNil: [ self error: ' baseline: and project are both be specified' ].
             ^ aBlock
                 value: projectArg
-                value: MetacelloMCProject new projectSpec
+                value: [ :projectName | {(MetacelloMCProject new projectSpec name: projectName)} ]
                 value: [ :projectName | 
                     {(MetacelloProjectRegistration
                         projectSpecForClassNamed: (MetacelloScriptEngine baselineNameFrom: projectName)
