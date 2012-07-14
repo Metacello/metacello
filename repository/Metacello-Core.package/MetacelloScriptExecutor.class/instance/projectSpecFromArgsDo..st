@@ -8,9 +8,9 @@ projectSpecFromArgsDo: aBlock
                 value: baselineArg
                 value: MetacelloMCBaselineProject new baselineOfProjectSpec
                 value: [ :projectName | 
-                    MetacelloProjectRegistration
+                    {(MetacelloProjectRegistration
                         projectSpecForClassNamed: (MetacelloScriptEngine baselineNameFrom: projectName)
-                        ifAbsent: [  ] ]
+                        ifAbsent: [  ])} ]
                 value: MetacelloProjectRegistration baselineProjectSpecs ].
     configurationArg
         ifNotNil: [ 
@@ -20,9 +20,9 @@ projectSpecFromArgsDo: aBlock
                 value: configurationArg
                 value: MetacelloMCProject new configurationOfProjectSpec
                 value: [ :projectName | 
-                    MetacelloProjectRegistration
+                    {(MetacelloProjectRegistration
                         projectSpecForClassNamed: (MetacelloScriptEngine configurationNameFrom: projectName)
-                        ifAbsent: [  ] ]
+                        ifAbsent: [  ])} ]
                 value: MetacelloProjectRegistration configurationProjectSpecs ].
     projectArg
         ifNotNil: [ 
@@ -31,6 +31,12 @@ projectSpecFromArgsDo: aBlock
             ^ aBlock
                 value: projectArg
                 value: MetacelloMCProject new projectSpec
-                value: [ :projectName | MetacelloProjectRegistration projectSpecForClassNamed: projectName ifAbsent: [  ] ]
+                value: [ :projectName | 
+                    {(MetacelloProjectRegistration
+                        projectSpecForClassNamed: (MetacelloScriptEngine baselineNameFrom: projectName)
+                        ifAbsent: [  ]).
+                    (MetacelloProjectRegistration
+                        projectSpecForClassNamed: (MetacelloScriptEngine configurationNameFrom: projectName)
+                        ifAbsent: [  ])} ]
                 value: MetacelloProjectRegistration projectSpecs ].
     self error: 'project, baseline, or configuration not specified'

@@ -11,6 +11,4 @@ execute: statements
                         options: self options copy;
                         projectSpec: (self applyArgsToProjectSpec: projectSpec copy);
                         yourself) perform: actionArg key withArguments: actionArg value) root ].
-    ^ self roots size == 1
-        ifTrue: [ self roots first ]
-        ifFalse: [ self roots ]
+    ^ self roots
