@@ -1,10 +1,9 @@
 execution
 projectSpecsDo: aBlock
     self
-        projectSpecFromArgsDo: [ :projectSpec :stringCollectionOrBlock :baseNameBlock :classNameBlock | 
+        projectSpecFromArgsDo: [ :stringCollectionOrBlock :projectSpec :lookupBlock :registeredProjectSpecs | 
             stringCollectionOrBlock
                 execute: aBlock
-                againstScriptExecutor: self
                 projectSpec: projectSpec
-                baseNameBlock: baseNameBlock
-                classNameBlock: classNameBlock ]
+                lookupBlock: lookupBlock
+                registeredProjectSpecs: registeredProjectSpecs ]
