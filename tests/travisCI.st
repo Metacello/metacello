@@ -1,7 +1,7 @@
 | versionString gitPath repository version successFilename failFilename suite result resultsFileName |
 
 [
-versionString := '1.0-beta.31.1'.
+versionString := #'stable'.
 
 "bootstrap FileTree"
 Gofer new
