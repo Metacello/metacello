@@ -1,3 +1,3 @@
 actions api
 list
-    actionArg := #'projectSpec' -> #()
+    actionArg := #'list' -> #()
