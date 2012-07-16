@@ -8,7 +8,7 @@ execute: statements
             | engine |
             engine := MetacelloScriptEngine new
                 options: self options copy;
-                projectSpec: (self applyArgsToProjectSpec: projectSpec copy);
+                projectSpec: projectSpec;
                 yourself.
             engine perform: actionArg key withArguments: actionArg value.
             engine root ifNotNil: [ :root | self roots add: root ] ]

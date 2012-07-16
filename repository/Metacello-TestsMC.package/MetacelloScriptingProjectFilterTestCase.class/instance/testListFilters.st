@@ -1,5 +1,5 @@
 tests
-testFilters
+testListFilters
     Metacello new
         baseline: 'GithubRefIV';
         repository: 'filetree://' , externalDirectory fullName;
