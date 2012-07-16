@@ -14,7 +14,8 @@
 		"projectArg",
 		"classNameArg",
 		"versionArg",
-		"repositoryArg" ],
+		"repositoryArg",
+		"projectSpecGenerator" ],
 	"name" : "MetacelloScriptExecutor",
 	"pools" : [
 		 ],
