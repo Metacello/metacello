@@ -2,4 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"execute:" : "dkh 7/14/2012 11:37" } }
+		"execute:" : "dkh 7/14/2012 11:37",
+		"executeBlock:do:" : "dkh 7/16/2012 11:30",
+		"executeCollection:do:" : "dkh 7/16/2012 11:30",
+		"executeString:do:" : "dkh 7/16/2012 11:29" } }

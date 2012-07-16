@@ -2,6 +2,13 @@
 	"class" : {
 		 },
 	"instance" : {
-		"testBlockFilter" : "dkh 7/14/2012 11:44",
-		"testCollectionFilter" : "dkh 7/14/2012 11:54",
-		"testNameFilter" : "dkh 7/14/2012 13:20" } }
+		"setUpRepositories" : "dkh 7/16/2012 11:59",
+		"tearDownPackageList" : "dkh 7/16/2012 11:47",
+		"tearDownRepositories" : "dkh 7/16/2012 11:59",
+		"testFilters" : "dkh 7/16/2012 12:40",
+		"validateImageBlockFilter" : "dkh 7/16/2012 12:09",
+		"validateImageCollectionFilter" : "dkh 7/16/2012 12:09",
+		"validateImageNameFilter" : "dkh 7/16/2012 12:09",
+		"validateRegistryBlockFilter" : "dkh 7/16/2012 11:51",
+		"validateRegistryCollectionFilter" : "dkh 7/16/2012 11:52",
+		"validateRegistryNameFilter" : "dkh 7/16/2012 11:51" } }

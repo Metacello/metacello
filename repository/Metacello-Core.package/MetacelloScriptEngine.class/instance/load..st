@@ -10,6 +10,7 @@ load: required
                     (required isEmpty
                         ifTrue: [ version load ]
                         ifFalse: [ version load: required ]) loadDirective.
-            MetacelloProjectRegistration
+            (MetacelloProjectRegistration
                 registerProjectSpec: loadededSpec
-                ifPresent: [ :existing :new | MetacelloProjectRegistration mergeRegistration: existing with: new ] ]
+                ifPresent: [ :existing :new | MetacelloProjectRegistration mergeRegistration: existing with: new ])
+                loadedInImage: true ]

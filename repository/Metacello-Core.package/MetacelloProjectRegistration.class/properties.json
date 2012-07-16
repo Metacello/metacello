@@ -9,7 +9,8 @@
 	"instvars" : [
 		"projectName",
 		"configurationProjectSpec",
-		"baselineProjectSpec" ],
+		"baselineProjectSpec",
+		"loadedInImage" ],
 	"name" : "MetacelloProjectRegistration",
 	"pools" : [
 		 ],

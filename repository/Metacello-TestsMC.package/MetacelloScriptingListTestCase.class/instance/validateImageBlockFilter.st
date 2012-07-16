@@ -1,22 +1,17 @@
-tests
-testBlockFilter
+validation
+validateImageBlockFilter
     | baselineList configurationList projectList |
-    Metacello new
-        baseline: 'GithubRefIV';
-        repository: 'filetree://' , externalDirectory fullName;
-        silently;
-        load.
-    baselineList := Metacello registry
+    baselineList := Metacello image
         baseline: [ :spec | true ];
         list.
     self assert: baselineList size = 2.
     baselineList do: [ :spec | self assert: (#('BaselineOfExternal' 'BaselineOfGithubRefIV') includes: spec className) ].
-    configurationList := Metacello registry
+    configurationList := Metacello image
         configuration: [ :spec | true ];
         list.
     self assert: configurationList size = 1.
     configurationList do: [ :spec | self assert: (#('ConfigurationOfExternal') includes: spec className) ].
-    projectList := Metacello registry
+    projectList := Metacello image
         project: [ :spec | true ];
         list.
     self assert: projectList size = 3.
