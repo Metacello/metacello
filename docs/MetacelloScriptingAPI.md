@@ -60,6 +60,7 @@ bootstrapping will no longer be necessary.*
 * [Getting](#getting)
 * [Fetching](#fetching)
 * [Recording](#recording)
+* [Listing](#listing)
 
 ### Loading
 
@@ -494,6 +495,37 @@ linear load :
 		linear load : baseline [BaselineOfSample]
 			load : Sample-Core
 ```
+
+### Listing
+
+The list command may be used to list projects in a repository:
+
+```Smalltalk
+Metacello new
+  configuration: [:spec | true ];
+  repository: 'github://dalehenrich/sample:configuration';
+  list.
+```
+
+or loaded in the image:
+
+```Smalltalk
+Metacello image
+  configuration: [:spec | true ];
+  list.
+```
+
+or registered with Metacello (i.e., projects that have been operated on by the [get](#getting) or [lock](#locking) commands:
+
+```Smalltalk
+Metacello registry
+  configuration: [:spec | true ];
+  list.
+```
+
+#### `list` return value
+
+The list command returns a collection of instances of the [MetacelloProjectSpec](#metacelloprojectspec) class.
 
 ## Scripting API Referenece
 ###Project Specification
