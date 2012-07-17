@@ -1,4 +1,4 @@
-registry api actions
+api actions
 list
     "list projects in registry"
 

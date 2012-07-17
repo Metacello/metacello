@@ -11,6 +11,7 @@ testConfigurationConflict2
         version: '1.0.0';
         repository: 'filetree://' , configurationDirectory fullName;
         silently;
+        onConflict: [ :ex | ex disallow ];
         load ]
         on: MetacelloAllowProjectUpgrade
         do: [ :ex | ex disallow ].

@@ -1,0 +1,14 @@
+{
+	"category" : "Metacello-TestsMC-Scripts",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MetacelloScriptingLockTestCase",
+	"pools" : [
+		 ],
+	"super" : "MetacelloBasicScriptingTestCase",
+	"type" : "normal" }

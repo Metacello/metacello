@@ -1,4 +1,4 @@
-script api actions
+api actions
 load
     self addStatement: #'load' args: #().
     ^ self execute

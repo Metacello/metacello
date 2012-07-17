@@ -1,3 +1,3 @@
-script api
+api
 configuration: projectName
     self addStatement: #'configurationArg:' args: {projectName}

@@ -10,7 +10,8 @@
 		"projectName",
 		"configurationProjectSpec",
 		"baselineProjectSpec",
-		"loadedInImage" ],
+		"loadedInImage",
+		"locked" ],
 	"name" : "MetacelloProjectRegistration",
 	"pools" : [
 		 ],

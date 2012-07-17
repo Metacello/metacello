@@ -1,4 +1,4 @@
-script api options
+api options
 ignoreImage
     "ignore image state"
 

@@ -8,10 +8,12 @@ canUpgradeTo: aProjectRegistration
         ifFalse: [ ^ true ].
     (self isValid and: [ aProjectRegistration isValid ])
         ifFalse: [ ^ false ].
-    self projectName = aProjectRegistration projectName
-        ifFalse: [ ^ false ].
     configurationProjectSpec
         ifNotNil: [ 
             aProjectRegistration configurationProjectSpec
-                ifNotNil: [ ^ configurationProjectSpec canUpgradeTo: aProjectRegistration configurationProjectSpec ] ].
+                ifNotNil: [ 
+                    configurationProjectSpec ensureProjectLoaded.
+                    (self locked or: [ aProjectRegistration locked ])
+                        ifTrue: [ ^ false ].
+                    ^ configurationProjectSpec canUpgradeTo: aProjectRegistration configurationProjectSpec ] ].
     ^ false

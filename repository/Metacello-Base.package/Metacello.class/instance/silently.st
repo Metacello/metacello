@@ -1,4 +1,4 @@
-script api options
+api options
 silently
     "no progress bars"
 
