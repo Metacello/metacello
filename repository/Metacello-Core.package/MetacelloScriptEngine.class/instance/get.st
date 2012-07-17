@@ -5,7 +5,7 @@ get
     | spec |
     spec := self projectSpec.
     spec projectPackage load.
-    self root: spec project.
+    self root: (Smalltalk at: spec className asSymbol) project.
     MetacelloProjectRegistration
         registrationForProjectSpec: spec
         ifAbsent: [ :ignored |  ]
