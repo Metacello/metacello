@@ -1,4 +1,4 @@
-tests
+list tests
 testListFilters
     Metacello new
         baseline: 'GithubRefIV';
