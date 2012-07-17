@@ -8,7 +8,7 @@ get
     self root: (Smalltalk at: spec className asSymbol) project.
     MetacelloProjectRegistration
         registrationForProjectSpec: spec
-        ifAbsent: [ :ignored |  ]
+        ifAbsent: [ :new | new registerProject ]
         ifPresent: [ :existing :new | 
             (spec lookupProjectSpecIn: existing)
                 ifNil: [ MetacelloProjectRegistration mergeRegistration: existing with: new ]
