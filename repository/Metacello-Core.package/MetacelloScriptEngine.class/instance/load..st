@@ -4,7 +4,9 @@ load: required
         handleNotificationsForAction: [ 
             | version loadedSpec |
             self validateProjectSpec: #'validateForScriptLoad:'.
-            version := (loadedSpec := self lookupProjectSpecFor: self projectSpec) versionForScriptEngine: self.
+            loadedSpec := (self lookupProjectSpecFor: self projectSpec) copy.
+            self projectSpec versionString ifNotNil: [ :str | loadedSpec versionString: str ].
+            version := loadedSpec versionForScriptEngine: self.
             self
                 root:
                     (required isEmpty
