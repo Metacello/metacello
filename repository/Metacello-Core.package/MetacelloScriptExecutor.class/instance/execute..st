@@ -13,4 +13,6 @@ execute: statements
             engine perform: actionArg key withArguments: actionArg value.
             engine root ifNotNil: [ :root | self roots add: root ] ]
         against: self.
-    ^ self roots
+    ^ (self singleRoot and: [ self roots size == 1 ])
+        ifTrue: [ self roots first ]
+        ifFalse: [ self roots ]

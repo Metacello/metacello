@@ -1,19 +1,17 @@
 validation
 validateImageNameFilter
-    | baselineList configurationList projectList |
-    baselineList := Metacello image
+    | spec projectList |
+    spec := Metacello image
         baseline: 'External';
         list.
-    self assert: baselineList size = 1.
-    baselineList do: [ :spec | self assert: (#('BaselineOfExternal') includes: spec className) ].
-    configurationList := Metacello image
+    self assert: 'BaselineOfExternal' = spec className.
+    spec := Metacello image
         configuration: 'External';
         list.
-    self assert: configurationList size = 1.
-    configurationList do: [ :spec | self assert: (#('ConfigurationOfExternal') includes: spec className) ].
+    self assert: 'ConfigurationOfExternal' = spec className.
     projectList := Metacello image
         project: 'External';
         list.
     self assert: projectList size = 2.
     projectList
-        do: [ :spec | self assert: (#('ConfigurationOfExternal' 'BaselineOfExternal') includes: spec className) ]
+        do: [ :projectSpec | self assert: (#('ConfigurationOfExternal' 'BaselineOfExternal') includes: projectSpec className) ]

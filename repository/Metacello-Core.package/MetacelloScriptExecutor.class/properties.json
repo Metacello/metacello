@@ -8,14 +8,15 @@
 	"instvars" : [
 		"options",
 		"roots",
+		"singleRoot",
+		"projectSpecGenerator",
 		"actionArg",
 		"configurationArg",
 		"baselineArg",
 		"projectArg",
 		"classNameArg",
 		"versionArg",
-		"repositoryArg",
-		"projectSpecGenerator" ],
+		"repositoryArg" ],
 	"name" : "MetacelloScriptExecutor",
 	"pools" : [
 		 ],
