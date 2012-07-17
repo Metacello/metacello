@@ -9,8 +9,6 @@ hasLoadConflicts: aProjectRegistration
 
     (self isValid and: [ aProjectRegistration isValid ])
         ifFalse: [ ^ true ].
-    self projectName = aProjectRegistration projectName
-        ifFalse: [ ^ true ].
     configurationProjectSpec
         ifNil: [ 
             aProjectRegistration configurationProjectSpec notNil

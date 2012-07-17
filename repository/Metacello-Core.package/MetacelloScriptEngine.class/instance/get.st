@@ -1,9 +1,15 @@
 actions api
 get
-    "lookup project spec ... using standard technique, then load "
+    " load a fresh copy from repo"
 
-    self
-        handleNotificationsForAction: [ 
-            | spec |
-            spec := self lookupProjectSpecFor: self projectSpec.
-            self root: (spec project projectForScriptEngine: self unconditionalLoad: true) ]
+    | spec |
+    spec := self projectSpec.
+    spec projectPackage load.
+    self root: spec project.
+    MetacelloProjectRegistration
+        registrationForProjectSpec: spec
+        ifAbsent: [ :ignored |  ]
+        ifPresent: [ :existing :new | 
+            (spec lookupProjectSpecIn: existing)
+                ifNil: [ MetacelloProjectRegistration mergeRegistration: existing with: new ]
+                ifNotNil: [ :existingSpec | existingSpec mergeScriptRepository: spec ] ]

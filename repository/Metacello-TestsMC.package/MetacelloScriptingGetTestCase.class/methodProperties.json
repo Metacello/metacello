@@ -2,6 +2,8 @@
 	"class" : {
 		 },
 	"instance" : {
+		"setUpRepositoryContents" : "dkh 7/17/2012 07:18",
+		"tearDownRepositories" : "dkh 7/17/2012 07:36",
 		"testFileTreeGetBaseline" : "dkh 6/18/2012 16:23",
 		"testFileTreeGetConfigurationBasicSpecIV" : "dkh 6/22/2012 17:42",
 		"testFileTreeGetConfigurationBasicSpecX" : "dkh 6/22/2012 17:42",
@@ -10,4 +12,6 @@
 		"testFileTreeGetConfigurationVersionSpecIV" : "dkh 6/22/2012 17:43",
 		"testFileTreeGetConfigurationVersionSpecX" : "dkh 6/22/2012 17:43",
 		"testFileTreeGetConfigurationVersionSpecXX" : "dkh 6/22/2012 17:43",
-		"testFileTreeGetConfigurationVersionSpecXXX" : "dkh 6/22/2012 17:43" } }
+		"testFileTreeGetConfigurationVersionSpecXXX" : "dkh 6/22/2012 17:43",
+		"testGetRefresh" : "dkh 7/17/2012 07:38",
+		"testLoadNGet" : "dkh 7/17/2012 07:27" } }
