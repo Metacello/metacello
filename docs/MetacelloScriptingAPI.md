@@ -60,6 +60,7 @@ bootstrapping will no longer be necessary.*
 * [Getting](#getting)
 * [Fetching](#fetching)
 * [Recording](#recording)
+* [Listing](#listing)
 
 ### Loading
 
@@ -312,8 +313,6 @@ in the normal course of loading and upgrading, you want the correct
 version of dependent projects loaded. However under the following
 conditions:
 
-* Your application may depend upon a specific version (or 
-  range of versions) for a project.
 * You may be actively developing a particular version of a 
   project and you don't want the
   project upgraded (or downgraded) out from under you.
@@ -332,23 +331,11 @@ Metacello new
   lock.
 ```
 
-Or you can specify a block to be evaluated against the `proposedVersion`
-and answer `true` to allow limited upgrades:
-
-```Smalltalk
-Metacello new
-  configuration: 'Sample';
-  version: [:proposedVersion | 
-    (propsedVersion versionNumberFrom: '0.8.0') <= proposedVersion 
-      and: [ proposedVersion < (proposedVersion versionNumberFrom: '1.0.0') ]];
-  lock.
-```
-
 If you don't specify an explicit version, then the currently loaded
 version of the project is locked:
 
 ```Smalltalk
-Metacello new
+Metacello image
   configuration: 'Sample';
   lock.
 ```
@@ -508,6 +495,37 @@ linear load :
 		linear load : baseline [BaselineOfSample]
 			load : Sample-Core
 ```
+
+### Listing
+
+The list command may be used to list projects in a repository:
+
+```Smalltalk
+Metacello new
+  configuration: [:spec | true ];
+  repository: 'github://dalehenrich/sample:configuration';
+  list.
+```
+
+or loaded in the image:
+
+```Smalltalk
+Metacello image
+  configuration: [:spec | true ];
+  list.
+```
+
+or registered with Metacello (i.e., projects that have been operated on by the [get](#getting) or [lock](#locking) commands:
+
+```Smalltalk
+Metacello registry
+  configuration: [:spec | true ];
+  list.
+```
+
+#### `list` return value
+
+The list command returns a collection of instances of the [MetacelloProjectSpec](#metacelloprojectspec) class.
 
 ## Scripting API Referenece
 ###Project Specification

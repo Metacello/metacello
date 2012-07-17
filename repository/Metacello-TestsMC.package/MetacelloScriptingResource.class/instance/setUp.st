@@ -15,7 +15,6 @@ setUp
         setUpVersionBaselineOfExternalXXX;
         setUpVersionBaselineOfExternalIV;
         setUpBaselineGithubReferenceXX;
-        setUpBaselineGithubReferenceXXX;
         setUpBaselineGithubReferenceIV;
         setUpBaselineGithubReferenceV;
         setUpBaselineGithubReferenceVI;

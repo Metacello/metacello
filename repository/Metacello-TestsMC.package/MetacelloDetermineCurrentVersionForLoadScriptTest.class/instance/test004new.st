@@ -14,6 +14,7 @@ test004new
         className: 'MetacelloTestConfigurationOfFan';
         repository: 'dictionary://Metacello_Configuration_Test_Repository';
         silently;
+        onConflict: [ :ex | ex disallow ];
         load: 'Far'.
     wc := (GoferPackageReference name: 'GoferBar') workingCopy.
     self assert: wc ancestry ancestors first name = 'GoferBar-lr.1'.

@@ -3,7 +3,7 @@ testFileTreeGetBaseline
     self
         should: [ 
             Metacello new
-                project: 'ExternalX';
+                configuration: 'ExternalX';
                 repository: 'filetree://' , externalDirectory fullName;
                 get ]
         raise: MetacelloPackageSpecResolutionError

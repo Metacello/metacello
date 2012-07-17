@@ -1,3 +1,3 @@
 api
 baseline: projectName
-    self addStatement: #'baseline:' args: {projectName}
+    self addStatement: #'baselineArg:' args: {projectName}

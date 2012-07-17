@@ -3,4 +3,4 @@ execute
     | script |
     script := self statements.
     self statements: nil.
-    ^ self scriptEngine execute: script
+    ^ self scriptExecutor execute: script

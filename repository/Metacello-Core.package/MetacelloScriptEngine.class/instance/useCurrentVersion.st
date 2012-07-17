@@ -1,4 +1,4 @@
-options api
+options
 useCurrentVersion
     "private option used to implement the classic mode"
 
