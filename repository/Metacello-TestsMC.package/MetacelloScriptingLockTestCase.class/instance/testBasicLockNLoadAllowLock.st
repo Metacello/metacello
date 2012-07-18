@@ -1,5 +1,5 @@
 testing
-testBasicLockNLoadDisallowConflict
+testBasicLockNLoadAllowLock
     Metacello new
         configuration: 'ExternalX';
         version: '0.9.0';
@@ -8,11 +8,11 @@ testBasicLockNLoadDisallowConflict
     Metacello registry
         configuration: 'ExternalX';
         version: '0.9.1';
-        onConflict: [ :ex | ex disallow ];
+        onLock: [ :ex | ex allow ];
         load.
     self
         validateExpectedConfigurationClassName: 'ConfigurationOfExternalX'
-        expectedConfigurationVersion: '0.9.0'
+        expectedConfigurationVersion: '0.9.1'
         expectedConfigurationRepository: 'dictionary://Metacello_Config_Test_Repository'
         expectedBaselineClassName: 'BaselineOfExternalX'
         expectedBaselineVersion: 'baseline'

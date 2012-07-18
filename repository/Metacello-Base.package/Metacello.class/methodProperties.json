@@ -25,6 +25,7 @@
 		"lock" : "dkh 7/17/2012 10:53",
 		"onConflict:" : "dkh 6/7/2012 15:34",
 		"onDowngrade:" : "dkh 6/8/2012 14:03:46",
+		"onLock:" : "dkh 7/18/2012 11:33",
 		"onUpgrade:" : "dkh 6/7/2012 15:33",
 		"project:" : "dkh 7/12/2012 13:46",
 		"renggli:" : "dkh 7/17/2012 16:48",

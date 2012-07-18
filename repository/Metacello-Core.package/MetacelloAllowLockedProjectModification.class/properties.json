@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "MetacelloConflictingProjectError",
+		"projectRegistration" ],
+	"name" : "MetacelloAllowLockedProjectModification",
 	"pools" : [
 		 ],
-	"super" : "MetacelloScriptingError",
+	"super" : "MetacelloScriptNotification",
 	"type" : "normal" }

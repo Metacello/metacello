@@ -11,4 +11,4 @@ testBasicLockNLoadErrorConflict
                 configuration: 'ExternalX';
                 version: '0.9.1';
                 load ]
-        raise: MetacelloConflictingProjectError
+        raise: MetacelloLockedProjectError

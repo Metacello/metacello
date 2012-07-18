@@ -21,6 +21,7 @@
 		"lock" : "dkh 7/17/2012 10:53",
 		"onConflict:" : "dkh 7/13/2012 09:31",
 		"onDowngrade:" : "dkh 7/13/2012 09:31",
+		"onLock:" : "dkh 7/18/2012 11:33",
 		"onUpgrade:" : "dkh 7/13/2012 09:31",
 		"options" : "dkh 7/13/2012 09:02",
 		"projectArg" : "dkh 7/13/2012 09:30",

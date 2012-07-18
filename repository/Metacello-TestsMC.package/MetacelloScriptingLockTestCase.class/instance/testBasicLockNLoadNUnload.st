@@ -8,7 +8,7 @@ testBasicLockNLoadNUnload
     Metacello registry
         configuration: 'ExternalX';
         version: '0.9.1';
-        onConflict: [ :ex | ex disallow ];
+        onLock: [ :ex | ex disallow ];
         load.
     self
         validateExpectedConfigurationClassName: 'ConfigurationOfExternalX'
