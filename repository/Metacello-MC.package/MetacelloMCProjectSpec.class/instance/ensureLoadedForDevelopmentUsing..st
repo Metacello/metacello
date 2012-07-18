@@ -8,24 +8,27 @@ ensureLoadedForDevelopmentUsing: mcLoader
         ifTrue: [ 
             | vrsn |
             vrsn := self versionOrNil.
-            (vrsn ~~ nil and: [ vrsn blessing == #'development' ])
+            vrsn ~~ nil
                 ifTrue: [ 
-                    ensured ~~ #'latest'
+                    vrsn blessing == #'development'
                         ifTrue: [ 
-                            mcLoader ensureForDevelopment
+                            ensured ~~ #'latest'
                                 ifTrue: [ 
-                                    | pc |
-                                    (pc := self projectClass) ~~ nil
+                                    mcLoader ensureForDevelopment
                                         ifTrue: [ 
-                                            MetacelloClearStackCacheNotification
-                                                signal:
-                                                    #(#'currentVersion' #'currentVersionAgainst:' #'currentVersionInfo' #'versionConstructor' #'loadableSpecNames') , {pc} ].
-                                    self ensureLoadUsing: mcLoader ]
-                                ifFalse: [ self projectPackage fetchUsing: mcLoader ].
-                            mcLoader ensuredMap at: self name put: #'latest' ].
+                                            | pc |
+                                            (pc := self projectClass) ~~ nil
+                                                ifTrue: [ 
+                                                    MetacelloClearStackCacheNotification
+                                                        signal:
+                                                            #(#'currentVersion' #'currentVersionAgainst:' #'currentVersionInfo' #'versionConstructor' #'loadableSpecNames') , {pc} ].
+                                            self ensureLoadUsing: mcLoader ]
+                                        ifFalse: [ self projectPackage fetchUsing: mcLoader ].
+                                    mcLoader ensuredMap at: self name put: #'latest' ] ].
                     ^ self ] ].
     ensured == nil
         ifTrue: [ 
+            "projectClass == nil or version == nil"
             mcLoader ensureForDevelopment
                 ifTrue: [ 
                     | pc |
