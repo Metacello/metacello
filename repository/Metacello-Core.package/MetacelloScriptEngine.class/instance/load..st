@@ -1,18 +1,12 @@
 actions api
 load: required
     self
-        handleNotificationsForAction: [ 
-            | version loadedSpec |
-            self validateProjectSpec: #'validateForScriptLoad:'.
-            loadedSpec := self lookupProjectSpecFor: self projectSpec.
-            version := loadedSpec versionForScriptEngine: self.
-            self
-                root:
-                    (required isEmpty
-                        ifTrue: [ version load ]
-                        ifFalse: [ version load: required ]) loadDirective.
-            loadedSpec loads: required.
-            (MetacelloProjectRegistration
-                registerProjectSpec: loadedSpec
-                ifPresent: [ :existing :new | MetacelloProjectRegistration mergeRegistration: existing with: new ])
-                loadedInImage: true ]
+        load: required
+        onProjectDownGrade: [ :ex :existing :new | 
+            MetacelloScriptingError
+                signal:
+                    'Use downgrade command to downgrade project from ' , existing printString , ' to ' , new printString ]
+        onProjectUpgrade: [ :ex :existing :new | 
+            MetacelloScriptingError
+                signal: 'Use upgrade command to upgrade project from ' , existing printString , ' to ' , new printString ]
+        onProjectLock: [ :ex :existing :ignored | MetacelloScriptingError signal: 'Use upgrade command to upgrade locked project ' , existing printString ]
