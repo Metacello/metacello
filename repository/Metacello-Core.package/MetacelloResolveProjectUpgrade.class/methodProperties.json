@@ -2,10 +2,13 @@
 	"class" : {
 		 },
 	"instance" : {
-		"allow" : "dkh 6/7/2012 15:24",
-		"defaultAction" : "dkh 6/7/2012 15:26",
+		"allow" : "dkh 7/18/2012 16:40",
+		"allowEvenIfLocked" : "dkh 7/18/2012 16:42",
+		"checkAllowed" : "dkh 7/18/2012 17:09",
+		"defaultAction" : "dkh 7/18/2012 16:42",
 		"disallow" : "dkh 6/7/2012 15:25",
 		"existingProjectRegistration" : "dkh 5/29/2012 16:30",
 		"existingProjectRegistration:" : "dkh 5/29/2012 16:30",
 		"newProjectRegistration" : "dkh 5/29/2012 16:30",
-		"newProjectRegistration:" : "dkh 5/29/2012 16:30" } }
+		"newProjectRegistration:" : "dkh 5/29/2012 16:30",
+		"operationString" : "dkh 7/18/2012 17:08" } }

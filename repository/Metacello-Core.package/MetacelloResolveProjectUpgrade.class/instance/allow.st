@@ -1,4 +1,4 @@
 exception handling
 allow
-    MetacelloProjectRegistration registerProjectRegistration: self newProjectRegistration.
+    self checkAllowed.
     self resume: self newProjectRegistration

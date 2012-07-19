@@ -10,5 +10,5 @@
 	"name" : "MetacelloConflictingProjectError",
 	"pools" : [
 		 ],
-	"super" : "Error",
+	"super" : "MetacelloScriptingError",
 	"type" : "normal" }

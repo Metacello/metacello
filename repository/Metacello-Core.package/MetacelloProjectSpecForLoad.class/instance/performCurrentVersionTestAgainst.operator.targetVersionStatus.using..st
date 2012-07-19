@@ -36,7 +36,7 @@ performCurrentVersionTestAgainst: vrsn operator: anOperator targetVersionStatus:
                 signal) == existing ]
         ifFalse: [ 
             "answer false if upgrade allowed"
-            (MetacelloAllowConflictingProjectUpgrade new
+            (MetacelloAllowProjectUpgrade new
                 existingProjectRegistration: existing;
                 newProjectRegistration: new;
                 signal) == existing ]

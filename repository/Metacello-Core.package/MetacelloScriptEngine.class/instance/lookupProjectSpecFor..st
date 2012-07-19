@@ -1,6 +1,6 @@
 project lookup
 lookupProjectSpecFor: aProjectSpec
-    | registration |
+    | registration loadedSpec |
     registration := MetacelloProjectRegistration
         registrationForProjectSpec: aProjectSpec
         ifAbsent: [ :new | new ]

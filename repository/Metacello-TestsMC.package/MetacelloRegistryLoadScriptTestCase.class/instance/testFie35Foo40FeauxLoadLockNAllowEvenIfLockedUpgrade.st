@@ -1,5 +1,10 @@
 tests
-testFie35Foo40FeauxLoadDisallow
+testFie35Foo40FeauxLoadLockNAllowEvenIfLockedUpgrade
+    Metacello new
+        project: 'Foo';
+        className: 'MetacelloTestConfigurationOfFoo';
+        version: '3.5';
+        lock.
     Metacello new
         project: 'Fie';
         className: 'MetacelloTestConfigurationOfProjectFie';
@@ -11,7 +16,6 @@ testFie35Foo40FeauxLoadDisallow
         project: 'Fie';
         className: 'MetacelloTestConfigurationOfProjectFie';
         version: '4.0';
-        onUpgrade: [ :ex | ex disallow ];
         repository: 'dictionary://Metacello_Configuration_Test_Repository';
-        load: 'Feaux'.
-    self validateBlockFie35FooFeuxLoad value
+        onUpgrade: [ :ex | ex allowEvenIfLocked ];
+        upgrade: 'Feaux'

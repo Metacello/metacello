@@ -1,0 +1,18 @@
+actions api
+record: required
+    self
+        handleNotificationsForAction: [ 
+            | version loadedSpec |
+            self validateProjectSpec: #'validateForScriptLoad:'.
+            [ loadedSpec := self lookupProjectSpecFor: self projectSpec ]
+                on: MetacelloAllowProjectDowngrade , MetacelloAllowProjectUpgrade
+                do: [ :notification | 
+                    notification
+                        handleOnDownGrade: [ :ex :existing :new | ex allowEvenIfLocked ]
+                        onUpgrade: [ :ex :existing :new | ex allowEvenIfLocked ] ].
+            version := loadedSpec versionForScriptEngine: self.
+            self
+                root:
+                    (required isEmpty
+                        ifTrue: [ version record ]
+                        ifFalse: [ version record: required ]) loadDirective ]
