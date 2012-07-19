@@ -13,4 +13,4 @@ testClassicFie40Feaux35FeauxLoad
         version: '3.5';
         repository: 'dictionary://Metacello_Configuration_Test_Repository';
         load: 'Feaux'.
-    self validateBlockOriginalFie4035FeauxFeauxLoad value
+    self validateBlockClassicFie4035FeauxFeauxLoad value

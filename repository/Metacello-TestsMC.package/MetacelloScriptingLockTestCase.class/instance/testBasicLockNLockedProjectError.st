@@ -1,5 +1,5 @@
 testing
-testBasicLockNLoadErrorConflict
+testBasicLockNLockedProjectError
     Metacello new
         configuration: 'ExternalX';
         version: '0.9.0';
@@ -11,4 +11,4 @@ testBasicLockNLoadErrorConflict
                 configuration: 'ExternalX';
                 version: '0.9.1';
                 load ]
-        raise: MetacelloUseUpgradeError
+        raise: MetacelloLockedProjectError

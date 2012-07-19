@@ -1,7 +1,7 @@
 private
-validateBlockClassicFie35FooFeuxLoad
+validateBlockClassicFie40Foo35FooLoad
     ^ [ 
-    self validateBlockOriginalFie4035FooFeuxLoad value.
+    self validateBlockOriginalFie40FooLoad value.
     self
         validateProjects:
             {{'MetacelloTestConfigurationOfProjectFie'.
@@ -11,12 +11,6 @@ validateBlockClassicFie35FooFeuxLoad
             nil.
             nil}.
             {'MetacelloTestConfigurationOfFoo'.
-            '4.0'.
-            'dictionary://Metacello_Configuration_Test_Repository'.
-            nil.
-            nil.
-            nil}.
-            {'MetacelloTestConfigurationOfFeaux'.
             '4.0'.
             'dictionary://Metacello_Configuration_Test_Repository'.
             nil.
