@@ -1,3 +1,3 @@
 handlers
-handleOnDownGrade: onDownGradeBlock onUpgrade: onUpgradeBlock onLock: onLockBlock
+handleOnDownGrade: onDownGradeBlock onUpgrade: onUpgradeBlock
     ^ onDownGradeBlock cull: self cull: self existingProjectRegistration cull: self newProjectRegistration

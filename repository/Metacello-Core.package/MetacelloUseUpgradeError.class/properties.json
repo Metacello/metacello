@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"projectRegistration" ],
-	"name" : "MetacelloAllowLockedProjectModification",
+		 ],
+	"name" : "MetacelloUseUpgradeError",
 	"pools" : [
 		 ],
-	"super" : "MetacelloScriptNotification",
+	"super" : "MetacelloScriptingError",
 	"type" : "normal" }

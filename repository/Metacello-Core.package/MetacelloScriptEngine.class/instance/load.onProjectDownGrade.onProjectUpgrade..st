@@ -1,13 +1,12 @@
 actions api
-load: required onProjectDownGrade: onDownGradeBlock onProjectUpgrade: onUpgradeBlock onProjectLock: onLockBlock
+load: required onProjectDownGrade: onDownGradeBlock onProjectUpgrade: onUpgradeBlock
     self
         handleNotificationsForAction: [ 
             | version loadedSpec |
             self validateProjectSpec: #'validateForScriptLoad:'.
             [ loadedSpec := self lookupProjectSpecFor: self projectSpec ]
-                on:
-                    MetacelloAllowProjectDowngrade , MetacelloAllowProjectUpgrade , MetacelloAllowLockedProjectModification
-                do: [ :ex | ex handleOnDownGrade: onDownGradeBlock onUpgrade: onUpgradeBlock onLock: onLockBlock ].
+                on: MetacelloAllowProjectDowngrade , MetacelloAllowProjectUpgrade
+                do: [ :ex | ex handleOnDownGrade: onDownGradeBlock onUpgrade: onUpgradeBlock ].
             version := loadedSpec versionForScriptEngine: self.
             self
                 root:

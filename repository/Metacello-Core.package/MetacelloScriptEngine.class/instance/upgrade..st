@@ -6,6 +6,5 @@ upgrade: required
         ifPresent: [ :ignoredExisting :ignoredNew |  ].
     self
         load: required
-        onProjectDownGrade: [ :ex :existing :new | ex allow ]
-        onProjectUpgrade: [ :ex :existing :new | ex allow ]
-        onProjectLock: [ :ex :existing :ignored | ex allow ]
+        onProjectDownGrade: [ :ex :existing :new | ex allowEvenIfLocked ]
+        onProjectUpgrade: [ :ex :existing :new | ex allowEvenIfLocked ]

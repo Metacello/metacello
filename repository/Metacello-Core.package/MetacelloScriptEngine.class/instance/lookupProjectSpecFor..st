@@ -7,14 +7,6 @@ lookupProjectSpecFor: aProjectSpec
         ifPresent: [ :existing :new | 
             (existing hasLoadConflicts: new)
                 ifTrue: [ 
-                    existing locked
-                        ifTrue: [ 
-                            (MetacelloAllowLockedProjectModification new
-                                projectRegistration: existing;
-                                signal)
-                                ifFalse: [ 
-                                    "don't bother checking further ... no change, but continue with load"
-                                    ^ aProjectSpec lookupProjectSpecIn: existing ] ].
                     ((existing canUpgradeTo: new)
                         ifTrue: [ MetacelloAllowProjectUpgrade new ]
                         ifFalse: [ 

@@ -1,4 +1,3 @@
 exception handling
-allow
-    self checkAllowed.
+allowEvenIfLocked
     self resume: self newProjectRegistration
