@@ -6,11 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"registry",
-		"monticelloRepository",
-		"configurationRepository" ],
-	"name" : "MetacelloScriptingStandardTestHarness",
+		 ],
+	"name" : "MetacelloScriptingRecordTestCase",
 	"pools" : [
 		 ],
-	"super" : "TestCase",
+	"super" : "MetacelloBasicScriptingTestCase",
 	"type" : "normal" }

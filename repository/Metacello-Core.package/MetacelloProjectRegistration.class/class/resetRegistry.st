@@ -1,3 +1,3 @@
 accessing
 resetRegistry
-    BaselineRegistry := ConfigurationRegistry := nil
+    Registry := nil

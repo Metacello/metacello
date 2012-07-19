@@ -1,0 +1,14 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"baselineProjectSpecs" : "dkh 7/19/2012 11:09",
+		"baselineRegistry" : "dkh 7/19/2012 11:11",
+		"configurationProjectSpecs" : "dkh 7/19/2012 12:11",
+		"configurationRegistry" : "dkh 7/19/2012 11:13",
+		"primeRegistryFromImage" : "dkh 7/19/2012 11:51",
+		"projectSpecForClassNamed:ifAbsent:" : "dkh 7/19/2012 11:14",
+		"projectSpecs" : "dkh 7/19/2012 11:13",
+		"registerProjectRegistration:" : "dkh 7/19/2012 11:24",
+		"registrationFor:ifPresent:ifAbsent:" : "dkh 7/19/2012 11:30",
+		"unregisterProjectRegistration:" : "dkh 7/19/2012 11:33" } }

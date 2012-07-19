@@ -11,5 +11,5 @@ get
         ifAbsent: [ :new | new registerProject ]
         ifPresent: [ :existing :new | 
             (spec lookupProjectSpecIn: existing)
-                ifNil: [ MetacelloProjectRegistration mergeRegistration: existing with: new ]
+                ifNil: [ existing mergeRegistration: new ]
                 ifNotNil: [ :existingSpec | existingSpec mergeScriptRepository: spec ] ]

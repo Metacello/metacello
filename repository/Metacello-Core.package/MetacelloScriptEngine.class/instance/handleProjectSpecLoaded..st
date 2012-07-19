@@ -4,5 +4,5 @@ handleProjectSpecLoaded: exception
         registerProjectSpec: exception projectSpec
         ifPresent: [ :existing :new | 
             "unconditionally merge new with existing (updates registration"
-            MetacelloProjectRegistration mergeRegistration: existing with: new ]) loadedInImage: true.
+            existing mergeRegistration: new ]) loadedInImage: true.
     exception resume
