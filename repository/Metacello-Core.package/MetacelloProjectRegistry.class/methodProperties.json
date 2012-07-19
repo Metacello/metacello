@@ -11,4 +11,5 @@
 		"projectSpecs" : "dkh 7/19/2012 11:13",
 		"registerProjectRegistration:" : "dkh 7/19/2012 11:24",
 		"registrationFor:ifPresent:ifAbsent:" : "dkh 7/19/2012 11:30",
+		"registrationForClassNamed:ifAbsent:" : "dkh 7/19/2012 12:45",
 		"unregisterProjectRegistration:" : "dkh 7/19/2012 11:33" } }

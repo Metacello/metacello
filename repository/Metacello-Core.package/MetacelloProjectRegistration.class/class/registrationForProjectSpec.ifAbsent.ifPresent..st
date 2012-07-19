@@ -1,4 +1,4 @@
-registration
+querying
 registrationForProjectSpec: aProjectSpec ifAbsent: absentBlock ifPresent: presentBlock
     | newRegistration |
     newRegistration := aProjectSpec asProjectRegistration.

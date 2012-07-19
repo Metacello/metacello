@@ -10,6 +10,7 @@
 		"projectSpecForClassNamed:ifAbsent:" : "dkh 7/19/2012 11:34",
 		"projectSpecs" : "dkh 7/14/2012 07:47",
 		"registerProjectSpec:ifPresent:" : "dkh 7/19/2012 12:11",
+		"registrationForClassNamed:ifAbsent:" : "dkh 7/19/2012 12:47",
 		"registrationForProjectSpec:ifAbsent:ifPresent:" : "dkh 7/19/2012 12:01",
 		"registry" : "dkh 7/19/2012 11:17",
 		"registry:" : "dkh 7/19/2012 11:17",
