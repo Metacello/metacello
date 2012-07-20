@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"assertProject:expectedVersionString:expectedFidelity:" : "dkh 7/20/2012 14:55",
+		"assertProject:expectedVersionString:expectedFidelity:" : "dkh 7/20/2012 15:23",
 		"defaultTimeout" : "dkh 6/12/2012 15:41:23.319",
 		"setUp" : "dkh 6/12/2012 15:41:23.319",
 		"tearDownPackages:" : "dkh 6/12/2012 15:41:23.319",

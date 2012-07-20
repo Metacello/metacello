@@ -5,12 +5,12 @@ assertProject: project expectedVersionString: expectedVersionString expectedFide
     Transcript
         cr;
         show: '--Current version: ' , cv printString.
-    Transcript
-        cr;
-        show: '--Current version status: ' , cv versionStatus printString.
     expectedVersionString == nil
         ifTrue: [ 
             ^ cv == nil
                 ifFalse: [ self assert: cv versionStatus == #'somethingLoaded' ] ].	"validate current version"
+    Transcript
+        cr;
+        show: '--Current version status: ' , cv versionStatus printString.
     self assert: cv = (project version: expectedVersionString).
     self assert: (versionStatus := cv versionStatus) == expectedVersionStatus
