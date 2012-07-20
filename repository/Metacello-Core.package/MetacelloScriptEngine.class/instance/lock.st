@@ -4,11 +4,19 @@ lock
     spec := self projectSpec.
     registration := MetacelloProjectRegistration
         registrationForProjectSpec: spec
-        ifAbsent: [ :new | new registerProject ]
+        ifAbsent: [ :new | 
+            new
+                locked: true;
+                registerProject ]
         ifPresent: [ :existing :new | 
-            (spec lookupProjectSpecIn: existing)
-                ifNil: [ existing mergeRegistration: new ]
-                ifNotNil: [ :existingSpec | existingSpec mergeScriptRepository: spec ].
-            existing ].
+            existing
+                copyOnWrite: [ :existingCopy | 
+                    existingCopy locked: true.
+                    (spec lookupProjectSpecIn: existing)
+                        ifNil: [ existingCopy merge: new ]
+                        ifNotNil: [ :existingSpec | 
+                            "got to figure out how to copy the correct spec that got merged ..."
+                            self halt.
+                            existingSpec mergeScriptRepository: spec ] ] ].
     registration locked: true.
     self root: spec

@@ -1,4 +1,4 @@
 private
 setLoads: aCollection
-
-	loads := aCollection
+    self shouldBeMutable.
+    loads := aCollection

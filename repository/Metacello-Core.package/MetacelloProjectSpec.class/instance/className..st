@@ -1,4 +1,4 @@
 accessing
 className: aString
-
-	className := aString
+    self shouldBeMutable.
+    className := aString

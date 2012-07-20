@@ -1,3 +1,4 @@
 accessing
 baselineProjectSpec: anObject
-	baselineProjectSpec := anObject
+    self shouldBeMutable.
+    baselineProjectSpec := anObject

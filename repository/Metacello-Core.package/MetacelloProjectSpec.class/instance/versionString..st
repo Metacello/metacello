@@ -1,3 +1,4 @@
 accessing
 versionString: anObject
-	versionString := anObject
+    self shouldBeMutable.
+    versionString := anObject

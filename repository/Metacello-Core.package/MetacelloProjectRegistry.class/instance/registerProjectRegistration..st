@@ -14,6 +14,7 @@ registerProjectRegistration: aMetacelloProjectRegistration
                                 show:
                                         'REGISTRATION OF INCOMPATABLE PROJECTS: ' , existing printString , ' REPLACED BY '
                                                 , aMetacelloProjectRegistration printString ] ].
+            spec immutable.
             self configurationRegistry at: spec className put: aMetacelloProjectRegistration ].
     aMetacelloProjectRegistration baselineProjectSpec
         ifNotNil: [ :spec | 
@@ -27,4 +28,6 @@ registerProjectRegistration: aMetacelloProjectRegistration
                                 show:
                                         'REGISTRATION OF INCOMPATABLE PROJECTS: ' , existing printString , ' REPLACED BY '
                                                 , aMetacelloProjectRegistration printString ] ].
-            self baselineRegistry at: spec className put: aMetacelloProjectRegistration ]
+            spec immutable.
+            self baselineRegistry at: spec className put: aMetacelloProjectRegistration ].
+    aMetacelloProjectRegistration immutable
