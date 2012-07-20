@@ -3,5 +3,8 @@
 		 },
 	"instance" : {
 		"setUp" : "dkh 7/19/2012 10:26",
+		"setUpRepositories" : "dkh 7/20/2012 11:40",
 		"tearDown" : "dkh 7/19/2012 10:26",
+		"tearDownPackageList" : "dkh 7/20/2012 11:40",
+		"tearDownRepositories" : "dkh 7/20/2012 11:40",
 		"testIssue83" : "dkh 7/19/2012 10:26" } }

@@ -4,6 +4,8 @@
 		"baselineProjectSpecs" : "dkh 7/19/2012 11:18",
 		"configurationClasses" : "dkh 6/13/2012 13:37",
 		"configurationProjectSpecs" : "dkh 7/19/2012 11:47",
+		"copyRegistryRestoreOnErrorWhile:" : "dkh 7/20/2012 11:37",
+		"copyRegistryWhile:" : "dkh 7/20/2012 11:37",
 		"fromMCBaselineProjectSpec:" : "dkh 6/5/2012 19:01:24",
 		"fromMCConfigurationProjectSpec:" : "dkh 6/5/2012 19:01:24",
 		"primeRegistryFromImage" : "dkh 7/19/2012 11:51",
