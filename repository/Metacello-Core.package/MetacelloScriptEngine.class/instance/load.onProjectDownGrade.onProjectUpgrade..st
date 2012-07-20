@@ -15,8 +15,14 @@ load: required onProjectDownGrade: onDownGradeBlock onProjectUpgrade: onUpgradeB
                         ifFalse: [ version load: required ]) loadDirective.
             loadedSpec loads: required.
             MetacelloProjectRegistration
-                registerProjectSpec: loadedSpec
+                registrationForProjectSpec: loadedSpec
+                ifAbsent: [ :new | 
+                    new
+                        loadedInImage: true;
+                        registerProject ]
                 ifPresent: [ :existing :new | 
                     existing
-                        loadedInImage: true;
-                        mergeRegistration: new ] ]
+                        copyOnWrite: [ :existingCopy | 
+                            existingCopy
+                                loadedInImage: true;
+                                merge: new ] ] ]

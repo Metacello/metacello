@@ -16,4 +16,6 @@ primeRegistryFromImage
                                 versionString: version versionString;
                                 repositories: version project projectPackage repositories copy;
                                 yourself) asConfigurationProjectSpec.
-                            projectSpec registerProject loadedInImage: true ] ] ]
+                            projectSpec asProjectRegistration
+                                loadedInImage: true;
+                                registerProject ] ] ]

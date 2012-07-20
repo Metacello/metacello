@@ -1,8 +1,8 @@
 actions api
 lock
-    | spec registration |
+    | spec |
     spec := self projectSpec.
-    registration := MetacelloProjectRegistration
+    MetacelloProjectRegistration
         registrationForProjectSpec: spec
         ifAbsent: [ :new | 
             new
@@ -12,11 +12,12 @@ lock
             existing
                 copyOnWrite: [ :existingCopy | 
                     existingCopy locked: true.
-                    (spec lookupProjectSpecIn: existing)
-                        ifNil: [ existingCopy merge: new ]
-                        ifNotNil: [ :existingSpec | 
-                            "got to figure out how to copy the correct spec that got merged ..."
-                            self halt.
-                            existingSpec mergeScriptRepository: spec ] ] ].
-    registration locked: true.
+                    spec
+                        copyForRegistration: existingCopy
+                        onWrite: [ :specCopy | 
+                            specCopy
+                                ifNil: [ existingCopy merge: new ]
+                                ifNotNil: [ 
+                                    specCopy mergeScriptRepository: spec.
+                                    spec := specCopy ] ] ] ].
     self root: spec

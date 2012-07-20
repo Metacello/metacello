@@ -10,6 +10,8 @@ get
         registrationForProjectSpec: spec
         ifAbsent: [ :new | new registerProject ]
         ifPresent: [ :existing :new | 
-            (spec lookupProjectSpecIn: existing)
-                ifNil: [ existing mergeRegistration: new ]
-                ifNotNil: [ :existingSpec | existingSpec mergeScriptRepository: spec ] ]
+            existing
+                copyOnWrite: [ :existingCopy | 
+                    spec
+                        copyForRegistration: existingCopy
+                        onWrite: [ :specCopy | specCopy ifNil: [ existingCopy merge: new ] ifNotNil: [ specCopy mergeScriptRepository: spec ] ] ] ]
