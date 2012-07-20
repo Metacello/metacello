@@ -1,3 +1,4 @@
 accessing
 locked: anObject
-	locked := anObject
+    self shouldBeMutable.
+    locked := anObject

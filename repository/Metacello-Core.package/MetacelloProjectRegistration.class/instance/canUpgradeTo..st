@@ -10,6 +10,6 @@ canUpgradeTo: aProjectRegistration
         ifNotNil: [ 
             aProjectRegistration configurationProjectSpec
                 ifNotNil: [ 
-                    configurationProjectSpec ensureProjectLoaded.
+                    configurationProjectSpec copy ensureProjectLoaded.
                     ^ configurationProjectSpec canUpgradeTo: aProjectRegistration configurationProjectSpec ] ].
     ^ false

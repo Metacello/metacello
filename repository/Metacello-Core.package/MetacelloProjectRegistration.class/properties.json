@@ -3,15 +3,15 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		"BaselineRegistry",
-		"ConfigurationRegistry" ],
+		"Registry" ],
 	"commentStamp" : "",
 	"instvars" : [
 		"projectName",
 		"configurationProjectSpec",
 		"baselineProjectSpec",
 		"loadedInImage",
-		"locked" ],
+		"locked",
+		"mutable" ],
 	"name" : "MetacelloProjectRegistration",
 	"pools" : [
 		 ],

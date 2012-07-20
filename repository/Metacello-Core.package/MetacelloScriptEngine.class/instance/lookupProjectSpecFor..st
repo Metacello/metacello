@@ -17,4 +17,4 @@ lookupProjectSpecFor: aProjectSpec
                         newProjectRegistration: new;
                         signal ]
                 ifFalse: [ new ] ].
-    ^ aProjectSpec lookupProjectSpecIn: registration
+    ^ registration lookupSpec: aProjectSpec

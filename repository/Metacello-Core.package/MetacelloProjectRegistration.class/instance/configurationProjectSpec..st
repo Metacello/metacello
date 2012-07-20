@@ -1,3 +1,4 @@
 accessing
 configurationProjectSpec: anObject
-	configurationProjectSpec := anObject
+    self shouldBeMutable.
+    configurationProjectSpec := anObject

@@ -1,14 +1,25 @@
 actions api
 lock
-    | spec registration |
-    spec := self projectSpec.
-    registration := MetacelloProjectRegistration
-        registrationForProjectSpec: spec
-        ifAbsent: [ :new | new registerProject ]
-        ifPresent: [ :existing :new | 
-            (spec lookupProjectSpecIn: existing)
-                ifNil: [ MetacelloProjectRegistration mergeRegistration: existing with: new ]
-                ifNotNil: [ :existingSpec | existingSpec mergeScriptRepository: spec ].
-            existing ].
-    registration locked: true.
-    self root: spec
+    | spec |
+    MetacelloProjectRegistration
+        copyRegistryRestoreOnErrorWhile: [ 
+            spec := self projectSpec.
+            MetacelloProjectRegistration
+                registrationForProjectSpec: spec
+                ifAbsent: [ :new | 
+                    new
+                        locked: true;
+                        registerProject ]
+                ifPresent: [ :existing :new | 
+                    existing
+                        copyOnWrite: [ :existingCopy | 
+                            existingCopy locked: true.
+                            spec
+                                copyForRegistration: existingCopy
+                                onWrite: [ :specCopy | 
+                                    specCopy
+                                        ifNil: [ existingCopy merge: new ]
+                                        ifNotNil: [ 
+                                            specCopy mergeScriptRepository: spec.
+                                            spec := specCopy ] ] ] ].
+            self root: spec ]

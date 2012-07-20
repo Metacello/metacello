@@ -1,3 +1,4 @@
 accessing
 loadedInImage: anObject
-	loadedInImage := anObject
+    self shouldBeMutable.
+    loadedInImage := anObject

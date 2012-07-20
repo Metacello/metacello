@@ -1,4 +1,4 @@
 accessing
 setPostLoadDoIt: aSymbol
-
-	postLoadDoIt := aSymbol
+    self shouldBeMutable.
+    postLoadDoIt := aSymbol
