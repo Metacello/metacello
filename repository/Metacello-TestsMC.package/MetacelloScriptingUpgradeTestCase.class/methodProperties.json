@@ -1,7 +1,0 @@
-{
-	"class" : {
-		 },
-	"instance" : {
-		"setUpRepositoryContents" : "dkh 7/17/2012 14:34",
-		"tearDownRepositories" : "dkh 7/17/2012 14:34",
-		"testBasicUpgrade" : "dkh 7/17/2012 14:36" } }
