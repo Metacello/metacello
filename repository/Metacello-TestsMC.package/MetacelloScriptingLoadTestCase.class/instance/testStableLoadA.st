@@ -1,5 +1,5 @@
 tests
-testStableLoad
+testStableLoadA
     | projectSpec |
     Metacello new
         configuration: 'ExternalX';

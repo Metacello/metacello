@@ -1,9 +1,32 @@
 test projects only
 testCompareCurrentVersion
-    | version cv fum projectFie projectFee projectFoe foo feaux map |
+    | version cv fum projectFie projectFee projectFoe foo feaux map wc |
     Transcript
         cr;
         show: 'STARTING testCompareCurrentVersion'.
+    self
+        should: [ 
+            wc := (GoferPackageReference name: 'GoferBar') workingCopy.
+            self assert: wc ancestry ancestors first name = 'GoferBar-lr.0' ]
+        raise: Error.
+    self
+        should: [ 
+            wc := (GoferPackageReference name: 'GoferFoo') workingCopy.
+            self assert: wc ancestry ancestors first name = 'GoferFoo-lr.1' ]
+        raise: Error.
+    self
+        should: [ 
+            (GoferPackageReference name: 'GoferFaux') workingCopy.
+            self assert: wc ancestry ancestors first name = 'GoferFaux-tg.32' ]
+        raise: Error.
+    self
+        should: [ 
+            wc := (GoferPackageReference name: 'GoferBeau') workingCopy.
+            self assert: wc ancestry ancestors first name = 'GoferBeau-dkh.55' ]
+        raise: Error.
+    Transcript
+        cr;
+        show: 'Pre-validation Issue #48'.
     gofer
         package: 'MetacelloTestConfigurationOfFum';
         package: 'MetacelloTestConfigurationOfFoo';
@@ -25,6 +48,20 @@ testCompareCurrentVersion
     version load: 'GeauxFoo'.
     version := projectFoe version: '4.0'.
     version load: #('ALL').
+    wc := (GoferPackageReference name: 'GoferBar') workingCopy.
+    self assert: wc ancestry ancestors first name = 'GoferBar-lr.0'.
+    wc := (GoferPackageReference name: 'GoferFoo') workingCopy.
+    self assert: wc ancestry ancestors first name = 'GoferFoo-lr.1'.
+    self
+        should: [ 
+            (GoferPackageReference name: 'GoferFaux') workingCopy.
+            self assert: wc ancestry ancestors first name = 'GoferFaux-tg.32' ]
+        raise: Error.
+    self
+        should: [ 
+            wc := (GoferPackageReference name: 'GoferBeau') workingCopy.
+            self assert: wc ancestry ancestors first name = 'GoferBeau-dkh.55' ]
+        raise: Error.
     Transcript
         cr;
         show: 'A'.
