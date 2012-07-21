@@ -1,4 +1,4 @@
-testing
+tests
 testBasicLockNUnlockNload
     Metacello new
         configuration: 'ExternalX';
@@ -11,7 +11,7 @@ testBasicLockNUnlockNload
     Metacello registry
         configuration: 'ExternalX';
         version: '0.9.1';
-        upgrade.
+        load.
     self
         validateExpectedConfigurationClassName: 'ConfigurationOfExternalX'
         expectedConfigurationVersion: '0.9.1'

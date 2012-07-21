@@ -2,5 +2,5 @@ actions api
 load: required
     self
         load: required
-        onProjectDownGrade: [ :ex :existing :new | ex allow ]
-        onProjectUpgrade: [ :ex :existing :new | ex allow ]
+        onProjectDownGrade: [ :ex :existing :new | ex allowEvenIfLocked ]
+        onProjectUpgrade: [ :ex :existing :new | ex allowEvenIfLocked ]

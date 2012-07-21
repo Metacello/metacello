@@ -1,4 +1,4 @@
-testing
+tests
 testBasicLockNLoad
     Metacello new
         configuration: 'ExternalX';

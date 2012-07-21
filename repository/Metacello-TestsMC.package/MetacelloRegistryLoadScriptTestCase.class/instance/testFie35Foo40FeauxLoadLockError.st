@@ -19,5 +19,5 @@ testFie35Foo40FeauxLoadLockError
                 className: 'MetacelloTestConfigurationOfProjectFie';
                 version: '4.0';
                 repository: 'dictionary://Metacello_Configuration_Test_Repository';
-                upgrade: 'Feaux' ]
+                load: 'Feaux' ]
         raise: MetacelloLockedProjectError
