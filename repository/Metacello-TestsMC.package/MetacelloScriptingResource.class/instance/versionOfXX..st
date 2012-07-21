@@ -1,4 +1,4 @@
-baseline:with:
+external configurations
 versionOfXX: spec
     <version: '0.9.0'>
     spec

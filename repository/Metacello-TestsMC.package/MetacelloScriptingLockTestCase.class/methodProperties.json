@@ -2,9 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"setUpRepositoryContents" : "dkh 7/17/2012 11:34",
 		"tearDownPackageList" : "dkh 7/20/2012 16:37",
-		"tearDownRepositories" : "dkh 7/17/2012 10:50",
 		"testBasicLock" : "dkh 7/17/2012 11:22",
 		"testBasicLockNLoad" : "dkh 7/17/2012 11:35",
 		"testBasicLockNLockedProjectError_1" : "dkh 7/20/2012 16:51",

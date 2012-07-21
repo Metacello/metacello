@@ -1,10 +1,10 @@
-baseline:with:
-setUpVersionBaselineOfExternalXdkh2: ancestors
+external configurations
+setUpConfigurationOfExternalXXX
     "self reset"
 
     | reference className definitionArray versionInfo |
-    reference := GoferVersionReference name: 'ConfigurationOfExternalX-dkh.2'.
-    className := #'ConfigurationOfExternalX'.
+    reference := GoferVersionReference name: 'ConfigurationOfExternalXXX-dkh.1'.
+    className := #'ConfigurationOfExternalXXX'.
     definitionArray := {(MCOrganizationDefinition categories: (Array with: reference packageName asSymbol)).
     (MCClassDefinition
         name: className
@@ -15,24 +15,10 @@ setUpVersionBaselineOfExternalXdkh2: ancestors
     (MCMethodDefinition
         className: className asString
         classIsMeta: false
-        selector: 'versionOfX090:'
+        selector: 'versionOfXXX:'
         category: 'cat'
         timeStamp: ''
-        source: (self class sourceCodeAt: #'versionOfX090:') asString).
-    (MCMethodDefinition
-        className: className asString
-        classIsMeta: false
-        selector: 'versionOfX091:'
-        category: 'cat'
-        timeStamp: ''
-        source: (self class sourceCodeAt: #'versionOfX091:') asString).
-    (MCMethodDefinition
-        className: className asString
-        classIsMeta: false
-        selector: 'customProjectAttributes'
-        category: 'cat'
-        timeStamp: ''
-        source: (self class sourceCodeAt: #'customProjectAttributes') asString)}.
+        source: (self class sourceCodeAt: #'versionOfXXX:') asString)}.
     configurationRepository
         basicStoreVersion:
             (MCVersion new
@@ -45,7 +31,7 @@ setUpVersionBaselineOfExternalXdkh2: ancestors
                         date: Date today
                         time: Time now
                         author: reference author
-                        ancestors: ancestors)
+                        ancestors: #())
                 snapshot: (MCSnapshot fromDefinitions: definitionArray)
                 dependencies: #()).
     ^ versionInfo

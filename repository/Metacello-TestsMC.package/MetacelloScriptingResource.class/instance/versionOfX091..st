@@ -1,4 +1,4 @@
-baseline:with:
+external configurations
 versionOfX091: spec
     <version: '0.9.1'>
     spec

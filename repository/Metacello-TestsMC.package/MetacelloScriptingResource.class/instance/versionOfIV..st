@@ -1,5 +1,5 @@
-baseline:with:
-baselineOfIV: spec
+external configurations
+versionOfIV: spec
     <version: '0.9.0'>
     spec
         for: #'common'

@@ -1,12 +1,10 @@
-baseline:with:
-setUpVersionBaselineOfExternalIV
-    "see https://github.com/dalehenrich/metacello-work/issues/6"
-
+external configurations
+setUpConfigurationOfExternalXdkh1
     "self reset"
 
     | reference className definitionArray versionInfo |
-    reference := GoferVersionReference name: 'ConfigurationOfExternalIV-dkh.1'.
-    className := #'ConfigurationOfExternalIV'.
+    reference := GoferVersionReference name: 'ConfigurationOfExternalX-dkh.1'.
+    className := #'ConfigurationOfExternalX'.
     definitionArray := {(MCOrganizationDefinition categories: (Array with: reference packageName asSymbol)).
     (MCClassDefinition
         name: className
@@ -17,10 +15,17 @@ setUpVersionBaselineOfExternalIV
     (MCMethodDefinition
         className: className asString
         classIsMeta: false
-        selector: 'baselineOfIV:'
+        selector: 'stableVersionOfX:'
         category: 'cat'
         timeStamp: ''
-        source: (self class sourceCodeAt: #'baselineOfIV:') asString).
+        source: (self class sourceCodeAt: #'stableVersionOfX:') asString).
+    (MCMethodDefinition
+        className: className asString
+        classIsMeta: false
+        selector: 'versionOfX090:'
+        category: 'cat'
+        timeStamp: ''
+        source: (self class sourceCodeAt: #'versionOfX090:') asString).
     (MCMethodDefinition
         className: className asString
         classIsMeta: false
