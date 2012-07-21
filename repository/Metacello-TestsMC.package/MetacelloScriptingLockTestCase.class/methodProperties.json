@@ -11,4 +11,5 @@
 		"testBasicLockNLockedProjectError_2" : "dkh 7/20/2012 16:51",
 		"testBasicLockNUnlockNload" : "dkh 7/20/2012 16:51",
 		"testBasicLockedLoad" : "dkh 7/20/2012 16:25",
-		"testBasicUnlock" : "dkh 7/17/2012 12:34" } }
+		"testBasicUnlock" : "dkh 7/17/2012 12:34",
+		"testStableLoad" : "dkh 7/21/2012 14:08" } }

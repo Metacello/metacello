@@ -1,5 +1,5 @@
 baseline:with:
-setUpVersionBaselineOfExternalXX
+setUpConfigurationOfExternalXX
     "self reset"
 
     | reference className definitionArray versionInfo |

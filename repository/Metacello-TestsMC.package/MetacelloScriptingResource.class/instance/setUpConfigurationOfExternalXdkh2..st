@@ -1,9 +1,9 @@
-baseline:with:
-setUpVersionBaselineOfExternalXdkh1
+external configurations
+setUpConfigurationOfExternalXdkh2: ancestors
     "self reset"
 
     | reference className definitionArray versionInfo |
-    reference := GoferVersionReference name: 'ConfigurationOfExternalX-dkh.1'.
+    reference := GoferVersionReference name: 'ConfigurationOfExternalX-dkh.2'.
     className := #'ConfigurationOfExternalX'.
     definitionArray := {(MCOrganizationDefinition categories: (Array with: reference packageName asSymbol)).
     (MCClassDefinition
@@ -15,10 +15,24 @@ setUpVersionBaselineOfExternalXdkh1
     (MCMethodDefinition
         className: className asString
         classIsMeta: false
+        selector: 'stableVersionOfX:'
+        category: 'cat'
+        timeStamp: ''
+        source: (self class sourceCodeAt: #'stableVersionOfX:') asString).
+    (MCMethodDefinition
+        className: className asString
+        classIsMeta: false
         selector: 'versionOfX090:'
         category: 'cat'
         timeStamp: ''
         source: (self class sourceCodeAt: #'versionOfX090:') asString).
+    (MCMethodDefinition
+        className: className asString
+        classIsMeta: false
+        selector: 'versionOfX091:'
+        category: 'cat'
+        timeStamp: ''
+        source: (self class sourceCodeAt: #'versionOfX091:') asString).
     (MCMethodDefinition
         className: className asString
         classIsMeta: false
@@ -38,7 +52,7 @@ setUpVersionBaselineOfExternalXdkh1
                         date: Date today
                         time: Time now
                         author: reference author
-                        ancestors: #())
+                        ancestors: ancestors)
                 snapshot: (MCSnapshot fromDefinitions: definitionArray)
                 dependencies: #()).
     ^ versionInfo
