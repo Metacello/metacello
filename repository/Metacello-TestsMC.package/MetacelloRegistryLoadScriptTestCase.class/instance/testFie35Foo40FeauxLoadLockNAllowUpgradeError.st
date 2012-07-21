@@ -20,5 +20,5 @@ testFie35Foo40FeauxLoadLockNAllowUpgradeError
                 version: '4.0';
                 repository: 'dictionary://Metacello_Configuration_Test_Repository';
                 onUpgrade: [ :ex | ex allow ];
-                upgrade: 'Feaux' ]
+                load: 'Feaux' ]
         raise: MetacelloLockedProjectError

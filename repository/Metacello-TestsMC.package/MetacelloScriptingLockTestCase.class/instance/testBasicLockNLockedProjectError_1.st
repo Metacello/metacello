@@ -1,5 +1,5 @@
-testing
-testBasicLockNLockedProjectError
+tests
+testBasicLockNLockedProjectError_1
     Metacello new
         configuration: 'ExternalX';
         version: '0.9.0';
@@ -7,8 +7,9 @@ testBasicLockNLockedProjectError
         lock.
     self
         should: [ 
-            Metacello registry
-                configuration: 'ExternalX';
-                version: '0.9.1';
+            Metacello new
+                configuration: 'LockConfigurations';
+                version: '1.1.0';
+                repository: 'dictionary://Metacello_Config_Test_Repository';
                 load ]
         raise: MetacelloLockedProjectError

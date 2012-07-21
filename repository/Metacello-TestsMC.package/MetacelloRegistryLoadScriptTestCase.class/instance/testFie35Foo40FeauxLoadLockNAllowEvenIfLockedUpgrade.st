@@ -18,4 +18,4 @@ testFie35Foo40FeauxLoadLockNAllowEvenIfLockedUpgrade
         version: '4.0';
         repository: 'dictionary://Metacello_Configuration_Test_Repository';
         onUpgrade: [ :ex | ex allowEvenIfLocked ];
-        upgrade: 'Feaux'
+        load: 'Feaux'

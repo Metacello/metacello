@@ -1,4 +1,4 @@
-testing
+tests
 testBasicLock
     | projectSpec |
     Metacello new

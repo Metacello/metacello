@@ -1,5 +1,5 @@
 tests
-testBasicUpgrade
+testBasicLockedLoad
     Metacello new
         configuration: 'ExternalX';
         version: '0.9.0';
@@ -18,7 +18,7 @@ testBasicUpgrade
     Metacello registry
         configuration: 'ExternalX';
         version: '0.9.1';
-        upgrade.
+        load.
     self
         validateExpectedConfigurationClassName: 'ConfigurationOfExternalX'
         expectedConfigurationVersion: '0.9.1'
