@@ -5,7 +5,7 @@ load: required onProjectDownGrade: onDownGradeBlock onProjectUpgrade: onUpgradeB
             self
                 handleNotificationsForAction: [ 
                     | version loadedSpec |
-                    self validateProjectSpecForScriptLoad.
+                    self validateProjectSpecForScript.
                     [ loadedSpec := self lookupProjectSpecFor: self projectSpec ]
                         on: MetacelloAllowProjectDowngrade , MetacelloAllowProjectUpgrade
                         do: [ :ex | ex handleOnDownGrade: onDownGradeBlock onUpgrade: onUpgradeBlock ].

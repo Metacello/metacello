@@ -1,7 +1,8 @@
 scripting
-validateForScriptLoad: aScriptEngine withDefaultVersionString: defaultVersionString
-    | issues |
+validateForScriptLoad: aScriptEngine withDefaultVersionString: defaultVersionString withDefaultRepositoryDecription: defaultRepositoryDecription
+    | issues callSite |
     issues := OrderedCollection new.
+    callSite := #'validateForScriptLoad:withDefaultVersionString:withDefaultRepositoryDecription:'.
     self name
         ifNil: [ 
             issues
@@ -9,7 +10,7 @@ validateForScriptLoad: aScriptEngine withDefaultVersionString: defaultVersionStr
                     (MetacelloValidationError
                         configurationClass: self projectClass
                         reasonCode: #'incompleteProjectSpec'
-                        callSite: #'validateForScriptLoad:withDefaultVersionString:'
+                        callSite: callSite
                         explanation: 'name field required') ].
     self className
         ifNil: [ 
@@ -18,27 +19,19 @@ validateForScriptLoad: aScriptEngine withDefaultVersionString: defaultVersionStr
                     (MetacelloValidationError
                         configurationClass: self projectClass
                         reasonCode: #'incompleteProjectSpec'
-                        callSite: #'validateForScriptLoad:withDefaultVersionString:'
+                        callSite: callSite
                         explanation: 'className field required') ].
     self repositories isEmpty
         ifTrue: [ 
-            issues
-                add:
-                    (MetacelloValidationError
-                        configurationClass: self projectClass
-                        reasonCode: #'incompleteProjectSpec'
-                        callSite: #'validateForScriptLoad:withDefaultVersionString:'
-                        explanation: 'repository field required') ].
-    self versionString
-        ifNil: [ 
-            defaultVersionString
-                ifNotNil: [ self versionString: defaultVersionString ]
+            defaultRepositoryDecription
+                ifNotNil: [ self repository: defaultRepositoryDecription ]
                 ifNil: [ 
                     issues
                         add:
                             (MetacelloValidationError
                                 configurationClass: self projectClass
                                 reasonCode: #'incompleteProjectSpec'
-                                callSite: #'validateForScriptLoad:withDefaultVersionString:'
-                                explanation: 'version field required') ] ].
+                                callSite: callSite
+                                explanation: 'repository field required') ] ].
+    self validateVersionString: issues withDefaultVersionString: defaultVersionString.
     ^ issues

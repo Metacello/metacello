@@ -5,6 +5,7 @@ get
     | spec |
     MetacelloProjectRegistration
         copyRegistryRestoreOnErrorWhile: [ 
+            self validateProjectSpecForScript.
             spec := self projectSpec.
             spec projectPackage load.
             self root: (Smalltalk at: spec className asSymbol) project.

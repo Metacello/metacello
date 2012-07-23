@@ -3,6 +3,7 @@ unlock
     | spec |
     MetacelloProjectRegistration
         copyRegistryRestoreOnErrorWhile: [ 
+            self validateProjectSpecForScript.
             spec := self projectSpec.
             MetacelloProjectRegistration
                 registrationForProjectSpec: spec

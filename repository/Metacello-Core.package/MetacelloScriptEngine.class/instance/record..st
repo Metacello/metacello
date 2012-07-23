@@ -5,7 +5,7 @@ record: required
             self
                 handleNotificationsForAction: [ 
                     | version loadedSpec |
-                    self validateProjectSpecForScriptLoad.
+                    self validateProjectSpecForScript.
                     [ loadedSpec := self lookupProjectSpecFor: self projectSpec ]
                         on: MetacelloAllowProjectDowngrade , MetacelloAllowProjectUpgrade
                         do: [ :notification | 

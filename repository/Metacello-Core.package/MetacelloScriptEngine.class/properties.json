@@ -3,7 +3,7 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		"DefaultRepositories",
+		"DefaultRepositoryDescription",
 		"DefaultVersionString" ],
 	"commentStamp" : "dkh 7/12/2012 14:48",
 	"instvars" : [
