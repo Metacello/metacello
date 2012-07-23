@@ -9,6 +9,7 @@ validateVersionString: issues withDefaultVersionString: ignored
                             (MetacelloValidationError
                                 configurationClass: self projectClass
                                 reasonCode: #'invalidVersionString'
-                                callSite: #'validateVersionString:withDefaultVersionString:'
+                                callSite:
+                                    #'validateForScriptLoad:withDefaultVersionString:withDefaultRepositoryDecription:'
                                 explanation:
                                     'version field is incorrect, should be: ' , self project singletonVersionName printString) ] ]

@@ -10,5 +10,6 @@ validateVersionString: issues withDefaultVersionString: defaultVersionString
                             (MetacelloValidationError
                                 configurationClass: self projectClass
                                 reasonCode: #'incompleteProjectSpec'
-                                callSite: #'validateVersionString:withDefaultVersionString:'
+                                callSite:
+                                    #'validateForScriptLoad:withDefaultVersionString:withDefaultRepositoryDecription:'
                                 explanation: 'version field required') ] ]
