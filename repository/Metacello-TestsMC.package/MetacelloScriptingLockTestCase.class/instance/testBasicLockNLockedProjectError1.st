@@ -1,5 +1,5 @@
 tests
-testBasicLockNLockedProjectError_1
+testBasicLockNLockedProjectError1
     Metacello new
         configuration: 'ExternalX';
         version: '0.9.0';
