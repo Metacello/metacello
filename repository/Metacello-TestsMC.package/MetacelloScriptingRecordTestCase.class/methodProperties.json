@@ -5,6 +5,11 @@
 		"setUp" : "dkh 7/19/2012 10:26",
 		"setUpRepositories" : "dkh 7/20/2012 11:40",
 		"tearDown" : "dkh 7/19/2012 10:26",
-		"tearDownPackageList" : "dkh 7/20/2012 13:16",
+		"tearDownPackageList" : "dkh 7/23/2012 15:14",
 		"tearDownRepositories" : "dkh 7/20/2012 11:40",
+		"testBasicRecord001" : "dkh 7/23/2012 15:15",
+		"testBasicRecord002" : "dkh 7/23/2012 15:16",
+		"testBasicRecord003" : "dkh 7/23/2012 15:18",
+		"testBasicRecord004a" : "dkh 7/23/2012 15:29",
+		"testBasicRecord004b" : "dkh 7/23/2012 15:28",
 		"testIssue83" : "dkh 7/19/2012 10:26" } }
