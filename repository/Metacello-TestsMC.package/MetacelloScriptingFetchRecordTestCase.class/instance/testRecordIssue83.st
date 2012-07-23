@@ -1,5 +1,5 @@
 tests
-testIssue83
+testRecordIssue83
     Metacello new
         project: 'Fum';
         className: 'MetacelloTestConfigurationOfProjectFum';
