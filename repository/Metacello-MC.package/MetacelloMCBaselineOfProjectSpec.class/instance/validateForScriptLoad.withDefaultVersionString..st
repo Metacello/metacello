@@ -1,5 +1,5 @@
 scripting
-validateForScriptLoad: aScriptEngine
+validateForScriptLoad: aScriptEngine withDefaultVersionString: ignored
     | issues |
     issues := OrderedCollection new.
     self name
@@ -9,7 +9,7 @@ validateForScriptLoad: aScriptEngine
                     (MetacelloValidationError
                         configurationClass: self projectClass
                         reasonCode: #'incompleteProjectSpec'
-                        callSite: #'validateForScriptLoad:'
+                        callSite: #'validateForScriptLoad:withDefaultVersionString:'
                         explanation: 'name field required') ].
     self className
         ifNil: [ 
@@ -18,7 +18,7 @@ validateForScriptLoad: aScriptEngine
                     (MetacelloValidationError
                         configurationClass: self projectClass
                         reasonCode: #'incompleteProjectSpec'
-                        callSite: #'validateForScriptLoad:'
+                        callSite: #'validateForScriptLoad:withDefaultVersionString:'
                         explanation: 'className field required') ].
     self repositories isEmpty
         ifTrue: [ 
@@ -27,15 +27,18 @@ validateForScriptLoad: aScriptEngine
                     (MetacelloValidationError
                         configurationClass: self projectClass
                         reasonCode: #'incompleteProjectSpec'
-                        callSite: #'validateForScriptLoad:'
+                        callSite: #'validateForScriptLoad:withDefaultVersionString:'
                         explanation: 'repository field required') ].
     self versionString
-        ifNil: [ 
-            issues
-                add:
-                    (MetacelloValidationError
-                        configurationClass: self projectClass
-                        reasonCode: #'incompleteProjectSpec'
-                        callSite: #'validateForScriptLoad:'
-                        explanation: 'version field required') ].
+        ifNotNil: [ :vs | 
+            vs ~= self project singletonVersionName
+                ifTrue: [ 
+                    issues
+                        add:
+                            (MetacelloValidationError
+                                configurationClass: self projectClass
+                                reasonCode: #'invalidVersionString'
+                                callSite: #'validateForScriptLoad:withDefaultVersionString:'
+                                explanation:
+                                    'version field is incorrect, should be: ' , self project singletonVersionName printString) ] ].
     ^ issues
