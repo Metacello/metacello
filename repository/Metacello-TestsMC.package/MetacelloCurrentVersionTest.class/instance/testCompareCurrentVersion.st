@@ -9,24 +9,21 @@ testCompareCurrentVersion
         show: 'GoferBar'.
     self
         should: [ 
-            wc := (GoferPackageReference name: 'GoferBar') workingCopy.
-            self assert: wc ancestry ancestors first name = 'GoferBar-lr.0' ]
+            wc := (GoferPackageReference name: 'GoferBar') workingCopy. ]
         raise: Error.
     Transcript
         cr;
         show: 'GoferFoo'.
     self
         should: [ 
-            wc := (GoferPackageReference name: 'GoferFoo') workingCopy.
-            self assert: wc ancestry ancestors first name = 'GoferFoo-lr.1' ]
+            wc := (GoferPackageReference name: 'GoferFoo') workingCopy. ]
         raise: Error.
     Transcript
         cr;
         show: 'GoferFaux'.
     self
         should: [ 
-            (GoferPackageReference name: 'GoferFaux') workingCopy.
-            self assert: wc ancestry ancestors first name = 'GoferFaux-tg.32' ]
+            (GoferPackageReference name: 'GoferFaux') workingCopy.]
         raise: Error.
     Transcript
         cr;
@@ -66,13 +63,11 @@ testCompareCurrentVersion
     self assert: wc ancestry ancestors first name = 'GoferFoo-lr.1'.
     self
         should: [ 
-            (GoferPackageReference name: 'GoferFaux') workingCopy.
-            self assert: wc ancestry ancestors first name = 'GoferFaux-tg.32' ]
+            (GoferPackageReference name: 'GoferFaux') workingCopy. ]
         raise: Error.
     self
         should: [ 
-            wc := (GoferPackageReference name: 'GoferBeau') workingCopy.
-            self assert: wc ancestry ancestors first name = 'GoferBeau-dkh.55' ]
+            wc := (GoferPackageReference name: 'GoferBeau') workingCopy.]
         raise: Error.
     Transcript
         cr;
