@@ -2,7 +2,9 @@ scripting
 validateVersionString: issues withDefaultVersionString: ignored
     self versionString
         ifNotNil: [ :vs | 
-            vs ~= self project singletonVersionName
+            | prj |
+            prj := self project asBaselineProject.
+            vs ~= prj singletonVersionName
                 ifTrue: [ 
                     issues
                         add:
@@ -12,4 +14,4 @@ validateVersionString: issues withDefaultVersionString: ignored
                                 callSite:
                                     #'validateForScriptLoad:withDefaultVersionString:withDefaultRepositoryDecription:'
                                 explanation:
-                                    'version field is incorrect, should be: ' , self project singletonVersionName printString) ] ]
+                                    'version field is incorrect, should be: ' , prj singletonVersionName printString) ] ]
