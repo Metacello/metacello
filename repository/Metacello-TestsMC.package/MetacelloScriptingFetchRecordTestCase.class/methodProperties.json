@@ -3,10 +3,10 @@
 		 },
 	"instance" : {
 		"setUp" : "dkh 7/19/2012 10:26",
-		"setUpRepositories" : "dkh 7/20/2012 11:40",
+		"setUpRepositories" : "dkh 7/23/2012 16:31",
 		"tearDown" : "dkh 7/19/2012 10:26",
 		"tearDownPackageList" : "dkh 7/23/2012 15:14",
-		"tearDownRepositories" : "dkh 7/20/2012 11:40",
+		"tearDownRepositories" : "dkh 7/23/2012 16:32",
 		"testBasicFetch001" : "dkh 7/23/2012 16:00",
 		"testBasicFetch002" : "dkh 7/23/2012 16:00",
 		"testBasicFetch003" : "dkh 7/23/2012 16:01",
@@ -17,5 +17,6 @@
 		"testBasicRecord003" : "dkh 7/23/2012 15:18",
 		"testBasicRecord004a" : "dkh 7/23/2012 15:29",
 		"testBasicRecord004b" : "dkh 7/23/2012 15:28",
+		"testFetchCacheRepository" : "dkh 7/23/2012 16:44",
 		"testFetchIssue83" : "dkh 7/23/2012 16:02",
 		"testRecordIssue83" : "dkh 7/23/2012 16:03" } }
