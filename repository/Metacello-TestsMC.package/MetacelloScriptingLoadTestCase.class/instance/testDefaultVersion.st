@@ -8,4 +8,4 @@ testDefaultVersion
     projectSpec := Metacello registry
         configuration: 'ExternalX';
         list.
-    self assert: projectSpec versionString = #'stable'
+    self assert: projectSpec versionString = MetacelloScriptEngine defaultVersionString

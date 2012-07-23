@@ -4,8 +4,11 @@
 		"baselineNameFrom:" : "dkh 7/12/2012 15:04",
 		"baselineProjectNameOf:" : "dkh 7/12/2012 15:04",
 		"configurationNameFrom:" : "dkh 7/12/2012 15:04",
-		"configurationProjectNameOf:" : "dkh 7/12/2012 15:04" },
+		"configurationProjectNameOf:" : "dkh 7/12/2012 15:04",
+		"defaultRepositories" : "dkh 7/23/2012 10:06",
+		"defaultVersionString" : "dkh 7/23/2012 10:03" },
 	"instance" : {
+		"defaultVersionString" : "dkh 7/23/2012 10:02",
 		"get" : "dkh 7/20/2012 11:43",
 		"getBaselineProjectUnconditionalLoad:" : "dkh 7/12/2012 14:25",
 		"getBaselineUnconditionalLoad:" : "dkh 7/12/2012 14:25",
@@ -38,4 +41,4 @@
 		"silently" : "dkh 7/12/2012 14:25",
 		"unlock" : "dkh 7/20/2012 11:44",
 		"useCurrentVersion" : "dkh 7/12/2012 14:25",
-		"validateProjectSpecForScriptLoad" : "dkh 7/23/2012 09:50" } }
+		"validateProjectSpecForScriptLoad" : "dkh 7/23/2012 10:02" } }
