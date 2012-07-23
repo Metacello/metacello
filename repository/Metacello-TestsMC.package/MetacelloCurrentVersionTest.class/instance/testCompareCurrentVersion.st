@@ -4,21 +4,33 @@ testCompareCurrentVersion
     Transcript
         cr;
         show: 'STARTING testCompareCurrentVersion'.
+    Transcript
+        cr;
+        show: 'GoferBar'.
     self
         should: [ 
             wc := (GoferPackageReference name: 'GoferBar') workingCopy.
             self assert: wc ancestry ancestors first name = 'GoferBar-lr.0' ]
         raise: Error.
+    Transcript
+        cr;
+        show: 'GoferFoo'.
     self
         should: [ 
             wc := (GoferPackageReference name: 'GoferFoo') workingCopy.
             self assert: wc ancestry ancestors first name = 'GoferFoo-lr.1' ]
         raise: Error.
+    Transcript
+        cr;
+        show: 'GoferFaux'.
     self
         should: [ 
             (GoferPackageReference name: 'GoferFaux') workingCopy.
             self assert: wc ancestry ancestors first name = 'GoferFaux-tg.32' ]
         raise: Error.
+    Transcript
+        cr;
+        show: 'GoferBeau'.
     self
         should: [ 
             wc := (GoferPackageReference name: 'GoferBeau') workingCopy.
