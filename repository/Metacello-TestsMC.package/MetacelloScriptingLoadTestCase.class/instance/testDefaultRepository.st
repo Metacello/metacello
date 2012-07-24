@@ -7,4 +7,4 @@ testDefaultRepository
     projectSpec := Metacello registry
         configuration: 'Sample';
         list.
-    self assert: projectSpec repositoryDescriptions = {(MetacelloScriptEngine defaultRepositoryDescription)}
+    self assert: projectSpec repositoryDescriptions asArray = {(MetacelloScriptEngine defaultRepositoryDescription)}
