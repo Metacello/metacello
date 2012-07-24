@@ -3,4 +3,5 @@ versionForScriptEngine: aMetacelloScriptEngine
     ^ ((self project projectForScriptEngine: aMetacelloScriptEngine) version: self versionString)
         silently: aMetacelloScriptEngine silently;
         ignoreImage: aMetacelloScriptEngine ignoreImage;
-        cacheRepository: aMetacelloScriptEngine cacheRepository
+        cacheRepository: aMetacelloScriptEngine cacheRepository;
+        repositoryOverrides: aMetacelloScriptEngine repositoryOverrides
