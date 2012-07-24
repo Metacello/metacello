@@ -14,16 +14,18 @@ ensureLoadedForDevelopmentUsing: mcLoader
                         ifTrue: [ 
                             ensured ~~ #'latest'
                                 ifTrue: [ 
-                                    mcLoader ensureForDevelopment
+                                    MetacelloScriptEnsureProjectLoadedForDevelopment signal
                                         ifTrue: [ 
-                                            | pc |
-                                            (pc := self projectClass) ~~ nil
+                                            mcLoader ensureForDevelopment
                                                 ifTrue: [ 
-                                                    MetacelloClearStackCacheNotification
-                                                        signal:
-                                                            #(#'currentVersion' #'currentVersionAgainst:' #'currentVersionInfo' #'versionConstructor' #'loadableSpecNames') , {pc} ].
-                                            self ensureLoadUsing: mcLoader ]
-                                        ifFalse: [ self projectPackage fetchUsing: mcLoader ].
+                                                    | pc |
+                                                    (pc := self projectClass) ~~ nil
+                                                        ifTrue: [ 
+                                                            MetacelloClearStackCacheNotification
+                                                                signal:
+                                                                    #(#'currentVersion' #'currentVersionAgainst:' #'currentVersionInfo' #'versionConstructor' #'loadableSpecNames') , {pc} ].
+                                                    self ensureLoadUsing: mcLoader ]
+                                                ifFalse: [ self projectPackage fetchUsing: mcLoader ] ].
                                     mcLoader ensuredMap at: self name put: #'latest' ] ].
                     ^ self ] ].
     ensured == nil

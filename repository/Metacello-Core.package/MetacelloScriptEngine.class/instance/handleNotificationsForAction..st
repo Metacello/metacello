@@ -2,7 +2,9 @@ handlers
 handleNotificationsForAction: actionBlock
     [ 
     actionBlock
-        on: MetacelloLookupProjectSpec , MetacelloLookupProjectSpecForLoad , MetacelloProjectSpecLoadedNotification
+        on:
+            MetacelloLookupProjectSpec , MetacelloLookupProjectSpecForLoad , MetacelloProjectSpecLoadedNotification
+                , MetacelloScriptEnsureProjectLoadedForDevelopment
         do: [ :ex | 
             "lookup and registration handlers need to be innermost set of handlers ...they may throw option notifications"
             ex handleResolutionFor: self ] ]
