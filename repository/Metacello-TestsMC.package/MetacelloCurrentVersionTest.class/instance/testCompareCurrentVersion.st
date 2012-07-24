@@ -57,14 +57,29 @@ testCompareCurrentVersion
     version load: 'GeauxFoo'.
     version := projectFoe version: '4.0'.
     version load: #('ALL').
+   Transcript
+        cr;
+        show: 'Post load'.
+   Transcript
+        cr;
+        show: 'GoferBar'.
     wc := (GoferPackageReference name: 'GoferBar') workingCopy.
     self assert: wc ancestry ancestors first name = 'GoferBar-lr.0'.
+   Transcript
+        cr;
+        show: 'GoferFoo'.
     wc := (GoferPackageReference name: 'GoferFoo') workingCopy.
     self assert: wc ancestry ancestors first name = 'GoferFoo-lr.1'.
+   Transcript
+        cr;
+        show: 'GoferFaux'.
     self
         should: [ 
             (GoferPackageReference name: 'GoferFaux') workingCopy. ]
         raise: Error.
+   Transcript
+        cr;
+        show: 'GoferBeau'.
     self
         should: [ 
             wc := (GoferPackageReference name: 'GoferBeau') workingCopy.]
