@@ -7,7 +7,7 @@ version10beta3202: spec
             spec blessing: #'development'.
             spec description: 'use import: statement'.
             spec author: 'dkh'.
-            spec timestamp: '7/10/2012 20:45' ].
+            spec timestamp: '7/25/2012 11:32' ].
     spec
         for: #'squeakCommon'
         do: [ 
@@ -17,5 +17,5 @@ version10beta3202: spec
                             spec
                                 loads: #('batch');
                                 repository:
-                                        'github://dalehenrich/metacello-work:f622a6387110eb3c2b28a4f2f3e2d118e8775c44/repository' ];
+                                        'github://dalehenrich/metacello-work:72944619d66f8546fcdfe536adb8fd966a578cf6/repository' ];
                 import: 'Metacello' ]
