@@ -171,7 +171,6 @@ baseline: spec
                 yourself.
             spec
 		    package: 'Metacello-GitHub' with: [ spec requires: #( 'GsCore') ];
-                package: 'Metacello-MC' with: [ spec preLoadDoIt: #'gemstone10beta24PreLoadDoIt' ];
                 package: 'Metacello-Platform'
                     with: [ 
                             spec

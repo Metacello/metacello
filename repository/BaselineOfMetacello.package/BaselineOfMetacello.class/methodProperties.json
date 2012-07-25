@@ -2,5 +2,6 @@
 	"class" : {
 		 },
 	"instance" : {
-		"baseline:" : "dkh 07/09/2012 04:57",
+		"baseline:" : "dkh 07/24/2012 18:09",
+		"gemstone10beta311PostLoadDoIt" : "dkh 07/24/2012 18:09",
 		"testResourcePostLoadDoIt" : "dkh 6/1/2012 09:18:17" } }
