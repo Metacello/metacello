@@ -32,4 +32,6 @@ setUp
         setUpConfigurationIssue59;
         setUpConfiguration63;
         setUpLockConfigurations;
+        setUpConfigurationIssue84;
+        setUpConfigurationNextedIssue84;
         yourself
