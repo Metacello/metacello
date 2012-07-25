@@ -2,12 +2,14 @@ actions api
 get
     " load a fresh copy from repo"
 
-    | spec |
+    | spec projectPackage |
     MetacelloProjectRegistration
         copyRegistryRestoreOnErrorWhile: [ 
             self validateProjectSpecForScript.
             spec := self projectSpec.
-            spec projectPackage load.
+            projectPackage := spec projectPackage.
+            projectPackage repositorySpecs do: [ :repoSpec | repoSpec createRepository flushForScriptGet ].
+            projectPackage load.
             self root: (Smalltalk at: spec className asSymbol) project.
             MetacelloProjectRegistration
                 registrationForProjectSpec: spec

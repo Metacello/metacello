@@ -1,12 +1,16 @@
 utility
 projectDirectoryFrom: projectPath version: versionString
     | githubCacheDirectory projectDirectory downloadCacheKey cachePath |
-    downloadCacheKey := projectPath , ':::' , versionString.
+    downloadCacheKey := self downloadCacheKey: projectPath version: versionString.
     githubCacheDirectory := (self cacheDirectoryFor: projectPath) directoryNamed: versionString.
     cachePath := self downloadCache at: downloadCacheKey ifAbsent: [  ].
     (cachePath isNil or: [ (projectDirectory := githubCacheDirectory directoryNamed: cachePath) exists not ])
         ifTrue: [ 
             | url archive directory |
+            MetacelloScriptGitHubDownloadNotification new
+                projectPath: projectPath;
+                versionString: versionString;
+                signal.	"for testing purposes"
             githubCacheDirectory assureExistence.
             url := 'https://github.com/' , projectPath , '/zipball/' , versionString.
             archive := MetacelloPlatform current downloadFile: url to: '/tmp/github.zip'.
