@@ -34,12 +34,12 @@
 		"latestVersionMatching:includedBlessings:" : "dkh 6/5/2012 19:01:24",
 		"latestVersionMatching:includedBlessings:excludedBlessings:" : "dkh 6/5/2012 19:01:24",
 		"load:" : "dkh 6/5/2012 19:01:24",
+		"loadType" : "dkh 6/5/2012 19:01:24",
+		"loadType:" : "dkh 6/5/2012 19:01:24",
 		"loader" : "dkh 6/5/2012 19:01:24",
 		"loader:" : "dkh 6/5/2012 19:01:24",
 		"loaderClass" : "dkh 6/5/2012 19:01:24",
 		"loaderClass:" : "dkh 6/5/2012 19:01:24",
-		"loadType" : "dkh 6/5/2012 19:01:24",
-		"loadType:" : "dkh 6/5/2012 19:01:24",
 		"lookupVersion:ifAbsent:" : "dkh 6/5/2012 19:01:24",
 		"map" : "dkh 6/5/2012 19:01:24",
 		"map:" : "dkh 6/5/2012 19:01:24",
@@ -69,6 +69,6 @@
 		"version:ifAbsent:" : "dkh 6/5/2012 19:01:24",
 		"versionNumberClass" : "dkh 6/22/2012 12:41",
 		"versionNumberClass:" : "dkh 6/22/2012 12:41",
-		"versions" : "dkh 6/5/2012 19:01:24",
 		"versionSpec" : "dkh 6/5/2012 19:01:24",
-		"versionSpecClass" : "dkh 6/5/2012 19:01:24" } }
+		"versionSpecClass" : "dkh 6/5/2012 19:01:24",
+		"versions" : "dkh 6/5/2012 19:01:24" } }
