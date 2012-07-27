@@ -13,5 +13,5 @@ version10beta3202: spec
                             spec
                                 loads: #('batch');
                                 repository:
-                                        'github://dalehenrich/metacello-work:4d122a3372c4b27c76681ae72483fdac1cd4f8e8/repository' ];
+                                        'github://dalehenrich/metacello-work:adf40828f992e1ea342888fad18f6fcc633b82de/repository' ];
                 import: 'Metacello' ]
