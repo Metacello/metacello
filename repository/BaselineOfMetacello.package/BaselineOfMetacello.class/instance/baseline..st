@@ -97,7 +97,6 @@ baseline: spec
         for: #'pharo'
         do: [ 
             spec
-                baseline: 'FileTree' with: [ spec repository: 'github://dalehenrich/filetree:pharo1.3/repository' ];
                 project: 'ProfStef'
                     with: [ 
                             spec
@@ -119,6 +118,9 @@ baseline: spec
                 group: 'Tests' with: #('Metacello-TestsProfStef');
                 group: 'Tutorial' with: #('Metacello-ProfStef');
                 yourself ].
+    spec
+        for: #'pharo1.3.x'
+        do: [ spec baseline: 'FileTree' with: [ spec repository: 'github://dalehenrich/filetree:pharo1.3/repository' ] ].
     spec
         for: #'pharo1.4.x'
         do: [ spec baseline: 'FileTree' with: [ spec repository: 'github://dalehenrich/filetree:pharo1.4/repository' ] ].
@@ -170,7 +172,7 @@ baseline: spec
                                 repository: 'http://seaside.gemstone.com/ss/MetacelloRepository' ];
                 yourself.
             spec
-		    package: 'Metacello-GitHub' with: [ spec requires: #( 'GsCore') ];
+                package: 'Metacello-GitHub' with: [ spec requires: #('GsCore') ];
                 package: 'Metacello-Platform'
                     with: [ 
                             spec
