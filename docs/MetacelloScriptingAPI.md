@@ -426,6 +426,87 @@ The list command returns a collection of instances of the [MetacelloProjectSpec]
 ####version:
 ####repository:
 ##### Repository descriptions
+The **Repository description** is a URL that is used to resolve the location of Metacello repositories.
+
+The general form of the **description**:
+
+```
+  scheme://location
+```
+
+Where the *scheme* may be any one of the following:
+
+ * client
+ * dictionary
+ * file
+ * filetree
+ * ftp
+ * github
+ * http
+ * server 
+
+The layout of the *location* is dependent upon the *scheme* being used.
+
+##client://
+
+```
+  client:// <full directory path to Monticello repository>
+```
+
+##dictionary://
+
+```
+  dictionary:// <Global name of dictionary containing Monticello repository instance>
+```
+
+##filetree://
+
+```
+  filetree:// <full directory path to Filetree repository>
+```
+
+##ftp://
+
+```
+  ftp:// <ftp server host name> [: <port> ] </ path>
+```
+
+*NOTE: Squeak and Pharo only.*
+
+##github://
+
+```
+  github:// <github user> / <github project>  [ : <version identifier> ] [ / <repository path> ]
+```
+
+*gitthub://* is the scheme identifier for the GitHub repository description.
+
+*github user* is the user name or organization name of the owner of the GitHub proejct.
+
+*github project* is the name of the GitHub project.
+
+*version identifier* is the name of a *branch*, the name of a *tag* or the *SHA* of a commit. The *tag name* and *SHA*  
+identifies a specific commit. The *branch name* resolves to the current HEAD of the branch. The **version identifier** is 
+optional. 
+
+*repository path* is the path to a subdirectory in the project where the repository is rooted. If absent the repository 
+is rooted in the projects HOME directory.
+
+##http://
+
+```
+  http:// <http server host name> [: <port> ] </ path to Monticello repository>
+```
+
+##server://
+
+```
+  server:// <full directory path to Monticello repository>
+```
+
+*NOTE: GemStone only.*
+
+
 ##### Repository Shortcuts
 
 * blueplane:
@@ -446,6 +527,7 @@ The list command returns a collection of instances of the [MetacelloProjectSpec]
 ####onDowngrade:
 ####onConflict:
 ####silently
+### Metacello Project Registry
 ### Classes
 #### MetacelloProjectRegistration
 #### MetacelloProjectSpec
