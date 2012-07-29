@@ -48,7 +48,7 @@ Metacello new
 ```
 
 Here is a variant
-of the same expression with the default values explicitly specified:
+of the same expression with the (current) default values explicitly specified:
 
 ```Smalltalk
 Metacello new
@@ -58,7 +58,7 @@ Metacello new
   load.
 ```
 
-The `version` attribute can be any legal *Metacello version*.
+The `version` attribute can be any legal [version number][10].
 `squeaksource` is a [repository shortcut][4]. You can also specify the
 full [repository description][3] as follows:
 
@@ -81,16 +81,16 @@ Metacello image
   list.
 ```
 
-The `image` message to the class tells Metacello that you'd like to look
+The `image` message tells Metacello that you'd like to look
 at only loaded configurations. 
 
 The *block* argument to the
 `configuration:` message is used to *select* against the list of loaded
-[MetacelloProjectSpec][7] instances from the [Metacello Project Registry][8].
+[MetacelloProjectSpec][7] instances in the [registry][8].
 
-The `list` command itself returns a list of [MetacelloProjectSpec][7] instances that can be printed or otherwise manipulated.
+The `list` command itself returns a list of [MetacelloProjectSpec][7] instances that can be printed, inspected or otherwise manipulated.
 
-In addition to a *select block*, you specify a *select collection*
+In addition to a *select block*, you can specify a *select collection*
 specifying the names of the projects you'd like to select:
 
 ```Smalltalk
@@ -99,10 +99,10 @@ Metacello registry
   list.
 ```
 
-The `registry` message to the class tells Metacello that you'd like to
-look at all projects in the [registry][8] whether or not it is loaded.
+The `registry` message tells Metacello that you'd like to
+look at all projects in the [registry][8] whether or not they are loaded.
 
-The *collection* arbument to the `configuration:` message is used to
+The *collection* argument to the `configuration:` message is used to
 *select* against the list of project names in the [registry][8].
 
 The `list` command can also be used to look at configurations in
@@ -116,7 +116,8 @@ Metacello new
 ```
 
 lists the configurations whose names (sans the `ConfigurationOf`) begin
-with `Seaside` in the `MetacelloRepositry` on Squeaksource.
+with `Seaside` in the `MetacelloRepositry` in the
+[Squeaksource](http://www.squeaksource.com) repostory.
 
 ## Getting
 
@@ -126,8 +127,8 @@ upgrading your project to a new version.
 Let's say that a new `#stable` version of Seaside30 has been released
 and that you want to upgrade. This is a two step process: 
 
-* get a new version of the configuration
-* load the new version
+* [get a new version of the configuration][11]
+* [load the new version][12]
 
 ### Get a new version of the configuration
 
@@ -140,7 +141,7 @@ Metacello image
   get.
 ```
 
-By using the `image` message, you can leverage the fact that the [Metacello registry][8] remembers
+By using the `image` message, you can leverage the fact that the [registry][8] remembers
 from which repository you loaded the original version of the configuration.
 
 The `get` command simply downloads the latest version of the
@@ -155,7 +156,7 @@ Metacello image
   get.
 ```
 
-The `get` command will update the [Metacello registry][8] with the new
+The `get` command will update the [registry][8] with the new
 repository location information.
 
 You may also use the `get` command to load a configuration for a project
@@ -164,11 +165,12 @@ into your image without actually loading the project itself:
 ```Smalltalk
 Metacello image
   configuration: 'SeasideRest';
+  squeaksource: 'Seaside30';
   get.
 ```
 
-The 'SeasideRest' project information will be registered in the [Metacello registry][8], marked
-as unloaded.
+The 'SeasideRest' project information will be registered in the [registry][8] and marked
+as *unloaded*.
 
 ### Load the new version
 
@@ -183,14 +185,14 @@ Metacello image
 ```
 
 By using the `image` message, you are asking Metacello to look the
-project up in the [Metacello registry][8] before performing the
+project up in the [registry][8] before performing the
 operation, so it isn't necessary to supply all of the project details for every
 command operation.
 
-Of course, the `load` command updates the [Metacello registry][8].
+Of course, the `load` command updates the [registry][8].
 
 If you want to load a project for which you've already done a `get`
-(like the SeasideRest project earlier), you ca do the following:
+(like the SeasideRest project earlier), you can do the following:
 
 ```Smalltalk
 Metacello registry
@@ -198,6 +200,9 @@ Metacello registry
   version: #stable;
   load.
 ```
+
+In this case you use the `registry` message to indicate that you are
+interested in both *loaded* and *unloaded* projects.
 
 ##Locking
 
@@ -236,7 +241,12 @@ Metacello image
   lock.
 ```
 
-After a project is locked an error (**MetacelloLockedProjectError**) is thrown if you are loading a project that has a dependency upon a different version of Seaside30, before any packages are actually loaded.
+After a project is locked an error (**MetacelloLockedProjectError**) is 
+thrown when you attempt to load a project that has a dependency upon a 
+different version of Seaside30. The error is thrown before any packages 
+are actually loaded.
+
+### Bypassing locks
 
 Let's say that you want to load the SeasideRest project even though it may
 require a version of Seaside30 that is later than the version that you have
@@ -262,6 +272,8 @@ the later version of Seaside30 (missing classes, etc.) then you may very
 well get load errors or errors while using the SeasideRest, but that's
 the price you pay for not upgrading.
 
+### Upgrading a locked project
+
 If you want to explicitly upgrade a locked project, you can use the
 `load` command. The following command will upgrade Seaside30 to version
 3.0.6 even if it is locked:
@@ -284,3 +296,6 @@ The newly loaded of the project will continue to be locked.
 [7]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#metacelloprojectspec
 [8]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#metacello-project-registry
 [9]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#locking
+[10]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#metacello-version-numbers
+[11]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloUserGuide.md#get-a-new-version-of-the-configuration
+[12]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloUserGuide.md#load-the-new-version
