@@ -4,9 +4,10 @@ version10beta3202: spec
     spec
         for: #'common'
         do: [ 
-            spec blessing: #'development'.
+            spec blessing: #'release'.
+            spec description: 'initial preview release'.
             spec author: 'dkh'.
-            spec timestamp: '7/28/2012 20:36'.
+            spec timestamp: '7/29/2012 07:34'.
             spec
                 baseline: 'Metacello'
                     with: [ 
