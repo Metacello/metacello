@@ -7,10 +7,10 @@ Currently [Pharo-1.3, Pharo-1.4][1] and [Squeak4.3][2] are supported.
 
 * [Installation](#installation)
 * [Using the Metacello Scripting API](#using-the-metacello-scripting-api)
-* [Scripting API Referenece](*scripting-api-referenece)
+* [Scripting API Referenece](#scripting-api-referenece)
 * [Best Practice](#best-practice)
 * [Specifying Configurations](#specifying-configurations)
-* [Metacello Version Numbers](*metacello-version-numbers)
+* [Metacello Version Numbers](#metacello-version-numbers)
 * [Help](#help)
 
 ## Installation
@@ -436,14 +436,13 @@ The general form of the **description**:
 
 Where the *scheme* may be any one of the following:
 
- * client
- * dictionary
- * file
- * filetree
- * ftp
- * github
- * http
- * server 
+ * [client](https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#client)
+ * [dictionary](https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#dictionary)
+ * [filetree](https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#filetree)
+ * [ftp](https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#ftp)
+ * [github](https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#github)
+ * [http](https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#http)
+ * [server](https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#server) 
 
 The layout of the *location* is dependent upon the *scheme* being used.
 
