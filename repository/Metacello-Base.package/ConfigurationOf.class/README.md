@@ -1,12 +1,17 @@
-**ConfigurationOf** is the common superclass for all Metacello configurations.
+You must use a *configuration* when your project is stored in a
+repository using `.mcz` files.
 
-A short description of why you would want to use a **ConfigurationOf**.
+If you are using a source code manager (SCM) like [git][1] and have
+created a *baseline* (see the [**BaselineOf** class comment][3] for more info)
+you may use a *configuration* to associate a specific
+git commit (SHA, branch name, tag name) with a [Metacello version][2].
 
 To create a new Metacello configuration:
 
-1. Create a subclass of the class ConfigurationOf appending the name of
-   your project (don't forget to change the **category:** to match the
-   name of the configuration class):
+1. Create a subclass of the **ConfigurationOf** class. The configuration
+   class for your project should be names by appending the name of
+   your project to the string `ConfigurationOf`. The name of the
+   category and package should be the same as the name of the class:
 
     ```Smalltalk
     ConfigurationOf subclass: #ConfigurationOfExample
@@ -45,3 +50,7 @@ To create a new Metacello configuration:
     ```
 
 4. Create a Monticello package for your **ConfigurationOf** class and save it in the repository where your packages are stored. 
+
+[1]: http://git-scm.com/
+[2]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#metacello-version-numbers
+[3]: https://github.com/dalehenrich/metacello-work/blob/master/repository/Metacello-Base.package/BaselineOf.class/README.md
