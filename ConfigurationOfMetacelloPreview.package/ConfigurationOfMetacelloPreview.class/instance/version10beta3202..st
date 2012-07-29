@@ -6,12 +6,12 @@ version10beta3202: spec
         do: [ 
             spec blessing: #'development'.
             spec author: 'dkh'.
-            spec timestamp: '7/26/2012 22:56'.
+            spec timestamp: '7/28/2012 20:36'.
             spec
                 baseline: 'Metacello'
                     with: [ 
                             spec
                                 loads: #('batch');
                                 repository:
-                                        'github://dalehenrich/metacello-work:adf40828f992e1ea342888fad18f6fcc633b82de/repository' ];
+                                        'github://dalehenrich/metacello-work:cecd1626d27f67175f22e6075ca2d1177da1d525/repository' ];
                 import: 'Metacello' ]
