@@ -436,13 +436,13 @@ The general form of the **description**:
 
 Where the *scheme* may be any one of the following:
 
- * [client](https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#client)
- * [dictionary](https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#dictionary)
- * [filetree](https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#filetree)
- * [ftp](https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#ftp)
- * [github](https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#github)
- * [http](https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#http)
- * [server](https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#server) 
+ * [client](#client)
+ * [dictionary](#dictionary)
+ * [filetree](#filetree)
+ * [ftp](#ftp)
+ * [github](#github)
+ * [http](#http)
+ * [server](#server) 
 
 The layout of the *location* is dependent upon the *scheme* being used.
 

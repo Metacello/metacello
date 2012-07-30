@@ -7,11 +7,11 @@ Currently **GemStone2.4**, **PharoCore 1.3**, **PharoCore 1.4** and **Squeak4.3*
 3. [Create `filetree:` repository directory](#create-filetree-repository-direcotry)
 4. [Install Metacello](#install-metacello)
 5. [Attach to git repository](#attach-to-git-repository)
-6. [Copy mcz files to git repository](#copy-mcz-files-to-git-repository)
 7. [Create baseline](#create-baseline)
 8. [Prime Metacello registry](#prime-metacello-registry)
 9. [Saving your work](#saving-your-work)
-10. [Updating from git repository](#updating-from-git-repository)
+11. [Create configuration](#create-configuration)
+12. [Git workflow](#git-workflow)
 
 ## Create `filetree:` repository directory
 Technically the [FileTree][3] repository can be located in the root of
@@ -82,34 +82,140 @@ MCRepositoryGroup default addRepository: repo.
 **MCFileTreeRepository** can be used anywhere that *normal* Monticello
 repositories can be used. I.e., you can copy packages into and out of an **MCFileTreeRepository** repository like any other repository.
 
-## Copy mcz files to git repository
+## Create baseline
 
-If you have an existing project then you will want to copy your
-existing packages into the FileTree repository. 
+During development phase of a project using a FileTree repository, you
+only need to create a baseline for your project.
 
-If you have an existing configuration, you can use the following
-expression to copy the packages from your existing repository to your
-new FileTree repository:
+Start by creating a subclass of **BaselineOf**:
 
 ```Smalltalk
-| pathToPackageDirectory version |
-"edit to match the path to your chosen package directory"
-pathToPackageDirectory := '/opt/git/Sample/repository'.
-"edit to match the version of your project you want to use as your starting point"
-version := '1.0'.
-Metacello new
-  configuration: 'Sample';
-  version: version;
-  cacheRepository: 'filetree://', pathToPackageDirectory;
-  ignoreImage;
-  fetch: 'ALL'.
+BaselineOf subclass: #BaselineOfSmple
+  instanceVariableNames: ''
+  classVariableNames: ''
+  poolDictionaries: ''
+  category: 'BaselineOfSample'
 ```
 
-## Create baseline
+Next, you need to create a **baseline:** method. 
+
+If you've already got a 
+configuration created for your project, you can
+use one of your **baselineXXX:** methods as a starting point and make the following edits:
+
+* make sure that the **versionString:** for each project is pointing at
+  an explicit version.
+* remove the **repository:** statement. The *baseline* uses the
+  repository that it is loaded from.
+
+If you don't have a configuration, here is a sample *baseline*:
+
+```Smalltalk
+baseline: spec
+  <baseline>
+
+  spec for: #common do: [
+    spec configuration: 'Seaside30' with: [
+      spec
+        version: #stable;
+        repository: 'http://www.squeaksource.com/MetacelloRepository' ].
+    spec
+      package: 'Sample-Core'with: [
+        spec requires: 'Seaside30' ];
+      package: 'Sample-Tests' with: [
+        spec requires: 'Sample-Core' ]].
+```
+
+For more information about creating Metacello configurations, see the
+[Metacello chapter][4] of [Pharo by Example][5].
+
+After you've created the **BaselineOf** for your project save it into
+your project repository.
+
 ## Prime Metacello registry
+
+You must do at least one fully-specified load of a project to make sure
+that the project is correctly registered in the *Metacello Project
+Registry*:
+
+```Smalltalk
+| pathToPackageDirectory packageDirectory repo |
+"edit to match the path to your chosen package directory"
+pathToPackageDirectory := '/opt/git/Sample/repository'.
+Metacello new
+  baseline: 'Sample';
+  repository: 'filtree://', pathToPackageDirectory;
+  load.
+```
+
+Once you've done the first load, you can execute the following
+expressions to refresh the *baseline* and reload the project (useful if
+you've done a git `checkout` or `pull`):
+
+```Smalltalk
+Metacello image
+  baseline: 'Sample';
+  get.
+Metacello image
+  baseline: 'Sample';
+  load.
+```
+
 ## Saving your work
-## Updating from git repository
+
+When you've finished  a unit of work, you need to perform the following
+steps to save your work to GitHub:
+
+1. Monticello `commit` from the *MonticelloBrowser* for each of your
+   dirty packages.
+2. Git `commit` to save your work into your local git repository.
+3. Git `push` to share the work with your GitHub repository. 
+
+Note that I do a git `commit` after every Monticello `commit`, but I don't always do a git `push` after every git `commit`. The `push` is only necessary when I'm ready to share my work with others.
+
+## Create configuration
+
+When you are ready to make a release of your project, you should create
+a configuration.
+
+Start by creating a subclass of **ConfigurationOf**:
+
+```Smalltalk
+ConfigurationOf subclass: #ConfigurationOfSample
+  instanceVariableNames: ''
+  classVariableNames: ''
+  poolDictionaries: ''
+  category: 'ConfigurationOfSample'
+```
+ 
+```Smalltalk
+version100: spec
+    <version: '1.0.0'>
+    spec
+        for: #'common'
+        do: [ 
+            spec blessing: #'release'.
+            spec description: 'a lot of cool stuff'.
+            spec author: 'dkh'.
+            spec timestamp: '7/30/2012 15:52'.
+            spec
+                baseline: 'Sample' with: [ spec repository: 'github://dalehenrich/sample:cecd1626d27f67175f22e6075ca2d1177da1d525/repository' ];
+                import: 'Sample' ]
+```
+
+For more information on the `github://dalehenrich/sample:cecd1626d27f67175f22e6075ca2d1177da1d525/repository` description see the section on
+[github://](MetacelloScriptingAPI.md#github) in the [Metacello Scripting API
+reference](MetacelloScriptingAPI.md).
+
+## Git workflow
+
+For the most part I tend to follow the [GitHub Flow][6] model. It is
+worth reading about [git-flow][7]. 
 
 [1]: https://help.github.com/articles/set-up-git
 [2]: https://help.github.com/articles/create-a-repo
 [3]: https://github.com/dalehenrich/filetree
+[4]: http://pharobooks.gforge.inria.fr/PharoByExampleTwo-Eng/latest/Metacello.pdf
+[5]: http://pharobyexample.org/
+[6]: http://scottchacon.com/2011/08/31/github-flow.html
+[7]: http://nvie.com/posts/a-successful-git-branching-model/
