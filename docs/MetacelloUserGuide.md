@@ -287,15 +287,15 @@ Metacello image
 
 The newly loaded of the project will continue to be locked.
 
-[1]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md
+[1]: MetacelloScriptingAPI.md
 [2]: http://www.lukas-renggli.ch/blog/gofer
 [3]: MetacelloScriptingAPI.md#repository-descriptions
-[4]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#repository-shortcuts
-[5]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#loading
-[6]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#listing
-[7]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#metacelloprojectspec
-[8]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#metacello-project-registry
-[9]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#locking
-[10]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#metacello-version-numbers
-[11]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloUserGuide.md#get-a-new-version-of-the-configuration
-[12]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloUserGuide.md#load-the-new-version
+[4]: MetacelloScriptingAPI.md#repository-shortcuts
+[5]: MetacelloScriptingAPI.md#loading
+[6]: MetacelloScriptingAPI.md#listing
+[7]: MetacelloScriptingAPI.md#metacelloprojectspec
+[8]: MetacelloScriptingAPI.md#metacello-project-registry
+[9]: MetacelloScriptingAPI.md#locking
+[10]: MetacelloScriptingAPI.md#metacello-version-numbers
+[11]: #get-a-new-version-of-the-configuration
+[12]: #load-the-new-version
