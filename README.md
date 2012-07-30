@@ -24,10 +24,11 @@ Gofer new
 ## Getting Started with GitHub
 
 If you are interested in using GitHub with the Metacello Preview, you should check out 
-[Getting Started with GitHub](docs/GettingStartedWithGitHub.md).
+[Getting Started with GitHub][1].
 
 ###TravisCI Status
 **master branch**: [![Build Status](https://secure.travis-ci.org/dalehenrich/metacello-work.png?branch=master)](http://travis-ci.org/dalehenrich/metacello-work)
 
 **configuration branch**: [![Build Status](https://secure.travis-ci.org/dalehenrich/metacello-work.png?branch=configuration)](http://travis-ci.org/dalehenrich/metacello-work)
 
+[1]: https://github.com/dalehenrich/metacello-work/blob/master/docs/GettingStartedWithGitHub.md
