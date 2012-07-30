@@ -19,21 +19,22 @@ your git checkout, but I like to provide some initial structure to the
 repository so there is room for adding artifacts (like documentation) in
 addition to the packages. 
 
-I start my projects with the following artifacts:
+I start my projects with the following files and directories:
 
 ```
 +-Sample
   +-docs
   |  +-README.md
+  +-license.txt
   +-repository
   +-README.md
 ```
 
-The Monticello packages will be placed into the `repository` directory.
+I put the Monticello packages in the `repository` directory.
 
 ## Install Metacello
 
-This installation of Metacello also installs FileTree.
+These expressions install the Metacello Preview and [FileTree][3].
 
 ```Smalltalk
 "Get the Metacello configuration"
@@ -105,7 +106,7 @@ use one of your **baselineXXX:** methods as a starting point and make the follow
 
 * make sure that the **versionString:** for each project is pointing at
   an explicit version.
-* remove the **repository:** statement. The *baseline* uses the
+* remove the **repository:** statement. The *baseline* references the
   repository that it is loaded from.
 
 If you don't have a configuration, here is a sample *baseline*:
@@ -129,7 +130,7 @@ baseline: spec
 For more information about creating Metacello configurations, see the
 [Metacello chapter][4] of [Pharo by Example][5].
 
-After you've created the **BaselineOf** for your project save it into
+After you've created the **BaselineOf**, save it into
 your project repository.
 
 ## Prime Metacello registry
@@ -202,6 +203,9 @@ version100: spec
                 baseline: 'Sample' with: [ spec repository: 'github://dalehenrich/sample:cecd1626d27f67175f22e6075ca2d1177da1d525/repository' ];
                 import: 'Sample' ]
 ```
+
+Note that you should only use this approach if you are sharing your
+configuration with folks who are participating in the Metacello Preview.
 
 For more information on the `github://dalehenrich/sample:cecd1626d27f67175f22e6075ca2d1177da1d525/repository` description see the section on
 [github://](MetacelloScriptingAPI.md#github) in the [Metacello Scripting API
