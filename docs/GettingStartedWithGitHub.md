@@ -91,7 +91,7 @@ only need to create a baseline for your project.
 Start by creating a subclass of **BaselineOf**:
 
 ```Smalltalk
-BaselineOf subclass: #BaselineOfSmple
+BaselineOf subclass: #BaselineOfSample
   instanceVariableNames: ''
   classVariableNames: ''
   poolDictionaries: ''
