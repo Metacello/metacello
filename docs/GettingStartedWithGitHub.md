@@ -4,7 +4,7 @@ Currently **GemStone2.4**, **PharoCore 1.3**, **PharoCore 1.4** and **Squeak4.3*
 
 1. [Set up git][1].
 2. [Create a GitHub repository][2].
-3. [Create `filetree:` repository directory](#create-filetree-repository-direcotry)
+3. [Create `filetree:` packages directory](#create-filetree-packages-direcotry)
 4. [Install Metacello](#install-metacello)
 5. [Attach to git repository](#attach-to-git-repository)
 7. [Create baseline](#create-baseline)
@@ -13,11 +13,11 @@ Currently **GemStone2.4**, **PharoCore 1.3**, **PharoCore 1.4** and **Squeak4.3*
 11. [Create configuration](#create-configuration)
 12. [Git workflow](#git-workflow)
 
-## Create `filetree:` repository directory
-Technically the [FileTree][3] repository can be located in the root of
+## Create `filetree:` packages directory
+Technically the [FileTree][3] packages repository can be located in the root of
 your git checkout, but I like to provide some initial structure to the
-repository so there is room for adding artifacts (like documentation) in
-addition to the packages. 
+git repository so there is room for adding artifacts (like documentation) in
+addition to the packages.
 
 I start my projects with the following files and directories:
 
@@ -26,11 +26,11 @@ I start my projects with the following files and directories:
   +-docs
   |  +-README.md
   +-license.txt
-  +-repository
+  +-packages
   +-README.md
 ```
 
-I put the Monticello packages in the `repository` directory.
+I put the Monticello packages in the `packages` directory.
 
 ## Install Metacello
 
@@ -44,7 +44,7 @@ Gofer new
   load.
 
 "Bootstrap Metacello 1.0-beta.32, using mcz files"
-((Smalltalk at: #ConfigurationOfMetacello) project 
+((Smalltalk at: #ConfigurationOfMetacello) project
   version: '1.0-beta.32') load.
 
 "Load the Preview version of Metacello from GitHub"
@@ -60,7 +60,7 @@ For Squeak, you will want to use **Installer** to load the
 
 ## Attach to git repository
 
-When you install FileTree, a new repository type, *filetree:* is added
+When you install FileTree, a new Monticello repository type, *filetree:* is added
 to the MonticelloBrowser menu. Selecting the *filetree:* menu item will
 bring up a directory selector. Select the directory in your git
 repository where you want the packages installed.
@@ -70,7 +70,7 @@ If you prefer you can execute the following:
 ```Smalltalk
 | pathToPackageDirectory packageDirectory repo |
 "edit to match the path to your chosen package directory"
-pathToPackageDirectory := '/opt/git/Sample/repository'.
+pathToPackageDirectory := '/opt/git/Sample/packages'.
 packageDirectory := FileDirectory on: pathToPackageDirectory.
 "create a FileTree repository"
 repo := MCFileTreeRepository new
@@ -98,9 +98,9 @@ BaselineOf subclass: #BaselineOfSample
   category: 'BaselineOfSample'
 ```
 
-Next, you need to create a **baseline:** method. 
+Next, you need to create a **baseline:** method.
 
-If you've already got a 
+If you've already got a
 configuration created for your project, you can
 use one of your **baselineXXX:** methods as a starting point and make the following edits:
 
@@ -142,7 +142,7 @@ Registry*:
 ```Smalltalk
 | pathToPackageDirectory packageDirectory repo |
 "edit to match the path to your chosen package directory"
-pathToPackageDirectory := '/opt/git/Sample/repository'.
+pathToPackageDirectory := '/opt/git/Sample/packages'.
 Metacello new
   baseline: 'Sample';
   repository: 'filtree://', pathToPackageDirectory;
@@ -170,7 +170,7 @@ steps to save your work to GitHub:
 1. Monticello `commit` from the *MonticelloBrowser* for each of your
    dirty packages.
 2. Git `commit` to save your work into your local git repository.
-3. Git `push` to share the work with your GitHub repository. 
+3. Git `push` to share the work with your GitHub repository.
 
 Note that I do a git `commit` after every Monticello `commit`, but I don't always do a git `push` after every git `commit`. The `push` is only necessary when I'm ready to share my work with others.
 
@@ -188,33 +188,33 @@ ConfigurationOf subclass: #ConfigurationOfSample
   poolDictionaries: ''
   category: 'ConfigurationOfSample'
 ```
- 
+
 ```Smalltalk
 version100: spec
     <version: '1.0.0'>
     spec
         for: #'common'
-        do: [ 
+        do: [
             spec blessing: #'release'.
             spec description: 'a lot of cool stuff'.
             spec author: 'dkh'.
             spec timestamp: '7/30/2012 15:52'.
             spec
-                baseline: 'Sample' with: [ spec repository: 'github://dalehenrich/sample:cecd1626d27f67175f22e6075ca2d1177da1d525/repository' ];
+                baseline: 'Sample' with: [ spec repository: 'github://dalehenrich/sample:cecd1626d27f67175f22e6075ca2d1177da1d525/packages' ];
                 import: 'Sample' ]
 ```
 
 Note that you should only use this approach if you are sharing your
 configuration with folks who are participating in the Metacello Preview.
 
-For more information on the `github://dalehenrich/sample:cecd1626d27f67175f22e6075ca2d1177da1d525/repository` description see the section on
+For more information on the `github://dalehenrich/sample:cecd1626d27f67175f22e6075ca2d1177da1d525/packages` description see the section on
 [github://](MetacelloScriptingAPI.md#github) in the [Metacello Scripting API
 reference](MetacelloScriptingAPI.md).
 
 ## Git workflow
 
 For the most part I tend to follow the [GitHub Flow][6] model. It is
-worth reading about [git-flow][7]. 
+worth reading about [git-flow][7].
 
 [1]: https://help.github.com/articles/set-up-git
 [2]: https://help.github.com/articles/create-a-repo
