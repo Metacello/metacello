@@ -4,6 +4,6 @@ setUpConfigurationNextedIssue84
 
     "self reset"
 
-    | ancestors |
-    ancestors := self setUpConfigurationNextedIssue84dkh1.
-    self setUpConfigurationNextedIssue84dkh2: ancestors
+    | versionInfo |
+    versionInfo := self setUpConfigurationNextedIssue84dkh1.
+    self setUpConfigurationNextedIssue84dkh2: {versionInfo}
