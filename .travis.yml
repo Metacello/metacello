@@ -9,6 +9,8 @@ env:
 #   - ST=Pharo-2.0 TRAVIS_SCRIPT=travisPreviewCI.st
    - ST=Squeak4.3 TRAVIS_SCRIPT=travisCI.st
    - ST=Squeak4.3 TRAVIS_SCRIPT=travisPreviewCI.st
+   - ST=Squeak4.4 TRAVIS_SCRIPT=travisCI.st
+   - ST=Squeak4.4 TRAVIS_SCRIPT=travisPreviewCI.st
 
 install:
    - export PROJECT_HOME="$(pwd)"
