@@ -10,7 +10,7 @@ env:
    - ST=Squeak-4.3 TRAVIS_SCRIPT=travisCI.st
    - ST=Squeak-4.3 TRAVIS_SCRIPT=travisPreviewCI.st
    - ST=Squeak-4.4 TRAVIS_SCRIPT=travisCI.st
-  - ST=Squeak-4.4 TRAVIS_SCRIPT=travisPreviewCI.st
+   - ST=Squeak-4.4 TRAVIS_SCRIPT=travisPreviewCI.st
 
 install:
    - export PROJECT_HOME="$(pwd)"
