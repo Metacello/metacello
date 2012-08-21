@@ -145,7 +145,7 @@ Registry*:
 pathToPackageDirectory := '/opt/git/Sample/packages'.
 Metacello new
   baseline: 'Sample';
-  repository: 'filtree://', pathToPackageDirectory;
+  repository: 'filetree://', pathToPackageDirectory;
   load.
 ```
 
