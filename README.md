@@ -21,10 +21,8 @@ Gofer new
 
 **GemStone2.4**, **PharoCore 1.3**, **PharoCore 1.4** and **Squeak4.3** are currently supported.
 
-## Getting Started with GitHub
-
 If you are interested in using GitHub with the Metacello Preview, you should check out 
-[Getting Started with GitHub][1].
+[Getting Started with GitHub][1] and the [Metacello User Guide][2].
 
 ###TravisCI Status
 **master branch**: [![Build Status](https://secure.travis-ci.org/dalehenrich/metacello-work.png?branch=master)](http://travis-ci.org/dalehenrich/metacello-work)
@@ -32,3 +30,4 @@ If you are interested in using GitHub with the Metacello Preview, you should che
 **configuration branch**: [![Build Status](https://secure.travis-ci.org/dalehenrich/metacello-work.png?branch=configuration)](http://travis-ci.org/dalehenrich/metacello-work)
 
 [1]: https://github.com/dalehenrich/metacello-work/blob/master/docs/GettingStartedWithGitHub.md
+[2]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloUserGuide.md
