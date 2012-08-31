@@ -5,22 +5,25 @@ version10beta3115: spec
 	spec for: #'common' do: [
 		spec blessing: #'release'.
 		spec description: '1.0-beta.31.1.5;
-- update Metacello-MC to a version which adds custom project attribute support to MetacelloConfigTemplate'.
-		spec author: 'spd'.
-		spec timestamp: '07/13/2012 20:00'.
+- update Metacello-MC to a version which adds custom project attribute support to MetacelloConfigTemplate
+  https://github.com/dalehenrich/metacello-work/issues/73
+- get all of the unit tests passing
+  https://github.com/dalehenrich/metacello-work/issues/114'.
+		spec author: 'dkh'.
+		spec timestamp: '8/31/2012 22:50'.
 		spec 
 			project: 'Gofer Core' with: '1.0.5.1';
 			project: 'Gofer Tests' with: '1.0.5.1'.
 		spec 
 			package: 'Metacello-Base' with: 'Metacello-Base-DaleHenrichs.19';
 			package: 'Metacello-Core' with: 'Metacello-Core-dkh.468';
-			package: 'Metacello-MC' with: 'Metacello-MC-SeanDeNigris.534';
+			package: 'Metacello-MC' with: 'Metacello-MC-dkh.535';
 			package: 'Metacello-Reference' with: 'Metacello-Reference-DaleHenrichs.31';
 			package: 'Metacello-Tutorial' with: 'Metacello-Tutorial-dkh.25';
 			package: 'OB-Metacello' with: 'OB-Metacello-dkh.82';
 			package: 'Metacello-TestsReference' with: 'Metacello-TestsReference-DaleHenrichs.17';
 			package: 'Metacello-TestsCore' with: 'Metacello-TestsCore-DaleHenrichs.14';
-			package: 'Metacello-TestsMC' with: 'Metacello-TestsMC-dkh.158';
+			package: 'Metacello-TestsMC' with: 'Metacello-TestsMC-dkh.325';
 			package: 'Metacello-TestsTutorial' with: 'Metacello-TestsTutorial-dkh.32';
 			package: 'Metacello-ToolBox' with: 'Metacello-ToolBox-dkh.107'. ].
 
