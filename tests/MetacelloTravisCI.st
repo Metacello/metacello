@@ -1,21 +1,18 @@
-'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 1 September 2012 at 3:22:52 pm'!
+'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 1 September 2012 at 3:29:03 pm'!
 Object subclass: #MetacelloTravisCI
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'XXX'!
 
-!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/1/2012 15:21'!
+!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/1/2012 15:28'!
 fetch
     [ 
     | cacheRepository repository cacheDirectory |
     cacheDirectory := FileDirectory default directoryNamed: 'monticello'.
     cacheDirectory assureExistence.
     cacheRepository := MCDirectoryRepository new directory: cacheDirectory.
-    self
-        loadFileTree: [ :version :loads | 
-            version cacheRepository: cacheRepository.
-            version fetch: loads ].
+    self loadFileTree.
     repository := (Smalltalk at: #'MCFileTreeRepository') new
         directory: (FileDirectory on: self gitPath , '/metacello-work/repository');
         yourself.
@@ -34,15 +31,12 @@ fetch
             (Smalltalk associationAt: #'Transcript') value: (Smalltalk at: #'OLDTranscript').
             stream close ]! !
 
-!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/1/2012 15:22'!
+!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/1/2012 15:28'!
 test
     | cacheRepository version |
     [ 
     cacheRepository := MCDirectoryRepository new directory: (FileDirectory default directoryNamed: 'monticello').
-    self
-        loadFileTree: [ :aVersion :loads | 
-            aVersion repositoryOverrides: {cacheRepository}.
-            aVersion load: loads ].
+    self loadFileTree.
     version := self
         loadMetacello: [ :aVersion :loads | 
             aVersion repositoryOverrides: {cacheRepository}.
@@ -64,8 +58,8 @@ failFilename
 gitPath
     ^ (FileDirectory default directoryNamed: 'git_cache') fullName! !
 
-!MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/1/2012 15:20'!
-loadFileTree: loadBlock
+!MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/1/2012 15:28'!
+loadFileTree
     | versionString version |
     versionString := #'stable'.
     Gofer new
@@ -73,13 +67,13 @@ loadFileTree: loadBlock
         package: 'ConfigurationOfFileTree';
         load.
     version := (Smalltalk at: #'ConfigurationOfFileTree') project version: '1.0'.
-    loadBlock value: version value: 'default'.
+    version load: 'default'.
     Gofer new
         url: 'http://seaside.gemstone.com/ss/metacello';
         package: 'ConfigurationOfGofer';
         load.
     version := (Smalltalk at: #'ConfigurationOfGofer') project version: #'stable'.
-    loadBlock value: version value: 'Tests'! !
+    version load: 'Tests'! !
 
 !MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/1/2012 15:22'!
 loadMetacello: loadBlock metacelloConfigurationRepository: metacelloConfigurationRepository
