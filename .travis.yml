@@ -26,7 +26,6 @@ script:
    - cd $BUILDER_CI_HOME
    - ls ./${BUILD_PATH}/travisCI/
    _ ls ./${BUILD_PATH}/travisCI/monticello
-   - echo `pwd`
    - ./build.sh -i $ST -s latAmMirror.st -X -f "$PROJECT_HOME/tests/travisTest.st" -o travisCI
    - cd "${BUILD_PATH}/travisCI/"
    - $BUILDER_CI_HOME/buildImageErrorCheck.sh
