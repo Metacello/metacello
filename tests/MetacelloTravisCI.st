@@ -1,20 +1,20 @@
-'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 1 September 2012 at 4:04:24 pm'!
+'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 1 September 2012 at 4:23:31 pm'!
 Object subclass: #MetacelloTravisCI
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'XXX'!
 
-!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/1/2012 15:28'!
+!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/1/2012 16:22'!
 fetch
     [ 
     | cacheRepository repository cacheDirectory |
-    cacheDirectory := FileDirectory default directoryNamed: 'monticello'.
+    cacheDirectory := self cacheRepositoryDirectory.
     cacheDirectory assureExistence.
     cacheRepository := MCDirectoryRepository new directory: cacheDirectory.
     self loadFileTree.
     repository := (Smalltalk at: #'MCFileTreeRepository') new
-        directory: (FileDirectory on: self gitPath , '/metacello-work/repository');
+        directory: self metacelloRepositoryDirectory;
         yourself.
     self
         loadMetacello: [ :version :loads | 
@@ -31,11 +31,11 @@ fetch
             (Smalltalk associationAt: #'Transcript') value: (Smalltalk at: #'OLDTranscript').
             stream close ]! !
 
-!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/1/2012 15:28'!
+!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/1/2012 16:22'!
 test
     | cacheRepository version |
     [ 
-    cacheRepository := MCDirectoryRepository new directory: (FileDirectory default directoryNamed: 'monticello').
+    cacheRepository := MCDirectoryRepository new directory: self cacheRepositoryDirectory.
     self loadFileTree.
     version := self
         loadMetacello: [ :aVersion :loads | 
@@ -49,6 +49,10 @@ test
             (Smalltalk associationAt: #'Transcript') value: (Smalltalk at: #'OLDTranscript').
             stream close ]! !
 
+
+!MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/1/2012 16:22'!
+cacheRepositoryDirectory
+    ^ FileDirectory default directoryNamed: 'monticello'! !
 
 !MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/1/2012 11:10'!
 failFilename
@@ -75,7 +79,7 @@ loadFileTree
     version := (Smalltalk at: #'ConfigurationOfGofer') project version: #'stable'.
     version load: 'Tests'! !
 
-!MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/1/2012 16:04'!
+!MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/1/2012 16:18'!
 loadMetacello: loadBlock metacelloConfigurationRepository: metacelloConfigurationRepository
     | versionString version wc |
     versionString := #'stable'.
@@ -86,6 +90,7 @@ loadMetacello: loadBlock metacelloConfigurationRepository: metacelloConfiguratio
     Transcript
         cr;
         show: metacelloConfigurationRepository directory printString;
+        cr;
         show: metacelloConfigurationRepository class printString.
     Gofer new
         disablePackageCache;
@@ -108,6 +113,10 @@ loadMetacello: loadBlock metacelloConfigurationRepository: metacelloConfiguratio
         value:
             #('Metacello-ToolBox' 'Metacello-TestsCore' 'Metacello-TestsTutorial' 'Metacello-TestsMC' 'Metacello-TestsReference').
     ^ version! !
+
+!MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/1/2012 16:20'!
+metacelloRepositoryDirectory
+    ^ FileDirectory on: self gitPath , '/metacello-work/repository'! !
 
 !MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/1/2012 11:10'!
 runTestFor: version
