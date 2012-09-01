@@ -27,6 +27,7 @@ script:
    - ls ${BUILD_PATH}/travisCI/
    - ls ${BUILD_PATH}/travisCI/monticello
    - echo `pwd`
+   - echo $BUILD_PATH
    - ./build.sh -i $ST -s latAmMirror.st -X -f "$PROJECT_HOME/tests/travisTest.st" -o travisCI
    - cd "${BUILD_PATH}/travisCI/"
    - cat TravisTranscript.txt
