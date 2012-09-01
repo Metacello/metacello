@@ -1,4 +1,4 @@
-'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 1 September 2012 at 3:29:03 pm'!
+'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 1 September 2012 at 3:47:16 pm'!
 Object subclass: #MetacelloTravisCI
 	instanceVariableNames: ''
 	classVariableNames: ''
@@ -75,16 +75,29 @@ loadFileTree
     version := (Smalltalk at: #'ConfigurationOfGofer') project version: #'stable'.
     version load: 'Tests'! !
 
-!MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/1/2012 15:22'!
+!MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/1/2012 15:47'!
 loadMetacello: loadBlock metacelloConfigurationRepository: metacelloConfigurationRepository
-    | versionString version |
+    | versionString version wc |
     versionString := #'stable'.
+    wc := MCWorkingCopy allManagers detect: [ :each | each packageName beginsWith: 'ConfigurationOfMetacello' ].
+    Transcript
+        cr;
+        show: 'Before: ' , wc ancestry ancestors first name printString.
     Gofer new
         repository: metacelloConfigurationRepository;
         package: 'ConfigurationOfMetacello';
         load.
+    wc := MCWorkingCopy allManagers detect: [ :each | each packageName beginsWith: 'ConfigurationOfMetacello' ].
+    Transcript
+        cr;
+        show: 'After: ' , wc ancestry ancestors first name printString.
     version := (Smalltalk at: #'ConfigurationOfMetacello') project version: versionString.
-    version repositoryOverrides: {metacelloConfigurationRepository}.
+    Transcript
+        cr;
+        show: 'Loading Metacello: ' , version versionString printString.
+    version
+        ignoreImage: true;
+        repositoryOverrides: {metacelloConfigurationRepository}.
     loadBlock
         value: version
         value:
