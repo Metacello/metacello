@@ -3,6 +3,8 @@ Transcript cr; show: 'travis---->travisFetch.st'.
 
 gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 
+Transcript cr; show: gitPath printString.
+
 (Smalltalk at: #FileDirectory ifAbsent: [])
   ifNil: [ 
     fileInBlock := [:fileName | 
@@ -10,9 +12,11 @@ gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
         readStreamDo: [:fileStream | fileStream fileIn ] ] ]
   ifNotNil: [:fileDirectoryClass | 
     fileInBlock := [:fileName |
+Transcript cr; show: 'start fileIn: ', fileName printString.
       (fileDirectoryClass on: gitPath, '/metacello-work/tests')
         fileNamed: fileName
-        do: [:fileStream | fileStream fileIn ] ] ].
+        do: [:fileStream | fileStream fileIn ].
+Transcript cr; show: 'finished...' ] ].
 
 fileInBlock value: 'MetacelloFetcher.st'.
 
