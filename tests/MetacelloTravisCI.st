@@ -1,11 +1,11 @@
-'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 1 September 2012 at 4:23:31 pm'!
+'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 1 September 2012 at 5:27:31 pm'!
 Object subclass: #MetacelloTravisCI
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'XXX'!
 
-!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/1/2012 16:22'!
+!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/1/2012 17:26'!
 fetch
     [ 
     | cacheRepository repository cacheDirectory |
@@ -22,6 +22,7 @@ fetch
             version fetch: loads ]
         metacelloConfigurationRepository: repository.
     (Smalltalk at: #'Gofer') new
+        disablePackageCache;
         repository: cacheRepository;
         package: 'ConfigurationOfMetacello';
         push ]
