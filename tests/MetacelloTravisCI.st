@@ -1,4 +1,4 @@
-'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 1 September 2012 at 5:55:34 pm'!
+'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 1 September 2012 at 6:51:35 pm'!
 Object subclass: #MetacelloTravisCI
 	instanceVariableNames: ''
 	classVariableNames: ''
@@ -40,13 +40,20 @@ fetch
             (Smalltalk associationAt: #'Transcript') value: (Smalltalk at: #'OLDTranscript').
             stream close ]! !
 
-!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/1/2012 17:31'!
+!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/1/2012 18:51'!
 test
     | cacheRepository version |
     [ 
     cacheRepository := MCDirectoryRepository new directory: self cacheRepositoryDirectory.
     self loadFileTree.
     [ 
+    Transcript
+        cr;
+        show: 'direct test------>BEFORE'.
+    self cacheRepositoryDirectory entries.
+    Transcript
+        cr;
+        show: 'direct test------>AFTER'.
     version := self
         loadMetacello: [ :aVersion :loads | 
             aVersion repositoryOverrides: {cacheRepository}.
