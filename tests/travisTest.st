@@ -1,4 +1,5 @@
 | gitPath fileInBlock |
+Transcript cr; show: 'travis---->travisTest.st'.
 
 gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 
