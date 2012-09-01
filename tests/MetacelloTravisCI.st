@@ -1,26 +1,36 @@
-'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 1 September 2012 at 11:11:30 am'!
+'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 1 September 2012 at 3:00:50 pm'!
 Object subclass: #MetacelloTravisCI
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'XXX'!
 
-!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/1/2012 10:41'!
+!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/1/2012 14:59'!
 fetch
     [ 
-    | cacheRepository |
-    cacheRepository := MCDirectoryRepository new directory: (FileDirectory default directoryNamed: 'monticello').
+    | cacheRepository repository cacheDirectory |
+    cacheDirectory := FileDirectory default directoryNamed: 'monticello'.
+    cacheDirectory assureExistence.
+    cacheRepository := MCDirectoryRepository new directory: cacheDirectory.
+    repository := MCFileTreeRepository new
+        directory: (FileDirectory on: self gitPath , '/metacello-work/repository');
+        yourself.
     self
         loadMetacello: [ :version :loads | 
             version cacheRepository: cacheRepository.
-            version fetch: loads ] ]
+            version fetch: loads ]
+        metacelloConfigurationRepository: repository.
+    (Smalltalk at: #'Gofer') new
+        repository: cacheRepository;
+        package: 'ConfigurationOfMetacello';
+        push ]
         ensure: [ 
             | stream |
             stream := Transcript.
             (Smalltalk associationAt: #'Transcript') value: (Smalltalk at: #'OLDTranscript').
             stream close ]! !
 
-!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/1/2012 11:09'!
+!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/1/2012 15:00'!
 test
     | cacheRepository version |
     [ 
@@ -28,7 +38,8 @@ test
     version := self
         loadMetacello: [ :aVersion :loads | 
             aVersion repositoryOverrides: {cacheRepository}.
-            aVersion load: loads ].
+            aVersion load: loads ]
+        metacelloConfigurationRepository: cacheRepository.
     self runTestFor: version ]
         ensure: [ 
             | stream |
@@ -41,9 +52,13 @@ test
 failFilename
     ^ 'TravisCIFailure.txt'! !
 
-!MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/1/2012 10:44'!
-loadMetacello: loadBlock
-    | cacheRepository versionString version gitPath repository |
+!MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/1/2012 14:54'!
+gitPath
+    ^ (FileDirectory default directoryNamed: 'git_cache') fullName! !
+
+!MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/1/2012 14:53'!
+loadMetacello: loadBlock metacelloConfigurationRepository: metacelloConfigurationRepository
+    | cacheRepository versionString version gitPath |
     cacheRepository := MCDirectoryRepository new directory: (FileDirectory default directoryNamed: 'monticello').
     versionString := #'stable'.
     Gofer new
@@ -58,16 +73,12 @@ loadMetacello: loadBlock
         load.
     version := (Smalltalk at: #'ConfigurationOfGofer') project version: #'stable'.
     loadBlock value: version value: 'Tests'.
-    gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
-    repository := MCFileTreeRepository new
-        directory: (FileDirectory on: gitPath , '/metacello-work/repository');
-        yourself.
     Gofer new
-        repository: repository;
+        repository: metacelloConfigurationRepository;
         package: 'ConfigurationOfMetacello';
         load.
     version := (Smalltalk at: #'ConfigurationOfMetacello') project version: versionString.
-    version repositoryOverrides: {repository}.
+    version repositoryOverrides: {metacelloConfigurationRepository}.
     loadBlock
         value: version
         value:

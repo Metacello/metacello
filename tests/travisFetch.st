@@ -20,4 +20,4 @@ Transcript cr; show: 'finished...' ] ].
 
 fileInBlock value: 'MetacelloTravisCI.st'.
 
-(Smalltalk at: #MetacelloTravisCI) fetch.
+(Smalltalk at: #MetacelloTravisCI) new fetch.

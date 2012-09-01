@@ -16,4 +16,4 @@ gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 
 fileInBlock value: 'MetacelloTravisCI.st'.
 
-(Smalltalk at: #MetacelloTravisCI) test.
+(Smalltalk at: #MetacelloTravisCI) new test.
