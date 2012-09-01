@@ -1,12 +1,13 @@
-'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 1 September 2012 at 5:32:18 pm'!
+'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 1 September 2012 at 5:37:35 pm'!
 Object subclass: #MetacelloTravisCI
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'XXX'!
 
-!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/1/2012 17:26'!
+!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/1/2012 17:37'!
 fetch
+    | wc mczFile |
     [ 
     | cacheRepository repository cacheDirectory |
     cacheDirectory := self cacheRepositoryDirectory.
@@ -21,10 +22,15 @@ fetch
             version cacheRepository: cacheRepository.
             version fetch: loads ]
         metacelloConfigurationRepository: repository.
+    wc := MCWorkingCopy allManagers detect: [ :each | each packageName beginsWith: 'ConfigurationOfMetacello' ].
+    mczFile := wc ancestry ancestors first name.
+    Transcript
+        cr;
+        show: '------------->Configuration: ' , mczFile printString.
     (Smalltalk at: #'Gofer') new
         disablePackageCache;
         repository: cacheRepository;
-        package: 'ConfigurationOfMetacello';
+        version: mczFile;
         push ]
         ensure: [ 
             | stream |
