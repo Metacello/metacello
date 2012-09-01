@@ -1,4 +1,4 @@
-'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 1 September 2012 at 5:27:31 pm'!
+'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 1 September 2012 at 5:32:18 pm'!
 Object subclass: #MetacelloTravisCI
 	instanceVariableNames: ''
 	classVariableNames: ''
@@ -32,17 +32,23 @@ fetch
             (Smalltalk associationAt: #'Transcript') value: (Smalltalk at: #'OLDTranscript').
             stream close ]! !
 
-!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/1/2012 16:22'!
+!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/1/2012 17:31'!
 test
     | cacheRepository version |
     [ 
     cacheRepository := MCDirectoryRepository new directory: self cacheRepositoryDirectory.
     self loadFileTree.
+    [ 
     version := self
         loadMetacello: [ :aVersion :loads | 
             aVersion repositoryOverrides: {cacheRepository}.
             aVersion load: loads ]
-        metacelloConfigurationRepository: cacheRepository.
+        metacelloConfigurationRepository: cacheRepository ]
+        on: InvalidDirectoryError
+        do: [ :ex | 
+            Transcript
+                cr;
+                show: 'Bad Directory: ' , ex pathName printString ].
     self runTestFor: version ]
         ensure: [ 
             | stream |
