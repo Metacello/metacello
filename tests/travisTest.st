@@ -14,6 +14,6 @@ gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
         fileNamed: fileName
         do: [:fileStream | fileStream fileIn ] ] ].
 
-fileInBlock value: 'MetacelloFetcher.st'.
+fileInBlock value: 'MetacelloTravisCI.st'.
 
 (Smalltalk at: #MetacelloTravisCI) test.

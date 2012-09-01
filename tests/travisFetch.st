@@ -18,6 +18,6 @@ Transcript cr; show: 'start fileIn: ', fileName printString.
         do: [:fileStream | fileStream fileIn ].
 Transcript cr; show: 'finished...' ] ].
 
-fileInBlock value: 'MetacelloFetcher.st'.
+fileInBlock value: 'MetacelloTravisCI.st'.
 
 (Smalltalk at: #MetacelloTravisCI) fetch.
