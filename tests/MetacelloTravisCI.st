@@ -1,11 +1,11 @@
-'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 2 September 2012 at 9:40:58 am'!
+'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 2 September 2012 at 9:54:58 am'!
 Object subclass: #MetacelloTravisCI
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'XXX'!
 
-!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/2/2012 09:39'!
+!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/2/2012 09:54'!
 fetch
     | wc mczFile |
     [ 
@@ -29,8 +29,8 @@ fetch
         show: '------------->Configuration: ' , mczFile printString.
     (Smalltalk at: #'Gofer') new
         repository: cacheRepository;
-        version: mczFile;
-        push.
+        package: 'ConfigurationOfMetacello';
+        commit: 'stash'.
     Transcript
         cr;
         show: 'DONE' ]
