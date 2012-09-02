@@ -1,4 +1,4 @@
-'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 2 September 2012 at 10:16:42 am'!
+'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 2 September 2012 at 10:48:59 am'!
 Object subclass: #MetacelloTravisCI
 	instanceVariableNames: ''
 	classVariableNames: ''
@@ -83,7 +83,7 @@ loadFileTree
     version := (Smalltalk at: #'ConfigurationOfGofer') project version: #'stable'.
     version load: 'Tests'! !
 
-!MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/2/2012 10:16'!
+!MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/2/2012 10:48'!
 loadMetacello: loadBlock metacelloConfigurationRepository: metacelloConfigurationRepository
     | versionString version |
     versionString := #'stable'.
@@ -92,9 +92,7 @@ loadMetacello: loadBlock metacelloConfigurationRepository: metacelloConfiguratio
         repository: metacelloConfigurationRepository;
         package: 'ConfigurationOfMetacello';
         load.
-    Transcript
-        cr;
-        show: 'Loading Metacello: ' , version versionString printString.
+    version := (Smalltalk at: #'ConfigurationOfMetacello') project version: versionString.
     version
         ignoreImage: true;
         repositoryOverrides: {metacelloConfigurationRepository}.
