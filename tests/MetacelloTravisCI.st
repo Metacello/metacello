@@ -1,13 +1,12 @@
-'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 2 September 2012 at 10:01:45 am'!
+'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 2 September 2012 at 10:16:42 am'!
 Object subclass: #MetacelloTravisCI
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'XXX'!
 
-!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/2/2012 10:01'!
+!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/2/2012 10:15'!
 fetch
-    | wc mczFile |
     [ 
     | cacheRepository repository cacheDirectory |
     cacheDirectory := self cacheRepositoryDirectory.
@@ -22,11 +21,6 @@ fetch
             version cacheRepository: cacheRepository.
             version fetch: loads ]
         metacelloConfigurationRepository: repository.
-    wc := MCWorkingCopy allManagers detect: [ :each | each packageName beginsWith: 'ConfigurationOfMetacello' ].
-    mczFile := wc ancestry ancestors first name.
-    Transcript
-        cr;
-        show: '------------->Configuration: ' , mczFile printString.
     self signIn.
     (Smalltalk at: #'Gofer') new
         repository: cacheRepository;
@@ -89,29 +83,15 @@ loadFileTree
     version := (Smalltalk at: #'ConfigurationOfGofer') project version: #'stable'.
     version load: 'Tests'! !
 
-!MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/1/2012 16:18'!
+!MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/2/2012 10:16'!
 loadMetacello: loadBlock metacelloConfigurationRepository: metacelloConfigurationRepository
-    | versionString version wc |
+    | versionString version |
     versionString := #'stable'.
-    wc := MCWorkingCopy allManagers detect: [ :each | each packageName beginsWith: 'ConfigurationOfMetacello' ].
-    Transcript
-        cr;
-        show: '------------->Before: ' , wc ancestry ancestors first name printString.
-    Transcript
-        cr;
-        show: metacelloConfigurationRepository directory printString;
-        cr;
-        show: metacelloConfigurationRepository class printString.
     Gofer new
         disablePackageCache;
         repository: metacelloConfigurationRepository;
         package: 'ConfigurationOfMetacello';
         load.
-    wc := MCWorkingCopy allManagers detect: [ :each | each packageName beginsWith: 'ConfigurationOfMetacello' ].
-    Transcript
-        cr;
-        show: '------------->After: ' , wc ancestry ancestors first name printString.
-    version := (Smalltalk at: #'ConfigurationOfMetacello') project version: versionString.
     Transcript
         cr;
         show: 'Loading Metacello: ' , version versionString printString.

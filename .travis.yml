@@ -23,7 +23,6 @@ script:
    - cat TravisTranscript.txt
    - $BUILDER_CI_HOME/buildTravisStatusCheck.sh
    - cd $BUILDER_CI_HOME
-   - ls -l ${BUILD_PATH}/travisCI/mcz/*
    - ./build.sh -i $ST -s latAmMirror.st -X -f "$PROJECT_HOME/tests/travisTest.st" -o travisCI
    - cd "${BUILD_PATH}/travisCI/"
    - $BUILDER_CI_HOME/buildImageErrorCheck.sh
