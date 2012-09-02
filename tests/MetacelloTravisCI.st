@@ -1,11 +1,11 @@
-'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 1 September 2012 at 6:51:35 pm'!
+'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 2 September 2012 at 9:00:57 am'!
 Object subclass: #MetacelloTravisCI
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'XXX'!
 
-!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/1/2012 17:55'!
+!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/2/2012 09:00'!
 fetch
     | wc mczFile |
     [ 
@@ -33,14 +33,22 @@ fetch
         push.
     Transcript
         cr;
-        show: 'DONE' ]
+        show: 'DONE'.
+    Transcript
+        cr;
+        show: 'fetch test------>BEFORE:';
+        show: self cacheRepositoryDirectory exists printString.
+    self cacheRepositoryDirectory entries.
+    Transcript
+        cr;
+        show: 'fetch test------>AFTER' ]
         ensure: [ 
             | stream |
             stream := Transcript.
             (Smalltalk associationAt: #'Transcript') value: (Smalltalk at: #'OLDTranscript').
             stream close ]! !
 
-!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/1/2012 18:51'!
+!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/2/2012 09:00'!
 test
     | cacheRepository version |
     [ 
@@ -49,7 +57,8 @@ test
     [ 
     Transcript
         cr;
-        show: 'direct test------>BEFORE'.
+        show: 'direct test------>BEFORE:';
+        show: self cacheRepositoryDirectory exists printString.
     self cacheRepositoryDirectory entries.
     Transcript
         cr;
