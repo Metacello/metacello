@@ -19,6 +19,7 @@ install:
 script:
    - echo `pwd`
    - ls $PROJECT_HOME/tests
+   - ls -l
    - ./build.sh -i $ST -s latAmMirror.st -X -f "$PROJECT_HOME/tests/travisFetch.st" -o travisCI
    - cd "${BUILD_PATH}/travisCI/"
    - $BUILDER_CI_HOME/buildImageErrorCheck.sh
@@ -29,6 +30,7 @@ script:
    - ls -l ${BUILD_PATH}/travisCI/monticello
    - echo `pwd`
    - echo $BUILD_PATH
+   - ls -l
    - ./build.sh -i $ST -s latAmMirror.st -X -f "$PROJECT_HOME/tests/travisTest.st" -o travisCI
    - cd "${BUILD_PATH}/travisCI/"
    - $BUILDER_CI_HOME/buildImageErrorCheck.sh
