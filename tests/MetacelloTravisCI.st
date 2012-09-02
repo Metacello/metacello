@@ -1,11 +1,11 @@
-'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 2 September 2012 at 9:00:57 am'!
+'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 2 September 2012 at 9:40:58 am'!
 Object subclass: #MetacelloTravisCI
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'XXX'!
 
-!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/2/2012 09:00'!
+!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/2/2012 09:39'!
 fetch
     | wc mczFile |
     [ 
@@ -33,46 +33,24 @@ fetch
         push.
     Transcript
         cr;
-        show: 'DONE'.
-    Transcript
-        cr;
-        show: 'fetch test------>BEFORE:';
-        show: self cacheRepositoryDirectory exists printString.
-    self cacheRepositoryDirectory entries.
-    Transcript
-        cr;
-        show: 'fetch test------>AFTER' ]
+        show: 'DONE' ]
         ensure: [ 
             | stream |
             stream := Transcript.
             (Smalltalk associationAt: #'Transcript') value: (Smalltalk at: #'OLDTranscript').
             stream close ]! !
 
-!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/2/2012 09:00'!
+!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/2/2012 09:40'!
 test
     | cacheRepository version |
     [ 
     cacheRepository := MCDirectoryRepository new directory: self cacheRepositoryDirectory.
     self loadFileTree.
-    [ 
-    Transcript
-        cr;
-        show: 'direct test------>BEFORE:';
-        show: self cacheRepositoryDirectory exists printString.
-    self cacheRepositoryDirectory entries.
-    Transcript
-        cr;
-        show: 'direct test------>AFTER'.
     version := self
         loadMetacello: [ :aVersion :loads | 
             aVersion repositoryOverrides: {cacheRepository}.
             aVersion load: loads ]
-        metacelloConfigurationRepository: cacheRepository ]
-        on: InvalidDirectoryError
-        do: [ :ex | 
-            Transcript
-                cr;
-                show: 'Bad Directory: ' , ex pathName printString ].
+        metacelloConfigurationRepository: cacheRepository.
     self runTestFor: version ]
         ensure: [ 
             | stream |
@@ -81,9 +59,9 @@ test
             stream close ]! !
 
 
-!MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/1/2012 16:22'!
+!MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/2/2012 09:39'!
 cacheRepositoryDirectory
-    ^ FileDirectory default directoryNamed: 'monticello'! !
+    ^ FileDirectory default directoryNamed: 'mcz'! !
 
 !MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/1/2012 11:10'!
 failFilename

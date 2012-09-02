@@ -17,20 +17,13 @@ install:
    - ./build_image.sh
 
 script:
-   - echo `pwd`
-   - ls $PROJECT_HOME/tests
-   - ls -l
    - ./build.sh -i $ST -s latAmMirror.st -X -f "$PROJECT_HOME/tests/travisFetch.st" -o travisCI
    - cd "${BUILD_PATH}/travisCI/"
    - $BUILDER_CI_HOME/buildImageErrorCheck.sh
    - cat TravisTranscript.txt
    - $BUILDER_CI_HOME/buildTravisStatusCheck.sh
    - cd $BUILDER_CI_HOME
-   - ls -l ${BUILD_PATH}/travisCI/
-   - ls -l ${BUILD_PATH}/travisCI/monticello
-   - echo `pwd`
-   - echo $BUILD_PATH
-   - ls -l
+   - ls -l ${BUILD_PATH}/travisCI/mcz
    - ./build.sh -i $ST -s latAmMirror.st -X -f "$PROJECT_HOME/tests/travisTest.st" -o travisCI
    - cd "${BUILD_PATH}/travisCI/"
    - $BUILDER_CI_HOME/buildImageErrorCheck.sh
