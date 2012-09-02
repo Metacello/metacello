@@ -16,14 +16,17 @@ testProjectRecord
         packageDirectivesDo: [ :pkgDirective | 
             | name |
             name := pkgDirective packageName.
-            self assert: (names indexOf: name) = 1.
             Transcript
                 cr;
                 show: 'testProjectRecord [4]: ' , name.
+            self assert: (names indexOf: name) = 1.
+            Transcript
+                cr;
+                show: 'testProjectRecord [5]: ' , name.
             names remove: name ifAbsent: [ self assert: false ].
             Transcript
                 cr;
-                show: 'testProjectRecord [5]: ' , name ].
+                show: 'testProjectRecord [6]: ' , name ].
     Transcript
         cr;
         show: 'testProjectRecord [2]'.
