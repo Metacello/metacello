@@ -20,17 +20,17 @@ script:
    - ls $PROJECT_HOME/tests
    - ./build.sh -i $ST -s latAmMirror.st -X -f "$PROJECT_HOME/tests/travisFetch.st" -o travisCI
    - cd "${BUILD_PATH}/travisCI/"
-   - cat TravisTranscript.txt
    - $BUILDER_CI_HOME/buildImageErrorCheck.sh
+   - cat TravisTranscript.txt
    - $BUILDER_CI_HOME/buildTravisStatusCheck.sh
    - cd $BUILDER_CI_HOME
-   - ls ${BUILD_PATH}/travisCI/
-   - ls ${BUILD_PATH}/travisCI/monticello
+   - ls -l ${BUILD_PATH}/travisCI/
+   - ls -l ${BUILD_PATH}/travisCI/monticello
    - echo `pwd`
    - echo $BUILD_PATH
    - ./build.sh -i $ST -s latAmMirror.st -X -f "$PROJECT_HOME/tests/travisTest.st" -o travisCI
    - cd "${BUILD_PATH}/travisCI/"
-   - cat TravisTranscript.txt
    - $BUILDER_CI_HOME/buildImageErrorCheck.sh
+   - cat TravisTranscript.txt
    - $BUILDER_CI_HOME/buildTravisStatusCheck.sh
 
