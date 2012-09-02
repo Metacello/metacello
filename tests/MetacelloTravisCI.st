@@ -1,11 +1,11 @@
-'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 2 September 2012 at 9:54:58 am'!
+'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 2 September 2012 at 10:01:45 am'!
 Object subclass: #MetacelloTravisCI
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'XXX'!
 
-!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/2/2012 09:54'!
+!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/2/2012 10:01'!
 fetch
     | wc mczFile |
     [ 
@@ -27,6 +27,7 @@ fetch
     Transcript
         cr;
         show: '------------->Configuration: ' , mczFile printString.
+    self signIn.
     (Smalltalk at: #'Gofer') new
         repository: cacheRepository;
         package: 'ConfigurationOfMetacello';
@@ -127,10 +128,10 @@ loadMetacello: loadBlock metacelloConfigurationRepository: metacelloConfiguratio
 metacelloRepositoryDirectory
     ^ FileDirectory on: self gitPath , '/metacello-work/repository'! !
 
-!MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/1/2012 11:10'!
+!MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/2/2012 10:01'!
 runTestFor: version
     | cacheRepository successFilename failFilename suite result resultsFileName |
-    (Smalltalk at: #'MetacelloPlatform') current authorName: 'testMonkey'.	"These tests save code ... need an Author"
+    self signIn.
     successFilename := self successFilename.
     failFilename := self failFilename.
     suite := TestCase suiteClass named: ' Metacello Test Suite'.
@@ -183,6 +184,10 @@ runTestFor: version
             fileStream
                 nextPutAll: '***********************************************';
                 cr ]! !
+
+!MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/2/2012 10:01'!
+signIn
+    (Smalltalk at: #'MetacelloPlatform') current authorName: 'testMonkey'! !
 
 !MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/1/2012 11:10'!
 successFilename
