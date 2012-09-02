@@ -1,51 +1,21 @@
-'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 2 September 2012 at 10:48:59 am'!
+'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 2 September 2012 at 12:11:14 pm'!
 Object subclass: #MetacelloTravisCI
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'XXX'!
 
-!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/2/2012 10:15'!
-fetch
+!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/2/2012 12:09'!
+test
     [ 
-    | cacheRepository repository cacheDirectory |
-    cacheDirectory := self cacheRepositoryDirectory.
-    cacheDirectory assureExistence.
-    cacheRepository := MCDirectoryRepository new directory: cacheDirectory.
+    | repository version |
     self loadFileTree.
     repository := (Smalltalk at: #'MCFileTreeRepository') new
         directory: self metacelloRepositoryDirectory;
         yourself.
-    self
-        loadMetacello: [ :version :loads | 
-            version cacheRepository: cacheRepository.
-            version fetch: loads ]
-        metacelloConfigurationRepository: repository.
-    self signIn.
-    (Smalltalk at: #'Gofer') new
-        repository: cacheRepository;
-        package: 'ConfigurationOfMetacello';
-        commit: 'stash'.
-    Transcript
-        cr;
-        show: 'DONE' ]
-        ensure: [ 
-            | stream |
-            stream := Transcript.
-            (Smalltalk associationAt: #'Transcript') value: (Smalltalk at: #'OLDTranscript').
-            stream close ]! !
-
-!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/2/2012 09:40'!
-test
-    | cacheRepository version |
-    [ 
-    cacheRepository := MCDirectoryRepository new directory: self cacheRepositoryDirectory.
-    self loadFileTree.
     version := self
-        loadMetacello: [ :aVersion :loads | 
-            aVersion repositoryOverrides: {cacheRepository}.
-            aVersion load: loads ]
-        metacelloConfigurationRepository: cacheRepository.
+        loadMetacello: [ :aVersion :loads | aVersion load: loads ]
+        metacelloConfigurationRepository: repository.
     self runTestFor: version ]
         ensure: [ 
             | stream |
@@ -53,10 +23,6 @@ test
             (Smalltalk associationAt: #'Transcript') value: (Smalltalk at: #'OLDTranscript').
             stream close ]! !
 
-
-!MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/2/2012 09:39'!
-cacheRepositoryDirectory
-    ^ FileDirectory default directoryNamed: 'mcz'! !
 
 !MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/1/2012 11:10'!
 failFilename
@@ -163,7 +129,7 @@ runTestFor: version
                 nextPutAll: '***********************************************';
                 cr ]! !
 
-!MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/2/2012 10:01'!
+!MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/2/2012 12:10'!
 signIn
     (Smalltalk at: #'MetacelloPlatform') current authorName: 'testMonkey'! !
 
