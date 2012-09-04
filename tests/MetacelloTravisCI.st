@@ -1,4 +1,4 @@
-'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 4 September 2012 at 3:47 pm'!
+'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 4 September 2012 at 4:33:29 pm'!
 Object subclass: #MetacelloTravisCI
 	instanceVariableNames: ''
 	classVariableNames: ''
@@ -32,31 +32,36 @@ failFilename
 gitPath
     ^ (FileDirectory default directoryNamed: 'git_cache') fullName! !
 
-!MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/1/2012 15:28'!
+!MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/4/2012 16:31'!
 loadFileTree
-    | versionString version |
-    versionString := #'stable'.
-    Gofer new
-        url: 'http://ss3.gemstone.com/ss/FileTree';
-        package: 'ConfigurationOfFileTree';
-        load.
+    | version |
+    self
+        retry: [ 
+            Gofer new
+                url: 'http://ss3.gemstone.com/ss/FileTree';
+                package: 'ConfigurationOfFileTree';
+                load ].
     version := (Smalltalk at: #'ConfigurationOfFileTree') project version: '1.0'.
     version load: 'default'.
-    Gofer new
-        url: 'http://seaside.gemstone.com/ss/metacello';
-        package: 'ConfigurationOfGofer';
-        load.
+    self
+        retry: [ 
+            Gofer new
+                url: 'http://seaside.gemstone.com/ss/metacello';
+                package: 'ConfigurationOfGofer';
+                load ].
     version := (Smalltalk at: #'ConfigurationOfGofer') project version: #'stable'.
     version load: 'Tests'! !
 
-!MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/4/2012 15:46'!
+!MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/4/2012 16:32'!
 loadMetacello: loadBlock metacelloConfigurationRepository: metacelloConfigurationRepository
     | version repositories |
-    Gofer new
-        disablePackageCache;
-        repository: metacelloConfigurationRepository;
-        package: 'ConfigurationOfMetacello';
-        load.
+    self
+        retry: [ 
+            Gofer new
+                disablePackageCache;
+                repository: metacelloConfigurationRepository;
+                package: 'ConfigurationOfMetacello';
+                load ].
     version := (Smalltalk at: #'ConfigurationOfMetacello') project version: #'stable'.
     repositories := (#('http://www.squeaksource.com/MetacelloRepository')
         collect: [ :url | MCHttpRepository location: url user: '' password: '' ]) asSet.
@@ -71,6 +76,37 @@ loadMetacello: loadBlock metacelloConfigurationRepository: metacelloConfiguratio
 !MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/1/2012 16:20'!
 metacelloRepositoryDirectory
     ^ FileDirectory on: self gitPath , '/metacello-work/repository'! !
+
+!MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/4/2012 16:32'!
+retry: aBlock
+    self retry: aBlock retryCount: 3! !
+
+!MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/4/2012 16:31'!
+retry: aBlock retryCount: retryCount
+    | count |
+    count := 1.
+    [ true ]
+        whileTrue: [ 
+            [ 
+            aBlock value.
+            ^ self ]
+                on: Error
+                do: [ :ex | 
+                    count < retryCount
+                        ifTrue: [ 
+                            Transcript
+                                cr;
+                                show: 'RETRYING AFTER:';
+                                cr;
+                                show: ex description printString ]
+                        ifFalse: [ 
+                            Transcript
+                                cr;
+                                show: 'FAILED RETRYING:';
+                                cr;
+                                show: ex description printString.
+                            ex pass ] ].
+            count := count + 1 ]! !
 
 !MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/2/2012 10:01'!
 runTestFor: version
