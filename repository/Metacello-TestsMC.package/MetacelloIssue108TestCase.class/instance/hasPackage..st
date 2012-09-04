@@ -1,4 +1,4 @@
-private
+utilities
 hasPackage: aString
 	| package |
 	package := MCWorkingCopy allManagers
