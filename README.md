@@ -11,7 +11,7 @@
 ### Load Metacello 1.0-beta.31.1.5
 ```Smalltalk
     | gitRepositoryPath metacelloConfigurationRepository version repositories |
-    gitRepositoryPath := '/opt/git/metacello-work/repository'.
+    gitRepositoryPath := '/opt/git/1.0-beta.31/metacello-work/repository'.
     Gofer new
         url: 'http://ss3.gemstone.com/ss/FileTree';
         package: 'ConfigurationOfFileTree';
@@ -25,7 +25,7 @@
     ((Smalltalk at: #'ConfigurationOfGofer') project version: #'stable')
         load.
     metacelloConfigurationRepository := (Smalltalk at: #'MCFileTreeRepository') new
-        directory: (FileDirectory on: gitRepositoryPath;
+        directory: (FileDirectory on: gitRepositoryPath);
         yourself.
     Gofer new
         disablePackageCache;
@@ -41,4 +41,5 @@
 ```
 
 ###TravisCI Status
-**1.0-beta.31.1.5 branch**: [![Build Status](https://secure.travis-ci.org/dalehenrich/metacello-work.png?branch=1.0-beta.31.1.5://travis-ci.org/dalehenrich/metacello-work)
+**1.0-beta.31.1.5 branch**: [![Build Status](https://secure.travis-ci.org/dalehenrich/metacello-work.png?branch=1.0-beta.31.1.5)(http://travis-ci.org/dalehenrich/metacello-work)
+

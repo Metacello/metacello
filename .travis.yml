@@ -17,7 +17,8 @@ install:
    - ./build_image.sh
 
 script:
-   - ./build.sh -i $ST -s latAmMirror.st -X -f "$PROJECT_HOME/tests/travisTest.st" -o travisCI
+#   - ./build.sh -i $ST -s latAmMirror.st -X -f "$PROJECT_HOME/tests/travisTest.st" -o travisCI
+   - ./build.sh -i $ST -X -f "$PROJECT_HOME/tests/travisTest.st" -o travisCI
    - cd "${BUILD_PATH}/travisCI/"
    - ls -altr *
    - $BUILDER_CI_HOME/buildImageErrorCheck.sh
