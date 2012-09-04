@@ -1,11 +1,11 @@
-'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 4 September 2012 at 8:14:10 pm'!
+'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 4 September 2012 at 10:10:16 pm'!
 Object subclass: #MetacelloTravisCI
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'XXX'!
 
-!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/4/2012 13:47'!
+!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/4/2012 22:10'!
 test
     [ 
     | repository version |
@@ -16,6 +16,7 @@ test
     version := self
         loadMetacello: [ :aVersion :loads | aVersion load: loads ]
         metacelloConfigurationRepository: repository.
+    (Smalltalk at: #'MetacelloIssue136TestCase') debug: #'testCachedIssue136'.
     self runTestFor: version ]
         ensure: [ 
             | stream |
