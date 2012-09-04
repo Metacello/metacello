@@ -1,4 +1,4 @@
-'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 4 September 2012 at 7:44:12 pm'!
+'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 4 September 2012 at 8:14:10 pm'!
 Object subclass: #MetacelloTravisCI
 	instanceVariableNames: ''
 	classVariableNames: ''
@@ -49,7 +49,7 @@ loadFileTree
     version := (Smalltalk at: #'ConfigurationOfGofer') project version: #'stable'.
     version load: 'Tests'! !
 
-!MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/4/2012 19:44'!
+!MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/4/2012 20:14'!
 loadMetacello: loadBlock metacelloConfigurationRepository: metacelloConfigurationRepository
     | versionString version repositories |
     versionString := #'stable'.
@@ -59,12 +59,10 @@ loadMetacello: loadBlock metacelloConfigurationRepository: metacelloConfiguratio
         package: 'ConfigurationOfMetacello';
         load.
     version := (Smalltalk at: #'ConfigurationOfMetacello') project version: versionString.
-    repositories := (#('http://www.squeaksource.com/MetacelloRepository' #';' #'repository:' 'http://dsal.cl/squeaksource/MetacelloRepository')
+    repositories := (#('http://www.squeaksource.com/MetacelloRepository' 'http://dsal.cl/squeaksource/MetacelloRepository')
         collect: [ :url | MCHttpRepository location: url user: '' password: '' ]) asSet.
     repositories add: metacelloConfigurationRepository.
-    version
-        ignoreImage: true;
-        repositoryOverrides: repositories.
+    version repositoryOverrides: repositories.
     loadBlock
         value: version
         value:
