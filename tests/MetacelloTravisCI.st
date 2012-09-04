@@ -139,12 +139,4 @@ signIn
 successFilename
     ^ 'TravisCISuccess.txt'! !
 
-!MCHttpRepository methodsFor: 'required' stamp: 'ar 12/30/2009 17:02'!
-allFileNames
-	| index |
-	self displayProgress: 'Updating ', self description during:[
-		index := HTTPSocket httpGet: self locationWithTrailingSlash, '?C=M;O=D' args: nil user: self user passwd: self password.
-	].
-	index isString ifTrue: [Transcript cr; show: '-----'; cr; show: index; cr; show: '-----'. self error: 'Could not access ', location].
-	^ self parseFileNamesFromStream: index	! !
 
