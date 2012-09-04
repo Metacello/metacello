@@ -1,11 +1,11 @@
-'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 4 September 2012 at 10:10:16 pm'!
+'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 4 September 2012 at 3:47 pm'!
 Object subclass: #MetacelloTravisCI
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'XXX'!
 
-!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/4/2012 22:10'!
+!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/4/2012 22:42'!
 test
     [ 
     | repository version |
@@ -16,7 +16,6 @@ test
     version := self
         loadMetacello: [ :aVersion :loads | aVersion load: loads ]
         metacelloConfigurationRepository: repository.
-    (Smalltalk at: #'MetacelloIssue136TestCase') debug: #'testCachedIssue136'.
     self runTestFor: version ]
         ensure: [ 
             | stream |
@@ -50,17 +49,16 @@ loadFileTree
     version := (Smalltalk at: #'ConfigurationOfGofer') project version: #'stable'.
     version load: 'Tests'! !
 
-!MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/4/2012 20:14'!
+!MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/4/2012 15:46'!
 loadMetacello: loadBlock metacelloConfigurationRepository: metacelloConfigurationRepository
-    | versionString version repositories |
-    versionString := #'stable'.
+    | version repositories |
     Gofer new
         disablePackageCache;
         repository: metacelloConfigurationRepository;
         package: 'ConfigurationOfMetacello';
         load.
-    version := (Smalltalk at: #'ConfigurationOfMetacello') project version: versionString.
-    repositories := (#('http://www.squeaksource.com/MetacelloRepository' 'http://dsal.cl/squeaksource/MetacelloRepository')
+    version := (Smalltalk at: #'ConfigurationOfMetacello') project version: #'stable'.
+    repositories := (#('http://www.squeaksource.com/MetacelloRepository')
         collect: [ :url | MCHttpRepository location: url user: '' password: '' ]) asSet.
     repositories add: metacelloConfigurationRepository.
     version repositoryOverrides: repositories.
@@ -138,5 +136,4 @@ signIn
 !MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/1/2012 11:10'!
 successFilename
     ^ 'TravisCISuccess.txt'! !
-
 
