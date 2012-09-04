@@ -21,7 +21,7 @@ script:
    - cd "${BUILD_PATH}/travisCI/"
    - ls -altr *
    - if ( test -e SqueakDebug.log ); then cat TravisTranscript.txt; fi
-   - if ( test -e SqueakDebug.log ); then cat SqueakDebug.log; fi
+   - if ( test -e SqueakDebug.log ); then cat SqueakDebug.log | tr '\r' '\n' | sed 's/^/  /'; fi
    - if ( test -e SqueakDebug.log ); then exit 1; fi
    - $BUILDER_CI_HOME/buildImageErrorCheck.sh
    - cat TravisTranscript.txt
