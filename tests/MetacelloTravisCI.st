@@ -1,11 +1,11 @@
-'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 2 September 2012 at 12:11:14 pm'!
+'From Pharo1.4 of 18 April 2012 [Latest update: #14457] on 4 September 2012 at 1:47:23 pm'!
 Object subclass: #MetacelloTravisCI
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'XXX'!
 
-!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/2/2012 12:09'!
+!MetacelloTravisCI methodsFor: 'public' stamp: 'dkh 9/4/2012 13:47'!
 test
     [ 
     | repository version |
@@ -20,7 +20,7 @@ test
         ensure: [ 
             | stream |
             stream := Transcript.
-            (Smalltalk associationAt: #'Transcript') value: (Smalltalk at: #'OLDTranscript').
+            (Smalltalk globals associationAt: #'Transcript') value: (Smalltalk at: #'OLDTranscript').
             stream close ]! !
 
 
