@@ -145,6 +145,6 @@ allFileNames
 	self displayProgress: 'Updating ', self description during:[
 		index := HTTPSocket httpGet: self locationWithTrailingSlash, '?C=M;O=D' args: nil user: self user passwd: self password.
 	].
-	index isString ifTrue: [self error: 'Could not access ', location].
+	index isString ifTrue: [Transcript cr; show: '-----'; cr; show: index; cr; show: '-----'. self error: 'Could not access ', location].
 	^ self parseFileNamesFromStream: index	! !
 
