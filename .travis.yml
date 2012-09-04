@@ -23,4 +23,3 @@ script:
    - $BUILDER_CI_HOME/buildImageErrorCheck.sh
    - cat TravisTranscript.txt
    - $BUILDER_CI_HOME/buildTravisStatusCheck.sh
-
