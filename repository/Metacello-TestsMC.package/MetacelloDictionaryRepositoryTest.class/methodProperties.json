@@ -4,6 +4,7 @@
 	"instance" : {
 		"alternateRepository" : "dkh 1/12/2010 14:46",
 		"configurationRepository" : "dkh 1/12/2010 14:46",
+		"defaultTimeout" : "dkh 9/4/2012 21:24",
 		"doSilently" : "DaleHenrichs 12/21/2010 10:20",
 		"hasPackage:" : "dkh 12/30/2009 10:33",
 		"loadType" : "dkh 1/6/2010 20:43",
