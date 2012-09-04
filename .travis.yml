@@ -5,7 +5,6 @@ env:
    - ST=Pharo-1.4
 #   - ST=Pharo-2.0 #Pharo-2.0 not ready for testing yet
    - ST=Squeak-4.3
-   - ST=Squeak-4.4
 
 install:
    - export PROJECT_HOME="$(pwd)"
