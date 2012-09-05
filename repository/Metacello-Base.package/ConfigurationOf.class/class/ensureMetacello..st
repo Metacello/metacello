@@ -9,6 +9,7 @@ ensureMetacello: loadList
             (Array with: 'http://seaside.gemstone.com/ss/metacello' with: 'http://www.squeaksource.com/metacello')
                 do: [ :repositoryUrl | 
                     "bootstrap Metacello"
+                    [ 
                     self bootstrapMetacelloFrom: repositoryUrl.
                     Smalltalk
                         at: #'ConfigurationOfMetacello'
@@ -34,5 +35,16 @@ ensureMetacello: loadList
                                         perform: #'load' ] ].
                     version := (Smalltalk at: #'ConfigurationOfMetacelloPreview') project version: '1.0.0-beta.32.2'.	"load latest from GitHub"
                     version load: loadList.
-                    ^ self ].	"shouldn't get here unless the load failed ... throw an error"
+                    ^ self ]
+                        on: Error
+                        do: [ :ex | 
+                            error := ex.
+                            Transcript
+                                cr;
+                                show: 'failed ensureMetacello using ';
+                                show: repositoryUrl printString;
+                                show: ' : ';
+                                show: ex description printString;
+                                show: '...retrying'.	"try again"
+                            ex return: nil ] ].	"shouldn't get here unless the load failed ... throw an error"
             self error: 'retry with alternate repository failed: ' , error description printString ]
