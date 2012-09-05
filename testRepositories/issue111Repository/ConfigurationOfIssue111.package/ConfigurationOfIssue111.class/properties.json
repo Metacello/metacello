@@ -1,0 +1,14 @@
+{
+	"category" : "ConfigurationOfIssue111",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"LastVersionLoad" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"project" ],
+	"name" : "ConfigurationOfIssue111",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
