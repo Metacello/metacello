@@ -9,7 +9,7 @@
 	"instance" : {
 		"calculate:project:" : "dkh 7/8/2011 18:57",
 		"collectAllSymbolicVersionsFromVersionPragmasInto:using:" : "DaleHenrichs 11/12/2010 09:50",
-		"collectAllVersionsFromVersionImportPragmasInto:using:satisfiedPragmas:" : "DaleHenrichs 11/12/2010 09:50",
+		"collectAllVersionsFromVersionImportPragmasInto:using:satisfiedPragmas:" : "dkh 9/5/2012 06:03",
 		"collectAllVersionsFromVersionPragmasInto:using:" : "DaleHenrichs 11/12/2010 09:50",
 		"collectDefaultSymbolicVersionsFromVersionPragmasFrom:into:using:" : "DaleHenrichs 11/12/2010 09:50",
 		"commonDefaultSymbolicVersionResolverBlock" : "DaleHenrichs 11/12/2010 09:50",
