@@ -4,7 +4,6 @@ version310filesystem: spec
     spec
         for: #'common'
         do: [ 
-            spec project: 'SPort2' with: '2.31'.
             spec
                 package: 'Seaside-FileSystem' with: 'Seaside-FileSystem-pmm.26';
                 package: 'Seaside-Tests-FileSystem' with: 'Seaside-Tests-FileSystem-lr.13' ]
