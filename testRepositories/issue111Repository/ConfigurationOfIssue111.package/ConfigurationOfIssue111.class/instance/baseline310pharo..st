@@ -23,7 +23,7 @@ baseline310pharo: spec
                 package: 'Seaside-Tests-Pharo-Development'
                     with: [ spec requires: #('Seaside-Tests-Development' 'Seaside-Pharo-Development') ];
                 package: 'Seaside-Tests-Pharo-Email'
-                    with: [ spec requires: #('Seaside-Email' 'Seaside-Pharo-Email' 'Grease Core Tests') ];
+                    with: [ spec requires: #('Seaside-Email' 'Seaside-Pharo-Email' ) ];
                 package: 'Seaside-Tests-Pharo-Functional'
                     with: [ 
                             spec
