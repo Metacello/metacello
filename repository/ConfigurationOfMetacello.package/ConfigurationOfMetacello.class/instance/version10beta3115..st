@@ -13,15 +13,17 @@ version10beta3115: spec
 - get all of the unit tests passing
   https://github.com/dalehenrich/metacello-work/issues/114
 - fix Issue 120 - nested `version:imports:` cause trouble (1.0-beta.31.1.5)
-  https://github.com/dalehenrich/metacello-work/issues/120'.
+  https://github.com/dalehenrich/metacello-work/issues/120
+- implement Issue 110 - allow attribute lists in #for:do: statement
+  https://github.com/dalehenrich/metacello-work/issues/110'.
             spec author: 'dkh'.
-            spec timestamp: '9/5/2012 09:46'.
+            spec timestamp: 'dkh 9/6/2012 07:56'.
             spec
                 project: 'Gofer Core' with: '1.0.5.1';
                 project: 'Gofer Tests' with: '1.0.5.1'.
             spec
                 package: 'Metacello-Base' with: 'Metacello-Base-DaleHenrichs.19';
-                package: 'Metacello-Core' with: 'Metacello-Core-dkh.478';
+                package: 'Metacello-Core' with: 'Metacello-Core-dkh.479';
                 package: 'Metacello-MC' with: 'Metacello-MC-dkh.535';
                 package: 'Metacello-Reference' with: 'Metacello-Reference-DaleHenrichs.31';
                 package: 'Metacello-Tutorial' with: 'Metacello-Tutorial-dkh.25';
