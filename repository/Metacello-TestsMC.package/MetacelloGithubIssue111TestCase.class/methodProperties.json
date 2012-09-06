@@ -3,10 +3,10 @@
 		 },
 	"instance" : {
 		"getTestRepository" : "dkh 9/5/2012 16:23",
-		"getTestRepositoryDirectory" : "dkh 9/5/2012 16:23",
+		"getTestRepositoryDirectory" : "dkh 9/6/2012 03:38",
 		"hasPackage:" : "dkh 9/5/2012 16:00",
 		"runCase" : "dkh 9/5/2012 16:00",
 		"setUp" : "dkh 9/5/2012 16:08",
 		"tearDown" : "dkh 9/5/2012 16:33",
 		"tearDownPackageNames" : "dkh 9/5/2012 16:09",
-		"testIssue111" : "dkh 9/5/2012 16:57" } }
+		"testIssue111" : "dkh 9/6/2012 03:45" } }

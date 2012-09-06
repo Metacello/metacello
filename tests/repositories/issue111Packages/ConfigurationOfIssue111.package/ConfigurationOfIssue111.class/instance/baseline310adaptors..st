@@ -42,7 +42,7 @@ baseline310adaptors: spec
                     spec
                         repository: 'http://www.squeaksource.com/WebClient';
                         requires: #('WebClient-Core' 'Seaside-Core') ].
-            spec package: 'WebClient-Seaside' with: [ spec requires: 'WebClient' ].
+            spec package: 'WebClient-Seaside'.
             spec group: 'WebClient' with: #('WebClient-Seaside') ].
     spec
         for: #'gemstone'
