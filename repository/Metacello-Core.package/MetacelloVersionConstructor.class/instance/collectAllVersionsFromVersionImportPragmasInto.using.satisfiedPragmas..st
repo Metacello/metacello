@@ -1,9 +1,14 @@
 private
 collectAllVersionsFromVersionImportPragmasInto: versionMap using: executionBlock satisfiedPragmas: pragmaDict
-    | defined done completed |
+    | defined done completed count |
     done := false.
     completed := IdentitySet new.
-    [ done ]
+    count := 0.
+    [ 
+    count := count + 1.
+    count > 10000
+        ifTrue: [ self error: 'Apparent loop in import expansion' ].
+    done ]
         whileFalse: [ 
             done := true.
             pragmaDict
@@ -16,19 +21,24 @@ collectAllVersionsFromVersionImportPragmasInto: versionMap using: executionBlock
                         do: [ :pragma | 
                             (completed includes: pragma)
                                 ifFalse: [ 
+                                    | imports |
                                     done := false.
-                                    (pragma argumentAt: 2)
-                                        do: [ :importedVersion | 
-                                            | version |
-                                            (version := versionMap at: importedVersion ifAbsent: [  ]) ~~ nil
-                                                ifTrue: [ 
-                                                    defined := true.
-                                                    completed add: pragma.
-                                                    versionSpec == nil
-                                                        ifTrue: [ versionSpec := version spec copy ]
-                                                        ifFalse: [ versionSpec := versionSpec mergeSpec: version spec copy ].
-                                                    versionSpec versionString: versionString.
-                                                    executionBlock value: versionSpec value: pragma ] ] ] ] ]
+                                    imports := pragma argumentAt: 2.
+                                    imports
+                                        detect: [ :importedVersion | (versionMap includesKey: importedVersion) not ]
+                                        ifNone: [ 
+                                            imports
+                                                do: [ :importedVersion | 
+                                                    | version |
+                                                    (version := versionMap at: importedVersion ifAbsent: [  ]) ~~ nil
+                                                        ifTrue: [ 
+                                                            defined := true.
+                                                            completed add: pragma.
+                                                            versionSpec == nil
+                                                                ifTrue: [ versionSpec := version spec copy ]
+                                                                ifFalse: [ versionSpec := versionSpec mergeSpec: version spec copy ].
+                                                            versionSpec versionString: versionString.
+                                                            executionBlock value: versionSpec value: pragma ] ] ] ] ] ]
                         on: Error
                         do: [ :ex | 
                             (MetacelloErrorInProjectConstructionNotification versionString: versionSpec versionString exception: ex)
