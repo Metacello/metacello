@@ -5,11 +5,11 @@
 		"evaluateMethodSection:version:" : "DaleHenrichs 12/22/2010 09:56",
 		"extractMethodSectionsFor:" : "DaleHenrichs 12/22/2010 11:07",
 		"extractSymbolicVersionSpecsFor:" : "DaleHenrichs 11/15/2010 10:06",
-		"for:do:" : "DaleHenrichs 12/22/2010 11:46",
-		"for:version:" : "DaleHenrichs 11/15/2010 10:08",
 		"methodSection:do:" : "DaleHenrichs 12/23/2010 15:21",
 		"methodSection:inEvaluationOrder:do:" : "DaleHenrichs 12/22/2010 11:40",
 		"methodSections" : "DaleHenrichs 11/14/2010 02:08",
 		"methodSectionsDo:" : "DaleHenrichs 12/23/2010 15:10",
 		"methodSectionsInEvaluationOrder:do:" : "DaleHenrichs 12/22/2010 12:26",
-		"reset" : "DaleHenrichs 11/18/2010 16:40" } }
+		"reset" : "DaleHenrichs 11/18/2010 16:40",
+		"setFor:do:" : "dkh 9/6/2012 07:37",
+		"setFor:version:" : "dkh 9/6/2012 07:38" } }

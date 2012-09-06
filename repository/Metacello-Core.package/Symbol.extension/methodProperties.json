@@ -2,5 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"setForDo:withInMetacelloConfig:" : "dkh 9/6/2012 07:42",
+		"setForVersion:withInMetacelloConfig:" : "dkh 9/6/2012 07:43",
 		"setPostLoadDoItInMetacelloSpec:" : "DaleHenrichs 12/21/2010 13:54",
 		"setPreLoadDoItInMetacelloSpec:" : "DaleHenrichs 12/21/2010 13:55" } }
