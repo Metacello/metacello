@@ -54,4 +54,4 @@ addSection: sectionAttributeOrPath repository: repositoryDescription requiredPro
             spec includes: assoc value.
             versionSpec packages merge: spec ].
     aBlock value: versionSpec.
-    self methodSpec addMethodSection: sectionAttributeOrPath versionSpec: versionSpec
+    self methodSpec addMethodSection: sectionAttributeOrPath asMetacelloAttributePath versionSpec: versionSpec

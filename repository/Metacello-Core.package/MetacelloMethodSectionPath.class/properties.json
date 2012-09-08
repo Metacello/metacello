@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"attributes" ],
-	"name" : "MetacelloMethodSection",
+		 ],
+	"name" : "MetacelloMethodSectionPath",
 	"pools" : [
 		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"super" : "Array",
+	"type" : "variable" }

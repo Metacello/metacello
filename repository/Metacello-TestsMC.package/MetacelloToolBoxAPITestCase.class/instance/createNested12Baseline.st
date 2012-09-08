@@ -13,7 +13,7 @@ createNested12Baseline
 			versionSpecsDo: [ :attribute :versionSpec | true ];
 		commitMethod;
 		modifyVersionMethodForVersion: '1.2-baseline';
-		addSection: #( common nested)
+		addSection: #( #(common) #( nested)) asMetacelloAttributePath
 			repository: nil
 			requiredProjects: #()
 			packages: #('GoferFoo' 'GoferBar')
@@ -34,7 +34,7 @@ createNested12Baseline
 			dependencies: {('DaffyBar' -> #('DaffyFoo'))}
 			groups: {('UI' -> #('DaffyBar'))}
 			versionSpecsDo: [ :versionSpec |  ];
-		addSection: #(outer nested)
+		addSection: #(#(outer) #(nested))
 			repository: nil
 			requiredProjects: #()
 			packages: #('GoofyFoo' 'GoofyBar')
