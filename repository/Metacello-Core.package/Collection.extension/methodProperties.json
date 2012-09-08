@@ -3,6 +3,7 @@
 		 },
 	"instance" : {
 		"addToMetacelloPackages:" : "dkh 6/6/2009 11:45",
+		"execute:against:" : "dkh 9/5/2012 06:26:03.064",
 		"mergeIntoMetacelloPackages:" : "dkh 6/6/2009 11:46",
 		"removeFromMetacelloPackages:" : "dkh 6/6/2009 11:42",
 		"setForDo:withInMetacelloConfig:" : "dkh 9/6/2012 07:42",

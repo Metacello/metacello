@@ -10,7 +10,7 @@ testImportFrom2
 		versionSpecsDo: [ :attributeOrPath :versionSpec | 
 			attributeOrPath == #common
 				ifTrue: [ versionSpec blessing: #development ].
-			attributeOrPath = #(common nested)
+			attributeOrPath = #(#(common) #(nested)) asMetacelloAttributePath
 				ifTrue: [ versionSpec description: 'nested for:do: section' ].
 			true ];
 		commitMethod.

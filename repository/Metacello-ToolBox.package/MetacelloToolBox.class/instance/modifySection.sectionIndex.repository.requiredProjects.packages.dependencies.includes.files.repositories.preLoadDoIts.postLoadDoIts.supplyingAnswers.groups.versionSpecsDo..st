@@ -1,9 +1,9 @@
 api-configuration
-modifySection: sectionAttributeOrPath repository: repositoryDescription requiredProjects: newProjectList packages: newPackageList dependencies: dependecies includes: includes files: files repositories: repositories preLoadDoIts: preLoadDoIts postLoadDoIts: postLoadDoIts supplyingAnswers: supplyingAnswers groups: newGroups versionSpecsDo: aBlock
-	"
+modifySection: sectionAttributeOrPath sectionIndex: sectionIndex repository: repositoryDescription requiredProjects: newProjectList packages: newPackageList dependencies: dependecies includes: includes files: files repositories: repositories preLoadDoIts: preLoadDoIts postLoadDoIts: postLoadDoIts supplyingAnswers: supplyingAnswers groups: newGroups versionSpecsDo: aBlock
+    "
 		repositoryDescription - metacello repository string
-		projectList - collection of project base names (without ConfigurationOf prefix)
-		packageList - collection of package base names
+		newProjectList - collection of project base names (without ConfigurationOf prefix)
+		newPackageList - collection of package base names
 		dependencies - collection of associations where key is name of package and value is collection of required packages and projects
 		includes - collection of associations where key is name of package and value is collection of included packages and projects
 		files - collection of associations where key is name of package and value is name of file
@@ -11,11 +11,13 @@ modifySection: sectionAttributeOrPath repository: repositoryDescription required
 		preLoadDoIts - collection of associations where key is name of package and value is preload doit selector
 		postLoadDoIts - collection of associations where key is name of package and value is postload doit selector
 		supplyingAnswers - collection of associations where key is name of package and value is the supplyingAnswers array
-		groups - collection of associations where key is the name of the group and value is the collection of group members
+		newGroups - collection of associations where key is the name of the group and value is the collection of group members
 	"
 
     | versionSpec dependencyMap includesMap filesMap repositoriesMap preLoadDoItsMap postLoadDoItsMap supplyingAnswersMap groups packageList newGroupNames |
-    versionSpec := (self methodSpec findMethodSection: sectionAttributeOrPath) versionSpec.
+    versionSpec := (self methodSpec
+        findMethodSection: sectionAttributeOrPath asMetacelloAttributePath
+        sectionIndex: sectionIndex) versionSpec.
     repositoryDescription ~~ nil
         ifTrue: [ versionSpec repository: repositoryDescription ].
     newProjectList

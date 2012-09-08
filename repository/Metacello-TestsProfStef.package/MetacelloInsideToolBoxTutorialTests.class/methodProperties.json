@@ -1,13 +1,13 @@
 {
 	"class" : {
-		"EXAMPLE" : "DaleHenrichs 12/17/2010 15:29",
-		"example1" : "DaleHenrichs 12/17/2010 15:29",
-		"example2" : "DaleHenrichs 12/17/2010 15:29",
-		"example3" : "DaleHenrichs 12/17/2010 15:29",
-		"example4" : "DaleHenrichs 12/17/2010 15:29",
-		"example5" : "DaleHenrichs 12/17/2010 15:29",
-		"example6" : "DaleHenrichs 12/17/2010 15:29",
-		"example7" : "DaleHenrichs 12/17/2010 15:29" },
+		"EXAMPLE" : "dkh 3/7/2012 17:08:21",
+		"example1" : "dkh 3/7/2012 17:08:21",
+		"example2" : "dkh 3/7/2012 17:08:21",
+		"example3" : "dkh 3/7/2012 17:08:21",
+		"example4" : "dkh 3/7/2012 17:08:21",
+		"example5" : "dkh 3/7/2012 17:08:21",
+		"example6" : "dkh 3/7/2012 17:08:21",
+		"example7" : "dkh 3/7/2012 17:08:21" },
 	"instance" : {
 		"setUp" : "DaleHenrichs 12/17/2010 15:29",
 		"tearDown" : "DaleHenrichs 12/17/2010 15:29",
