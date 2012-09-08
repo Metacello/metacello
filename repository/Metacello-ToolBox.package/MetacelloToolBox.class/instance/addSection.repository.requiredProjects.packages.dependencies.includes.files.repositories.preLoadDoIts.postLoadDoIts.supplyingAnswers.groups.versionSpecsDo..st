@@ -1,6 +1,6 @@
 api-configuration
-addSection: sectionAttributeOrPath repository: repositoryDescription requiredProjects: projectList packages: packageList dependencies: dependecies includes: includes files: files repositories: repositories preLoadDoIts: preLoadDoIts postLoadDoIts: postLoadDoIts supplyingAnswers: supplyingAnswers groups: groups versionSpecsDo: aBlock 
-	"
+addSection: sectionAttributeOrPath repository: repositoryDescription requiredProjects: projectList packages: packageList dependencies: dependecies includes: includes files: files repositories: repositories preLoadDoIts: preLoadDoIts postLoadDoIts: postLoadDoIts supplyingAnswers: supplyingAnswers groups: groups versionSpecsDo: aBlock
+    "
 		repositoryDescription - metacello repository string
 		projectList - collection of project base names (without ConfigurationOf prefix)
 		packageList - collection of package base names
@@ -25,7 +25,14 @@ addSection: sectionAttributeOrPath repository: repositoryDescription requiredPro
     preLoadDoItsMap := self buildMapFrom: preLoadDoIts for: packageList.
     postLoadDoItsMap := self buildMapFrom: postLoadDoIts for: packageList.
     supplyingAnswersMap := self buildMapFrom: supplyingAnswers for: packageList.
-
+    projectList
+        do: [ :projectName | 
+            | spec |
+            spec := self createProjectReferenceSpec: projectName.
+            repositoriesMap
+                at: projectName
+                ifPresent: [ :repositoriesList | repositoriesList do: [ :repoString | spec repository: repoString ] ].
+            versionSpec packages merge: spec ].
     packageList
         do: [ :packageName | 
             | spec |

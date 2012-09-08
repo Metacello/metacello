@@ -32,7 +32,7 @@ version10beta3115: spec
                 package: 'Metacello-TestsCore' with: 'Metacello-TestsCore-DaleHenrichs.14';
                 package: 'Metacello-TestsMC' with: 'Metacello-TestsMC-dkh.334';
                 package: 'Metacello-TestsTutorial' with: 'Metacello-TestsTutorial-dkh.33';
-                package: 'Metacello-ToolBox' with: 'Metacello-ToolBox-dkh.118' ].
+                package: 'Metacello-ToolBox' with: 'Metacello-ToolBox-dkh.119' ].
     spec
         for: #'gemstone'
         do: [ 
