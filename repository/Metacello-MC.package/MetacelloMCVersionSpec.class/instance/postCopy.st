@@ -1,7 +1,4 @@
 copying
 postCopy
-
-	super postCopy.
-	packages := packages copy.
-	repositories := repositories copy.
-	
+    super postCopy.
+    repositories := repositories copy

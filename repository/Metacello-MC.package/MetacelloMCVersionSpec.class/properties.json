@@ -6,7 +6,6 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"packages",
 		"repositories",
 		"import" ],
 	"name" : "MetacelloMCVersionSpec",

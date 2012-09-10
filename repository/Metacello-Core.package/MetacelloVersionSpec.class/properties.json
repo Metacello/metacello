@@ -12,7 +12,8 @@
 		"author",
 		"timestamp",
 		"preLoadDoIt",
-		"postLoadDoIt" ],
+		"postLoadDoIt",
+		"packageList" ],
 	"name" : "MetacelloVersionSpec",
 	"pools" : [
 		 ],
