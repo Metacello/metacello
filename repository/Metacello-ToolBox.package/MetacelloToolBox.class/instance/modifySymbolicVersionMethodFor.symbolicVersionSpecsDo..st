@@ -15,4 +15,4 @@ modifySymbolicVersionMethodFor: versionSymbol symbolicVersionSpecsDo: aBlock
     (constructor extractSymbolicVersionSpecsFor: versionSymbol)
         do: [ :symbolicVersionSpec | 
             (aBlock value: symbolicVersionSpec)
-                ifTrue: [ self methodSpec addMethodSection: symbolicVersionSpec attributePath versionString: symbolicVersionSpec versionString ] ]
+                ifTrue: [ self methodSpec addMethodSection: symbolicVersionSpec attributes versionString: symbolicVersionSpec versionString ] ]
