@@ -17,7 +17,7 @@ version10beta3115: spec
 - implement Issue 110 - allow attribute lists in #for:do: statement
   https://github.com/dalehenrich/metacello-work/issues/110'.
             spec author: 'dkh'.
-            spec timestamp: '9/10/2012 11:39'.
+            spec timestamp: '9/11/2012 16:14'.
             spec
                 project: 'Gofer Core' with: '1.0.5.1';
                 project: 'Gofer Tests' with: '1.0.5.1'.
@@ -30,7 +30,7 @@ version10beta3115: spec
                 package: 'OB-Metacello' with: 'OB-Metacello-dkh.82';
                 package: 'Metacello-TestsReference' with: 'Metacello-TestsReference-DaleHenrichs.17';
                 package: 'Metacello-TestsCore' with: 'Metacello-TestsCore-DaleHenrichs.14';
-                package: 'Metacello-TestsMC' with: 'Metacello-TestsMC-dkh.334';
+                package: 'Metacello-TestsMC' with: 'Metacello-TestsMC-dkh.336';
                 package: 'Metacello-TestsTutorial' with: 'Metacello-TestsTutorial-dkh.33';
                 package: 'Metacello-ToolBox' with: 'Metacello-ToolBox-dkh.121' ].
     spec
