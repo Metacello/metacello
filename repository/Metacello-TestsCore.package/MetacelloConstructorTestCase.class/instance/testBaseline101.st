@@ -1,11 +1,11 @@
 tests
-testBaseline100
+testBaseline101
     | project version expected actual |
-    project := self project.
-    version := project version: '1.0-baseline'.
+    project := self projectWith: #(#'outer').
+    version := project version: '1.0.1-baseline'.
     expected := 'spec blessing: #''baseline''.
-spec preLoadDoIt: #''preloadForCore''.
-spec postLoadDoIt: #''postloadForCore:package:''.
+spec preLoadDoIt: nil.
+spec postLoadDoIt: nil.
 spec project: ''Example Project'' with: [
 		spec
 			className: ''ConfigurationOfExampleProject'';

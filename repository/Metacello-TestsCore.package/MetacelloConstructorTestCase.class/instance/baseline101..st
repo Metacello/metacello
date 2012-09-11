@@ -1,6 +1,6 @@
 baselines
-baseline100: spec
-    <version: '1.0-baseline'>
+baseline101: spec
+    <version: '1.0.1-baseline'>
     spec
         for: #'common'
         do: [ 
@@ -19,4 +19,10 @@ baseline100: spec
                                 loads: #('core');
                                 yourself ];
                 yourself.
-            spec group: 'Core' with: #('Example Project') ]
+            spec group: 'Core' with: #('Example Project') ].
+    spec
+        for: #'outer'
+        do: [ 
+            spec
+                preLoadDoIt: nil;
+                postLoadDoIt: nil ]
