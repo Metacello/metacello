@@ -3,7 +3,7 @@ mergeSpec: anotherSpec
     | newSpec map anotherPackages |
     newSpec := super mergeSpec: anotherSpec.
     map := anotherSpec mergeMap.
-    (anotherPackages := map at: #'packages') isEmpty not
+    (anotherPackages := map at: #'packageList') isEmpty not
         ifTrue: [ 
             newSpec
                 packages:
