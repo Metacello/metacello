@@ -1,0 +1,16 @@
+{
+	"class" : {
+		"isAbstract" : "dkh 9/11/2012 09:43" },
+	"instance" : {
+		"testIssue100" : "dkh 9/11/2012 09:43",
+		"testNestedBaseline" : "dkh 9/11/2012 10:01",
+		"testNestedBaselineOrder" : "dkh 9/11/2012 10:22",
+		"testNestedVersionOrder" : "dkh 9/11/2012 10:23",
+		"testPackageIncludes" : "dkh 9/11/2012 09:56",
+		"testPackageIncludesRequiresSupplyingAnswers" : "dkh 9/11/2012 09:56",
+		"testPackageRepositories" : "dkh 9/11/2012 09:56",
+		"testPackageRepository" : "dkh 9/11/2012 09:56",
+		"testPackageRequires" : "dkh 9/11/2012 09:56",
+		"testProjectPackageRecord" : "dkh 9/11/2012 10:32",
+		"testProjectPackageRepositories" : "dkh 9/11/2012 10:24",
+		"testProjectPackageRepository" : "dkh 9/11/2012 10:24" } }

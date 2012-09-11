@@ -3,6 +3,7 @@
 		 },
 	"instance" : {
 		"configurationRepository" : "dkh 6/12/2012 15:41:23.319",
+		"hasPackage:" : "dkh 9/11/2012 09:40",
 		"monticelloRepository" : "dkh 6/12/2012 15:41:23.319",
 		"projectWith:" : "dkh 6/12/2012 15:41:23.319",
 		"runCase" : "dkh 6/12/2012 15:41:23.319",
@@ -23,4 +24,4 @@
 		"testProjectCopyPreloadPostload" : "dkh 6/12/2012 15:41:23.319",
 		"testProjectPreloadOverride" : "dkh 6/12/2012 15:41:23.319",
 		"testProjectPreloadPostload" : "dkh 6/12/2012 15:41:23.319",
-		"testSymbolicVersionNotDefinedError" : "dkh 6/12/2012 15:41:23.319" } }
+		"testSymbolicVersionNotDefinedError" : "dkh 9/11/2012 11:13" } }

@@ -1,4 +1,3 @@
 merging
 nonOverridable
-
-	^super nonOverridable, #( packages repositories)
+    ^ super nonOverridable , #(#'repositories')
