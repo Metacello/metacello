@@ -78,7 +78,7 @@
 		"createVersionSpec:" : "dkh 3/7/2012 17:08:50",
 		"ensureMetacello" : "dkh 3/7/2012 17:08:50",
 		"hasMethodForSymbolicVersion:" : "dkh 3/7/2012 17:08:50",
-		"importFrom:updateProjects:updatePackages:versionSpecsDo:" : "dkh 9/7/2012 13:58",
+		"importFrom:updateProjects:updatePackages:versionSpecsDo:" : "dkh 9/12/2012 14:26",
 		"imports:" : "dkh 3/7/2012 17:08:50",
 		"methodSpec" : "dkh 3/7/2012 17:08:50",
 		"modifiedPackageSpecs:packageSpecsDo:" : "dkh 3/7/2012 17:08:50",
@@ -93,6 +93,6 @@
 		"symbolicVersionMethod:" : "dkh 3/7/2012 17:08:50",
 		"updateVersionMethodForVersion:updateProjects:updatePackages:versionSpecsDo:" : "dkh 9/8/2012 05:18",
 		"updateVersionMethodForVersion:versionSpecsDo:" : "dkh 3/7/2012 17:08:50",
-		"updateVersionSpec:fullVersionSpec:updateProjects:updatePackages:visited:updated:" : "dkh 3/7/2012 17:08:50",
+		"updateVersionSpec:fullVersionSpec:updateProjects:updatePackages:visited:updated:" : "dkh 9/12/2012 11:37",
 		"validateConfiguration" : "dkh 3/7/2012 17:08:50",
 		"validateVersion:" : "dkh 3/7/2012 17:08:50" } }
