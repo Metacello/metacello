@@ -10,7 +10,7 @@ baseline10Issue125AddSourceString
 				spec
 					className: ''MetacelloTestConfigurationOfFoo'';
 					versionString: #''bleedingEdge'';
-					repository: ''dictionary://Metacello_Dev_Cycle_Repository'' ].
+					repository: ''cache'' ].
 		spec 
 			package: ''GeauxFaux'' with: [
 				spec requires: #(''MetacelloTestConfigurationOfFoo'' ). ];

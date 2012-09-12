@@ -6,7 +6,6 @@ create10BaselineIssue125
             repository: 'dictionary://' , self repositoryName asString
             requiredProjects: #('MetacelloTestConfigurationOfFoo')
             packages: #('GeauxFaux' 'GeauxBeau')
-            repositories: {('MetacelloTestConfigurationOfFoo' -> {('dictionary://' , self repositoryName asString)})}
             dependencies:
                 {('GeauxFaux' -> #('MetacelloTestConfigurationOfFoo')).
                 ('GeauxBeau' -> #('GeauxFaux'))}
