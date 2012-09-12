@@ -4,8 +4,8 @@ lesson14
 		title: 'Lesson 14'
 		lesson: 
 '
-ToolSet browse: MetacelloProjectRefTutorialConfig selector: #baseline14:.
-ToolSet browse: MetacelloProjectRefTutorialConfig selector: #version14:.
+Smalltalk tools browse: MetacelloProjectRefTutorialConfig selector: #baseline14:.
+Smalltalk tools browse: MetacelloProjectRefTutorialConfig selector: #version14:.
 
 "In this lesson we''ll cover the querying API for Metacello. The querying API is useful for analyzing the contents and structure of a version.
 

@@ -4,7 +4,7 @@ lesson04
 		title: 'Lesson 4'
 		lesson: 
 '
-ToolSet browse: MetacelloTutorialConfig selector: #version04:.
+Smalltalk tools browse: MetacelloTutorialConfig selector: #version04:.
 
 "The specification for version 0.4 is basically the same as version 0.3. Instead of listing a 
 repository with each package we specify a project repository that applies to all packages.
