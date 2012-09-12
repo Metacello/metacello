@@ -6,6 +6,10 @@ attributePrintString
         ifTrue: [ stream nextPutAll: '#' , attributes first asString printString ]
         ifFalse: [ 
             stream nextPutAll: '#('.
-            self attributes do: [ :attribute | stream nextPutAll: '#' , attribute asString printString ].
+            self attributes
+                do: [ :attribute | 
+                    stream
+                        nextPutAll: '#' , attribute asString printString;
+                        space ].
             stream nextPut: $) ].
     ^ stream contents
