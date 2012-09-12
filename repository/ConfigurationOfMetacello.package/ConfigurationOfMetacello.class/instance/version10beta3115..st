@@ -25,14 +25,14 @@ version10beta3115: spec
                 project: 'Gofer Tests' with: '1.0.5.1'.
             spec
                 package: 'Metacello-Base' with: 'Metacello-Base-DaleHenrichs.19';
-                package: 'Metacello-Core' with: 'Metacello-Core-dkh.483';
+                package: 'Metacello-Core' with: 'Metacello-Core-dkh.487';
                 package: 'Metacello-MC' with: 'Metacello-MC-dkh.535';
                 package: 'Metacello-Reference' with: 'Metacello-Reference-DaleHenrichs.31';
                 package: 'Metacello-Tutorial' with: 'Metacello-Tutorial-dkh.25';
                 package: 'OB-Metacello' with: 'OB-Metacello-dkh.82';
                 package: 'Metacello-TestsReference' with: 'Metacello-TestsReference-DaleHenrichs.17';
                 package: 'Metacello-TestsCore' with: 'Metacello-TestsCore-DaleHenrichs.14';
-                package: 'Metacello-TestsMC' with: 'Metacello-TestsMC-dkh.336';
+                package: 'Metacello-TestsMC' with: 'Metacello-TestsMC-dkh.338';
                 package: 'Metacello-TestsTutorial' with: 'Metacello-TestsTutorial-dkh.33';
                 package: 'Metacello-ToolBox' with: 'Metacello-ToolBox-dkh.121' ].
     spec

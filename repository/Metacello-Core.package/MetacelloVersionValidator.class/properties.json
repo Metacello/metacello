@@ -2,6 +2,7 @@
 	"category" : "Metacello-Core-Validation",
 	"classinstvars" : [
 		"reasonCodeDescriptions" ],
+	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
@@ -16,4 +17,5 @@
 	"pools" : [
 		 ],
 	"super" : "MetacelloAbstractConstructor",
+	"traitcomposition" : "{}",
 	"type" : "normal" }
