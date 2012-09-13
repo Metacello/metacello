@@ -6,7 +6,6 @@ create11Baseline
         repository: 'dictionary://' , self repositoryName asString
         requiredProjects: #('MetacelloTestConfigurationOfFoo')
         packages: #('GeauxFaux')
-        repositories: {('MetacelloTestConfigurationOfFoo' -> {('dictionary://' , self repositoryName asString)})}
         dependencies: {('GeauxFaux' -> #('MetacelloTestConfigurationOfFoo'))}
         groups:
             {('default' -> #('Core')).

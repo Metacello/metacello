@@ -25,14 +25,6 @@ addSection: sectionAttributeOrPath repository: repositoryDescription requiredPro
     preLoadDoItsMap := self buildMapFrom: preLoadDoIts for: packageList.
     postLoadDoItsMap := self buildMapFrom: postLoadDoIts for: packageList.
     supplyingAnswersMap := self buildMapFrom: supplyingAnswers for: packageList.
-    projectList
-        do: [ :projectName | 
-            | spec |
-            spec := self createProjectReferenceSpec: projectName.
-            repositoriesMap
-                at: projectName
-                ifPresent: [ :repositoriesList | repositoriesList do: [ :repoString | spec repository: repoString ] ].
-            versionSpec packages merge: spec ].
     packageList
         do: [ :packageName | 
             | spec |

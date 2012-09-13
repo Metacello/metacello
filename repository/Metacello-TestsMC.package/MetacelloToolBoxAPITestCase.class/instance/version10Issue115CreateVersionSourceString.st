@@ -10,5 +10,5 @@ version10Issue115CreateVersionSourceString
 			package: ''GoferBar'' with: ''GoferBar-lr.0''. ].
 
 	spec for: #''nested'' do: [
-		spec project: ''MetacelloTestConfigurationOfFoo'' with: ''4.0''. ].
+ ].
 '
