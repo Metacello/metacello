@@ -1,14 +1,12 @@
 private
-version12SourceString
-    ^ 'version12: spec
-	<version: ''1.2'' imports: #(''1.2-baseline'' )>
+version13SourceString4
+    ^ 'version13: spec
+	<version: ''1.3'' imports: #(''1.3-baseline'' )>
 
 	spec for: #''common'' do: [
 		spec blessing: #''development''.
 		spec project: ''MetacelloTestConfigurationOfFoo'' with: ''4.0''.
-		spec 
-			package: ''GeauxFaux'' with: ''GeauxFaux-tg.32'';
-			package: ''GeauxBeau'' with: ''GeauxBeau-dkh.55''.
+		spec package: ''GeauxFaux'' with: ''GeauxFaux-tg.32''.
 
 		spec for: #''nested'' do: [
 			spec description: ''nested for:do: section''.
@@ -21,5 +19,7 @@ version12SourceString
 			spec package: ''GoferBeau'' with: ''GoferBeau-dkh.55''. ]. ].
 
 	spec for: #''other'' do: [
-		spec package: ''GoferBar'' with: ''GoferBar-lr.0''. ].
+		spec 
+			package: ''GoferBar'' with: ''GoferBar-lr.0'';
+			package: ''GeauxBeau'' with: ''GeauxBeau-dkh.55''. ].
 '
