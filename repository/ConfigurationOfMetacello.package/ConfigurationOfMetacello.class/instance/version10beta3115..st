@@ -21,7 +21,7 @@ version10beta3115: spec
 - fix Issue 115 - Version generated from a baseline can have empty package versions in a platform-specific section
   https://github.com/dalehenrich/metacello-work/issues/115'.
             spec author: 'dkh'.
-            spec timestamp: '9/12/2012 14:59'.
+            spec timestamp: '9/13/2012 10:26'.
             spec
                 project: 'Gofer Core' with: '1.0.5.1';
                 project: 'Gofer Tests' with: '1.0.5.1'.
@@ -34,9 +34,9 @@ version10beta3115: spec
                 package: 'OB-Metacello' with: 'OB-Metacello-dkh.82';
                 package: 'Metacello-TestsReference' with: 'Metacello-TestsReference-DaleHenrichs.17';
                 package: 'Metacello-TestsCore' with: 'Metacello-TestsCore-DaleHenrichs.14';
-                package: 'Metacello-TestsMC' with: 'Metacello-TestsMC-dkh.341';
+                package: 'Metacello-TestsMC' with: 'Metacello-TestsMC-dkh.343';
                 package: 'Metacello-TestsTutorial' with: 'Metacello-TestsTutorial-dkh.33';
-                package: 'Metacello-ToolBox' with: 'Metacello-ToolBox-dkh.121' ].
+                package: 'Metacello-ToolBox' with: 'Metacello-ToolBox-dkh.123' ].
     spec
         for: #'gemstone'
         do: [ 

@@ -1,10 +1,13 @@
 tests
-testImportFrom2
+testImportFrom4
+    "change order of project attributes relative to import3...i.e., not reversed which is default"
+
     | toolbox source |
-    self createNested12Baseline.
+    self createNested13Baseline.
     (toolbox := MetacelloToolBox configurationNamed: self configurationName asString)
-        createVersionMethod: 'version12:' inCategory: 'versions' forVersion: '1.2';
-        importFrom: '1.2-baseline'
+        createVersionMethod: 'version13:' inCategory: 'versions' forVersion: '1.3';
+        importFrom: '1.3-baseline'
+            projectAttributes: #(#'common' #'other' #'nested' #'outer')
             updateProjects: true
             updatePackages: true
             versionSpecsDo: [ :attributeOrPath :versionSpec | 
@@ -16,4 +19,4 @@ testImportFrom2
         commitMethod.
     self
         assert:
-            (source := ((Smalltalk at: self configurationName) sourceCodeAt: #'version12:') asString) = self version12SourceString
+            (source := ((Smalltalk at: self configurationName) sourceCodeAt: #'version13:') asString) = self version13SourceString4
