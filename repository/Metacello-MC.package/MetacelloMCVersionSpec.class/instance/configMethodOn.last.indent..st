@@ -16,7 +16,7 @@ configMethodOn: aStream last: last indent: indent
                 groupDo: [ :group | 
                     member spec name ~~ nil
                         ifTrue: [ hasPackageSpecs := true ] ] ].
-    super configMethodOn: aStream last: (hasRepositories | hasPackageSpecs | hasImport) not indent: indent.
+    self configMethodBasicOn: aStream last: (hasRepositories | hasPackageSpecs | hasImport) not indent: indent.
     hasImport
         ifTrue: [ 
             self

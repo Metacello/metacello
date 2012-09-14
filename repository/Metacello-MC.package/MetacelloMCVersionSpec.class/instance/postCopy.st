@@ -1,7 +1,5 @@
 copying
 postCopy
-
-	super postCopy.
-	packages := packages copy.
-	repositories := repositories copy.
-	
+    super postCopy.
+    repositories := repositories copy.
+    packages := packages copy	"leave reference to packages for upgrade purposes"

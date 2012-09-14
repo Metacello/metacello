@@ -1,3 +1,3 @@
 accessing
 file
-    ^ nil
+    ^ self className

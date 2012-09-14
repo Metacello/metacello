@@ -4,7 +4,7 @@ lesson08
 		title: 'Lesson 8'
 		lesson: 
 '
-ToolSet browse: MetacelloTutorialConfig selector: #version08:.
+Smalltalk tools browse: MetacelloTutorialConfig selector: #version08:.
 
 "In version 0.8 we''ve simply updated the package versions, which can be seen by comparing the 
 results of loading version 0.7 and 0.8:"
