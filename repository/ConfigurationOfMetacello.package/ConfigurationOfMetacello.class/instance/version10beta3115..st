@@ -19,9 +19,11 @@ version10beta3115: spec
 - fix Issue 69 - MetacelloConfigurationTutorial undefined reference to ToolSet
   https://github.com/dalehenrich/metacello-work/issues/69
 - fix Issue 115 - Version generated from a baseline can have empty package versions in a platform-specific section
-  https://github.com/dalehenrich/metacello-work/issues/115'.
+  https://github.com/dalehenrich/metacello-work/issues/115
+- support for Issue 129 - deployment scripts
+  https://github.com/dalehenrich/metacello-work/issues/129'.
             spec author: 'dkh'.
-            spec timestamp: '9/14/2012 10:17'.
+            spec timestamp: '9/14/2012 16:49'.
             spec
                 project: 'Gofer Core' with: '1.0.5.1';
                 project: 'Gofer Tests' with: '1.0.5.1'.
@@ -34,9 +36,9 @@ version10beta3115: spec
                 package: 'OB-Metacello' with: 'OB-Metacello-dkh.82';
                 package: 'Metacello-TestsReference' with: 'Metacello-TestsReference-DaleHenrichs.17';
                 package: 'Metacello-TestsCore' with: 'Metacello-TestsCore-DaleHenrichs.14';
-                package: 'Metacello-TestsMC' with: 'Metacello-TestsMC-dkh.350';
+                package: 'Metacello-TestsMC' with: 'Metacello-TestsMC-dkh.351';
                 package: 'Metacello-TestsTutorial' with: 'Metacello-TestsTutorial-dkh.33';
-                package: 'Metacello-ToolBox' with: 'Metacello-ToolBox-dkh.129' ].
+                package: 'Metacello-ToolBox' with: 'Metacello-ToolBox-dkh.130' ].
     spec
         for: #'gemstone'
         do: [ 
