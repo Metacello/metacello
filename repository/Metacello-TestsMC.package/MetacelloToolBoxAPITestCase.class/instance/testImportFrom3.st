@@ -8,6 +8,7 @@ testImportFrom3
         createVersionMethod: 'version13:' inCategory: 'versions' forVersion: '1.3';
         importFrom: '1.3-baseline'
             projectAttributes: #(#'common' #'nested' #'outer' #'other')
+            inactiveAttributes: #()
             updateProjects: true
             updatePackages: true
             versionSpecsDo: [ :attributeOrPath :versionSpec | 

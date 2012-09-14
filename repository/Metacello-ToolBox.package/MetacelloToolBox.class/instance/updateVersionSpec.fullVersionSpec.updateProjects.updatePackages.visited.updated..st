@@ -16,8 +16,7 @@ updateVersionSpec: versionSpec fullVersionSpec: fullVersionSpec updateProjects: 
                                     cv versionString ~= fullProjectSpec versionString
                                         ifTrue: [ 
                                             spec projectReference versionString: cv versionString.
-                                            updatedSpecs add: spec name ].
-                                    visitedSpecs add: spec name ]
+                                            updatedSpecs add: spec name ] ]
                                 ifFalse: [ 
                                     "set to an empty string as a place holder, since we know we should have a version, but we are unable to figure out the version"
                                     spec projectReference versionString: ''.
@@ -28,6 +27,8 @@ updateVersionSpec: versionSpec fullVersionSpec: fullVersionSpec updateProjects: 
                     spec getFile ~~ nil
                         ifTrue: [ 
                             | viName |
+                            spec file = ''
+                                ifTrue: [ spec file: spec name ].
                             (viName := spec workingCopyNameFor: spec loader) ~~ nil
                                 ifTrue: [ 
                                     viName ~= spec file

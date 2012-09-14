@@ -14,6 +14,13 @@ setUpConfigurationOfFoo
         comment: '').
     (MCMethodDefinition
         className: className asString
+        classIsMeta: false
+        selector: 'bleedingEdgeVersion:'
+        category: 'cat'
+        timeStamp: ''
+        source: (self class sourceCodeAt: #'bleedingEdgeVersion:') asString).
+    (MCMethodDefinition
+        className: className asString
         selector: 'project'
         category: 'cat'
         timeStamp: ''

@@ -21,22 +21,22 @@ version10beta3115: spec
 - fix Issue 115 - Version generated from a baseline can have empty package versions in a platform-specific section
   https://github.com/dalehenrich/metacello-work/issues/115'.
             spec author: 'dkh'.
-            spec timestamp: '9/13/2012 11:38'.
+            spec timestamp: '9/13/2012 19:57'.
             spec
                 project: 'Gofer Core' with: '1.0.5.1';
                 project: 'Gofer Tests' with: '1.0.5.1'.
             spec
                 package: 'Metacello-Base' with: 'Metacello-Base-DaleHenrichs.19';
-                package: 'Metacello-Core' with: 'Metacello-Core-dkh.491';
+                package: 'Metacello-Core' with: 'Metacello-Core-dkh.492';
                 package: 'Metacello-MC' with: 'Metacello-MC-dkh.664';
                 package: 'Metacello-Reference' with: 'Metacello-Reference-DaleHenrichs.31';
                 package: 'Metacello-Tutorial' with: 'Metacello-Tutorial-dkh.25';
                 package: 'OB-Metacello' with: 'OB-Metacello-dkh.82';
                 package: 'Metacello-TestsReference' with: 'Metacello-TestsReference-DaleHenrichs.17';
                 package: 'Metacello-TestsCore' with: 'Metacello-TestsCore-DaleHenrichs.14';
-                package: 'Metacello-TestsMC' with: 'Metacello-TestsMC-dkh.345';
+                package: 'Metacello-TestsMC' with: 'Metacello-TestsMC-dkh.347';
                 package: 'Metacello-TestsTutorial' with: 'Metacello-TestsTutorial-dkh.33';
-                package: 'Metacello-ToolBox' with: 'Metacello-ToolBox-dkh.125' ].
+                package: 'Metacello-ToolBox' with: 'Metacello-ToolBox-dkh.127' ].
     spec
         for: #'gemstone'
         do: [ 

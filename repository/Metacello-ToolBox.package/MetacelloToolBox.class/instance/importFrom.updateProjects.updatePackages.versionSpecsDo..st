@@ -3,6 +3,7 @@ importFrom: inputVersionStringOrSymbol updateProjects: updateProjects updatePack
     ^ self
         importFrom: inputVersionStringOrSymbol
         projectAttributes: project attributes
+        inactiveAttributes: #()
         updateProjects: updateProjects
         updatePackages: updatePackages
         versionSpecsDo: aBlock
