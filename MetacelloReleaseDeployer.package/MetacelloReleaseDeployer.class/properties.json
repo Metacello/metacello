@@ -1,0 +1,16 @@
+{
+	"category" : "MetacelloReleaseDeployer",
+	"classinstvars" : [
+		 ],
+	"classtraitcomposition" : "{}",
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 9/14/2012 16:33",
+	"instvars" : [
+		 ],
+	"name" : "MetacelloReleaseDeployer",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"traitcomposition" : "{}",
+	"type" : "normal" }
