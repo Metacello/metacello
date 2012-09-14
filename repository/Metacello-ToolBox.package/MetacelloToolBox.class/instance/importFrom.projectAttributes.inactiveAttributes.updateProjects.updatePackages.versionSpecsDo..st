@@ -1,5 +1,5 @@
 api-configuration
-importFrom: inputVersionStringOrSymbol projectAttributes: projectAttributes inactiveAttributes: inactiveAttributes updateProjects: updateProjects updatePackages: updatePackages versionSpecsDo: aBlock
+importFrom: inputVersionStringOrSymbol projectAttributes: projectAttributes inactiveAttributes: inactiveAttributesList updateProjects: updateProjects updatePackages: updatePackages versionSpecsDo: aBlock
     | constructor updatedSpecs fullVersionSpec version visitedSpecs fromVersionString attributeSet |
     constructor := self constructor.
     updatedSpecs := Set new.
@@ -18,16 +18,20 @@ importFrom: inputVersionStringOrSymbol projectAttributes: projectAttributes inac
         updatePackages: updatePackages
         visited: visitedSpecs
         updated: updatedSpecs.
-    self
-        editVersionSpecsForImport: constructor
-        projectAttributes: inactiveAttributes
-        active: false
-        fullVersionSpec: fullVersionSpec
-        updateProjects: updateProjects
-        updatePackages: updatePackages
-        visited: visitedSpecs
-        updated: updatedSpecs.
-    attributeSet := (inactiveAttributes , projectAttributes) asSet.
+    attributeSet := projectAttributes.
+    inactiveAttributesList
+        do: [ :inactiveAttributes | 
+            self
+                editVersionSpecsForImport: constructor
+                projectAttributes: inactiveAttributes
+                active: false
+                fullVersionSpec: fullVersionSpec
+                updateProjects: updateProjects
+                updatePackages: updatePackages
+                visited: visitedSpecs
+                updated: updatedSpecs.
+            attributeSet := attributeSet , projectAttributes ].
+    attributeSet := attributeSet asSet.
     constructor
         methodSectionsDo: [ :methodSection | 
             | versionSpec attributePath |

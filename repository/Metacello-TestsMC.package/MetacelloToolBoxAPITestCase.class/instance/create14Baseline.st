@@ -68,4 +68,60 @@ create14Baseline
             supplyingAnswers: #()
             groups: #()
             versionSpecsDo: [ :versionSpec |  ];
+        addSection: #'platform3.x'
+            repository: nil
+            requiredProjects: #('MetacelloTestConfigurationOfFoo')
+            packages: #('GoferFoo')
+            dependencies: #()
+            includes: #()
+            files: #()
+            repositories:
+                {('MetacelloTestConfigurationOfFoo' -> {'dictionary://Metacello_Configuration_Test_Repository'})}
+            preLoadDoIts: #()
+            postLoadDoIts: #()
+            supplyingAnswers: #()
+            groups: #()
+            versionSpecsDo: [ :versionSpec |  ];
+        addSection: #'platform3.1.x'
+            repository: nil
+            requiredProjects: #('MetacelloTestConfigurationOfFoo')
+            packages: #('GoferFoo' 'GoferFaux')
+            dependencies: {('GoferFoo' -> #('GoferFaux'))}
+            includes: #()
+            files: #()
+            repositories:
+                {('MetacelloTestConfigurationOfFoo' -> {'dictionary://Metacello_Configuration_Test_Repository'})}
+            preLoadDoIts: #()
+            postLoadDoIts: #()
+            supplyingAnswers: #()
+            groups: #()
+            versionSpecsDo: [ :versionSpec |  ];
+        addSection: #'platform4.x'
+            repository: nil
+            requiredProjects: #('MetacelloTestConfigurationOfFoo')
+            packages: #('GoferFoo')
+            dependencies: #()
+            includes: #()
+            files: #()
+            repositories:
+                {('MetacelloTestConfigurationOfFoo' -> {'dictionary://Metacello_Configuration_Test_Repository'})}
+            preLoadDoIts: #()
+            postLoadDoIts: #()
+            supplyingAnswers: #()
+            groups: #()
+            versionSpecsDo: [ :versionSpec |  ];
+        addSection: #'platform4.1.x'
+            repository: nil
+            requiredProjects: #('MetacelloTestConfigurationOfFoo')
+            packages: #('GoferFoo' 'GoferFaux')
+            dependencies: {('GoferFoo' -> #('GoferFaux'))}
+            includes: #()
+            files: #()
+            repositories:
+                {('MetacelloTestConfigurationOfFoo' -> {'dictionary://Metacello_Configuration_Test_Repository'})}
+            preLoadDoIts: #()
+            postLoadDoIts: #()
+            supplyingAnswers: #()
+            groups: #()
+            versionSpecsDo: [ :versionSpec |  ];
         commitMethod
