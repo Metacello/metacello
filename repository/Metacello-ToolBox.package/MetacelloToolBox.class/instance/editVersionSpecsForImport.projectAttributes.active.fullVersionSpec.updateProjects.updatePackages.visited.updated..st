@@ -1,14 +1,6 @@
-api-configuration
-importFrom: inputVersionStringOrSymbol projectAttributes: projectAttributes updateProjects: updateProjects updatePackages: updatePackages versionSpecsDo: aBlock
-    | constructor updatedSpecs fullVersionSpec version visitedSpecs fromVersionString activeSections fileSpecified encounteredPackageSpecs |
-    constructor := self constructor.
-    updatedSpecs := Set new.
-    visitedSpecs := Set new.
-    version := project version: inputVersionStringOrSymbol.
-    fromVersionString := version versionString.	"resolve symbolic versions"
-    fullVersionSpec := version spec.
-    self methodSpec imports: {fromVersionString}.
-    constructor extractMethodSectionsFor: fromVersionString.
+private
+editVersionSpecsForImport: constructor projectAttributes: projectAttributes active: activeSection fullVersionSpec: fullVersionSpec updateProjects: updateProjects updatePackages: updatePackages visited: visitedSpecs updated: updatedSpecs
+    | fileSpecified encounteredPackageSpecs |
     fileSpecified := Bag new.
     encounteredPackageSpecs := Bag new.
     constructor
@@ -22,7 +14,6 @@ importFrom: inputVersionStringOrSymbol projectAttributes: projectAttributes upda
                     (spec copy updateForSpawnMethod: spec)
                         ifFalse: [ fileSpecified add: spec name ] ]
                 groupDo: [ :spec |  ] ].
-    activeSections := IdentitySet new.
     constructor
         methodSectionsInEvaluationOrder: projectAttributes reverse
         do: [ :methodSection | 
@@ -55,20 +46,18 @@ importFrom: inputVersionStringOrSymbol projectAttributes: projectAttributes upda
                                     fileSpecified remove: spec name ] ] ]
                 groupDo: [ :spec | spec updateForSpawnMethod: spec ].
             packageSpecsToDelete do: [ :spec | versionSpec deleteSpec: spec ].
-            self
-                updateVersionSpec: versionSpec
-                fullVersionSpec: fullVersionSpec
-                updateProjects: updateProjects
-                updatePackages: updatePackages
-                visited: visitedSpecs
-                updated: updatedSpecs.
-            activeSections add: methodSection ].
-    constructor
-        methodSectionsDo: [ :methodSection | 
-            | versionSpec attributePath |
-            versionSpec := methodSection versionSpec.
-            attributePath := methodSection attributePath.
-            (activeSections includes: methodSection)
+            activeSection
                 ifTrue: [ 
-                    (aBlock value: attributePath asAttributeOrPath value: versionSpec)
-                        ifTrue: [ self methodSpec addMethodSection: attributePath versionSpec: versionSpec ] ] ]
+                    self
+                        updateVersionSpec: versionSpec
+                        fullVersionSpec: fullVersionSpec
+                        updateProjects: updateProjects
+                        updatePackages: updatePackages
+                        visited: visitedSpecs
+                        updated: updatedSpecs ]
+                ifFalse: [ 
+                    self
+                        clearVersionSpec: versionSpec
+                        fullVersionSpec: fullVersionSpec
+                        updateProjects: updateProjects
+                        updatePackages: updatePackages ] ]
