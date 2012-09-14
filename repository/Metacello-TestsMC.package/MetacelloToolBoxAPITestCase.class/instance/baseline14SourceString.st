@@ -19,6 +19,7 @@ baseline14SourceString
 				spec
 					className: ''MetacelloTestConfigurationOfFoo'';
 					versionString: #''bleedingEdge'';
+					repository: ''cache'';
 					repository: ''dictionary://Metacello_Configuration_Test_Repository'' ].
 		spec package: ''GoferBar''. ].
 
@@ -27,6 +28,7 @@ baseline14SourceString
 				spec
 					className: ''MetacelloTestConfigurationOfFoo'';
 					versionString: #''bleedingEdge'';
+					repository: ''cache'';
 					repository: ''dictionary://Metacello_Configuration_Test_Repository'' ].
 		spec package: ''GeauxBeau''. ].
 
@@ -35,6 +37,7 @@ baseline14SourceString
 				spec
 					className: ''MetacelloTestConfigurationOfFoo'';
 					versionString: #''bleedingEdge'';
+					repository: ''cache'';
 					repository: ''dictionary://Metacello_Configuration_Test_Repository'' ].
 		spec package: ''GoferFaux''. ].
 
@@ -43,6 +46,7 @@ baseline14SourceString
 				spec
 					className: ''MetacelloTestConfigurationOfFoo'';
 					versionString: #''bleedingEdge'';
+					repository: ''cache'';
 					repository: ''dictionary://Metacello_Configuration_Test_Repository'' ].
 		spec 
 			package: ''GoferFoo'';
