@@ -109,10 +109,13 @@ baseline10beta3115: spec
                 group: 'Tests' with: #('Metacello-TestsProfStef');
                 group: 'Tutorial' with: #('Metacello-ProfStef');
                 yourself ].
+    spec for: #'pharo1.0.x' do: [ spec package: 'Metacello-ProfStef' with: [ spec file: 'Metacello-ProfStef.toolset' ] ].
+    spec for: #'pharo1.1.x' do: [ spec package: 'Metacello-ProfStef' with: [ spec file: 'Metacello-ProfStef.toolset' ] ].
     spec
         for: #'pharo1.2.x'
         do: [ 
             spec
+                package: 'Metacello-ProfStef' with: [ spec file: 'Metacello-ProfStef.toolset' ];
                 package: 'Metacello-TestsMC' with: [ spec includes: #('Metacello-Issue3758') ];
                 package: 'Metacello-Issue3758' with: [ spec requires: #('Metacello-TestsMC') ];
                 yourself ].

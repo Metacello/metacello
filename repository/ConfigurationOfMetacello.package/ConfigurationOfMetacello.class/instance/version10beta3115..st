@@ -8,29 +8,35 @@ version10beta3115: spec
             spec
                 description:
                     '1.0-beta.31.1.5;
-- update Metacello-MC to a version which adds custom project attribute support to MetacelloConfigTemplate
+- fis Issue 73 - update Metacello-MC to a version which adds custom project attribute support to MetacelloConfigTemplate
   https://github.com/dalehenrich/metacello-work/issues/73
-- get all of the unit tests passing
+- fix Issue 114 - get all of the unit tests passing
   https://github.com/dalehenrich/metacello-work/issues/114
 - fix Issue 120 - nested `version:imports:` cause trouble (1.0-beta.31.1.5)
-  https://github.com/dalehenrich/metacello-work/issues/120'.
+  https://github.com/dalehenrich/metacello-work/issues/120
+- fix Issue 110 - allow attribute lists in #for:do: statement
+  https://github.com/dalehenrich/metacello-work/issues/110
+- fix Issue 69 - MetacelloConfigurationTutorial undefined reference to ToolSet
+  https://github.com/dalehenrich/metacello-work/issues/69
+- fix Issue 115 - Version generated from a baseline can have empty package versions in a platform-specific section
+  https://github.com/dalehenrich/metacello-work/issues/115'.
             spec author: 'dkh'.
-            spec timestamp: '9/5/2012 09:46'.
+            spec timestamp: '9/14/2012 10:17'.
             spec
                 project: 'Gofer Core' with: '1.0.5.1';
                 project: 'Gofer Tests' with: '1.0.5.1'.
             spec
                 package: 'Metacello-Base' with: 'Metacello-Base-DaleHenrichs.19';
-                package: 'Metacello-Core' with: 'Metacello-Core-dkh.478';
-                package: 'Metacello-MC' with: 'Metacello-MC-dkh.535';
+                package: 'Metacello-Core' with: 'Metacello-Core-dkh.492';
+                package: 'Metacello-MC' with: 'Metacello-MC-dkh.664';
                 package: 'Metacello-Reference' with: 'Metacello-Reference-DaleHenrichs.31';
                 package: 'Metacello-Tutorial' with: 'Metacello-Tutorial-dkh.25';
                 package: 'OB-Metacello' with: 'OB-Metacello-dkh.82';
                 package: 'Metacello-TestsReference' with: 'Metacello-TestsReference-DaleHenrichs.17';
                 package: 'Metacello-TestsCore' with: 'Metacello-TestsCore-DaleHenrichs.14';
-                package: 'Metacello-TestsMC' with: 'Metacello-TestsMC-dkh.330';
+                package: 'Metacello-TestsMC' with: 'Metacello-TestsMC-dkh.350';
                 package: 'Metacello-TestsTutorial' with: 'Metacello-TestsTutorial-dkh.33';
-                package: 'Metacello-ToolBox' with: 'Metacello-ToolBox-dkh.107' ].
+                package: 'Metacello-ToolBox' with: 'Metacello-ToolBox-dkh.129' ].
     spec
         for: #'gemstone'
         do: [ 
@@ -55,10 +61,17 @@ version10beta3115: spec
         do: [ 
             spec project: 'ProfStef' with: #'stable'.
             spec
-                package: 'Metacello-ProfStef' with: 'Metacello-ProfStef-DaleHenrichs.10';
-                package: 'Metacello-TestsProfStef' with: 'Metacello-TestsProfStef-DaleHenrichs.1';
+                package: 'Metacello-ProfStef' with: 'Metacello-ProfStef-dkh.13';
+                package: 'Metacello-TestsProfStef' with: 'Metacello-TestsProfStef-dkh.5';
                 package: 'Metacello-Platform' with: 'Metacello-Platform.pharo-dkh.27' ].
-    spec for: #'pharo1.2.x' do: [ spec package: 'Metacello-Issue3758' with: 'Metacello-Issue3758-dkh.2' ].
+    spec for: #'pharo1.0.x' do: [ spec package: 'Metacello-ProfStef' with: 'Metacello-ProfStef.toolset-dkh.12' ].
+    spec for: #'pharo1.1.x' do: [ spec package: 'Metacello-ProfStef' with: 'Metacello-ProfStef.toolset-dkh.12' ].
+    spec
+        for: #'pharo1.2.x'
+        do: [ 
+            spec
+                package: 'Metacello-Issue3758' with: 'Metacello-Issue3758-dkh.2';
+                package: 'Metacello-ProfStef' with: 'Metacello-ProfStef.toolset-dkh.12' ].
     spec for: #'pharo1.3.x' do: [ spec package: 'Metacello-Issue3758' with: 'Metacello-Issue3758-dkh.2' ].
     spec for: #'pharo2.x' do: [ spec package: 'Metacello-Platform' with: 'Metacello-Platform.pharo20-SeanDeNigris.28' ].
     spec for: #'squeak' do: [ spec package: 'Metacello-Platform' with: 'Metacello-Platform.squeak-dkh.11' ]

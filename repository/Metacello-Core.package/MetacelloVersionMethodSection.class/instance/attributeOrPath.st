@@ -1,6 +1,8 @@
 accessing
 attributeOrPath
-	| path |
-	^self parent == nil
-		ifTrue: [ self attribute ]
-		ifFalse: [ self parent attributePath , {(self attribute)} ]
+    ^ self parent == nil
+        ifTrue: [ 
+            self attributes size == 1
+                ifTrue: [ self attributes first ]
+                ifFalse: [ self attributes ] ]
+        ifFalse: [ self attributePath ]

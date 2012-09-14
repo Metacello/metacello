@@ -1,1 +1,1 @@
-SystemOrganization addCategory: 'Metacello-ToolBox'!
+SystemOrganization addCategory: #'Metacello-ToolBox'!
