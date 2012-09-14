@@ -1,5 +1,7 @@
 tests
 testImportFrom5
+    "#platform4 is left untouched ..."
+
     self create14Version.
     self
         assert:

@@ -22,4 +22,22 @@ version14SourceStringUpdated50
 	spec for: #''platform2.1.x'' do: [
 		spec project: ''MetacelloTestConfigurationOfFoo'' with: ''5.0''.
 		spec package: ''GoferFoo'' with: ''GoferFoo-lr.2''. ].
+
+	spec for: #''platform3.x'' do: [
+		spec project: ''MetacelloTestConfigurationOfFoo'' with: #''bleedingEdge''.
+		spec package: ''GoferFoo'' with: ''''. ].
+
+	spec for: #''platform3.1.x'' do: [
+		spec project: ''MetacelloTestConfigurationOfFoo'' with: #''bleedingEdge''.
+		spec package: ''GoferFaux'' with: ''''. ].
+
+	spec for: #''platform4.x'' do: [
+		spec project: ''MetacelloTestConfigurationOfFoo'' with: #''bleedingEdge''.
+		spec package: ''GoferFoo'' with: ''''. ].
+
+	spec for: #''platform4.1.x'' do: [
+		spec project: ''MetacelloTestConfigurationOfFoo'' with: #''bleedingEdge''.
+		spec 
+			package: ''GoferFoo'';
+			package: ''GoferFaux'' with: ''''. ].
 '

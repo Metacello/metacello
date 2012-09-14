@@ -48,4 +48,42 @@ baseline14SourceString
 			package: ''GoferFoo'';
 			package: ''GoferFaux'' with: [
 				spec requires: #(''GoferFoo'' ). ]. ].
+
+	spec for: #''platform3.x'' do: [
+		spec project: ''MetacelloTestConfigurationOfFoo'' with: [
+				spec
+					className: ''MetacelloTestConfigurationOfFoo'';
+					versionString: #''bleedingEdge'';
+					repository: ''dictionary://Metacello_Configuration_Test_Repository'' ].
+		spec package: ''GoferFoo''. ].
+
+	spec for: #''platform3.1.x'' do: [
+		spec project: ''MetacelloTestConfigurationOfFoo'' with: [
+				spec
+					className: ''MetacelloTestConfigurationOfFoo'';
+					versionString: #''bleedingEdge'';
+					repository: ''dictionary://Metacello_Configuration_Test_Repository'' ].
+		spec 
+			package: ''GoferFoo'' with: [
+				spec requires: #(''GoferFaux'' ). ];
+			package: ''GoferFaux''. ].
+
+	spec for: #''platform4.x'' do: [
+		spec project: ''MetacelloTestConfigurationOfFoo'' with: [
+				spec
+					className: ''MetacelloTestConfigurationOfFoo'';
+					versionString: #''bleedingEdge'';
+					repository: ''dictionary://Metacello_Configuration_Test_Repository'' ].
+		spec package: ''GoferFoo''. ].
+
+	spec for: #''platform4.1.x'' do: [
+		spec project: ''MetacelloTestConfigurationOfFoo'' with: [
+				spec
+					className: ''MetacelloTestConfigurationOfFoo'';
+					versionString: #''bleedingEdge'';
+					repository: ''dictionary://Metacello_Configuration_Test_Repository'' ].
+		spec 
+			package: ''GoferFoo'' with: [
+				spec requires: #(''GoferFaux'' ). ];
+			package: ''GoferFaux''. ].
 '
