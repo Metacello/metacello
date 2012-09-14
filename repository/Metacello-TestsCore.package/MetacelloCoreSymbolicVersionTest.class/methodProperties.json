@@ -1,0 +1,15 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"baseline10:" : "dkh 9/11/2012 11:25",
+		"baseline20:" : "dkh 9/11/2012 11:25",
+		"bleedingEdge:" : "dkh 9/11/2012 11:26",
+		"project" : "dkh 9/11/2012 11:23",
+		"projectWith:" : "dkh 9/11/2012 11:23",
+		"stableVersion:" : "dkh 9/11/2012 11:26",
+		"testBasicBleedingEdgeVersion" : "dkh 9/11/2012 11:29",
+		"testBasicStableVersion" : "dkh 9/11/2012 11:27",
+		"testBleedingEdgeMethod" : "dkh 9/11/2012 11:27",
+		"testStableVersionMethod" : "dkh 9/11/2012 11:28",
+		"version10:" : "dkh 9/11/2012 11:26" } }

@@ -1,14 +1,14 @@
 {
 	"class" : {
-		"title" : "DaleHenrichs 1/14/2011 12:22:17" },
+		"title" : "DaleHenrichs 12/17/2010 10:31" },
 	"instance" : {
-		"checkpointSave" : "DaleHenrichs 1/14/2011 12:22:17",
-		"compareVersions" : "DaleHenrichs 1/14/2011 12:22:17",
-		"createConfigurationAndBaseline" : "DaleHenrichs 1/14/2011 12:22:17",
-		"createDevelopmentVersion" : "DaleHenrichs 1/14/2011 12:22:17",
-		"createNewDevelopmentVersion" : "DaleHenrichs 1/14/2011 12:22:17",
-		"integrateCodeContributions" : "DaleHenrichs 1/14/2011 12:22:17",
-		"introductionText" : "DaleHenrichs 1/14/2011 12:22:17",
-		"releaseVersion" : "DaleHenrichs 1/14/2011 12:22:17",
-		"tutorial" : "DaleHenrichs 1/14/2011 12:22:17",
-		"validateAndSaveConfiguration" : "DaleHenrichs 1/14/2011 12:22:17" } }
+		"checkpointSave" : "DaleHenrichs 12/17/2010 11:28",
+		"compareVersions" : "DaleHenrichs 1/14/2011 12:21",
+		"createConfigurationAndBaseline" : "dkh 9/11/2012 17:16",
+		"createDevelopmentVersion" : "dkh 9/11/2012 17:16",
+		"createNewDevelopmentVersion" : "DaleHenrichs 12/17/2010 12:24",
+		"integrateCodeContributions" : "DaleHenrichs 12/17/2010 11:37",
+		"introductionText" : "dkh 9/11/2012 17:16",
+		"releaseVersion" : "DaleHenrichs 12/17/2010 12:14",
+		"tutorial" : "DaleHenrichs 12/17/2010 12:16",
+		"validateAndSaveConfiguration" : "DaleHenrichs 12/17/2010 11:09" } }

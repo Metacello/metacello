@@ -10,5 +10,5 @@
 	"name" : "MetacelloConfigAPIToolBoxTestCase",
 	"pools" : [
 		 ],
-	"super" : "MetacelloConfigAbstractAPITestCase",
+	"super" : "MetacelloConfigMCAPITestCase",
 	"type" : "normal" }

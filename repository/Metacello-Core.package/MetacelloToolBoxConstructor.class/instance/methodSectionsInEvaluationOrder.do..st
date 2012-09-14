@@ -1,9 +1,21 @@
 enumeration
 methodSectionsInEvaluationOrder: attributes do: aBlock
-	"breadth first traversal ... to collect selected sections, then evaluate individual sections in attribute order"
+    "breadth first traversal ... to collect selected sections, then evaluate individual sections in attribute order"
 
-	| selected |
-	selected := OrderedCollection new.
-	self methodSection: self inEvaluationOrder: attributes do: [:methodSection | selected add: methodSection ]. 
-	attributes
-		do: [ :attribute | (selected select: [ :methodSection | methodSection attribute == attribute ]) do: aBlock ].
+    | selected processed |
+    selected := IdentitySet new.
+    self methodSection: self inEvaluationOrder: attributes do: [ :methodSection | selected add: methodSection ].
+    processed := IdentitySet new.
+    attributes
+        do: [ :attribute | 
+            | list |
+            list := OrderedCollection new.
+            selected
+                do: [ :methodSection | 
+                    (processed includes: methodSection)
+                        ifFalse: [ 
+                            (methodSection attributes includes: attribute)
+                                ifTrue: [ 
+                                    list add: methodSection.
+                                    processed add: methodSection ] ] ].
+            list do: aBlock ]

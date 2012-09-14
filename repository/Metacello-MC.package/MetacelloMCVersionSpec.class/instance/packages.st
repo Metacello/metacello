@@ -1,5 +1,7 @@
 accessing
 packages
+    "leave reference to packages for upgrade purposes"
 
-	packages == nil ifTrue: [ packages := self project packagesSpec ].
-	^ packages
+    packages == nil
+        ifTrue: [ ^ super packages ].
+    ^ packages
