@@ -18,7 +18,7 @@ modifyVersion: sourceVersionString section: sectionAttributeOrPath for: configur
 	| toolbox |
 	(toolbox := self configurationNamed: configurationBasename)
 		modifyVersionMethodForVersion: sourceVersionString versionSpecsDo: [:attribute :versionSpec | true ];
-		modifySection: sectionAttributeOrPath
+		modifySection: sectionAttributeOrPath asMetacelloAttributePath
 			repository: repositoryDescription
 			requiredProjects: projectList
 			packages: packageList

@@ -4,8 +4,8 @@ lesson10
 		title: 'Lesson 10'
 		lesson: 
 '
-ToolSet browse: MetacelloTutorialConfig selector: #baseline10:.
-ToolSet browse: MetacelloTutorialConfig selector: #version10:.
+Smalltalk tools browse: MetacelloTutorialConfig selector: #baseline10:.
+Smalltalk tools browse: MetacelloTutorialConfig selector: #version10:.
 
 "In #baseline10: we''ve added two things: the ''Example-AddOnTests'' package and a specification for 
 groups. 
