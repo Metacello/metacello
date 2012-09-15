@@ -36,7 +36,7 @@ baseline10beta3115: spec
                     with: [ 
                             spec
                                 postLoadDoIt: #'testsMC10beta25PostLoadDoIt';
-                                requires: #('Metacello-MC' 'Gofer Tests') ];
+                                requires: #('Metacello-ToolBox' 'Metacello-MC' 'Gofer Tests') ];
                 package: 'Metacello-TestsReference' with: [ spec requires: #('Metacello-Reference') ];
                 package: 'Metacello-TestsTutorial' with: [ spec requires: #('Metacello-Tutorial' 'Metacello-TestsMC') ];
                 package: 'OB-Metacello'
