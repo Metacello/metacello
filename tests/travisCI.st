@@ -15,7 +15,7 @@ Gofer new
 ((Smalltalk at: #'ConfigurationOfGofer') project version: #'stable')
   load.
 metacelloConfigurationRepository := (Smalltalk at: #'MCFileTreeRepository') new
-  directory: (FileDirectory on: gitPath);
+  directory: (FileDirectory on: gitPath, '/metacello-work');
   yourself.
 Gofer new
   repository: metacelloConfigurationRepository;
