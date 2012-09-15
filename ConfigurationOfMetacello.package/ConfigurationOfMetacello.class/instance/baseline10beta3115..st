@@ -49,6 +49,9 @@ baseline10beta3115: spec
                 group: 'Core' with: #('default');
                 group: 'Tutorial' with: #('Metacello-Tutorial' 'Metacello-Reference');
                 group: 'UI' with: #('OB-Metacello');
+                group: 'TravisCI'
+                    with:
+                        #('Metacello-TestsCore' 'Metacello-TestsTutorial' 'Metacello-TestsMC' 'Metacello-TestsReference');
                 group: 'Tests'
                     with:
                         #('default' 'Metacello-TestsCore' 'Metacello-TestsTutorial' 'Metacello-TestsMC' 'Metacello-TestsReference');
@@ -85,6 +88,7 @@ baseline10beta3115: spec
                 yourself.
             spec
                 group: 'default' with: #('Metacello-Help');
+                group: 'TravisCI' with: #('Metacello-TestsPlatform');
                 group: 'Tests' with: #('Metacello-TestsPlatform');
                 yourself ].
     spec
@@ -169,4 +173,5 @@ baseline10beta3115: spec
                 yourself.
             spec
                 group: 'Tests' with: #('Metacello-TestsPlatform');
+                group: 'TravisCI' with: #('Metacello-TestsPlatform');
                 yourself ]
