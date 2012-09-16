@@ -119,6 +119,12 @@ baseline: spec
                 group: 'Tutorial' with: #('Metacello-ProfStef');
                 yourself ].
     spec
+        for: #'pharo1.1.x'
+        do: [ spec baseline: 'FileTree' with: [ spec repository: 'github://dalehenrich/filetree:pharo1.1/repository' ] ].
+    spec
+        for: #'pharo1.2.x'
+        do: [ spec baseline: 'FileTree' with: [ spec repository: 'github://dalehenrich/filetree:pharo1.1/repository' ] ].
+    spec
         for: #'pharo1.3.x'
         do: [ spec baseline: 'FileTree' with: [ spec repository: 'github://dalehenrich/filetree:pharo1.3/repository' ] ].
     spec
