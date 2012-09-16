@@ -33,7 +33,7 @@ ensureMetacello: loadList
                                         perform: #'url:' with: repositoryUrl;
                                         perform: #'package:' with: 'ConfigurationOfMetacelloPreview';
                                         perform: #'load' ] ].
-                    version := (Smalltalk at: #'ConfigurationOfMetacelloPreview') project version: '1.0.0-beta.32.2'.	"load latest from GitHub"
+                    version := (Smalltalk at: #'ConfigurationOfMetacelloPreview') project version: #'stable'.	"load latest from GitHub"
                     version load: loadList.
                     ^ self ]
                         on: Error
