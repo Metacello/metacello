@@ -25,7 +25,7 @@ Gofer new
   load: 'TravisCI'.
 
 "Run the Metacello tests"
-MetacelloPlatform current authorName: 'testMonkey'. "These tests save code ... need an Author"
+(Smalltalk at: #MetacelloPlatform) current authorName: 'testMonkey'. "These tests save code ... need an Author"
 
 ((Smalltalk at: #'FileDirectory') on: gitPath, '/metacello-work/tests')
   fileNamed: 'travisCIHarness.st'
