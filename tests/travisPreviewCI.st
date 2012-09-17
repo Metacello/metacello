@@ -10,7 +10,7 @@ MetacelloBuilderTravisCI fileIn: 'Metacello-Base.st'.
 "Load the Metacello Tests ... "
 Metacello new
   configuration: 'MetacelloPreview';
-  version: '1.0.0-beta.32.2';
+  version: #stable;
   repository: 'filetree://', gitPath, '/metacello-work';
   load: 'TravisCI'.
 
@@ -18,8 +18,8 @@ Metacello new
 "Run the Metacello tests"
 (Smalltalk at: #MetacelloPlatform) current authorName: 'testMonkey'. "These tests save code ... need an Author"
 
-TravisCIHarness
-  value: #( 'BaselineOfMetacello' )
-  value: 'TravisCISuccess.txt' 
-  value: 'TravisCIFailure.txt'.
+MetacelloBuilderTravisCI 
+  runHarnessFor:  #( 'BaselineOfMetacello' ) 
+  successFilename: 'TravisCISuccess.txt' 
+  failFilename: 'TravisCIFailure.txt'
 
