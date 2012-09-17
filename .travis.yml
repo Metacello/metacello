@@ -19,9 +19,13 @@ install:
    - ./build_image.sh
 
 script:
-   - ./build.sh -i $ST -X -f "$PROJECT_HOME/tests/travisCI.st" -o travisCI
+   - ./build.sh -i $ST -m -f "$PROJECT_HOME/tests/travisCI.st" -f "$PROJECT_HOME/tests/travisCreateConfig.st" -o travisCI
    - cd "${BUILD_PATH}/travisCI/"
    - ls -altr *
    - $BUILDER_CI_HOME/buildImageErrorCheck.sh
 #   - cat TravisTranscript.txt
+   - echo "test ensureMetacello"
    - $BUILDER_CI_HOME/buildTravisStatusCheck.sh
+   - ./build.sh -i $ST -X -f "$PROJECT_HOME/tests/travisEnsureMetacello.st" -o travisCI
+   - $BUILDER_CI_HOME/buildImageErrorCheck.sh
+   - echo "SUCCESSFUL test ensureMetacello"

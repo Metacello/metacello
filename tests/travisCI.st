@@ -2,48 +2,25 @@
 | gitPath |
 gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 
-"Bootstrap FileTree"
-Gofer new
-  url: 'http://ss3.gemstone.com/ss/FileTree';
-  package: 'ConfigurationOfFileTree';
-  load.
-((Smalltalk at: #'ConfigurationOfFileTree') project version: #stable)
-  load.
-Gofer new
-  url: 'http://seaside.gemstone.com/ss/metacello';
-  package: 'ConfigurationOfGofer';
-  load.
-((Smalltalk at: #'ConfigurationOfGofer') project version: #'stable')
-  load.
-metacelloConfigurationRepository := (Smalltalk at: #'MCFileTreeRepository') new
-  directory: (FileDirectory on: gitPath, '/metacello-work/repository');
-  yourself.
-
-"Load Metacello-Base"
-Gofer new
-  repository: metacelloConfigurationRepository;
-  package: 'Metacello-Base';
-  load.
-
-"Load the Metacello Tests ..."
-(Smalltalk at: #Metacello) new
+"Load the Metacello Tests ... "
+Metacello new
 	baseline: 'Metacello';
   repository: 'filetree://', gitPath, '/metacello-work/repository';
   load: 'TravisCI'.
 
 
 "Run the Metacello tests"
-(Smalltalk at: #MetacelloPlatform) current authorName: 'testMonkey'. "These tests save code ... need an Author"
+MetacelloPlatform current authorName: 'testMonkey'. "These tests save code ... need an Author"
 
 "no deprecated messages should be used"
 (Deprecation respondsTo: #raiseWarning:)
   ifTrue: [ Deprecation raiseWarning: true].
 
 [
-MetacelloBuilderTravisCI 
-  runHarnessFor:  #( 'BaselineOfMetacello' ) 
-  successFilename: 'TravisCISuccess.txt' 
-  failFilename: 'TravisCIFailure.txt'
+TravisCIHarness
+  value: #( 'BaselineOfMetacello' )
+  value: 'TravisCISuccess.txt' 
+  value: 'TravisCIFailure.txt'.
 ]
         on: Deprecation
         do: [ :ex |
