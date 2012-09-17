@@ -76,4 +76,4 @@ version10beta3115: spec
                 package: 'Metacello-ProfStef' with: 'Metacello-ProfStef.toolset-dkh.12' ].
     spec for: #'pharo1.3.x' do: [ spec package: 'Metacello-Issue3758' with: 'Metacello-Issue3758-dkh.2' ].
     spec for: #'pharo2.x' do: [ spec package: 'Metacello-Platform' with: 'Metacello-Platform.pharo20-SeanDeNigris.28' ].
-    spec for: #'squeak' do: [ spec package: 'Metacello-Platform' with: 'Metacello-Platform.squeak-dkh.11' ]
+    spec for: #'squeak' do: [ spec package: 'Metacello-Platform' with: 'Metacello-Platform.squeak-dkh.14' ]
