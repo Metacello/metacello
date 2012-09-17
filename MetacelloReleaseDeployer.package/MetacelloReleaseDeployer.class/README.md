@@ -1,0 +1,1 @@
+MetacelloReleaseDeployer is intended for use in deploying the pre 1.0-beta.32 releases of Metacello ... the releases where all the mcz file must be in the gemsource and squeaksource repositories

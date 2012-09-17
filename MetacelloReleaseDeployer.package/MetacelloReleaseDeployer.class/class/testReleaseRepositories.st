@@ -1,0 +1,3 @@
+testing
+testReleaseRepositories
+    ^ self testDeployRepositories
