@@ -4,6 +4,9 @@ does"
 | gitPath |
 gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 
+"Load Metacello-Base, so that Metacello is bootstrapped"
+MetacelloBuilderTravisCI fileIn: 'Metacello-Base.st'.
+
 "Load the Metacello Tests ... "
 Metacello new
   configuration: 'MetacelloPreview';
