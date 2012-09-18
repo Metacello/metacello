@@ -5,9 +5,9 @@ version10beta3203: spec
         for: #'common'
         do: [ 
             spec blessing: #'release'.
-            spec description: 'snap off new release ... mainly to start supporting Pharo-1.1 and Pharo-1.2'.
+            spec description: 'Synchronize with Metacello 1.0-beta.31.1.5'.
             spec author: 'dkh'.
-            spec timestamp: '9/16/2012 07:28'.
+            spec timestamp: '9/18/2012 14:36'.
             spec
                 baseline: 'Metacello'
                     with: [ 
