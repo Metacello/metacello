@@ -1,13 +1,17 @@
 {
 	"class" : {
-		"initialize" : "dkh 10/12/2009 13:30" },
+		"initialize" : "dkh 6/12/2012 10:18:46.076" },
 	"instance" : {
-		"authorName" : "dkh 10/12/2009 13:26",
-		"authorName:" : "dkh 1/5/2011 16:46",
-		"copyClass:as:inCategory:" : "dkh 1/5/2011 16:21",
-		"createRepository:" : "dkh 12/29/2009 16:12",
-		"defaultPlatformAttributes" : "dkh 1/5/2011 15:36",
-		"extractTypeFromDescription:" : "dkh 12/29/2009 16:11",
-		"globalNamed:" : "dkh 1/5/2011 16:06",
-		"globalNamed:ifAbsent:" : "dkh 1/5/2011 16:06",
-		"timestamp" : "dkh 10/12/2009 13:27" } }
+		"authorName" : "dkh 6/12/2012 10:18:46.076",
+		"authorName:" : "dkh 6/12/2012 10:18:46.076",
+		"collection:do:displaying:" : "dkh 6/12/2012 10:18:46.076",
+		"copyClass:as:inCategory:" : "dkh 6/12/2012 10:18:46.076",
+		"createRepository:" : "dkh 6/12/2012 10:18:46.076",
+		"defaultPlatformAttributes" : "dkh 6/12/2012 10:18:46.076",
+		"do:displaying:" : "dkh 6/12/2012 10:18:46.076",
+		"downloadFile:to:" : "dkh 6/12/2012 10:18:46.076",
+		"extractRepositoryFrom:to:" : "dkh 6/12/2012 10:18:46.076",
+		"extractTypeFromDescription:" : "dkh 6/12/2012 10:18:46.076",
+		"globalNamed:" : "dkh 6/12/2012 10:18:46.076",
+		"globalNamed:ifAbsent:" : "dkh 6/12/2012 10:18:46.076",
+		"timestamp" : "dkh 6/12/2012 10:18:46.076" } }

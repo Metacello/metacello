@@ -1,43 +1,45 @@
 ## HOW TO INSTALL
 
-Note that the the git work has not even achieved alpha, yet, so don't 
-bootstrap into an image that you care about:)
-
-Assuming Pharo 1.3
-
-### Install FileTree
-follow [FileTree installation insructions][1]
-
-### Clone the metacello repository:
+### Clone the `metacello-work` repository:
 ```shell
   sudo mkdir /opt/git/
   sudo chmod og+rw /opt/git/
   cd /opt/git/
-  git clone https://github.com/dalehenrich/metacello-work
+  git clone -b 1.0-beta.31.1.5 https://github.com/dalehenrich/metacello-work
 ```
 
-### Attach to the metacello repository and load Metacello files that have changed for git
-(assuming your stating with Metacello 1.0-beta.31.1)"
-
+### Load Metacello 1.0-beta.31.1.5
 ```Smalltalk
-Gofer new
-  squeaksource: 'MetacelloRepository';
-  package: 'ConfigurationOfOSProcess';
-  load.
-((Smalltalk at: #'ConfigurationOfOSProcess') project version: #stable) load.
-
-Gofer new
-    repository: (MCFileTreeRepository new directory: 
-                    (FileDirectory on: '/opt/git/metacello-work/repository/'));
-    package: 'Metacello-Base';
-    package: 'Metacello-Core';
-    package: 'Metacello-FileTree';
-    package: 'Metacello-Git';
-    package: 'Metacello-GitHub';
-    package: 'Metacello-MC';
-    package: 'Metacello-ToolBox';
-    package: 'ConfigurationOfMetacello';
-    load.
+    | gitRepositoryPath metacelloConfigurationRepository version repositories |
+    gitRepositoryPath := '/opt/git/1.0-beta.31/metacello-work/repository'.
+    Gofer new
+        url: 'http://ss3.gemstone.com/ss/FileTree';
+        package: 'ConfigurationOfFileTree';
+        load.
+    ((Smalltalk at: #'ConfigurationOfFileTree') project version: '1.0')
+        load: 'default'.
+    Gofer new
+        url: 'http://seaside.gemstone.com/ss/metacello';
+        package: 'ConfigurationOfGofer';
+        load.
+    ((Smalltalk at: #'ConfigurationOfGofer') project version: #'stable')
+        load.
+    metacelloConfigurationRepository := (Smalltalk at: #'MCFileTreeRepository') new
+        directory: (FileDirectory on: gitRepositoryPath);
+        yourself.
+    Gofer new
+        disablePackageCache;
+        repository: metacelloConfigurationRepository;
+        package: 'ConfigurationOfMetacello';
+        load.
+    version := (Smalltalk at: #'ConfigurationOfMetacello') project version: #stable.
+    repositories := (#('http://www.squeaksource.com/MetacelloRepository')
+        collect: [ :url | MCHttpRepository location: url user: '' password: '' ]) asSet.
+    repositories add: metacelloConfigurationRepository.
+    version repositoryOverrides: repositories.
+    version load: 'batch'.
 ```
 
-[1]: https://github.com/dalehenrich/filetree/blob/master/README.md
+###TravisCI Status
+**1.0-beta.31.1.5 branch**: [![Build Status](https://secure.travis-ci.org/dalehenrich/metacello-work.png?branch=1.0-beta.31.1.5)](http://travis-ci.org/dalehenrich/metacello-work)
+

@@ -1,10 +1,13 @@
 language: erlang
 
-# build matrix: "PharoCore-1.3" or "Squeak-4.3" ... parallel tests for
-#   all listed environments
 env:
+   - ST=PharoCore-1.1
+   - ST=PharoCore-1.2
    - ST=PharoCore-1.3
-#   - ST=Squeak-4.3   # 383 run, 348 passes, 0 expected failures, 1 failures, 34 errors, 0 unexpected passes
+   - ST=Pharo-1.4
+#   - ST=Pharo-2.0 #Pharo-2.0 not ready for testing yet
+   - ST=Squeak-4.3
+   - ST=Squeak-4.4
 
 install:
    - export PROJECT_HOME="$(pwd)"
@@ -17,17 +20,10 @@ install:
    - ./build_image.sh
 
 script:
-
-   - ./build.sh -i $ST -s latAmMirror.st -f "$PROJECT_HOME/tests/travisCI.st" -o travisCI
+#   - ./build.sh -i $ST -s latAmMirror.st -X -f "$PROJECT_HOME/tests/travisTest.st" -o travisCI
+   - ./build.sh -i $ST -X -f "$PROJECT_HOME/tests/travisTest.st" -o travisCI
    - cd "${BUILD_PATH}/travisCI/"
-   - if ( test -e PharoDebug.log ); then cat TravisTranscript.txt; fi
-   - if ( test -e PharoDebug.log ); then cat PharoDebug.log; fi
-   - if ( test -e PharoDebug.log ); then die; fi
-   - if ( test -e SqueakDebug.log ); then cat TravisTranscript.txt; fi
-   - if ( test -e SqueakDebug.log ); then cat SqueakDebug.log; fi
-   - if ( test -e SqueakDebug.log ); then die; fi
-   - if ( test -e TravisCISuccess.txt ); then cat TravisCISuccess.txt; fi
-   - if ( test -e TravisCIFailure.txt ); then cat TravisTranscript.txt; fi
-   - if ( test -e TravisCIFailure.txt ); then cat TravisCIFailure.txt; fi
-   - if ( test -e TravisCIFailure.txt ); then die; fi
+   - ls -altr *
+   - $BUILDER_CI_HOME/buildImageErrorCheck.sh
 #   - cat TravisTranscript.txt
+   - $BUILDER_CI_HOME/buildTravisStatusCheck.sh

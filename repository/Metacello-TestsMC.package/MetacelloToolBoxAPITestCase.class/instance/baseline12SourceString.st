@@ -24,30 +24,20 @@ baseline12SourceString
 			group: ''Core Tests'' with: #(''Core'' ''Tests'' ).
 
 		spec for: #''nested'' do: [
-			spec 
-				package: ''GoferFoo'';
-				package: ''GoferBar'' with: [
-					spec requires: #(''GoferFoo'' ). ].
-			spec group: ''UI'' with: #(''GoferBar'' ). ]. ].
-
-	spec for: #''nested'' do: [
-		spec 
-			package: ''GoofyFoo'';
-			package: ''GoofyBar'' with: [
-				spec requires: #(''GoofyFoo'' ). ].
-		spec group: ''UI'' with: #(''GoofyBar'' ). ].
+			spec package: ''GoferFoo''.
+			spec group: ''UI'' with: #(''GoferFoo'' ). ]. ].
 
 	spec for: #''outer'' do: [
-		spec 
-			package: ''DaffyFoo'';
-			package: ''DaffyBar'' with: [
-				spec requires: #(''DaffyFoo'' ). ].
-		spec group: ''UI'' with: #(''DaffyBar'' ).
+		spec package: ''GoferFaux'' with: [
+				spec requires: #(''GoferFoo'' ). ].
 
 		spec for: #''nested'' do: [
-			spec 
-				package: ''GoofyFoo'';
-				package: ''GoofyBar'' with: [
-					spec requires: #(''GoofyFoo'' ). ].
-			spec group: ''UI'' with: #(''GoofyBar'' ). ]. ].
+			spec package: ''GoferBeau''. ]. ].
+
+	spec for: #''other'' do: [
+		spec 
+			package: ''GoferBeau'' with: [
+				spec requires: #(''MetacelloTestConfigurationOfFoo'' ). ];
+			package: ''GoferBar'' with: [
+				spec requires: #(''GeauxFaux'' ). ]. ].
 '
