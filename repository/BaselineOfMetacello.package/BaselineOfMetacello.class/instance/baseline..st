@@ -37,8 +37,6 @@ baseline: spec
                                 requires: #('Metacello-MC' 'Metacello-TestsCore' 'Gofer Tests' 'Metacello-ToolBox') ];
                 package: 'Metacello-TestsReference' with: [ spec requires: #('Metacello-Reference') ];
                 package: 'Metacello-TestsTutorial' with: [ spec requires: #('Metacello-Tutorial' 'Metacello-TestsMC') ];
-                package: 'OB-Metacello'
-                    with: [ spec requires: #('Metacello-Platform' 'Metacello-Core' 'Metacello-ToolBox') ];
                 yourself.
             spec
                 group: 'default' with: #('Metacello-Core' 'Metacello-ToolBox' 'Metacello-GitHub');
@@ -46,7 +44,7 @@ baseline: spec
                 group: 'Base Configuration' with: #('Metacello-Base');
                 group: 'Core' with: #('default');
                 group: 'Tutorial' with: #('Metacello-Tutorial' 'Metacello-Reference');
-                group: 'UI' with: #('OB-Metacello');
+                group: 'UI' with: #();
                 group: 'TravisCI'
                     with:
                         #('Metacello-TestsCore' 'Metacello-TestsTutorial' 'Metacello-TestsMC' 'Metacello-TestsReference');
@@ -65,13 +63,6 @@ baseline: spec
                                 versionString: '1.1';
                                 loads: #('Core');
                                 repository: 'http://www.squeaksource.com/MetacelloRepository' ];
-                project: 'OmniBrowser'
-                    with: [ 
-                            spec
-                                className: 'ConfigurationOfOmniBrowser';
-                                versionString: #'stable';
-                                loads: #('Core');
-                                repository: 'http://www.squeaksource.com/MetacelloRepository' ];
                 project: 'OSProcess'
                     with: [ 
                             spec
@@ -87,7 +78,6 @@ baseline: spec
                                 requires: #('Metacello-Platform');
                                 file: 'Metacello-TestsPlatform.squeakCommon' ];
                 package: 'Metacello-Help' with: [ spec requires: 'HelpSystem' ];
-                package: 'OB-Metacello' with: [ spec requires: #('OmniBrowser') ];
                 yourself.
             spec
                 group: 'Tests' with: #('Metacello-TestsPlatform');
@@ -133,12 +123,8 @@ baseline: spec
     spec
         for: #'pharo2.x'
         do: [ 
-            spec
-                package: 'Metacello-Platform'
-                with: [ 
-                    spec
-                        file: 'Metacello-Platform.pharo20';
-                        requires: #('OSProcess') ].
+            spec removeProject: 'OSProcess'.
+            spec package: 'Metacello-Platform' with: [ spec file: 'Metacello-Platform.pharo20' ].
             spec baseline: 'FileTree' with: [ spec repository: 'github://dalehenrich/filetree:pharo2.0/repository' ] ].
     spec
         for: #'squeak'
@@ -170,12 +156,6 @@ baseline: spec
                                 className: 'ConfigurationOfGsMonticello';
                                 versionString: '0.242';
                                 repository: 'http://seaside.gemstone.com/ss/MetacelloRepository' ];
-                project: 'OmniBrowser'
-                    with: [ 
-                            spec
-                                className: 'ConfigurationOfGsOB';
-                                versionString: #'stable';
-                                repository: 'http://seaside.gemstone.com/ss/MetacelloRepository' ];
                 yourself.
             spec
                 package: 'Metacello-GitHub' with: [ spec requires: #('GsCore') ];
@@ -190,7 +170,6 @@ baseline: spec
                             spec
                                 requires: #('Metacello-Platform');
                                 file: 'Metacello-TestsPlatform.gemstone' ];
-                package: 'OB-Metacello' with: [ spec requires: #('OmniBrowser') ];
                 yourself.
             spec
                 group: 'Tests' with: #('Metacello-TestsPlatform');

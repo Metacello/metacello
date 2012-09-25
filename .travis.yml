@@ -23,4 +23,5 @@ script:
    - cd "${BUILD_PATH}/travisCI/"
    - ls -altr *
    - $BUILDER_CI_HOME/buildImageErrorCheck.sh
+   - $BUILDER_CI_HOME/buildTravisStatusCheck.sh
 #   - cat TravisTranscript.txt
