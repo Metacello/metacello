@@ -2,7 +2,6 @@
 	"category" : "Metacello-TestsMC-Scripts",
 	"classinstvars" : [
 		 ],
-	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
 	"commentStamp" : "dkh 6/7/2012 13:31",
@@ -12,5 +11,4 @@
 	"pools" : [
 		 ],
 	"super" : "MetacelloScriptingStandardTestHarness",
-	"traitcomposition" : "{}",
 	"type" : "normal" }

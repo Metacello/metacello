@@ -1,4 +1,4 @@
-actions api
+api actions
 fetch
-    self addStatement: #'fetch' args: #().
+    self addStatement: #'fetch:' args: #(#()).
     ^ self execute

@@ -7,10 +7,10 @@ Currently [Pharo-1.3, Pharo-1.4][1] and [Squeak4.3][2] are supported.
 
 * [Installation](#installation)
 * [Using the Metacello Scripting API](#using-the-metacello-scripting-api)
-* [Scripting API Referenece](*scripting-api-referenece)
+* [Scripting API Referenece](#scripting-api-referenece)
 * [Best Practice](#best-practice)
 * [Specifying Configurations](#specifying-configurations)
-* [Metacello Version Numbers](*metacello-version-numbers)
+* [Metacello Version Numbers](#metacello-version-numbers)
 * [Help](#help)
 
 ## Installation
@@ -53,13 +53,12 @@ bootstrapping will no longer be necessary.*
 ## Using the Metacello Scripting API
 
 * [Loading](#loading)
-* [Upgrading](#upgrading)
-* [Downgrading](#downgrading)
 * [Locking](#locking)
 * [Unlocking](#unlocking)
 * [Getting](#getting)
 * [Fetching](#fetching)
 * [Recording](#recording)
+* [Listing](#listing)
 
 ### Loading
 
@@ -183,8 +182,8 @@ linear load :
 #### `load` Notes
 
 * If a configuration is already present in the image when the load command
-is executed, the existing configuration is used. Use the [get](#getting)
-command to refresh the configuration.
+  is executed, the existing configuration is used. Use the [get](#getting)
+  command to refresh the configuration.
 
 * The default repository is platform-dependent. See the documentation
   for your platform to determine which repository is used. 
@@ -197,103 +196,6 @@ unless loaded as a project dependency.
 
 * See the [Options](#options) section for additional information.
 
-### Upgrading
-
-When you come back to an image that you've left dormant for awhile, it
-can be a real pain to upgrade all of the loaded projects to the latest
-version. With Metacello you can upgrade all of the projects with one
-command:
-
-```Smalltalk
-Metacello upgrade.
-```
-
-The `upgrade` command iterates over all loaded projects; refreshes
-the project configuration and loads the `#stable` version of each project.
-
-You can also selectively upgrade an individual project:
-
-```Smalltalk
-Metacello new
-  configuration: 'Sample';
-  upgrade.
-```
-
-Or upgrade a project to a specific version:
-
-```Smalltalk
-Metacello new
-  configuration: 'Sample';
-  version: '0.9.1';
-  upgrade.
-```
-
-In this case the project configuration is refreshed and the specified
-version is loaded. If the project was previously [locked](*locking), the
-lock is changed to reflect the new version of the project.
-
-If you want to ensure that all dependent projects are upgraded along
-with the target project, you can write an [onUpgrade:](*onupgrade)
-clause:
-
-```Smalltalk
-Metacello new
-  configuration: 'Sample';
-  version: '0.9.1';
-  onUpgrade: [:ex | ex allow ];
-  upgrade.
-```
-
-Otherwise, project locks for dependent projects are honored by the
-upgrade command. 
-
-#### upgrade return value
-
-Like the [load command](#loading), the upgrade command returns an instance of
-[MetacelloVersionLoadDirective](*metacelloversionloaddirective)
-which when printed, gives you a report of the packages loaded
-into your image.
-
-#### `upgrade` Notes
-
-* [project locking](#locking) is respected for dependent projects.
-
-* see the [Options](#options) section for additional information.
-
-### Downgrading
-
-The upgrade command can be used to `downgrade` the version of a
-project:
-
-```Smalltalk
-Metacello new
-  configuration: 'Sample';
-  version: '0.8.0';
-  upgrade.
-```
-
-If you want to ensure that all dependent projects are downgraded along
-with the target project, you can write an [onDowngrade:](*ondowngrade)
-clause:
-
-```Smalltalk
-Metacello new
-  configuration: 'Sample';
-  version: '0.8.0';
-  onDowngrade: [:ex | ex allow ];
-  upgrade.
-```
-
-Otherwise, dependent projects are not normally downgraded.
-
-#### downgrade return value
-
-Like the [upgrade command](#upgrading), the downgrade command returns an instance of
-[MetacelloVersionLoadDirective](*metacelloversionloaddirective)
-which when printed, gives you a report of the packages loaded
-into your image.
-
-
 ### Locking
 
 Automatically upgrading projects is not always desirable. Of course, 
@@ -301,8 +203,6 @@ in the normal course of loading and upgrading, you want the correct
 version of dependent projects loaded. However under the following
 conditions:
 
-* Your application may depend upon a specific version (or 
-  range of versions) for a project.
 * You may be actively developing a particular version of a 
   project and you don't want the
   project upgraded (or downgraded) out from under you.
@@ -321,23 +221,11 @@ Metacello new
   lock.
 ```
 
-Or you can specify a block to be evaluated against the `proposedVersion`
-and answer `true` to allow limited upgrades:
-
-```Smalltalk
-Metacello new
-  configuration: 'Sample';
-  version: [:proposedVersion | 
-    (propsedVersion versionNumberFrom: '0.8.0') <= proposedVersion 
-      and: [ proposedVersion < (proposedVersion versionNumberFrom: '1.0.0') ]];
-  lock.
-```
-
 If you don't specify an explicit version, then the currently loaded
 version of the project is locked:
 
 ```Smalltalk
-Metacello new
+Metacello image
   configuration: 'Sample';
   lock.
 ```
@@ -498,6 +386,37 @@ linear load :
 			load : Sample-Core
 ```
 
+### Listing
+
+The list command may be used to list projects in a repository:
+
+```Smalltalk
+Metacello new
+  configuration: [:spec | true ];
+  repository: 'github://dalehenrich/sample:configuration';
+  list.
+```
+
+or loaded in the image:
+
+```Smalltalk
+Metacello image
+  configuration: [:spec | true ];
+  list.
+```
+
+or registered with Metacello (i.e., projects that have been operated on by the [get](#getting) or [lock](#locking) commands:
+
+```Smalltalk
+Metacello registry
+  configuration: [:spec | true ];
+  list.
+```
+
+#### `list` return value
+
+The list command returns a collection of instances of the [MetacelloProjectSpec](#metacelloprojectspec) class.
+
 ## Scripting API Referenece
 ###Project Specification
 ####configuration:
@@ -507,6 +426,86 @@ linear load :
 ####version:
 ####repository:
 ##### Repository descriptions
+The **Repository description** is a URL that is used to resolve the location of Metacello repositories.
+
+The general form of the **description**:
+
+```
+  scheme://location
+```
+
+Where the *scheme* may be any one of the following:
+
+ * [client](#client)
+ * [dictionary](#dictionary)
+ * [filetree](#filetree)
+ * [ftp](#ftp)
+ * [github](#github)
+ * [http](#http)
+ * [server](#server) 
+
+The layout of the *location* is dependent upon the *scheme* being used.
+
+##client://
+
+```
+  client:// <full directory path to Monticello repository>
+```
+
+##dictionary://
+
+```
+  dictionary:// <Global name of dictionary containing Monticello repository instance>
+```
+
+##filetree://
+
+```
+  filetree:// <full directory path to Filetree repository>
+```
+
+##ftp://
+
+```
+  ftp:// <ftp server host name> [: <port> ] </ path>
+```
+
+*NOTE: Squeak and Pharo only.*
+
+##github://
+
+```
+  github:// <github user> / <github project>  [ : <version identifier> ] [ / <repository path> ]
+```
+
+*gitthub://* is the scheme identifier for the GitHub repository description.
+
+*github user* is the user name or organization name of the owner of the GitHub proejct.
+
+*github project* is the name of the GitHub project.
+
+*version identifier* is the name of a *branch*, the name of a *tag* or the *SHA* of a commit. The *tag name* and *SHA*  
+identifies a specific commit. The *branch name* resolves to the current HEAD of the branch. The **version identifier** is 
+optional. 
+
+*repository path* is the path to a subdirectory in the project where the repository is rooted. If absent the repository 
+is rooted in the projects HOME directory.
+
+##http://
+
+```
+  http:// <http server host name> [: <port> ] </ path to Monticello repository>
+```
+
+##server://
+
+```
+  server:// <full directory path to Monticello repository>
+```
+
+*NOTE: GemStone only.*
+
+
 ##### Repository Shortcuts
 
 * blueplane:
@@ -527,6 +526,7 @@ linear load :
 ####onDowngrade:
 ####onConflict:
 ####silently
+### Metacello Project Registry
 ### Classes
 #### MetacelloProjectRegistration
 #### MetacelloProjectSpec

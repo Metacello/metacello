@@ -1,8 +1,7 @@
 running
 setUp
     super setUp.
-    baselineRegistry := MetacelloProjectRegistration baselineRegistry.
-    configurationRegistry := MetacelloProjectRegistration configurationRegistry.
+    registry := MetacelloProjectRegistration registry.
     self setUpRepositories.
     self setUpRepositoryContents.
     MetacelloProjectRegistration resetRegistry

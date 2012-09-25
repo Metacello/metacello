@@ -2,18 +2,18 @@
 	"category" : "Metacello-Core-Scripts",
 	"classinstvars" : [
 		 ],
-	"classtraitcomposition" : "{}",
 	"classvars" : [
-		"BaselineRegistry",
-		"ConfigurationRegistry" ],
+		"Registry" ],
 	"commentStamp" : "",
 	"instvars" : [
 		"projectName",
 		"configurationProjectSpec",
-		"baselineProjectSpec" ],
+		"baselineProjectSpec",
+		"loadedInImage",
+		"locked",
+		"mutable" ],
 	"name" : "MetacelloProjectRegistration",
 	"pools" : [
 		 ],
 	"super" : "Object",
-	"traitcomposition" : "{}",
 	"type" : "normal" }

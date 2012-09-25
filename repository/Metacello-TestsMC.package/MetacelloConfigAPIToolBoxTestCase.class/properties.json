@@ -2,7 +2,6 @@
 	"category" : "Metacello-TestsMC",
 	"classinstvars" : [
 		 ],
-	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
@@ -11,6 +10,5 @@
 	"name" : "MetacelloConfigAPIToolBoxTestCase",
 	"pools" : [
 		 ],
-	"super" : "MetacelloConfigAbstractAPITestCase",
-	"traitcomposition" : "{}",
+	"super" : "MetacelloConfigMCAPITestCase",
 	"type" : "normal" }

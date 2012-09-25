@@ -1,3 +1,4 @@
 accessing
 projectName: anObject
-	projectName := anObject
+    self shouldBeMutable.
+    projectName := anObject

@@ -1,3 +1,3 @@
-api
+api projectSpec
 project: projectName
-    self addStatement: #'project:' args: {projectName}
+    self addStatement: #'projectArg:' args: {projectName}

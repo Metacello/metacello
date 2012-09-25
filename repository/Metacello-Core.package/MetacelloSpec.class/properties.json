@@ -2,16 +2,15 @@
 	"category" : "Metacello-Core-Specs",
 	"classinstvars" : [
 		 ],
-	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
 		"project",
-		"loader" ],
+		"loader",
+		"mutable" ],
 	"name" : "MetacelloSpec",
 	"pools" : [
 		 ],
 	"super" : "Object",
-	"traitcomposition" : "{}",
 	"type" : "normal" }

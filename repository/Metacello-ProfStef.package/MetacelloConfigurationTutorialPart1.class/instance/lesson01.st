@@ -4,7 +4,7 @@ lesson01
 		title: 'Lesson 1'
 		lesson: 
 '
-ToolSet browse: MetacelloTutorialConfig selector: #version01:.
+Smalltalk tools browse: MetacelloTutorialConfig selector: #version01:.
 
 "Version 0.1 represents the simplest version specification possible. 
 

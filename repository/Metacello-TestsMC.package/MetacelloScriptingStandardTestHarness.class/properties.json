@@ -2,18 +2,15 @@
 	"category" : "Metacello-TestsMC-Scripts",
 	"classinstvars" : [
 		 ],
-	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"baselineRegistry",
-		"configurationRegistry",
+		"registry",
 		"monticelloRepository",
 		"configurationRepository" ],
 	"name" : "MetacelloScriptingStandardTestHarness",
 	"pools" : [
 		 ],
 	"super" : "TestCase",
-	"traitcomposition" : "{}",
 	"type" : "normal" }

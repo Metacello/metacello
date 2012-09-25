@@ -6,12 +6,10 @@ canUpgradeTo: aProjectRegistration
 
     (self hasLoadConflicts: aProjectRegistration)
         ifFalse: [ ^ true ].
-    (self isValid and: [ aProjectRegistration isValid ])
-        ifFalse: [ ^ false ].
-    self projectName = aProjectRegistration projectName
-        ifFalse: [ ^ false ].
     configurationProjectSpec
         ifNotNil: [ 
             aProjectRegistration configurationProjectSpec
-                ifNotNil: [ ^ configurationProjectSpec canUpgradeTo: aProjectRegistration configurationProjectSpec ] ].
+                ifNotNil: [ 
+                    configurationProjectSpec copy ensureProjectLoaded.
+                    ^ configurationProjectSpec canUpgradeTo: aProjectRegistration configurationProjectSpec ] ].
     ^ false

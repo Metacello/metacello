@@ -2,7 +2,6 @@
 	"category" : "Metacello-TestsMC-Scripts",
 	"classinstvars" : [
 		 ],
-	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
@@ -11,6 +10,5 @@
 	"name" : "MetacelloScriptingGetTestCase",
 	"pools" : [
 		 ],
-	"super" : "MetacelloBasicScriptingTestCase",
-	"traitcomposition" : "{}",
+	"super" : "MetacelloExternalScriptingTestCase",
 	"type" : "normal" }

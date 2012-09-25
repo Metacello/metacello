@@ -15,12 +15,12 @@ packageSpecsInLoadOrderForMap: packageMap
                 ifTrue: [ 
                     "insert the imports at this point"
                     importNames
-                        do: [ :importName | 
+                        do: [ :importedName | 
                             pkgs
                                 add:
                                     (importSpec := importProjectSpec copy
-                                        name: importName;
-                                        mergeImportLoads: {importName};
+                                        name: importedName;
+                                        mergeImportLoads: {importedName};
                                         yourself).
-                            importSpec projectReference name: importName ] ] ].
+                            importSpec projectReference name: importedName ] ] ].
     ^ pkgs

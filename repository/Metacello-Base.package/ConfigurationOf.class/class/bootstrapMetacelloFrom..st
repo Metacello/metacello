@@ -1,12 +1,12 @@
 private
 bootstrapMetacelloFrom: repositoryUrl
-    "Corresponds to version 1.0-beta.32.2"
+    "Corresponds to version 1.0-beta.32.3"
 
     "KEEP MetacelloConfigTemplate class>>ensureMetacelloBaseConfiguration in synch!"
 
     | platformPkg |
     self ensureGoferVersion: 'Gofer-Core-lr.115' repositoryUrl: repositoryUrl.
-    #('Metacello-Base-dkh.78' 'Metacello-Core-dkh.604' 'Metacello-MC-dkh.629')
+    #('Metacello-Base-dkh.103' 'Metacello-Core-dkh.667' 'Metacello-MC-dkh.665')
         do: [ :pkg | self bootstrapPackage: pkg from: repositoryUrl ].
     platformPkg := Smalltalk
         at: #'SystemVersion'

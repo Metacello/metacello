@@ -3,14 +3,9 @@
 		 },
 	"instance" : {
 		"handleExpectedValidationFailure:" : "dkh 6/12/2012 15:41:23.319",
-		"handleExpectedValidationFailure:reasonCode:" : "dkh 6/12/2012 15:41:23.319",
-		"testFileTreeGetBaseline" : "dkh 6/12/2012 15:41:23.319",
+		"handleExpectedValidationFailure:reasonCode:" : "dkh 7/23/2012 11:54",
+		"testFileTreeGetBaseline" : "dkh 7/12/2012 16:57",
 		"testFileTreeGetConfigurationBasicSpecIV" : "dkh 6/12/2012 15:41:23.319",
 		"testMissingClassName" : "dkh 6/12/2012 15:41:23.319",
-		"testMissingProject" : "dkh 6/12/2012 15:41:23.319",
-		"testMissingRepository1" : "dkh 6/12/2012 15:41:23.319",
-		"testMissingRepository2" : "dkh 6/12/2012 15:41:23.319",
-		"testMissingRepository3" : "dkh 6/12/2012 15:41:23.319",
-		"testMissingVersion1" : "dkh 6/12/2012 15:41:23.319",
-		"testMissingVersion2" : "dkh 6/12/2012 15:41:23.319",
+		"testMissingProject" : "dkh 7/12/2012 16:27",
 		"testPresentVersion3" : "dkh 6/12/2012 15:41:23.319" } }

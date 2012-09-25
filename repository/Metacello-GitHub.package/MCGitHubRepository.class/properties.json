@@ -2,7 +2,6 @@
 	"category" : "Metacello-GitHub",
 	"classinstvars" : [
 		 ],
-	"classtraitcomposition" : "{}",
 	"classvars" : [
 		"DownloadCache" ],
 	"commentStamp" : "",
@@ -14,5 +13,4 @@
 	"pools" : [
 		 ],
 	"super" : "MCFileTreeRepository",
-	"traitcomposition" : "{}",
 	"type" : "normal" }

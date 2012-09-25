@@ -4,8 +4,8 @@ lesson07
 		title: 'Lesson 7'
 		lesson: 
 '
-ToolSet browse: MetacelloProjectRefTutorialConfig selector: #baseline07:.
-ToolSet browse: MetacelloProjectRefTutorialConfig selector: #version07:.
+Smalltalk tools browse: MetacelloProjectRefTutorialConfig selector: #baseline07:.
+Smalltalk tools browse: MetacelloProjectRefTutorialConfig selector: #version07:.
 
 "NOTE: you should run through the lessons in Part 1 first.
 

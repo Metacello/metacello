@@ -2,17 +2,14 @@
 	"category" : "Metacello-Base",
 	"classinstvars" : [
 		 ],
-	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
-	"commentStamp" : "dkh 6/25/2012 14:56",
+	"commentStamp" : "dkh 7/28/2012 20:04",
 	"instvars" : [
-		"scriptEngine",
-		"ensureList",
+		"executorSpec",
 		"statements" ],
 	"name" : "Metacello",
 	"pools" : [
 		 ],
 	"super" : "Object",
-	"traitcomposition" : "{}",
 	"type" : "normal" }

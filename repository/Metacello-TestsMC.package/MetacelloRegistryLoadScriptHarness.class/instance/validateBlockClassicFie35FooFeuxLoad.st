@@ -5,7 +5,7 @@ validateBlockClassicFie35FooFeuxLoad
     self
         validateProjects:
             {{'MetacelloTestConfigurationOfProjectFie'.
-            '4.0'.
+            '3.5'.
             'dictionary://Metacello_Configuration_Test_Repository'.
             nil.
             nil.

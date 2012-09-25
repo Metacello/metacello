@@ -1,392 +1,301 @@
-# Metacello Scripting API Documentation
+# Metacello User Guide
 
-The **Metacello Scripting API** provides a platform independent way for
-loading Metacello configurations into your image.
+In this guide we'll take a walk through a couple of common development
+scenarios and highlight some of the features of the *Metacello Scripting
+API*.
 
-Currently [Pharo1.3][1] and [Squeak4.3][2] are supported.
+*For installatation and more detailed documentation on the Metacello
+Scripting API, see the [Metcello Scripting API Documentation][1].*
 
-* [Installation](#installation)
-* [Using the Metacello Scripting API](#using-the-metacello-scripting-api)
-* [Best Practice](#best-practice)
-* [Specifying Configurations](#specifying-configurations)
-* [Metacello Version Numbers](*metacello-version-numbers)
-* [Help](#help)
+## Introduction
 
-## Installation
-
-To get started we need to load the `ConfigurationOfMetacello`. In a Pharo1.3 image:
-
-```Smalltalk
-"Get the Metacello configuration"
-Gofer new
-  gemsource: 'metacello';
-  package: 'ConfigurationOfMetacello';
-  load.
-```
-
-or a Squeak4.3 image:
-
-```Smalltalk
-Installer gemsource
-    project: 'metacello';
-    install: 'ConfigurationOfMetacello'. 
-```
-
-then bootstrap `Metacello 1.0-beta.32` and install the `Metacello Preview` code (both images):
-
-```Smalltalk
-((Smalltalk at: #ConfigurationOfMetacello) project 
-  version: '1.0-beta.32') load.
-
-(Smalltalk at: #Metacello) new
-  configuration: 'MetacelloPreview';
-  version: #stable;
-  repository: 'github://dalehenrich/metacello-work:configuration';
-  load.
-```
-
-*Once the Metacello Scripting API is released, the Metacello class
-will be installed in the base images for GemStone, Pharo and Squeak and
-bootstrapping will no longer be necessary.*
-
-## Using the Metacello Scripting API
-
-* [Loading](#loading)
-* [Upgrading](#upgrading)
-* [Downgrading](#downgrading)
-* [Locking](#locking)
-* [Unlocking](#unlocking)
-* [Getting](#getting)
-* [Fetching](#fetching)
-* [Recording](#recording)
-* [Finding](#finding)
-* [Listing](#listing)
-
-### Loading
-
-Metacello loads the packages and dependencies (*required projects*) for a project
-based on the specifications in the [configuration of a
-project](#configurationof).
-
-The statement: 
-
-```Smalltalk
-Metacello new
-  configuration: 'Seaside30';
-  squeaksource: 'MetacelloRepository';
-  version: '3.0.7';
-  load.
-```
-
-will download the `ConfigurationOfSeaside30` package from
-`http:www.squeaksource.com/MetacelloRepository` and 
-proceed to load the `default` group of `Seaside 3.0.7` into your image.
-
-The above expression is equivalent to the following old-style `Gofer-based`
-expression:
+The number one job of the *Metacello Scripting API* is to simplify the
+job of loading projects into your image. As you are probably all
+too aware, today it's a two step process where you first load the
+configuration into your image using [Gofer][2] and then load your
+project using Metacello:
 
 ```Smalltalk
 Gofer new
-  squeaksource: 'MetacelloRepository';
   package: 'ConfigurationOfSeaside30';
-  load.
-((Smalltalk at: #ConfigurationOfSeaside30) project version: '3.0.7') load.
-``` 
-
-Besides being a bit more compact, the Metacello scripting API uses a few
-handy default values for the **version** and **repository** attributes.
-The default **version** attribute is `#stable` and the default
-**repository** attribute is [platform-dependent](#load-notes)
-
-Applying the default values, the following expression:
-
-```Smalltalk
-Metacello new
-  configuration: 'Seaside30';
-  load.
-```
-
-is equivalent to (assuming the platform-specific default repository is `http:www.squeaksource.com/MetacelloRepository`):
-
-```Smalltalk
-Metacello new
-  configuration: 'Seaside30';
   squeaksource: 'MetacelloRepository';
-  version: #stable;
+  load.
+((Smalltalk at: #ConfigurationOfSeaside30) version: #stable) load.
+```
+
+In the early days of Metacello (and Gofer) this was a great improvement
+over the alternatives, but today, 3 years after the introduction of
+Metacello, there should be a better way...and there is.
+Using the *Metacello Scripting API* the above expression reduces to the
+following:
+
+```Smalltalk
+Metacello new
+  configuration: 'Seaside30';
   load.
 ```
 
-Arguments to the **load** command may be used to specify which groups,
-packages or dependent projects should be loaded instead of the
-`default` group.
+## Loading
 
-This command loads the `Base` group for the `#stable` version of `Seaside30`:
-
-```Smalltalk
-Metacello new
-  configuration: 'Seaside30';
-  load: 'Base'.
-```
-
-This command loads the `Base` group, the `Seaside-HTML5` package, 
-and the `Zinc-Seaside` package for the `#stable` version of `Seaside30`:
+In this example of the [`load` command][5] we are leveraging a couple of
+default values, namely the `version` of the project and the `repository` where the
+**ConfigurationOfSeaside** package can be found:
 
 ```Smalltalk
 Metacello new
   configuration: 'Seaside30';
-  load: #('Base' 'Seaside-HTML5' 'Zinc-Seaside').
+  load.
 ```
 
-#### `load` Notes
-
-* If a configuration is already present in the image when the load command
-is executed, the existing configuration is used. Use the [get](#getting)
-command to refresh the configuration.
-
-* The default repository is platform-dependent. See the documentation
-  for your platform to determine which repository is used. 
-  Currently `http:www.squeaksource.com/MetacelloRepository` is used as the default.
-
-* `github://` projects are implicitly [locked](#locking) when loaded.
-
-* `filetree://` projects are implicitly [locked](#locking) when loaded
-unless loaded as a project dependency.
-
-* see the [Options](#options) section for additional information.
-
-### Upgrading
-
-When you come back to an image that you've left dormant for awhile, it
-can be a real pain to upgrade all of the loaded projects to the latest
-version. With Metacello you can upgrade all of the projects with one
-command:
-
-```Smalltalk
-Metacello upgrade.
-```
-
-The `upgrade` command iterates over all loaded projects; refreshes
-the project configuration and loads the `#stable` version of each project.
-
-You can also selectively upgrade an individual project:
+Here is a variant
+of the same expression with the (current) default values explicitly specified:
 
 ```Smalltalk
 Metacello new
   configuration: 'Seaside30';
-  upgrade.
+  version: #stable;
+  squeaksource: 'MetacelloRepository';
+  load.
 ```
 
-Or upgrade a project to a specific version:
+The `version` attribute can be any legal [version number][10].
+`squeaksource` is a [repository shortcut][4]. You can also specify the
+full [repository description][3] as follows:
 
 ```Smalltalk
 Metacello new
   configuration: 'Seaside30';
-  version: '3.0.8';
-  upgrade.
+  version: #stable;
+  repository: 'http://www.squeaksource.com/MetacelloRepository';
+  load.
 ```
 
-In this case the project configuration is refreshed and the specified
-version is loaded. If the project was previously [locked](*locking), the
-lock is changed to reflect the new version of the project.
+##Listing
 
-If you want to ensure that all dependent projects are upgraded along
-with the target project, you can write an [onUpgrade:](*onupgrade)
-clause:
+Once you've loaded one or more projects into your image, you may want to
+list them. The following is an example of the [`list` command][6]:
+
+```Smalltalk
+Metacello image
+  configuration: [:spec | true ];
+  list.
+```
+
+The `image` message tells Metacello that you'd like to look
+at only loaded configurations. 
+
+The *block* argument to the
+`configuration:` message is used to *select* against the list of loaded
+[MetacelloProjectSpec][7] instances in the [registry][8].
+
+The `list` command itself returns a list of [MetacelloProjectSpec][7] instances that can be printed, inspected or otherwise manipulated.
+
+In addition to a *select block*, you can specify a *select collection*
+specifying the names of the projects you'd like to select:
+
+```Smalltalk
+Metacello registry
+  configuration: #('Seaside30' 'MetacelloPreview');
+  list.
+```
+
+The `registry` message tells Metacello that you'd like to
+look at all projects in the [registry][8] whether or not they are loaded.
+
+The *collection* argument to the `configuration:` message is used to
+*select* against the list of project names in the [registry][8].
+
+The `list` command can also be used to look at configurations in
+Monticello repositories. For example:
 
 ```Smalltalk
 Metacello new
-  configuration: 'Seaside30';
-  version: '3.0.8';
-  onUpgrade: [:ex | ex allow];
-  upgrade.
+  configuration: [:spec | spec name beginsWith: 'Seaside'];
+  squeaksource: 'MetacelloRepository';
+  list.
 ```
 
-Otherwise, project locks for dependent projects are honored by the
-upgrade command. 
+lists the configurations whose names (sans the `ConfigurationOf`) begin
+with `Seaside` in the `MetacelloRepositry` in the
+[Squeaksource](http://www.squeaksource.com) repostory.
 
-#### `upgrade` Notes
+## Getting
 
-* [project locking](#locking) is respected for dependent projects.
+Once you've loaded a project into your image the next logical step is
+upgrading your project to a new version. 
 
-* see the [Options](#options) section for additional information.
+Let's say that a new `#stable` version of Seaside30 has been released
+and that you want to upgrade. This is a two step process: 
 
-#### Downgrading
+* [get a new version of the configuration][11]
+* [load the new version][12]
 
-The upgrade command can be used to `downgrade` the version of a
-project:
+### Get a new version of the configuration
 
-```Smalltalk
-Metacello new
-  configuration: 'Seaside30';
-  version: '3.0.0';
-  upgrade.
-```
-
-If you want to ensure that all dependent projects are downgraded along
-with the target project, you can write an [onDowngrade:](*ondowngrade)
-clause:
+The following expression gets the latest version of the
+configuration:
 
 ```Smalltalk
-Metacello new
-  configuration: 'Seaside30';
-  version: '3.0.0';
-  onDowngrade: [:ex | ex allow];
-  upgrade.
-```
-
-Otherwise, dependent projects are not normally downgraded.
-
-### Locking
-
-Automatically upgrading projects is not always desirable. Of course, 
-in the normal course of loading and upgrading, you will want the correct
-version of dependent projects loaded. However under the following
-conditions:
-
-* Your application may depend upon a specific version (or 
-  range of versions) for a project.
-* You may be actively developing a particular version of a 
-  project and you don't want the
-  project upgraded (or downgraded) out from under you.
-* You may be working with a git checkout of a project and you want to
-  continue using the git checkout.
-
-you many not want to have particular projects upgraded automatically.
-The `lock` command gives you control.
-
-You can lock a project to a particular version:
-
-```Smalltalk
-Metacello new
-  configuration: 'Seaside30';
-  version: '3.0.7';
-  lock.
-```
-
-Or you can specify a block to be evaluated against the `proposedVersion`
-and answer `true` to allow limited upgrades:
-
-```Smalltalk
-Metacello new
-  configuration: 'Seaside30';
-  version: [:proposedVersion | 
-    (propsedVersion versionNumberFrom: '3.0.7') <= proposedVersion 
-      and: [ proposedVersion < (proposedVersion versionNumberFrom: '3.1.0') ]];
-  lock.
-```
-
-If you don't specify an explicit version, then the currently loaded
-version of the project is locked:
-
-```Smalltalk
-Metacello new
-  configuration: 'Seaside30';
-  lock.
-```
-
-If you are locking a [baseline configuration](#baselineof) it is not
-necessary to specify a version:
-
-```Smalltalk
-Metacello new
-  baseline: 'Seaside30';
-  lock.
-```
-
-#### `lock` Notes
-
-* To lock a git checkout for a project, you should lock the `baseline`:
-
-    ```Smalltalk
-    Metacello new
-      baseline: 'Seaside30';
-      lock.
-    ```
-
-### Unlocking
-
-```Smalltalk
-Metacello new
-  baseline: 'Seaside30';
-  unlock.
-```
-
-### Getting
-
-```Smalltalk
-Metacello new
+Metacello image
   configuration: 'Seaside30';
   get.
 ```
 
-### Fetching
+By using the `image` message, you can leverage the fact that the [registry][8] remembers
+from which repository you loaded the original version of the configuration.
+
+The `get` command simply downloads the latest version of the
+configuration package from the repository.
+
+You may download the configuration from a different repository:
+
+```Smalltalk
+Metacello image
+  configuration: 'Seaside30';
+  squeaksource: 'Seaside30;
+  get.
+```
+
+The `get` command will update the [registry][8] with the new
+repository location information.
+
+You may also use the `get` command to load a configuration for a project
+into your image without actually loading the project itself:
+
+```Smalltalk
+Metacello image
+  configuration: 'SeasideRest';
+  squeaksource: 'Seaside30';
+  get.
+```
+
+The 'SeasideRest' project information will be registered in the [registry][8] and marked
+as *unloaded*.
+
+### Load the new version
+
+Once you've got a new copy of the Seaside30 configuration loaded into your image, you may
+upgrade your image with the following expression:
+
+```Smalltalk
+Metacello image
+  configuration: 'Seaside30';
+  version: #stable;
+  load.
+```
+
+By using the `image` message, you are asking Metacello to look the
+project up in the [registry][8] before performing the
+operation, so it isn't necessary to supply all of the project details for every
+command operation.
+
+Of course, the `load` command updates the [registry][8].
+
+If you want to load a project for which you've already done a `get`
+(like the SeasideRest project earlier), you can do the following:
+
+```Smalltalk
+Metacello registry
+  configuration: 'SeasideRest';
+  version: #stable;
+  load.
+```
+
+In this case you use the `registry` message to indicate that you are
+interested in both *loaded* and *unloaded* projects.
+
+##Locking
+
+Let's say that you are using an older version of Seaside30 (say 3.0.5)
+instead of the #stable version (3.0.7) and that your application doesn't
+work with newer versions of Seaside30 (you've tried and it's more work
+to get you application to work with the newer version of Seaside30 than
+it's worth).
+
+Let's also say that you want to try out something in the
+SeasideRest project, but when you try loading SeasideRest, you end up
+having Seaside 3.0.7 loaded as well. 
+
+This is an unfortunate side effect of Metacello trying to *do the right
+thing*, only in your case it is the wrong thing.
+
+Fortunately, the [`lock` command][9] can give you control. First you
+need to `lock` the Seaside30 project:
+
+```Smalltalk
+Metacello image
+  configuration: 'Seaside30';
+  lock.
+```
+
+The `image` message tells Metacello to do a lookup in the list of loaded
+projects and then to put a lock on the loaded version of the project.
+
+If you want you can specify which version of the project you want
+locked:
+
+```Smalltalk
+Metacello image
+  configuration: 'Seaside30';
+  version: '3.0.5';
+  lock.
+```
+
+After a project is locked an error (**MetacelloLockedProjectError**) is 
+thrown when you attempt to load a project that has a dependency upon a 
+different version of Seaside30. The error is thrown before any packages 
+are actually loaded.
+
+### Bypassing locks
+
+Let's say that you want to load the SeasideRest project even though it may
+require a version of Seaside30 that is later than the version that you have
+locked. To do that you need to suppress the upgrade of the Seaside30
+project during the load of the SeasideRest project and you can do that
+with the use of the `onUpgrade:` message:
 
 ```Smalltalk
 Metacello new
+  configuration: 'SeasideRest';
+  version: #stable;
+  onUpgrade: [:ex :existing :new | 
+    existing baseName = 'Seaside30'
+      ifTrue: [ ex disallow ].
+    ex pass ];
+  load.
+```
+
+The `onUpgrade:` block tells Metacello to disallow the upgrade of any
+project whose `baseName` is `Seaside30` and to continue with the load.
+Of course if there are any explicit dependencies between SeasideRest and
+the later version of Seaside30 (missing classes, etc.) then you may very
+well get load errors or errors while using the SeasideRest, but that's
+the price you pay for not upgrading.
+
+### Upgrading a locked project
+
+If you want to explicitly upgrade a locked project, you can use the
+`load` command. The following command will upgrade Seaside30 to version
+3.0.6 even if it is locked:
+
+ ```Smalltalk
+Metacello image
   configuration: 'Seaside30';
-  fetch.
+  version: '3.0.6';
+  lock.
 ```
 
-### Recording
+The newly loaded of the project will continue to be locked.
 
-```Smalltalk
-Metacello new
-  configuration: 'Seaside30';
-  record.
-```
-
-### Finding
-
-```Smalltalk
-Metacello new
-  configuration: 'Seaside30';
-  find.
-```
-
-### Listing
-
-```Smalltalk
-Metacello list.
-```
-
-### Project Specs
-####configuration:
-####baseline:
-####project:
-####className:
-####version:
-####repository:
-##### Repository descriptions
-##### Repository Shortcuts
-
-* blueplane:
-* croquet:
-* gemsource:
-* impara:
-* renggli:
-* saltypickle:
-* squeakfoundation:
-* squeaksource:
-* wiresong:
-
-### Options
-####ignoreImage
-####onUpgrade:
-####onDowngrade:
-####onConflict:
-####silently
-## Best Practice
-### Use #development and #release blessings
-#### Semantic Versioning
-### Validate configuration before commit
-### GitHub project structure
-## Specifying Configurations
-
-### ConfigurationOf
-### BaselineOf
-
-## Metacello Version Numbers
-## Help
-
-[1]: http://www.pharo-project.org/pharo-download/release-1-3
-[2]: http://www.squeak.org/Download/
+[1]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md
+[2]: http://www.lukas-renggli.ch/blog/gofer
+[3]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#repository-descriptions
+[4]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#repository-shortcuts
+[5]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#loading
+[6]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#listing
+[7]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#metacelloprojectspec
+[8]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#metacello-project-registry
+[9]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#locking
+[10]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#metacello-version-numbers
+[11]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloUserGuide.md#get-a-new-version-of-the-configuration
+[12]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloUserGuide.md#load-the-new-version

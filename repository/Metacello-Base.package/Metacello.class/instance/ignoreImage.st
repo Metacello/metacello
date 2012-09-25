@@ -1,4 +1,4 @@
-options api
+api options
 ignoreImage
     "ignore image state"
 

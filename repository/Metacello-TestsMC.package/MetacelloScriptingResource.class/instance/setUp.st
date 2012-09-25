@@ -10,12 +10,11 @@ setUp
         setUpBaselineOfExternalX;
         setUpBaselineOfExternalXX;
         setUpBaselineOfExternalXXX;
-        setUpVersionBaselineOfExternalX;
-        setUpVersionBaselineOfExternalXX;
-        setUpVersionBaselineOfExternalXXX;
-        setUpVersionBaselineOfExternalIV;
+        setUpConfigurationOfExternalX;
+        setUpConfigurationOfExternalXX;
+        setUpConfigurationOfExternalXXX;
+        setUpConfigurationOfExternalIV;
         setUpBaselineGithubReferenceXX;
-        setUpBaselineGithubReferenceXXX;
         setUpBaselineGithubReferenceIV;
         setUpBaselineGithubReferenceV;
         setUpBaselineGithubReferenceVI;
@@ -32,4 +31,7 @@ setUp
         setUpBaselineIssue32;
         setUpConfigurationIssue59;
         setUpConfiguration63;
+        setUpLockConfigurations;
+        setUpConfigurationIssue84;
+        setUpConfigurationNextedIssue84;
         yourself

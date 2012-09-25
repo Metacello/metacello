@@ -1,6 +1,6 @@
 utilities
 validateExpectedConfigurationClassName: expectedConfigurationClassName expectedConfigurationVersion: expectedConfigurationVersion expectedConfigurationRepository: expectedConfigurationRepository expectedBaselineClassName: expectedBaselineClassName expectedBaselineVersion: expectedBaselineVersion expectedBaselineRepository: expectedBaselineRepository
-    MetacelloProjectRegistration configurationRegistry
+    MetacelloProjectRegistration registry configurationRegistry
         at: expectedConfigurationClassName
         ifPresent: [ :existing | 
             | spec x |
@@ -8,7 +8,7 @@ validateExpectedConfigurationClassName: expectedConfigurationClassName expectedC
             self assert: (x := spec versionString) = expectedConfigurationVersion.
             self assert: (spec repositoryDescriptions includes: expectedConfigurationRepository) ]
         ifAbsent: [ self assert: expectedConfigurationVersion == nil ].
-    MetacelloProjectRegistration baselineRegistry
+    MetacelloProjectRegistration registry baselineRegistry
         at: expectedBaselineClassName
         ifPresent: [ :existing | 
             | spec |

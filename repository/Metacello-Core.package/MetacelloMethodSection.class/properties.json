@@ -2,15 +2,13 @@
 	"category" : "Metacello-Core-Constructors",
 	"classinstvars" : [
 		 ],
-	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"attribute" ],
+		"attributes" ],
 	"name" : "MetacelloMethodSection",
 	"pools" : [
 		 ],
 	"super" : "Object",
-	"traitcomposition" : "{}",
 	"type" : "normal" }

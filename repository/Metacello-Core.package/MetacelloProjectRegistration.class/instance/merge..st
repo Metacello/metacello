@@ -6,6 +6,8 @@ merge: aProjectRegistration
 
     "(self hasMergeConflicts: aProjectRegistration)
         ifTrue: [ ^ self error: 'Attempt to merge registrations with conflicts' ]."
+
+    self shouldBeMutable.
     configurationProjectSpec
         ifNil: [ configurationProjectSpec := aProjectRegistration configurationProjectSpec ]
         ifNotNil: [ 

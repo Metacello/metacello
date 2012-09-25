@@ -4,7 +4,7 @@ lesson11Descripton
 		title: 'Lesson 11 (Description)'
 		lesson: 
 '
-ToolSet browse: MetacelloTutorialConfig selector: #version11:.
+Smalltalk tools browse: MetacelloTutorialConfig selector: #version11:.
 
 "A description can be defined for a version:"
 

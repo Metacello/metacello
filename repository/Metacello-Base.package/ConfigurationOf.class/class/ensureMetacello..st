@@ -5,38 +5,35 @@ ensureMetacello: loadList
     Smalltalk
         at: #'MetacelloProject'
         ifAbsent: [ 
-            | retry version error gofer |
-            retry := false.
+            | version error gofer |
             (Array with: 'http://seaside.gemstone.com/ss/metacello' with: 'http://www.squeaksource.com/metacello')
                 do: [ :repositoryUrl | 
-                    [ 
                     "bootstrap Metacello"
+                    [ 
                     self bootstrapMetacelloFrom: repositoryUrl.
                     Smalltalk
                         at: #'ConfigurationOfMetacello'
                         ifAbsent: [ 
-                            gofer := (Smalltalk at: #'Gofer') new.
-                            gofer
-                                perform: #'url:' with: repositoryUrl;
-                                perform: #'package:' with: 'ConfigurationOfMetacello';
-                                perform: #'load' ].
+                            self
+                                retry: [ 
+                                    gofer := (Smalltalk at: #'Gofer') new.
+                                    gofer
+                                        perform: #'url:' with: repositoryUrl;
+                                        perform: #'package:' with: 'ConfigurationOfMetacello';
+                                        perform: #'load' ] ].
                     version := (Smalltalk at: #'ConfigurationOfMetacello') project version: '1.0-beta.32'.	"bootstrap with 1.0-beta.32"
-                    retry
-                        ifTrue: [ 
-                            "on retry, use #repositoryOverrides:"
-                            version
-                                repositoryOverrides:
-                                    (Array with: (MCHttpRepository location: repositoryUrl user: '' password: '')) ].
                     version load: loadList.
-                    gofer := (Smalltalk at: #'Gofer') new.
-                    Smalltalk
-                        at: #'ConfigurationOfMetacelloPreview'
-                        ifAbsent: [ 
-                            gofer
-                                perform: #'url:' with: repositoryUrl;
-                                perform: #'package:' with: 'ConfigurationOfMetacelloPreview';
-                                perform: #'load' ].
-                    version := (Smalltalk at: #'ConfigurationOfMetacelloPreview') project version: '1.0.0-beta.32.2'.	"load latest from GitHub"
+                    self
+                        retry: [ 
+                            gofer := (Smalltalk at: #'Gofer') new.
+                            Smalltalk
+                                at: #'ConfigurationOfMetacelloPreview'
+                                ifAbsent: [ 
+                                    gofer
+                                        perform: #'url:' with: repositoryUrl;
+                                        perform: #'package:' with: 'ConfigurationOfMetacelloPreview';
+                                        perform: #'load' ] ].
+                    version := (Smalltalk at: #'ConfigurationOfMetacelloPreview') project version: #'stable'.	"load latest from GitHub"
                     version load: loadList.
                     ^ self ]
                         on: Error
@@ -44,9 +41,10 @@ ensureMetacello: loadList
                             error := ex.
                             Transcript
                                 cr;
-                                show: 'failed ensureMetacello: ';
+                                show: 'failed ensureMetacello using ';
+                                show: repositoryUrl printString;
+                                show: ' : ';
                                 show: ex description printString;
                                 show: '...retrying'.	"try again"
-                            retry := true.
                             ex return: nil ] ].	"shouldn't get here unless the load failed ... throw an error"
             self error: 'retry with alternate repository failed: ' , error description printString ]
