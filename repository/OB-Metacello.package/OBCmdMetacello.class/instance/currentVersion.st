@@ -1,4 +1,0 @@
-private
-currentVersion
-
-	^self selectedProjectInstance currentVersion
