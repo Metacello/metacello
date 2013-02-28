@@ -5,7 +5,8 @@ version10beta32: spec
         for: #'common'
         do: [ 
             spec blessing: #'development'.
-            spec description: 'snap off a release for GLASS 1.0-beta.9
+            spec description: 'equivalent to 6fb14916d605429808f10bb2bc90be8f320beb42
+snap off a release for GLASS 1.0-beta.9
 - unimplemented message being sent in MetacelloProjectSpec>>asProjectRegistration
   https://github.com/dalehenrich/metacello-work/issues/139
 - squeak4.3.x and squeak4.4.x added as platform attributes
