@@ -19,20 +19,12 @@ env:
 install:
    - export PROJECT_HOME="$(pwd)"
    - cd $HOME
-   - wget -O builderCI.zip https://github.com/dalehenrich/builderCI/zipball/master
+   - wget -q -O builderCI.zip https://github.com/dalehenrich/builderCI/zipball/master
    - unzip -q builderCI.zip
    - cd dalehenrich-builderCI*
    - source build_env_vars
    - ln -s $PROJECT_HOME $GIT_PATH
    - ./build_image.sh
 
-script:
-
-#   - echo "running: $PROJECT_HOME/tests/$TRAVIS_SCRIPT"
-   - ./build.sh -i $ST $BUILD_ARG -f "$PROJECT_HOME/tests/$TRAVIS_SCRIPT" -o travisCI
-   - cd "${BUILD_PATH}/travisCI/"
-   - ls -altr *
-   - $BUILDER_CI_HOME/buildImageErrorCheck.sh
-#   - cat TravisTranscript.txt
-   - $BUILDER_CI_HOME/buildTravisStatusCheck.sh
+script: $PROJECT_HOME/tests/testTravisCI.sh
 
