@@ -5,20 +5,24 @@ version10beta32: spec
         for: #'common'
         do: [ 
             spec blessing: #'development'.
-            spec description: 'equivalent to ebf38a6ef1d601625b6382cad581383c67bedecf'.
+            spec description: 'snap off a release for GLASS 1.0-beta.9
+- unimplemented message being sent in MetacelloProjectSpec>>asProjectRegistration
+  https://github.com/dalehenrich/metacello-work/issues/139
+- squeak4.3.x and squeak4.4.x added as platform attributes
+  https://github.com/dalehenrich/metacello-work/issues/140'.
             spec author: 'dkh'.
-            spec timestamp: '9/25/2012 17:32'.
+            spec timestamp: '2/28/2013 09:57'.
             spec postLoadDoIt: #'metacelloPrimeRegistry'.
             spec
-                project: 'FileTree' with: '1.0';
+                project: 'FileTree' with: '1.0.1';
                 project: 'Gofer' with: '1.0.5.1';
                 project: 'Gofer Tests' with: '1.0.5.1'.
             spec
                 package: 'Metacello-Base' with: 'Metacello-Base-dkh.103';
-                package: 'Metacello-Core' with: 'Metacello-Core-dkh.667';
+                package: 'Metacello-Core' with: 'Metacello-Core-dkh.669';
                 package: 'Metacello-FileTree' with: 'Metacello-FileTree-dkh.29';
                 package: 'Metacello-GitHub' with: 'Metacello-GitHub-dkh.22';
-                package: 'Metacello-MC' with: 'Metacello-MC-dkh.666';
+                package: 'Metacello-MC' with: 'Metacello-MC-dkh.669';
                 package: 'Metacello-Reference' with: 'Metacello-Reference-dkh.35';
                 package: 'Metacello-Tutorial' with: 'Metacello-Tutorial-dkh.26';
                 package: 'OB-Metacello' with: 'OB-Metacello-dkh.83';
@@ -44,22 +48,19 @@ version10beta32: spec
             spec
                 package: 'Metacello-ProfStef' with: 'Metacello-ProfStef-dkh.13';
                 package: 'Metacello-TestsProfStef' with: 'Metacello-TestsProfStef-dkh.4';
-                package: 'Metacello-Platform' with: 'Metacello-Platform.pharo-dkh.29' ].
+                package: 'Metacello-Platform' with: 'Metacello-Platform.pharo-dkh.30' ].
     spec for: #'pharo1.2.x' do: [ spec package: 'Metacello-Issue3758' with: 'Metacello-Issue3758-dkh.2' ].
     spec for: #'pharo1.3.x' do: [ spec package: 'Metacello-Issue3758' with: 'Metacello-Issue3758-dkh.2' ].
     spec for: #'pharo2.x' do: [ spec package: 'Metacello-Platform' with: 'Metacello-Platform.pharo20-dkh.30' ].
-    spec for: #'squeak' do: [ spec package: 'Metacello-Platform' with: 'Metacello-Platform.squeak-dkh.14' ].
+    spec for: #'squeak' do: [ spec package: 'Metacello-Platform' with: 'Metacello-Platform.squeak-dkh.16' ].
     spec
         for: #'gemstone'
         do: [ 
             spec
                 project: 'OmniBrowser' with: #'stable';
                 project: 'GsCore' with: '0.247';
-                project: 'GsMonticello' with: '0.242'.
+                project: 'GsMonticello' with: '0.244.2'.
             spec
                 package: 'Metacello-MC' with: [ spec preLoadDoIt: #'gemstone10beta24PreLoadDoIt' ];
                 package: 'Metacello-TestsPlatform' with: 'Metacello-TestsPlatform.gemstone-dkh.4';
-                package: 'Metacello-Platform' with: 'Metacello-Platform.gemstone-dkh.26' ].
-	spec for: #'gs3.1.0.x' do: [
-		 spec
-                project: 'FileTree' with: '1.0.1' ].
+                package: 'Metacello-Platform' with: 'Metacello-Platform.gemstone-dkh.29' ].
