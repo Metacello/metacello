@@ -59,4 +59,7 @@ version10beta32: spec
             spec
                 package: 'Metacello-MC' with: [ spec preLoadDoIt: #'gemstone10beta24PreLoadDoIt' ];
                 package: 'Metacello-TestsPlatform' with: 'Metacello-TestsPlatform.gemstone-dkh.4';
-                package: 'Metacello-Platform' with: 'Metacello-Platform.gemstone-dkh.26' ]
+                package: 'Metacello-Platform' with: 'Metacello-Platform.gemstone-dkh.26' ].
+	spec for: #'gs3.1.0.x' do: [
+		 spec
+                project: 'FileTree' with: '1.0.1' ].
