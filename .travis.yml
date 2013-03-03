@@ -1,6 +1,7 @@
 language: erlang
 
 env:
+   = GemStone-3.1.0.2
    - ST=PharoCore-1.1
    - ST=PharoCore-1.2
    - ST=PharoCore-1.3
