@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #ConfigurationOfMetacelloPreview!
+SystemOrganization addCategory: 'ConfigurationOfMetacelloPreview'!
