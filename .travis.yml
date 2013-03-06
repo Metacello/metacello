@@ -4,6 +4,7 @@ env:
    - ST=Pharo-1.4
    - ST=Squeak-4.5
    - ST=GemStone-3.1.0.2
+
    - ST=PharoCore-1.1
    - ST=PharoCore-1.2
    - ST=PharoCore-1.3
