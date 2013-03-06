@@ -8,6 +8,7 @@ Metacello new
   repository: 'filetree://', gitPath, '/metacello-work/repository';
   load: 'TravisCI'.
 
+true ifTrue: [^nil].
 
 "Run the Metacello tests"
 MetacelloPlatform current authorName: 'testMonkey'. "These tests save code ... need an Author"
