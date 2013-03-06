@@ -5,6 +5,7 @@
 
 $BUILDER_CI_HOME/testTravisCI.sh
 if [[ $? != 0 ]] ; then 
+  ls -altr builds/travisCI/TravisTranscript.txt
   cat builds/travisCI/TravisTranscript.txt
   exit 1
 fi
