@@ -8,7 +8,15 @@ Metacello new
   repository: 'filetree://', gitPath, '/metacello-work/repository';
   load: 'TravisCI'.
 
-true ifTrue: [ ^self ].
+true 
+  ifTrue: [ 
+    (Transcript respondsTo: #close)
+      ifTrue: [
+        | stream |
+        stream := Transcript.
+        (Smalltalk globals associationAt: #'Transcript') value: (Smalltalk at: #'OLDTranscript'>
+        stream close ]
+    ^self ].
 
 "Run the Metacello tests"
 MetacelloPlatform current authorName: 'testMonkey'. "These tests save code ... need an Author"
