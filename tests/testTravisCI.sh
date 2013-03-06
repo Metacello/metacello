@@ -4,6 +4,6 @@
 #
 
 $BUILDER_CI_HOME/testTravisCI.sh
-ls -altr *
-ls -altr */*
-cat travisCI/TravisTranscript.txt
+# ls -altr *
+# ls -altr */*
+cat builds/travisCI/TravisTranscript.txt
