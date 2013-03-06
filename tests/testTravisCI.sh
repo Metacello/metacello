@@ -8,4 +8,5 @@ if [[ $? != 0 ]] ; then
   cat builds/travisCI/TravisTranscript.txt
   exit 1
 fi
+ls -altr builds/travisCI/TravisTranscript.txt
 cat builds/travisCI/TravisTranscript.txt
