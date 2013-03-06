@@ -4,4 +4,4 @@
 #
 
 $BUILDER_CI_HOME/testTravisCI.sh
-cat TravisTranscript.txt
+cat travisCI/TravisTranscript.txt
