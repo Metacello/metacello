@@ -34,4 +34,3 @@ If you are interested in using GitHub with the Metacello Preview, you should che
 [1]: https://github.com/dalehenrich/metacello-work/blob/master/docs/GettingStartedWithGitHub.md
 [2]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloUserGuide.md
 [3]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md
-
