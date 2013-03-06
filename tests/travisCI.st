@@ -9,14 +9,7 @@ Metacello new
   load: 'TravisCI'.
 
 true 
-  ifTrue: [ 
-    (Transcript respondsTo: #close)
-      ifTrue: [
-        | stream |
-        stream := Transcript.
-        (Smalltalk globals associationAt: #'Transcript') value: (Smalltalk at: #'OLDTranscript').
-        stream close ]
-    ^self ].
+  ifTrue: [ ^self ].
 
 "Run the Metacello tests"
 MetacelloPlatform current authorName: 'testMonkey'. "These tests save code ... need an Author"
