@@ -25,7 +25,7 @@ env:
 #   - ST=GemStone-2.4.5 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
 #   - ST=GemStone-2.4.5.1 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
 #   - ST=GemStone-3.0.1 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
-#   - ST=GemStone-3.1.0.2 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
+   - ST=GemStone-3.1.0.2 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
 
 
 install:
