@@ -20,12 +20,12 @@ env:
 #   - ST=Pharo-2.0 TRAVIS_SCRIPT=travisPreviewCI.st # until Issue #65 fixed
 
    #  GemStone should only be tested with Preview only (for now)
-   - ST=GemStone-2.4.4.1 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
-   - ST=GemStone-2.4.4.7 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
-   - ST=GemStone-2.4.5 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
-   - ST=GemStone-2.4.5.1 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
-   - ST=GemStone-3.0.1 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
-   - ST=GemStone-3.1.0.2 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
+#   - ST=GemStone-2.4.4.1 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
+#   - ST=GemStone-2.4.4.7 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
+#   - ST=GemStone-2.4.5 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
+#   - ST=GemStone-2.4.5.1 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
+#   - ST=GemStone-3.0.1 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
+#   - ST=GemStone-3.1.0.2 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
 
 
 install:
