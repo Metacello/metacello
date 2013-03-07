@@ -57,4 +57,4 @@ Smalltalk
                 				| stream |
                 				stream := Transcript.
                 				(Smalltalk globals associationAt: #'Transcript') value: (Smalltalk at: #'OLDTranscript').
-                				stream close ]]
+                				stream close ]]]
