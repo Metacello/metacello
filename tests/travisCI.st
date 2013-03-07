@@ -1,5 +1,6 @@
 "Load and run tests to be performed by TravisCI"
 | gitPath |
+Transcript cr; show: 'travis---->travisCI.st'.
 gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 
 "Load the Metacello Tests ... "
@@ -7,7 +8,6 @@ Metacello new
 	baseline: 'Metacello';
   repository: 'filetree://', gitPath, '/metacello-work/repository';
   load: 'TravisCI'.
-
 
 "Run the Metacello tests"
 MetacelloPlatform current authorName: 'testMonkey'. "These tests save code ... need an Author"
@@ -25,7 +25,7 @@ TravisCIHarness
         on: Deprecation
         do: [ :ex |
             "catch and throw Error ..."
-            true ifTrue: [self error: 'DEPRECATION WARNNG: ', ex description printString ].
+            true ifTrue: [nil error: 'DEPRECATION WARNNG: ', ex description printString ].
             "help for debugging Deprecation warnings"
             Transcript
                 cr;

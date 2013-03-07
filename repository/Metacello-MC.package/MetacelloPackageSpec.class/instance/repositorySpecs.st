@@ -1,4 +1,4 @@
 loading
 repositorySpecs
 
-	^self repositories map values 
+	^self repositories map values
