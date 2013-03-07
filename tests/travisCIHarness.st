@@ -6,9 +6,12 @@ Smalltalk
             | suite result resultsFileName |
             suite := TestCase suiteClass named: version versionString printString, ' Test Suite'.
             (version currentlyLoadedClassesInVersion select: [ :cl | cl inheritsFrom: TestCase ]) 
-                                do: [ :cl | 
+                                do: [ :cl |
+                                    Transcript cr; show: 'testcase-->', cl name asString.
                                     cl isAbstract
-                                        ifFalse: [ suite addTest: cl buildSuiteFromSelectors ] ].
+                                        ifFalse: [ 
+                                          Transcript cr; show: 'concrete-->', cl name asString.
+                                          suite addTest: cl buildSuiteFromSelectors ] ].
             result := suite run.
             resultsFileName := result defects isEmpty
                 ifTrue: [ successFilename ]
