@@ -1,3 +1,4 @@
+Transcript cr; show: 'travis---->travisCIHarness.st'.
 Smalltalk
         at: #'TravisCIHarness'
         put: [ :version :successFilename :failFilename | 

@@ -1,5 +1,6 @@
 "Load and run tests to be performed by TravisCI"
 | gitPath metacelloConfigurationRepository version |
+Transcript cr; show: 'travis---->travisCI.st'.
 gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 
 Gofer new
