@@ -38,5 +38,5 @@ install:
    - ln -s $PROJECT_HOME $GIT_PATH
    - ./build_image.sh
 
-script: $BUILDER_CI_HOME/testTravisCI.sh # -verbose
+script: $BUILDER_CI_HOME/testTravisCI.sh -verbose
 
