@@ -2,6 +2,7 @@
 after Metacello-Base has been loaded ... which is what the test harndess
 does"
 | gitPath |
+Transcript cr; show: 'travis---->travisPreviewCI.st'.
 gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 
 "Load Metacello-Base, so that Metacello is bootstrapped"

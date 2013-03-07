@@ -1,7 +1,9 @@
 "Load and run tests to be performed by TravisCI"
 | gitPath metacelloConfigurationRepository version |
+Transcript cr; show: 'travis---->travisCI.st'.
 gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 
+[
 Gofer new
   url: 'http://ss3.gemstone.com/ss/FileTree';
   package: 'ConfigurationOfFileTree';
@@ -35,4 +37,10 @@ Gofer new
   value: version
   value: 'TravisCISuccess.txt' 
   value: 'TravisCIFailure.txt'.
+]
+	on: Warning
+	do: [:ex |
+		Transcript cr; show: 'Warning: ', ex description.
+		ex resume: true].
+
 

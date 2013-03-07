@@ -1,3 +1,4 @@
+Transcript cr; show: 'travis---->travisCIHarness.st'.
 Smalltalk
         at: #'TravisCIHarness'
         put: [ :version :successFilename :failFilename | 
@@ -5,7 +6,7 @@ Smalltalk
             | suite result resultsFileName |
             suite := TestCase suiteClass named: version versionString printString, ' Test Suite'.
             (version currentlyLoadedClassesInVersion select: [ :cl | cl inheritsFrom: TestCase ]) 
-                                do: [ :cl | 
+                                do: [ :cl |
                                     cl isAbstract
                                         ifFalse: [ suite addTest: cl buildSuiteFromSelectors ] ].
             result := suite run.
@@ -15,44 +16,46 @@ Smalltalk
             (Smalltalk at: #TravisResultFileBlock) 
               value: resultsFileName
               value: [ :fileStream | 
-                    fileStream lineEndConvention: #'lf'.
                     fileStream
                         nextPutAll: '***********************************************';
-                        cr.
+                        lf.
                     fileStream
                         tab;
                         nextPutAll: 'Results for ' , suite name;
-                        cr;
+                        lf;
                         nextPutAll: result printString;
-                        cr.
+                        lf.
                     fileStream
                         nextPutAll: '***********************************************';
-                        cr.
+                        lf.
                     result failures notEmpty
                         ifTrue: [ 
                             fileStream
                                 nextPutAll: '*** FAILURES ***';
                                 nextPutAll: '****************';
-                                cr ].
+                                lf ].
                     result failures
                         do: [ :each | 
                             fileStream tab
                                 nextPutAll: each class name asString , ' debug: ' , each selector printString , '.';
-                                cr ].
+                                lf ].
                     result errors notEmpty
                         ifTrue: [ 
                             fileStream
                                 nextPutAll: '*** ERRORS ***';
                                 nextPutAll: '****************';
-                                cr ].
+                                lf ].
                     result errors
                         do: [ :each | 
                             fileStream tab
                                 nextPutAll: each class name asString , ' debug: ' , each selector printString , '.';
-                                cr ].
+                                lf ].
                     fileStream
                         nextPutAll: '***********************************************';
-                        cr ]] ensure: [ | stream |
-                            stream := Transcript. 
-                            (Smalltalk globals associationAt: #Transcript) value: (Smalltalk at: #OLDTranscript).
-                            stream close ]]
+                        lf ]] ensure: [ 
+            			(Transcript respondsTo: #close)
+              				ifTrue: [
+                				| stream |
+                				stream := Transcript.
+                				(Smalltalk globals associationAt: #'Transcript') value: (Smalltalk at: #'OLDTranscript').
+                				stream close ]]]

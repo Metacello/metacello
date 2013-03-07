@@ -4,10 +4,10 @@ version10beta3204: spec
     spec
         for: #'common'
         do: [ 
-            spec blessing: #'development'.
+            spec blessing: #'release'.
             spec description: 'Synchronize with Metacello 1.0-beta.32 (dkh.752)'.
             spec author: 'dkh'.
-            spec timestamp: '3/5/2013 11:10'.
+            spec timestamp: '3/6/2013 14:12'.
             spec
                 baseline: 'Metacello'
                     with: [ 
