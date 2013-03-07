@@ -2,29 +2,29 @@ language: erlang
 
 env:
    - ST=PharoCore-1.1 BUILD_ARG=-X TRAVIS_SCRIPT=travisCI.st
-#   - ST=PharoCore-1.2 BUILD_ARG=-X TRAVIS_SCRIPT=travisCI.st
-#   - ST=PharoCore-1.3 BUILD_ARG=-X TRAVIS_SCRIPT=travisCI.st
+   - ST=PharoCore-1.2 BUILD_ARG=-X TRAVIS_SCRIPT=travisCI.st
+   - ST=PharoCore-1.3 BUILD_ARG=-X TRAVIS_SCRIPT=travisCI.st
    - ST=Pharo-1.4 BUILD_ARG=-X TRAVIS_SCRIPT=travisCI.st
-#   - ST=Squeak-4.3 BUILD_ARG=-X TRAVIS_SCRIPT=travisCI.st
-#   - ST=Squeak-4.4 BUILD_ARG=-X TRAVIS_SCRIPT=travisCI.st
+   - ST=Squeak-4.3 BUILD_ARG=-X TRAVIS_SCRIPT=travisCI.st
+   - ST=Squeak-4.4 BUILD_ARG=-X TRAVIS_SCRIPT=travisCI.st
    - ST=Squeak-4.5 BUILD_ARG=-X TRAVIS_SCRIPT=travisCI.st
 #   - ST=Pharo-2.0 TRAVIS_SCRIPT=travisCI.st     # until Issue #65 fixed
 
    - ST=PharoCore-1.1 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
-#   - ST=PharoCore-1.2 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
-#   - ST=PharoCore-1.3 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
+   - ST=PharoCore-1.2 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
+   - ST=PharoCore-1.3 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
    - ST=Pharo-1.4 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
-#   - ST=Squeak-4.3 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
-#   - ST=Squeak-4.4 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
+   - ST=Squeak-4.3 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
+   - ST=Squeak-4.4 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
    - ST=Squeak-4.5 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
 #   - ST=Pharo-2.0 TRAVIS_SCRIPT=travisPreviewCI.st # until Issue #65 fixed
 
    #  GemStone should only be tested with Preview only (for now)
-#   - ST=GemStone-2.4.4.1 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
-#   - ST=GemStone-2.4.4.7 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
-#   - ST=GemStone-2.4.5 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
-#   - ST=GemStone-2.4.5.1 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
-#   - ST=GemStone-3.0.1 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
+   - ST=GemStone-2.4.4.1 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
+   - ST=GemStone-2.4.4.7 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
+   - ST=GemStone-2.4.5 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
+   - ST=GemStone-2.4.5.1 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
+   - ST=GemStone-3.0.1 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
    - ST=GemStone-3.1.0.2 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
 
 
@@ -38,5 +38,5 @@ install:
    - ln -s $PROJECT_HOME $GIT_PATH
    - ./build_image.sh
 
-script: $PROJECT_HOME/tests/testTravisCI.sh -verbose
+script: $PROJECT_HOME/tests/testTravisCI.sh # -verbose
 
