@@ -1,19 +1,13 @@
 versions
-version10beta32: spec
-    <version: '1.0-beta.32' imports: #('1.0-beta.32-baseline')>
+version10beta321: spec
+    <version: '1.0-beta.32.1' imports: #('1.0-beta.32-baseline')>
     spec
         for: #'common'
         do: [ 
             spec blessing: #'development'.
-            spec description: 'equivalent to 6fb14916d605429808f10bb2bc90be8f320beb42
-snap off a release for GLASS 1.0-beta.9
-- unimplemented message being sent in MetacelloProjectSpec>>asProjectRegistration
-  https://github.com/dalehenrich/metacello-work/issues/139
-- squeak4.3.x and squeak4.4.x added as platform attributes
-  https://github.com/dalehenrich/metacello-work/issues/140
-- no further development on this version ... leave in development because not officially released (except on GemStone/S) .... use 1.0-beta.32.1 for further development'.
+            spec description: ''.
             spec author: 'dkh'.
-            spec timestamp: '3/12/2013 16:46'.
+            spec timestamp: '3/12/2013 16:43'.
             spec postLoadDoIt: #'metacelloPrimeRegistry'.
             spec
                 project: 'FileTree' with: '1.0.1';
