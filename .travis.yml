@@ -18,6 +18,7 @@ env:
    - ST=GemStone-3.0.1
 
 install:
+   - sudo apt-get install -qq ia32-libs-multiarch
    - export PROJECT_HOME="$(pwd)"
    - cd $HOME
    - wget -q -O builderCI.zip https://github.com/dalehenrich/builderCI/zipball/master
