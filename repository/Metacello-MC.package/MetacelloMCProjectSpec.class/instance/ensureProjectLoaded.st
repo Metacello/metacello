@@ -6,7 +6,9 @@ ensureProjectLoaded
   "answer true if the projectClass exists"
 
   (self projectClass == nil
-    or: [ self versionOrNil == nil or: [ self loader ignoreImage ] ])
+    or: [ 
+      self versionOrNil == nil
+        or: [ (loader notNil or: [ self isMutable ]) and: [ self loader ignoreImage ] ] ])
     ifTrue: [ 
       | pc |
       (pc := self projectClass) ~~ nil
