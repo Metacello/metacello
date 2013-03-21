@@ -13,5 +13,11 @@ defaultPlatformAttributes
 					(versionString beginsWith: 'Squeak4.1')
 						ifTrue: [attributes add: #'squeak4.1.x']
 						ifFalse: [(versionString beginsWith: 'Squeak4.2')
-								ifTrue: [attributes add: #'squeak4.2.x']]]].
+								ifTrue: [attributes add: #'squeak4.2.x']
+								ifFalse: [(versionString beginsWith: 'Squeak4.3')
+									ifTrue: [attributes add: #'squeak4.3.x']
+									ifFalse: [(versionString beginsWith: 'Squeak4.4')
+										ifTrue: [attributes add: #'squeak4.4.x']
+											ifFalse: [(versionString beginsWith: 'Squeak4.5')
+												ifTrue: [attributes add: #'squeak4.5.x']]]]]]].
 	^ attributes
