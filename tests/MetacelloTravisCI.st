@@ -9,13 +9,18 @@ Object subclass: #MetacelloTravisCI
 test
     [ 
     | repository version |
+    [
     self loadFileTree.
     repository := (Smalltalk at: #'MCFileTreeRepository') new
         directory: self metacelloRepositoryDirectory;
         yourself.
     version := self
         loadMetacello: [ :aVersion :loads | aVersion load: loads ]
-        metacelloConfigurationRepository: repository.
+        metacelloConfigurationRepository: repository]
+      on: Warning
+      do: [:ex |
+            Transcript cr; show: 'Warning: ', ex description.
+            ex resume: true].
     self runTestFor: version ]
         ensure: [ 
             | stream |
