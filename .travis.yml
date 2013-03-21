@@ -8,22 +8,16 @@ env:
 #   - ST=Pharo-2.0 #Pharo-2.0 not ready for testing yet
    - ST=Squeak-4.3
    - ST=Squeak-4.4
+   - ST=Squeak-4.5
 
 install:
    - export PROJECT_HOME="$(pwd)"
    - cd $HOME
-   - wget -O builderCI.zip https://github.com/dalehenrich/builderCI/zipball/master
+   - wget -q -O builderCI.zip https://github.com/dalehenrich/builderCI/zipball/master
    - unzip -q builderCI.zip
    - cd dalehenrich-builderCI*
    - source build_env_vars
    - ln -s $PROJECT_HOME $GIT_PATH
    - ./build_image.sh
 
-script:
-#   - ./build.sh -i $ST -s latAmMirror.st -X -f "$PROJECT_HOME/tests/travisTest.st" -o travisCI
-   - ./build.sh -i $ST -X -f "$PROJECT_HOME/tests/travisTest.st" -o travisCI
-   - cd "${BUILD_PATH}/travisCI/"
-   - ls -altr *
-   - $BUILDER_CI_HOME/buildImageErrorCheck.sh
-#   - cat TravisTranscript.txt
-   - $BUILDER_CI_HOME/buildTravisStatusCheck.sh
+script: $PROJECT_HOME/tests/testTravisCI.sh -verbose

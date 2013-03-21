@@ -129,11 +129,9 @@ baseline10beta32: spec
         for: #'pharo2.x'
         do: [ 
             spec
-                package: 'Metacello-Platform'
-                with: [ 
-                    spec
-                        file: 'Metacello-Platform.pharo20';
-                        requires: #('OSProcess') ] ].
+                removeProject: 'OmniBrowser';
+                removeProject: 'OSProcess'.
+            spec package: 'Metacello-Platform' with: [ spec file: 'Metacello-Platform.pharo20' ] ].
     spec
         for: #'squeak'
         do: [ 
