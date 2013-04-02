@@ -28,7 +28,7 @@ baseline310gemstone: spec
                 package: 'Seaside-Core' with: 'Seaside-Core.gemstone';
                 package: 'Seaside-GemStone-Basic-Development' with: [ spec requires: #('Seaside-Core') ];
                 package: 'Seaside-GemStone-Continuation';
-                package: 'Seaside-GemStone-Core' with: [ spec requires: #('Seaside-Core' 'GsCore') ];
+                package: 'Seaside-GemStone-Core' with: [ spec requires: #('Seaside-Core') ];
                 package: 'Seaside-GemStone-Development'
                     with: [ spec requires: #('Seaside-Development' 'Seaside-GemStone-Basic-Development' 'Seaside-GemStone-Tools-Production') ];
                 package: 'Seaside-GemStone-Email' with: [ spec requires: #('Seaside-Email') ];

@@ -2,4 +2,3 @@
 projectVersion: aString
     "noop"
 
-    

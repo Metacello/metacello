@@ -21,7 +21,7 @@ baseline310ob: spec
                 package: 'Seaside-Tools-OmniBrowser'
                 with: [ 
                     spec
-                        requires: #('OB' 'Seaside-Tools-Core');
+                        requires: #('Seaside-Tools-Core');
                         includes: #('Seaside-GemStone-Tools-OmniBrowser') ].
             spec package: 'Seaside-GemStone-Tools-OmniBrowser' with: [ spec requires: #('Seaside-Tools-OmniBrowser') ].
             spec group: 'OmniBrowser' with: #('Seaside-Tools-OmniBrowser') ]
