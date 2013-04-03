@@ -19,8 +19,8 @@ hasLoadConflicts: aProjectRegistration
       aProjectRegistration configurationProjectSpec
         ifNotNil: [ 
           (aProjectRegistration configurationProjectSpec
-            compareEqual: configurationProjectSpec) not
+            hasLoadConflicts: configurationProjectSpec)
             ifTrue: [ ^ true ] ] ].
   ^ baselineProjectSpec
     ifNil: [ false ]
-    ifNotNil: [ (baselineProjectSpec compareEqual: aProjectRegistration baselineProjectSpec) not ]
+    ifNotNil: [ baselineProjectSpec hasLoadConflicts: aProjectRegistration baselineProjectSpec ]
