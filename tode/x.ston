@@ -1,1 +1,1 @@
-TDTopezLeafNode {	#name : 'x',	#contents : '../load Metacello filetree:///opt/git/metacello-work/repository'}
+TDSmalltalkLeafNode {	#name : 'x',	#contents : 'MetacelloProjectRegistration registry'}
