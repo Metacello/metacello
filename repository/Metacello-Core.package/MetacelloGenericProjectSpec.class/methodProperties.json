@@ -5,6 +5,7 @@
 		"compareEqual:" : "dkh 6/15/2012 13:37",
 		"determineCurrentVersionForLoad" : "dkh 6/5/2012 19:01:24",
 		"getRepositories" : "dkh 6/5/2012 19:01:24",
+		"hasNoLoadConflicts:" : "dkh 04/02/2013 20:22",
 		"hasRepository" : "dkh 6/30/2012 13:18",
 		"load" : "dkh 6/5/2012 19:01:24",
 		"loadVersion:" : "dkh 6/5/2012 19:01:24",

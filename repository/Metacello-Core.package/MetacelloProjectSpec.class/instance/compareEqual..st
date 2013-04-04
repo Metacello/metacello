@@ -1,12 +1,14 @@
 scripting
 compareEqual: aMetacelloProjectSpec
-    "name className versionString operator loads preLoadDoIt postLoadDoIt"
+  "name className versionString operator loads preLoadDoIt postLoadDoIt"
 
-    ^ self className = aMetacelloProjectSpec className
+  ^ self className = aMetacelloProjectSpec className
+    and: [ 
+      self versionString = aMetacelloProjectSpec versionString
         and: [ 
-            self versionString = aMetacelloProjectSpec versionString
+          self operator == aMetacelloProjectSpec operator
+            and: [ 
+              self loads = aMetacelloProjectSpec loads
                 and: [ 
-                    self operator == aMetacelloProjectSpec operator
-                        and: [ 
-                            self loads = aMetacelloProjectSpec loads
-                                and: [ self preLoadDoIt == aMetacelloProjectSpec preLoadDoIt and: [ self postLoadDoIt == aMetacelloProjectSpec postLoadDoIt ] ] ] ] ]
+                  self preLoadDoIt value == aMetacelloProjectSpec preLoadDoIt value
+                    and: [ self postLoadDoIt value == aMetacelloProjectSpec postLoadDoIt value ] ] ] ] ]

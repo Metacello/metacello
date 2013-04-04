@@ -1,4 +1,4 @@
 actions api
 list
-    self validateProjectSpecForScript.
-    self root: self projectSpec
+  self setDefaultsAndValidateProjectSpec.
+  self root: self projectSpec
