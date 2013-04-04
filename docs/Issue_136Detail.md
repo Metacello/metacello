@@ -7,7 +7,7 @@ developing.
 
 ##Pre-bugfix
 
-For example, let's say that your project (say **MyProject**)depends upon 
+For example, let's say that your project (say **MyProject**) depends upon 
 the **RB** project
 and the *baseline* for your project looks like the following:
 
@@ -45,7 +45,7 @@ Metacello image
 ```
 
 The package **AST-Core** would be loaded from **github://dalehenrich/rb:dev/
-repository** and your local repository would be **ingored** and you would have 
+repository**, your local repository would be **ignored** and you would have 
 to reload RB from your *FileTree* repository:
 
 ```Smalltalk
