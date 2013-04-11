@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #'ConfigurationOfMetacello'!
+SystemOrganization addCategory: #ConfigurationOfMetacello!
