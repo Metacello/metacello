@@ -18,6 +18,6 @@ downloadFile: url to: outputFileName
     out close.
     err close.
     archive := ZipArchive new.
-    zipfile := outputFileName asReference.
+    zipfile := outputFileName asFileReference.
     zipfile readStreamDo: [ :fileStream | archive readFrom: fileStream ].
     ^ archive
