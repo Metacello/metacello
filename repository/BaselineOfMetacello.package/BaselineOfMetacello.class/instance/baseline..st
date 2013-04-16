@@ -123,7 +123,6 @@ baseline: spec
     spec
         for: #'pharo2.x'
         do: [ 
-            spec removeProject: 'OSProcess'.
             spec package: 'Metacello-Platform' with: [ spec file: 'Metacello-Platform.pharo20' ].
             spec baseline: 'FileTree' with: [ spec repository: 'github://dalehenrich/filetree:pharo2.0/repository' ] ].
     spec
