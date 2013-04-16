@@ -15,4 +15,17 @@ createRepository: aRepositorySpec
 				directory: directory 
 				user: aRepositorySpec username
 				password: aRepositorySpec password].
-	^ super createRepository: aRepositorySpec
+    type = 'directory'
+        ifTrue: [ ^ MCDirectoryRepository new directory: (aRepositorySpec description asReference) ].
+    Smalltalk
+        at: #'MCFileTreeRepository'
+        ifPresent: [ :cl | 
+            type = 'filetree'
+                ifTrue: [ 
+                    | description headerSize |
+                    description := aRepositorySpec description.
+                    headerSize := 'filetree://' size.
+                    ^ cl new
+                        directory:
+                            ( (aRepositorySpec description copyFrom: headerSize + 1 to: description size) asReference) ] ].
+ 	^ super createRepository: aRepositorySpec

@@ -1,3 +1,3 @@
-as yet unclassified
+github support
 fileDirectoryClass
 	^FileSystem 
