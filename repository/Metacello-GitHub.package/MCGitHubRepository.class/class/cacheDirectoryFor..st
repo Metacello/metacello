@@ -1,5 +1,5 @@
 private
 cacheDirectoryFor: projectPath
-    ^ (self cacheDirectory directoryNamed: projectPath)
-        assureExistence;
+    ^ (self cacheDirectory resolveString: projectPath)
+        ensureDirectory;
         yourself
