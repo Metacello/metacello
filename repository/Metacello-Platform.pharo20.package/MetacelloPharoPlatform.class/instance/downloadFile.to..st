@@ -18,6 +18,6 @@ downloadFile: url to: outputFileName
     out close.
     err close.
     archive := ZipArchive new.
-    zipfile := FileDirectory on: outputFileName.
-    zipfile containingDirectory readOnlyFileNamed: zipfile localName do: [ :fileStream | archive readFrom: fileStream ].
+    zipfile := outputFileName asReference.
+    zipfile readStreamDo: [ :fileStream | archive readFrom: fileStream ].
     ^ archive
