@@ -9,7 +9,7 @@ createRepository: aRepositorySpec
                 user: aRepositorySpec username
                 password: aRepositorySpec password ].
     type = 'directory'
-        ifTrue: [ ^ MCDirectoryRepository new directory: (FileDirectory on: aRepositorySpec description) ].
+        ifTrue: [ ^ MCDirectoryRepository new directory: (aRepositorySpec description asFileReference) ].
     Smalltalk
         at: #'MCFileTreeRepository'
         ifPresent: [ :cl | 
@@ -20,7 +20,7 @@ createRepository: aRepositorySpec
                     headerSize := 'filetree://' size.
                     ^ cl new
                         directory:
-                            (FileDirectory on: (aRepositorySpec description copyFrom: headerSize + 1 to: description size)) ] ].
+                             ((aRepositorySpec description copyFrom: headerSize + 1 to: description size) asFileReference) ] ].
     Smalltalk
         at: #'MCGitHubRepository'
         ifPresent: [ :cl | 
