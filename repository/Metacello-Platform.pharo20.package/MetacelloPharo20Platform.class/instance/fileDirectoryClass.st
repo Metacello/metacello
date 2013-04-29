@@ -1,3 +1,3 @@
-github support
+file system
 fileDirectoryClass
 	^FileSystem 

@@ -1,0 +1,14 @@
+{
+	"category" : "Metacello-Platform",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MetacelloPharo20Platform",
+	"pools" : [
+		 ],
+	"super" : "MetacelloPharoPlatform",
+	"type" : "normal" }
