@@ -98,11 +98,12 @@ baseline: spec
                 package: 'Metacello-ProfStef'
                     with: [ spec requires: #('Metacello-Core' 'ProfStef' 'Metacello-ToolBox') ];
                 package: 'Metacello-TestsProfStef' with: [ spec requires: #('Metacello-ProfStef') ];
+                package: 'Metacello-PharoCommonPlatform' with: [ spec requires: #('Metacello-MC') ];
                 package: 'Metacello-Platform'
                     with: [ 
                             spec
                                 file: 'Metacello-Platform.pharo';
-                                requires: #('OSProcess') ];
+                                requires: #('Metacello-PharoCommonPlatform' 'OSProcess') ];
                 yourself.
             spec
                 group: 'Tests' with: #('Metacello-TestsProfStef');
