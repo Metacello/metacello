@@ -9,7 +9,7 @@ Metacello new
 	baseline: 'Metacello';
   repository: 'filetree://', gitPath, '/metacello-work/repository';
   get.
-] on: Warning: [:ex | 
+] on: Warning do: [:ex | 
   Transcript cr; show: 'WARNING: ', ex description.
   ex resume: true ].
 
