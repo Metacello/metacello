@@ -7,6 +7,11 @@ gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 Metacello new
 	baseline: 'Metacello';
   repository: 'filetree://', gitPath, '/metacello-work/repository';
+  onConflict: [:ex | 
+    "allow new version of Metacello to be loaded"
+    ex existingProjectRegistration baseName = 'Metacello'
+      ifTrue: [ ex allow ].
+    ex disallow ];
   load: 'TravisCI'.
 
 "Run the Metacello tests"
