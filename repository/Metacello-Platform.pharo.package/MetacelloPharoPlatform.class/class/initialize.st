@@ -1,5 +1,5 @@
 initialize-release
 initialize
-	"implmented to force initialize on load"
+	"implemented to force initialize on load"
 	
 	super initialize

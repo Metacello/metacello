@@ -7,8 +7,8 @@
 	"commentStamp" : "<historical>",
 	"instvars" : [
 		 ],
-	"name" : "MetacelloPharoPlatform",
+	"name" : "MetacelloPharoCommonPlatform",
 	"pools" : [
 		 ],
-	"super" : "MetacelloPharoCommonPlatform",
+	"super" : "MetacelloPlatform",
 	"type" : "normal" }
