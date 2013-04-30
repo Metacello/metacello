@@ -9,9 +9,6 @@ Metacello new
 	baseline: 'Metacello';
   repository: 'filetree://', gitPath, '/metacello-work/repository';
   get.
-] on: Warning do: [:ex | 
-  Transcript cr; show: 'WARNING: ', ex description.
-  ex resume: true ].
 
 Metacello new
 	baseline: 'Metacello';
@@ -22,6 +19,9 @@ Metacello new
       ifTrue: [ ex allow ].
     ex disallow ];
   load: 'TravisCI'.
+] on: Warning do: [:ex | 
+  Transcript cr; show: 'WARNING: ', ex description.
+  ex resume: true ].
 
 "Run the Metacello tests"
 MetacelloPlatform current authorName: 'testMonkey'. "These tests save code ... need an Author"
