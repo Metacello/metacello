@@ -1,4 +1,4 @@
-*metacello-platform
+*metacello-pharocommonplatform
 asRepositorySpecFor: aMetacelloMCProject
 	| dir |
 	dir := directory.
