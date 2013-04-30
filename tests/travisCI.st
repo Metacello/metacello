@@ -4,10 +4,14 @@ Transcript cr; show: 'travis---->travisCI.st'.
 gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 
 "Load the Metacello Tests ... "
+[
 Metacello new
 	baseline: 'Metacello';
   repository: 'filetree://', gitPath, '/metacello-work/repository';
   get.
+] on: Warning: [:ex | 
+  Transcript cr; show: 'WARNING: ', ex description.
+  ex resume: true ].
 
 Metacello new
 	baseline: 'Metacello';
@@ -25,6 +29,8 @@ MetacelloPlatform current authorName: 'testMonkey'. "These tests save code ... n
 "no deprecated messages should be used"
 (Deprecation respondsTo: #raiseWarning:)
   ifTrue: [ Deprecation raiseWarning: true].
+
+Transcript cr; show: '---Start running tests...'.
 
 [
 TravisCIHarness
