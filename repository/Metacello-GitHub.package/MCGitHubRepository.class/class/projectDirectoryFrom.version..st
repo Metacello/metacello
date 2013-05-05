@@ -1,22 +1,23 @@
 utility
 projectDirectoryFrom: projectPath version: versionString
-    | githubCacheDirectory projectDirectory downloadCacheKey cachePath |
-    downloadCacheKey := self downloadCacheKey: projectPath version: versionString.
-    githubCacheDirectory := (self cacheDirectoryFor: projectPath) directoryNamed: versionString.
-    cachePath := self downloadCache at: downloadCacheKey ifAbsent: [  ].
-    (cachePath isNil or: [ (projectDirectory := githubCacheDirectory directoryNamed: cachePath) exists not ])
-        ifTrue: [ 
-            | url archive directory |
-            MetacelloScriptGitHubDownloadNotification new
-                projectPath: projectPath;
-                versionString: versionString;
-                signal.	"for testing purposes"
-            githubCacheDirectory assureExistence.
-            url := 'https://github.com/' , projectPath , '/zipball/' , versionString.
-            archive := MetacelloPlatform current downloadFile: url to: '/tmp/github.zip'.
-            directory := githubCacheDirectory directoryNamed: (cachePath := archive members first fileName).
-            directory exists
-                ifFalse: [ MetacelloPlatform current extractRepositoryFrom: '/tmp/github.zip' to: githubCacheDirectory fullName ].
-            self downloadCache at: downloadCacheKey put: cachePath.
-            projectDirectory := githubCacheDirectory directoryNamed: cachePath ].
-    ^ projectDirectory
+	| mcPlatform githubCacheDirectory projectDirectory downloadCacheKey cachePath |
+	downloadCacheKey := self downloadCacheKey: projectPath version: versionString.
+	mcPlatform := MetacelloPlatform current.
+	githubCacheDirectory := mcPlatform directoryFromPath: versionString relativeTo: (self cacheDirectoryFor: projectPath).
+	cachePath := self downloadCache at: downloadCacheKey ifAbsent: [  ].
+	(cachePath isNil or: [ (projectDirectory := mcPlatform directoryFromPath: cachePath relativeTo: githubCacheDirectory) exists not ])
+		ifTrue: [ 
+			| url archive directory |
+			MetacelloScriptGitHubDownloadNotification new
+				projectPath: projectPath;
+				versionString: versionString;
+				signal.	"for testing purposes"
+			mcPlatform ensureDirectoryExists: githubCacheDirectory.
+			url := 'https://github.com/' , projectPath , '/zipball/' , versionString.
+			archive := MetacelloPlatform current downloadFile: url to: '/tmp/github.zip'.
+			directory := mcPlatform directoryFromPath: (cachePath := archive members first fileName) relativeTo: githubCacheDirectory.
+			directory exists
+				ifFalse: [ MetacelloPlatform current extractRepositoryFrom: '/tmp/github.zip' to: githubCacheDirectory fullName ].
+			self downloadCache at: downloadCacheKey put: cachePath.
+			projectDirectory := mcPlatform directoryFromPath: cachePath relativeTo: githubCacheDirectory ].
+	^ projectDirectory

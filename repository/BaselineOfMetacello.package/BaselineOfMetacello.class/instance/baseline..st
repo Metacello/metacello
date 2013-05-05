@@ -98,16 +98,18 @@ baseline: spec
                 package: 'Metacello-ProfStef'
                     with: [ spec requires: #('Metacello-Core' 'ProfStef' 'Metacello-ToolBox') ];
                 package: 'Metacello-TestsProfStef' with: [ spec requires: #('Metacello-ProfStef') ];
+                package: 'Metacello-PharoCommonPlatform' with: [ spec requires: #('Metacello-MC') ];
                 package: 'Metacello-Platform'
-                    with: [ 
-                            spec
-                                file: 'Metacello-Platform.pharo';
-                                requires: #('OSProcess') ];
+                    with: [ spec requires: #('Metacello-PharoCommonPlatform' 'OSProcess') ];
                 yourself.
             spec
                 group: 'Tests' with: #('Metacello-TestsProfStef');
                 group: 'Tutorial' with: #('Metacello-ProfStef');
                 yourself ].
+    spec
+        for: #'pharo1.x'
+        do: [ spec package: 'Metacello-Platform' 
+                  with: [ spec file: 'Metacello-Platform.pharo' ] ].
     spec
         for: #'pharo1.1.x'
         do: [ spec baseline: 'FileTree' with: [ spec repository: 'github://dalehenrich/filetree:pharo1.1/repository' ] ].
@@ -123,7 +125,6 @@ baseline: spec
     spec
         for: #'pharo2.x'
         do: [ 
-            spec removeProject: 'OSProcess'.
             spec package: 'Metacello-Platform' with: [ spec file: 'Metacello-Platform.pharo20' ].
             spec baseline: 'FileTree' with: [ spec repository: 'github://dalehenrich/filetree:pharo2.0/repository' ] ].
     spec

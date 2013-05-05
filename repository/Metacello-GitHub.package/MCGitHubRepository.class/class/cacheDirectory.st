@@ -1,5 +1,8 @@
 private
 cacheDirectory
-    ^ (MetacelloPlatform current fileDirectoryClass default directoryNamed: 'github-cache')
-        assureExistence;
-        yourself
+	| defaultDirectory cacheDirectory |
+	
+	defaultDirectory := MetacelloPlatform current defaultDirectory.
+	cacheDirectory := MetacelloPlatform current  directoryFromPath: 'github-cache' relativeTo: defaultDirectory.
+	MetacelloPlatform current ensureDirectoryExists: cacheDirectory.
+	^cacheDirectory

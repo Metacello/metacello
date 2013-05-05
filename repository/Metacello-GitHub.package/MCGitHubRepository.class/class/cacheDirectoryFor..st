@@ -1,5 +1,8 @@
 private
 cacheDirectoryFor: projectPath
-    ^ (self cacheDirectory directoryNamed: projectPath)
-        assureExistence;
-        yourself
+	| cacheDirectory projectDirectory |
+	
+	cacheDirectory := self cacheDirectory.
+	projectDirectory := MetacelloPlatform current directoryFromPath: projectPath relativeTo: cacheDirectory.
+	MetacelloPlatform current ensureDirectoryExists: projectDirectory.
+	^ projectDirectory
