@@ -5,9 +5,10 @@ version10beta321: spec
         for: #'common'
         do: [ 
             spec blessing: #'development'.
-            spec description: ''.
+            spec description: '- add squeak4.5.x as platform attribute
+- minor hack to get Metacello Preview to bootstrap (again) on Squeak4.4 and Squeak4.5'.
             spec author: 'dkh'.
-            spec timestamp: '3/12/2013 16:43'.
+            spec timestamp: '5/5/2013 14:46'.
             spec postLoadDoIt: #'metacelloPrimeRegistry'.
             spec
                 project: 'FileTree' with: '1.0.1';
@@ -48,7 +49,7 @@ version10beta321: spec
     spec for: #'pharo1.2.x' do: [ spec package: 'Metacello-Issue3758' with: 'Metacello-Issue3758-dkh.2' ].
     spec for: #'pharo1.3.x' do: [ spec package: 'Metacello-Issue3758' with: 'Metacello-Issue3758-dkh.2' ].
     spec for: #'pharo2.x' do: [ spec package: 'Metacello-Platform' with: 'Metacello-Platform.pharo20-dkh.30' ].
-    spec for: #'squeak' do: [ spec package: 'Metacello-Platform' with: 'Metacello-Platform.squeak-dkh.16' ].
+    spec for: #'squeak' do: [ spec package: 'Metacello-Platform' with: 'Metacello-Platform.squeak-dkh.21' ].
     spec
         for: #'gemstone'
         do: [ 
