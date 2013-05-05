@@ -7,7 +7,7 @@ Smalltalk at: #CommandLineToolSet ifPresent: [:cls |
   "make sure CommandLineToolSet is installed and registered for Squeak: Issue #151"
   Transcript 
     cr; show: 'CommandLineToolSet is installed ...'; 
-    cr; show: 'ToolSet default: ', ToolSet default printString.
+    cr; show: 'ToolSet default: ', (Smalltalk at: #ToolSet) default printString.
 ].
 
 "Load the Metacello Tests ... "
