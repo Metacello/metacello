@@ -8,6 +8,8 @@ Smalltalk at: #CommandLineToolSet ifPresent: [:cls |
   Transcript 
     cr; show: 'CommandLineToolSet is installed ...'; 
     cr; show: 'ToolSet default: ', (Smalltalk at: #ToolSet) default printString.
+  (Smalltalk at: #ToolSet) default: cls.
+  Transcript cr; show: 'ToolSet default: ', (Smalltalk at: #ToolSet) default printString.
 ].
 
 "Load the Metacello Tests ... "
