@@ -1,1 +1,17 @@
-TDSmalltalkLeafNode {	#name : 'tst',	#contents : '| suite result |\nsuite := TestSuite named: \'Simple SUnit Suite\'.\nsuite\n  addTest:\n      (MetacelloRegistryLoadScriptTestCase\n          selector: #\'testFie35Foo40FeauxLoadLockError\');\n  addTest:\n      (MetacelloRegistryLoadScriptTestCase\n          selector: #\'testFie35Foo40FeauxLoadLockNAllowEvenIfLockedUpgrade\');\n  addTest:\n      (MetacelloRegistryLoadScriptTestCase\n          selector: #\'testFie35Foo40FeauxLoadLockNAllowUpgradeError\');\n  addTest:\n      (MetacelloScriptingSuccessTestCase selector: #\'testGithubRefBaselineLoad2\');\n  addTest:\n      (MetacelloScriptingSuccessTestCase selector: #\'testGithubRefBaselineLoad3\').\nsuite'}
+TDSmalltalkLeafNode {	#name : 'tst',	#contents : '| suite result |
+suite := TestSuite named: \'Simple SUnit Suite\'.
+suite
+  addTest:
+      (MetacelloRegistryLoadScriptTestCase
+          selector: #\'testFie35Foo40FeauxLoadLockError\');
+  addTest:
+      (MetacelloRegistryLoadScriptTestCase
+          selector: #\'testFie35Foo40FeauxLoadLockNAllowEvenIfLockedUpgrade\');
+  addTest:
+      (MetacelloRegistryLoadScriptTestCase
+          selector: #\'testFie35Foo40FeauxLoadLockNAllowUpgradeError\');
+  addTest:
+      (MetacelloScriptingSuccessTestCase selector: #\'testGithubRefBaselineLoad2\');
+  addTest:
+      (MetacelloScriptingSuccessTestCase selector: #\'testGithubRefBaselineLoad3\').
+suite'}

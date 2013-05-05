@@ -1,1 +1,3 @@
-TDSmalltalkLeafNode {	#name : 'reset',	#contents : 'SystemChangeNotifier uniqueInstance silenceLevel: 0.\nMetacelloRegistryLoadScriptTestCase new tearDown.\nMetacelloProjectRegistration primeRegistryFromImage'}
+TDSmalltalkLeafNode {	#name : 'reset',	#contents : 'SystemChangeNotifier uniqueInstance silenceLevel: 0.
+MetacelloRegistryLoadScriptTestCase new tearDown.
+MetacelloProjectRegistration primeRegistryFromImage'}
