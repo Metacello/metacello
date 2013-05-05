@@ -1,0 +1,12 @@
+TDTxtLeafNode {	#name : 'INFO',	#contents : 'project Metacello
+version baseline
+loads anArray( \'ALL\')
+repo filetree:///opt/git/metacello-work/repository
+directory /opt/git/metacello-work
+commit 967e53a3b95ca175546d51224181613ca61ebfab
+tree d7bb8750b188a121acd7bc339bbab079d64f956a
+parent 01367508e0abdade2068ad41cdc02c49abd51b85
+author Dale Henrichs <dhenrich@vmware.com> 1367779356 -0700
+committer Dale Henrichs <dhenrich@vmware.com> 1367779356 -0700
+
+fix gemstone compile error'}
