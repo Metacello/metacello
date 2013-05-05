@@ -1,7 +1,9 @@
 {
 	"class" : {
 		"current" : "dkh 6/5/2012 19:01:24",
-		"initialize" : "dkh 6/5/2012 19:01:24" },
+		"initialize" : "dkh 05/05/2013 13:39",
+		"select" : "dkh 05/05/2013 13:39",
+		"unselect" : "dkh 05/05/2013 13:39" },
 	"instance" : {
 		"authorName" : "dkh 6/5/2012 19:01:24",
 		"authorName:" : "dkh 6/5/2012 19:01:24",

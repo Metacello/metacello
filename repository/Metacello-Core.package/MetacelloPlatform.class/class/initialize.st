@@ -1,8 +1,4 @@
 initialize-release
 initialize
-	"MetacelloPlatform initialize"
-	"MetacelloGemStonePlatform initialize"
-	"MetacelloPharoPlatform initialize"
-	"MetacelloSqueakPlatform initialize"
+  "noop ... use #select"
 
-	Current := self new
