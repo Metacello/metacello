@@ -3,7 +3,7 @@
 Transcript cr; show: 'travis---->travisCI.st'.
 gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 
-Smalltalk at: #CommandLineToolSet ifPresent: [:cl
+Smalltalk at: #CommandLineToolSet ifPresent: [:cls |
   "make sure CommandLineToolSet is installed and registered for Squeak: Issue #151"
   Transcript 
     cr; show: 'CommandLineToolSet is installed ...'; 
