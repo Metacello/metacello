@@ -1,6 +1,6 @@
 versions
 version10beta321: spec
-  <version: '1.0-beta.32.1' imports: #('1.0-beta.32-baseline')>
+  <version: '1.0-beta.32.1' imports: #('1.0-beta.32.1-baseline')>
   spec
     for: #'common'
     do: [ 
@@ -56,7 +56,11 @@ version10beta321: spec
         package: 'Metacello-ProfStef' with: 'Metacello-ProfStef-dkh.13';
         package: 'Metacello-TestsProfStef'
           with: 'Metacello-TestsProfStef-dkh.4';
-        package: 'Metacello-Platform' with: 'Metacello-Platform.pharo-dkh.33' ].
+        package: 'Metacello-PharoCommonPlatform'
+          with: 'Metacello-PharoCommonPlatform-dkh.2' ].
+  spec
+    for: #'pharo1.x'
+    do: [ spec package: 'Metacello-Platform' with: 'Metacello-Platform.pharo-dkh.33' ].
   spec
     for: #'pharo1.2.x'
     do: [ spec package: 'Metacello-Issue3758' with: 'Metacello-Issue3758-dkh.2' ].
