@@ -33,6 +33,8 @@ Gofer new
   fileNamed: 'travisCIHarness.st'
   do: [:fileStream | fileStream fileIn ].
 
+Transcript cr; show: 'Starting tests------'.
+
 (Smalltalk at: #TravisCIHarness)
   value: version
   value: 'TravisCISuccess.txt' 

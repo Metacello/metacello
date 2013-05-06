@@ -19,6 +19,8 @@ Metacello new
 "Run the Metacello tests"
 (Smalltalk at: #MetacelloPlatform) current authorName: 'testMonkey'. "These tests save code ... need an Author"
 
+Transcript cr; show: 'Starting tests------'.
+
 MetacelloBuilderTravisCI 
   runHarnessFor:  #( 'BaselineOfMetacello' ) 
   successFilename: 'TravisCISuccess.txt' 
