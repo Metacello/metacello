@@ -1,21 +1,47 @@
-"make sure that we use the #previewBootstrap symbolic version is functional"
-| gitPath |
+"Load and run tests to be performed by TravisCI"
+| gitPath metacelloConfigurationRepository version |
 Transcript cr; show: 'travis---->previewBootstrap.st'.
 gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 
-"Load the Metacello Tests ... "
-Metacello new
-  configuration: 'Metacello';
-  version: #previewBootstrap;
-  repository: 'filetree://', gitPath, '/metacello-work';
+[
+Gofer new
+  url: 'http://ss3.gemstone.com/ss/FileTree';
+  package: 'ConfigurationOfFileTree';
+  load.
+((Smalltalk at: #'ConfigurationOfFileTree') project version: '1.0')
+  load: 'default'.
+Gofer new
+  url: 'http://seaside.gemstone.com/ss/metacello';
+  package: 'ConfigurationOfGofer';
+  load.
+((Smalltalk at: #'ConfigurationOfGofer') project version: #'stable')
+  load.
+metacelloConfigurationRepository := (Smalltalk at: #'MCFileTreeRepository') new
+  directory: (FileDirectory on: gitPath, '/metacello-work');
+  yourself.
+Gofer new
+  repository: metacelloConfigurationRepository;
+  package: 'ConfigurationOfMetacello';
+  load.
+(version := (Smalltalk at: #'ConfigurationOfMetacello') project version: #previewStable)
   load: 'TravisCI'.
-
 
 "Run the Metacello tests"
 (Smalltalk at: #MetacelloPlatform) current authorName: 'testMonkey'. "These tests save code ... need an Author"
 
-MetacelloBuilderTravisCI 
-  runHarnessFor:  #( 'BaselineOfMetacello' ) 
-  successFilename: 'TravisCISuccess.txt' 
-  failFilename: 'TravisCIFailure.txt'
+((Smalltalk at: #'FileDirectory') on: gitPath, '/metacello-work/tests')
+  fileNamed: 'travisCIHarness.st'
+  do: [:fileStream | fileStream fileIn ].
+
+(Smalltalk at: #TravisCIHarness)
+  value: version
+  value: 'TravisCISuccess.txt' 
+  value: 'TravisCIFailure.txt'.
+]
+	on: Warning
+	do: [:ex |:w
+
+		Transcript cr; show: 'Warning: ', ex description.
+		ex resume: true].
+
 
