@@ -23,7 +23,7 @@ Gofer new
   repository: metacelloConfigurationRepository;
   package: 'ConfigurationOfMetacello';
   load.
-(version := (Smalltalk at: #'ConfigurationOfMetacello') project version: #previewStable)
+(version := (Smalltalk at: #'ConfigurationOfMetacello') project version: #previewBootstrap)
   load: 'TravisCI'.
 
 "Run the Metacello tests"
