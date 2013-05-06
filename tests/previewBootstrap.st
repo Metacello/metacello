@@ -39,8 +39,7 @@ Gofer new
   value: 'TravisCIFailure.txt'.
 ]
 	on: Warning
-	do: [:ex |:w
-
+	do: [:ex |
 		Transcript cr; show: 'Warning: ', ex description.
 		ex resume: true].
 
