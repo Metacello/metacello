@@ -11,9 +11,12 @@ version10beta321: spec
 - minor hack to get Metacello Preview to bootstrap (again) on Squeak4.4 and Squeak4.5
 1.0-beta.32.1 (dkh.758):
 - Issue #65: port to Pharo-2.0
-  https://github.com/dalehenrich/metacello-work/issues/65'.
+  https://github.com/dalehenrich/metacello-work/issues/65
+1.0-beta.32.1 (dkh.762):
+- adjust dependencies for tests
+- fix tests when loaded from mcz files'.
       spec author: 'dkh'.
-      spec timestamp: '5/5/2013 17:21'.
+      spec timestamp: '5/6/2013 21:09'.
       spec postLoadDoIt: #'metacelloPrimeRegistry'.
       spec
         project: 'FileTree' with: '1.0.1';
@@ -32,8 +35,7 @@ version10beta321: spec
         package: 'Metacello-TestsReference'
           with: 'Metacello-TestsReference-dkh.20';
         package: 'Metacello-TestsCore' with: 'Metacello-TestsCore-dkh.31';
-        package: 'Metacello-TestsMC'
-          with: 'Metacello-TestsMC-ChristopheDemarey.355';
+        package: 'Metacello-TestsMC' with: 'Metacello-TestsMC-dkh.356';
         package: 'Metacello-TestsTutorial'
           with: 'Metacello-TestsTutorial-dkh.40';
         package: 'Metacello-ToolBox' with: 'Metacello-ToolBox-dkh.131' ].
