@@ -35,7 +35,7 @@ version10beta321: spec
         package: 'Metacello-TestsReference'
           with: 'Metacello-TestsReference-dkh.20';
         package: 'Metacello-TestsCore' with: 'Metacello-TestsCore-dkh.31';
-        package: 'Metacello-TestsMC' with: 'Metacello-TestsMC-dkh.356';
+        package: 'Metacello-TestsMC' with: 'Metacello-TestsMC-dkh.357';
         package: 'Metacello-TestsTutorial'
           with: 'Metacello-TestsTutorial-dkh.40';
         package: 'Metacello-ToolBox' with: 'Metacello-ToolBox-dkh.131' ].
