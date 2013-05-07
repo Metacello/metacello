@@ -53,7 +53,7 @@ baseline10beta321: spec
               spec
                 postLoadDoIt: #'testsMC10beta25PostLoadDoIt';
                 requires:
-                    #('Metacello-MC' 'Metacello-TestsCore' 'Gofer Tests' 'Metacello-ToolBox') ];
+                    #('Metacello-MC' 'Metacello-TestsCore' 'Gofer Tests' 'Metacello-ToolBox' 'Metacello-GitHub') ];
         package: 'Metacello-TestsReference'
           with: [ spec requires: #('Metacello-Reference') ];
         package: 'Metacello-TestsTutorial'
@@ -62,19 +62,18 @@ baseline10beta321: spec
           with: [ spec requires: #('Metacello-Platform' 'Metacello-Core' 'Metacello-ToolBox') ];
         yourself.
       spec
-        group: 'default'
-          with: #('Metacello-Core' 'Metacello-ToolBox' 'Metacello-GitHub');
+        group: 'default' with: #('batch' 'Metacello-ToolBox');
         group: 'batch' with: #('Metacello-Core' 'Metacello-GitHub');
         group: 'Base Configuration' with: #('Metacello-Base');
         group: 'Core' with: #('default');
         group: 'Tutorial' with: #('Metacello-Tutorial' 'Metacello-Reference');
-        group: 'UI' with: #('OB-Metacello');
+        group: 'UI' with: #('default' 'OB-Metacello');
         group: 'TravisCI'
           with:
             #('Metacello-TestsCore' 'Metacello-TestsTutorial' 'Metacello-TestsMC' 'Metacello-TestsReference');
         group: 'Tests'
           with:
-            #('default' 'Metacello-TestsCore' 'Metacello-TestsTutorial' 'Metacello-TestsMC' 'Metacello-TestsReference');
+            #('Metacello-TestsCore' 'Metacello-TestsTutorial' 'Metacello-TestsMC' 'Metacello-TestsReference');
         yourself ].
   spec
     for: #'squeakCommon'
