@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #'Metacello-Reference'!
+SystemOrganization addCategory: 'Metacello-Reference'!
