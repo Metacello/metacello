@@ -1,6 +1,7 @@
 doits
 preLoadSqueakEnsureGlobalUnderscoreSelectors
-  (Smalltalk at: #'MetacelloSqueakOriginalUnderscoreSelectorsPreferenceValue')
+  Smalltalk
+    at: #'MetacelloSqueakOriginalUnderscoreSelectorsPreferenceValue'
     put: ((Smalltalk at: #'Scanner') perform: #'prefAllowUnderscoreSelectors').
   (Smalltalk at: #'Scanner')
     perform: #'prefAllowUnderscoreSelectors:'
