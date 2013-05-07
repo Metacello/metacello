@@ -18,9 +18,12 @@ version10beta321: spec
 1.0-beta.32.1 (dkh.764):
 - switch to using http://smalltalkhub.com/mc/dkh/metacello/main as alternate repository to http://seaside.gemstone.com/ss/metacello
 - fix Issue #151: travis builds hanging for Squeak-4.4 and Squeak4.5
-  https://github.com/dalehenrich/metacello-work/issues/151'.
+  https://github.com/dalehenrich/metacello-work/issues/151
+1.0-beta.32.1 (dkh.765):
+- workaround for SmalltalkHub Issue 21: corrupted package .... Metacello-Reference.dkh.35
+  https://code.google.com/p/smalltalk-hub/issues/detail?id=21'.
       spec author: 'dkh'.
-      spec timestamp: '5/7/2013 13:28'.
+      spec timestamp: '5/7/2013 16:14'.
       spec postLoadDoIt: #'metacelloPrimeRegistry'.
       spec
         project: 'FileTree' with: '1.0.1';
@@ -33,7 +36,7 @@ version10beta321: spec
         package: 'Metacello-GitHub'
           with: 'Metacello-GitHub-ChristopheDemarey.25';
         package: 'Metacello-MC' with: 'Metacello-MC-dkh.674';
-        package: 'Metacello-Reference' with: 'Metacello-Reference-dkh.35';
+        package: 'Metacello-Reference' with: 'Metacello-Reference-dkh.36';
         package: 'Metacello-Tutorial' with: 'Metacello-Tutorial-dkh.26';
         package: 'OB-Metacello' with: 'OB-Metacello-dkh.83';
         package: 'Metacello-TestsReference'
