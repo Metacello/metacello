@@ -7,8 +7,8 @@ ensureMetacello: loadList
     ifAbsent: [ 
       | version error gofer |
       (Array
-        with: 'http://seaside.gemstone.com/ss/metacello'
-        with: 'http://www.squeaksource.com/metacello')
+        with: 'http://smalltalkhub.com/mc/dkh/metacello/main'
+        with: 'http://seaside.gemstone.com/ss/metacello')
         do: [ :repositoryUrl | 
           "bootstrap Metacello"
           [ 
@@ -24,7 +24,7 @@ ensureMetacello: loadList
                     perform: #'package:' with: 'ConfigurationOfMetacello';
                     perform: #'load' ] ].
           version := (Smalltalk at: #'ConfigurationOfMetacello') project
-            version: #'previewBootstrap'.	"bootstrap with #'previewBootstrap' currently 1.0-beta.32.1"
+            version: #'previewBootstrap'.
           version load: loadList.
           self
             retry: [ 
