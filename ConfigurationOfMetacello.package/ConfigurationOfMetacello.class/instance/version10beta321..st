@@ -14,16 +14,20 @@ version10beta321: spec
   https://github.com/dalehenrich/metacello-work/issues/65
 1.0-beta.32.1 (dkh.762):
 - adjust dependencies for tests
-- fix tests when loaded from mcz files'.
+- fix tests when loaded from mcz files
+1.0-beta.32.1 (dkh.764):
+- switch to using http://smalltalkhub.com/mc/dkh/metacello/main as alternate repository to http://seaside.gemstone.com/ss/metacello
+- fix Issue #151: travis builds hanging for Squeak-4.4 and Squeak4.5
+  https://github.com/dalehenrich/metacello-work/issues/151'.
       spec author: 'dkh'.
-      spec timestamp: '5/6/2013 21:09'.
+      spec timestamp: '5/7/2013 13:28'.
       spec postLoadDoIt: #'metacelloPrimeRegistry'.
       spec
         project: 'FileTree' with: '1.0.1';
         project: 'Gofer' with: '1.0.5.1';
         project: 'Gofer Tests' with: '1.0.5.1'.
       spec
-        package: 'Metacello-Base' with: 'Metacello-Base-dkh.104';
+        package: 'Metacello-Base' with: 'Metacello-Base-dkh.105';
         package: 'Metacello-Core' with: 'Metacello-Core-dkh.678';
         package: 'Metacello-FileTree' with: 'Metacello-FileTree-dkh.29';
         package: 'Metacello-GitHub'

@@ -6,7 +6,7 @@ baseline10beta321: spec
     do: [ 
       spec blessing: #'baseline'.
       spec repository: 'http://seaside.gemstone.com/ss/metacello'.
-      spec repository: 'http://www.squeaksource.com/metacello'.
+      spec repository: 'http://smalltalkhub.com/mc/dkh/metacello/main'.
       spec
         project: 'FileTree'
           with: [ 
@@ -161,6 +161,16 @@ baseline10beta321: spec
               spec
                 file: 'Metacello-Platform.squeak';
                 requires: #('OSProcess') ];
+        package: 'Metacello-TestsMC'
+          with: [ 
+              spec
+                preLoadDoIt: #'preLoadSqueakEnsureGlobalUnderscoreSelectors';
+                postLoadDoIt: #'postLoadSqueakRestoreGlobalUnderscoreSelectors' ];
+        package: 'Metacello-TestsTutorial'
+          with: [ 
+              spec
+                preLoadDoIt: #'preLoadSqueakEnsureGlobalUnderscoreSelectors';
+                postLoadDoIt: #'postLoadSqueakRestoreGlobalUnderscoreSelectors' ];
         yourself ].
   spec
     for: #'gemstone'
