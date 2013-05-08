@@ -5,11 +5,11 @@ ensureMetacelloBaseConfiguration
     ifAbsent: [ 
       | repository version |
       repository := MCHttpRepository
-        location: 'http://seaside.gemstone.com/ss/metacello'
+        location: 'http://smalltalkhub.com/mc/dkh/metacello/main'
         user: ''
         password: ''.
       repository
-        versionReaderForFileNamed: 'Metacello-Base-dkh.104.mcz'
+        versionReaderForFileNamed: 'Metacello-Base-dkh.107'
         do: [ :reader | 
           version := reader version.
           version load.
