@@ -6,7 +6,7 @@ bootstrapMetacelloFrom: repositoryUrl
 
   | platformPkg |
   self ensureGoferVersion: 'Gofer-Core-lr.115' repositoryUrl: repositoryUrl.
-  #('Metacello-Base-dkh.106' 'Metacello-Core-dkh.678' 'Metacello-MC-dkh.674')
+  #('Metacello-Base-dkh.107' 'Metacello-Core-dkh.678' 'Metacello-MC-dkh.674')
     do: [ :pkg | self bootstrapPackage: pkg from: repositoryUrl ].
   platformPkg := Smalltalk
     at: #'SystemVersion'
@@ -21,6 +21,7 @@ bootstrapMetacelloFrom: repositoryUrl
         ifFalse: [ 
           (versionString beginsWith: 'Pharo')
             ifTrue: [ 
+              self bootstrapPackage: 'Metacello-PharoCommonPlatform-dkh.2' from: repositoryUrl.
               (versionString beginsWith: 'Pharo2')
                 ifTrue: [ 'Metacello-Platform.pharo20-dkh.33' ]
                 ifFalse: [ 'Metacello-Platform.pharo-dkh.34' ] ] ] ].
