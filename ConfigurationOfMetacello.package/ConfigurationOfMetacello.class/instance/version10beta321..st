@@ -24,16 +24,17 @@ version10beta321: spec
   https://code.google.com/p/smalltalk-hub/issues/detail?id=21
 1.0-beta.32.1 (dkh.767):
 - workaround for SmalltalkHub Issue 21: corrupted package .... Metacello-TestsPlatform.squeakCommon-dkh.9
-- workaround for SmalltalkHub Issue 21: corrupted package .... Metacello-Platform.pharo-dkh.34'.
+- workaround for SmalltalkHub Issue 21: corrupted package .... Metacello-Platform.pharo-dkh.34
+- workaround for SmalltalkHub Issue 21: corrupted package...propogate new package to Metacello-Base'.
       spec author: 'dkh'.
-      spec timestamp: '5/7/2013 22:13'.
+      spec timestamp: '5/7/2013 23:11'.
       spec postLoadDoIt: #'metacelloPrimeRegistry'.
       spec
         project: 'FileTree' with: '1.0.1';
         project: 'Gofer' with: '1.0.5.1';
         project: 'Gofer Tests' with: '1.0.5.1'.
       spec
-        package: 'Metacello-Base' with: 'Metacello-Base-dkh.105';
+        package: 'Metacello-Base' with: 'Metacello-Base-dkh.106';
         package: 'Metacello-Core' with: 'Metacello-Core-dkh.678';
         package: 'Metacello-FileTree' with: 'Metacello-FileTree-dkh.29';
         package: 'Metacello-GitHub'
