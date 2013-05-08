@@ -3,7 +3,8 @@ language: erlang
 env:
    - ST=Pharo-1.4 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
    - ST=Pharo-2.0 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
-   - ST=Squeak-4.5 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
+   - ST=Squeak-4.4 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st 
+#   - ST=Squeak-4.5 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st # until Issue #155 fixes
    - ST=GemStone-3.1.0.2 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
 
 #   - ST=PharoCore-1.1 BUILD_ARG=-X TRAVIS_SCRIPT=travisCI.st
@@ -12,7 +13,7 @@ env:
 #   - ST=Pharo-1.4 BUILD_ARG=-X TRAVIS_SCRIPT=travisCI.st
 #   - ST=Squeak-4.3 BUILD_ARG=-X TRAVIS_SCRIPT=travisCI.st
 #   - ST=Squeak-4.4 BUILD_ARG=-X TRAVIS_SCRIPT=travisCI.st
-#   - ST=Squeak-4.5 BUILD_ARG=-X TRAVIS_SCRIPT=travisCI.st
+##   - ST=Squeak-4.5 BUILD_ARG=-X TRAVIS_SCRIPT=travisCI.st # until Issue #155 fixes
 ##   - ST=Pharo-2.0 TRAVIS_SCRIPT=travisCI.st     # until Issue #65 fixed
 
 #   - ST=PharoCore-1.1 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
@@ -21,7 +22,7 @@ env:
 #   - ST=Pharo-1.4 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
 #   - ST=Squeak-4.3 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
 #   - ST=Squeak-4.4 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
-#   - ST=Squeak-4.5 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
+##   - ST=Squeak-4.5 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st # until Issue #155 fixes
 ##   - ST=Pharo-2.0 TRAVIS_SCRIPT=travisPreviewCI.st # until Issue #65 fixed
 
    #  GemStone should only be tested with Preview only (for now)
