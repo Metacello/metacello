@@ -1,7 +1,11 @@
 "Load and run tests to be performed by TravisCI"
-| gitPath |
+| gitCache gitPath |
 Transcript cr; show: 'travis---->travisCI.st'.
-gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
+
+gitCache := 'git_cache'.
+gitPath := (Smalltalk at: #'FileDirectory' ifAbsent: [  ])
+  ifNil: [ ((Smalltalk at: #'FileSystem') workingDirectory / gitCache) pathString ]
+  ifNotNil: [:fileDirectoryClass | (fileDirectoryClass default directoryNamed: gitCache ) fullName].
 
 Smalltalk at: #CommandLineToolSet ifPresent: [:cls |
   "make sure CommandLineToolSet is installed and registered for Squeak: Issue #151"
