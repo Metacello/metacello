@@ -1,5 +1,7 @@
 tests
 testIssue111
+  "https://github.com/dalehenrich/metacello-work/issues/111"
+
   "expect record to run without error ... leave potential error unhandled for ease of debugging"
 
   | dir repo |
