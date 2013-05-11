@@ -13,24 +13,9 @@ testClassicProjectReferenceSpecificationA
     detect: [ :validation | validation reasonCode == #'onlyBaselineVersion' ]
     ifNone: [ self assert: false ].
   self assertMetacelloExampleVersionSpec: versionSpec.
-  self
-    assert:
-      (x := versionSpec printString)
-        =
-          'spec blessing: #''baseline''.
+  self assert: (x := versionSpec printString) = 'spec blessing: #''baseline''.
 spec project: ''MetacelloExample'' with: [
-
-
-spec
-
-
-
-className: ''ConfigurationOfMetacelloExample'';
-
-
-
-versionString: ''1.0'';
-
-
-
-repository: ''dictionary://Metacello_Configuration_Test_Repository'' ].'
+		spec
+			className: ''ConfigurationOfMetacelloExample'';
+			versionString: ''1.0'';
+			repository: ''dictionary://Metacello_Configuration_Test_Repository'' ].'
