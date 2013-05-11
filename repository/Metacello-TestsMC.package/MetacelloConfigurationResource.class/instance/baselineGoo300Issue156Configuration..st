@@ -1,5 +1,5 @@
 ConfigurationOfFoo
-baselineGooIssue156Configuration: spec
+baselineGoo300Issue156Configuration: spec
   "https://github.com/dalehenrich/metacello-work/issues/156"
 
   <version: '3.0.0'>

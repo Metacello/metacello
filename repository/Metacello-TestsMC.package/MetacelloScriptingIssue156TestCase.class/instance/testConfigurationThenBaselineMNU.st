@@ -5,9 +5,10 @@ testConfigurationThenBaselineMNU
   "MNU for #compareEqual:
     - preload BaselineOfGoo package
     - load ConfigurationOfGoo indirectly through ConfigurationOfProjectGoo
-    - attempt to load BaselineOfGoo indirectly through ConfigurationOfProjectGoo"
+    - attempt to load BaselineOfGoo indirectly through ConfigurationOfProjectGoo
+   ...SHOULD LOAD WITHOUT ERRORS ... baseline trumps configuration, because it is 
+   expected to have a baseline loaded by a configuration"
 
-  | failed |
   Gofer new
     repository: mczConfigurationRepository;
     package: 'ConfigurationOfProjectGoo';
@@ -20,17 +21,9 @@ testConfigurationThenBaselineMNU
     repository: 'dictionary://Metacello_MczConfiguration_Test_Repository';
     silently;
     load.
-  failed := false.
-  [ 
   Metacello new
     configuration: 'ProjectGoo';
     version: '1.1.0';
     repository: 'dictionary://Metacello_MczConfiguration_Test_Repository';
     silently;
-    load ]
-    on: MessageNotUnderstood
-    do: [ :ex | 
-      ex selector == #'compareEqual:'
-        ifFalse: [ ex pass ].
-      failed := true ].
-  self assert: failed
+    load

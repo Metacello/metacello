@@ -4,6 +4,8 @@
 	"instance" : {
 		"setUpRepositoryContents" : "dkh 05/10/2013 14:48",
 		"tearDownPackageList" : "dkh 05/10/2013 16:24",
-		"testBaselineThenConfigurationCorrect" : "dkh 05/10/2013 17:21",
-		"testConfigurationThenBaselineMNU" : "dkh 05/10/2013 17:21",
-		"testConfigurationThenBaselineNoPreload" : "dkh 05/11/2013 07:38" } }
+		"testBaselineThenConfigurationCorrect" : "dkh 05/11/2013 08:17",
+		"testConfigurationLoadingBaseline" : "dkh 05/11/2013 08:42",
+		"testConfigurationThenBaselineMNU" : "dkh 05/11/2013 08:15",
+		"testConfigurationThenBaselineNoPreload" : "dkh 05/11/2013 07:38",
+		"testIndirectConfigurationLoadingBaseline" : "dkh 05/11/2013 08:55" } }

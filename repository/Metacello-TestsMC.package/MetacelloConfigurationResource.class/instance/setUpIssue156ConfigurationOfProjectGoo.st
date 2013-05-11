@@ -26,7 +26,19 @@ setUpIssue156ConfigurationOfProjectGoo
     selector: 'version11Issue156:'
     category: 'cat'
     timeStamp: ''
-    source: (self class sourceCodeAt: #'version11Issue156:') asString)}.
+    source: (self class sourceCodeAt: #'version11Issue156:') asString).
+  (MCMethodDefinition
+    className: className asString
+    selector: 'version20Issue156:'
+    category: 'cat'
+    timeStamp: ''
+    source: (self class sourceCodeAt: #'version20Issue156:') asString).
+  (MCMethodDefinition
+    className: className asString
+    selector: 'version30Issue156:'
+    category: 'cat'
+    timeStamp: ''
+    source: (self class sourceCodeAt: #'version30Issue156:') asString)}.
   monticelloRepository
     basicStoreVersion:
       (MCVersion new

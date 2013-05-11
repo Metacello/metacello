@@ -14,7 +14,9 @@ hasLoadConflicts: aProjectRegistration
   configurationProjectSpec
     ifNil: [ 
       aProjectRegistration configurationProjectSpec notNil
-        ifTrue: [ ^ true ] ]
+        ifTrue: [ 
+          "a configuration MAY NOT trump a baseline"
+          ^ true ] ]
     ifNotNil: [ 
       aProjectRegistration configurationProjectSpec
         ifNotNil: [ 
@@ -22,5 +24,7 @@ hasLoadConflicts: aProjectRegistration
             hasLoadConflicts: configurationProjectSpec)
             ifTrue: [ ^ true ] ] ].
   ^ baselineProjectSpec
-    ifNil: [ false ]
+    ifNil: [ 
+      "a baseline MAY trump a configuration"
+      false ]
     ifNotNil: [ baselineProjectSpec hasLoadConflicts: aProjectRegistration baselineProjectSpec ]

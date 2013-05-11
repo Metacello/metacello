@@ -17,11 +17,25 @@ setUpIssue156ConfigurationOfGoo
     comment: '').
   (MCMethodDefinition
     className: className asString
-    selector: 'baselineGooIssue156Configuration:'
+    selector: 'baselineGoo300Issue156Configuration:'
     category: 'cat'
     timeStamp: ''
     source:
-      (self class sourceCodeAt: #'baselineGooIssue156Configuration:') asString)}.
+      (self class sourceCodeAt: #'baselineGoo300Issue156Configuration:') asString).
+  (MCMethodDefinition
+    className: className asString
+    selector: 'baselineGoo400Issue156Configuration:'
+    category: 'cat'
+    timeStamp: ''
+    source:
+      (self class sourceCodeAt: #'baselineGoo400Issue156Configuration:') asString).
+  (MCMethodDefinition
+    className: className asString
+    selector: 'baselineGoo500Issue156Configuration:'
+    category: 'cat'
+    timeStamp: ''
+    source:
+      (self class sourceCodeAt: #'baselineGoo500Issue156Configuration:') asString)}.
   monticelloRepository
     basicStoreVersion:
       (MCVersion new

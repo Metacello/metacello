@@ -5,16 +5,17 @@ testBaselineThenConfigurationCorrect
   "Correct behavior
     - load BaselineOfGoo indirectly through ConfigurationOfProjectGoo
     - load ConfigurationOfGoo indirectly through ConfigurationOfProjectGoo
-    - signal a MetacelloAllowConflictingProjectUpgrade"
+    - signal a MetacelloAllowConflictingProjectUpgrade
+   configuration may not trump baseline"
 
-  | failed |
+  | triggered |
   Metacello new
     configuration: 'ProjectGoo';
     version: '1.1.0';
     repository: 'dictionary://Metacello_MczConfiguration_Test_Repository';
     silently;
     load.
-  failed := false.
+  triggered := false.
   [ 
   Metacello new
     configuration: 'ProjectGoo';
@@ -33,5 +34,5 @@ testBaselineThenConfigurationCorrect
             = 'ConfigurationOfGoo'.
       self assert: ex existingProjectRegistration configurationProjectSpec isNil.
       self assert: ex newProjectRegistration baselineProjectSpec isNil.
-      failed := true ].
-  self assert: failed
+      triggered := true ].
+  self assert: triggered
