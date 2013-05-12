@@ -166,11 +166,6 @@ baseline: spec
       spec
         baseline: 'FileTree'
           with: [ spec repository: 'github://dalehenrich/filetree:squeak4.3/repository' ];
-        package: 'Metacello-TestsMC'
-          with: [ 
-              spec
-                preLoadDoIt: #'preLoadSqueakEnsureGlobalUnderscoreSelectors';
-                postLoadDoIt: #'postLoadSqueakRestoreGlobalUnderscoreSelectors' ];
         yourself.
       spec
         package: 'Metacello-Platform'
