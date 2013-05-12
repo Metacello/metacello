@@ -9,11 +9,7 @@ gitPath := (Smalltalk at: #'FileDirectory' ifAbsent: [  ])
 
 Smalltalk at: #CommandLineToolSet ifPresent: [:cls |
   "make sure CommandLineToolSet is installed and registered for Squeak: Issue #151"
-  Transcript 
-    cr; show: 'CommandLineToolSet is installed ...'; 
-    cr; show: 'ToolSet default: ', (Smalltalk at: #ToolSet) default printString.
   (Smalltalk at: #ToolSet) default: cls.
-  Transcript cr; show: 'ToolSet default: ', (Smalltalk at: #ToolSet) default printString.
 ].
 
 "Load the Metacello Tests ... "
