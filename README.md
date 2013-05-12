@@ -8,7 +8,8 @@ Gofer new
   load.
 
 "Get the Metacello configuration (for Squeak users)"
-(Installer url: 'http://seaside.gemstone.com/ss/metacello/')
+Installer gemsource
+    project: 'metacello';
     addPackage: 'ConfigurationOfMetacello';
     install.
 
