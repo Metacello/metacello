@@ -13,6 +13,11 @@ Metacello new
   configuration: 'MetacelloPreview';
   version: #stable;
   repository: 'filetree://', gitPath, '/metacello-work';
+  onConflict: [:ex | 
+    "allow new version of Metacello to be loaded"
+    ex existingProjectRegistration baseName = 'Metacello'
+      ifTrue: [ ex allow ].
+    ex disallow ];
   load: 'TravisCI'.
 
 
