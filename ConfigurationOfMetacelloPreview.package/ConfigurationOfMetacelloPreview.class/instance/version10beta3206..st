@@ -4,7 +4,7 @@ version10beta3206: spec
   spec
     for: #'common'
     do: [ 
-      spec blessing: #'development'.
+      spec blessing: #'release'.
       spec
         description:
           'Checkpoint release to make bugfix for Issue #65 available (https://github.com/dalehenrich/metacello-work/issues/65) ... Port Metacello to Pharo-2.0
@@ -12,14 +12,15 @@ version10beta3206: spec
   https://code.google.com/p/smalltalk-hub/issues/detail?id=21
 - bootstrap from Metacello-Base needs to load Metacello-PharoCommonPlatform
 - fix for Issue #156: MNU #compareEqual:
-  https://github.com/dalehenrich/metacello-work/issues/156'.
+  https://github.com/dalehenrich/metacello-work/issues/156
+- final checkpoint release for this phase of Issue #65...Metacello Preview bootstraps into Pharo2.0'.
       spec author: 'dkh'.
-      spec timestamp: '5/11/2013 12:43'.
+      spec timestamp: '5/12/2013 13:16'.
       spec
         baseline: 'Metacello'
           with: [ 
               spec
                 loads: #('batch');
                 repository:
-                    'github://dalehenrich/metacello-work:c53d8a7b197ffc4804deaade109ec013581f930f/repository' ];
+                    'github://dalehenrich/metacello-work:5a6be485bc61a2ac154305df1bc53caeda87242c/repository' ];
         import: 'Metacello' ]
