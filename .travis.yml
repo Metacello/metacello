@@ -2,7 +2,7 @@ language: erlang
 
 env:
    - ST=Pharo-1.4
-#   - ST=Pharo-2.0 #restore Pharo-2.0 when Issue #65 is finally resolved (should be soon)
+   - ST=Pharo-2.0
    - ST=Squeak-4.4
    - ST=GemStone-3.1.0.2
 
