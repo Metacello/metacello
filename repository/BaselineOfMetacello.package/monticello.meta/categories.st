@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #BaselineOfMetacello!
+SystemOrganization addCategory: 'BaselineOfMetacello'!

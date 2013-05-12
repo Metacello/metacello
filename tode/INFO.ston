@@ -1,0 +1,12 @@
+TDTxtLeafNode {	#name : 'INFO',	#contents : 'project Metacello
+version baseline
+loads anArray( \'ALL\')
+repo filetree:///opt/git/metacello-work/repository
+directory /opt/git/metacello-work
+commit 0bd75d02c9d2fe8f93d8cbe2966e17baf7294e58
+tree 38237a9c2a6d919f71c4e1059c606fb57397fb11
+parent 15e05411c31f75bd6c268a6ca783348bcfd62f3f
+author Dale Henrichs <dhenrich@vmware.com> 1367786085 -0700
+committer Dale Henrichs <dhenrich@vmware.com> 1367786085 -0700
+
+default ToolSet not changed?'}

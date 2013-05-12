@@ -1,9 +1,11 @@
 tests
 testForDoListAtrribute1Active
-    | project version expected actual |
-    project := self projectWith: #(#'attribute1').
-    version := project version: '3.0-baseline'.
-    expected := 'spec blessing: #''baseline''.
+  "https://github.com/dalehenrich/metacello-work/issues/125"
+
+  | project version expected actual |
+  project := self projectWith: #(#'attribute1').
+  version := project version: '3.0-baseline'.
+  expected := 'spec blessing: #''baseline''.
 spec preLoadDoIt: #''preloadForCore''.
 spec postLoadDoIt: #''postloadForCore:package:''.
 spec 
@@ -24,5 +26,5 @@ spec
 spec 
 	group: ''Core'' with: #(''Example Project'' );
 	group: ''Core'' with: #(''Extra Project'' ).'.
-    actual := version spec printString.
-    self assert: expected = actual
+  actual := version spec printString.
+  self assert: expected = actual

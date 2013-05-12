@@ -1,5 +1,6 @@
 initialize-release
 initialize
-	"implmented to force initialize on load"
-	
-	super initialize
+  "New version as workaround for https://code.google.com/p/smalltalk-hub/issues/detail?id=21"
+
+  self select
+

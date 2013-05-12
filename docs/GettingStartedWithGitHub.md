@@ -43,9 +43,9 @@ Gofer new
   package: 'ConfigurationOfMetacello';
   load.
 
-"Bootstrap Metacello 1.0-beta.32, using mcz files"
-((Smalltalk at: #ConfigurationOfMetacello) project
-  version: '1.0-beta.32') load.
+"Bootstrap Metacello Preview, using mcz files (#'previewBootstrap' symbolic version)"
+((Smalltalk at: #ConfigurationOfMetacello) project 
+  version: #'previewBootstrap') load.
 
 "Load the Preview version of Metacello from GitHub"
 (Smalltalk at: #Metacello) new

@@ -1,0 +1,5 @@
+repository creation
+packageInfoFor: aMCWorkingCopy
+  "MCPackageManager>>packageInfo is deprecated in Pharo2.0"
+
+  ^ aMCWorkingCopy packageInfo

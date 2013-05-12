@@ -1,13 +1,36 @@
 "Load and run tests to be performed by TravisCI"
-| gitPath |
+| gitCache gitPath |
 Transcript cr; show: 'travis---->travisCI.st'.
-gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
+
+gitCache := 'git_cache'.
+gitPath := (Smalltalk at: #'FileDirectory' ifAbsent: [  ])
+  ifNil: [ ((Smalltalk at: #'FileSystem') workingDirectory / gitCache) pathString ]
+  ifNotNil: [:fileDirectoryClass | (fileDirectoryClass default directoryNamed: gitCache ) fullName].
+
+Smalltalk at: #CommandLineToolSet ifPresent: [:cls |
+  "make sure CommandLineToolSet is installed and registered for Squeak: Issue #151"
+  (Smalltalk at: #ToolSet) default: cls.
+].
 
 "Load the Metacello Tests ... "
+[
 Metacello new
 	baseline: 'Metacello';
   repository: 'filetree://', gitPath, '/metacello-work/repository';
+  get.
+
+Metacello new
+	baseline: 'Metacello';
+  repository: 'filetree://', gitPath, '/metacello-work/repository';
+  onConflict: [:ex | 
+    "allow new version of Metacello to be loaded"
+    ex existingProjectRegistration baseName = 'Metacello'
+      ifTrue: [ ex allow ].
+    ex disallow ];
   load: 'TravisCI'.
+] on: Warning do: [:ex | 
+  Transcript cr; show: 'WARNING: ', ex description.
+  ex resume: true ].
 
 "Run the Metacello tests"
 MetacelloPlatform current authorName: 'testMonkey'. "These tests save code ... need an Author"
@@ -15,6 +38,8 @@ MetacelloPlatform current authorName: 'testMonkey'. "These tests save code ... n
 "no deprecated messages should be used"
 (Deprecation respondsTo: #raiseWarning:)
   ifTrue: [ Deprecation raiseWarning: true].
+
+Transcript cr; show: '---Start running tests...'.
 
 [
 TravisCIHarness

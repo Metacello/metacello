@@ -33,11 +33,11 @@ Installer gemsource
     install: 'ConfigurationOfMetacello'. 
 ```
 
-then bootstrap `Metacello 1.0-beta.32` and install the `Metacello Preview` code (both images):
+then bootstrap `Metacello #'previewBootstrap'` and install the `Metacello Preview` code (both images):
 
 ```Smalltalk
 ((Smalltalk at: #ConfigurationOfMetacello) project 
-  version: '1.0-beta.32') load.
+  version: #'previewBootstrap') load.
 
 (Smalltalk at: #Metacello) new
   configuration: 'MetacelloPreview';

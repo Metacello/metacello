@@ -8,13 +8,14 @@ Gofer new
   load.
 
 "Get the Metacello configuration (for Squeak users)"
-(Installer url: 'http://seaside.gemstone.com/ss/metacello/')
+Installer gemsource
+    project: 'metacello';
     addPackage: 'ConfigurationOfMetacello';
     install.
 
-"Bootstrap Metacello 1.0-beta.32, using mcz files"
+"Bootstrap Metacello Preview, using mcz files (#'previewBootstrap' symbolic version"
 ((Smalltalk at: #ConfigurationOfMetacello) project 
-  version: '1.0-beta.32') load.
+  version: #'previewBootstrap') load.
 
 "Load the Preview version of Metacello from GitHub"
 (Smalltalk at: #Metacello) new

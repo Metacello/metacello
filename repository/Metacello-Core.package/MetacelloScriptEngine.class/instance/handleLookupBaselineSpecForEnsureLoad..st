@@ -1,8 +1,8 @@
 handlers
 handleLookupBaselineSpecForEnsureLoad: exception
-  "if existing and new don't compare equal, then ensure the new baseline is loaded"
+  "if requested and registered don't compare equal, then ensure the new baseline is loaded"
 
-  | existing new |
-  new := exception projectSpec.
-  existing := self lookupBaselineSpecForEnsure: exception projectSpec.
-  ^ exception resume: (existing compareEqual: new) not
+  | requested registered |
+  requested := exception projectSpec.
+  registered := self lookupProjectSpecFor: exception projectSpec.
+  ^ exception resume: (registered compareEqual: requested) not

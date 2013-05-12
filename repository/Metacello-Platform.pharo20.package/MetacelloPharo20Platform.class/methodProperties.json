@@ -1,0 +1,12 @@
+{
+	"class" : {
+		"initialize" : "ChristopheDemarey 4/29/2013 14:22" },
+	"instance" : {
+		"defaultDirectory" : "ChristopheDemarey 4/29/2013 14:17",
+		"directoryFromPath:relativeTo:" : "ChristopheDemarey 4/29/2013 15:14",
+		"downloadFile:to:" : "ChristopheDemarey 4/29/2013 16:01",
+		"ensureDirectoryExists:" : "ChristopheDemarey 4/29/2013 15:18",
+		"fileDirectoryClass" : "ChristopheDemarey 4/29/2013 15:58",
+		"fileHandleOn:" : "ChristopheDemarey 4/29/2013 13:16",
+		"packageInfoFor:" : "dkh 5/8/2013 09:40",
+		"suspendSystemUpdateEventsDuring:" : "ChristopheDemarey 4/29/2013 16:20" } }

@@ -1,12 +1,16 @@
 "Load the test configuration and #ensureMetacello"
 
-| configName |
+| configName dirName dir |
 [
 configName := 'ConfigurationOfMetacelloConfigurationTest'.
 
+dirName := 'mcz'.
+dir := (Smalltalk at: #'FileDirectory' ifAbsent: [  ])
+  ifNil: [ (Smalltalk at: #'FileSystem') workingDirectory / dirName  ]
+  ifNotNil: [:fileDirectoryClass | fileDirectoryClass default directoryNamed: dirName  ].
+
 Gofer new
-  repository: (MCDirectoryRepository new directory: 
-        (FileDirectory default directoryNamed:'mcz'));
+  repository: (MCDirectoryRepository new directory: dir);
   package: configName;
   load.
 
