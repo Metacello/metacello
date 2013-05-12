@@ -2,6 +2,8 @@
 	"class" : {
 		 },
 	"instance" : {
-		"baseline:" : "dkh 05/06/2013 19:20",
+		"baseline:" : "dkh 05/11/2013 21:21",
 		"gemstone10beta311PostLoadDoIt" : "dkh 07/24/2012 18:09",
+		"postLoadSqueakRestoreGlobalUnderscoreSelectors" : "dkh 05/11/2013 21:22",
+		"preLoadSqueakEnsureGlobalUnderscoreSelectors" : "dkh 05/11/2013 21:22",
 		"testResourcePostLoadDoIt" : "dkh 6/1/2012 09:18:17" } }
