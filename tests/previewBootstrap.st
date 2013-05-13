@@ -1,6 +1,6 @@
 "Load and run tests to be performed by TravisCI"
 | gitPath metacelloConfigurationRepository version |
-Transcript cr; show: 'travis---->travisCI.st'.
+Transcript cr; show: 'travis---->previewBootstrap.st'.
 gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 
 [
@@ -23,7 +23,7 @@ Gofer new
   repository: metacelloConfigurationRepository;
   package: 'ConfigurationOfMetacello';
   load.
-(version := (Smalltalk at: #'ConfigurationOfMetacello') project version: #stable)
+(version := (Smalltalk at: #'ConfigurationOfMetacello') project version: #previewBootstrap)
   load: 'TravisCI'.
 
 "Run the Metacello tests"

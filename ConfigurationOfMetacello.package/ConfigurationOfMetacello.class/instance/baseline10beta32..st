@@ -128,8 +128,7 @@ baseline10beta32: spec
     spec
         for: #'pharo2.x'
         do: [ 
-            spec
-                removeProject: 'OmniBrowser'.
+            spec removeProject: 'OmniBrowser'.
             spec package: 'Metacello-Platform' with: [ spec file: 'Metacello-Platform.pharo20' ] ].
     spec
         for: #'squeak'
