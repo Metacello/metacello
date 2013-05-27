@@ -7,7 +7,7 @@ testIssue27Caching
         repository: repoDescription;
         get.
     githubRepo := MCRepositoryGroup default repositories detect: [ :repo | repo description = repoDescription ].
-    githubRepo directory containingDirectory containingDirectory containingDirectory recursiveDelete.
+    MetacelloPlatform current recursiveDelete: (githubRepo directory containingDirectory containingDirectory containingDirectory).
     githubRepo flushCache.
     Metacello new
         baseline: 'External';

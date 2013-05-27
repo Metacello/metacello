@@ -13,14 +13,14 @@ setUpRepositories
     directoryFromPath: self samplePath
     relativeTo: defaultDirectory.
   configurationDirectory exists
-    ifTrue: [ configurationDirectory recursiveDelete ].
-  configurationDirectory assureExistence.
+    ifTrue: [ MetacelloPlatform current recursiveDelete: configurationDirectory ].
+  MetacelloPlatform current ensureDirectoryExists: configurationDirectory.
   externalDirectory exists
-    ifTrue: [ externalDirectory recursiveDelete ].
-  externalDirectory assureExistence.
+    ifTrue: [ MetacelloPlatform current recursiveDelete: externalDirectory ].
+  MetacelloPlatform current ensureDirectoryExists: externalDirectory.
   sampleDirectory exists
-    ifTrue: [ sampleDirectory recursiveDelete ].
-  sampleDirectory assureExistence.
+    ifTrue: [ MetacelloPlatform current recursiveDelete: sampleDirectory ].
+  MetacelloPlatform current ensureDirectoryExists: sampleDirectory.
   configurationRepository := MetacelloScriptingResource current
     configurationRepository.
   externalRepository := MetacelloScriptingResource current externalRepository.
