@@ -35,6 +35,7 @@
 		"primeStackCacheFor:doing:defaultDictionary:" : "dkh 6/5/2012 19:01:24",
 		"primeStackCacheWith:doing:" : "dkh 6/5/2012 19:01:24",
 		"readStreamOn:do:" : "ChristopheDemarey 5/14/2013 18:04",
+		"recursiveDelete:" : "ChristopheDemarey 5/27/2013 17:42",
 		"stackCacheFor:at:doing:" : "dkh 6/5/2012 19:01:24",
 		"stackCacheFor:cacheClass:at:doing:" : "dkh 6/5/2012 19:01:24",
 		"suspendSystemUpdateEventsDuring:" : "ChristopheDemarey 4/29/2013 16:17",
