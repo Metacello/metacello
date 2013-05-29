@@ -12,4 +12,4 @@ getTestRepositoryDirectory
 				ifNone: [^ nil].
 	^ MetacelloPlatform current
 		directoryFromPath: 'tests/repositories/issue111Packages'
-		relativeTo: (MetacelloPlatform current parentDirectory: fileTreeRepo directory)
+		relativeTo: (MetacelloPlatform current parentDirectoryOf: fileTreeRepo directory)
