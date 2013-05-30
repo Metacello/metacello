@@ -14,7 +14,7 @@ testPackageSpecCacheRepository
 		packageDirectivesDo: [ :pkgDirective | 
 			| file |
 			file := pkgDirective file.
-			(file includesSubString: 'Configuration')
+			(file includesSubstring: 'Configuration')
 				ifTrue:  [ "ignore" ]
 				ifFalse: [ 
 					self assert: (files indexOf: file) = 1.
