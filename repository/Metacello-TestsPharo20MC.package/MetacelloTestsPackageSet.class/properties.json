@@ -1,0 +1,14 @@
+{
+	"category" : "Metacello-TestsPharo20MC",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "MetacelloTestsPackageSet",
+	"pools" : [
+		 ],
+	"super" : "RPackageSet",
+	"type" : "normal" }
