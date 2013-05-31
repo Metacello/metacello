@@ -8,7 +8,7 @@ defaultPlatformAttributes
 		(versionString beginsWith: 'Squeak')
 			ifTrue: [^ #(#squeakCommon #squeak )].
 		"see http://code.google.com/p/metacello/issues/detail?id=146"
-		(versionString includesSubstring: 'Pharo')
+		(self string: versionString includesSubstring: 'Pharo')
 			ifTrue: [ ^ #(#squeakCommon #pharo ) ].
 		(versionString includesSubstring: 'Squeak')
 			ifTrue: [^ #(#squeakCommon #squeak )].

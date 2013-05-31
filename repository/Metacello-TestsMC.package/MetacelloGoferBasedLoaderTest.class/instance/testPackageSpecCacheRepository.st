@@ -14,7 +14,7 @@ testPackageSpecCacheRepository
 		packageDirectivesDo: [ :pkgDirective | 
 			| file |
 			file := pkgDirective file.
-			(file includesSubstring: 'Configuration')
+			(MetacelloPlatform current string: file includesSubstring: 'Configuration')
 				ifTrue:  [ "ignore" ]
 				ifFalse: [ 
 					self assert: (files indexOf: file) = 1.
