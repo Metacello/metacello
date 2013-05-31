@@ -2,7 +2,7 @@ utilities
 getTestRepositoryDirectory
 	| fileTreeRepo wc |
 	MCWorkingCopy registry
-		do: [:mgr | (mgr packageSet includesClass: self class)
+		do: [:mgr | ((MetacelloPlatform current packageInfoFor: mgr) includesClass: self class)
 				ifTrue: [wc := mgr]].
 	wc
 		ifNil: [^ self assert: false].
