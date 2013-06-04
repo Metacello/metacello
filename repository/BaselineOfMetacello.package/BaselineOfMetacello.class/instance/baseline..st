@@ -40,7 +40,7 @@ baseline: spec
           with: [ spec requires: #('Metacello-Core') ];
         package: 'Metacello-TestsCore'
           with: [ spec requires: #('Metacello-Core') ];
-        package: 'Metacello-TestsMC'
+         package: 'Metacello-TestsMC'
           with: [ 
               spec
                 postLoadDoIt: #'testResourcePostLoadDoIt';
@@ -154,9 +154,13 @@ baseline: spec
   spec
     for: #'pharo2.x'
     do: [ 
-      spec
+	spec
         package: 'Metacello-Platform'
-        with: [ spec file: 'Metacello-Platform.pharo20' ].
+          with: [ spec file: 'Metacello-Platform.pharo20' ];
+	  package: 'Metacello-TestsPharo20MC';
+	  package: 'Metacello-TestsMC'
+	    with: [ spec requires: #('Metacello-TestsPharo20MC') ];
+	yourself.
       spec
         baseline: 'FileTree'
         with: [ spec repository: 'github://dalehenrich/filetree:pharo2.0/repository' ] ].
