@@ -48,12 +48,14 @@ baseline10beta321: spec
           with: [ spec requires: #('Metacello-Core') ];
         package: 'Metacello-TestsCore'
           with: [ spec requires: #('Metacello-Core') ];
+        package: 'Metacello-TestsCommonMC'
+          with: [ spec requires: #('Metacello-Core') ];
         package: 'Metacello-TestsMC'
           with: [ 
               spec
                 postLoadDoIt: #'testsMC10beta25PostLoadDoIt';
                 requires:
-                    #('Metacello-MC' 'Metacello-TestsCore' 'Gofer Tests' 'Metacello-ToolBox' 'Metacello-GitHub') ];
+                    #('Metacello-MC' 'Metacello-TestsCore' 'Metacello-TestsCommonMC' 'Gofer Tests' 'Metacello-ToolBox' 'Metacello-GitHub') ];
         package: 'Metacello-TestsReference'
           with: [ spec requires: #('Metacello-Reference') ];
         package: 'Metacello-TestsTutorial'
@@ -148,9 +150,14 @@ baseline10beta321: spec
     for: #'pharo2.x'
     do: [ 
       spec removeProject: 'OmniBrowser'.
+	spec removePackage: 'Metacello-TestsCommonMC'.
       spec
         package: 'Metacello-Platform'
-        with: [ spec file: 'Metacello-Platform.pharo20' ] ].
+          with: [ spec file: 'Metacello-Platform.pharo20' ];
+	  package: 'Metacello-TestsPharo20MC';
+	  package: 'Metacello-TestsMC'
+	    with: [ spec requires: #('Metacello-TestsPharo20MC') ];
+	yourself.  ].
   spec
     for: #'squeak'
     do: [ 
