@@ -83,6 +83,9 @@ version10beta321: spec
     for: #'pharo2.x'
     do: [ spec package: 'Metacello-Platform' with: 'Metacello-Platform.pharo20-dkh.33' ].
   spec
+    for: #'pharo3.x'
+    do: [ spec package: 'Metacello-Platform' with: 'Metacello-Platform.pharo20-dkh.33' ].
+  spec
     for: #'squeak'
     do: [ spec package: 'Metacello-Platform' with: 'Metacello-Platform.squeak-dkh.22' ].
   spec
