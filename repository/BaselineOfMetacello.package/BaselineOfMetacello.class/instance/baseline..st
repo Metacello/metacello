@@ -44,8 +44,14 @@ baseline: spec
           with: [ 
               spec
                 postLoadDoIt: #'testResourcePostLoadDoIt';
+                includes: #('Metacello-TestsCommonMC');
                 requires:
                     #('Metacello-MC' 'Metacello-TestsCore' 'Gofer Tests' 'Metacello-ToolBox' 'Metacello-GitHub') ];
+        package: 'Metacello-TestsCommonMC'
+          with: [ 
+              spec
+                file: 'Metacello-TestsCommonMC.common';
+                requires: 'Metacello-TestsMC' ];
         package: 'Metacello-TestsReference'
           with: [ spec requires: #('Metacello-Reference') ];
         package: 'Metacello-TestsTutorial'
@@ -105,7 +111,7 @@ baseline: spec
               spec
                 className: 'ConfigurationOfProfStef';
                 versionString: #'stable';
-                repository: 'http://www.squeaksource.com/MetacelloRepository' ];
+                repository: 'http://smalltalkhub.com/mc/PharoExtras/ProfStef/main' ];
         yourself.
       spec
         package: 'Metacello-ProfStef'
@@ -156,10 +162,25 @@ baseline: spec
     do: [ 
       spec
         package: 'Metacello-Platform'
-        with: [ spec file: 'Metacello-Platform.pharo20' ].
+          with: [ spec file: 'Metacello-Platform.pharo20' ];
+        package: 'Metacello-TestsCommonMC'
+          with: [ spec file: 'Metacello-TestsCommonMC.pharo20' ];
+        yourself.
       spec
         baseline: 'FileTree'
         with: [ spec repository: 'github://dalehenrich/filetree:pharo2.0/repository' ] ].
+  spec
+    for: #'pharo3.x'
+    do: [ 
+      spec
+        package: 'Metacello-Platform'
+          with: [ spec file: 'Metacello-Platform.pharo20' ];
+        package: 'Metacello-TestsCommonMC'
+          with: [ spec file: 'Metacello-TestsCommonMC.pharo20' ];
+        yourself.
+      spec
+        baseline: 'FileTree'
+        with: [ spec repository: 'github://dalehenrich/filetree:pharo3.0/repository' ] ].
   spec
     for: #'squeak'
     do: [ 
