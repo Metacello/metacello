@@ -1,9 +1,9 @@
 "Loading the preview, should be a simulation of the standard bootstrap
 after Metacello-Base has been loaded ... which is what the test harndess
 does"
-| gitPath |
+| gitCache |
 Transcript cr; show: 'travis---->travisPreviewCI.st'.
-gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
+gitCache := MetacelloPlatform current directoryFromPath: 'git_cache' relativeTo: MetacelloPlatform current defaultDirectory.
 
 "Load Metacello-Base, so that Metacello is bootstrapped"
 MetacelloBuilderTravisCI fileIn: 'Metacello-Base.st'.
@@ -12,7 +12,7 @@ MetacelloBuilderTravisCI fileIn: 'Metacello-Base.st'.
 Metacello new
   configuration: 'MetacelloPreview';
   version: #stable;
-  repository: 'filetree://', gitPath, '/metacello-work';
+  repository: 'filetree://', gitCache fullName, '/metacello-work';
   onConflict: [:ex | 
     "allow new version of Metacello to be loaded"
     ex existingProjectRegistration baseName = 'Metacello'

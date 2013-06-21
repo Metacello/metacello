@@ -122,7 +122,7 @@ baseline10beta321: spec
               spec
                 className: 'ConfigurationOfProfStef';
                 versionString: #'stable';
-                repository: 'http://www.squeaksource.com/MetacelloRepository' ];
+                repository: 'http://smalltalkhub.com/mc/PharoExtras/ProfStef/main' ];
         yourself.
       spec
         package: 'Metacello-ProfStef'
@@ -146,6 +146,13 @@ baseline10beta321: spec
         with: [ spec file: 'Metacello-Platform.pharo' ] ].
   spec
     for: #'pharo2.x'
+    do: [ 
+      spec removeProject: 'OmniBrowser'.
+      spec
+        package: 'Metacello-Platform'
+        with: [ spec file: 'Metacello-Platform.pharo20' ] ].
+  spec
+    for: #'pharo3.x'
     do: [ 
       spec removeProject: 'OmniBrowser'.
       spec
