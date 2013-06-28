@@ -24,7 +24,10 @@ version10beta321: spec
   https://code.google.com/p/smalltalk-hub/issues/detail?id=21
 1.0-beta.32.1 (dkh.767):
 - workaround for SmalltalkHub Issue 21: corrupted package .... Metacello-TestsPlatform.squeakCommon-dkh.9
-- bootstrap from Metacello-Base needs to load Metacello-PharoCommonPlatform'.
+- bootstrap from Metacello-Base needs to load Metacello-PharoCommonPlatform
+1.0-beta.32.1 (dkh.774):
+- fix Issue #172: Metacello-Base bootstrap code and configurations should reference seaside.gemtalksystems.com repos
+  https://github.com/dalehenrich/metacello-work/issues/172'.
       spec author: 'dkh'.
       spec timestamp: '5/8/2013 00:22'.
       spec postLoadDoIt: #'metacelloPrimeRegistry'.
