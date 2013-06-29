@@ -29,10 +29,10 @@ version10beta321: spec
 - fix Issue #172: Metacello-Base bootstrap code and configurations should reference seaside.gemtalksystems.com repos
   https://github.com/dalehenrich/metacello-work/issues/172'.
       spec author: 'dkh'.
-      spec timestamp: '5/8/2013 00:22'.
+      spec timestamp: '6/29/2013 12:49'.
       spec postLoadDoIt: #'metacelloPrimeRegistry'.
       spec
-        project: 'FileTree' with: '1.0.1';
+        project: 'FileTree' with: #'stable';
         project: 'Gofer' with: '1.0.5.1';
         project: 'Gofer Tests' with: '1.0.5.1'.
       spec
