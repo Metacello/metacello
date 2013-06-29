@@ -4,12 +4,12 @@ version10beta3117: spec
   spec
     for: #'common'
     do: [ 
-      spec blessing: #'development'.
+      spec blessing: #'release'.
       spec description: '1.0-beta.31.1.7 (dkh.774):
 - fix Issue #172: Metacello-Base bootstrap code and configurations should reference seaside.gemtalksystems.com repos
   https://github.com/dalehenrich/metacello-work/issues/172'.
       spec author: 'dkh'.
-      spec timestamp: '6/28/2013 15:51'.
+      spec timestamp: '6/29/2013 08:23'.
       spec
         project: 'Gofer Core' with: '1.0.5.1';
         project: 'Gofer Tests' with: '1.0.5.1'.
