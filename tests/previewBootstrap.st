@@ -8,7 +8,7 @@ Gofer new
   url: 'http://ss3.gemtalksystems.com/ss/FileTree';
   package: 'ConfigurationOfFileTree';
   load.
-((Smalltalk at: #'ConfigurationOfFileTree') project version: '1.0')
+((Smalltalk at: #'ConfigurationOfFileTree') project version: #'stable')
   load: 'default'.
 Gofer new
   url: 'http://seaside.gemtalksystems.com/ss/metacello';
