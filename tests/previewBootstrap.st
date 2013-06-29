@@ -5,13 +5,13 @@ gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 
 [
 Gofer new
-  url: 'http://ss3.gemstone.com/ss/FileTree';
+  url: 'http://ss3.gemtalksystems.com/ss/FileTree';
   package: 'ConfigurationOfFileTree';
   load.
 ((Smalltalk at: #'ConfigurationOfFileTree') project version: '1.0')
   load: 'default'.
 Gofer new
-  url: 'http://seaside.gemstone.com/ss/metacello';
+  url: 'http://seaside.gemtalksystems.com/ss/metacello';
   package: 'ConfigurationOfGofer';
   load.
 ((Smalltalk at: #'ConfigurationOfGofer') project version: #'stable')
@@ -23,7 +23,7 @@ Gofer new
   repository: metacelloConfigurationRepository;
   package: 'ConfigurationOfMetacello';
   load.
-(version := (Smalltalk at: #'ConfigurationOfMetacello') project version: #previewBootstrap)
+(version := (Smalltalk at: #'ConfigurationOfMetacello') project version: #'previewBootstrap')
   load: 'TravisCI'.
 
 "Run the Metacello tests"

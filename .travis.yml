@@ -5,7 +5,7 @@ env:
 #   - ST=Pharo-2.0 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st # until Issue #159 fixed
    - ST=Squeak-4.4 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st 
    - ST=Squeak-4.5 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st 
-   - ST=GemStone-3.1.0.2 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
+   - ST=GemStone-3.1.0.4 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
 
    - ST=PharoCore-1.1 BUILD_ARG=-X TRAVIS_SCRIPT=travisCI.st
    - ST=PharoCore-1.2 BUILD_ARG=-X TRAVIS_SCRIPT=travisCI.st
@@ -31,7 +31,7 @@ env:
    - ST=GemStone-2.4.5 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
    - ST=GemStone-2.4.5.1 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
    - ST=GemStone-3.0.1 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
-   - ST=GemStone-3.1.0.2 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
+   - ST=GemStone-3.1.0.4 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
 
 install:
    - export PROJECT_HOME="$(pwd)"
