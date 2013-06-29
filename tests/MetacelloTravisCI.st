@@ -43,7 +43,7 @@ loadFileTree
     self
         retry: [ 
             Gofer new
-                url: 'http://ss3.gemstone.com/ss/FileTree';
+                url: 'http://ss3.gemtalksystems.com/ss/FileTree';
                 package: 'ConfigurationOfFileTree';
                 load ].
     version := (Smalltalk at: #'ConfigurationOfFileTree') project version: '1.0'.
@@ -51,7 +51,7 @@ loadFileTree
     self
         retry: [ 
             Gofer new
-                url: 'http://seaside.gemstone.com/ss/metacello';
+                url: 'http://seaside.gemtalksystems.com/ss/metacello';
                 package: 'ConfigurationOfGofer';
                 load ].
     version := (Smalltalk at: #'ConfigurationOfGofer') project version: #'stable'.
