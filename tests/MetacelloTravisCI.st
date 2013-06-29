@@ -46,7 +46,7 @@ loadFileTree
                 url: 'http://ss3.gemtalksystems.com/ss/FileTree';
                 package: 'ConfigurationOfFileTree';
                 load ].
-    version := (Smalltalk at: #'ConfigurationOfFileTree') project version: '1.0'.
+    version := (Smalltalk at: #'ConfigurationOfFileTree') project version: #'stable'.
     version load: 'default'.
     self
         retry: [ 
