@@ -13,6 +13,7 @@ gitPath := (Smalltalk at: #'FileDirectory' ifAbsent: [  ])
 MetacelloBuilderTravisCI fileIn: 'Metacello-Base.st'.
 
 "Load the Metacello Tests ... "
+[
 Metacello new
   configuration: 'MetacelloPreview';
   version: #stable;
@@ -24,7 +25,6 @@ Metacello new
     ex disallow ];
   load: 'TravisCI'.
 
-
 "Run the Metacello tests"
 (Smalltalk at: #MetacelloPlatform) current authorName: 'testMonkey'. "These tests save code ... need an Author"
 
@@ -34,4 +34,9 @@ MetacelloBuilderTravisCI
   runHarnessFor:  #( 'BaselineOfMetacello' ) 
   successFilename: 'TravisCISuccess.txt' 
   failFilename: 'TravisCIFailure.txt'
+
+] on: Warning 
+  do: [:ex |
+    Transcript cr; show: 'Warning: ' ex description. 
+    ex resume: true ].
 
