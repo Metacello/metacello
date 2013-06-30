@@ -27,30 +27,34 @@ version10beta321: spec
 - bootstrap from Metacello-Base needs to load Metacello-PharoCommonPlatform
 1.0-beta.32.1 (dkh.774):
 - fix Issue #172: Metacello-Base bootstrap code and configurations should reference seaside.gemtalksystems.com repos
-  https://github.com/dalehenrich/metacello-work/issues/172'.
-      spec author: 'dkh'.
-      spec timestamp: '6/29/2013 12:49'.
+  https://github.com/dalehenrich/metacello-work/issues/172
+1.0-beta.32.1 (dkh.780):
+- pick up latest package versions from git repo ... preparing for release'.
       spec postLoadDoIt: #'metacelloPrimeRegistry'.
+      spec author: 'dkh'.
+      spec timestamp: '6/30/2013 12:10'.
       spec
         project: 'FileTree' with: #'stable';
         project: 'Gofer' with: '1.0.5.1';
         project: 'Gofer Tests' with: '1.0.5.1'.
       spec
-        package: 'Metacello-Base' with: 'Metacello-Base-dkh.107';
-        package: 'Metacello-Core' with: 'Metacello-Core-dkh.678';
+        package: 'Metacello-Base' with: 'Metacello-Base-dkh.109';
+        package: 'Metacello-Core' with: 'Metacello-Core-ChristopheDemarey.686';
         package: 'Metacello-FileTree' with: 'Metacello-FileTree-dkh.29';
         package: 'Metacello-GitHub'
           with: 'Metacello-GitHub-ChristopheDemarey.25';
-        package: 'Metacello-MC' with: 'Metacello-MC-dkh.674';
+        package: 'Metacello-MC' with: 'Metacello-MC-dkh.676';
         package: 'Metacello-Reference' with: 'Metacello-Reference-dkh.36';
         package: 'Metacello-Tutorial' with: 'Metacello-Tutorial-dkh.26';
         package: 'OB-Metacello' with: 'OB-Metacello-dkh.83';
         package: 'Metacello-TestsReference'
           with: 'Metacello-TestsReference-dkh.20';
-        package: 'Metacello-TestsCore' with: 'Metacello-TestsCore-dkh.31';
-        package: 'Metacello-TestsMC' with: 'Metacello-TestsMC-dkh.357';
+        package: 'Metacello-TestsCore' with: 'Metacello-TestsCore-dkh.33';
+        package: 'Metacello-TestsMC' with: 'Metacello-TestsMC-dkh.372';
+        package: 'Metacello-TestsCommonMC'
+          with: 'Metacello-TestsCommonMC.common-dkh.2';
         package: 'Metacello-TestsTutorial'
-          with: 'Metacello-TestsTutorial-dkh.40';
+          with: 'Metacello-TestsTutorial-ChristopheDemarey.41';
         package: 'Metacello-ToolBox' with: 'Metacello-ToolBox-dkh.131' ].
   spec
     for: #'squeakCommon'
@@ -70,7 +74,7 @@ version10beta321: spec
       spec
         package: 'Metacello-ProfStef' with: 'Metacello-ProfStef-dkh.13';
         package: 'Metacello-TestsProfStef'
-          with: 'Metacello-TestsProfStef-dkh.4';
+          with: 'Metacello-TestsProfStef-ChristopheDemarey.5';
         package: 'Metacello-PharoCommonPlatform'
           with: 'Metacello-PharoCommonPlatform-dkh.2' ].
   spec
@@ -84,10 +88,20 @@ version10beta321: spec
     do: [ spec package: 'Metacello-Issue3758' with: 'Metacello-Issue3758-dkh.2' ].
   spec
     for: #'pharo2.x'
-    do: [ spec package: 'Metacello-Platform' with: 'Metacello-Platform.pharo20-dkh.33' ].
+    do: [ 
+      spec
+        package: 'Metacello-Platform'
+          with: 'Metacello-Platform.pharo20-ChristopheDemarey.38';
+        package: 'Metacello-TestsCommonMC'
+          with: 'Metacello-TestsCommonMC.pharo20-dkh.3' ].
   spec
     for: #'pharo3.x'
-    do: [ spec package: 'Metacello-Platform' with: 'Metacello-Platform.pharo20-dkh.33' ].
+    do: [ 
+      spec
+        package: 'Metacello-Platform'
+          with: 'Metacello-Platform.pharo20-ChristopheDemarey.38';
+        package: 'Metacello-TestsCommonMC'
+          with: 'Metacello-TestsCommonMC.pharo20-dkh.3' ].
   spec
     for: #'squeak'
     do: [ spec package: 'Metacello-Platform' with: 'Metacello-Platform.squeak-dkh.22' ].
