@@ -1,7 +1,7 @@
 "Loading the preview, should be a simulation of the standard bootstrap
 after Metacello-Base has been loaded ... which is what the test harndess
 does"
-| gitCachegitPath |
+| gitCache gitPath |
 Transcript cr; show: 'travis---->travisPreviewCI.st'.
 
 gitCache := 'git_cache'.
