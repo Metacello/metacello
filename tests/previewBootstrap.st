@@ -1,7 +1,11 @@
 "Load and run tests to be performed by TravisCI"
-| gitPath metacelloConfigurationRepository version |
+| gitCache gitPath metacelloConfigurationRepository version |
 Transcript cr; show: 'travis---->previewBootstrap.st'.
-gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
+
+gitCache := 'git_cache'.
+gitPath := (Smalltalk at: #'FileDirectory' ifAbsent: [  ])
+  ifNil: [ ((Smalltalk at: #'FileSystem') workingDirectory / gitCache) pathString ]
+  ifNotNil: [:fileDirectoryClass | (fileDirectoryClass default directoryNamed: gitCache ) fullName].
 
 [
 Gofer new
@@ -29,9 +33,15 @@ Gofer new
 "Run the Metacello tests"
 (Smalltalk at: #MetacelloPlatform) current authorName: 'testMonkey'. "These tests save code ... need an Author"
 
-((Smalltalk at: #'FileDirectory') on: gitPath, '/metacello-work/tests')
-  fileNamed: 'travisCIHarness.st'
-  do: [:fileStream | fileStream fileIn ].
+(Smalltalk at: #'FileDirectory' ifAbsent: [  ])
+    ifNil: [ 
+      (((Smalltalk at: #'FileSystem') perform: #workingDirectory) / 
+           'metacello-work' / 'tests' / 'travisCIHarness.st' )
+             readStreamDo: [ :fileStream | fileStream fileIn ] ]
+    ifNotNil: [ :fileDirectoryClass |
+      ((Smalltalk at: #'FileDirectory') on: gitPath, '/metacello-work/tests')
+          fileNamed: 'travisCIHarness.st'
+          do: [:fileStream | fileStream fileIn ] ].
 
 Transcript cr; show: 'Starting tests------'.
 
