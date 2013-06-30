@@ -1,10 +1,12 @@
 "Load and run tests to be performed by TravisCI"
-| gitCache gitPath metacelloConfigurationRepository version |
+| gitCache metacelloDir metacelloConfigurationRepository version |
 Transcript cr; show: 'travis---->travisCI.st'.
 gitCache := 'git_cache'.
-gitPath := (Smalltalk at: #'FileDirectory' ifAbsent: [  ])
-  ifNil: [ ((Smalltalk at: #'FileSystem') workingDirectory / gitCache) pathString ]
-  ifNotNil: [:fileDirectoryClass | (fileDirectoryClass default directoryNamed: gitCache ) fullName].
+
+metacelloDir := (Smalltalk at: #'FileDirectory' ifAbsent: [  ])
+  ifNil: [ (Smalltalk at: #'FileSystem') workingDirectory / gitCache / 'metacello-work' ]
+  ifNotNil: [:fileDirectoryClass | 
+    (fileDirectoryClass default directoryNamed: gitCache, '/metacello-work' ) ].
 
 [
 Gofer new
@@ -20,7 +22,7 @@ Gofer new
 ((Smalltalk at: #'ConfigurationOfGofer') project version: #'stable')
   load.
 metacelloConfigurationRepository := (Smalltalk at: #'MCFileTreeRepository') new
-  directory: (FileDirectory on: gitPath, '/metacello-work');
+  directory: metacelloDir;
   yourself.
 Gofer new
   repository: metacelloConfigurationRepository;
@@ -34,11 +36,10 @@ Gofer new
 
 (Smalltalk at: #'FileDirectory' ifAbsent: [  ])
     ifNil: [ 
-      (((Smalltalk at: #'FileSystem') perform: #workingDirectory) / 
-           'metacello-work' / 'tests' / 'travisCIHarness.st' )
+      (metacelloDir / 'tests' / 'travisCIHarness.st')
              readStreamDo: [ :fileStream | fileStream fileIn ] ]
     ifNotNil: [ :fileDirectoryClass |
-      ((Smalltalk at: #'FileDirectory') on: gitPath, '/metacello-work/tests')
+      (metacelloDir directoryNamed: 'tests')
           fileNamed: 'travisCIHarness.st'
           do: [:fileStream | fileStream fileIn ] ].
 
