@@ -6,14 +6,13 @@ example1
 
     (MetacelloToolBox configurationNamed: 'Example')
         createVersionMethod: 'baseline10:' inCategory: 'baselines' forVersion: '1.0-baseline';
-        addSection: #'common'
-            repository: 'http://www.squeaksource.com/ProfStef'
-            requiredProjects: #('Shout')
+        addSection: #common
+            repository: 'http://smalltalkhub.com/mc/PharoExtras/ProfStef/main'
+            requiredProjects: #()
             packages: #('ProfStef-Core' 'ProfStef-Tests')
-            repositories: {('Shout' -> {'http://www.squeaksource.com/MonticelloRepository'})}
+            repositories: {}
             dependencies:
-                {('ProfStef-Core' -> #('Shout')).
-                ('ProfStef-Tests' -> #('ProfStef-Core'))}
+                {('ProfStef-Tests' -> #('ProfStef-Core'))}
             groups:
                 {('default' -> #('Core')).
                 ('Core' -> #('ProfStef-Core')).

@@ -12,7 +12,7 @@ baseline: spec
                 className: 'ConfigurationOfGofer';
                 versionString: #'stable';
                 loads: #('Core');
-                repository: 'http://seaside.gemstone.com/ss/metacello' ];
+                repository: 'http://seaside.gemtalksystems.com/ss/metacello' ];
         project: 'Gofer Tests'
           copyFrom: 'Gofer'
           with: [ spec loads: #('Tests') ];
@@ -44,8 +44,14 @@ baseline: spec
           with: [ 
               spec
                 postLoadDoIt: #'testResourcePostLoadDoIt';
+                includes: #('Metacello-TestsCommonMC');
                 requires:
                     #('Metacello-MC' 'Metacello-TestsCore' 'Gofer Tests' 'Metacello-ToolBox' 'Metacello-GitHub') ];
+        package: 'Metacello-TestsCommonMC'
+          with: [ 
+              spec
+                file: 'Metacello-TestsCommonMC.common';
+                requires: 'Metacello-TestsMC' ];
         package: 'Metacello-TestsReference'
           with: [ spec requires: #('Metacello-Reference') ];
         package: 'Metacello-TestsTutorial'
@@ -82,7 +88,7 @@ baseline: spec
                 className: 'ConfigurationOfOSProcess';
                 versionString: '4.4.5';
                 repository: 'http://www.squeaksource.com/MetacelloRepository';
-                repository: 'http://seaside.gemstone.com/ss/metacello' ];
+                repository: 'http://seaside.gemtalksystems.com/ss/metacello' ];
         yourself.
       spec
         package: 'Metacello-TestsPlatform'
@@ -156,7 +162,10 @@ baseline: spec
     do: [ 
       spec
         package: 'Metacello-Platform'
-        with: [ spec file: 'Metacello-Platform.pharo20' ].
+          with: [ spec file: 'Metacello-Platform.pharo20' ];
+        package: 'Metacello-TestsCommonMC'
+          with: [ spec file: 'Metacello-TestsCommonMC.pharo20' ];
+        yourself.
       spec
         baseline: 'FileTree'
         with: [ spec repository: 'github://dalehenrich/filetree:pharo2.0/repository' ] ].
@@ -185,13 +194,15 @@ baseline: spec
               spec
                 className: 'ConfigurationOfGsCore';
                 versionString: '0.247';
-                repository: 'http://seaside.gemstone.com/ss/MetacelloRepository' ];
+                repository:
+                    'http://seaside.gemtalksystems.com/ss/MetacelloRepository' ];
         project: 'GsMonticello'
           with: [ 
               spec
                 className: 'ConfigurationOfGsMonticello';
                 versionString: '0.242';
-                repository: 'http://seaside.gemstone.com/ss/MetacelloRepository' ];
+                repository:
+                    'http://seaside.gemtalksystems.com/ss/MetacelloRepository' ];
         yourself.
       spec
         package: 'Metacello-GitHub' with: [ spec requires: #('GsCore') ];
