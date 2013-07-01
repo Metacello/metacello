@@ -16,12 +16,7 @@ Gofer new
   load.
 ((Smalltalk at: #'ConfigurationOfFileTree') project version: #'stable')
   load: 'default'.
-Gofer new
-  url: 'http://seaside.gemtalksystems.com/ss/metacello';
-  package: 'ConfigurationOfGofer';
-  load.
-((Smalltalk at: #'ConfigurationOfGofer') project version: #'stable')
-  load.
+
 metacelloConfigurationRepository := (Smalltalk at: #'MCFileTreeRepository') new
   directory: metacelloDir;
   yourself.
