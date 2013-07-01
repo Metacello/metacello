@@ -75,17 +75,15 @@ baseline: spec
     for: #'squeakCommon'
     do: [ 
       spec
-        project: 'HelpSystem'
+        configuration: 'HelpSystem'
           with: [ 
               spec
-                className: 'ConfigurationOfHelpSystem';
                 versionString: '1.1';
                 loads: #('Core');
                 repository: 'http://www.squeaksource.com/MetacelloRepository' ];
-        project: 'OSProcess'
+        configuration: 'OSProcess'
           with: [ 
               spec
-                className: 'ConfigurationOfOSProcess';
                 versionString: '4.4.5';
                 repository: 'http://www.squeaksource.com/MetacelloRepository';
                 repository: 'http://seaside.gemtalksystems.com/ss/metacello' ];
@@ -112,6 +110,7 @@ baseline: spec
                 className: 'ConfigurationOfProfStef';
                 versionString: #'stable';
                 repository: 'http://www.squeaksource.com/MetacelloRepository' ];
+        configuration: 'OSProcess' with: [ spec versionString: #'stable' ];
         yourself.
       spec
         package: 'Metacello-ProfStef'
@@ -161,6 +160,10 @@ baseline: spec
     for: #'pharo2.x'
     do: [ 
       spec
+        configuration: 'OSProcess'
+          with: [ spec repository: 'http://ss3.gemtalksystems.com/ss/MetaRepoForPharo20' ];
+        yourself.
+      spec
         package: 'Metacello-Platform'
           with: [ spec file: 'Metacello-Platform.pharo20' ];
         package: 'Metacello-TestsCommonMC'
@@ -172,6 +175,10 @@ baseline: spec
   spec
     for: #'pharo3.x'
     do: [ 
+      spec
+        configuration: 'OSProcess'
+          with: [ spec repository: 'http://ss3.gemtalksystems.com/ss/MetaRepoForPharo20' ];
+        yourself.
       spec
         package: 'Metacello-Platform'
           with: [ spec file: 'Metacello-Platform.pharo20' ];
