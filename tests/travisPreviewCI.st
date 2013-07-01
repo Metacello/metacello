@@ -18,7 +18,7 @@ Metacello new
   configuration: 'MetacelloPreview';
   version: #stable;
   repository: 'filetree://', gitPath, '/metacello-work';
-  onConflict: [:ex | 
+  onConflict: [:ex |
     "allow new version of Metacello to be loaded"
     ex existingProjectRegistration baseName = 'Metacello'
       ifTrue: [ ex allow ].
@@ -35,8 +35,8 @@ MetacelloBuilderTravisCI
   successFilename: 'TravisCISuccess.txt' 
   failFilename: 'TravisCIFailure.txt'
 
-] on: Warning 
+] on: Warning
   do: [:ex |
-    Transcript cr; show: 'Warning: ' ex description. 
+    Transcript cr; show: 'Warning: ', ex description.
     ex resume: true ].
 
