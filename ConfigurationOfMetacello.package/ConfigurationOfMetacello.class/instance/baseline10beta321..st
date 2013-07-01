@@ -130,6 +130,7 @@ baseline10beta321: spec
                 versionString: #'stable';
                 repository:
                     'http://smalltalkhub.com/mc/PharoExtras/ProfStef/main' ];
+        project: 'OSProcess' with: [ spec versionString: #'stable' ];
         yourself.
       spec
         package: 'Metacello-ProfStef'
@@ -156,6 +157,10 @@ baseline10beta321: spec
     do: [ 
       spec removeProject: 'OmniBrowser'.
       spec
+        project: 'OSProcess'
+          with: [ spec repository: 'http://ss3.gemtalksystems.com/ss/MetaRepoForPharo20' ];
+        yourself.
+      spec
         package: 'Metacello-Platform'
           with: [ spec file: 'Metacello-Platform.pharo20' ];
         package: 'Metacello-TestsCommonMC'
@@ -165,6 +170,10 @@ baseline10beta321: spec
     for: #'pharo3.x'
     do: [ 
       spec removeProject: 'OmniBrowser'.
+      spec
+        project: 'OSProcess'
+          with: [ spec repository: 'http://ss3.gemtalksystems.com/ss/MetaRepoForPharo20' ];
+        yourself.
       spec
         package: 'Metacello-Platform'
           with: [ spec file: 'Metacello-Platform.pharo20' ];

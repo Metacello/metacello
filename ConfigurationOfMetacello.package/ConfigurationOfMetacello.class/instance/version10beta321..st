@@ -29,10 +29,13 @@ version10beta321: spec
 - fix Issue #172: Metacello-Base bootstrap code and configurations should reference seaside.gemtalksystems.com repos
   https://github.com/dalehenrich/metacello-work/issues/172
 1.0-beta.32.1 (dkh.780):
-- pick up latest package versions from git repo ... preparing for release'.
+- pick up latest package versions from git repo ... preparing for release
+1.0-beta.32.1 (dkh.781):
+- fix Issue #170: location of ConfigurationOfOsProcess for Pharo2.0+ changed
+  https://github.com/dalehenrich/metacello-work/issues/170'.
       spec postLoadDoIt: #'metacelloPrimeRegistry'.
       spec author: 'dkh'.
-      spec timestamp: '6/30/2013 12:10'.
+      spec timestamp: '7/1/2013 14:00'.
       spec
         project: 'FileTree' with: #'stable';
         project: 'Gofer' with: '1.0.5.1';
@@ -70,7 +73,10 @@ version10beta321: spec
   spec
     for: #'pharo'
     do: [ 
-      spec project: 'ProfStef' with: #'stable'.
+      spec
+        project: 'ProfStef' with: #'stable';
+        project: 'OSProcess' with: #'stable';
+        yourself.
       spec
         package: 'Metacello-ProfStef' with: 'Metacello-ProfStef-dkh.13';
         package: 'Metacello-TestsProfStef'
