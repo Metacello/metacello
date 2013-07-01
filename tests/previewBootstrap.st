@@ -1,5 +1,7 @@
-"Load and run tests to be performed by TravisCI"
+"Load the #previewBoostrap version of Metacello ... 1.0-beta.32.1 or there abouts
+ After loading #previewBootstrap, the actual Metacello Preview version can be loaded"
 | gitCache metacelloDir metacelloConfigurationRepository version |
+
 Transcript cr; show: 'travis---->previewBootstrap.st'.
 
 gitCache := 'git_cache'.

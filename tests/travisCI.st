@@ -1,4 +1,4 @@
-"Load and run tests to be performed by TravisCI"
+"Load the #stable version of Metacello ... basically the 1.0-beta.31.1 branch"
 | gitCache metacelloDir metacelloConfigurationRepository version |
 Transcript cr; show: 'travis---->travisCI.st'.
 gitCache := 'git_cache'.
