@@ -27,6 +27,6 @@ extractRepositoryFrom: zipFile to: directory
             (errorMessage := fileStream contentsOfEntireFile) notEmpty
                 ifTrue: [ self error: 'unzip failure: ' , errorMessage printString ]
                 ifFalse: [
-                    (FileDirectory on: '/tmp')
-                        deleteFileNamed: zipFile;
-                        deleteFileNamed: (self downloadErrorFileNameFor: zipFile) ] ]
+                    (FileSystem root / 'tmp')
+                        delete: zipFile;
+                        delete: (self downloadErrorFileNameFor: zipFile) ] ]
