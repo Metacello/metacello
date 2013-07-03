@@ -151,7 +151,7 @@ runTestFor: version
     resultsFileName := result defects isEmpty
         ifTrue: [ successFilename ]
         ifFalse: [ failFilename ].
-    resultFileBlock
+    self resultFileBlock
       value: resultsFileName
       value: [ :fileStream | 
             fileStream lineEndConvention: #'lf'.
