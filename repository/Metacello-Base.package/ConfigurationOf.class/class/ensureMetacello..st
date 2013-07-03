@@ -8,7 +8,7 @@ ensureMetacello: loadList
       | version error gofer |
       (Array
         with: 'http://smalltalkhub.com/mc/dkh/metacello/main'
-        with: 'http://seaside.gemstone.com/ss/metacello')
+        with: 'http://seaside.gemtalksystems.com/ss/metacello')
         do: [ :repositoryUrl | 
           "bootstrap Metacello"
           [ 
