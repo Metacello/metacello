@@ -128,13 +128,13 @@ retry: aBlock retryCount: retryCount
 !MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 7/3/2013 15:43'!
 resultFileBlock
   ^ (Smalltalk at: #'FileDirectory' ifAbsent: [  ])
-  ifNil: [ 
+  ifNil: [
     [ :resFileName :streamBlock |
     (Smalltalk at: #'FileSystem') workingDirectory / resFileName
       writeStreamDo: streamBlock ] ]
   ifNotNil: [ :fileDirectoryClass |
     [ :resFileName :streamBlock |
-      fileDirectoryClass default forceNewFileNamed: resFileName do: streamBlock ]! !
+      fileDirectoryClass default forceNewFileNamed: resFileName do: streamBlock ] ]! !
 
 !MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/2/2012 10:01'!
 runTestFor: version
