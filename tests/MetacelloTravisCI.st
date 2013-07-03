@@ -35,7 +35,13 @@ failFilename
 
 !MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/1/2012 14:54'!
 gitPath
-    ^ (FileDirectory default directoryNamed: 'git_cache') fullName! !
+    ^ (Smalltalk at: #'FileDirectory' ifAbsent: [  ])
+        ifNil: [ 
+            "Pharo-2.x"
+            (((Smalltalk at: #'FileSystem') perform: #workingDirectory) / 'git_cache') pathString ]
+        ifNotNil: [ :fileDirectoryClass | 
+            "Pharo-1.x"
+            (fileDirectoryClass default directoryNamed: 'git_cache') fullName ]! !
 
 !MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/4/2012 16:31'!
 loadFileTree
@@ -80,7 +86,13 @@ loadMetacello: loadBlock metacelloConfigurationRepository: metacelloConfiguratio
 
 !MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/1/2012 16:20'!
 metacelloRepositoryDirectory
-    ^ FileDirectory on: self gitPath , '/metacello-work/repository'! !
+    ^(Smalltalk at: #'FileDirectory' ifAbsent: [  ])
+        ifNil: [ 
+            "Pharo-2.x"
+            ((Smalltalk at: #'FileSystem') perform: #workingDirectory) / 'git_cache' / 'metacello-work' / 'repository' ]
+        ifNotNil: [ :fileDirectoryClass | 
+            "Pharo-1.x"
+            fileDirectoryClass default directoryNamed: 'git_cache/metacello-work/repository' ]! !
 
 !MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/4/2012 16:32'!
 retry: aBlock
@@ -113,6 +125,17 @@ retry: aBlock retryCount: retryCount
                             ex pass ] ].
             count := count + 1 ]! !
 
+!MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 7/3/2013 15:43'!
+resultFileBlock
+  ^ (Smalltalk at: #'FileDirectory' ifAbsent: [  ])
+  ifNil: [ 
+    [ :resFileName :streamBlock |
+    (Smalltalk at: #'FileSystem') workingDirectory / resFileName
+      writeStreamDo: streamBlock ] ]
+  ifNotNil: [ :fileDirectoryClass |
+    [ :resFileName :streamBlock |
+      fileDirectoryClass default forceNewFileNamed: resFileName do: streamBlock ]! !
+
 !MetacelloTravisCI methodsFor: 'private' stamp: 'dkh 9/2/2012 10:01'!
 runTestFor: version
     | cacheRepository successFilename failFilename suite result resultsFileName |
@@ -128,9 +151,9 @@ runTestFor: version
     resultsFileName := result defects isEmpty
         ifTrue: [ successFilename ]
         ifFalse: [ failFilename ].
-    FileDirectory default
-        forceNewFileNamed: resultsFileName
-        do: [ :fileStream | 
+    resultFileBlock
+      value: resultsFileName
+      value: [ :fileStream | 
             fileStream lineEndConvention: #'lf'.
             fileStream
                 nextPutAll: '***********************************************';
