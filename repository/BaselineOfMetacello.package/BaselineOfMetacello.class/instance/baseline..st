@@ -111,7 +111,7 @@ baseline: spec
               spec
                 className: 'ConfigurationOfProfStef';
                 versionString: #'stable';
-                repository: 'http://www.squeaksource.com/MetacelloRepository' ];
+                repository: 'http://smalltalkhub.com/mc/PharoExtras/ProfStef/main' ];
         yourself.
       spec
         package: 'Metacello-ProfStef'
@@ -180,7 +180,7 @@ baseline: spec
         yourself.
       spec
         baseline: 'FileTree'
-        with: [ spec repository: 'github://dalehenrich/filetree:pharo2.0/repository' ] ].
+        with: [ spec repository: 'github://dalehenrich/filetree:pharo3.0/repository' ] ].
   spec
     for: #'squeak'
     do: [ 
