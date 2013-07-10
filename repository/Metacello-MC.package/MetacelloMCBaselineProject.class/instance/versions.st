@@ -1,3 +1,5 @@
 versions
 versions
-    ^ {(self version)}
+  ^ [ {(self version)} ]
+    on: MetacelloVersionDoesNotExistError
+    do: [ :ex | ^ #() ]
