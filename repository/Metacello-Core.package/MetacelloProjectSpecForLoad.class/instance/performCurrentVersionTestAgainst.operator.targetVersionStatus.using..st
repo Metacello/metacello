@@ -25,7 +25,7 @@ performCurrentVersionTestAgainst: vrsn operator: anOperator targetVersionStatus:
     ifFalse: [ 
       "roughly equivalent to versionStatus test above (#'allLoadedToSpec')"
       ^ false ].
-  (self overrideProjectSpec isPartiallyLoaded: self overrideProjectSpec)
+  (self overrideProjectSpec isPartiallyLoaded: self overrideProjectSpec loader)
     ifFalse: [ 
       "if the project is not loaded at all"
       ^ false ].
