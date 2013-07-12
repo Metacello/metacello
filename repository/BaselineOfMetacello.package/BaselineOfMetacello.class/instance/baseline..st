@@ -65,9 +65,9 @@ baseline: spec
         group: 'Tutorial' with: #('Metacello-Tutorial' 'Metacello-Reference');
         group: 'UI' with: #('default');
         group: 'TravisCI_1'
-          with:
-            #('Metacello-TestsCore' 'Metacello-TestsTutorial' 'Metacello-TestsReference');
-        group: 'TravisCI_2' with: #('Metacello-TestsMC');
+          with: #('Metacello-TestsCore' 'Metacello-TestsReference');
+        group: 'TravisCI_2'
+          with: #('Metacello-TestsMC' 'Metacello-TestsTutorial');
         group: 'TravisCI' with: #('TravisCI_1' 'TravisCI_2');
         group: 'Tests'
           with:
