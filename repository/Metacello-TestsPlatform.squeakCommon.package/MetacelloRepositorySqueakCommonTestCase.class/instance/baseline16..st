@@ -11,5 +11,5 @@ baseline16: spec
             includes: 'Example-AddOn';
             file: 'Example-Core-anon.1';
             repository:
-                'filetree://' , MCFileTreeFileUtils current default pathString , '/temp/repo' ] ]
+                'filetree://' , MCFileTreeFileUtils current default fullName , '/temp/repo' ] ]
 
