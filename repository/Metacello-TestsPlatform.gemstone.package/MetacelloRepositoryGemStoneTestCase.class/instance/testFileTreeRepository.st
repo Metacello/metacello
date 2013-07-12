@@ -3,8 +3,7 @@ testFileTreeRepository
   "must create repository against an existing directory"
 
   | project pkg repoSpec repo fileUtils workingDir tempDir repoDir |
-  Smalltalk at: #'MCFileTreeRepository' ifAbsent: [ ^ self ].
-  fileUtils := (Smalltalk at: #'MCFileTreeFileUtils') current.
+  fileUtils := MCFileTreeFileUtils current.
   workingDir := fileUtils default.
   tempDir := fileUtils directoryFromPath: 'temp' relativeTo: workingDir.
   [ 
@@ -20,11 +19,7 @@ testFileTreeRepository
     assert: repo class == (Smalltalk at: #'MCFileTreeRepository' ifAbsent: [  ]).
   self
     assert:
-      repo description
-        =
-          ('filetree://'
-            , (Smalltalk at: #'MCFileTreeFileUtils') current default pathString
-            , '/temp/repo') ]
+      repo description = ('filetree://' , fileUtils default pathString , '/temp/repo') ]
     ensure: [ 
       (fileUtils directoryExists: tempDir)
         ifTrue: [ fileUtils deleteAll: tempDir ] ]
