@@ -64,9 +64,11 @@ baseline: spec
         group: 'Core' with: #('default');
         group: 'Tutorial' with: #('Metacello-Tutorial' 'Metacello-Reference');
         group: 'UI' with: #('default');
-        group: 'TravisCI'
+        group: 'TravisCI_1'
           with:
-            #('Metacello-TestsCore' 'Metacello-TestsTutorial' 'Metacello-TestsMC' 'Metacello-TestsReference');
+            #('Metacello-TestsCore' 'Metacello-TestsTutorial' 'Metacello-TestsReference');
+        group: 'TravisCI_2' with: #('Metacello-TestsMC');
+        group: 'TravisCI' with: #('TravisCI_1' 'TravisCI_2');
         group: 'Tests'
           with:
             #('Metacello-TestsCore' 'Metacello-TestsTutorial' 'Metacello-TestsMC' 'Metacello-TestsReference');
@@ -98,7 +100,7 @@ baseline: spec
         yourself.
       spec
         group: 'Tests' with: #('Metacello-TestsPlatform');
-        group: 'TravisCI' with: #('Metacello-TestsPlatform');
+        group: 'TravisCI_1' with: #('Metacello-TestsPlatform');
         yourself ].
   spec
     for: #'pharo'
@@ -239,5 +241,5 @@ baseline: spec
         yourself.
       spec
         group: 'Tests' with: #('Metacello-TestsPlatform');
-        group: 'TravisCI' with: #('Metacello-TestsPlatform');
+        group: 'TravisCI_1' with: #('Metacello-TestsPlatform');
         yourself ]
