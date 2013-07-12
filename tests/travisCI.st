@@ -27,7 +27,7 @@ Metacello new
     ex existingProjectRegistration baseName = 'Metacello'
       ifTrue: [ ex allow ].
     ex disallow ];
-  load: 'TravisCI'.
+  load: (Smalltalk at: #'TRAVIS_LOAD_LIST').
 ] on: Warning do: [:ex | 
   Transcript cr; show: 'WARNING: ', ex description.
   ex resume: true ].
