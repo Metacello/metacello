@@ -4,6 +4,9 @@ testIssue111
 
   "expect record to run without error ... leave potential error unhandled for ease of debugging"
 
+  "use timeout pragma because squeak's default test timeout is too low"
+
+  <timeout: 60>
   | dir repo |
   dir := self getTestRepositoryDirectory.
   dir
