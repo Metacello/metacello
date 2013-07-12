@@ -1,11 +1,30 @@
 tests
 testFileTreeRepository
-    | project pkg repoSpec repo |
-    Smalltalk at: #'MCFileTreeRepository' ifAbsent: [ ^ self ].
-    project := self project.
-    pkg := (project version: '1.6-baseline') packageNamed: 'Example-Core'.
-    repoSpec := pkg repositorySpecs first.
-    self assert: repoSpec type = 'filetree'.
-    repo := repoSpec createRepository.
-    self assert: repo class == (Smalltalk at: #'MCFileTreeRepository' ifAbsent: [  ]).
-    self assert: repo description = 'filetree:///opt/mcfiletree'
+  "must create repository against an existing directory"
+
+  | project pkg repoSpec repo fileUtils workingDir tempDir repoDir |
+  Smalltalk at: #'MCFileTreeRepository' ifAbsent: [ ^ self ].
+  fileUtils := (Smalltalk at: #'MCFileTreeFileUtils') current.
+  workingDir := fileUtils default.
+  tempDir := fileUtils directoryFromPath: 'temp' relativeTo: workingDir.
+  [ 
+  fileUtils ensureDirectoryExists: tempDir.
+  repoDir := fileUtils directoryFromPath: 'repo' relativeTo: tempDir.
+  fileUtils ensureDirectoryExists: repoDir.
+  project := self project.
+  pkg := (project version: '1.6-baseline') packageNamed: 'Example-Core'.
+  repoSpec := pkg repositorySpecs first.
+  self assert: repoSpec type = 'filetree'.
+  repo := repoSpec createRepository.
+  self
+    assert: repo class == (Smalltalk at: #'MCFileTreeRepository' ifAbsent: [  ]).
+  self
+    assert:
+      repo description
+        =
+          ('filetree://'
+            , (Smalltalk at: #'MCFileTreeFileUtils') current default pathString
+            , '/temp/repo') ]
+    ensure: [ 
+      (fileUtils directoryExists: tempDir)
+        ifTrue: [ fileUtils deleteAll: tempDir ] ]

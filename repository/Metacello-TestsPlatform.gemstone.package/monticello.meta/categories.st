@@ -1,1 +1,1 @@
-SystemOrganization addCategory: 'Metacello-TestsPlatform'!
+SystemOrganization addCategory: #'Metacello-TestsPlatform'!
