@@ -3,7 +3,9 @@ language: erlang
 env:
    - ST=Pharo-1.4 LoadList="'TravisCI_1'"
    - ST=Pharo-1.4 LoadList="'TravisCI_2'"
-#   - ST=Pharo-2.0 
+   - ST=Pharo-2.0 LoadList="'TravisCI_1'"
+   - ST=Pharo-2.0 LoadList="'TravisCI_2'"
+
 #   - ST=Squeak-4.4
 #   - ST=GemStone-3.1.0.4
 
