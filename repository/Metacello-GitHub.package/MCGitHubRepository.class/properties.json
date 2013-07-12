@@ -3,6 +3,7 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
+		"CacheDirectory",
 		"DownloadCache" ],
 	"commentStamp" : "",
 	"instvars" : [

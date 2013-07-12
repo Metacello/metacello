@@ -1,18 +1,21 @@
 {
 	"class" : {
-		"cacheDirectory" : "ChristopheDemarey 4/29/2013 15:23",
+		"cacheDirectory" : "dkh 07/12/2013 11:52",
+		"cacheDirectory:" : "dkh 07/12/2013 11:36",
 		"cacheDirectoryFor:" : "ChristopheDemarey 4/29/2013 15:24",
+		"defaultCacheDirectory" : "dkh 07/12/2013 11:36",
 		"description" : "dkh 5/16/2012 14:52:41",
 		"downloadCache" : "dkh 6/16/2012 08:29",
 		"downloadCacheKey:version:" : "dkh 7/24/2012 21:50",
 		"flushDownloadCache" : "dkh 6/16/2012 08:25",
 		"flushProjectEntry:version:" : "dkh 7/24/2012 21:50",
-		"initialize" : "dkh 6/16/2012 08:26",
+		"initialize" : "dkh 07/12/2013 11:52",
 		"isAbstract" : "dkh 5/16/2012 14:52:41",
 		"location:" : "dkh 5/16/2012 14:52:41",
 		"location:version:" : "dkh 6/16/2012 09:08",
 		"parseLocation:version:" : "dkh 5/16/2012 14:52:41",
 		"projectDirectoryFrom:version:" : "dkh 07/01/2013 08:48",
+		"resetCacheDirectoryIfInvalid" : "dkh 07/12/2013 11:51",
 		"startUp:" : "dkh 6/16/2012 08:24" },
 	"instance" : {
 		"asRepositorySpecFor:" : "dkh 5/16/2012 14:52:41",
