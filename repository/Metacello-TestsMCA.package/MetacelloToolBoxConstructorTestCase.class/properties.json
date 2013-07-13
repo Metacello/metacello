@@ -1,5 +1,5 @@
 {
-	"category" : "Metacello-TestsMCB",
+	"category" : "Metacello-TestsMCA",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
@@ -7,8 +7,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "MetacelloGoferBasedAtomicLoaderTest",
+	"name" : "MetacelloToolBoxConstructorTestCase",
 	"pools" : [
 		 ],
-	"super" : "MetacelloGoferBasedLoaderTest",
+	"super" : "MetacelloDictionaryRepositoryTest",
 	"type" : "normal" }
