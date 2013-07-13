@@ -6,17 +6,16 @@
 #
 # Copyright (c) 2012-2013 VMware, Inc. All Rights Reserved <dhenrich@vmware.com>.
 #
+
+echo "Load list: ${LoadList}"
+
 cat << EOF > $PROJECT_HOME/tests/travisPre.st
 Transcript cr; show: 'travis---->travisPre.st'.
 
 Smalltalk 
   at: #'TRAVIS_LOAD_LIST'
   put: #( ${LoadList} ).
-
-  Transcript cr; show: 'travis---->LOAD_LIST: #( ', ${LoadList}, ' )'.
 EOF
-
-cat $PROJECT_HOME/tests/travisPre.st
 
 ./build.sh -i $ST -m -f "$PROJECT_HOME/tests/travisPre.st" -f "$PROJECT_HOME/tests/travisCI.st" -o travisCI
 if [[ $? != 0 ]] ; then 
