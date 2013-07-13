@@ -16,6 +16,8 @@ Smalltalk
   Transcript cr; show: 'travis---->LOAD_LIST: #( ', ${LoadList}, ' )'.
 EOF
 
+cat $PROJECT_HOME/tests/travisPre.st
+
 ./build.sh -i $ST -m -f "$PROJECT_HOME/tests/travisPre.st" -f "$PROJECT_HOME/tests/travisCI.st" -o travisCI
 if [[ $? != 0 ]] ; then 
   echo "ERROR: $(basename $0)"
