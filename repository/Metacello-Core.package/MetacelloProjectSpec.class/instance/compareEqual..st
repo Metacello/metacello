@@ -4,7 +4,7 @@ compareEqual: aMetacelloProjectSpec
 
   ^ self className = aMetacelloProjectSpec className
     and: [ 
-      self versionString = aMetacelloProjectSpec versionString
+      self versionOrNil = aMetacelloProjectSpec versionOrNil
         and: [ 
           self operator == aMetacelloProjectSpec operator
             and: [ 
