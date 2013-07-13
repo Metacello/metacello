@@ -1,3 +1,3 @@
-*metacello-testsmc-specs
+*metacello-testsmccore
 repositoriesSpec
     ^ self project repositoriesSpec
