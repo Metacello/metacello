@@ -1,0 +1,20 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"assertMetacelloExampleProjectReferenceSpec:" : "dkh 6/12/2012 15:41:23.319",
+		"assertMetacelloExampleProjectReferenceSpec:projectName:className:packageName:fileName:" : "dkh 7/2/2012 17:52",
+		"assertMetacelloExampleVersionSpec:" : "dkh 6/12/2012 15:41:23.319",
+		"expectedFailures" : "dkh 6/12/2012 15:41:23.319",
+		"projectName" : "dkh 6/12/2012 15:41:23.319",
+		"tearDownPackageNames" : "dkh 6/12/2012 15:41:23.319",
+		"testClassicProjectReferenceSpecificationA" : "dkh 05/11/2013 11:20",
+		"testClassicProjectReferenceSpecificationB" : "dkh 05/09/2013 12:11",
+		"testClassicProjectReferenceSpecificationC" : "dkh 05/09/2013 12:11",
+		"testClassicProjectReferenceSpecificationD" : "dkh 05/09/2013 12:11",
+		"testNewProjectReferenceSpecification" : "dkh 05/11/2013 11:27",
+		"testOldProjectReferenceSpecification" : "dkh 05/11/2013 11:26",
+		"testProjectCreationA" : "dkh 05/09/2013 12:11",
+		"testProjectCreationB" : "dkh 05/09/2013 12:11",
+		"testProjectCreationC" : "dkh 05/09/2013 12:11",
+		"testProjectCreationD" : "dkh 05/09/2013 12:12" } }

@@ -1,0 +1,3 @@
+accessing
+projectName
+    ^ 'ConfigurationOfMetacelloProjectIssue154'
