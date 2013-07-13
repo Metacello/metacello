@@ -1,13 +1,14 @@
 {
-	"category" : "Metacello-TestsMC-Resources",
+	"category" : "Metacello-TestsMCResources",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		"ProjectAttributes" ],
+		 ],
 	"commentStamp" : "",
 	"instvars" : [
+		"versionReferences",
 		"monticelloRepository" ],
-	"name" : "MetacelloConfigurationResource",
+	"name" : "MetacelloIssue108Resource",
 	"pools" : [
 		 ],
 	"super" : "TestResource",
