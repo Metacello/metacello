@@ -1,1 +1,1 @@
-(name 'Metacello-TestsMCA-dkh.1' message 'checkpoint' id '1bb99138-7666-4172-8c79-7e26dbbb378d' date '07/12/2013' time '23:08:59' author 'dkh' ancestors () stepChildren ())
+(name 'Metacello-TestsMCA-dkh.2' message 'fully rebalanced, but is it balanced...' id 'e7be32fa-e5d3-4c86-95ca-c3d98e022af4' date '07/13/2013' time '00:18:01' author 'dkh' ancestors ((name 'Metacello-TestsMCA-dkh.1' message 'checkpoint' id '1bb99138-7666-4172-8c79-7e26dbbb378d' date '07/12/2013' time '23:08:59' author 'dkh' ancestors () stepChildren ())) stepChildren ())

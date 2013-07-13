@@ -1,0 +1,14 @@
+{
+	"category" : "Metacello-TestsMCB",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"tempRepositories" ],
+	"name" : "MetacelloDictionaryRepositoryTest",
+	"pools" : [
+		 ],
+	"super" : "GoferTest",
+	"type" : "normal" }
