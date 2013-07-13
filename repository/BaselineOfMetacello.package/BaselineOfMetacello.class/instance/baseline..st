@@ -40,15 +40,20 @@ baseline: spec
           with: [ spec requires: #('Metacello-Core') ];
         package: 'Metacello-TestsCore'
           with: [ spec requires: #('Metacello-Core') ];
+        package: 'Metacello-TestsMCResources'
+          with: [ spec requires: #('Metacello-Core') ];
         package: 'Metacello-TestsMCCore'
-          with: [ spec requires: #('Metacello-Core' 'Metacello-TestsCore' 'Metacello-ToolBox') ];
+          with: [ 
+              spec
+                requires:
+                  #('Metacello-Core' 'Metacello-TestsCore' 'Metacello-ToolBox' 'Metacello-TestsMCResources') ];
         package: 'Metacello-TestsMC'
           with: [ 
               spec
                 postLoadDoIt: #'testResourcePostLoadDoIt';
                 includes: #('Metacello-TestsCommonMC');
                 requires:
-                    #('Metacello-MC' 'Gofer Tests' 'Metacello-ToolBox' 'Metacello-GitHub') ];
+                    #('Metacello-MC' 'Gofer Tests' 'Metacello-ToolBox' 'Metacello-GitHub' 'Metacello-TestsMCResources') ];
         package: 'Metacello-TestsCommonMC'
           with: [ 
               spec
