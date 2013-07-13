@@ -1,0 +1,1 @@
+(name 'Metacello-TestsMCCore-dkh.1' message 'split out Metacello-TestsMC tests that depend upon tests in Metacello-TestsCore and put them in Metacello-TestsMCCore...working on splitting tests into two groups to reduce overall run time for travis' id 'bac4026f-5094-454f-b9f5-54b60fdaf502' date '07/12/2013' time '19:18:54' author 'dkh' ancestors () stepChildren ())
