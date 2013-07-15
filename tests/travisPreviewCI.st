@@ -18,9 +18,10 @@ Metacello new
   configuration: 'MetacelloPreview';
   version: #stable;
   repository: 'filetree://', gitPath, '/metacello-work';
-  onConflict: [:ex |
+  onConflict: [:ex :existing :new |
     "allow new version of Metacello to be loaded"
-    ex existingProjectRegistration baseName = 'Metacello'
+    Transcript cr; show: 'CONFLICT: ', existing printString, ':::', new printString.
+    existing baseName = 'Metacello'
       ifTrue: [ ex allow ].
     ex disallow ];
   load: 'TravisCI'.
