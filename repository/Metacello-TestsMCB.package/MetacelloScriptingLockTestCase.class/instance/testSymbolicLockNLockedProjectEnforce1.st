@@ -12,7 +12,7 @@ testSymbolicLockNLockedProjectEnforce1
     onUpgrade: [ :ex :existing :new | 
           existing baseName = 'ExternalX'
             ifTrue: [ 
-              "enforce lock"
+              "use locked version"
               ex disallow ].
           ex pass ];
     load.

@@ -22,7 +22,9 @@ testBleedingEdgeLocking
     repository: 'dictionary://Metacello_Configuration_Test_Repository';
     onUpgrade: [ :ex :existing :new | 
           existing projectName = 'Foo'
-            ifTrue: [ ex disallow ].
+            ifTrue: [ 
+              "use locked version"
+              ex disallow ].
           ex pass ];
     load: 'Foo'.
   wc := (GoferPackageReference name: 'GoferFaux') workingCopy.
