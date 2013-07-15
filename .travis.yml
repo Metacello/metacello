@@ -37,6 +37,11 @@ env:
    - ST=GemStone-3.0.1 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
    - ST=GemStone-3.1.0.4 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
 
+# blacklist
+branches:
+  except:
+    - config_wip
+
 install:
    - export PROJECT_HOME="$(pwd)"
    - cd $HOME
