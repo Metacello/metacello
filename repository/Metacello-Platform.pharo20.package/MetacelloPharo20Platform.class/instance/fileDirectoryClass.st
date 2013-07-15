@@ -1,3 +1,3 @@
 file system
 fileDirectoryClass
-	^FileSystem 
+	^FileSystem

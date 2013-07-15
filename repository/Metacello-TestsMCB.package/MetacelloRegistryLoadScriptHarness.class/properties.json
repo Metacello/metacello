@@ -1,0 +1,14 @@
+{
+	"category" : "Metacello-TestsMCB",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 6/8/2012 13:03",
+	"instvars" : [
+		 ],
+	"name" : "MetacelloRegistryLoadScriptHarness",
+	"pools" : [
+		 ],
+	"super" : "MetacelloScriptingStandardTestHarness",
+	"type" : "normal" }

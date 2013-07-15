@@ -1,0 +1,16 @@
+{
+	"category" : "Metacello-TestsMCB",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"registry",
+		"monticelloRepository",
+		"configurationRepository" ],
+	"name" : "MetacelloScriptingStandardTestHarness",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

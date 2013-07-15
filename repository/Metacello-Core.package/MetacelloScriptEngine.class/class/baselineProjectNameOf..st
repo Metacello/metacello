@@ -1,5 +1,5 @@
 utility
 baselineProjectNameOf: baselineClassName
-    ^ (baselineClassName indexOfSubCollection: 'BaselineOf') = 0
-        ifTrue: [ baselineClassName ]
-        ifFalse: [ baselineClassName copyFrom: 'BaselineOf' size + 1 to: baselineClassName size ]
+  ^ (baselineClassName beginsWith: 'BaselineOf')
+    ifTrue: [ baselineClassName copyFrom: 'BaselineOf' size + 1 to: baselineClassName size ]
+    ifFalse: [ baselineClassName ]

@@ -1,8 +1,10 @@
 {
 	"class" : {
 		"appendDescription:to:" : "dkh 3/7/2012 17:08:50",
-		"baseNameOf:" : "dkh 3/7/2012 17:08:50",
+		"baseNameOf:" : "dkh 07/14/2013 12:02",
 		"baseNameOfConfiguration:" : "dkh 3/7/2012 17:08:50",
+		"baselineNameFrom:" : "dkh 05/15/2013 20:36",
+		"baselineNamed:" : "dkh 05/15/2013 20:15",
 		"checkForCriticalValidationIssues:" : "dkh 3/7/2012 17:08:50",
 		"compareVersion:for:to:" : "dkh 3/7/2012 17:08:50",
 		"compareVersionsIn:" : "dkh 3/7/2012 17:08:50",
@@ -63,6 +65,8 @@
 		"addSection:repository:requiredProjects:packages:repositories:dependencies:groups:versionSpecsDo:" : "dkh 3/7/2012 17:08:50",
 		"addSectionsFrom:forBaseline:updateProjects:updatePackages:versionSpecsDo:" : "dkh 9/8/2012 05:17",
 		"addSymbolicSection:version:" : "dkh 9/7/2012 07:50",
+		"baselineNameFrom:" : "dkh 05/15/2013 20:39",
+		"baselineNamed:" : "dkh 05/15/2013 20:17",
 		"buildMapFrom:for:" : "dkh 3/7/2012 17:08:50",
 		"clearVersionSpec:fullVersionSpec:updateProjects:updatePackages:" : "dkh 3/7/2012 17:08:50",
 		"commitConfiguration:" : "dkh 3/7/2012 17:08:50",

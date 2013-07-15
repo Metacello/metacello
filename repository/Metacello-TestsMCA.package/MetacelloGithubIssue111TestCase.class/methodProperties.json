@@ -1,0 +1,12 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"getTestRepository" : "dkh 9/5/2012 16:23",
+		"getTestRepositoryDirectory" : "ChristopheDemarey 5/31/2013 13:11",
+		"hasPackage:" : "dkh 9/5/2012 16:00",
+		"runCase" : "ChristopheDemarey 4/29/2013 16:23",
+		"setUp" : "dkh 9/5/2012 16:08",
+		"tearDown" : "dkh 9/5/2012 16:33",
+		"tearDownPackageNames" : "dkh 9/5/2012 16:09",
+		"testIssue111" : " 07/12/2013 07:56" } }

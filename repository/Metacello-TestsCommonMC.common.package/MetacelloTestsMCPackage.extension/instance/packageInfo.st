@@ -1,5 +1,5 @@
-accessing
+*metacello-testscommonmc
 packageInfo
-	"Aiming for speeding up the running of the tests"
+  "Aiming for speeding up the running of the tests"
 
-	^ MetacelloTestsPackageInfo named: name
+  ^ MetacelloTestsPackageInfo named: name

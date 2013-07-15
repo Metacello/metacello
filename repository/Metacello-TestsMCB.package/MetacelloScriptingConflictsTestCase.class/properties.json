@@ -1,0 +1,14 @@
+{
+	"category" : "Metacello-TestsMCB",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MetacelloScriptingConflictsTestCase",
+	"pools" : [
+		 ],
+	"super" : "MetacelloScriptingTestCase",
+	"type" : "normal" }

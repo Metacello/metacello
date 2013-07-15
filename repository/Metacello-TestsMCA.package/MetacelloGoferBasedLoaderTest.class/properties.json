@@ -1,0 +1,16 @@
+{
+	"category" : "Metacello-TestsMCA",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"postloadAnswer",
+		"postLoadExecuted",
+		"preLoadExecuted" ],
+	"name" : "MetacelloGoferBasedLoaderTest",
+	"pools" : [
+		 ],
+	"super" : "MetacelloDictionaryRepositoryTest",
+	"type" : "normal" }

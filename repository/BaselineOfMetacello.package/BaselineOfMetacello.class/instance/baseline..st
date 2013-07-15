@@ -40,22 +40,35 @@ baseline: spec
           with: [ spec requires: #('Metacello-Core') ];
         package: 'Metacello-TestsCore'
           with: [ spec requires: #('Metacello-Core') ];
-        package: 'Metacello-TestsMC'
+        package: 'Metacello-TestsMCResources'
           with: [ 
               spec
                 postLoadDoIt: #'testResourcePostLoadDoIt';
                 includes: #('Metacello-TestsCommonMC');
+                requires: #('Metacello-Core') ];
+        package: 'Metacello-TestsMCCore'
+          with: [ 
+              spec
                 requires:
-                    #('Metacello-MC' 'Metacello-TestsCore' 'Gofer Tests' 'Metacello-ToolBox' 'Metacello-GitHub') ];
+                  #('Metacello-Core' 'Metacello-TestsCore' 'Metacello-ToolBox' 'Metacello-TestsMCResources') ];
+        package: 'Metacello-TestsMC'
+          with: [ 
+              spec
+                requires:
+                  #('Metacello-MC' 'Gofer Tests' 'Metacello-ToolBox' 'Metacello-GitHub' 'Metacello-TestsMCResources') ];
+        package: 'Metacello-TestsMCA'
+          with: [ spec requires: #('Metacello-TestsMC') ];
+        package: 'Metacello-TestsMCB'
+          with: [ spec requires: #('Metacello-TestsMC') ];
         package: 'Metacello-TestsCommonMC'
           with: [ 
               spec
                 file: 'Metacello-TestsCommonMC.common';
-                requires: 'Metacello-TestsMC' ];
+                requires: 'Metacello-TestsMCResources' ];
         package: 'Metacello-TestsReference'
           with: [ spec requires: #('Metacello-Reference') ];
         package: 'Metacello-TestsTutorial'
-          with: [ spec requires: #('Metacello-Tutorial' 'Metacello-TestsMC') ];
+          with: [ spec requires: #('Metacello-Tutorial' 'Metacello-TestsMCResources') ];
         yourself.
       spec
         group: 'default' with: #('batch' 'Metacello-ToolBox');
@@ -64,28 +77,30 @@ baseline: spec
         group: 'Core' with: #('default');
         group: 'Tutorial' with: #('Metacello-Tutorial' 'Metacello-Reference');
         group: 'UI' with: #('default');
-        group: 'TravisCI'
+        group: 'TravisCI_1'
           with:
-            #('Metacello-TestsCore' 'Metacello-TestsTutorial' 'Metacello-TestsMC' 'Metacello-TestsReference');
+            #('Metacello-TestsCore' 'Metacello-TestsReference' 'Metacello-TestsMCCore');
+        group: 'TravisCI_2' with: #('Metacello-TestsMCA');
+        group: 'TravisCI_3'
+          with: #('Metacello-TestsMCB' 'Metacello-TestsTutorial');
+        group: 'TravisCI' with: #('TravisCI_1' 'TravisCI_2' 'TravisCI_3');
         group: 'Tests'
           with:
-            #('Metacello-TestsCore' 'Metacello-TestsTutorial' 'Metacello-TestsMC' 'Metacello-TestsReference');
+            #('Metacello-TestsCore' 'Metacello-TestsTutorial' 'Metacello-TestsMCA' 'Metacello-TestsMCB' 'Metacello-TestsReference' 'Metacello-TestsMCCore');
         yourself ].
   spec
     for: #'squeakCommon'
     do: [ 
       spec
-        project: 'HelpSystem'
+        configuration: 'HelpSystem'
           with: [ 
               spec
-                className: 'ConfigurationOfHelpSystem';
                 versionString: '1.1';
                 loads: #('Core');
                 repository: 'http://www.squeaksource.com/MetacelloRepository' ];
-        project: 'OSProcess'
+        configuration: 'OSProcess'
           with: [ 
               spec
-                className: 'ConfigurationOfOSProcess';
                 versionString: '4.4.5';
                 repository: 'http://www.squeaksource.com/MetacelloRepository';
                 repository: 'http://seaside.gemtalksystems.com/ss/metacello' ];
@@ -100,7 +115,7 @@ baseline: spec
         yourself.
       spec
         group: 'Tests' with: #('Metacello-TestsPlatform');
-        group: 'TravisCI' with: #('Metacello-TestsPlatform');
+        group: 'TravisCI_1' with: #('Metacello-TestsPlatform');
         yourself ].
   spec
     for: #'pharo'
@@ -112,6 +127,7 @@ baseline: spec
                 className: 'ConfigurationOfProfStef';
                 versionString: #'stable';
                 repository: 'http://smalltalkhub.com/mc/PharoExtras/ProfStef/main' ];
+        configuration: 'OSProcess' with: [ spec versionString: #'stable' ];
         yourself.
       spec
         package: 'Metacello-ProfStef'
@@ -161,6 +177,10 @@ baseline: spec
     for: #'pharo2.x'
     do: [ 
       spec
+        configuration: 'OSProcess'
+          with: [ spec repository: 'http://ss3.gemtalksystems.com/ss/MetaRepoForPharo20' ];
+        yourself.
+      spec
         package: 'Metacello-Platform'
           with: [ spec file: 'Metacello-Platform.pharo20' ];
         package: 'Metacello-TestsCommonMC'
@@ -172,6 +192,10 @@ baseline: spec
   spec
     for: #'pharo3.x'
     do: [ 
+      spec
+        configuration: 'OSProcess'
+          with: [ spec repository: 'http://ss3.gemtalksystems.com/ss/MetaRepoForPharo20' ];
+        yourself.
       spec
         package: 'Metacello-Platform'
           with: [ spec file: 'Metacello-Platform.pharo20' ];
@@ -232,5 +256,5 @@ baseline: spec
         yourself.
       spec
         group: 'Tests' with: #('Metacello-TestsPlatform');
-        group: 'TravisCI' with: #('Metacello-TestsPlatform');
+        group: 'TravisCI_1' with: #('Metacello-TestsPlatform');
         yourself ]
