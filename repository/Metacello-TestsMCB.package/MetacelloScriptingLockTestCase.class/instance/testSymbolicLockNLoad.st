@@ -1,20 +1,12 @@
 tests
-testBasicLockNLockedProjectEnforce1
+testSymbolicLockNLoad
   Metacello new
     configuration: 'ExternalX';
-    version: '0.9.0';
+    version: #'stable';
     repository: 'dictionary://Metacello_Config_Test_Repository';
     lock.
-  Metacello new
-    configuration: 'LockConfigurations';
-    version: '1.1.0';
-    repository: 'dictionary://Metacello_Config_Test_Repository';
-    onUpgrade: [ :ex :existing :new | 
-          existing baseName = 'ExternalX'
-            ifTrue: [ 
-              "enforce lock"
-              ex disallow ].
-          ex pass ];
+  Metacello registry
+    configuration: 'ExternalX';
     load.
   self
     validateExpectedConfigurationClassName: 'ConfigurationOfExternalX'

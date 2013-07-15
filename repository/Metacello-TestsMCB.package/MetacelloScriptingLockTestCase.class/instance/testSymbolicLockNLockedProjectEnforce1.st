@@ -1,8 +1,8 @@
 tests
-testBasicLockNLockedProjectEnforce1
+testSymbolicLockNLockedProjectEnforce1
   Metacello new
     configuration: 'ExternalX';
-    version: '0.9.0';
+    version: #'stable';
     repository: 'dictionary://Metacello_Config_Test_Repository';
     lock.
   Metacello new
