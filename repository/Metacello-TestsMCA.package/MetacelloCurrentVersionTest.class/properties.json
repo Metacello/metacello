@@ -1,13 +1,13 @@
 {
-	"category" : "Metacello-TestsMCB",
+	"category" : "Metacello-TestsMCA",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"loadType" ],
-	"name" : "MetacelloAtomicLoadOrderTest",
+		 ],
+	"name" : "MetacelloCurrentVersionTest",
 	"pools" : [
 		 ],
 	"super" : "MetacelloDictionaryRepositoryTest",

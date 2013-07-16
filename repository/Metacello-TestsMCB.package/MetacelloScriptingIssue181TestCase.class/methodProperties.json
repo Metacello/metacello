@@ -4,4 +4,5 @@
 	"instance" : {
 		"setUpRepositories" : "dkh 07/16/2013 14:01",
 		"tearDownPackageList" : "dkh 07/16/2013 14:20",
+		"testBaselineIndirectLoadConflict" : "dkh 07/16/2013 16:15",
 		"testBaselineIndirectLoadSemantics" : "dkh 07/16/2013 15:26" } }
