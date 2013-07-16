@@ -14,18 +14,21 @@ MetacelloBuilderTravisCI fileIn: 'Metacello-Base.st'.
 
 "Load the Metacello Tests ... "
 [
+
+Metacello new
+  configuration: 'MetacelloPreview';
+  version: #stable;
+  repository: 'filetree://', gitPath, '/metacello-work';
+  get.
 Metacello new
   configuration: 'MetacelloPreview';
   version: #stable;
   repository: 'filetree://', gitPath, '/metacello-work';
   onConflict: [:ex :existing :new |
     "allow new version of Metacello to be loaded"
-    Transcript cr; show: 'CONFLICT: ', existing printString, ':::', new printString.
     existing baseName = 'Metacello'
       ifTrue: [ 
-        Transcript show: '-->ALLOWED'.
         ex allow ].
-    Transcript show: '-->DISALLOWED: ', existing baseName printString.
     ex disallow ];
   load: 'TravisCI'.
 
