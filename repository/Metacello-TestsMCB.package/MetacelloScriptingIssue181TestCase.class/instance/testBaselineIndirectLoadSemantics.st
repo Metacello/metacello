@@ -18,9 +18,7 @@ testBaselineIndirectLoadSemantics
     configuration: 'Issue181';
     version: '0.9.2';
     repository: 'dictionary://Metacello_Configuration_Test_Repository';
-    onConflict: [ :ex | 
-          self halt.
-          ex allow ];
+    onConflict: [ :ex | ex allow ];
     silently;
     load.	"
 ---
