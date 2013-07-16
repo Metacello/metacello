@@ -9,9 +9,6 @@ gitPath := (Smalltalk at: #'FileDirectory' ifAbsent: [  ])
   ifNil: [ ((Smalltalk at: #'FileSystem') workingDirectory / gitCache) pathString ]
   ifNotNil: [:fileDirectoryClass | (fileDirectoryClass default directoryNamed: gitCache ) fullName].
 
-"Load Metacello-Base, so that Metacello is bootstrapped"
-MetacelloBuilderTravisCI fileIn: 'Metacello-Base.st'.
-
 "Load the Metacello Tests ... "
 [
 
