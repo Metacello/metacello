@@ -1,6 +1,7 @@
 {
 	"class" : {
 		"externalConfigurationSHA" : "dkh 6/22/2012 17:37",
+		"externalCustomIssue181SHA" : "dkh 07/16/2013 14:08",
 		"externalCustomSHA" : "dkh 6/22/2012 17:26" },
 	"instance" : {
 		"baselineGithubReferenceIV:" : "dkh 06/29/2013 12:27",
@@ -9,8 +10,10 @@
 		"baselineGithubReferenceVII:" : "dkh 6/12/2012 15:41:23.319",
 		"baselineGithubReferenceXX:" : "dkh 6/12/2012 15:41:23.319",
 		"baselineIssue32:" : "dkh 6/18/2012 14:38",
-		"configuration091Issue63:" : "dkh 6/26/2012 16:44",
-		"configuration092Issue63:" : "dkh 6/26/2012 16:53",
+		"configuration091Issue181:" : "dkh 07/16/2013 14:11",
+		"configuration091Issue63:" : "dkh 07/16/2013 14:11",
+		"configuration092Issue181:" : "dkh 07/16/2013 14:11",
+		"configuration092Issue63:" : "dkh 07/16/2013 14:11",
 		"configurationGithubReferenceIV:" : "dkh 6/22/2012 17:22",
 		"configurationGithubReferenceV:" : "dkh 6/22/2012 17:22",
 		"configurationGithubReferenceX:" : "dkh 6/22/2012 17:22",
@@ -37,7 +40,7 @@
 		"preloadDoIt" : "dkh 6/18/2012 14:37",
 		"sampleAuthorName" : "dkh 6/12/2012 15:41:23.319",
 		"sampleRepository" : "dkh 6/12/2012 15:41:23.319",
-		"setUp" : "dkh 7/24/2012 20:06",
+		"setUp" : "dkh 07/16/2013 14:03",
 		"setUpBaselineGithubReferenceIV" : "dkh 6/12/2012 15:41:23.319",
 		"setUpBaselineGithubReferenceIX" : "dkh 6/12/2012 15:41:23.319",
 		"setUpBaselineGithubReferenceV" : "dkh 6/12/2012 15:41:23.319",
@@ -52,6 +55,7 @@
 		"setUpBaselineOfExternalX" : "dkh 6/12/2012 15:41:23.319",
 		"setUpBaselineOfExternalXX" : "dkh 6/12/2012 15:41:23.319",
 		"setUpBaselineOfExternalXXX" : "dkh 6/12/2012 15:41:23.319",
+		"setUpConfiguration181" : "dkh 07/16/2013 14:10",
 		"setUpConfiguration63" : "dkh 6/26/2012 16:45",
 		"setUpConfigurationIssue32" : "dkh 6/18/2012 15:47",
 		"setUpConfigurationIssue59" : "dkh 6/22/2012 18:13",
