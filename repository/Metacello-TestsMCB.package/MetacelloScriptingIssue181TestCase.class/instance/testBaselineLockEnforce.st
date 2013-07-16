@@ -1,5 +1,5 @@
 running
-testBaselineIndirectLoadSemantics
+testBaselineLockEnforce
   "https://github.com/dalehenrich/metacello-work/issues/181"
 
   | wc |
@@ -8,21 +8,24 @@ testBaselineIndirectLoadSemantics
     version: '0.9.1';
     repository: 'dictionary://Metacello_Configuration_Test_Repository';
     silently;
-    load.	"
----
-  Issue181 0.9.1
-    BaselineOfExternal-dkh.3"
+    load.
   wc := (GoferPackageReference name: 'BaselineOfExternal') workingCopy.
   self assert: wc ancestry ancestors first name = 'BaselineOfExternal-dkh.3'.
+  Metacello image
+    baseline: 'External';
+    lock.
   Metacello new
     configuration: 'Issue181';
     version: '0.9.2';
     repository: 'dictionary://Metacello_Configuration_Test_Repository';
-    onConflict: [ :ex | ex allow ];
+    onConflict: [ :ex | ex disallow ];
+    onUpgrade: [ :ex :existing :new | 
+          existing baseName = 'External'
+            ifTrue: [ 
+              "use locked version"
+              ex disallow ].
+          ex pass ];
     silently;
-    load.	"
----
-  Issue181 0.9.2
-    BaselineOfExternal-dkh.4"
+    load.
   wc := (GoferPackageReference name: 'BaselineOfExternal') workingCopy.
-  self assert: wc ancestry ancestors first name = 'BaselineOfExternal-dkh.4'
+  self assert: wc ancestry ancestors first name = 'BaselineOfExternal-dkh.3'

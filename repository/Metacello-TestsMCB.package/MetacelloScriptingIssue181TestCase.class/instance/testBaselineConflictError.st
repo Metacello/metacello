@@ -1,5 +1,5 @@
 running
-testBaselineIndirectLoadConflict
+testBaselineConflictError
   "https://github.com/dalehenrich/metacello-work/issues/181"
 
   Metacello new
