@@ -22,7 +22,10 @@ Metacello new
     "allow new version of Metacello to be loaded"
     Transcript cr; show: 'CONFLICT: ', existing printString, ':::', new printString.
     existing baseName = 'Metacello'
-      ifTrue: [ ex allow ].
+      ifTrue: [ 
+        Transcript show: '-->ALLOWED'.
+        ex allow ].
+    Transcript show: '-->DISALLOWED: ', existing baseName printString.
     ex disallow ];
   load: 'TravisCI'.
 
