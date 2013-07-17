@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"tempRepositories" ],
-	"name" : "MetacelloToolBoxAPITestCase",
+		 ],
+	"name" : "MetacelloScriptingIssue181TestCase",
 	"pools" : [
 		 ],
-	"super" : "TestCase",
+	"super" : "MetacelloScriptingTestCase",
 	"type" : "normal" }
