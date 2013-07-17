@@ -6,8 +6,7 @@ env:
 #   - ST=Pharo-3.0 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
    - ST=Squeak-4.3 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
    - ST=Squeak-4.4 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
-#   - ST=Squeak-4.5 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
-   - ST=GemStone-3.1.0.4 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
+   - ST=Squeak-4.5 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
 
    - ST=PharoCore-1.1 BUILD_ARG=-X TRAVIS_SCRIPT=travisCI.st
    - ST=PharoCore-1.2 BUILD_ARG=-X TRAVIS_SCRIPT=travisCI.st
@@ -27,7 +26,7 @@ env:
 #   - ST=Pharo-3.0 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
    - ST=Squeak-4.3 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
    - ST=Squeak-4.4 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
-#   - ST=Squeak-4.5 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
+   - ST=Squeak-4.5 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
 
    #  GemStone should only be tested with Preview only (for now)
    - ST=GemStone-2.4.4.1 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
