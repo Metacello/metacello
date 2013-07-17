@@ -32,14 +32,26 @@ version10beta321: spec
 - pick up latest package versions from git repo ... preparing for release
 1.0-beta.32.1 (dkh.781):
 - fix Issue #170: location of ConfigurationOfOsProcess for Pharo2.0+ changed
-  https://github.com/dalehenrich/metacello-work/issues/170'.
+  https://github.com/dalehenrich/metacello-work/issues/170
+1.0-beta.32.1 (dkh.782):
+- split tests into two groups to avoid travis-ci 30 minute limit
+- fix google Issue 184: github zip download failures due to filesystem issues
+  https://code.google.com/p/metacello/issues/detail?id=184
+- fix Issue #175: MCGitHubRepository and cache
+  https://github.com/dalehenrich/metacello-work/issues/175
+- fix Issue #174: `lock` should work with symbolic versions
+  https://github.com/dalehenrich/metacello-work/issues/174
+- fix Issue #176: attempt to modify immutable project spec
+  https://github.com/dalehenrich/metacello-work/issues/176
+- fix Issue #181: The case for `unconditional` baseline loading
+  https://github.com/dalehenrich/metacello-work/issues/181'.
       spec postLoadDoIt: #'metacelloPrimeRegistry'.
       spec author: 'dkh'.
-      spec timestamp: '7/1/2013 14:00'.
+      spec timestamp: '7/17/2013 08:18'.
       spec
         project: 'FileTree' with: #'stable';
-        project: 'Gofer' with: '1.0.5.1';
-        project: 'Gofer Tests' with: '1.0.5.1'.
+        project: 'Gofer' with: #'stable';
+        project: 'Gofer Tests' with: #'stable'.
       spec
         package: 'Metacello-Base' with: 'Metacello-Base-dkh.109';
         package: 'Metacello-Core' with: 'Metacello-Core-ChristopheDemarey.686';
@@ -48,23 +60,27 @@ version10beta321: spec
           with: 'Metacello-GitHub-ChristopheDemarey.25';
         package: 'Metacello-MC' with: 'Metacello-MC-dkh.676';
         package: 'Metacello-Reference' with: 'Metacello-Reference-dkh.36';
-        package: 'Metacello-Tutorial' with: 'Metacello-Tutorial-dkh.26';
-        package: 'OB-Metacello' with: 'OB-Metacello-dkh.83';
+        package: 'Metacello-TestsCommonMC'
+          with: 'Metacello-TestsCommonMC.common-dkh.3';
+        package: 'Metacello-TestsCore' with: 'Metacello-TestsCoCore-dkh.35';
+        package: 'Metacello-TestsMC' with: 'Metacello-TestsMC-dkh.372';
+        package: 'Metacello-TestsMCA' with: 'Metacello-TestsMCA-dkh.7';
+        package: 'Metacello-TestsMCB' with: 'Metacello-TestsMCB-dkh.13';
+        package: 'Metacello-TestsMCCore' with: 'Metacello-TestsMCCore-dkh.5';
+        package: 'Metacello-TestsMCResources'
+          with: 'Metacello-TestsMCResources-dkh.4';
         package: 'Metacello-TestsReference'
           with: 'Metacello-TestsReference-dkh.20';
-        package: 'Metacello-TestsCore' with: 'Metacello-TestsCore-dkh.33';
-        package: 'Metacello-TestsMC' with: 'Metacello-TestsMC-dkh.372';
-        package: 'Metacello-TestsCommonMC'
-          with: 'Metacello-TestsCommonMC.common-dkh.2';
         package: 'Metacello-TestsTutorial'
           with: 'Metacello-TestsTutorial-ChristopheDemarey.41';
-        package: 'Metacello-ToolBox' with: 'Metacello-ToolBox-dkh.131' ].
+        package: 'Metacello-ToolBox' with: 'Metacello-ToolBox-dkh.131';
+        package: 'Metacello-Tutorial' with: 'Metacello-Tutorial-dkh.26';
+        yourself ].
   spec
     for: #'squeakCommon'
     do: [ 
       spec
         project: 'OSProcess' with: '4.4.5';
-        project: 'OmniBrowser' with: #'stable';
         project: 'HelpSystem' with: '1.1'.
       spec
         package: 'Metacello-TestsPlatform'
