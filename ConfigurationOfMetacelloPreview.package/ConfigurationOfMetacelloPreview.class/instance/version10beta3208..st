@@ -14,14 +14,16 @@ version10beta3208: spec
 - fix Issue #174: `lock` should work with symbolic versions
   https://github.com/dalehenrich/metacello-work/issues/174
 - fix Issue #176: attempt to modify immutable project spec
-  https://github.com/dalehenrich/metacello-work/issues/176'.
+  https://github.com/dalehenrich/metacello-work/issues/176
+- fix Issue #181: The case for `unconditional` baseline loading
+  https://github.com/dalehenrich/metacello-work/issues/181'.
       spec author: 'dkh'.
-      spec timestamp: '7/15/2013 08:53'.
+      spec timestamp: '7/16/2013 22:15'.
       spec
         baseline: 'Metacello'
           with: [ 
               spec
                 loads: #('batch');
                 repository:
-                    'github://dalehenrich/metacello-work:0fb887bec3302226a17d508ae01c1dd99cd0bf5c/repository' ];
+                    'github://dalehenrich/metacello-work:692e9c659810d40062aa63506b6875db76ec90e9/repository' ];
         import: 'Metacello' ]

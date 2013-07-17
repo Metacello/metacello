@@ -9,19 +9,23 @@ gitPath := (Smalltalk at: #'FileDirectory' ifAbsent: [  ])
   ifNil: [ ((Smalltalk at: #'FileSystem') workingDirectory / gitCache) pathString ]
   ifNotNil: [:fileDirectoryClass | (fileDirectoryClass default directoryNamed: gitCache ) fullName].
 
-"Load Metacello-Base, so that Metacello is bootstrapped"
-MetacelloBuilderTravisCI fileIn: 'Metacello-Base.st'.
-
 "Load the Metacello Tests ... "
 [
+
 Metacello new
   configuration: 'MetacelloPreview';
   version: #stable;
   repository: 'filetree://', gitPath, '/metacello-work';
-  onConflict: [:ex |
+  get.
+Metacello new
+  configuration: 'MetacelloPreview';
+  version: #stable;
+  repository: 'filetree://', gitPath, '/metacello-work';
+  onConflict: [:ex :existing :new |
     "allow new version of Metacello to be loaded"
-    ex existingProjectRegistration baseName = 'Metacello'
-      ifTrue: [ ex allow ].
+    existing baseName = 'Metacello'
+      ifTrue: [ 
+        ex allow ].
     ex disallow ];
   load: 'TravisCI'.
 
