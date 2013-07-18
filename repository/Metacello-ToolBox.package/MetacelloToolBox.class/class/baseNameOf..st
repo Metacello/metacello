@@ -3,7 +3,7 @@ baseNameOf: configurationClassName
   "Return the baseName for the given configuration class name."
 
   <apiDocumentation>
-  ^ (configurationClassName begindWith: 'ConfigurationOf')
+  ^ (configurationClassName beginsWith: 'ConfigurationOf')
     ifTrue: [ 
       configurationClassName
         copyFrom: 'ConfigurationOf' size + 1
