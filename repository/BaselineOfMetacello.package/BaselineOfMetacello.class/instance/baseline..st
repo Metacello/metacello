@@ -126,7 +126,8 @@ baseline: spec
               spec
                 className: 'ConfigurationOfProfStef';
                 versionString: #'stable';
-                repository: 'http://smalltalkhub.com/mc/PharoExtras/ProfStef/main' ];
+                repository:
+                    'http://smalltalkhub.com/mc/PharoExtras/ProfStef/main' ];
         configuration: 'OSProcess' with: [ spec versionString: #'stable' ];
         yourself.
       spec
@@ -204,7 +205,7 @@ baseline: spec
         yourself.
       spec
         baseline: 'FileTree'
-        with: [ spec repository: 'github://dalehenrich/filetree:pharo3.0/repository' ] ].
+        with: [ spec repository: 'github://dalehenrich/filetree:pharo2.0/repository' ] ].
   spec
     for: #'squeak'
     do: [ 
