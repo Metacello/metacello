@@ -26,7 +26,42 @@ setUpConfiguration181
     selector: 'configuration092Issue181:'
     category: 'cat'
     timeStamp: ''
-    source: (self class sourceCodeAt: #'configuration092Issue181:') asString)}.
+    source: (self class sourceCodeAt: #'configuration092Issue181:') asString).
+  (MCMethodDefinition
+    className: className asString
+    classIsMeta: false
+    selector: 'configuration093Issue185:'
+    category: 'cat'
+    timeStamp: ''
+    source: (self class sourceCodeAt: #'configuration093Issue185:') asString).
+  (MCMethodDefinition
+    className: className asString
+    classIsMeta: false
+    selector: 'configuration094Issue185:'
+    category: 'cat'
+    timeStamp: ''
+    source: (self class sourceCodeAt: #'configuration094Issue185:') asString).
+  (MCMethodDefinition
+    className: className asString
+    classIsMeta: false
+    selector: 'configuration095Issue185:'
+    category: 'cat'
+    timeStamp: ''
+    source: (self class sourceCodeAt: #'configuration095Issue185:') asString).
+  (MCMethodDefinition
+    className: className asString
+    classIsMeta: false
+    selector: 'configuration096Issue185:'
+    category: 'cat'
+    timeStamp: ''
+    source: (self class sourceCodeAt: #'configuration096Issue185:') asString).
+  (MCMethodDefinition
+    className: className asString
+    classIsMeta: false
+    selector: 'configuration097Issue185:'
+    category: 'cat'
+    timeStamp: ''
+    source: (self class sourceCodeAt: #'configuration097Issue185:') asString)}.
   configurationRepository
     basicStoreVersion:
       (MCVersion new
