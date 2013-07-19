@@ -181,7 +181,7 @@ baseline10beta321: spec
         yourself.
       spec
         package: 'Metacello-Platform'
-          with: [ spec file: 'Metacello-Platform.pharo20' ];
+          with: [ spec file: 'Metacello-Platform.pharo30' ];
         package: 'Metacello-TestsCommonMC'
           with: [ spec file: 'Metacello-TestsCommonMC.pharo20' ];
         yourself ].
