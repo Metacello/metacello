@@ -1,7 +1,9 @@
 loading
 ensureConfigurationLoaded: vrsn ensured: ensured
-	vrsn blessing == #development
-		ifTrue: [ 
-			ensured ~~ #latest
-				ifTrue: [ ^ MetacelloScriptEnsureProjectLoadedForDevelopment signal ] ].
-	^ false
+  "answer true if the configuration should be reloaded"
+
+  vrsn blessing == #'development'
+    ifTrue: [ 
+      ensured ~~ #'latest'
+        ifTrue: [ ^ MetacelloScriptEnsureProjectLoadedForDevelopment signal ] ].
+  ^ false

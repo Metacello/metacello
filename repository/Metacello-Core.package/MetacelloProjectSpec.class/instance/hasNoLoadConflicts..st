@@ -6,5 +6,5 @@ hasNoLoadConflicts: aMetacelloProjectSpec
   ^ self className = aMetacelloProjectSpec className
     and: [ 
       ((self versionString == nil or: [ aMetacelloProjectSpec versionString == nil ])
-        or: [ self versionString = aMetacelloProjectSpec versionString ])
+        or: [ self compareVersionsEqual: aMetacelloProjectSpec ])
         and: [ self operator == aMetacelloProjectSpec operator ] ]

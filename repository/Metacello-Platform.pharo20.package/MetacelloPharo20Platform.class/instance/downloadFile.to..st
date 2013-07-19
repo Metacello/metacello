@@ -2,10 +2,12 @@ github support
 downloadFile: url to: outputFileName
     "download from <url> into <outputFileName>"
 
-    | in out err proc archive zipfile |
+    | in out err proc archive zipfile errorFileName|
+    "Make a unique name for the error log and ensure that we can write the files"
+    errorFileName := self downloadErrorFileNameFor: outputFileName.
     in := (' -L ' , url) readStream.
     out := FileStream forceNewFileNamed: outputFileName.
-    err := FileStream forceNewFileNamed: '/tmp/curl.err'.
+    err := FileStream forceNewFileNamed: errorFileName.
     proc := OSProcess thisOSProcess
         forkJob: '/usr/bin/curl'
         arguments:

@@ -1,0 +1,14 @@
+{
+	"category" : "Metacello-TestsMCA",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MetacelloConfigCoreAPITestCase",
+	"pools" : [
+		 ],
+	"super" : "MetacelloConfigAbstractAPITestCase",
+	"type" : "normal" }

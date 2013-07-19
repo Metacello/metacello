@@ -246,7 +246,7 @@ thrown when you attempt to load a project that has a dependency upon a
 different version of Seaside30. The error is thrown before any packages 
 are actually loaded.
 
-### Bypassing locks
+### Enforcing locks
 
 Let's say that you want to load the SeasideRest project even though it may
 require a version of Seaside30 that is later than the version that you have
