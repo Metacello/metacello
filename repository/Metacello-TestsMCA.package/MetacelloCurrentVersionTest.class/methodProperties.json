@@ -2,11 +2,11 @@
 	"class" : {
 		 },
 	"instance" : {
-		"assertProject:expectedVersionString:expectedFidelity:" : "dkh 7/20/2012 15:23",
+		"assertProject:expectedVersionString:expectedFidelity:" : "dkh 07/19/2013 23:19",
 		"defaultTimeout" : "dkh 6/12/2012 15:41:23.319",
 		"setUp" : "dkh 6/12/2012 15:41:23.319",
 		"tearDownPackages:" : "dkh 6/12/2012 15:41:23.319",
-		"testCompareCurrentVersion" : "dkh 7/23/2012 18:50",
+		"testCompareCurrentVersion" : "dkh 07/19/2013 22:51",
 		"testFeaux40Loaded" : "dkh 6/12/2012 15:41:23.319",
 		"testFoe40AllLoaded" : "dkh 6/12/2012 15:41:23.319",
 		"testFoe40AllLoadedDefaultPackageNamesToLoad" : "dkh 6/12/2012 15:41:23.319",
@@ -21,7 +21,7 @@
 		"testFoo40Feaux40Loaded" : "dkh 6/12/2012 15:41:23.319",
 		"testFoo40Loaded" : "dkh 6/12/2012 15:41:23.319",
 		"testFoo40Loaded1Package1EarlierPackage" : "dkh 6/12/2012 15:41:23.319",
-		"testFoo40Loaded1Package1LaterPackage" : "dkh 6/12/2012 15:41:23.319",
+		"testFoo40Loaded1Package1LaterPackage" : "dkh 07/19/2013 23:17",
 		"testFoo40Loaded2Packages" : "dkh 6/12/2012 15:41:23.319",
 		"testFoo40LoadedEarlierPackage" : "dkh 6/12/2012 15:41:23.319",
 		"testFoo40LoadedLaterPackage" : "dkh 6/12/2012 15:41:23.319",

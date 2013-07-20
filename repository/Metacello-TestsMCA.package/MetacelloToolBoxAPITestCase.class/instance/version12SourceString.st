@@ -1,6 +1,6 @@
 private
 version12SourceString
-    ^ 'version12: spec
+  ^ 'version12: spec
 	<version: ''1.2'' imports: #(''1.2-baseline'' )>
 
 	spec for: #''common'' do: [
@@ -21,5 +21,5 @@ version12SourceString
 			spec package: ''GoferBeau'' with: ''GoferBeau-dkh.55''. ]. ].
 
 	spec for: #''other'' do: [
-		spec package: ''GoferBar'' with: ''GoferBar-lr.0''. ].
+		spec package: ''GoferBar'' with: ''GoferBar-lr.1''. ].
 '
