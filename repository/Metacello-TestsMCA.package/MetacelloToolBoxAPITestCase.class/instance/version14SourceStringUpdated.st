@@ -1,6 +1,6 @@
 private
 version14SourceStringUpdated
-    ^ 'version14: spec
+  ^ 'version14: spec
 	<version: ''1.4'' imports: #(''1.4-baseline'' )>
 
 	spec for: #''common'' do: [
@@ -9,7 +9,7 @@ version14SourceStringUpdated
 
 	spec for: #''platform'' do: [
 		spec project: ''MetacelloTestConfigurationOfFoo'' with: ''4.0''.
-		spec package: ''GoferBar'' with: ''GoferBar-lr.0''. ].
+		spec package: ''GoferBar'' with: ''GoferBar-lr.1''. ].
 
 	spec for: #''platform1.x'' do: [
 		spec project: ''MetacelloTestConfigurationOfFoo'' with: ''4.0''.
