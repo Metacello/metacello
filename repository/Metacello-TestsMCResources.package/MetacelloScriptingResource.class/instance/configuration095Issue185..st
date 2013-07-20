@@ -11,6 +11,6 @@ configuration095Issue185: spec
               spec
                 repository:
                   'github://dalehenrich/external:'
-                    , MetacelloScriptingResource externalCustomIssue185SHA_2
+                    , MetacelloScriptingResource externalCustomIssue185SHA2
                     , '/repository' ];
         import: 'External' ]
