@@ -2,7 +2,6 @@
 	"category" : "Metacello-TestsMC-Gofer",
 	"classinstvars" : [
 		 ],
-	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
@@ -12,5 +11,4 @@
 	"pools" : [
 		 ],
 	"super" : "GoferCleanup",
-	"traitcomposition" : "{}",
 	"type" : "normal" }
