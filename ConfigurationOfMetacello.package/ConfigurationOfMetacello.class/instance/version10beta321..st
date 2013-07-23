@@ -117,7 +117,7 @@ version10beta321: spec
     do: [ 
       spec
         package: 'Metacello-Platform'
-          with: 'Metacello-Platform.pharo30-ChristopheDemarey.1';
+          with: 'Metacello-Platform.pharo30-ChristopheDemarey.2';
         package: 'Metacello-TestsCommonMC'
           with: 'Metacello-TestsCommonMC.pharo20-dkh.3' ].
   spec
