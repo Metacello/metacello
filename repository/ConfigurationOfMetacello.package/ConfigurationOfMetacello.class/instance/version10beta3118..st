@@ -1,11 +1,11 @@
 versions
 version10beta3118: spec
-  <version: '1.0-beta.31.1.7' imports: #('1.0-beta.31.1.7-baseline')>
+  <version: '1.0-beta.31.1.8' imports: #('1.0-beta.31.1.7-baseline')>
   spec
     for: #'common'
     do: [ 
       spec blessing: #'release'.
-      spec description: '1.0-beta.31.1.7 (dkh.774):
+      spec description: '1.0-beta.31.1.8 (dkh.789):
 - fix Issue #188: Problems using <version:imports:> for structural reasons
   https://github.com/dalehenrich/metacello-work/issues/188'.
       spec author: 'dkh'.
