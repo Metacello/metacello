@@ -10,9 +10,11 @@ snap off a release for GLASS 1.0-beta.9
 - unimplemented message being sent in MetacelloProjectSpec>>asProjectRegistration
   https://github.com/dalehenrich/metacello-work/issues/139
 - squeak4.3.x and squeak4.4.x added as platform attributes
-  https://github.com/dalehenrich/metacello-work/issues/140'.
+  https://github.com/dalehenrich/metacello-work/issues/140
+- add squeak4.5.x as platform attribute
+- minor hack to get Metacello Preview to bootstrap (again) on Squeak4.4 and Squeak4.5'.
             spec author: 'dkh'.
-            spec timestamp: '2/28/2013 09:57'.
+            spec timestamp: '5/5/2013 14:46'.
             spec postLoadDoIt: #'metacelloPrimeRegistry'.
             spec
                 project: 'FileTree' with: '1.0.1';
@@ -53,7 +55,7 @@ snap off a release for GLASS 1.0-beta.9
     spec for: #'pharo1.2.x' do: [ spec package: 'Metacello-Issue3758' with: 'Metacello-Issue3758-dkh.2' ].
     spec for: #'pharo1.3.x' do: [ spec package: 'Metacello-Issue3758' with: 'Metacello-Issue3758-dkh.2' ].
     spec for: #'pharo2.x' do: [ spec package: 'Metacello-Platform' with: 'Metacello-Platform.pharo20-dkh.30' ].
-    spec for: #'squeak' do: [ spec package: 'Metacello-Platform' with: 'Metacello-Platform.squeak-dkh.16' ].
+    spec for: #'squeak' do: [ spec package: 'Metacello-Platform' with: 'Metacello-Platform.squeak-dkh.21' ].
     spec
         for: #'gemstone'
         do: [ 
