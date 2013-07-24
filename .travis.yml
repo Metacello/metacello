@@ -5,8 +5,8 @@ env:
    - ST=Pharo-2.0 LoadList="'TravisCI_3'"
    - ST=GemStone-3.1.0.4 LoadList="'TravisCI_1' 'TravisCI_2'"
    - ST=GemStone-3.1.0.4 LoadList="'TravisCI_3'"
-   - ST=Squeak-4.5 LoadList="'TravisCI_1' 'TravisCI_2'"
-   - ST=Squeak-4.5 LoadList="'TravisCI_3'"
+#   - ST=Squeak-4.5 LoadList="'TravisCI_1' 'TravisCI_2'" # until Issue #189 fixed: https://github.com/dalehenrich/metacello-work/issues/189
+#   - ST=Squeak-4.5 LoadList="'TravisCI_3'" # until Issue #189 fixed: https://github.com/dalehenrich/metacello-work/issues/189
 
    - ST=PharoCore-1.1 LoadList="'TravisCI_1' 'TravisCI_2'"
    - ST=PharoCore-1.1 LoadList="'TravisCI_3'"
