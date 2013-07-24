@@ -1,7 +1,7 @@
 printing
 printOn: aStream
     | label vs |
-    self blessing ~~ #'broken'
+    (#(structural broken) includes: self blessing) not
         ifTrue: [ 
             (vs := self versionStatus) == #'somethingLoaded'
                 ifTrue: [ aStream nextPutAll: '<>' ].
