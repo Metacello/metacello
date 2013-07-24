@@ -2,4 +2,5 @@
 	"class" : {
 		 },
 	"instance" : {
-		"testWarningDuringLoad" : "dkh 07/24/2013 15:57" } }
+		"doSilently" : "dkh 07/24/2013 16:08",
+		"testWarningDuringLoad" : "dkh 07/24/2013 16:10" } }
