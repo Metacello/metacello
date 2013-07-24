@@ -2,7 +2,6 @@
 	"category" : "Metacello-TestsMC-Configurations",
 	"classinstvars" : [
 		 ],
-	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
@@ -12,5 +11,4 @@
 	"pools" : [
 		 ],
 	"super" : "MetacelloBaseConfiguration",
-	"traitcomposition" : "{}",
 	"type" : "normal" }

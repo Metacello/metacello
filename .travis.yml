@@ -9,7 +9,7 @@ env:
 #   - ST=Pharo-3.0 # not expected to work
    - ST=Squeak-4.3
    - ST=Squeak-4.4
-   - ST=Squeak-4.5
+#   - ST=Squeak-4.5 # until Issue #189 fixed: https://github.com/dalehenrich/metacello-work/issues/189
 #  Preview loaded into GemStone (needed for travis support), not testing 1.0-beta.31.1.*
 
 install:
