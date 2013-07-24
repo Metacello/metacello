@@ -525,6 +525,7 @@ is rooted in the projects HOME directory.
 ####onUpgrade:
 ####onDowngrade:
 ####onConflict:
+####onWarning:
 ####silently
 ### Metacello Project Registry
 ### Classes
