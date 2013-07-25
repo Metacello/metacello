@@ -246,10 +246,25 @@ Metacello new
 
 produces:
 
-
 ```
 ConfigurationOfSample stable from github://dalehenrich/sample:configuration
 ```
+
+You can obtain a list of `locked` projects in the registry:
+
+```Smalltalk
+Metacello registry
+  locked.
+```
+
+To obtain a list of `locked` projects loaded in the image:
+
+```Smalltalk
+Metacello image
+  locked.
+```
+
+The locked command returns a list of locked project specs.
 
 #### `lock` Notes
 
@@ -510,10 +525,13 @@ is rooted in the projects HOME directory.
 
 * blueplane:
 * croquet:
+* filetreeDirectory:
 * gemsource:
+* githubUser:project:commitish:path:
 * impara:
 * renggli:
 * saltypickle:
+* smalltalkhubUser:project:
 * squeakfoundation:
 * squeaksource3:
 * squeaksource:
