@@ -3,4 +3,6 @@
 		 },
 	"instance" : {
 		"doSilently" : "dkh 07/24/2013 16:08",
-		"testWarningDuringLoad" : "dkh 07/24/2013 16:10" } }
+		"setUpRepositories" : "dkh 07/24/2013 18:28",
+		"tearDownPackageList" : "dkh 07/24/2013 18:28",
+		"testWarningDuringLoad" : "dkh 07/24/2013 18:33" } }
