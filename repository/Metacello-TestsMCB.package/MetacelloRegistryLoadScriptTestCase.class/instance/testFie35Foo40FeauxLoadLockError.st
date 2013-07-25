@@ -10,6 +10,7 @@ testFie35Foo40FeauxLoadLockError
     className: 'MetacelloTestConfigurationOfProjectFie';
     version: '3.5';
     repository: 'dictionary://Metacello_Configuration_Test_Repository';
+    onWarning: [ :ex | self assert: false	"shouldn't trigger a Warning" ];
     load: 'Foo'.
   self validateBlockFie35FooLoad value.
   self

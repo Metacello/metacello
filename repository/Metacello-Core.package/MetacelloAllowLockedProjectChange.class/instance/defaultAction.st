@@ -1,7 +1,8 @@
 exception handling
 defaultAction
-  ^ Warning
+  Warning
     signal:
       'Attempt to perform' , self operationString printString
         , ' on a locked project: '
-        , self existingProjectRegistration printString
+        , self existingProjectRegistration printString.
+  ^ self disallow

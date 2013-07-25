@@ -1,5 +1,5 @@
 tests
-testSymbolicLockNLockedProjectError1
+testSymbolicLockNLockedProjectWarning1
   Metacello new
     configuration: 'ExternalX';
     version: #'stable';

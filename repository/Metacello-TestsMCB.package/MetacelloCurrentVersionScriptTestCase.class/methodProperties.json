@@ -5,7 +5,7 @@
 		"setUpRepositories" : "dkh 6/12/2012 15:41:23.319",
 		"tearDownPackageList" : "dkh 07/14/2013 11:31",
 		"tearDownRepositories" : "dkh 6/12/2012 15:41:23.319",
-		"testBleedingEdgeLocking" : "dkh 07/25/2013 11:36",
+		"testBleedingEdgeLocking" : "dkh 07/25/2013 11:46",
 		"testCompareCurrentVersion" : "dkh 7/23/2012 18:55",
 		"testFeaux40Loaded" : "dkh 6/15/2012 05:30",
 		"testFoe40LoadedFoo50Loaded" : "dkh 6/15/2012 05:30" } }
