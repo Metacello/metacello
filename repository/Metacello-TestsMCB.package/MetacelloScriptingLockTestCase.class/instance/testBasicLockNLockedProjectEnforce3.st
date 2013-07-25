@@ -1,5 +1,5 @@
 tests
-testBasicLockNLockedProjectEnforce1
+testBasicLockNLockedProjectEnforce3
   Metacello new
     configuration: 'ExternalX';
     version: '0.9.0';
@@ -9,6 +9,7 @@ testBasicLockNLockedProjectEnforce1
     configuration: 'LockConfigurations';
     version: '1.1.0';
     repository: 'dictionary://Metacello_Config_Test_Repository';
+    onUpgrade: [ :ex :existing :new | ex allow	"trigger lock" ];
     onLock: [ :ex :existing :new | 
           existing baseName = 'ExternalX'
             ifTrue: [ 

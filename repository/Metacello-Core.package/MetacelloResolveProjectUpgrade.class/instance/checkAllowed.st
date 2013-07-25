@@ -7,4 +7,5 @@ checkAllowed
           (MetacelloAllowLockedProjectChange new
             operationString: self operationString;
             existingProjectRegistration: self existingProjectRegistration;
+            newProjectRegistration: self newProjectRegistration;
             signal) ]

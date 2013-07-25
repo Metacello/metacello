@@ -1,5 +1,5 @@
 tests
-testBasicLockNLockedProjectEnforce1
+testBasicLockNLockedProjectBreak1
   Metacello new
     configuration: 'ExternalX';
     version: '0.9.0';
@@ -9,16 +9,11 @@ testBasicLockNLockedProjectEnforce1
     configuration: 'LockConfigurations';
     version: '1.1.0';
     repository: 'dictionary://Metacello_Config_Test_Repository';
-    onLock: [ :ex :existing :new | 
-          existing baseName = 'ExternalX'
-            ifTrue: [ 
-              "use locked version"
-              ex disallow ].
-          ex pass ];
+    onLock: [ :ex | ex allow	"break lock" ];
     load.
   self
     validateExpectedConfigurationClassName: 'ConfigurationOfExternalX'
-    expectedConfigurationVersion: '0.9.0'
+    expectedConfigurationVersion: '0.9.1'
     expectedConfigurationRepository:
       'dictionary://Metacello_Config_Test_Repository'
     expectedBaselineClassName: 'BaselineOfExternalX'
