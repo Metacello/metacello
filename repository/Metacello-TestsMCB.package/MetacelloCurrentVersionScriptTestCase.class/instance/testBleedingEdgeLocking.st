@@ -14,7 +14,7 @@ testBleedingEdgeLocking
         version: '5.0';
         repository: 'dictionary://Metacello_Configuration_Test_Repository';
         load: 'Foo' ]
-    raise: MetacelloLockedProjectError.
+    raise: Warning.
   Metacello new
     project: 'Fan';
     className: 'MetacelloTestConfigurationOfFan';

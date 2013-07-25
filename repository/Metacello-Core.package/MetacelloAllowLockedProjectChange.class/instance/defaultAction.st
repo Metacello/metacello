@@ -1,6 +1,6 @@
 exception handling
 defaultAction
-  ^ MetacelloLockedProjectError
+  ^ Warning
     signal:
       'Attempt to perform' , self operationString printString
         , ' on a locked project: '
