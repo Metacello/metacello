@@ -17,7 +17,7 @@ Smalltalk
   put: #( ${LoadList} ).
 EOF
 
-./build.sh -i $ST -m -f "$PROJECT_HOME/tests/travisPre.st" -f "$PROJECT_HOME/tests/travisCI.st" -o travisCI
+./build.sh -i $ST -m -f "$PROJECT_HOME/tests/travisPre.st" -f "$PROJECT_HOME/tests/$TRAVIS_SCRIPT" -o travisCI
 if [[ $? != 0 ]] ; then 
   echo "ERROR: $(basename $0)"
   cd "${BUILD_PATH}/travisCI/"
