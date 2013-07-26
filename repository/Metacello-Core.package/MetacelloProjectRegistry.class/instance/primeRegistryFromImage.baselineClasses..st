@@ -10,12 +10,17 @@ primeRegistryFromImage: configurationClasses baselineClasses: baselineClasses
           cl project currentVersion
             ifNotNil: [ :version | 
               [ 
-              | projectSpec |
+              | projectSpec repos projectPackage project |
+              project := version project.
+              projectPackage := project projectPackage.
+              repos := nil.
+              projectPackage ~~ nil
+                ifTrue: [ repos := projectPackage repositories copy ].
               projectSpec := (version project projectSpec
                 name: (MetacelloScriptEngine baseNameOf: cl name asString);
                 className: cl name asString;
                 versionString: version versionString;
-                repositories: version project projectPackage repositories copy;
+                repositories: repos;
                 yourself) asConfigurationProjectSpec.
               projectSpec asProjectRegistration
                 loadedInImage: true;

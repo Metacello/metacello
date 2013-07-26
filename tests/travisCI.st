@@ -40,7 +40,7 @@ MetacelloPlatform current authorName: 'testMonkey'. "These tests save code ... n
   ifTrue: [ Deprecation raiseWarning: true].
 
 Transcript cr; show: '---Start running tests...'.
-
+(Smalltalk at: #MetacelloScriptingRegistryTestCase) debug: #'testPrimeRegistryFromImage1'.
 [
 TravisCIHarness
   value: #( 'BaselineOfMetacello' )
