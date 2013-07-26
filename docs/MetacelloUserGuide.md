@@ -18,7 +18,7 @@ project using Metacello:
 ```Smalltalk
 Gofer new
   package: 'ConfigurationOfSeaside30';
-  squeaksource: 'MetacelloRepository';
+  ss3: 'MetaRepoForPharo20';
   load.
 ((Smalltalk at: #ConfigurationOfSeaside30) version: #stable) load.
 ```
@@ -54,19 +54,19 @@ of the same expression with the (current) default values explicitly specified:
 Metacello new
   configuration: 'Seaside30';
   version: #stable;
-  squeaksource: 'MetacelloRepository';
+  ss3: 'MetaRepoForPharo20';
   load.
 ```
 
 The `version` attribute can be any legal [version number][10].
-`squeaksource` is a [repository shortcut][4]. You can also specify the
+`ss3:` is a [repository shortcut][4]. You can also specify the
 full [repository description][3] as follows:
 
 ```Smalltalk
 Metacello new
   configuration: 'Seaside30';
   version: #stable;
-  repository: 'http://www.squeaksource.com/MetacelloRepository';
+  repository: 'http://ss3.gemtalksystems.com/ss/MetaRepoForPharo20';
   load.
 ```
 
@@ -111,13 +111,13 @@ Monticello repositories. For example:
 ```Smalltalk
 Metacello new
   configuration: [:spec | spec name beginsWith: 'Seaside'];
-  squeaksource: 'MetacelloRepository';
+  ss3: 'MetaRepoForPharo20';
   list.
 ```
 
 lists the configurations whose names (sans the `ConfigurationOf`) begin
-with `Seaside` in the `MetacelloRepositry` in the
-[Squeaksource](http://www.squeaksource.com) repostory.
+with `Seaside` in the `MetaRepoForPharo20` in the
+[ss3](http://ss3.gemtalksystems.com/) repostory.
 
 ## Getting
 
@@ -152,7 +152,7 @@ You may download the configuration from a different repository:
 ```Smalltalk
 Metacello image
   configuration: 'Seaside30';
-  squeaksource: 'Seaside30;
+  smalltalkhubUser: 'Seaside' project: 'Seaside';
   get.
 ```
 
@@ -241,36 +241,59 @@ Metacello image
   lock.
 ```
 
-After a project is locked an error (**MetacelloLockedProjectError**) is 
-thrown when you attempt to load a project that has a dependency upon a 
-different version of Seaside30. The error is thrown before any packages 
-are actually loaded.
+After a project is locked Metacello will always use the locked project
+specification (version and repository) for resolving packages and 
+dependent projects.
 
-### Enforcing locks
+If a different version or repository is specified during a load, a
+Warning is raised notifying you that the locked project specification
+will be used.
 
-Let's say that you want to load the SeasideRest project even though it may
-require a version of Seaside30 that is later than the version that you have
-locked. To do that you need to suppress the upgrade of the Seaside30
-project during the load of the SeasideRest project and you can do that
-with the use of the `onUpgrade:` message:
+If you don't want an interactive Warning to be raised during your load,
+you can use `onWarning:` to log and resume the Warning:
 
 ```Smalltalk
 Metacello new
   configuration: 'SeasideRest';
   version: #stable;
-  onUpgrade: [:ex :existing :new | 
-    existing baseName = 'Seaside30'
-      ifTrue: [ ex disallow ].
+  onWarning: [:ex | 
+    Transcript cr; show: 'Warning: ', ex description.
+    ex resume ];
+  load.
+```
+
+If you want to track the use of locks explicitly you can use `onLock:`
+which is only triggered when a locked project is involved:
+
+```Smalltalk
+Metacello new
+  configuration: 'SeasideRest';
+  version: #stable;
+  onLock: [:ex :existing :new | 
+    Transcript cr; show: 'Locked project: ', existing projectName printString.
     ex pass ];
   load.
 ```
 
-The `onUpgrade:` block tells Metacello to disallow the upgrade of any
-project whose `baseName` is `Seaside30` and to continue with the load.
-Of course if there are any explicit dependencies between SeasideRest and
-the later version of Seaside30 (missing classes, etc.) then you may very
-well get load errors or errors while using the SeasideRest, but that's
-the price you pay for not upgrading.
+### Bypassing locks
+
+Let's say that when you load the SeasideRest project you have decided
+that in this particular case you would like to bypass the lock and let
+the version of Seaside specified by the SeasideRest project to be loaded.
+
+We'll use `onLock:` to `allow` the new version of the Seaside project to
+be loaded:
+
+```Smalltalk
+Metacello new
+  configuration: 'SeasideRest';
+  version: #stable;
+  onLock: [:ex :existing :new | 
+    existing baseName = 'Seaside30'
+      ifTrue: [ ex allow ].
+    ex pass ];
+  load.
+```
 
 ### Upgrading a locked project
 
@@ -287,6 +310,145 @@ Metacello image
 
 The newly loaded of the project will continue to be locked.
 
+## Switching Project Repositories
+
+If you have loaded a project directly from GitHub, say
+the Zinc repository:
+
+```Smalltalk
+Metacello new
+  baseline: 'Zinc';
+  repository: 'github://glassdb/zinc:gemstone3.1/repository';
+  get.
+Metacello new
+  baseline: 'Zinc';
+  repository: 'github://glassdb/zinc:gemstone3.1/repository';
+  load: 'Tests'
+```
+
+The ``github://` repository is read only. If you want to save new versions 
+of packages to the repository, you must clone the GitHub repository to your
+local disk:
+
+```Shell
+cd /opt/git
+git clone https://github.com/glassdb/zinc.git
+cd zinc
+git checkout gemstone3.1
+```
+
+Then load Zinc from the local git repository using a
+`filetree://` repository:
+
+```Smalltalk
+Metacello new
+  baseline: 'Zinc';
+  repository: 'filetree:///opt/git/zinc/repository';
+  get.
+Metacello new
+  baseline: 'Zinc';
+  repository: 'filetree:///opt/git/zinc/repository';
+  onConflict: [:ex | ex allow ];
+  load: 'Tests'
+```
+
+Note that we are using an `onConflict:` block.
+
+Metacello recognizes that you are loading the project
+from a different repository than the one originally used and that is 
+considered an error. Metacello signals a **MetacelloConflictingProjectError**.
+
+To avoid the **MetacelloConflictingProjectError** you use the
+`onConflict:` block to `allow` the error and Metacello will go ahead an
+load the project from a different repository.
+
+## Project upgrades initiated by dependent proejcts
+
+If we return to the earlier example where we have loaded Seaside 3.0.5
+into our image:
+
+```Smalltalk
+Metacello image
+  configuration: 'Seaside30';
+  version: '3.0.5';
+  load.
+```
+
+and then attempt to load SeasideRest which requires Seaside 3.0.7:
+
+```Smalltalk
+Metacello image
+  configuration: 'SeasideRest';
+  version: #'stable';
+  load.
+```
+
+In the absence of locks, Metacello will silently upgrade the Seaside
+project to Seaside 3.0.7. If you'd like to explicitly track Seaside
+upgrades, you can use `onUpgrade:`:
+
+```Smalltalk
+Metacello image
+  configuration: 'SeasideRest';
+  version: #'stable';
+  onUpgrade: [:ex :existing :new |
+    existing baseName = 'Seaside30'
+      ifTrue: [ 
+        Transcript cr; show: 'Seaside30 upgraded to: ', new versionString ].
+    ex pass ].
+  load.
+```
+
+If you would like to explicitly prevent the upgrade (without using a
+lock) you can do the following:
+
+```Smalltalk
+Metacello image
+  configuration: 'SeasideRest';
+  version: #'stable';
+  onUpgrade: [:ex :existing :new |
+    existing baseName = 'Seaside30'
+      ifTrue: [ ex disallow ].
+    ex pass ].
+  load.
+```
+
+If we assume that you have already loaded Seaside 3.0.9
+into our image:
+
+```Smalltalk
+Metacello image
+  configuration: 'Seaside30';
+  version: '3.0.9';
+  load.
+```
+
+and then attempt to load SeasideRest which requires version Seaside 3.0.7:
+
+```Smalltalk
+Metacello image
+  configuration: 'SeasideRest';
+  version: #'stable';
+  load.
+```
+Metacello will silently ignore the downgrade request for Seaside and
+leave Seaside 3.0.9 installed in the image.
+
+If you want to have Seaside 3.0.9 downgraded then you used the `onDowngrade:` block:
+
+```Smalltalk
+Metacello image
+  configuration: 'SeasideRest';
+  version: #'stable';
+  onDowngrade: [:ex :existing :new |
+    existing baseName = 'Seaside30'
+      ifTrue: [ ex allow ].
+    ex pass ].
+  load.
+```
+
+and Seaside 3.0.7 will be loaded.
+
 [1]: MetacelloScriptingAPI.md
 [2]: http://www.lukas-renggli.ch/blog/gofer
 [3]: MetacelloScriptingAPI.md#repository-descriptions
@@ -299,3 +461,4 @@ The newly loaded of the project will continue to be locked.
 [10]: MetacelloScriptingAPI.md#metacello-version-numbers
 [11]: #get-a-new-version-of-the-configuration
 [12]: #load-the-new-version
+

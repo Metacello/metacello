@@ -1,5 +1,5 @@
 tests
-testSymbolicLockNLockedProjectError1
+testSymbolicLockNLockedProjectWarning1
   Metacello new
     configuration: 'ExternalX';
     version: #'stable';
@@ -12,4 +12,4 @@ testSymbolicLockNLockedProjectError1
         version: '1.1.0';
         repository: 'dictionary://Metacello_Config_Test_Repository';
         load ]
-    raise: MetacelloLockedProjectError
+    raise: Warning

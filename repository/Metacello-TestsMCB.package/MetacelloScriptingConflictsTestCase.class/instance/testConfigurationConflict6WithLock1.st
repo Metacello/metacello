@@ -1,5 +1,5 @@
 tests
-testConfigurationConflict6WithLock
+testConfigurationConflict6WithLock1
   | newVersion existingVersion baseName |
   self testFileTreeLoadConfigurationVersions.
   Metacello new
