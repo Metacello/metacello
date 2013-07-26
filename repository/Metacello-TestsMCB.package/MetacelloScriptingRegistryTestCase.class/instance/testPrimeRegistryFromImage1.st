@@ -4,6 +4,7 @@ testPrimeRegistryFromImage1
 	https://github.com/dalehenrich/metacello-work/issues/197#issuecomment-21625223"
 
   | rgstry specs configurationRegistrations baselineRegistrations |
+  [ 
   Metacello new
     configuration: 'External';
     version: '0.9.0';
@@ -20,4 +21,6 @@ testPrimeRegistryFromImage1
   rgstry
     primeRegistryFromImage: {(Smalltalk at: #'ConfigurationOfExternal')}
     baselineClasses: {(Smalltalk at: #'BaselineOfExternal')}.
-  self validateRegistrations: rgstry
+  self validateRegistrations: rgstry ]
+    on: Error
+    do: [ :ex | self halt ]
