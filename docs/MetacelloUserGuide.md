@@ -461,3 +461,4 @@ and Seaside 3.0.7 will be loaded.
 [10]: MetacelloScriptingAPI.md#metacello-version-numbers
 [11]: #get-a-new-version-of-the-configuration
 [12]: #load-the-new-version
+
