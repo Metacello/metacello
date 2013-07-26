@@ -42,10 +42,10 @@ Metacello new
   smalltalkhubUser: 'Seaside' project: 'Seaside30';
   get.
 
-Gofer new
+false ifTrue: [ Gofer new
   package: 'ConfigurationOfGrease';
   url: 'http://www.squeaksource.com/MetacelloRepository';
-  load.
+  load ].
 
 Transcript cr; show: '---load'.
 Metacello registry
