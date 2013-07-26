@@ -540,9 +540,10 @@ is rooted in the projects HOME directory.
 ### Options
 ####cacheRepository:
 ####ignoreImage
-####onUpgrade:
-####onDowngrade:
 ####onConflict:
+####onDowngrade:
+####onLock:
+####onUpgrade:
 ####onWarning:
 ####silently
 ### Metacello Project Registry
