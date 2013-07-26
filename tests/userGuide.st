@@ -19,14 +19,16 @@ Metacello new
   repository: 'filetree://', gitPath, '/metacello-work/repository';
   get.
 
+[
 Metacello new
 	baseline: 'Metacello';
   repository: 'filetree://', gitPath, '/metacello-work/repository';
-  onWarning: [:ex |
-    Transcript cr; show: 'WARNING: ', ex description.
-    ex resume ];
   onConflict: [:ex | ex allow ];
-  load: (Smalltalk at: #'TRAVIS_LOAD_LIST').
+  load: (Smalltalk at: #'TRAVIS_LOAD_LIST') ] 
+    on: Warning 
+    do: [:ex | 
+      Transcript cr; show: 'WARNING: ', ex description.
+      ex resume ].
 
 Transcript cr; show: '---Start running documentation script..'.
 
