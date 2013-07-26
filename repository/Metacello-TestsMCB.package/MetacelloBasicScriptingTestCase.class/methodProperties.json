@@ -2,5 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"setUpRepositoryContents" : "dkh 7/16/2012 16:44",
-		"tearDownPackageList" : "dkh 07/24/2013 16:11" } }
+		"repositoryConfigurationContents" : "dkh 07/26/2013 09:56",
+		"repositoryPackageContents" : "dkh 07/26/2013 09:53",
+		"setUpRepositoryContents" : "dkh 07/26/2013 09:54",
+		"tearDownPackageList" : "dkh 07/26/2013 09:56" } }

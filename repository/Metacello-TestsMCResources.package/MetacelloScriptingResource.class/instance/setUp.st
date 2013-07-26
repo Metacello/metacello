@@ -6,10 +6,12 @@ setUp
   self
     setUpRepositories;
     setUpExternalCore;
+    setUpExternalCoreX;
     setUpSampleCore;
     setUpBaselineOfExternalX;
     setUpBaselineOfExternalXX;
     setUpBaselineOfExternalXXX;
+    setUpConfigurationOfExternal;
     setUpConfigurationOfExternalX;
     setUpConfigurationOfExternalXX;
     setUpConfigurationOfExternalXXX;

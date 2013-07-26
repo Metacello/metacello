@@ -1,33 +1,33 @@
-external core
-setUpExternalCore
+external configurations
+setUpConfigurationOfExternal
   "self reset"
 
   | reference className definitionArray versionInfo |
-  reference := GoferVersionReference name: 'External-Core-dkh.1'.
-  className := #'ExternalCore'.
+  reference := GoferVersionReference name: 'ConfigurationOfExternal-dkh.1'.
+  className := #'ConfigurationOfExternal'.
   definitionArray := {(MCOrganizationDefinition
     categories: (Array with: reference packageName asSymbol)).
   (MCClassDefinition
     name: className
-    superclassName: #'Object'
+    superclassName: #'ConfigurationOf'
     category: reference packageName
     instVarNames: #()
     comment: '').
   (MCMethodDefinition
     className: className asString
-    classIsMeta: true
-    selector: 'externalAuthorName'
+    classIsMeta: false
+    selector: 'versionOfExternal090:'
     category: 'cat'
     timeStamp: ''
-    source: (self class sourceCodeAt: #'externalAuthorName') asString).
+    source: (self class sourceCodeAt: #'versionOfExternal090:') asString).
   (MCMethodDefinition
-    className: 'Object'
-    classIsMeta: true
-    selector: 'isExternal'
-    category: '*external-corex'
+    className: className asString
+    classIsMeta: false
+    selector: 'versionOfExternal091:'
+    category: 'cat'
     timeStamp: ''
-    source: (self class sourceCodeAt: #'isExternal') asString)}.
-  externalRepository
+    source: (self class sourceCodeAt: #'versionOfExternal091:') asString)}.
+  configurationRepository
     basicStoreVersion:
       (MCVersion new
         setPackage: (MetacelloTestsMCPackage new name: reference packageName)

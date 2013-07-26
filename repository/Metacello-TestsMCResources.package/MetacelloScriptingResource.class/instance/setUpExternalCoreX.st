@@ -1,10 +1,10 @@
 external core
-setUpExternalCore
+setUpExternalCoreX
   "self reset"
 
   | reference className definitionArray versionInfo |
-  reference := GoferVersionReference name: 'External-Core-dkh.1'.
-  className := #'ExternalCore'.
+  reference := GoferVersionReference name: 'External-CoreX-dkh.1'.
+  className := #'ExternalCoreX'.
   definitionArray := {(MCOrganizationDefinition
     categories: (Array with: reference packageName asSymbol)).
   (MCClassDefinition
