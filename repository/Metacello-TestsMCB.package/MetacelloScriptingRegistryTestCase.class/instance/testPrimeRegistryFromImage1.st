@@ -19,4 +19,3 @@ testPrimeRegistryFromImage1
   rgstry
     primeRegistryFromImage: {(Smalltalk at: #'ConfigurationOfExternal')}
     baselineClasses: {(Smalltalk at: #'BaselineOfExternal')}.
-  self halt
