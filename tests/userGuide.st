@@ -32,26 +32,14 @@ Metacello new
 
 Transcript cr; show: '---Start running documentation script..'.
 
-Transcript cr; show: '---list'.
-Metacello new
-  configuration: [:spec | spec name beginsWith: 'Seaside'];
-  ss3: 'MetaRepoForPharo20';
-  list.
-
 Transcript cr; show: '---get'.
 Metacello new
   configuration: 'Seaside30';
-  ss3: 'MetaRepoForPharo20';
-  get.
-
-Transcript cr; show: '---lock'.
-Metacello new
-  configuration: 'Seaside30';
-  version: #stable;
   smalltalkhubUser: 'Seaside' project: 'Seaside30';
-  lock.
+  get.
 
 Transcript cr; show: '---load'.
 Metacello registry
   configuration: 'Seaside30';
+  version: #stable;
   load.
