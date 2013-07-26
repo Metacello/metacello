@@ -1,6 +1,6 @@
 "Load and run tests to be performed by TravisCI"
 | gitCache gitPath |
-Transcript cr; show: 'travis---->travisCI.st'.
+Transcript cr; show: 'travis---->userGuide.st'.
 
 gitCache := 'git_cache'.
 gitPath := (Smalltalk at: #'FileDirectory' ifAbsent: [  ])
@@ -23,7 +23,11 @@ Metacello new
 Metacello new
 	baseline: 'Metacello';
   repository: 'filetree://', gitPath, '/metacello-work/repository';
-  onConflict: [:ex | ex allow ];
+  onConflict: [:ex | 
+    "allow new version of Metacello to be loaded"
+    ex existingProjectRegistration baseName = 'Metacello'
+      ifTrue: [ ex allow ].
+    ex disallow ];
   load: (Smalltalk at: #'TRAVIS_LOAD_LIST') ] 
     on: Warning 
     do: [:ex | 
