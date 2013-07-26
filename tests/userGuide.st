@@ -42,6 +42,11 @@ Metacello new
   smalltalkhubUser: 'Seaside' project: 'Seaside30';
   get.
 
+Gofer new
+  package: 'ConfigurationOfGrease';
+  url: 'http://www.squeaksource.com/MetacelloRepository';
+  load.
+
 Transcript cr; show: '---load'.
 Metacello registry
   configuration: 'Seaside30';
