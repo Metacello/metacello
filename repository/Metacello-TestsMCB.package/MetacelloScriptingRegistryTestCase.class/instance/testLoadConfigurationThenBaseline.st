@@ -13,4 +13,4 @@ testLoadConfigurationThenBaseline
         'github://dalehenrich/external:' , MetacelloScriptingResource externalCustomSHA
             , '/repository';
     load.
-  self validateRegistrations: MetacelloProjectRegistration registry
+  self validateBaseline: MetacelloProjectRegistration registry
