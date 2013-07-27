@@ -2,9 +2,6 @@ as yet unclassified
 testLoadConfigurationThenBaseline
   "Load project from configuration, then load project from baseline"
 
-  | rgstry specs configurationRegistrations baselineRegistrations |
-  true
-    ifTrue: [ ^ self ].
   Metacello new
     configuration: 'External';
     version: '0.9.0';
@@ -12,6 +9,8 @@ testLoadConfigurationThenBaseline
     load.
   Metacello new
     baseline: 'External';
-    repository: 'filetree://' , configurationDirectory fullName;
+    repository:
+        'github://dalehenrich/external:' , MetacelloScriptingResource externalCustomSHA
+            , '/repository';
     load.
   self validateRegistrations: MetacelloProjectRegistration registry

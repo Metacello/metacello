@@ -1,20 +1,20 @@
 accessing
 merge: aProjectRegistration
-  "should only be called from MetacelloProjectRegistration class>>mergeRegistration:with: ... merge is done when a spec has been loaded into the image"
+  " ... merge is done when a spec has been loaded into the image"
 
-  "nil specs are ignored in the merge, otherwise aProjectRegistration specs win"
-
-  "(self hasMergeConflicts: aProjectRegistration)
-         ifTrue: [ ^ self error: 'Attempt to merge registrations with conflicts' ]."
+  "only one of baselineProjectSpec or configurationProjectSpec should ever be set"
 
   self shouldBeMutable.
-  configurationProjectSpec
-    ifNil: [ configurationProjectSpec := aProjectRegistration configurationProjectSpec ]
+  (self isValid and: [ aProjectRegistration isValid ])
+    ifFalse: [ self error: 'Invalid registrations' ].
+  aProjectRegistration configurationProjectSpec
     ifNotNil: [ 
-      aProjectRegistration configurationProjectSpec
-        ifNotNil: [ configurationProjectSpec := aProjectRegistration configurationProjectSpec ] ].
-  baselineProjectSpec
-    ifNil: [ baselineProjectSpec := aProjectRegistration baselineProjectSpec ]
+      "use aProjectRegistration's configurationProjectSpec and nil my baselineProjectSpec"
+      configurationProjectSpec := aProjectRegistration configurationProjectSpec.
+      baselineProjectSpec := nil.
+      ^ self ].
+  aProjectRegistration baselineProjectSpec
     ifNotNil: [ 
-      aProjectRegistration baselineProjectSpec
-        ifNotNil: [ baselineProjectSpec := aProjectRegistration baselineProjectSpec ] ]
+      "use aProjectRegistration's baselineProjectSpec and nil my configurationProjectSpec"
+      configurationProjectSpec := nil.
+      baselineProjectSpec := aProjectRegistration baselineProjectSpec ]

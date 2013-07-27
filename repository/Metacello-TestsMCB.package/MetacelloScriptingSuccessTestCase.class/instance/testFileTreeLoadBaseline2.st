@@ -2,7 +2,7 @@ tests
 testFileTreeLoadBaseline2
   Transcript
     cr;
-    show: '----->>>>>testFileTreeLoadBaseline1'.
+    show: '----->>>>>testFileTreeLoadBaseline2'.
   Metacello new
     baseline: 'ExternalX';
     repository: 'filetree://' , externalDirectory fullName;
