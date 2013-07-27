@@ -2,7 +2,7 @@ doits
 reprimeRegistryIssue197
   MetacelloProjectRegistration registry baselineRegistry values
     detect: [ :registration | registration isValid not ]
-    ifAbsent: [ 
+    ifNone: [ 
       "no invalid registrations, don't reset and prime"
       ^ self ].
   Transcript
