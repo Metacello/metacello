@@ -4,8 +4,9 @@ baseline: spec
   spec
     for: #'common'
     do: [ 
+      spec postLoadDoIt: #'reprimeRegistryIssue197'.
+      spec baseline: 'FileTree'.
       spec
-        baseline: 'FileTree';
         project: 'Gofer'
           with: [ 
               spec
