@@ -1,4 +1,3 @@
 testing
 ensureForDevelopment
-
-	^true
+  ^ true
