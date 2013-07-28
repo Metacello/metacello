@@ -1,5 +1,6 @@
 tests
 testGetNLoad
+  [ 
   Transcript
     cr;
     show: 'GetNLoad'.
@@ -16,4 +17,10 @@ testGetNLoad
     expectedConfigurationRepository: nil
     expectedBaselineClassName: 'BaselineOfExternalX'
     expectedBaselineVersion: 'baseline'
-    expectedBaselineRepository: 'filetree://' , externalDirectory fullName
+    expectedBaselineRepository: 'filetree://' , externalDirectory fullName ]
+    on: Warning
+    do: [ :ex | 
+      Transcript
+        cr;
+        show: ex description.
+      ex resume ]
