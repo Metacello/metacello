@@ -6,8 +6,8 @@ env:
 
 #   - ST=Pharo-2.0 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
 #   - ST=Pharo-2.0 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
-#   - ST=GemStone-3.1.0.4 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
-#   - ST=GemStone-3.1.0.4 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+   - ST=GemStone-3.1.0.4 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+   - ST=GemStone-3.1.0.4 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
 #   - ST=Squeak-4.5 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st # until Issue #189 fixed: https://github.com/dalehenrich/metacello-work/issues/189
 #   - ST=Squeak-4.5 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st # until Issue #189 fixed: https://github.com/dalehenrich/metacello-work/issues/189
 
@@ -17,8 +17,8 @@ env:
 #   - ST=PharoCore-1.2 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
 #   - ST=PharoCore-1.3 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
 #   - ST=PharoCore-1.3 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
-#   - ST=Pharo-1.4 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
-#   - ST=Pharo-1.4 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+   - ST=Pharo-1.4 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+   - ST=Pharo-1.4 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
 ##   - ST=Pharo-3.0 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
 ##   - ST=Pharo-3.0 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
 #   - ST=Squeak-4.3 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
