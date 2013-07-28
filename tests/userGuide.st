@@ -51,4 +51,7 @@ Transcript cr; show: '---load'.
 Metacello registry
   configuration: 'Seaside30';
   version: #stable;
+  onWarning: [:ex | 
+    Transcript cr; show: 'WARNING: ', ex description.
+    ex resume];
   load.
