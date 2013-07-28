@@ -54,4 +54,5 @@ Metacello registry
   onWarning: [:ex | 
     Transcript cr; show: 'WARNING: ', ex description.
     ex resume];
+  onUpgrade: [:ex | ex allow ];
   load.
