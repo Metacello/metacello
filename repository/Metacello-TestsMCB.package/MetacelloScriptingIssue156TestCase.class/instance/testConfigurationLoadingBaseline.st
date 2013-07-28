@@ -3,9 +3,7 @@ testConfigurationLoadingBaseline
   "https://github.com/dalehenrich/metacello-work/issues/156"
 
   "ConfigurationOfGoo 4.0.0 and 5.0.0 load the BaselineOfGoo ... this should 
-   be a valid seuquence with no errors.
-
-   What happens with the baseline trumps configuration rule in this scenario?"
+   be a valid seuquence with no errors."
 
   Metacello new
     configuration: 'Goo';

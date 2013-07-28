@@ -1,21 +1,25 @@
 as yet unclassified
-testBaselineThenConfigurationCorrect
-  "https://github.com/dalehenrich/metacello-work/issues/156"
-
+testBaselineThenConfigurationConflict
   "Correct behavior
     - load BaselineOfGoo indirectly through ConfigurationOfProjectGoo
-    - load ConfigurationOfGoo indirectly through ConfigurationOfProjectGoo
-    - load without errors: same parent project"
+    - load ConfigurationOfGoo indirectly through ConfigurationOfProjectSoo
+    - create conflict, because parent configs not the same"
 
+  | triggered |
   Metacello new
     configuration: 'ProjectGoo';
     version: '1.1.0';
     repository: 'dictionary://Metacello_MczConfiguration_Test_Repository';
     silently;
     load.
+  triggered := false.
   Metacello new
-    configuration: 'ProjectGoo';
+    configuration: 'ProjectSoo';
     version: '1.0.0';
     repository: 'dictionary://Metacello_MczConfiguration_Test_Repository';
     silently;
-    load
+    onConflict: [ :ex | 
+          triggered := true.
+          ex allow ];
+    load.
+  self assert: triggered
