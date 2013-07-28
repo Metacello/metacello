@@ -21,7 +21,6 @@ testBasicLockNLockedProjectEnforce1
     expectedConfigurationVersion: '0.9.0'
     expectedConfigurationRepository:
       'dictionary://Metacello_Config_Test_Repository'
-    expectedBaselineClassName: 'BaselineOfExternalX'
-    expectedBaselineVersion: 'baseline'
-    expectedBaselineRepository:
-      'dictionary://Metacello_Configuration_Test_Repository'
+    expectedBaselineClassName: nil
+    expectedBaselineVersion: nil
+    expectedBaselineRepository: nil

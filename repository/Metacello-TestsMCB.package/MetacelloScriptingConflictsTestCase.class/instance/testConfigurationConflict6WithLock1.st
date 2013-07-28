@@ -35,7 +35,6 @@ testConfigurationConflict6WithLock1
     expectedConfigurationVersion: '0.9.1'
     expectedConfigurationRepository:
       'filetree://' , configurationDirectory fullName
-    expectedBaselineClassName: 'BaselineOfExternalX'
-    expectedBaselineVersion: 'baseline'
-    expectedBaselineRepository:
-      'dictionary://Metacello_Configuration_Test_Repository'
+    expectedBaselineClassName: nil
+    expectedBaselineVersion: nil
+    expectedBaselineRepository: nil
