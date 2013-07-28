@@ -27,7 +27,7 @@ Metacello new
     "allow new version of Metacello to be loaded"
     ex existingProjectRegistration baseName = 'Metacello'
       ifTrue: [ ex allow ].
-    ex disallow ];
+    ex pass ];
   load: (Smalltalk at: #'TRAVIS_LOAD_LIST') ] 
     on: Warning 
     do: [:ex | 
