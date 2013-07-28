@@ -1,5 +1,8 @@
 tests
 testGetNLoad
+  Transcript
+    cr;
+    show: 'GetNLoad'.
   Metacello new
     baseline: 'ExternalX';
     repository: 'filetree://' , externalDirectory fullName;
@@ -7,9 +10,6 @@ testGetNLoad
   Metacello registry
     baseline: 'ExternalX';
     load.
-  Transcript
-    cr;
-    show: 'GetNLoad'.
   self
     validateExpectedConfigurationClassName: nil
     expectedConfigurationVersion: nil
