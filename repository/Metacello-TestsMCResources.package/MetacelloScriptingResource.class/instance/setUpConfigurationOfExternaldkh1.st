@@ -20,7 +20,7 @@ setUpConfigurationOfExternaldkh1
     category: 'cat'
     timeStamp: ''
     source: (self class sourceCodeAt: #'versionOfExternal090:') asString)}.
-  configurationRepository
+  externalRepository
     basicStoreVersion:
       (MCVersion new
         setPackage: (MetacelloTestsMCPackage new name: reference packageName)

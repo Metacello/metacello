@@ -5,7 +5,7 @@ testBasicDefaultVersion
   | registration spec |
   Gofer new
     version: 'ConfigurationOfExternal-dkh.1';
-    repository: configurationRepository;
+    repository: externalRepository;
     load.
   Metacello new
     configuration: 'ExternalRef';

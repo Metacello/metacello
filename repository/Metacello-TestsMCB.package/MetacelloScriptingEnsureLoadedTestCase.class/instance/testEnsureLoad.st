@@ -1,11 +1,13 @@
 running
 testEnsureLoad
+  "https://github.com/dalehenrich/metacello-work/issues/199"
+
   "preload ConfigurationOfExternal-dkh.1 and force ensureLoad 
 	ConfigurationOfExternal-dkh.2 which has version 0.9.1"
 
   Gofer new
     version: 'ConfigurationOfExternal-dkh.1';
-    repository: configurationRepository;
+    repository: externalRepository;
     load.
   Metacello new
     configuration: 'ExternalRef';

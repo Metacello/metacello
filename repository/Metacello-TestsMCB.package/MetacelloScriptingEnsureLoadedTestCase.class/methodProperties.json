@@ -2,10 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"repositoryConfigurationContents" : "dkh 07/29/2013 07:28",
-		"repositoryPackageContents" : "dkh 07/29/2013 07:28",
-		"setUpRepositoryContents" : "dkh 07/29/2013 07:44",
 		"tearDownPackageList" : "dkh 07/29/2013 07:56",
-		"testBasicDefaultVersion" : "dkh 07/29/2013 10:45",
-		"testDefaultVersionUpgrade" : "dkh 07/29/2013 10:53",
-		"testEnsureLoad" : "dkh 07/29/2013 10:51" } }
+		"testBasicDefaultVersion" : "dkh 07/29/2013 13:47",
+		"testDefaultVersionUpgrade" : "dkh 07/29/2013 13:47",
+		"testEnsureLoad" : "dkh 07/29/2013 13:47" } }
