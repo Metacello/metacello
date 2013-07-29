@@ -2,7 +2,9 @@ exception handling
 defaultAction
   Warning
     signal:
-      'Attempt to perform' , self operationString printString
-        , ' on a locked project: '
-        , self existingProjectRegistration printString.
+      'LOCK ENFORCED: Attempt to ' , self operationString printString
+        , ' new project: ' , self newProjectRegistration printString
+        , ' when existing project: '
+        , self existingProjectRegistration printString
+        , ' is locked. New project not loaded.'.
   ^ self disallow
