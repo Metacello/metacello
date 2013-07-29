@@ -6,7 +6,7 @@ testPrimeRegistryFromImage3
   Metacello new
     configuration: 'External';
     version: '0.9.1';
-    repository: 'filetree://' , configurationDirectory fullName;
+    repository: 'filetree://' , externalDirectory fullName;
     get.
   Metacello new
     baseline: 'External';

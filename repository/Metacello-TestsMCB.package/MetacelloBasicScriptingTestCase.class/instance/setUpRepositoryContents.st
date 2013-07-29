@@ -2,11 +2,11 @@ running
 setUpRepositoryContents
   super setUpRepositoryContents.
   self
-    setUpRepositoryContents: self repositoryConfigurationContents
+    setUpRepositoryContents: self configurationRepositoryContents
     sourceRepo: MetacelloScriptingResource current configurationRepository
     targetRepo: (MCFileTreeRepository new directory: configurationDirectory).
   self
-    setUpRepositoryContents: self repositoryPackageContents
+    setUpRepositoryContents: self externalRepositoryContents
     sourceRepo: MetacelloScriptingResource current externalRepository
     targetRepo: (MCFileTreeRepository new directory: externalDirectory).
   self
