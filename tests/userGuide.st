@@ -76,3 +76,12 @@ Metacello image
   configuration: 'Seaside30';
   version: #'stable';
   lock.
+
+Transcript cr; show: '---load (REST)'.
+Metacello new
+  configuration: 'SeasideRest';
+  onWarning: [:ex | 
+    Transcript cr; show: 'Warning: ', ex description.
+    ex resume ];
+  load.
+
