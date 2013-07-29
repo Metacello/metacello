@@ -11,7 +11,9 @@ setUp
     setUpBaselineOfExternalX;
     setUpBaselineOfExternalXX;
     setUpBaselineOfExternalXXX;
-    setUpConfigurationOfExternal;
+    setUpConfigurationOfExternaldkh1;
+    setUpConfigurationOfExternaldkh2;
+    setUpConfigurationExternalRef;
     setUpConfigurationOfExternalX;
     setUpConfigurationOfExternalXX;
     setUpConfigurationOfExternalXXX;

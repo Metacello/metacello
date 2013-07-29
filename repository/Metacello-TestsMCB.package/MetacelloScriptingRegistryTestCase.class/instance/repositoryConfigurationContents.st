@@ -1,3 +1,3 @@
 running
 repositoryConfigurationContents
-  ^ super repositoryConfigurationContents , #('ConfigurationOfExternal-dkh.1')
+  ^ super repositoryConfigurationContents , #('ConfigurationOfExternal-dkh.2')

@@ -1,9 +1,9 @@
 external configurations
-setUpConfigurationOfExternal
+setUpConfigurationOfExternaldkh2
   "self reset"
 
   | reference className definitionArray versionInfo |
-  reference := GoferVersionReference name: 'ConfigurationOfExternal-dkh.1'.
+  reference := GoferVersionReference name: 'ConfigurationOfExternal-dkh.2'.
   className := #'ConfigurationOfExternal'.
   definitionArray := {(MCOrganizationDefinition
     categories: (Array with: reference packageName asSymbol)).

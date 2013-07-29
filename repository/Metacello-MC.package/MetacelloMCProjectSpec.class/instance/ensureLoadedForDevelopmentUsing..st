@@ -28,7 +28,7 @@ ensureLoadedForDevelopmentUsing: mcLoader
   ensured == nil
     ifTrue: [ 
       "projectClass == nil or version == nil"
-      (self versionOrNil notNil and: [ mcLoader ensureForDevelopment ])
+      mcLoader ensureForDevelopment
         ifTrue: [ 
           | pc |
           (pc := self projectClass) ~~ nil
