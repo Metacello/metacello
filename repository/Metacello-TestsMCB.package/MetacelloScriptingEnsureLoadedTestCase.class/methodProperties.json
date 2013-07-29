@@ -7,5 +7,5 @@
 		"setUpRepositoryContents" : "dkh 07/29/2013 07:44",
 		"tearDownPackageList" : "dkh 07/29/2013 07:56",
 		"testBasicDefaultVersion" : "dkh 07/29/2013 10:45",
-		"testDefaultVersionLoad" : "dkh 07/29/2013 10:46",
-		"testEnsureLoad" : "dkh 07/29/2013 08:11" } }
+		"testDefaultVersionUpgrade" : "dkh 07/29/2013 10:53",
+		"testEnsureLoad" : "dkh 07/29/2013 10:51" } }

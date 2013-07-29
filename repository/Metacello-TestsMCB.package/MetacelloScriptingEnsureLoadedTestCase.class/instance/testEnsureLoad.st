@@ -15,7 +15,7 @@ testEnsureLoad
     configuration: 'ExternalRef';
     version: '0.9.0';
     repository: 'dictionary://Metacello_Configuration_Test_Repository';
-    load.	"should load without error"
+    load.
   Metacello new
     configuration: 'ExternalRef';
     version: '0.9.1';
