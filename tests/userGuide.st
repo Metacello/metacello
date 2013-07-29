@@ -34,18 +34,22 @@ Metacello new
       Transcript cr; show: 'WARNING: ', ex description.
       ex resume ].
 
+"Run smattering of expressions used in Metacello User Guide ... 
+ not all expressions are implemented yet...
+ We just want these expressions to run without error"
+
 Transcript cr; show: '---Start running documentation script..'.
+
+Transcript cr; show: '---get (default)'.
+Metacello new
+  configuration: 'Seaside30';
+  get.
 
 Transcript cr; show: '---get'.
 Metacello new
   configuration: 'Seaside30';
   smalltalkhubUser: 'Seaside' project: 'Seaside30';
   get.
-
-false ifTrue: [ Gofer new
-  package: 'ConfigurationOfGrease';
-  url: 'http://www.squeaksource.com/MetacelloRepository';
-  load ].
 
 Transcript cr; show: '---load'.
 Metacello registry
@@ -56,3 +60,19 @@ Metacello registry
     ex resume];
   onUpgrade: [:ex | ex allow ];
   load.
+
+Transcript cr; show: '---list'.
+Metacello registry
+  configuration: #('Seaside30' 'MetacelloPreview');
+  list.
+
+Metacello new
+  configuration: [:spec | spec name beginsWith: 'Seaside'];
+  smalltalkhubUser: 'Seaside' project: 'Seaside30';
+  list.
+
+Transcript cr; show: '---lock'.
+Metacello image
+  configuration: 'Seaside30';
+  version: #'stable';
+  lock.

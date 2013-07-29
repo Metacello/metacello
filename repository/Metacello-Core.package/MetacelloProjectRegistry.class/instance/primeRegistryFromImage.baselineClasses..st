@@ -7,7 +7,7 @@ primeRegistryFromImage: configurationClasses baselineClasses: baselineClasses
       (self baselineRegistry includesKey: cl name asString)
         ifFalse: [ 
           "not registered"
-          cl project currentVersion
+          (self primeRegistryCurrentVersionFor: cl)
             ifNotNil: [ :version | 
               | projectSpec |
               projectSpec := (version project projectSpec
@@ -20,7 +20,7 @@ primeRegistryFromImage: configurationClasses baselineClasses: baselineClasses
       (self configurationRegistry includesKey: cl name asString)
         ifFalse: [ 
           "not registered"
-          cl project currentVersion
+          (self primeRegistryCurrentVersionFor: cl)
             ifNotNil: [ :version | 
               | projectSpec repos projectPackage project |
               project := version project.
