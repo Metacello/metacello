@@ -1,25 +1,21 @@
 as yet unclassified
 testWarningDuringLoad
-  [ 
-  | producedWarning originalModifiedPackages modifiedPackages |
+  | producedWarning |
   Metacello new
     configuration: 'Issue181';
     version: '0.9.1';
     repository: 'dictionary://Metacello_Configuration_Test_Repository';
     silently;
     load.
-  originalModifiedPackages := MCWorkingCopy allManagers
-    select: [ :each | each modified ].
-  (Smalltalk at: #'ExternalCore') compile: 'forceWarning ^self'.	"dirty the package"
-  modifiedPackages := MCWorkingCopy allManagers
-    select: [ :each | each modified ].
-  Transcript
-    cr;
-    show:
-        'Original Modified size: ' , originalModifiedPackages size printString
-            , ' Modified size: ' , modifiedPackages size printString.
-  self assert: modifiedPackages size > originalModifiedPackages size.
   producedWarning := false.
+  (Smalltalk
+    at: #'ExternalCore'
+    ifAbsent: [ 
+      Transcript
+        cr;
+        show: 'Missing class: ExternalCore'.
+      self assert: false ])
+    compile: 'forceWarning ^self'.	"dirty the package"
   Metacello new
     configuration: 'Issue181';
     version: '0.9.3';
@@ -29,6 +25,4 @@ testWarningDuringLoad
           producedWarning := true.
           ex resume ];
     load.
-  self assert: producedWarning ]
-    on: Error
-    do: [ :ex | ex halt ]
+  self assert: producedWarning
