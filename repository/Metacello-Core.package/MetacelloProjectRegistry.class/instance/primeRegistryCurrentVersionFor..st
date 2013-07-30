@@ -5,6 +5,6 @@ primeRegistryCurrentVersionFor: cl
     do: [ :ex | 
       Warning
         signal:
-          'WARNING: error finding current version of ' , cl name asString
+          'Error finding current version of ' , cl name asString
             , '. Probably an invalid specification.'.
       nil ]

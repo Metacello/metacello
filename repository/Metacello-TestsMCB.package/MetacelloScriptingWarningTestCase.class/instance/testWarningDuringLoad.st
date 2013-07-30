@@ -7,7 +7,8 @@ testWarningDuringLoad
     repository: 'dictionary://Metacello_Configuration_Test_Repository';
     silently;
     load.
-  (Smalltalk at: #'SystemChangeNotifier')
+  Smalltalk
+    at: #'SystemChangeNotifier'
     ifPresent: [ :cl | 
       cl uniqueInstance silenceLevel > 0
         ifTrue: [ 
