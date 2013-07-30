@@ -3,7 +3,7 @@
 		 },
 	"instance" : {
 		"setUpRepositories" : "dkh 7/16/2012 11:59",
-		"tearDownPackageList" : "dkh 7/16/2012 11:47",
+		"tearDownPackageList" : "dkh 07/29/2013 21:14",
 		"tearDownRepositories" : "dkh 7/16/2012 11:59",
 		"testGetBlockFilter" : "dkh 7/16/2012 16:59",
 		"testGetCollectionFilter" : "dkh 7/16/2012 16:57",
