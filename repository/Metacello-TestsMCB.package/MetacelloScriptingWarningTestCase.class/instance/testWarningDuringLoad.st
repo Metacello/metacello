@@ -1,5 +1,6 @@
 as yet unclassified
 testWarningDuringLoad
+  [ 
   | producedWarning originalModifiedPackages modifiedPackages |
   Metacello new
     configuration: 'Issue181';
@@ -39,4 +40,6 @@ testWarningDuringLoad
           producedWarning := true.
           ex resume ];
     load.
-  self assert: producedWarning
+  self assert: producedWarning ]
+    on: Error
+    do: [ :ex | ex halt ]
