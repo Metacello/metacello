@@ -8,17 +8,6 @@ testWarningDuringLoad
     repository: 'dictionary://Metacello_Configuration_Test_Repository';
     silently;
     load.
-  Smalltalk
-    at: #'SystemChangeNotifier'
-    ifPresent: [ :cl | 
-      cl uniqueInstance silenceLevel > 0
-        ifTrue: [ 
-          Transcript
-            cr;
-            show:
-                'WARNING: (SystemChangeNotifier uniqueInstance silenceLevel) > 0: '
-                    , cl uniqueInstance silenceLevel printString.
-          cl uniqueInstance silenceLevel: 0 ] ].
   originalModifiedPackages := MCWorkingCopy allManagers
     select: [ :each | each modified ].
   (Smalltalk at: #'ExternalCore') compile: 'forceWarning ^self'.	"dirty the package"
