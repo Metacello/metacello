@@ -28,4 +28,4 @@ extractRepositoryFrom: zipFile to: directory
                 ifTrue: [ self error: 'unzip failure: ' , errorMessage printString ]
                 ifFalse: [
                     zipFile asFileReference delete.
-                    (FileSystem root / 'tmp' / (self downloadErrorFileNameFor: zipFile)) delete ] ]
+                    (self downloadErrorFileNameFor: zipFile) asFileReference delete ] ]
