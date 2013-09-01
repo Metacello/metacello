@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"baseline:" : "ChristopheDemarey 07/19/2013 09:49",
+		"baseline:" : " 09/01/2013 00:12",
 		"gemstone10beta311PostLoadDoIt" : "dkh 07/24/2012 18:09",
+		"reprimeRegistryIssue197" : "dkh 07/29/2013 16:20",
 		"testResourcePostLoadDoIt" : "dkh 6/1/2012 09:18:17" } }

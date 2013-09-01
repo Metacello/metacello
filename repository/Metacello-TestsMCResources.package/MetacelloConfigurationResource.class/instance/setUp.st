@@ -24,6 +24,7 @@ setUp
     setUpConfigurationOfProjectIssue154;
     setUpConfigurationOfProjectIssue156;
     setUpIssue156ConfigurationOfProjectGoo;
+    setUpIssue156ConfigurationOfProjectSoo;
     setUpConfigurationOfProjectFum;
     setUpConfigurationOfProjectIssue125;
     yourself

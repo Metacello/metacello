@@ -2,16 +2,25 @@ as yet unclassified
 testWarningDuringLoad
   | producedWarning |
   Metacello new
-    configuration: 'ExternalX';
-    version: #'stable';
-    repository: 'dictionary://Metacello_Config_Test_Repository';
+    configuration: 'Issue181';
+    version: '0.9.1';
+    repository: 'dictionary://Metacello_Configuration_Test_Repository';
+    silently;
     load.
-  (Smalltalk at: #'ExternalCoreX') compile: 'forceWarning ^self'.	"dirty the package"
   producedWarning := false.
+  (Smalltalk
+    at: #'ExternalCore'
+    ifAbsent: [ 
+      Transcript
+        cr;
+        show: 'Missing class: ExternalCore'.
+      self assert: false ])
+    compile: 'forceWarning ^self'.	"dirty the package"
   Metacello new
-    configuration: 'ExternalX';
-    version: #'stable';
-    repository: 'dictionary://Metacello_Config_Test_Repository';
+    configuration: 'Issue181';
+    version: '0.9.3';
+    repository: 'dictionary://Metacello_Configuration_Test_Repository';
+    silently;
     onWarning: [ :ex | 
           producedWarning := true.
           ex resume ];
