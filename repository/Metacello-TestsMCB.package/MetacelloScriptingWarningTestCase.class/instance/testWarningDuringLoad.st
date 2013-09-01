@@ -8,6 +8,14 @@ testWarningDuringLoad
     silently;
     load.
   producedWarning := false.
+  Smalltalk
+    at: #'SystemChangeNotifier'
+    ifPresent: [ :cl | 
+      Transcript
+        cr;
+        show:
+            'MetacelloScriptingWarningTestCase>>testWarningDuringLoad [0]: '
+                , cl uniqueInstance silenceLevel printString ].
   (Smalltalk
     at: #'ExternalCore'
     ifAbsent: [ 
@@ -22,6 +30,11 @@ testWarningDuringLoad
     repository: 'dictionary://Metacello_Configuration_Test_Repository';
     silently;
     onWarning: [ :ex | 
+          Transcript
+            cr;
+            show:
+                'MetacelloScriptingWarningTestCase>>testWarningDuringLoad [1]: '
+                    , ex description.
           producedWarning := true.
           ex resume ];
     load.
