@@ -1,0 +1,18 @@
+{
+	"category" : "Metacello-Cypress-Specs",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"file",
+		"repositories",
+		"goferPackage",
+		"preLoadDoIt",
+		"postLoadDoIt" ],
+	"name" : "MetacelloCypressPackageSpec",
+	"pools" : [
+		 ],
+	"super" : "MetacelloAbstractPackageSpec",
+	"type" : "normal" }

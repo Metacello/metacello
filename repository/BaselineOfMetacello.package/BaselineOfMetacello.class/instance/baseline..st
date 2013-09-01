@@ -27,6 +27,7 @@ baseline: spec
               spec
                 requires: 'Metacello-Base';
                 includes: #('Metacello-MC' 'Metacello-Platform') ];
+        package: 'Metacello-Cypress' with: [ spec requires: 'Metacello-Core' ];
         package: 'Metacello-FileTree'
           with: [ spec requires: #('Metacello-MC' 'FileTree') ];
         package: 'Metacello-GitHub'
@@ -76,6 +77,7 @@ baseline: spec
         group: 'batch' with: #('Metacello-Core' 'Metacello-GitHub');
         group: 'Base Configuration' with: #('Metacello-Base');
         group: 'Core' with: #('default');
+        group: 'Cypress' with: #('Metacello-Cypress');
         group: 'Tutorial' with: #('Metacello-Tutorial' 'Metacello-Reference');
         group: 'UI' with: #('default');
         group: 'TravisCI_1'
