@@ -1,5 +1,6 @@
 as yet unclassified
 testWarningDuringLoad
+  [ 
   | producedWarning externalCoreClass |
   Transcript
     cr;
@@ -55,4 +56,11 @@ testWarningDuringLoad
   Transcript
     cr;
     show: 'MetacelloScriptingWarningTestCase>>testWarningDuringLoad [6]: '.
-  self assert: producedWarning
+  self assert: producedWarning ]
+    on: Error
+    do: [ :ex | 
+      Transcript
+        cr;
+        show:
+            'MetacelloScriptingWarningTestCase>>testWarningDuringLoad [7]: '
+                , ex description ]
