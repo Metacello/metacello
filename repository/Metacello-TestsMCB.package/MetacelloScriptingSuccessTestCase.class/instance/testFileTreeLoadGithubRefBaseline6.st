@@ -23,8 +23,6 @@ testFileTreeLoadGithubRefBaseline6
     validateExpectedConfigurationClassName: 'ConfigurationOfExternal'
     expectedConfigurationVersion: '0.9.0'
     expectedConfigurationRepository: 'http://ss3.gemtalksystems.com/ss/external'
-    expectedBaselineClassName: 'BaselineOfExternal'
-    expectedBaselineVersion: 'baseline'
-    expectedBaselineRepository:
-      'github://dalehenrich/external:' , MetacelloScriptingResource externalCustomSHA
-        , '/repository'
+    expectedBaselineClassName: nil
+    expectedBaselineVersion: nil
+    expectedBaselineRepository: nil

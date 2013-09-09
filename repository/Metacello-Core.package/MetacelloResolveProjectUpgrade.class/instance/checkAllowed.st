@@ -1,8 +1,11 @@
 private
 checkAllowed
-    self existingProjectRegistration locked
-        ifTrue: [ 
-            MetacelloLockedProjectError
-                signal:
-                    'Attempt to perform' , self operationString printString , ' a locked project: '
-                        , self existingProjectRegistration printString ]
+  self existingProjectRegistration locked
+    ifTrue: [ 
+      self
+        resume:
+          (MetacelloAllowLockedProjectChange new
+            operationString: self operationString;
+            existingProjectRegistration: self existingProjectRegistration;
+            newProjectRegistration: self newProjectRegistration;
+            signal) ]

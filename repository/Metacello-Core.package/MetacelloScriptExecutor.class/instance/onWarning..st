@@ -1,3 +1,3 @@
 options api
 onWarning: aBlock
-  self options at: #'onWarning:' put: aBlock
+  self options at: #'onWarning' put: aBlock

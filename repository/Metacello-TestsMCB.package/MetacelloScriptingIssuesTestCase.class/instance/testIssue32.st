@@ -15,7 +15,6 @@ testIssue32
     expectedConfigurationVersion: '0.9.0'
     expectedConfigurationRepository:
       'dictionary://Metacello_Configuration_Test_Repository'
-    expectedBaselineClassName: 'BaselineOfIssue32'
-    expectedBaselineVersion: 'baseline'
-    expectedBaselineRepository:
-      'dictionary://Metacello_External_Test_Repository'
+    expectedBaselineClassName: nil
+    expectedBaselineVersion: nil
+    expectedBaselineRepository: nil

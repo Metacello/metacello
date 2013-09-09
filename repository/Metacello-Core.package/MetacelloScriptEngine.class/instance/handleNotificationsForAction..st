@@ -2,6 +2,7 @@ handlers
 handleNotificationsForAction: actionBlock
   [ 
   [ 
+  [ 
   actionBlock
     on:
       MetacelloLookupProjectSpec , MetacelloLookupProjectSpecForLoad
@@ -17,5 +18,11 @@ handleNotificationsForAction: actionBlock
     do: [ :ex | 
       "option handlers need to be outermost set of handlers ... last line of defense before users are involved"
       ex handleResolutionFor: self ] ]
+    on: MetacelloAllowLockedProjectChange
+    do: [ :ex | 
+      "MetacelloAllowLockedProjectChange need to be outermost handler ... since it is signaled from second line of handlers"
+      ex handleResolutionFor: self ] ]
     on: Warning
-    do: [ :ex | self handleWarning: ex ]
+    do: [ :ex | 
+      "Warning is absolute outermost handler"
+      self handleWarning: ex ]

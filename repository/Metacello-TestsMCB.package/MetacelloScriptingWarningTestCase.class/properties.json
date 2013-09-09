@@ -10,5 +10,5 @@
 	"name" : "MetacelloScriptingWarningTestCase",
 	"pools" : [
 		 ],
-	"super" : "MetacelloExternalScriptingTestCase",
+	"super" : "MetacelloScriptingTestCase",
 	"type" : "normal" }

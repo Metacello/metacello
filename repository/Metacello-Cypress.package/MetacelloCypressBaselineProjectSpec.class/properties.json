@@ -1,0 +1,14 @@
+{
+	"category" : "Metacello-Cypress-Specs",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"file" ],
+	"name" : "MetacelloCypressBaselineProjectSpec",
+	"pools" : [
+		 ],
+	"super" : "MetacelloGenericProjectSpec",
+	"type" : "normal" }

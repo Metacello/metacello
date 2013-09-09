@@ -1,3 +1,3 @@
 accessing
 operationString
-    ^ 'downgrade'
+  ^ 'downgrade to'
