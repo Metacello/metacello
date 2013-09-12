@@ -1,3 +1,3 @@
 monticello
 newVersionForWorkingCopy: aWorkingCopy
-	aWorkingCopy newVersionIn: aWorkingCopy repositoryGroup
+	^aWorkingCopy newVersionIn: aWorkingCopy repositoryGroup
