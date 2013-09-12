@@ -24,7 +24,7 @@ setUpExternalCore
     className: 'Object'
     classIsMeta: true
     selector: 'isExternal'
-    category: '*external-corex'
+    category: '*external-core'
     timeStamp: ''
     source: (self class sourceCodeAt: #'isExternal') asString)}.
   externalRepository
