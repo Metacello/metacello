@@ -1,3 +1,3 @@
 running
 tearDownPackageList
-    ^ #('ConfigurationOfInvalidConfigurations')
+    ^ #('ConfigurationOfInvalidConfigurations' 'ConfigurationOfExternal')
