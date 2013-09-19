@@ -1,4 +1,4 @@
-baselines
+versions
 baseline10beta321: spec
   <version: '1.0-beta.32.1-baseline'>
   spec
@@ -146,7 +146,8 @@ baseline10beta321: spec
           with: [ spec requires: #('Metacello-ProfStef') ];
         package: 'Metacello-PharoCommonPlatform'
           with: [ spec requires: #('Metacello-MC') ];
-        package: 'Metacello-Platform';
+        package: 'Metacello-Platform'
+          with: [ spec requires: #('Metacello-PharoCommonPlatform') ];
         yourself.
       spec
         group: 'Tests' with: #('Metacello-TestsProfStef');
@@ -159,7 +160,7 @@ baseline10beta321: spec
         package: 'Metacello-Platform'
         with: [ spec 
 				file: 'Metacello-Platform.pharo';
-				 requires: #('Metacello-PharoCommonPlatform' 'OSProcess') ] ].
+				 requires: #('OSProcess') ] ].
   spec
     for: #'pharo2.x'
     do: [ 
@@ -171,7 +172,7 @@ baseline10beta321: spec
         package: 'Metacello-Platform'
           with: [ spec
 				file: 'Metacello-Platform.pharo20';
-				requires: #('Metacello-PharoCommonPlatform' 'OSProcess') ];
+				requires: #('OSProcess') ];
         package: 'Metacello-TestsCommonMC'
           with: [ spec file: 'Metacello-TestsCommonMC.pharo20' ];
         yourself ].
@@ -181,7 +182,8 @@ baseline10beta321: spec
       spec removeProject: 'OSProcess'.
       spec
         package: 'Metacello-Platform'
-          with: [ spec file: 'Metacello-Platform.pharo30' ];
+          with: [ spec
+				file: 'Metacello-Platform.pharo30' ];
         package: 'Metacello-TestsCommonMC'
           with: [ spec file: 'Metacello-TestsCommonMC.pharo20' ];
         yourself ].
