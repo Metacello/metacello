@@ -1,4 +1,4 @@
-versions
+baselines
 baseline10beta321: spec
   <version: '1.0-beta.32.1-baseline'>
   spec
