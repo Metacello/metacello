@@ -1,7 +1,5 @@
-SystemOrganization addCategory: #'Metacello-Core'!
 SystemOrganization addCategory: #'Metacello-Core-Constructors'!
 SystemOrganization addCategory: #'Metacello-Core-Deprecated'!
-SystemOrganization addCategory: #'Metacello-Core-Exceptions'!
 SystemOrganization addCategory: #'Metacello-Core-Exceptions-Errors'!
 SystemOrganization addCategory: #'Metacello-Core-Exceptions-Notifications'!
 SystemOrganization addCategory: #'Metacello-Core-Loaders'!

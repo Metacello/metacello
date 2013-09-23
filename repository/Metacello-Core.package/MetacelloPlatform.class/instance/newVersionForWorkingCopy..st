@@ -1,3 +1,3 @@
 monticello
 newVersionForWorkingCopy: aWorkingCopy
-	aWorkingCopy newVersion
+  ^ aWorkingCopy newVersion
