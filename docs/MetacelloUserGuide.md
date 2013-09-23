@@ -151,8 +151,8 @@ You may download the configuration from a different repository:
 
 ```Smalltalk
 Metacello image
-  configuration: 'Seaside30';
-  smalltalkhubUser: 'Seaside' project: 'Seaside30';
+  configuration: 'Seaside3';
+  smalltalkhubUser: 'Seaside' project: 'MetacelloConfigurations';
   get.
 ```
 
