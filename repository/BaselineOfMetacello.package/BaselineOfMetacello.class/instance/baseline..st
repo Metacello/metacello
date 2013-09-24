@@ -141,7 +141,7 @@ baseline: spec
         package: 'Metacello-PharoCommonPlatform'
           with: [ spec requires: #('Metacello-MC') ];
         package: 'Metacello-Platform'
-          with: [ spec requires: #('Metacello-PharoCommonPlatform' 'OSProcess') ];
+          with: [ spec requires: #('Metacello-PharoCommonPlatform') ];
         yourself.
       spec
         group: 'Tests' with: #('Metacello-TestsProfStef');
@@ -152,7 +152,9 @@ baseline: spec
     do: [ 
       spec
         package: 'Metacello-Platform'
-        with: [ spec file: 'Metacello-Platform.pharo' ] ].
+        with: [ spec 
+                    file: 'Metacello-Platform.pharo';
+                    requires: #('OSProcess') ] ].
   spec
     for: #'pharo1.1.x'
     do: [ 
@@ -186,7 +188,9 @@ baseline: spec
         yourself.
       spec
         package: 'Metacello-Platform'
-          with: [ spec file: 'Metacello-Platform.pharo20' ];
+          with: [ spec 
+	                file: 'Metacello-Platform.pharo20';
+	                requires: #('OSProcess') ];
         package: 'Metacello-TestsCommonMC'
           with: [ spec file: 'Metacello-TestsCommonMC.pharo20' ];
         yourself.
@@ -196,10 +200,7 @@ baseline: spec
   spec
     for: #'pharo3.x'
     do: [ 
-      spec
-        configuration: 'OSProcess'
-          with: [ spec repository: 'http://ss3.gemtalksystems.com/ss/MetaRepoForPharo20' ];
-        yourself.
+      spec removeProject: 'OSProcess'.
       spec
         package: 'Metacello-Platform'
           with: [ spec file: 'Metacello-Platform.pharo30' ];
