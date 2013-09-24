@@ -37,7 +37,7 @@ MetacelloPlatform current authorName: 'testMonkey'. "These tests save code ... n
 
 "no deprecated messages should be used"
 (Deprecation respondsTo: #raiseWarning:)
-  ifTrue: [ Deprecation raiseWarning: true].
+  ifTrue: [ Deprecation raiseWarning: false].
 
 Transcript cr; show: '---Start running tests...'.
 

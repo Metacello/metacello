@@ -47,8 +47,8 @@ Metacello new
 
 Transcript cr; show: '---get'.
 Metacello new
-  configuration: 'Seaside30';
-  smalltalkhubUser: 'Seaside' project: 'Seaside30';
+  configuration: 'Seaside3';
+  smalltalkhubUser: 'Seaside' project: 'MetacelloConfigurations';
   get.
 
 Transcript cr; show: '---load'.
