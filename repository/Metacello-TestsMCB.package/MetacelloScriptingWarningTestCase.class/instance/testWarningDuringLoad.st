@@ -35,25 +35,31 @@ testWarningDuringLoad
       Transcript
         cr;
         show: 'Missing class: ExternalCore'.
-      MCWorkingCopy allManagers
-        do: [ :wc | 
+      Transcript
+        cr;
+        show:
+            'MetacelloScriptingWarningTestCase>>testWarningDuringLoad [10] registrations:'.
+      Metacello registrations
+        do: [ :registration | 
           Transcript
             cr;
-            show:
-                'MetacelloScriptingWarningTestCase>>testWarningDuringLoad [10] registrations:'.
-          Metacello registrations
-            do: [ :registration | 
-              Transcript
-                cr;
-                tab;
-                show: registration printString ].
+            tab;
+            show: registration printString ].
+      MCWorkingCopy allManagers
+        do: [ :wc | 
           (wc packageName beginsWith: 'External')
             ifTrue: [ 
               Transcript
                 cr;
                 show:
                     'MetacelloScriptingWarningTestCase>>testWarningDuringLoad [3]: '
-                        , wc description ] ].
+                        , wc description ].
+          (MetacelloPlatform current packageInfoFor: wc) classes
+            do: [ :cls | 
+              Transcript
+                cr;
+                tab;
+                show: cls name asString ] ].
       self assert: false ].
   Transcript
     cr;
