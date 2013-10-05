@@ -44,10 +44,13 @@ version10beta321: spec
 - fix Issue #176: attempt to modify immutable project spec
   https://github.com/dalehenrich/metacello-work/issues/176
 - fix Issue #181: The case for `unconditional` baseline loading
+  https://github.com/dalehenrich/metacello-work/issues/181
+1.0-beta.32.1 (dkh.782):
+- final fix for Issue #187: avoid OSProcess dependency for Pharo3.0
   https://github.com/dalehenrich/metacello-work/issues/181'.
       spec postLoadDoIt: #'metacelloPrimeRegistry'.
       spec author: 'dkh'.
-      spec timestamp: '7/17/2013 08:18'.
+      spec timestamp: '10/5/2013 15:13'.
       spec
         project: 'FileTree' with: #'stable';
         project: 'Gofer' with: #'stable';
@@ -117,7 +120,7 @@ version10beta321: spec
     do: [ 
       spec
         package: 'Metacello-Platform'
-          with: 'Metacello-Platform.pharo30-ChristopheDemarey.2';
+          with: 'Metacello-Platform.pharo30-ChristopheDemarey.3';
         package: 'Metacello-TestsCommonMC'
           with: 'Metacello-TestsCommonMC.pharo20-dkh.3' ].
   spec
