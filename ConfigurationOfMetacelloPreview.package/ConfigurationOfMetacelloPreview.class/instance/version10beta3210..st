@@ -9,7 +9,8 @@ version10beta3210: spec
         description:
           '- Pharo3.0 Support Issue #187 and Pull request: #207
   https://github.com/dalehenrich/metacello-work/issues/187
-  https://github.com/dalehenrich/metacello-work/pull/207'.
+  https://github.com/dalehenrich/metacello-work/pull/207
+------EXPERIMENT'.
       spec author: 'dkh'.
       spec timestamp: '10/5/2013 17:10'.
       spec
@@ -18,5 +19,5 @@ version10beta3210: spec
               spec
                 loads: #('batch');
                 repository:
-                    'github://dalehenrich/metacello-work:1c8c138a7be20910c6498a278367be2849212926/repository' ];
+                    'github://dalehenrich/metacello-work:1d689e009620597463da39a2bd4e083de3b46930/repository' ];
         import: 'Metacello' ]
