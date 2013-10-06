@@ -10,14 +10,15 @@ version10beta3210: spec
           '- Pharo3.0 Support Issue #187 and Pull request: #207
   https://github.com/dalehenrich/metacello-work/issues/187
   https://github.com/dalehenrich/metacello-work/pull/207
-------EXPERIMENT'.
+- fix Issue #210: MetacelloProjectRegistry>>primeRegistryFromImage introduces `invalid` registrations
+  https://github.com/dalehenrich/metacello-work/issues/210'.
       spec author: 'dkh'.
-      spec timestamp: '10/5/2013 17:10'.
+      spec timestamp: '10/6/2013 12:12'.
       spec
         baseline: 'Metacello'
           with: [ 
               spec
                 loads: #('batch');
                 repository:
-                    'github://dalehenrich/metacello-work:1d689e009620597463da39a2bd4e083de3b46930/repository' ];
+                    'github://dalehenrich/metacello-work:9d7e7f8994abeb0b474ec54e9c8c714b3fe95fb9/repository' ];
         import: 'Metacello' ]
