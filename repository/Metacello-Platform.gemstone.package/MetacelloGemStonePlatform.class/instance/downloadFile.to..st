@@ -2,7 +2,7 @@ github support
 downloadFile: url to: outputFileName
   "download from <url> into <outputFileName>"
 
-  | archive zipfile errorFileName |
+  | archive zipfile errorFileName stream |
   "Make a unique name for the error log and ensure that we can write the files"
   errorFileName := self downloadErrorFileNameFor: outputFileName.
   (ServerFileDirectory on: outputFileName) forceNewFileNamed: outputFileName.
@@ -14,8 +14,12 @@ downloadFile: url to: outputFileName
   zipfile := ServerFileDirectory on: outputFileName.
   zipfile containingDirectory
     readOnlyFileNamed: zipfile localName
-    do: [ :fileStream | 
-      | stream |
-      stream := RWBinaryOrTextStream on: fileStream contents.
-      archive readFrom: stream ].
+    do: [ :fileStream | stream := RWBinaryOrTextStream on: fileStream contents ].
+  [ archive readFrom: stream ]
+    on: Error
+    do: [ :ex | 
+      (ServerFileDirectory on: '/tmp')
+        deleteFileNamed: outputFileName;
+        deleteFileNamed: (self downloadErrorFileNameFor: errorFileName).
+      ex pass ].
   ^ archive

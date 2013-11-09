@@ -7,10 +7,10 @@ hasLoadConflicts: aProjectRegistration
         configs = and no baseline loaded (self) with a baseline to load (aProjectRegistration)
         config loaded (self), no config to load (aProjectRegistration) and no baseline loaded(self) with a baseline to load (aProjectRegistration) "
 
-  self isValid
-    ifFalse: [ self error: 'Invalid projectRegistration: ' , self printString ].
   aProjectRegistration isValid
     ifFalse: [ self error: 'Invalid projectRegistration: ' , aProjectRegistration printString ].
+  self isValid
+    ifFalse: [ ^ false ].
   configurationProjectSpec
     ifNil: [ 
       aProjectRegistration configurationProjectSpec notNil

@@ -5,7 +5,7 @@ merge: aProjectRegistration
   "only one of baselineProjectSpec or configurationProjectSpec should ever be set"
 
   self shouldBeMutable.
-  (self isValid and: [ aProjectRegistration isValid ])
+  aProjectRegistration isValid
     ifFalse: [ self error: 'Invalid registrations' ].
   aProjectRegistration configurationProjectSpec
     ifNotNil: [ 
