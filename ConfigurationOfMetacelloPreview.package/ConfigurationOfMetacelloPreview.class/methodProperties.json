@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"stable:" : "dkh 10/07/2013 07:14",
+		"stable:" : "dkh 11/08/2013 21:37",
 		"version10beta3201:" : "dkh 6/17/2012 21:10",
 		"version10beta3202:" : "dkh 7/29/2012 07:34",
 		"version10beta3203:" : "dkh 9/18/2012 14:36",
@@ -12,4 +12,5 @@
 		"version10beta3207:" : "dkh 06/30/2013 12:36",
 		"version10beta3208:" : "dkh 07/16/2013 22:15",
 		"version10beta3209:" : "dkh 07/23/2013 20:46",
-		"version10beta3210:" : "dkh 10/06/2013 12:12" } }
+		"version10beta3210:" : "dkh 10/06/2013 12:12",
+		"version10beta3211:" : "dkh 11/08/2013 21:38" } }
