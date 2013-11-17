@@ -48,5 +48,3 @@ install:
    - ./build_image.sh
 
 script: $PROJECT_HOME/tests/testTravisCI.sh # -verbose
-
-
