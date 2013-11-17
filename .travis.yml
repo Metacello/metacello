@@ -3,7 +3,7 @@ language: erlang
 env:
    - ST=Pharo-1.4 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
    - ST=Pharo-2.0 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
-   - ST=Pharo-3.0 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
+#   - ST=Pharo-3.0 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st # preview is present in Pharo-3.0, bootstrap not appropriate
    - ST=Squeak-4.3 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
    - ST=Squeak-4.4 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
 #   - ST=Squeak-4.5 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st # until Issue #189 fixed: https://github.com/dalehenrich/metacello-work/issues/189
