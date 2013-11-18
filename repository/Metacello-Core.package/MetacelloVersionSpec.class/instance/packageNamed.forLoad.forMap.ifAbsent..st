@@ -4,7 +4,7 @@ packageNamed: aString forLoad: forLoad forMap: map ifAbsent: absentBlock
   ^ map
     at: aString
     ifAbsent: [ 
-      (forLoad and: [ self importArray notNil or: [ self importName notNil ] ])
+      (forLoad and: [ self importArray notNil or: [ self import notNil ] ])
         ifTrue: [ 
           "expect the 'missing' name to be satisfied within context of imported project"
           importArray
