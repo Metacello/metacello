@@ -1,3 +1,3 @@
 testing
 hasConflictWithProjectSpec: projectSpec
-	^ self subclassResponsibility
+	^ self hasLoadConflicts: projectSpec
