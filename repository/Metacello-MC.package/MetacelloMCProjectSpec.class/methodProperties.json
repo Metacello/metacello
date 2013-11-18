@@ -1,6 +1,6 @@
 {
 	"class" : {
-		 },
+		"new" : "talita 11/18/2013 22:58" },
 	"instance" : {
 		"allPackagesLoaded:" : "dkh 6/14/2012 15:53",
 		"asBaselineProjectSpec" : "dkh 6/8/2012 14:04:22",
@@ -30,6 +30,8 @@
 		"hasConflictWithConfigurationSpec:" : "otto 11/18/2013 12:07",
 		"hasConflictWithProjectSpec:" : "otto 11/18/2013 13:58",
 		"hasNoLoadConflicts:" : "dkh 04/02/2013 20:23",
+		"isBaselineOfProjectSpec" : "talita 11/18/2013 22:22",
+		"isConfigurationOfProjectSpec" : "talita 11/18/2013 22:20",
 		"isPartiallyLoaded:" : "dkh 6/8/2012 14:04:22",
 		"isPossibleBaseline" : "dkh 6/8/2012 14:04:22",
 		"loadPackageList" : "dkh 6/8/2012 14:04:22",

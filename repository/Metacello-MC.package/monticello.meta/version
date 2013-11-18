@@ -1,8 +1,8 @@
-(name 'Metacello-MC-otto.688'
-message 'MetacelloMCProjectSpec is not abstract, o dear'
-id 'c750a541-b84b-47a4-8879-ae4c736e2001'
+(name 'Metacello-MC-talita.689'
+message 'make MetacelloMCProjectSpec abstract'
+id '4d8b2aaf-939d-458e-923a-29d552679a0d'
 date '2013/11/18'
-time '14:00:40.64'
-author 'otto'
+time '23:01:48.317'
+author 'talita'
 ancestors ()
 stepChildren ())

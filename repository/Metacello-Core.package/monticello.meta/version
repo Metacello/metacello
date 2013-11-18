@@ -1,8 +1,8 @@
-(name 'Metacello-Core-otto.723'
-message 'refactored MetacelloProjectRegistration towards Config & Baseline specs doing the work. Changed lookupSpec: to use baseName so it can find whats already loaded.'
-id '61eaac08-eb3f-4864-af7f-941bb48be348'
+(name 'Metacello-Core-talita.724'
+message 'make MetacelloMCProjectSpec abstract'
+id '79ec1dac-fbba-4b1e-99a5-37fa90ad163a'
 date '2013/11/18'
-time '13:18:54.833'
-author 'otto'
+time '23:01:20.654'
+author 'talita'
 ancestors ()
 stepChildren ())
