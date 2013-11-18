@@ -14,7 +14,8 @@
 		"preLoadDoIt",
 		"postLoadDoIt",
 		"packageList",
-		"importName" ],
+		"importName",
+		"importArray" ],
 	"name" : "MetacelloVersionSpec",
 	"pools" : [
 		 ],
