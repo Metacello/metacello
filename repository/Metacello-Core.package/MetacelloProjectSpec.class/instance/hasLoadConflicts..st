@@ -1,3 +1,3 @@
-as yet unclassified
+testing
 hasLoadConflicts: aMetacelloProjectSpec
   ^ (self hasNoLoadConflicts: aMetacelloProjectSpec) not
