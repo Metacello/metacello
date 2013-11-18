@@ -30,7 +30,9 @@ packageSpecsInLoadOrderForMap: packageMap
       loadOrder
         do: [ :pkg | 
           pkg name = self import
-            ifTrue: [ importProjectSpecs at: pkg name put: pkg ] ] ].
+            ifTrue: [ 
+              importProjectSpecs at: pkg name put: pkg.
+              importProjectNameMap at: pkg name put: importNames ] ] ].
   loadOrder
     do: [ :pkg | 
       (packageNames includes: pkg name)
