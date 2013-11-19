@@ -1,3 +1,3 @@
 spec classes
 projectSpecClass
-	^ MetacelloMCConfigurationOfProjectSpec
+	^ MetacelloMCProjectSpec

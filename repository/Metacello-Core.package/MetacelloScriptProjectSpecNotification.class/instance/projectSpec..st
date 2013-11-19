@@ -1,5 +1,5 @@
 accessing
 projectSpec: anObject
-	anObject isBaselineOfProjectSpec | anObject isConfigurationOfProjectSpec
-		ifFalse: [ 0 halt ].
+	(anObject class inheritsFrom: MetacelloMCAbstractProjectSpec)
+		ifFalse: [ self error: 'Unexpected instance of ' , anObject class , ' expected a subclass of MetacelloMCAbstractProjectSpec' ].
 	projectSpec := anObject

@@ -1,8 +1,8 @@
-(name 'Metacello-MC-talita.689'
-message 'make MetacelloMCProjectSpec abstract'
-id '4d8b2aaf-939d-458e-923a-29d552679a0d'
-date '2013/11/18'
-time '23:01:48.317'
-author 'talita'
+(name 'Metacello-MC-otto.691'
+message 'Make concrete MetacelloMCProjectSpec. More code can move to it as it should take lowest precedence when merging.'
+id 'e6ee4e81-e099-41d9-abf7-9da1cc258f0c'
+date '2013/11/19'
+time '10:11:33.324'
+author 'otto'
 ancestors ()
 stepChildren ())

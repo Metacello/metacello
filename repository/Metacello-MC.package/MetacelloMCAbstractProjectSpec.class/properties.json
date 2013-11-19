@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "MetacelloMCConfigurationOfProjectSpec",
+		"file" ],
+	"name" : "MetacelloMCAbstractProjectSpec",
 	"pools" : [
 		 ],
-	"super" : "MetacelloMCAbstractProjectSpec",
+	"super" : "MetacelloGenericProjectSpec",
 	"type" : "normal" }
