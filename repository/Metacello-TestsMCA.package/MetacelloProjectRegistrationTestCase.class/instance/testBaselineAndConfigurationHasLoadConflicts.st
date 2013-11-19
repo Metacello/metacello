@@ -1,0 +1,5 @@
+tests
+testBaselineAndConfigurationHasLoadConflicts
+	registrationA baselineProjectSpec: baselineProjectSpec.
+	registrationB configurationProjectSpec: configurationProjectSpec.
+	self assert: (registrationA hasLoadConflicts: registrationB)
