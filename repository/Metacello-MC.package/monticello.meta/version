@@ -1,8 +1,8 @@
-(name 'Metacello-MC-otto.691'
-message 'Make concrete MetacelloMCProjectSpec. More code can move to it as it should take lowest precedence when merging.'
-id 'e6ee4e81-e099-41d9-abf7-9da1cc258f0c'
+(name 'Metacello-MC-otto.692'
+message 'renaming of MetacelloMCProjectSpec seem to cause problems. Reverted'
+id '71ebce60-3d01-4742-a1ae-b5f47b15d258'
 date '2013/11/19'
-time '10:11:33.324'
+time '10:33:48.403'
 author 'otto'
 ancestors ()
 stepChildren ())

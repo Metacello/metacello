@@ -1,5 +1,5 @@
 instance creation
 new
-	self name == #MetacelloMCAbstractProjectSpec
+	self name == #MetacelloMCProjectSpec
 		ifTrue: [ self error: 'This class is abstract' ].
 	^ super new

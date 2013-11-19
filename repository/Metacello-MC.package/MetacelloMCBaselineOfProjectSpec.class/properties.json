@@ -10,5 +10,5 @@
 	"name" : "MetacelloMCBaselineOfProjectSpec",
 	"pools" : [
 		 ],
-	"super" : "MetacelloMCAbstractProjectSpec",
+	"super" : "MetacelloMCProjectSpec",
 	"type" : "normal" }
