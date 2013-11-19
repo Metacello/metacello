@@ -1,8 +1,8 @@
-(name 'Metacello-Core-otto.726'
-message 'renaming of MetacelloMCProjectSpec seem to cause problems. Reverted'
-id '86faef82-42ab-4843-a9cb-51b89aedb4ef'
+(name 'Metacello-Core-otto.728'
+message 'removed assertion on setting project - class version problem'
+id 'a77466c3-837d-45d5-a294-7a0ec8a216eb'
 date '2013/11/19'
-time '10:33:21.313'
+time '13:10:58.14'
 author 'otto'
 ancestors ()
 stepChildren ())
