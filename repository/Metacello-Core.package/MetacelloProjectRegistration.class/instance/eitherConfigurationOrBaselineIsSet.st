@@ -1,0 +1,3 @@
+testing
+eitherConfigurationOrBaselineIsSet
+	^ configurationProjectSpec notNil xor: baselineProjectSpec notNil

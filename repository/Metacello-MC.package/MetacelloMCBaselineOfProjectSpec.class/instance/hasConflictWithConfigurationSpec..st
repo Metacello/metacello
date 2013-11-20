@@ -1,0 +1,3 @@
+testing
+hasConflictWithConfigurationSpec: projectSpec
+	^ false
