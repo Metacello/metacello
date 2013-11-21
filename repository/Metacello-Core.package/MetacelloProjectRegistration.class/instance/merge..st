@@ -4,5 +4,9 @@ merge: aProjectRegistration
 
 	self shouldBeMutable.
 	aProjectRegistration validate.
-	projectName := aProjectRegistration projectName.	"For now, just take the other registration's projectName, it is valid after all"
+	projectName = aProjectRegistration projectName
+		ifFalse: [ 
+			self
+				error:
+					'This should be unreachable as I cant see how we could have matched this registration without a projectName in the first place' ].
 	self overwriteProjectSpecFromRegistration: aProjectRegistration
