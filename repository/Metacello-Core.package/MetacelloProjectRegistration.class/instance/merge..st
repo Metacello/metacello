@@ -4,11 +4,5 @@ merge: aProjectRegistration
 
 	self shouldBeMutable.
 	aProjectRegistration validate.
-	self validate.
-	aProjectRegistration configurationProjectSpec
-		ifNotNilDo: [ :aSpec | 
-			configurationProjectSpec := aSpec.
-			baselineProjectSpec := nil ]
-		ifNil: [ 
-			baselineProjectSpec := aProjectRegistration baselineProjectSpec.
-			configurationProjectSpec := nil ]
+	projectName := aProjectRegistration projectName.	"For now, just take the other registration's projectName, it is valid after all"
+	self overwriteProjectSpecFromRegistration: aProjectRegistration
