@@ -1,8 +1,8 @@
-(name 'Metacello-Core-otto.732'
-message 'relax own validation if merging another registration in'
-id '85d48019-35c9-4969-bc57-496abef85954'
-date '2013/11/21'
-time '14:25:10.871'
+(name 'Metacello-Core-otto.733'
+message 'warn user if project names differ'
+id '85d48019-35c9-4969-bc57-496abef85955'
+date '2013/11/22'
+time '08:25:10.871'
 author 'otto'
 ancestors ()
 stepChildren ())

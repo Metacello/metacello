@@ -6,7 +6,5 @@ merge: aProjectRegistration
 	aProjectRegistration validate.
 	projectName = aProjectRegistration projectName
 		ifFalse: [ 
-			self
-				error:
-					'This should be unreachable as I cant see how we could have matched this registration without a projectName in the first place' ].
+			Warning signal: 'Did not expect project name ', projectName printString, ' to differ with merging project name ', aProjectRegistration projectName printString ].
 	self overwriteProjectSpecFromRegistration: aProjectRegistration
