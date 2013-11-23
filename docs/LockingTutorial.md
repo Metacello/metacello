@@ -1,15 +1,57 @@
-# Locking Example
+# Locking Tutorial
 
-Project locking[1] is a new feature in Metacello. Project locking can be
-used to lock the **version** of a project (as described here[1] and
-here[2]), but it can also be used to lock the **location**
+[Project locking][1] is a new feature in Metacello. Project locking can be
+used to lock the **version** of a project (as described [here][1] and
+[here][2]), but it can also be used to lock the **replository location** of a
+project, as well.
+
+When you put a project into production you should be managing the
+references to *external projects* very carefully. You cannot afford to
+have an innocent update by the external project maintainers introduce a
+regression into your production application.
+
+In the past, if you wanted to take *total control* of you project's source code,
+you needed to resort to using [repository overrides][3] or
+editting configuration files directly. Neither of these options are
+ideal.
+
+The `lock` command has been introduced to provide developers with
+explicit control over which **version/repository** combination is used
+for each project. 
+
+Before getting started, you need to make sure that you've [installed the
+Metacello Preview][5] into your system.
+
+## Example Projects
+
+In order to give you a better feel for how the `lock` command works,
+I've created a collection of projects that can be used for hands on
+experiments with various aspects of the `lock` command.
+
+### Example Project
+
+The [**Example** project][4] has been created to represent *your* production
+application. For the purposes of this tutorial, you *own* the baseline and the packages associated with
+this project. So let's clone the github repository to your local disk
+and checkout the `otto` branch:
+
+```Shell
+cd /opt/git
+git clone git@github.com:dalehenrich/example.git
+cd example
+git checkout otto
+```
+Now, let's load the **BaselineOfExample** into our image, so we can see
+the structure of the project:
 
 ```Smalltalk
 Metacello new.
   baseline: 'Example';
-  repository: 'github://dalehenrich/example:otto/repository';
+  repository: 'filetree:///opt/git/example/repository';
   get.
 ```
+With the baseline loaded, let's navigate to the baseline spec
+(*BaselineOfExample>>baseline:) and see what we have:
 
 ```Smalltalk
 baseline: spec
@@ -125,3 +167,6 @@ Metacello new.
 
 [1]: MetacelloScriptingAPI.md#locking
 [2]: MetacelloUserGuide.md#locking
+[3]: https://code.google.com/p/metacello/wiki/FAQ#How_do_I_override_the_repository_for_a_config?
+[4]: https://github.com/dalehenrich/example/tree/otto
+[5]: https://github.com/dalehenrich/metacello-work/blob/master/README.md

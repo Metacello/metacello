@@ -275,7 +275,7 @@ The locked command returns a list of locked project specs.
       baseline: 'Sample';
       lock.
     ```
-* Additional documentation[3] and examples[4] are available
+* Additional [documentation][3] and [an example locking project][4] are available
 ### Unlocking
 
 To unlock a project, use the `unlock:` command:
@@ -567,4 +567,4 @@ is rooted in the projects HOME directory.
 [1]: http://www.pharo-project.org/pharo-download/release-1-3
 [2]: http://www.squeak.org/Download/
 [3]: MetacelloUserGuide.md#locking
-[4]: LockingExample.md
+[4]: LockingTutorial.md
