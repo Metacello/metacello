@@ -19,6 +19,33 @@ The `lock` command has been introduced to provide developers with
 explicit control over which **version/repository** combination is used
 for each project. 
 
+When you `lock` a project:
+
+```Smalltalk
+Metacello new
+  configuration: 'External';
+  version: '1.0.0';
+  repository: 'server:///opt/git/externalDir';
+  lock.
+```
+you are telling Metacello to **always** use the *version* and
+*repository* no matter how it is specified in a configuration or
+baseline when it is referenced. 
+
+If, after locking a project, you load a project with a project
+reference like the following (version '1.0.0' and repository 'http://ss3.gemtalksystems.com/ss/external'):
+
+```Smalltalk
+spec
+  configuration: 'External'
+    with: [ 
+      spec
+        version: '1.1.0';
+          loads: 'External Core';
+          repository: 'http://ss3.gemtalksystems.com/ss/external' ];
+ ```
+Metacello 
+
 Before getting started, you need to make sure that you've [installed the
 Metacello Preview][5] into your system.
 
@@ -112,7 +139,7 @@ baseline: spec
         configuration: 'External'
           with: [ 
               spec
-                version: #'otto';
+                version: '1.0.0';
                 loads: 'External Core';
                 repository: 'http://ss3.gemtalksystems.com/ss/external' ];
         baseline: 'Sample'
@@ -138,28 +165,26 @@ The **Alternate** project is composed of two more *external projects*:
 - [External Project](#external-project)
 - [Sample Project](#sample-project)
 
-### Taking control of the source
+### Take control of the source
 
 The first step is to make local copies of each of the external project repositories. With
-local copies, ou can ensure that the repository contents won't be
+local copies, you can ensure that the repository contents won't be
 changed without your knowledge, and you can we protect yourselves from third party server and network outages. 
 
-Being `git` repositories, the **Sample** and **Alternate** projects are easy to clone:
+Clone the **Sample** and **Alternate** `git` repositories:
 
 ```Shell
 cd /opt/git
 git clone git@github.com:dalehenrich/sample.git
 git clone git@github.com:dalehenrich/alternate.git
 ```
-To clone the **External** project we'll create a directory to house the
-mcz files:
+Copy the packages in the **External** repository to local directory:
  
 ```Shell
 cd /opt/git
 mkdir externalDir
 ```
-then use `Gofer` to copy the
-versions of packages that we're interested in:
+Use `Gofer` to copy the packages into the directory:
 
 ```Smalltalk
 | source goSource destination goDestination files destinationFiles |
@@ -184,26 +209,30 @@ files reject: [ :file | destinationFiles includes: file ] thenDo: [ :file |
 
 goDestination push. "sends everything to the directory repo"
 ```
-This a variation on the [SqueakSource migration script](http://www.squeaksource.com/).
+### Lock the projects
 
 ```Smalltalk
 Metacello new
+  baseline: 'Alternate';
+  repository: 'filetree:///opt/git/alternate/repository';
+  lock.
+Metacello new
   configuration: 'External';
-  version: #otto;
+  version: '1.0.0';
   repository: 'server:///opt/git/externalDir';
   lock.
 Metacello new
   baseline: 'Sample';
- repository: 'filetree:///opt/git/sample/repository';
+  repository: 'filetree:///opt/git/sample/repository';
   lock.
 ```
 
 ```Smalltalk
-Metacello new.
+Metacello new
   baseline: 'Example';
   repository: 'github://dalehenrich/example:otto/repository';
   get.
-Metacello new.
+Metacello new
   baseline: 'Example';
   load.
 ```
