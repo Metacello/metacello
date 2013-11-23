@@ -26,7 +26,11 @@ Metacello Preview][5] into your system.
 
 In order to give you a better feel for how the `lock` command works,
 I've created a collection of projects that can be used for hands on
-experiments with various aspects of the `lock` command.
+experiments with various aspects of the `lock` command:
+
+- [Example Project](#example-project)
+- [External Project](#external-project)
+- [Sample Project](#sample-project)
 
 ### Example Project
 
@@ -41,7 +45,7 @@ git clone git@github.com:dalehenrich/example.git
 cd example
 git checkout otto
 ```
-Now, let's load the **BaselineOfExample** into our image, so we can see
+Now, let's load the `BaselineOfExample` into our image, so we can see
 the structure of the project:
 
 ```Smalltalk
@@ -51,7 +55,7 @@ Metacello new.
   get.
 ```
 With the baseline loaded, let's navigate to the baseline spec
-(*BaselineOfExample>>baseline:) and see what we have:
+(`BaselineOfExample>>baseline:`) and see what we have:
 
 ```Smalltalk
 baseline: spec
@@ -65,7 +69,7 @@ baseline: spec
               spec
                 version: #'otto';
                 loads: 'External Core';
-                repository: 'http://ss3.gemstone.com/ss/external' ];
+                repository: 'http://ss3.gemtalksystems.com/ss/external' ];
         baseline: 'Sample'
           with: [ spec repository: 'github://dalehenrich/sample:otto/repository' ];
         import: 'Sample' provides: #('Sample Core' 'Sample Tests');
@@ -84,6 +88,55 @@ baseline: spec
         group: 'Example Tests' with: #('Tests');
         yourself ]
 ```
+From the baseline we see that there are two *external projects*
+referenced:
+
+- [External Project](#external-project)
+- [Sample Project](#sample-project)
+
+It's these two projects that we are going to need to take control of in
+order to protect ourselves from unwanted changes. 
+
+#### Local repository copies
+
+The first step is to make local copies of each of the repositories. With
+local copies, we ensure that the repository contents won't be
+changed without our knowledge, and we protect ourselves from network
+outages. 
+
+Being a `git` repository, the **Sample** project is easy to clone:
+
+```Shell
+cd /opt/git
+git clone git@github.com:dalehenrich/sample.git
+```
+To clone the **External** project we'll use `Gofer` to copy the
+versions of packages that we're interested in:
+
+```Shell
+cd /opt/git
+mkdir externalDir
+```
+Then:
+
+```Smalltalk
+| repo |
+Gofer new
+  version: 'External-Core-dkh.6';
+  version: 'External-Tests-dkh.3';
+  version: 'ConfigurationOfExternal-dkh.15';
+  url: 'http://ss3.gemstone.com/ss/external';
+  fetch.
+repo := MCDirectoryRepository
+         directory: (FileDirectory on: '/opt/git/externalDir'.
+Gofer new
+  version: 'External-Core-dkh.6';
+  version: 'External-Tests-dkh.3';
+  version: 'ConfigurationOfExternal-dkh.15';
+  repository: repo;
+  push.
+```
+This a variation on the [SqueakSource migration script](http://www.squeaksource.com/).
 
 ```Smalltalk
 Metacello new
@@ -120,29 +173,6 @@ gofer := Gofer new.
 gofer unload. 
 ```
 
-```Shell
-cd /opt/git
-git clone git@github.com:dalehenrich/sample.git
-```
-
-```Smalltalk
-| repo |
-Gofer new
-  version: 'External-Core-dkh.6';
-  version: 'External-Tests-dkh.3';
-  version: 'ConfigurationOfExternal-dkh.15';
-  url: 'http://ss3.gemstone.com/ss/external';
-  fetch.
-repo := MCDirectoryRepository
-         directory: (FileDirectory on: '/opt/git/externalDir'.
-Gofer new
-  version: 'External-Core-dkh.6';
-  version: 'External-Tests-dkh.3';
-  version: 'ConfigurationOfExternal-dkh.15';
-  repository: repo;
-  push.
-```
-
 ```Smalltalk
 Metacello new
   configuration: 'External';
@@ -164,6 +194,11 @@ Metacello new.
   baseline: 'Example';
   load.
 ```
+## Appendix
+
+### External Project
+
+### Sample Project
 
 [1]: MetacelloScriptingAPI.md#locking
 [2]: MetacelloUserGuide.md#locking
