@@ -29,10 +29,11 @@ I've created a collection of projects that can be used for hands on
 experiments with various aspects of the `lock` command:
 
 - [Example Project](#example-project)
+- [Alternate Project](#alternate-project)
 - [External Project](#external-project)
 - [Sample Project](#sample-project)
 
-### Example Project
+### Example Project Structure
 
 The [**Example** project][4] has been created to represent *your* production
 application. For the purposes of this tutorial, you *own* the baseline and the packages associated with
@@ -64,6 +65,50 @@ baseline: spec
     for: #'common'
     do: [ 
       spec
+        baseline: 'Alternate'
+          with: [ spec repository: 'github://dalehenrich/alternate:otto/repository' ];
+        import: 'Alternate' provides: #('Alternate Core' 'Alternate Tests');
+        yourself.
+      spec
+        package: 'Example-Core' with: [ spec requires: #('Alternate Core') ];
+        package: 'Example-Tests'
+          with: [ spec requires: #('Example-Core' 'Alternate Tests') ];
+        yourself.
+      spec
+        group: 'default' with: #('Core');
+        group: 'Core' with: #('Example-Core');
+        group: 'Tests' with: #('Example-Tests');
+        group: 'Example Core' with: #('Core');
+        group: 'Example Tests' with: #('Tests');
+        yourself ]
+```
+From the baseline we see that there is a single *external project*
+referenced: 
+
+- [Alternate Project](#alternate-project)
+
+For the purposes of this tutorial, the
+**Alternate** project is the moral equivalent of [Seaside][6] (a project
+that itself is composed of a number projects).
+
+Let's load `BaselineOfAlternate`:
+
+```Smalltalk
+Metacello new.
+  baseline: 'Examplelternate';
+  repository: 'github:/dalehenrich/alternate:otto/repository';
+  get.
+```
+navigate to the baseline spec
+(`BaselineOfAlternate>>baseline:`) and see what we have:
+
+```Smalltalk
+baseline: spec
+  <baseline>
+  spec
+    for: #'common'
+    do: [ 
+      spec
         configuration: 'External'
           with: [ 
               spec
@@ -75,66 +120,69 @@ baseline: spec
         import: 'Sample' provides: #('Sample Core' 'Sample Tests');
         yourself.
       spec
-        package: 'Example-Core'
+        package: 'Alternate-Core'
           with: [ spec requires: #('Sample Core' 'External') ];
-        package: 'Example-Tests'
-          with: [ spec requires: #('Example-Core' 'Sample Tests') ];
+        package: 'Alternate-Tests'
+          with: [ spec requires: #('Alternate-Core' 'Sample Tests') ];
         yourself.
       spec
         group: 'default' with: #('Core');
-        group: 'Core' with: #('Example-Core');
-        group: 'Tests' with: #('Example-Tests');
-        group: 'Example Core' with: #('Core');
-        group: 'Example Tests' with: #('Tests');
+        group: 'Core' with: #('Alternate-Core');
+        group: 'Tests' with: #('Alternate-Tests');
+        group: 'Alternate Core' with: #('Core');
+        group: 'Alternate Tests' with: #('Tests');
         yourself ]
 ```
-From the baseline we see that there are two *external projects*
-referenced:
+The **Alternate** project is composed of two more *external projects*:
 
 - [External Project](#external-project)
 - [Sample Project](#sample-project)
 
-It's these two projects that we are going to need to take control of in
-order to protect ourselves from unwanted changes. 
+### Taking control of the source
 
-#### Local repository copies
+The first step is to make local copies of each of the external project repositories. With
+local copies, ou can ensure that the repository contents won't be
+changed without your knowledge, and you can we protect yourselves from third party server and network outages. 
 
-The first step is to make local copies of each of the repositories. With
-local copies, we ensure that the repository contents won't be
-changed without our knowledge, and we protect ourselves from network
-outages. 
-
-Being a `git` repository, the **Sample** project is easy to clone:
+Being `git` repositories, the **Sample** and **Alternate** projects are easy to clone:
 
 ```Shell
 cd /opt/git
 git clone git@github.com:dalehenrich/sample.git
+git clone git@github.com:dalehenrich/alternate.git
 ```
-To clone the **External** project we'll use `Gofer` to copy the
-versions of packages that we're interested in:
-
+To clone the **External** project we'll create a directory to house the
+mcz files:
+ 
 ```Shell
 cd /opt/git
 mkdir externalDir
 ```
-Then:
+then use `Gofer` to copy the
+versions of packages that we're interested in:
 
 ```Smalltalk
-| repo |
-Gofer new
-  version: 'External-Core-dkh.6';
-  version: 'External-Tests-dkh.3';
-  version: 'ConfigurationOfExternal-dkh.15';
-  url: 'http://ss3.gemstone.com/ss/external';
-  fetch.
-repo := MCDirectoryRepository
+| source goSource destination goDestination files destinationFiles |
+
+source := MCHttpRepository location: 'http://ss3.gemstone.com/ss/external'.
+destination := MCDirectoryRepository
          directory: (FileDirectory on: '/opt/git/externalDir'.
-Gofer new
-  version: 'External-Core-dkh.6';
-  version: 'External-Tests-dkh.3';
-  version: 'ConfigurationOfExternal-dkh.15';
-  repository: repo;
-  push.
+
+goSource := Gofer new repository: source.
+goDestination := Gofer new repository: destination.
+
+files := source allVersionNames.
+
+(goSource allResolved select: [ :resolved | files anySatisfy: [ :each |
+    resolved name = each ] ]) do: [ :each | goSource package: each packageName ].
+
+goSource fetch. "downloads all mcz on your computer"
+
+destinationFiles := destination allVersionNames. "checks what files are already at destination"
+files reject: [ :file | destinationFiles includes: file ] thenDo: [ :file |
+    goDestination version: file ]. "selects only the mcz that are not yet at destination"
+
+goDestination push. "sends everything to the directory repo"
 ```
 This a variation on the [SqueakSource migration script](http://www.squeaksource.com/).
 
@@ -196,6 +244,8 @@ Metacello new.
 ```
 ## Appendix
 
+### Alternate Project
+
 ### External Project
 
 ### Sample Project
@@ -205,3 +255,4 @@ Metacello new.
 [3]: https://code.google.com/p/metacello/wiki/FAQ#How_do_I_override_the_repository_for_a_config?
 [4]: https://github.com/dalehenrich/example/tree/otto
 [5]: https://github.com/dalehenrich/metacello-work/blob/master/README.md
+[6]: http://seaside.st
