@@ -310,6 +310,10 @@ Metacello image
 
 The newly loaded of the project will continue to be locked.
 
+### Locking Example
+
+A [detailed locking example project](LockingTutorial.md) is available.
+
 ## Switching Project Repositories
 
 If you have loaded a project directly from GitHub, say
