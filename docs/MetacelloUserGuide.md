@@ -312,7 +312,7 @@ The newly loaded of the project will continue to be locked.
 
 ### Locking Example
 
-A [detailed locking example project](LockingTutorial.md) is available.
+A [detailed locking example project](LockCommandReference.md) is available.
 
 ## Switching Project Repositories
 

@@ -567,4 +567,4 @@ is rooted in the projects HOME directory.
 [1]: http://www.pharo-project.org/pharo-download/release-1-3
 [2]: http://www.squeak.org/Download/
 [3]: MetacelloUserGuide.md#locking
-[4]: LockingTutorial.md
+[4]: LockCommandReference.md

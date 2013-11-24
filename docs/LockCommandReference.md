@@ -44,8 +44,16 @@ you are telling Metacello to **always** load the baseline from the given
 **always** load the packages referenced by the baseline specification
 from the given **repository**.
 
- no matter how it is specified in a configuration or
-baseline when it is referenced. 
+By using a baseline-based project you are able to take control of the
+specificaion **and** the packages.
+
+## How the `lock` command works
+
+When a project is `locked`, Metacello records the project specification details
+(*project name*, *version*, and *repository*) in the project registry
+and marks the registration as **locked**.
+
+[](#metacello-project-`load`-details)
 
 If, after locking a project, you load a project with a project
 reference like the following (version '1.0.0' and repository 'http://ss3.gemtalksystems.com/ss/external'):
@@ -320,7 +328,7 @@ Metacello registry
   baseline: 'Example';
   onConflict: [ :ex :existing | 
     existing locked
-      ifTrue: [ ex useExisting ].
+      ifTrue: [ ex useIncoming ].
     ex pass ];
   onLock: [ :ex | ex honor ];
   load: 'Tests'.
@@ -487,6 +495,38 @@ gofer := Gofer new.
         ifNotNil: [ gofer package: packageName ] ].
 gofer unload. 
 ```
+## Metacello project `load` details
+
+During a `load`, when a project reference is encountered, Metacello
+routinely looks up the project in the project registry to see which
+version of the project is present in the image. 
+
+If the project is
+present in the image, the details for the *existing project* are compared to the
+details for the *incoming project*. If there are differences (older
+version or different repository location), a *project resolution exception*
+is signalled and the developer must choose whether to continue the load
+with the *existing project* or the *incoming project*. *Project
+resolution exceptions* come in three flavors:
+
+- Upgrade. The *incoming project spec* is newer than *existing
+  version project spec*
+- Downgrade. The  *incoming project spec* is older than *existing
+  project spec*
+- Conflict. The *incoming repository* is different than the *existing
+  repository* or the project is switching from *configuration-based* 
+  to *baseline-based*, etc.
+
+The default action for the *upgrade exception* is to use the *incoming
+project*. The *downgrade exception* and *conflict exception* must be
+handled. The `onUpgrade:`, `onDowngrade:` and `onConflict:` directives
+are provided to simplify the mechanics of exception handling during a
+`load`.
+
+Once the
+developer has chosen which *project spec* to load, the registration is checked a final time.
+If the project spec is locked a *locked project change exception* is signalled 
+and the developer must choose to *honor the lock* or to *break the lock*
 
 
 
