@@ -90,7 +90,7 @@ experiments with various aspects of the `lock` command:
 ### Example Project Structure
 
 The [**Example** project][4] has been created to represent *your* production
-application. For the purposes of this tutorial, you *own* the baseline and the packages associated with
+application. For the purposes of this example, you *own* the baseline and the packages associated with
 this project. So let's clone the github repository to your local disk
 and checkout the `otto` branch:
 
@@ -101,7 +101,7 @@ cd example
 git checkout otto
 ```
 Now, let's load the `BaselineOfExample` into our image, so we can see
-the structure of the project:
+the structure of your project:
 
 ```Smalltalk
 Metacello new.
@@ -141,11 +141,11 @@ referenced:
 
 - [Alternate Project](#alternate-project)
 
-For the purposes of this tutorial, the
+For the purposes of this example, the
 **Alternate** project is the moral equivalent of [Seaside][6] (a project
 that itself is composed of a number projects).
 
-Let's load `BaselineOfAlternate`:
+Let's load the `BaselineOfAlternate` baseline:
 
 ```Smalltalk
 Metacello new.
@@ -187,31 +187,34 @@ baseline: spec
         group: 'Alternate Tests' with: #('Tests');
         yourself ]
 ```
-The **Alternate** project is composed of two more *external projects*:
+The **Alternate** project is composed of two more *external projects* a
+configuration-based project [External Project](#external-project) and a
+baseline-based project [Sample Project](#sample-project). 
 
-- [External Project](#external-project)
-- [Sample Project](#sample-project)
+At the end of the day, you will need to take control control of two
+baseline-based projects and a configuration-based project.
 
 ### Take control of the source
 
-The first step is to make local copies of each of the external project repositories. With
-local copies, you can ensure that the repository contents won't be
-changed without your knowledge, and you can protect youself from third party server and network outages. 
-
-#### BaselineOf projects
-
-Clone the **Sample** and **Alternate** `git` repositories:
+As discussed earlier, once you've cloned the repositories for the
+baseline-based projects (**Alternate** and **Sample**(, 
+the projects are completely under your control:
 
 ```Shell
 cd /opt/git
 git clone git@github.com:dalehenrich/sample.git
 git clone git@github.com:dalehenrich/alternate.git
 ```
+To take control of the configuration-based project, you can either copy
+the configuration to a local repository or you can convert the project
+into a baseline-based project.
 
-#### ConfigurationOf projects
+If you decide to copy the configuration, you should plan on editting the 
+specs for the version that you are using to reference your own package
+repository for the project.
 
-The **External** project is a configuration-based project, so you'll need
-to:
+If you decide to convert the project into a baseline-based project,
+you'll need to extract the baseline for version that you are using.
 
 1. Create a local filetree repository.
 2. Copy the packages from the http repository into the local filetree
