@@ -47,13 +47,14 @@ from the given **repository**.
 By using a baseline-based project you are able to take control of the
 specificaion **and** the packages.
 
-## How the `lock` command works
+See the section on [Metacello project load details](#metacello-project-load-details) for a more detailed description of the lock and load mechanics.
+
+####
 
 When a project is `locked`, Metacello records the project specification details
-(*project name*, *version*, and *repository*) in the project registry
+(*project name*, *version*, and *repository*) in the project registry as
+an *existing project*
 and marks the registration as **locked**.
-
-[](#metacello-project-`load`-details)
 
 If, after locking a project, you load a project with a project
 reference like the following (version '1.0.0' and repository 'http://ss3.gemtalksystems.com/ss/external'):
@@ -528,6 +529,29 @@ developer has chosen which *project spec* to load, the registration is checked a
 If the project spec is locked a *locked project change exception* is signalled 
 and the developer must choose to *honor the lock* or to *break the lock*
 
+In this example script where the [**External**
+project](#external-project) (referenced by
+the [**Alternate** project](#alternate-project) is `locked`:
+
+```Smalltalk
+Metacello new
+  baseline: 'External';
+  repository: 'filetree:///opt/git/external';
+  lock.
+Metacello new
+  baseline: 'Alternate';
+  repository: 'github://dalehenrich/alternate:otto/repository';
+  onConflict: [ :ex :existing :incoming | 
+    existing locked
+      ifTrue: [ ex useExisting ].
+    ex pass ];
+  onLock: [ :ex | ex honor ];
+  load: 'Tests'.
+```
+The [**External** project](#external-project) baseline and packages will
+be loaded from the *filetree:///opt/git/external* repository instead of
+the *http://ss3.gemtalksystems.com/ss/external* repository as specified
+by the [**Alternate** project](#alternate-project).
 
 
 [1]: MetacelloScriptingAPI.md#locking
