@@ -1,5 +1,16 @@
 # Lock Command Reference
 
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [`lock` command](#lock-command)
+3. [`lock` command in action](#lock-command-in-action)
+4. [Appendix](#appendix)
+  1. [Alternate Project](#alternate-project)
+  2. [External Project](#external-project)
+
+## Introduction
+
 When you put a project into production you should be managing the
 references to *external projects* very carefully. You cannot afford to
 have an innocent update by the external project maintainers introduce a
@@ -25,11 +36,14 @@ Metacello new
   lock.
 ```
 you are telling Metacello to **always** use the given *version* and
-to **always** load the configuration from the given *repository*.
+to **always** load the configuration from the given *repository*. 
 
 If you specify a locally owned, disk-based repository as in the example above,
 you have effectively taken control of the configuration and are able to
 insulate yourself from any changes made to the configuration.
+
+Note that the *packages* specified in the configuration will continue to 
+be loaded from the repositories as specified in the configration.
 
 When you `lock` a baseline-based project:
 
@@ -45,35 +59,14 @@ you are telling Metacello to **always** load the baseline from the given
 from the given **repository**.
 
 By using a baseline-based project you are able to take control of the
-specificaion **and** the packages.
+specification **and** the packages.
 
-See the section on [Metacello project load details](#metacello-project-load-details) for a more detailed description of the lock and load mechanics.
-
-####
-
-When a project is `locked`, Metacello records the project specification details
-(*project name*, *version*, and *repository*) in the project registry as
-an *existing project*
-and marks the registration as **locked**.
-
-If, after locking a project, you load a project with a project
-reference like the following (version '1.0.0' and repository 'http://ss3.gemtalksystems.com/ss/external'):
-
-```Smalltalk
-spec
-  configuration: 'External'
-    with: [ 
-      spec
-        version: '1.1.0';
-          loads: 'External Core';
-          repository: 'http://ss3.gemtalksystems.com/ss/external' ];
- ```
-Metacello 
+------------------------------------------
 
 Before getting started, you need to make sure that you've [installed the
 Metacello Preview][5] into your system.
 
-## Example Projects
+## `lock` command in action
 
 In order to give you a better feel for how the `lock` command works,
 I've created a collection of projects that can be used for hands on
