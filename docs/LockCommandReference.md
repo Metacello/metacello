@@ -5,9 +5,17 @@
 1. [Introduction](#introduction)
 2. [`lock` command](#lock-command)
 3. [`lock` command in action](#lock-command-in-action)
+  1. [Example Project Structure](#example-project-structure)
+  1. [Take control of the source](#take-control-of-the-source)
+  1. [Lock the projects](#lock-the-projects)
+  1. [Load the Example](#load-the-example)
 4. [Appendix](#appendix)
   1. [Alternate Project](#alternate-project)
   2. [External Project](#external-project)
+  3. [Sample Project](#sample-project)
+  4. [Package download script for complex projects](#package-download-script-for-complex-projects)
+  5. [Example project unload script](#example-project-unload-script)
+  6. [Metacello project `load` details](#Metacello-project-load-details)
 
 ## Introduction
 
@@ -489,7 +497,7 @@ gofer := Gofer new.
         ifNotNil: [ gofer package: packageName ] ].
 gofer unload. 
 ```
-## Metacello project `load` details
+### Metacello project `load` details
 
 During a `load`, when a project reference is encountered, Metacello
 routinely looks up the project in the project registry to see which
