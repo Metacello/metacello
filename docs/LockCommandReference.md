@@ -13,6 +13,7 @@
   1. [Alternate Project](#alternate-project)
   2. [External Project](#external-project)
   3. [Sample Project](#sample-project)
+  3, [Converting configurations to baselines](#converting-configurations-to-baselines)
   4. [Package download script for complex projects](#package-download-script-for-complex-projects)
   5. [Example project unload script](#example-project-unload-script)
   6. [Metacello project `load` details](#Metacello-project-load-details)
@@ -67,15 +68,13 @@ you are telling Metacello to **always** load the baseline from the given
 from the given **repository**.
 
 By using a baseline-based project you are able to take control of the
-specification **and** the packages.
-
-------------------------------------------
-
-Before getting started, you need to make sure that you've [installed the
-Metacello Preview][5] into your system.
+specification **and** the packages.packages
 
 ## `lock` command in action
-
+------------------------------------------
+*If you want to execute the examples in your image, you need to make sure that you've 
+[installed the Metacello Preview][5].*
+------------------------------------------
 In order to give you a better feel for how the `lock` command works,
 I've created a collection of projects that can be used for hands on
 experiments with various aspects of the `lock` command:
@@ -297,6 +296,8 @@ baseline: spec
         group: 'External Tests' with: #('Tests');
         yourself ]
 ```
+For more complicated conversion problems, see the section on [Converting configurations to baselines](#converting-configurations-to-baselines) in the [Appendix](#appendix).
+
 ### Lock the projects
 
 Now that the repositories have been cloned to your local disk, the
@@ -344,6 +345,14 @@ referenced, since you always run the risk of introducing an
 incompatibility when you aren't using the official repository.
 
 ## Appendix
+
+  1. [Alternate Project](#alternate-project)
+  2. [External Project](#external-project)
+  3. [Sample Project](#sample-project)
+  3, [Converting configurations to baselines](#converting-configurations-to-baselines)
+  4. [Package download script for complex projects](#package-download-script-for-complex-projects)
+  5. [Example project unload script](#example-project-unload-script)
+  6. [Metacello project `load` details](#Metacello-project-load-details)
 
 ### Alternate Project
 
@@ -446,6 +455,7 @@ baseline: spec
         group: 'Sample Tests' with: #('Tests');
         yourself ]
 ```
+### Converting configurations to baselines
 
 ### Package download script for complex projects
 
