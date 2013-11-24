@@ -10,6 +10,7 @@
   1. [Lock the projects](#lock-the-projects)
   1. [Load the Example](#load-the-example)
 4. [Appendix](#appendix)
+  1. [Example Project](#example-project)
   1. [Alternate Project](#alternate-project)
   2. [External Project](#external-project)
   3. [Sample Project](#sample-project)
@@ -346,6 +347,7 @@ incompatibility when you aren't using the official repository.
 
 ## Appendix
 
+  1. [Example Project](#example-project)
   1. [Alternate Project](#alternate-project)
   2. [External Project](#external-project)
   3. [Sample Project](#sample-project)
@@ -354,7 +356,11 @@ incompatibility when you aren't using the official repository.
   5. [Example project unload script](#example-project-unload-script)
   6. [Metacello project `load` details](#Metacello-project-load-details)
 
+### Example
+[Example repository](https://github.com/dalehenrich/example/tree/otto)
+
 ### Alternate Project
+[Alternate project repository](https://github.com/dalehenrich/alternate/tree/otto)
 
 Baseline: 
 
@@ -391,6 +397,7 @@ baseline: spec
 ```
 
 ### External Project
+[External project repository](http://ss3.gemstone.com/ss/external.html)
 
 Configuration:
 
@@ -436,6 +443,7 @@ baseline: spec
 ```
 
 ### Sample Project
+[Sample project repository](https://github.com/dalehenrich/sample/tree/otto)
 
 Baseline: 
 
