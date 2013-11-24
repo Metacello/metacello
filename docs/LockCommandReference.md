@@ -64,17 +64,19 @@ Metacello new
   lock.
 ```
 you are telling Metacello to **always** load the baseline from the given
-**repository** and, given the way that baseine-based projects work, to
+**repository** and, given the way that baseline-based projects work, to
 **always** load the packages referenced by the baseline specification
 from the given **repository**.
 
 By using a baseline-based project you are able to take control of the
-specification **and** the packages.packages
+specification **and** the packages.
 
 ## `lock` command in action
+
 ------------------------------------------
 *If you want to execute the examples in your image, you need to make sure that you've 
 [installed the Metacello Preview][5].*
+
 ------------------------------------------
 In order to give you a better feel for how the `lock` command works,
 I've created a collection of projects that can be used for hands on
