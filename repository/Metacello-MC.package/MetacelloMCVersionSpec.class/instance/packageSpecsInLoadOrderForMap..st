@@ -41,7 +41,7 @@ packageSpecsInLoadOrderForMap: packageMap
         at: pkg name
         ifPresent: [ :importProjectSpec | 
           "insert the imports at this point"
-          (importProjectNameMap at: pkg name)
+          (importProjectNameMap at: pkg name ifAbsent: [ #() ])
             do: [ :importedName | 
               pkgs
                 add:
