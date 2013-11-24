@@ -122,7 +122,7 @@ Let's load `BaselineOfAlternate`:
 
 ```Smalltalk
 Metacello new.
-  baseline: 'Examplelternate';
+  baseline: 'Alternate';
   repository: 'github:/dalehenrich/alternate:otto/repository';
   get.
 ```
@@ -169,7 +169,9 @@ The **Alternate** project is composed of two more *external projects*:
 
 The first step is to make local copies of each of the external project repositories. With
 local copies, you can ensure that the repository contents won't be
-changed without your knowledge, and you can we protect yourselves from third party server and network outages. 
+changed without your knowledge, and you can protect youself from third party server and network outages. 
+
+#### BaselineOf projects
 
 Clone the **Sample** and **Alternate** `git` repositories:
 
@@ -178,38 +180,103 @@ cd /opt/git
 git clone git@github.com:dalehenrich/sample.git
 git clone git@github.com:dalehenrich/alternate.git
 ```
-Copy the packages in the **External** repository to local directory:
+
+#### ConfigurationOf projects
+
+The **External** project is a configuration-based project, so you'll need
+to:
+
+1. Create a local filetree repository.
+2. Copy the packages from the http repository into the local filetree
+   repository.
+3. Create a **BaselineOfExternal** to replace the **ConfigurationOfExternal**.
+
+##### Local filetree repository
+
+First create a local directory for the repository (ans
+optionally turn the directory into a git repository):
  
 ```Shell
 cd /opt/git
 mkdir externalDir
+cd externalDir
+mkdir repository
+git init
 ```
-Use `Gofer` to copy the packages into the directory:
+
+##### Copy packages to filetree repository
+
+Use the `fetch` command to download the project packages into the
+filetree repository:
 
 ```Smalltalk
-| source goSource destination goDestination files destinationFiles |
+Metacello new
+  configuration: 'External';
+  version: '1.0.0';
+  repository: 'http://ss3.gemtalksystems.com/ss/external';
+  cacheRepository: 'filetree:///opt/git/externalDir/repository';
+  ignoreImage;
+  fetch: 'ALL'.
+```
+If you project is more complex (i.e., has dependent projects) then you
+will want to isolate each project in it's own git repository. In that
+case you will want to use the [complex project download script][#package-download-script-for-complex-projects].
 
-source := MCHttpRepository location: 'http://ss3.gemstone.com/ss/external'.
-destination := MCDirectoryRepository
-         directory: (FileDirectory on: '/opt/git/externalDir'.
+##### Create a BaselineOf
 
-goSource := Gofer new repository: source.
-goDestination := Gofer new repository: destination.
+Start by creating the **BaselineOfExternal** as a subclass of
+**BaselineOf**. The class should be in a category of the same name and
+create a package for that category as well. Then copy the appropriate baseline
+method from **CofigurationOfExternal** in this 
+case `ConfigurationOfExternal>>baseline1000:`:
 
-files := source allVersionNames.
+```Smalltalk
+baseline1000: spec
+  <baseline: '1.0.0-baseline'>
+  spec
+    for: #'common'
+    do: [ 
+      spec blessing: #'baseline'.
+      spec repository: 'http://ss3.gemstone.com/ss/external'.
+      spec
+        package: 'External-Core';
+        package: 'External-Tests' with: [ spec requires: 'External-Core' ];
+        yourself.
+      spec
+        group: 'default' with: #('Core');
+        group: 'Core' with: #('External-Core');
+        group: 'Tests' with: #('External-Tests');
+        group: 'External Core' with: #('Core');
+        group: 'External Tests' with: #('Tests');
+        yourself ]
+```
+into `BaselineOfExternal>>baseline:` and edit out the unnecessary
+statements. In this case we only needed to change the pragma to `<baseline>` and 
+remove the #blessing: and #repository: statements:
 
-(goSource allResolved select: [ :resolved | files anySatisfy: [ :each |
-    resolved name = each ] ]) do: [ :each | goSource package: each packageName ].
-
-goSource fetch. "downloads all mcz on your computer"
-
-destinationFiles := destination allVersionNames. "checks what files are already at destination"
-files reject: [ :file | destinationFiles includes: file ] thenDo: [ :file |
-    goDestination version: file ]. "selects only the mcz that are not yet at destination"
-
-goDestination push. "sends everything to the directory repo"
+```Smalltalk
+baseline: spec
+  <baseline>
+  spec
+    for: #'common'
+    do: [ 
+     spec
+        package: 'External-Core';
+        package: 'External-Tests' with: [ spec requires: 'External-Core' ];
+        yourself.
+      spec
+        group: 'default' with: #('Core');
+        group: 'Core' with: #('External-Core');
+        group: 'Tests' with: #('External-Tests');
+        group: 'External Core' with: #('Core');
+        group: 'External Tests' with: #('Tests');
+        yourself ]
 ```
 ### Lock the projects
+
+Now that the repositories have been cloned to your local disk, the
+`lock` command can be used to associate the local repository with each
+of the projects:
 
 ```Smalltalk
 Metacello new
@@ -217,25 +284,181 @@ Metacello new
   repository: 'filetree:///opt/git/alternate/repository';
   lock.
 Metacello new
-  configuration: 'External';
-  version: '1.0.0';
-  repository: 'server:///opt/git/externalDir';
+  baseline: 'External';
+  repository: 'filetree:///opt/git/externalDir/repository';
   lock.
 Metacello new
   baseline: 'Sample';
   repository: 'filetree:///opt/git/sample/repository';
   lock.
 ```
+### Load the Example
+
+Use the following set of expressions to load the **Example** project:
 
 ```Smalltalk
 Metacello new
   baseline: 'Example';
   repository: 'github://dalehenrich/example:otto/repository';
   get.
-Metacello new
+Metacello registry
   baseline: 'Example';
-  load.
+  onConflict: [ :ex :existing | 
+    existing locked
+      ifTrue: [ ex useExisting ].
+    ex pass ];
+  onLock: [ :ex | ex honor ];
+  load: 'Tests'.
 ```
+The `onConflict:` block gets triggered because the locked project
+specification does not match the incoming specification. 
+
+The `onLock:` block gets triggered every time a locked project is loaded, 
+because you should always be informed when a locked project is
+referenced, since you always run the risk of introducing an
+incompatibility when you aren't using the official repository.
+
+## Appendix
+
+### Alternate Project
+
+Baseline: 
+
+```Smalltalk
+baseline: spec
+  <baseline>
+  spec
+    for: #'common'
+    do: [ 
+      spec
+        configuration: 'External'
+          with: [ 
+              spec
+                version: '1.0.0';
+                loads: 'External Core';
+                repository: 'http://ss3.gemtalksystems.com/ss/external' ];
+        baseline: 'Sample'
+          with: [ spec repository: 'github://dalehenrich/sample:otto/repository' ];
+        import: 'Sample' provides: #('Sample Core' 'Sample Tests');
+        yourself.
+      spec
+        package: 'Alternate-Core'
+          with: [ spec requires: #('Sample Core' 'External') ];
+        package: 'Alternate-Tests'
+          with: [ spec requires: #('Alternate-Core' 'Sample Tests') ];
+        yourself.
+      spec
+        group: 'default' with: #('Core');
+        group: 'Core' with: #('Alternate-Core');
+        group: 'Tests' with: #('Alternate-Tests');
+        group: 'Alternate Core' with: #('Core');
+        group: 'Alternate Tests' with: #('Tests');
+        yourself ]
+```
+
+### External Project
+
+Configuration:
+
+```Smalltalk
+baseline1000: spec
+  <version: '1.0.0-baseline'>
+  spec
+    for: #'common'
+    do: [ 
+      spec blessing: #'baseline'.
+      spec repository: 'http://ss3.gemstone.com/ss/external'.
+      spec
+        package: 'External-Core';
+        package: 'External-Tests' with: [ spec requires: 'External-Core' ];
+        yourself.
+      spec
+        group: 'default' with: #('Core');
+        group: 'Core' with: #('External-Core');
+        group: 'Tests' with: #('External-Tests');
+        group: 'External Core' with: #('Core');
+        group: 'External Tests' with: #('Tests');
+        yourself ]
+```
+Baseline:
+
+```Smalltalk
+baseline: spec
+  <baseline>
+  spec
+    for: #'common'
+    do: [ 
+      spec
+        package: 'External-Core';
+        package: 'External-Tests' with: [ spec requires: 'External-Core' ];
+        yourself.
+      spec
+        group: 'default' with: #('Core');
+        group: 'Core' with: #('External-Core');
+        group: 'Tests' with: #('External-Tests');
+        group: 'External Core' with: #('Core');
+        group: 'External Tests' with: #('Tests');
+        yourself ]
+```
+
+### Sample Project
+
+Baseline: 
+
+```Smalltalk
+baseline: spec
+  <baseline>
+  spec
+    for: #'common'
+    do: [ 
+      spec package: 'Sample-Core'.
+      spec package: 'Sample-Tests' with: [ spec requires: 'Sample-Core' ].
+      spec
+        group: 'default' with: #('Sample-Core');
+        group: 'Core' with: #('Sample-Core');
+        group: 'Tests' with: #('Sample-Tests');
+        group: 'Sample Core' with: #('Core');
+        group: 'Sample Tests' with: #('Tests');
+        yourself ]
+```
+
+### Package download script for complex projects
+
+```Smalltalk
+| configClass cacheRepository version |
+configClass := ConfigurationOfExternal.
+cacheRepository := MCDirectoryRepository
+  directory: (FileDirectory on:'/opt/git/externalDir/repository').
+cacheRepository := MCRepositoryGroup default repositories
+  detect: [ :each | each = cacheRepository ]
+  ifNone: [ cacheRepository ].
+version := configClass project version: '1.0.0'.
+version ignoreImage: true.
+(version record: 'ALL') loadDirective
+  versionDirectivesDo: [ :versionDirective | 
+    | p pClass |
+    versionDirective spec ~~ nil
+      ifTrue: [ 
+        p := versionDirective spec project.
+        pClass := p configuration class.	"save packages for configClass only"
+        (pClass == configClass)
+          ifTrue: [ 
+            | policy |
+            policy := (Smalltalk at: #'MetacelloLoaderPolicy') new
+              cacheRepository: cacheRepository;
+              ignoreImage: true;
+              yourself.
+            p fetchProject: policy.
+            versionDirective
+              packagesDo: [ :packageDirective | 
+                "skip nested configurations"
+                (packageDirective spec name beginsWith: 'ConfigurationOf')
+                  ifFalse: [ 
+                    "fetch mcz file"
+                    packageDirective spec fetchPackage: policy ] ] ] ] ]
+```
+
+### Example project unload script
 
 ```Smalltalk
 | gofer |
@@ -250,34 +473,7 @@ gofer := Gofer new.
 gofer unload. 
 ```
 
-```Smalltalk
-Metacello new
-  configuration: 'External';
-  version: #otto;
-  repository: 'server:///opt/git/externalDir';
-  lock.
-Metacello new
-  baseline: 'Sample';
- repository: 'filetree:///opt/git/sample/repository';
-  lock.
-```
 
-```Smalltalk
-Metacello new.
-  baseline: 'Example';
-  repository: 'github://dalehenrich/example:otto/repository';
-  get.
-Metacello new.
-  baseline: 'Example';
-  load.
-```
-## Appendix
-
-### Alternate Project
-
-### External Project
-
-### Sample Project
 
 [1]: MetacelloScriptingAPI.md#locking
 [2]: MetacelloUserGuide.md#locking
@@ -285,3 +481,4 @@ Metacello new.
 [4]: https://github.com/dalehenrich/example/tree/otto
 [5]: https://github.com/dalehenrich/metacello-work/blob/master/README.md
 [6]: http://seaside.st
+[7]: https://github.com/dalehenrich/filetree
