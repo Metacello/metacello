@@ -1,4 +1,4 @@
-as yet unclassified
+sunit
 testPrimeRegistryFromImage1
   "Load naked Configuration then Configuration/Baseline"
 

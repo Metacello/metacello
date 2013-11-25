@@ -1,4 +1,4 @@
-as yet unclassified
+sunit
 testLoadConfigurationWithBaseline
   "Load project from configuration that directly loads a baseline"
 

@@ -1,4 +1,4 @@
-as yet unclassified
+validating
 validateBaseline: rgstry
   | spec |
   spec := self validateRegistrations: rgstry.

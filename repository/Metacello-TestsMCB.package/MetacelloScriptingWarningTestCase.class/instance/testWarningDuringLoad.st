@@ -1,4 +1,4 @@
-as yet unclassified
+sunit
 testWarningDuringLoad
   | producedWarning externalCoreClass |
   Metacello new

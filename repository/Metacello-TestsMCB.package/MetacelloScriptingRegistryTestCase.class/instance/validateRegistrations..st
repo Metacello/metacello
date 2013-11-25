@@ -1,4 +1,4 @@
-as yet unclassified
+validating
 validateRegistrations: rgstry
   | specs |
   specs := Metacello image

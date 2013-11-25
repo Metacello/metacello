@@ -1,4 +1,4 @@
-as yet unclassified
+sunit
 testConfigurationThenBaselineNoPreload
   "https://github.com/dalehenrich/metacello-work/issues/156"
 

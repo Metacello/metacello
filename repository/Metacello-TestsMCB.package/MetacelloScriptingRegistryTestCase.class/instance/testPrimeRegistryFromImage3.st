@@ -1,4 +1,4 @@
-as yet unclassified
+sunit
 testPrimeRegistryFromImage3
   "Get Configuration as decoy. Load naked Baseline"
 
