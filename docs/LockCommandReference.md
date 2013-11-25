@@ -104,7 +104,7 @@ Now, let's load the `BaselineOfExample` into our image, so we can see
 the structure of your project:
 
 ```Smalltalk
-Metacello new.
+Metacello new
   baseline: 'Example';
   repository: 'filetree:///opt/git/example/repository';
   get.
@@ -148,7 +148,7 @@ that itself is composed of a number projects).
 Let's load the `BaselineOfAlternate` baseline:
 
 ```Smalltalk
-Metacello new.
+Metacello new
   baseline: 'Alternate';
   repository: 'github:/dalehenrich/alternate:otto/repository';
   get.
