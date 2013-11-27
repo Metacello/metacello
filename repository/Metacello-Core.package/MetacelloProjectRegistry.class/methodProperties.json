@@ -13,9 +13,8 @@
 		"primeRegistryFromImage" : "dkh 07/26/2013 07:16",
 		"primeRegistryFromImage:baselineClasses:" : "dkh 07/29/2013 16:18",
 		"projectSpecForClassNamed:ifAbsent:" : "dkh 7/19/2012 11:14",
-		"projectSpecs" : "dkh 7/19/2012 11:13",
+		"projectSpecs" : "otto 11/27/2013 13:32",
 		"registerProjectRegistration:" : "dkh 7/19/2012 15:27",
-		"registrationFor:ifPresent:ifAbsent:" : "dkh 7/19/2012 11:30",
-		"registrationForClassNamed:ifAbsent:" : "dkh 7/19/2012 12:45",
+		"registrationFor:ifPresent:ifAbsent:" : "otto 11/27/2013 13:35",
 		"registrations" : "dkh 07/27/2013 08:45",
 		"unregisterProjectRegistration:" : "dkh 7/19/2012 11:33" } }

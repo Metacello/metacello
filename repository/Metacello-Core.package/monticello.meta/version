@@ -1,8 +1,8 @@
-(name 'Metacello-Core-otto.733'
-message 'warn user if project names differ'
-id '85d48019-35c9-4969-bc57-496abef85955'
-date '2013/11/22'
-time '08:25:10.871'
+(name 'Metacello-Core-otto.734'
+message 'try to lookup baseline before configuration'
+id '39671321-033d-48bf-a34d-59a7d18a5451'
+date '2013/11/27'
+time '13:38:24.762'
 author 'otto'
 ancestors ()
 stepChildren ())
