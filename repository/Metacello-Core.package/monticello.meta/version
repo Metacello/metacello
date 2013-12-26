@@ -1,8 +1,8 @@
-(name 'Metacello-Core-otto.734'
-message 'try to lookup baseline before configuration'
-id '39671321-033d-48bf-a34d-59a7d18a5451'
-date '2013/11/27'
-time '13:38:24.762'
-author 'otto'
+(name 'Metacello-Core-dirk.735'
+message 'handle baseline pragma warning without version number'
+id '1920cb2c-f287-475a-a33a-221c539881fb'
+date '2013/12/26'
+time '16:56:31.607'
+author 'dirk'
 ancestors ()
 stepChildren ())
