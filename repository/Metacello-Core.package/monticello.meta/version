@@ -1,8 +1,8 @@
-(name 'Metacello-Core-dirk.735'
-message 'handle baseline pragma warning without version number'
-id '1920cb2c-f287-475a-a33a-221c539881fb'
-date '2013/12/26'
-time '16:56:31.607'
-author 'dirk'
+(name 'Metacello-Core-otto.736'
+message 'revert assertions that there can only be a baseline or a configuration - there can be both'
+id 'eb13a540-f68a-4fef-bc9a-b0e98890e6dc'
+date '2013/12/27'
+time '12:41:33.794'
+author 'otto'
 ancestors ()
 stepChildren ())
