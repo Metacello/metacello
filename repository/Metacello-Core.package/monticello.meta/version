@@ -1,8 +1,8 @@
-(name 'Metacello-Core-otto.736'
-message 'revert assertions that there can only be a baseline or a configuration - there can be both'
-id 'eb13a540-f68a-4fef-bc9a-b0e98890e6dc'
-date '2013/12/27'
-time '12:41:33.794'
+(name 'Metacello-Core-otto.737'
+message 'remove asString - it should not call printString'
+id '042e8e10-71e0-49c8-a3ce-859adbd04500'
+date 'a Date'
+time 'a Time'
 author 'otto'
 ancestors ()
 stepChildren ())
