@@ -1,8 +1,8 @@
-(name 'Metacello-Core-otto.737'
-message 'remove asString - it should not call printString'
-id '042e8e10-71e0-49c8-a3ce-859adbd04500'
-date 'a Date'
-time 'a Time'
+(name 'Metacello-Core-otto.738'
+message 'simply write differing package names to transcript and do not raise a warning - still need to decide what to do with this'
+id '8ef8d406-be50-4299-8735-d93987168f98'
+date '2014/01/06'
+time '12:23:01.004'
 author 'otto'
 ancestors ()
 stepChildren ())

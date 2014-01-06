@@ -6,5 +6,9 @@ merge: aProjectRegistration
 	aProjectRegistration validate.
 	projectName = aProjectRegistration projectName
 		ifFalse: [ 
-			Warning signal: 'Did not expect project name ', projectName printString, ' to differ with merging project name ', aProjectRegistration projectName printString ].
+			Transcript
+				cr;
+				show:
+						'Did not expect project name ' , projectName printString , ' to differ with merging project name '
+								, aProjectRegistration projectName printString ].
 	self overwriteProjectSpecFromRegistration: aProjectRegistration
