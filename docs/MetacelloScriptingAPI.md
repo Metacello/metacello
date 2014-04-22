@@ -3,7 +3,7 @@
 The **Metacello Scripting API** provides a platform independent way for
 loading Metacello configurations into your image.
 
-Currently [Pharo-1.3, Pharo-1.4][1] and [Squeak4.3][2] are supported.
+Currently [Pharo-1.3][1], [Pharo-1.4][3], [Pharo-2.0][4], and [Squeak4.3][2] are supported.
 
 * [Installation](#installation)
 * [Using the Metacello Scripting API](#using-the-metacello-scripting-api)
@@ -14,8 +14,10 @@ Currently [Pharo-1.3, Pharo-1.4][1] and [Squeak4.3][2] are supported.
 * [Help](#help)
 
 ## Installation
+In Pharo 3.0, Metacello Scripting comes pre-installed. For other platforms...
+##### To get started we need to load the `ConfigurationOfMetacello`. 
 
-To get started we need to load the `ConfigurationOfMetacello`. In a Pharo1.3 image:
+In an older Pharo image:
 
 ```Smalltalk
 "Get the Metacello configuration"
@@ -33,7 +35,7 @@ Installer gemsource
     install: 'ConfigurationOfMetacello'. 
 ```
 
-then bootstrap `Metacello #'previewBootstrap'` and install the `Metacello Preview` code (both images):
+##### Then bootstrap `Metacello #'previewBootstrap'` and install the `Metacello Preview` code (both images):
 
 ```Smalltalk
 ((Smalltalk at: #ConfigurationOfMetacello) project 
@@ -566,3 +568,5 @@ is rooted in the projects HOME directory.
 
 [1]: http://www.pharo-project.org/pharo-download/release-1-3
 [2]: http://www.squeak.org/Download/
+[3]: http://www.pharo-project.org/pharo-download/release-1-4
+[4]: http://www.pharo-project.org/pharo-download/release-2-0
