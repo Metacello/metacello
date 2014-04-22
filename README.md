@@ -1,7 +1,7 @@
 ## INSTALL Preview Version
 
 ```Smalltalk
-"Get the Metacello configuration (for Pharo users)"
+"Get the Metacello configuration (for older Pharo versions - installed by default in Pharo 3.0)"
 Gofer new
   gemsource: 'metacello';
   package: 'ConfigurationOfMetacello';
@@ -25,7 +25,7 @@ Installer gemsource
   load.
 ```
 
-**GemStone2.4**, **PharoCore 1.3**, **PharoCore 1.4**, **Squeak4.3**, **Squeak4.4** and **Squeak4.5** are currently supported.
+**GemStone2.4**, **PharoCore 1.3**, **PharoCore 1.4**, **PharoCore 2.0**, **Squeak4.3**, **Squeak4.4** and **Squeak4.5** are currently supported.
 
 If you are interested in using GitHub with the Metacello Preview, you should check out 
 [Getting Started with GitHub][1], the [Metacello User Guide][2], the [Metacello Scripting API][3], and [Issue #136 detail][4].
