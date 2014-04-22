@@ -145,7 +145,7 @@ In the first phase, all
   of the packages that are to be loaded into your image are fetched from their respective
   repositories and stashed in the Monticello `package-cache`. If there
   is an network error during the `fetch` phase, you can execute the
-  load commeand again, and Metacello will not attempt to re-fetch any
+  load command again, and Metacello will not attempt to re-fetch any
   packages that are already present in the `package-cache`.
 
 ##### load phase
