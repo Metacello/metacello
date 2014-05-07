@@ -5,11 +5,11 @@ lookupSpec: aProjectSpec
       spec className = aProjectSpec className
         ifTrue: [ ^ spec ].
       self locked
-        ifTrue: [ ^ spec ] ].
+        ifTrue: [ ^ nil ] ].
   self baselineProjectSpec
     ifNotNil: [ :spec | 
       spec className = aProjectSpec className
         ifTrue: [ ^ spec ].
       self locked
-        ifTrue: [ ^ spec ] ].
+        ifTrue: [ ^ nil ] ].
   ^ nil

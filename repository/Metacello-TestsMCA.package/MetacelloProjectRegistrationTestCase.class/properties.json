@@ -6,7 +6,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
+		"registrationA",
+		"registrationB",
+		"baselineProjectSpec",
+		"configurationProjectSpec" ],
 	"name" : "MetacelloProjectRegistrationTestCase",
 	"pools" : [
 		 ],
