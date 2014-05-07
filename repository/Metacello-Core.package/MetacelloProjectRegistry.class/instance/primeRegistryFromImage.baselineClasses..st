@@ -34,4 +34,5 @@ primeRegistryFromImage: configurationClasses baselineClasses: baselineClasses
                 versionString: version versionString;
                 repositories: repos;
                 yourself) asConfigurationProjectSpec.
-              self primeRegisterLoadedProjectSpec: projectSpec ] ] ]
+              (self primeRegistryProjectSpecRegistered: projectSpec)
+                ifFalse: [ self primeRegisterLoadedProjectSpec: projectSpec ] ] ] ]
