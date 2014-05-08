@@ -1,6 +1,6 @@
 as yet unclassified
 testPrimeRegistryFromImage4
-  "Get Configuration as decoy load naked Baseline ... wrong answer, but acceptable compromise ... naked baselines are a development time thing and often have locks associated with them testPrimeRegistryFromImage5 will validate lock usecase "
+  "Get Configuration as decoy load naked Baseline ... wrong answer, but acceptable compromise ... naked baselines are a development time thing and often have locks associated with them testPrimeRegistryFromImage5 will validate lock usecase ... primeRegistryFromImage favors baselines over configurations ... "
 
   | rgstry original |
   Metacello new
@@ -20,4 +20,4 @@ testPrimeRegistryFromImage4
   rgstry
     primeRegistryFromImage: {(Smalltalk at: #'ConfigurationOfExternal')}
     baselineClasses: {(Smalltalk at: #'BaselineOfExternal')}.
-  self validateConfiguration: rgstry
+  self validateBaseline: rgstry

@@ -1,3 +1,4 @@
 running
 tearDownPackageList
-  ^ super tearDownPackageList , #('ConfigurationOfExternal')
+  ^ super tearDownPackageList
+    , #('ConfigurationOfExternal' 'BaselineOfExternal')

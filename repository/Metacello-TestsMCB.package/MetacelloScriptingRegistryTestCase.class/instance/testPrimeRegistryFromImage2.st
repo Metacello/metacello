@@ -20,5 +20,6 @@ testPrimeRegistryFromImage2
   rgstry := MetacelloProjectRegistration registry.
   rgstry
     primeRegistryFromImage: {(Smalltalk at: #'ConfigurationOfExternal')}
-    baselineClasses: {(Smalltalk at: #'BaselineOfExternal')}.
+    baselineClasses: {(Smalltalk at: #'BaselineOfExternal')}
+    prioritizeConfiguration: true.
   self validateConfiguration: rgstry
