@@ -152,9 +152,10 @@ baseline: spec
     do: [ 
       spec
         package: 'Metacello-Platform'
-        with: [ spec 
-                    file: 'Metacello-Platform.pharo';
-                    requires: #('OSProcess') ] ].
+        with: [ 
+          spec
+            file: 'Metacello-Platform.pharo';
+            requires: #('OSProcess') ] ].
   spec
     for: #'pharo1.1.x'
     do: [ 
@@ -188,9 +189,10 @@ baseline: spec
         yourself.
       spec
         package: 'Metacello-Platform'
-          with: [ spec 
-	                file: 'Metacello-Platform.pharo20';
-	                requires: #('OSProcess') ];
+          with: [ 
+              spec
+                file: 'Metacello-Platform.pharo20';
+                requires: #('OSProcess') ];
         package: 'Metacello-TestsCommonMC'
           with: [ spec file: 'Metacello-TestsCommonMC.pharo20' ];
         yourself.
@@ -262,4 +264,13 @@ baseline: spec
       spec
         group: 'Tests' with: #('Metacello-TestsPlatform');
         group: 'TravisCI_1' with: #('Metacello-TestsPlatform');
+        yourself ].
+  spec
+    for: #'gs2.x'
+    do: [ 
+      spec
+        package: 'Metacello-GS2x-Platform'
+          with: [ spec requires: 'Metacello-Platform' ];
+        package: 'Metacello-Platform'
+          with: [ spec includes: 'Metacello-GS2x-Platform' ];
         yourself ]

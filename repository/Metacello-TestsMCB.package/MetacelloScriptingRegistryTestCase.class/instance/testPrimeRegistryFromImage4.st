@@ -2,7 +2,7 @@ as yet unclassified
 testPrimeRegistryFromImage4
   "Get Configuration as decoy load naked Baseline ... wrong answer, but acceptable compromise ... naked baselines are a development time thing and often have locks associated with them testPrimeRegistryFromImage5 will validate lock usecase ... primeRegistryFromImage favors baselines over configurations ... "
 
-  | rgstry original |
+  | rgstry registration |
   Metacello new
     configuration: 'External';
     version: '0.9.1';
@@ -14,10 +14,25 @@ testPrimeRegistryFromImage4
         'github://dalehenrich/external:' , MetacelloScriptingResource externalCustomSHA
             , '/repository';
     load.
-  self validateBaseline: MetacelloProjectRegistration registry.
+  rgstry := MetacelloProjectRegistration registry.
+  self validateBaseline: rgstry.
+  registration := rgstry
+    registrationForClassNamed: 'BaselineOfExternal'
+    ifAbsent: [ self assert: false ].
+  self
+    assert:
+      registration versionInfo versionString
+        = MetacelloScriptingResource externalCustomSHA.
   MetacelloProjectRegistration resetRegistry.
   rgstry := MetacelloProjectRegistration registry.
   rgstry
     primeRegistryFromImage: {(Smalltalk at: #'ConfigurationOfExternal')}
     baselineClasses: {(Smalltalk at: #'BaselineOfExternal')}.
-  self validateBaseline: rgstry
+  self validateBaseline: rgstry.
+  registration := rgstry
+    registrationForClassNamed: 'BaselineOfExternal'
+    ifAbsent: [ self assert: false ].
+  self
+    assert:
+      registration versionInfo versionString
+        = MetacelloScriptingResource externalCustomSHA

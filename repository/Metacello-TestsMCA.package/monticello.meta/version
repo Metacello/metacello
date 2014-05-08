@@ -1,8 +1,1 @@
-(name 'Metacello-TestsMCA-otto.13'
-message 'fix registration tests'
-id 'a983ab53-427b-471b-9fc1-531b0806ed55'
-date '2013/11/19'
-time '12:38:58.517'
-author 'otto'
-ancestors ()
-stepChildren ())
+(name 'Metacello-TestsMCA-dkh.14' message '- add Metacello-GS2x-Platform for GemStone 2.x specific code- support for MetacelloProjectRegistrationVersionInfo which should allow us to associate the git commit SHA for a git repo with the baseline that was loaded from the repo- all repository types supported for displaying something useful for the version string (only used by baselines as configuration version is used for configurations)- tests' id '64a18756-9caf-4f0d-a312-3d877389cbf0' date '05/08/2014' time '16:22:43' author 'dkh' ancestors ((name 'Metacello-TestsMCA-otto.13' message 'fix registration tests' id 'a983ab53-427b-471b-9fc1-531b0806ed55' date '05/08/2014' time '12:38:58' author 'otto' ancestors () stepChildren ())) stepChildren ())
