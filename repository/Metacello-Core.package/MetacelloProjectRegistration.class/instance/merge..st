@@ -9,10 +9,9 @@ merge: aProjectRegistration
     ifNotNilDo: [ :aSpec | 
       configurationProjectSpec := aSpec.
       baselineProjectSpec := nil.
-      (self respondsTo: #'versionInfo')
-        ifTrue: [ self versionInfo versionString: configurationProjectSpec versionString ] ]
+      self versionInfo versionString: configurationProjectSpec versionString ]
     ifNil: [ 
       baselineProjectSpec := aProjectRegistration baselineProjectSpec.
       configurationProjectSpec := nil.
-      (self respondsTo: #'versionInfo')
-        ifTrue: [ self versionInfo versionString: baselineProjectSpec repositoryVersionString ] ]
+      self versionInfo
+        versionString: baselineProjectSpec repositoryVersionString ]

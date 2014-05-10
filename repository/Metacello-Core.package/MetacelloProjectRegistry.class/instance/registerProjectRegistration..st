@@ -15,8 +15,8 @@ registerProjectRegistration: aMetacelloProjectRegistration
                     'REGISTRATION OF INCOMPATABLE PROJECTS: ' , existing printString
                         , ' REPLACED BY '
                         , aMetacelloProjectRegistration printString ] ].
-      aMetacelloProjectRegistration versionInfo
-        versionString: spec versionString.
+      (aMetacelloProjectRegistration respondsTo: #'versionInfo')
+        ifTrue: [ aMetacelloProjectRegistration versionInfo versionString: spec versionString ].
       spec immutable.
       self configurationRegistry
         at: spec className
@@ -34,8 +34,10 @@ registerProjectRegistration: aMetacelloProjectRegistration
                     'REGISTRATION OF INCOMPATABLE PROJECTS: ' , existing printString
                         , ' REPLACED BY '
                         , aMetacelloProjectRegistration printString ] ].
-      aMetacelloProjectRegistration versionInfo
-        versionString: spec repositoryVersionString.
+      (aMetacelloProjectRegistration respondsTo: #'versionInfo')
+        ifTrue: [ 
+          aMetacelloProjectRegistration versionInfo
+            versionString: spec repositoryVersionString ].
       spec immutable.
       self baselineRegistry
         at: spec className
