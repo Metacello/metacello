@@ -1,3 +1,3 @@
 testing
 hasConflictWithConfigurationSpec: projectSpec
-	^ false
+  ^ projectSpec hasConflictWithBaselineSpec: self
