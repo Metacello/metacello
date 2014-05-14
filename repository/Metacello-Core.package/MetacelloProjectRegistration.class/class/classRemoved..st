@@ -5,7 +5,7 @@ classRemoved: aClassRemovalAnnouncement
 
   | aClass registration |
   aClass := aClassRemovalAnnouncement itemClass.
-  registration := self
-    registrationForClassNamed: aClass name asString
+  registration := self registry
+    registrationForExactClassNamed: aClass name asString
     ifAbsent: [ ^ self ].
   registration unregisterProject

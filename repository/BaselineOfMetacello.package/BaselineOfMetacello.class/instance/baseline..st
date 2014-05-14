@@ -258,7 +258,7 @@ baseline: spec
         package: 'Metacello-TestsPlatform'
           with: [ 
               spec
-                requires: #('Metacello-Platform');
+                requires: #('Metacello-Platform' 'Metacello-TestsMCB');
                 file: 'Metacello-TestsPlatform.gemstone' ];
         yourself.
       spec
