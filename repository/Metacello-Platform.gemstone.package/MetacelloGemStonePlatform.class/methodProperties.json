@@ -1,6 +1,8 @@
 {
 	"class" : {
-		"initialize" : "dkh 05/05/2013 13:40" },
+		"initialize" : "dkh 05/13/2014 21:36",
+		"registerForNotifications" : "dkh 05/13/2014 21:29",
+		"sessionStart" : "dkh 05/13/2014 21:36" },
 	"instance" : {
 		"authorName" : "dkh 11/10/2011 09:52",
 		"authorName:" : "dkh 11/10/2011 09:52",
