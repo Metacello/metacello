@@ -7,13 +7,15 @@ load
   packages values
     do: [ :pkg | 
       pkg ensureLoadedForDevelopmentUsing: mcLoader.
-      mcLoader ignoreImage
+      (MetacelloIgnorePackageLoaded signal: pkg)
         ifFalse: [ 
-          (pkg
-            compareCurrentVersion: self operator
-            targetVersionStatus: #(#'allLoadedToSpec')
-            using: mcLoader)
-            ifTrue: [ packages removeKey: pkg name ] ] ].
+          mcLoader ignoreImage
+            ifFalse: [ 
+              (pkg
+                compareCurrentVersion: self operator
+                targetVersionStatus: #(#'allLoadedToSpec')
+                using: mcLoader)
+                ifTrue: [ packages removeKey: pkg name ] ] ] ].
   packages notEmpty
     ifTrue: [ 
       mcLoader preLoad: self versionSpec.

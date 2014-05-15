@@ -49,4 +49,5 @@
 		"validateForScriptLoad:withDefaultVersionString:withDefaultRepositoryDecription:" : "dkh 7/23/2012 11:17",
 		"validateVersionString:withDefaultVersionString:" : "dkh 7/23/2012 11:56",
 		"version" : "dkh 6/8/2012 14:04:22",
-		"versionForScriptEngine:" : "dkh 7/27/2012 04:59" } }
+		"versionForScriptEngine:" : "dkh 7/27/2012 04:59",
+		"workingCopy" : "dkh 05/15/2014 15:44" } }
