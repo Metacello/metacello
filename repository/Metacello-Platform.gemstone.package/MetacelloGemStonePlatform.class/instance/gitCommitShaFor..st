@@ -1,11 +1,10 @@
 git support
-gitCommitShaFor: gitRepoDirectory
+gitCommitShaFor: gitPath
   "return SHA for git repository located at <aDirectory>, if <aDirectory> is not a git repository, return nil"
 
-  | command gitPath result |
-  gitPath := gitRepoDirectory fullName.
+  | command result |
   command := 'cd ' , gitPath , '; git log -1 --pretty=format:%h'.
   result := System performOnServer: command.
-  result = 'fatal:'
+  (result beginsWith: 'fatal:')
     ifTrue: [ ^ nil ].
   ^ result trimBoth
