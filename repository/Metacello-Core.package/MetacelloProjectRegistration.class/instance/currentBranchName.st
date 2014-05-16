@@ -1,5 +1,5 @@
 accessing
 currentBranchName
   ^ self configurationProjectSpec
-    ifNotNilDo: [ :aSpec | '' ]
+    ifNotNil: [ configurationProjectSpec version blessing asString ]
     ifNil: [ baselineProjectSpec repositoryBranchName ]
