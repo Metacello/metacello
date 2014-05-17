@@ -1,9 +1,9 @@
 operations
 decrementMinorVersionNumber
-	| int |
-	self size to: 1 by: -1 do: [ :index | 
-		(int := self at: index) isString
-			ifFalse: [ 
-				int > 0
-					ifTrue: [ self at: index put: int - 1 ].
-				^ self ] ]
+  | int col |
+  col := self normalVersion.
+  col size to: 1 by: -1 do: [ :index | 
+    int := col at: index.
+    int > 0
+      ifTrue: [ col at: index put: int - 1 ].
+    ^ self ]
