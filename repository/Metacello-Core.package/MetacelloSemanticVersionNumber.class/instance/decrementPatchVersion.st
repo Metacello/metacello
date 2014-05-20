@@ -1,3 +1,3 @@
 operations
-decrementMinorVersionNumber
+decrementPatchVersion
   self decrementNormalVersionAt: 3

@@ -1,3 +1,3 @@
 operations
-incrementMinorVersionNumber
+incrementPatchVersion
   self incrementNormalVersionAt: 3
