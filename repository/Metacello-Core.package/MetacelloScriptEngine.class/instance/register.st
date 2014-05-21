@@ -5,6 +5,6 @@ register
   spec := self projectSpec.
   MetacelloProjectRegistration
     registrationForProjectSpec: spec
-    ifAbsent: [ :ignored |  ]
+    ifAbsent: [ :new | new registerProject ]
     ifPresent: [ :existing :new | existing copyOnWrite: [ :existingCopy | existingCopy merge: new ] ].
   self root: spec
