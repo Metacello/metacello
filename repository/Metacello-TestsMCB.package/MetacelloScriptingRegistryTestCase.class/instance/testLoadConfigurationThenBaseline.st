@@ -1,4 +1,4 @@
-as yet unclassified
+sunit
 testLoadConfigurationThenBaseline
   "Load project from configuration, then load project from baseline"
 

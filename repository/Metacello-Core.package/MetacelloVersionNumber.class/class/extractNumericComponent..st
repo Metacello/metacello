@@ -4,7 +4,7 @@ extractNumericComponent: subString
 
 	| number |
 	number := [subString asNumber] 
-						on: Error 
+						on: Error, Warning
 						do: [:ex | ex return: subString ].
 	^number asString = subString
 		ifTrue: [ number ]

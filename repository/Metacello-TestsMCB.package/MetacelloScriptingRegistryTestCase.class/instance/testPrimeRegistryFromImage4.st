@@ -1,4 +1,4 @@
-as yet unclassified
+sunit
 testPrimeRegistryFromImage4
   "Get Configuration as decoy load naked Baseline ... wrong answer, but acceptable compromise ... naked baselines are a development time thing and often have locks associated with them testPrimeRegistryFromImage5 will validate lock usecase "
 

@@ -1,5 +1,5 @@
 accessing
 projectSpecs
-    "MetacelloProjectRegistration projectSpecs"
+	"MetacelloProjectRegistration projectSpecs"
 
-    ^ self configurationProjectSpecs , self baselineProjectSpecs
+	^ self baselineProjectSpecs , self configurationProjectSpecs
