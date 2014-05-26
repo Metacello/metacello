@@ -15,13 +15,13 @@ Smalltalk at: #CommandLineToolSet ifPresent: [:cls |
 "Load Metacello ... "
 
 Metacello new
-	baseline: 'Metacello';
+  baseline: 'Metacello';
   repository: 'filetree://', gitPath, '/metacello-work/repository';
   get.
 
 [
 Metacello new
-	baseline: 'Metacello';
+  baseline: 'Metacello';
   repository: 'filetree://', gitPath, '/metacello-work/repository';
   onConflict: [:ex | 
     "allow new version of Metacello to be loaded"
@@ -44,12 +44,14 @@ Transcript cr; show: '---get (default)'.
 Metacello new
   configuration: 'Seaside30';
   get.
+System commitTransaction.
 
 Transcript cr; show: '---get'.
 Metacello new
   configuration: 'Seaside3';
   smalltalkhubUser: 'Seaside' project: 'MetacelloConfigurations';
   get.
+System commitTransaction.
 
 Transcript cr; show: '---load'.
 Metacello registry
@@ -60,22 +62,26 @@ Metacello registry
     ex resume];
   onUpgrade: [:ex | ex allow ];
   load.
+System commitTransaction.
 
 Transcript cr; show: '---list'.
 Metacello registry
   configuration: #('Seaside30' 'MetacelloPreview');
   list.
+System commitTransaction.
 
 Metacello new
   configuration: [:spec | spec name beginsWith: 'Seaside'];
   smalltalkhubUser: 'Seaside' project: 'Seaside30';
   list.
+System commitTransaction.
 
 Transcript cr; show: '---lock'.
 Metacello image
   configuration: 'Seaside30';
   version: #'stable';
   lock.
+System commitTransaction.
 
 Transcript cr; show: '---load (REST)'.
 Metacello new
@@ -84,4 +90,3 @@ Metacello new
     Transcript cr; show: 'Warning: ', ex description.
     ex resume ];
   load.
-
