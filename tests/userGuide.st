@@ -71,11 +71,14 @@ Metacello new
   smalltalkhubUser: 'Seaside' project: 'Seaside30';
   list.
 
+false ifTrue: [
+  "no longer interested in locking configurations"
 Transcript cr; show: '---lock'.
 Metacello image
   configuration: 'Seaside30';
   version: #'stable';
   lock.
+].
 
 Metacello new
   configuration: 'SeasideRest';
