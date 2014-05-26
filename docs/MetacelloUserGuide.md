@@ -165,7 +165,7 @@ into your image without actually loading the project itself:
 ```Smalltalk
 Metacello image
   configuration: 'SeasideRest';
-  squeaksource: 'Seaside30';
+  repository: 'http://smalltalkhub.com/mc/Seaside/MetacelloConfigurations/main';
   get.
 ```
 
