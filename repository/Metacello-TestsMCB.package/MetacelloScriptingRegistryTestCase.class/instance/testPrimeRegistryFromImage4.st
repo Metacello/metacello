@@ -21,8 +21,8 @@ testPrimeRegistryFromImage4
     ifAbsent: [ self assert: false ].
   self
     assert:
-      registration versionInfo versionString
-        = MetacelloScriptingResource externalCustomSHA.
+      (MetacelloScriptingResource externalCustomSHA
+        beginsWith: registration versionInfo versionString).
   MetacelloProjectRegistration resetRegistry.
   rgstry := MetacelloProjectRegistration registry.
   rgstry
@@ -34,5 +34,5 @@ testPrimeRegistryFromImage4
     ifAbsent: [ self assert: false ].
   self
     assert:
-      registration versionInfo versionString
-        = MetacelloScriptingResource externalCustomSHA
+      (MetacelloScriptingResource externalCustomSHA
+        beginsWith: registration versionInfo versionString)
