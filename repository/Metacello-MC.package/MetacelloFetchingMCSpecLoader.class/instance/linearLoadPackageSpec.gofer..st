@@ -29,12 +29,15 @@ linearLoadPackageSpec: packageSpec gofer: gofer
       (self ignoreImage not
         and: [ (loadedVersionInfos := self ancestorsFor: packageSpec) ~~ nil ])
         ifTrue: [ 
-          (MetacelloIgnorePackageLoaded signal: packageSpec)
-            ifFalse: [ 
-              loadedVersionInfos
-                do: [ :info | 
-                  info name = nearestReference name
-                    ifTrue: [ ^ self ] ] ] ].
+          loadedVersionInfos
+            do: [ :info | 
+              info name = nearestReference name
+                ifTrue: [ 
+                  | spc |
+                  spc := packageSpec copy.
+                  spc file: info name.
+                  (MetacelloIgnorePackageLoaded signal: spc)
+                    ifFalse: [ ^ self ] ] ] ].
       externalReference := (references
         select: [ :ref | ref name = nearestReference name ]) first
         asMetacelloCachingResolvedReference.

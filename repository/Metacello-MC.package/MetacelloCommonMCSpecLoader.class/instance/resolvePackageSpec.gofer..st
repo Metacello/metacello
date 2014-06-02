@@ -8,12 +8,14 @@ resolvePackageSpec: packageSpec gofer: gofer
   mcVersion := resolvedReference version.
   (loadedVersionInfos := self ancestorsFor: packageSpec) ~~ nil
     ifTrue: [ 
-      (MetacelloIgnorePackageLoaded signal: packageSpec)
-        ifFalse: [ 
-          loadedVersionInfos
-            do: [ :info | 
-              info name = mcVersion info name
-                ifTrue: [ 
-                  "package already loaded, don't load again"
-                  ^ nil ] ] ] ].
+      loadedVersionInfos
+        do: [ :info | 
+          info name = mcVersion info name
+            ifTrue: [ 
+              | spc |
+              "package already loaded, don't load again"
+              spc := packageSpec copy.
+              spc file: info name.
+              (MetacelloIgnorePackageLoaded signal: spc)
+                ifFalse: [ ^ nil ] ] ] ].
   ^ resolvedReference
