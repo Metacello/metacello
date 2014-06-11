@@ -281,7 +281,7 @@ Let's say that when you load the SeasideRest project you have decided
 that in this particular case you would like to bypass the lock and let
 the version of Seaside specified by the SeasideRest project to be loaded.
 
-We'll use `onLock:` to `allow` the new version of the Seaside project to
+We'll use `onLock:` to `break` the new version of the Seaside project to
 be loaded:
 
 ```Smalltalk
@@ -290,10 +290,14 @@ Metacello new
   version: #stable;
   onLock: [:ex :existing :new | 
     existing baseName = 'Seaside30'
-      ifTrue: [ ex allow ].
+      ifTrue: [ ex break ].
     ex pass ];
   load.
 ```
+
+use the message `honor` if you want to honor the lock and not load the new version.
+
+`break` is a synonym for `allow` and `honor` is a synonym for `disallow`.
 
 ### Upgrading a locked project
 
