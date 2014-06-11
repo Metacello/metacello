@@ -39,4 +39,4 @@ setUpConfigurationOfProjectInfinite
 				author: reference author
 				ancestors: #())
 		snapshot: (MCSnapshot fromDefinitions: definitionArray)
-		dependencies: #()) 
+		dependencies: #())

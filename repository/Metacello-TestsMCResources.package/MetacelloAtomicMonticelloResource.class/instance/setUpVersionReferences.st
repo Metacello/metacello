@@ -18,4 +18,3 @@ setUpVersionReferences
 		add: ((GoferVersionReference name: 'GoferBarDependency-lr.35') -> #Object);
 		add: ((GoferVersionReference name: 'GoferFooDependency-lr.35') -> #Object);
 		yourself
-	
