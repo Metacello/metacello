@@ -88,7 +88,5 @@ Metacello new
   repository: 'http://smalltalkhub.com/mc/Seaside/MetacelloConfigurations/main';
   load.
 
-Smalltalk
-  at: #'TravisCISuccessNoFailure'
-  put: [ :successFilename  |
-    MetacelloBuilderTravisCI successOnNoFailures: successFilename ].
+TravisCISuccessNoFailure
+      value: 'TravisCISuccess.txt'.
