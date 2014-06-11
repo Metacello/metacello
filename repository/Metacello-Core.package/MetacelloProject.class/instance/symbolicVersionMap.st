@@ -2,5 +2,3 @@ accessing
 symbolicVersionMap
 
 	^symbolicVersionMap
-				
-				
