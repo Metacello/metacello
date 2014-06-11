@@ -88,23 +88,7 @@ Metacello new
   repository: 'http://smalltalkhub.com/mc/Seaside/MetacelloConfigurations/main';
   load.
 
-(Smalltalk at: #'TravisResultFileBlock')
-  value: 'TravisCISuccess.txt'
-  value: [ :fileStream |
-    fileStream
-      lf;
-      nextPutAll: '**************************************************************************************';
-      lf.
-    fileStream
-      tab;
-      nextPutAll: 'No failures..';
-      lf;
-    fileStream
-      nextPutAll: '**************************************************************************************';
-      lf].
- (Transcript respondsTo: #close)
-   ifTrue: [
-     | stream |
-     stream := Transcript.
-     (Smalltalk globals associationAt: #'Transcript') value: (Smalltalk at: #'OLDTranscript').
-     stream close ].
+Smalltalk
+  at: #'TravisCISuccessNoFailure'
+  put: [ :successFilename  |
+    MetacelloBuilderTravisCI successOnNoFailures: successFilename ].
