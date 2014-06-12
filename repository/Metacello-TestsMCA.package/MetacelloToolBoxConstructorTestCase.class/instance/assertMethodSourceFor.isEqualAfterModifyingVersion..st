@@ -17,4 +17,4 @@ assertMethodSourceFor: configurationName isEqualAfterModifyingVersion: versionSt
     cr;
     show:
         configurationName , '-->' , modified printString , ' = ' , original printString.
-  self assert: original = modified
+  self assert: original trimBoth = modified trimBoth
