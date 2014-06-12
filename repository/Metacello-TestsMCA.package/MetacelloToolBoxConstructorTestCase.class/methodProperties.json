@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"assertMethodSourceFor:isEqualAfterModifyingVersion:" : "dkh 06/12/2014 05:37",
+		"assertMethodSourceFor:isEqualAfterModifyingVersion:" : "dkh 06/12/2014 07:26",
 		"assertVersionSpecFor:isEqualAfterModifyingVersion:" : "dkh 6/12/2012 15:41:23.319",
 		"atomicConfigurationRepository" : "dkh 6/12/2012 15:41:23.319",
 		"configurationNameList" : "dkh 6/12/2012 15:41:23.319",

@@ -13,4 +13,4 @@ assertMethodSourceFor: configurationName isEqualAfterModifyingVersion: versionSt
     on: MetacelloCannotUpdateReleasedVersionError
     do: [ :ex | ex resume ].
   modified := (cl sourceCodeAt: pragma selector) asString.
-  self assert: original trimBoth = modified trimBoth
+  self assert: original withBlanksTrimmed = modified withBlanksTrimmed
