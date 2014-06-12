@@ -14,7 +14,7 @@ assertMethodSourceFor: configurationName isEqualAfterModifyingVersion: versionSt
     do: [ :ex | ex resume ].
   modified := (cl sourceCodeAt: pragma selector) asString.
   (original respondsTo: #'trimBoth')
-    ifTrue: [ self assert: original trimBoth = modified trimboth ]
+    ifTrue: [ self assert: original trimBoth = modified trimBoth ]
     ifFalse: [ 
       "Squeak"
       self assert: original withBlanksTrimmed = modified withBlanksTrimmed ]
