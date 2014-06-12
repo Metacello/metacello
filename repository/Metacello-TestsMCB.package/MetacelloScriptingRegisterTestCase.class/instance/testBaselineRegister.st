@@ -4,14 +4,15 @@ testBaselineRegister
   | projectSpec |
   Metacello new
     baseline: 'Sample';
-    repository: 'filetree:///opt/git/sample';
+    repository: 'github://dalehenrich/sample:master/repository';
     register.
   projectSpec := Metacello registry
     baseline: 'Sample';
     list.
   self
     assert:
-      projectSpec repositoryDescriptions asArray = {'filetree:///opt/git/sample'} ]
+      projectSpec repositoryDescriptions asArray
+        = {'github://dalehenrich/sample:master/repository'} ]
     on: Error
     do: [ :ex | 
       Transcript

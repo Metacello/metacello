@@ -4,11 +4,11 @@ testBaselineUnregister
   | projectSpec |
   Metacello new
     baseline: 'Sample';
-    repository: 'filetree:///opt/git/sample';
+    repository: 'github://dalehenrich/sample:master/repository';
     register.
   Metacello registry
     baseline: 'Sample';
-    repository: 'filetree:///opt/git/sample';
+    repository: 'github://dalehenrich/sample:master/repository';
     unregister.
   projectSpec := Metacello registry
     baseline: 'Sample';
