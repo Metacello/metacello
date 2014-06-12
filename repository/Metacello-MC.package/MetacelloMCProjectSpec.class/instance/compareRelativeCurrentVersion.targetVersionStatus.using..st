@@ -7,4 +7,3 @@ compareRelativeCurrentVersion: anOperator targetVersionStatus: targetVersionStat
 	(targetVersionStatus includes: cv versionStatus)
 		ifTrue: [ ^cv perform: anOperator with: vrsn ].
 	^false
-	

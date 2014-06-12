@@ -1,10 +1,15 @@
 querying
-packageNamed: aString forLoad: forLoad forMap: map ifAbsent: absentBlock
+packageNamed: aString forLoad: ignored forMap: map ifAbsent: absentBlock
+  "at the end of the day, I don't the forLoad arg is important ... 
+   it just ends up triggering an error ... when during a real load, you would 
+   not get error. After a decent period of mourning we should just scrub this 
+   arg from system"
+
   | importSpec |
   ^ map
     at: aString
     ifAbsent: [ 
-      (forLoad and: [ self importArray notNil or: [ self import notNil ] ])
+      (self importArray notNil or: [ self import notNil ])
         ifTrue: [ 
           "expect the 'missing' name to be satisfied within context of imported project"
           importArray

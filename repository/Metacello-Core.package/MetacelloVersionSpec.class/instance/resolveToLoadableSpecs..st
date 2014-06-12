@@ -10,5 +10,5 @@ resolveToLoadableSpecs: nameList
 
     | map |
     map := Dictionary new.
-    self resolveToLoadableSpecs: nameList forLoad: false map: map.
+    self resolveToLoadableSpecs: nameList forLoad: true map: map.
     ^ map values
