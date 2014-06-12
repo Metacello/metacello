@@ -18,6 +18,5 @@ testBaselineUnregister
     do: [ :ex | 
       Transcript
         cr;
-        show: ex description;
-        show: (GsProcess stackReportToLevel: 100).
+        show: 'testBaselineUnregister ' , ex description.
       ex pass ]

@@ -17,6 +17,5 @@ testProjectToolBoxSourceComparison131Baseline
     do: [ :ex | 
       Transcript
         cr;
-        show: ex description;
-        show: (GsProcess stackReportToLevel: 100).
+        show: 'testProjectToolBoxSourceComparison131Baseline ' , ex description.
       ex pass ]
