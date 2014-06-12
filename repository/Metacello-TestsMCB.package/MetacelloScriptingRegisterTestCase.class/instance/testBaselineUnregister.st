@@ -1,6 +1,5 @@
 tests
 testBaselineUnregister
-  [ 
   | projectSpec |
   Metacello new
     baseline: 'Sample';
@@ -13,10 +12,4 @@ testBaselineUnregister
   projectSpec := Metacello registry
     baseline: 'Sample';
     list.
-  self assert: projectSpec isEmpty ]
-    on: Error
-    do: [ :ex | 
-      Transcript
-        cr;
-        show: 'testBaselineUnregister ' , ex description.
-      ex pass ]
+  self assert: projectSpec isEmpty

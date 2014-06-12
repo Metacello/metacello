@@ -1,6 +1,5 @@
 tests
 testProjectToolBoxSourceComparison131Baseline
-  [ 
   | configurationName versionString |
   gofer
     repository: self atomicConfigurationRepository;
@@ -12,10 +11,4 @@ testProjectToolBoxSourceComparison131Baseline
   versionString := '1.3.1-baseline'.
   self
     assertMethodSourceFor: configurationName
-    isEqualAfterModifyingVersion: versionString ]
-    on: Error
-    do: [ :ex | 
-      Transcript
-        cr;
-        show: 'testProjectToolBoxSourceComparison131Baseline ' , ex description.
-      ex pass ]
+    isEqualAfterModifyingVersion: versionString
