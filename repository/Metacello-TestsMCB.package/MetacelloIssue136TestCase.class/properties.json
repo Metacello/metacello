@@ -1,5 +1,5 @@
 {
-	"category" : "Metacello-TestsMCA",
+	"category" : "Metacello-TestsMCB",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
@@ -7,7 +7,7 @@
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "MetacelloIssue119TestCase",
+	"name" : "MetacelloIssue136TestCase",
 	"pools" : [
 		 ],
 	"super" : "MetacelloIssueTestCase",
