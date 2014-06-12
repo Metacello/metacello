@@ -42,3 +42,4 @@ If you are interested in using GitHub with the Metacello Preview, you should che
 [3]: docs/MetacelloScriptingAPI.md
 [4]: docs/Issue_136Detail.md
 
+
