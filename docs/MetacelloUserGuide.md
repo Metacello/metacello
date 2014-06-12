@@ -356,7 +356,7 @@ Metacello new
 Metacello new
   baseline: 'Zinc';
   repository: 'filetree:///opt/git/zinc/repository';
-  onConflict: [:ex | ex allow ];
+  onConflict: [:ex | ex useNew ];
   load: 'Tests'
 ```
 
@@ -367,8 +367,8 @@ from a different repository than the one originally used and that is
 considered an error. Metacello signals a **MetacelloConflictingProjectError**.
 
 To avoid the **MetacelloConflictingProjectError** you use the
-`onConflict:` block to `allow` the error and Metacello will go ahead an
-load the project from a different repository.
+`onConflict:` block and send `useNew` to the exception to use the new project
+or `useExisting` to preserve the loaded state`.
 
 ## Project upgrades initiated by dependent proejcts
 
