@@ -1,12 +1,22 @@
 tests
 testProjectToolBoxSourceComparison131Baseline
-	| configurationName versionString |
-	gofer
-		repository: self atomicConfigurationRepository;
-		repository: self alternateRepository;
-		repository: self configurationRepository.
-	configurationName := 'MetacelloTestConfigurationOfProjectToolBox'.
-	gofer package: configurationName.
-	gofer load.
-	versionString := '1.3.1-baseline'.
-	self assertMethodSourceFor: configurationName isEqualAfterModifyingVersion: versionString
+  [ 
+  | configurationName versionString |
+  gofer
+    repository: self atomicConfigurationRepository;
+    repository: self alternateRepository;
+    repository: self configurationRepository.
+  configurationName := 'MetacelloTestConfigurationOfProjectToolBox'.
+  gofer package: configurationName.
+  gofer load.
+  versionString := '1.3.1-baseline'.
+  self
+    assertMethodSourceFor: configurationName
+    isEqualAfterModifyingVersion: versionString ]
+    on: Error
+    do: [ :ex | 
+      Transcript
+        cr;
+        show: ex description;
+        show: (GsProcess stackReportToLevel: 100).
+      ex pass ]

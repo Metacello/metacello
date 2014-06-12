@@ -1,5 +1,6 @@
 tests
 testBaselineRegister
+  [ 
   | projectSpec |
   Metacello new
     baseline: 'Sample';
@@ -10,4 +11,11 @@ testBaselineRegister
     list.
   self
     assert:
-      projectSpec repositoryDescriptions asArray = {'filetree:///opt/git/sample'}
+      projectSpec repositoryDescriptions asArray = {'filetree:///opt/git/sample'} ]
+    on: Error
+    do: [ :ex | 
+      Transcript
+        cr;
+        show: ex description;
+        show: (GsProcess stackReportToLevel: 100).
+      ex pass ]

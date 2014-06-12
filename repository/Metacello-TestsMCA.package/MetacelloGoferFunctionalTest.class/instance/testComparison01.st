@@ -7,4 +7,3 @@ testComparison01
 	self assert: (ref1 compare: ref2 using: #<).
 	self assert: (ref2 compare: ref1 using: #>).
 	self deny: (ref2 compare: ref1 using: #=).
-
