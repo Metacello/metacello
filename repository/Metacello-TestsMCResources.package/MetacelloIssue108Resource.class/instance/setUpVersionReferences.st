@@ -11,4 +11,3 @@ setUpVersionReferences
 		add: (GoferVersionReference name: 'GoferBar-dkh.69');
 		add: (GoferVersionReference name: 'GoferBar-dkh.70');
 		yourself
-	

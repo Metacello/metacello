@@ -4,4 +4,3 @@ isAbstract
 	TestCase instances built from it"
 
 	^self name = #MetacelloConfigAbstractAPITestCase
-			

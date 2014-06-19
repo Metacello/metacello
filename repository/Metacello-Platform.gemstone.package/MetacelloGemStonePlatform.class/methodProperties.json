@@ -1,6 +1,8 @@
 {
 	"class" : {
-		"initialize" : "dkh 05/05/2013 13:40" },
+		"initialize" : "dkh 05/14/2014 06:34",
+		"registerForNotifications" : "dkh 05/13/2014 21:29",
+		"sessionStart" : "dkh 05/13/2014 21:36" },
 	"instance" : {
 		"authorName" : "dkh 11/10/2011 09:52",
 		"authorName:" : "dkh 11/10/2011 09:52",
@@ -10,9 +12,14 @@
 		"defaultPlatformAttributes" : "dkh 11/13/2009 16:37",
 		"downloadFile:to:" : "dkh 10/06/2013 16:24",
 		"extractAtrributesFrom:" : "dkh 11/10/2011 09:52",
-		"extractRepositoryFrom:to:" : "dkh 10/06/2013 14:53",
+		"extractRepositoryFrom:to:" : "dkh 12/13/2013 17:58",
 		"extractTypeFromDescription:" : "dkh 03/23/2013 08:54",
 		"fileDirectoryClass" : "dkh 07/09/2012 04:46",
+		"gitBranchNameFor:" : "dkh 05/15/2014 20:52",
+		"gitCommitShaFor:" : "dkh 05/15/2014 20:49",
+		"gitIsGitDirectoryPath:" : "dkh 05/15/2014 18:33",
+		"gitRootDirectoryPath:" : "dkh 05/22/2014 13:31",
+		"gitStatusFor:" : "dkh 05/15/2014 20:46",
 		"stoneVersionAttributes" : "dkh 11/10/2011 09:52",
 		"timestamp" : "dkh 10/16/2009 11:53",
 		"transact:" : "dkh 01/06/2010 10:11" } }

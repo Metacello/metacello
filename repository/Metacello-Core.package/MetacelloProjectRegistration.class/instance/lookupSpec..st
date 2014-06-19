@@ -1,7 +1,15 @@
 lookup
 lookupSpec: aProjectSpec
-	^ self projectSpec
-		ifNotNilDo: [ :spec | 
-			spec baseName = aProjectSpec baseName
-				ifTrue: [ spec ]
-				ifFalse: [ nil ] ]
+  self configurationProjectSpec
+    ifNotNil: [ :spec | 
+      spec className = aProjectSpec className
+        ifTrue: [ ^ spec ].
+      self locked
+        ifTrue: [ ^ spec ] ].
+  self baselineProjectSpec
+    ifNotNil: [ :spec | 
+      spec className = aProjectSpec className
+        ifTrue: [ ^ spec ].
+      self locked
+        ifTrue: [ ^ spec ] ].
+  ^ nil

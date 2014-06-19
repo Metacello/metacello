@@ -7,7 +7,7 @@
 		"baseline12:" : "dkh 01/19/2012 12:33",
 		"baseline14:" : "dkh 01/19/2012 12:36",
 		"baseline15:" : "dkh 01/19/2012 14:35",
-		"baseline16:" : " 07/11/2013 21:45",
+		"baseline16:" : "07/11/2013 21:45",
 		"project" : "DaleHenrichs 03/12/2010 01:15",
 		"setUp" : "dkh 01/19/2012 14:51",
 		"tearDown" : "dkh 01/19/2012 14:36",
@@ -16,6 +16,6 @@
 		"testDictionaryRepository" : "dkh 01/19/2012 14:36",
 		"testDirectoryRepository" : "dkh 01/19/2012 12:33",
 		"testExtractAttributesFrom" : "dkh 10/11/2011 14:07",
-		"testFileTreeRepository" : " 07/11/2013 21:47",
+		"testFileTreeRepository" : "07/11/2013 21:47",
 		"testHttpRepository" : "dkh 01/19/2012 12:35",
 		"testServerDirectoryRepository" : "dkh 01/19/2012 12:33" } }

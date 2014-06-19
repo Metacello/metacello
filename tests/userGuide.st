@@ -15,13 +15,13 @@ Smalltalk at: #CommandLineToolSet ifPresent: [:cls |
 "Load Metacello ... "
 
 Metacello new
-	baseline: 'Metacello';
+  baseline: 'Metacello';
   repository: 'filetree://', gitPath, '/metacello-work/repository';
   get.
 
 [
 Metacello new
-	baseline: 'Metacello';
+  baseline: 'Metacello';
   repository: 'filetree://', gitPath, '/metacello-work/repository';
   onConflict: [:ex | 
     "allow new version of Metacello to be loaded"
@@ -71,17 +71,22 @@ Metacello new
   smalltalkhubUser: 'Seaside' project: 'Seaside30';
   list.
 
+false ifTrue: [
+  "no longer interested in locking configurations"
 Transcript cr; show: '---lock'.
 Metacello image
   configuration: 'Seaside30';
   version: #'stable';
   lock.
+].
 
-Transcript cr; show: '---load (REST)'.
 Metacello new
   configuration: 'SeasideRest';
   onWarning: [:ex | 
     Transcript cr; show: 'Warning: ', ex description.
     ex resume ];
+  repository: 'http://smalltalkhub.com/mc/Seaside/MetacelloConfigurations/main';
   load.
 
+TravisCISuccessNoFailure
+      value: 'TravisCISuccess.txt'.

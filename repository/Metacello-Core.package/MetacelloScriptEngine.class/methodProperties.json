@@ -13,7 +13,7 @@
 		"fetchRecord:required:" : "dkh 04/03/2013 12:30",
 		"get" : "dkh 04/03/2013 12:30",
 		"getBaselineProjectUnconditionalLoad:" : "dkh 7/12/2012 14:25",
-		"getBaselineUnconditionalLoad:" : "dkh 7/12/2012 14:25",
+		"getBaselineUnconditionalLoad:" : "dkh 06/18/2014 09:59",
 		"getConfigurationProjectUnconditionalLoad:" : "dkh 7/12/2012 14:25",
 		"getConfigurationUnconditionalLoad:" : "dkh 7/12/2012 14:25",
 		"handleConflict:" : "dkh 7/12/2012 14:25",
@@ -39,6 +39,7 @@
 		"projectSpec" : "dkh 7/12/2012 14:26",
 		"projectSpec:" : "dkh 7/12/2012 14:26",
 		"record:" : "dkh 7/23/2012 15:53",
+		"register" : "dkh 05/21/2014 14:22",
 		"repositories" : "dkh 7/12/2012 14:25",
 		"repositoryOverrides" : "dkh 7/23/2012 19:31",
 		"root" : "dkh 7/12/2012 14:25",
@@ -47,4 +48,5 @@
 		"setDefaultsAndValidateProjectSpec" : "dkh 04/03/2013 12:34",
 		"silently" : "dkh 7/12/2012 14:25",
 		"unlock" : "dkh 04/03/2013 12:31",
+		"unregister" : "dkh 11/18/2013 06:59",
 		"useCurrentVersion" : "dkh 7/12/2012 14:25" } }

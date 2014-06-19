@@ -16,4 +16,3 @@ testDualFetch
 	pkgSpecs := version packages.
 	self assert: map size = pkgSpecs size.
 	pkgSpecs do: [:pkgSpec | map at: pkgSpec name ifAbsent: [ self assert: false ]].
-		

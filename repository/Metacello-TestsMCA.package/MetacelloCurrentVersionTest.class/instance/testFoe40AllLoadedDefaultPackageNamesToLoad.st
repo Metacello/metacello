@@ -45,4 +45,3 @@ testFoe40AllLoadedDefaultPackageNamesToLoad
 	self assert: packageNames size == 2.
 	self assert: (packageNames includes: 'GoferFoo').
 	self assert: (packageNames includes: 'GoferBar').
-

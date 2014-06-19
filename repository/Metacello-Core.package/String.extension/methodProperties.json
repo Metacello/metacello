@@ -20,6 +20,7 @@
 		"setBlessingInMetacelloVersion:" : "dkh 6/5/2012 19:01:24",
 		"setDescriptionInMetacelloConfig:" : "dkh 6/5/2012 19:01:24",
 		"setDescriptionInMetacelloVersion:" : "dkh 6/5/2012 19:01:24",
+		"setImportInVersionSpec:" : "dkh 11/17/2013 17:19",
 		"setIncludesInMetacelloPackage:" : "dkh 6/5/2012 19:01:24",
 		"setLoadsInMetacelloProject:" : "dkh 6/5/2012 19:01:24",
 		"setPackage:withInMetacelloConfig:" : "dkh 6/5/2012 19:01:24",

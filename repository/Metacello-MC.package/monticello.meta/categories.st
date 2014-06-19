@@ -1,4 +1,3 @@
-SystemOrganization addCategory: #'Metacello-MC'!
 SystemOrganization addCategory: #'Metacello-MC-Directives'!
 SystemOrganization addCategory: #'Metacello-MC-Gofer'!
 SystemOrganization addCategory: #'Metacello-MC-Loaders'!

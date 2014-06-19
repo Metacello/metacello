@@ -36,4 +36,3 @@ testFoo4020Loaded
 	self assertProject: projectFie expectedVersionString: nil expectedFidelity: nil.
 	self assertProject: projectFee expectedVersionString: nil expectedFidelity: nil.
 	self assertProject: fum expectedVersionString: nil expectedFidelity: nil.
-

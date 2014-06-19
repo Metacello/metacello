@@ -18,4 +18,3 @@ spec
 	package: ''Example-Core'' with: [
 		spec repository: ''http://www.example.com/4''. ].'.
 	self assert: string = expected.
-	
