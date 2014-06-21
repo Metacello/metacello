@@ -6,4 +6,4 @@ setUpIssue95
 		setUpConfigurationOfProjectInfinite;
 		setUpConfigurationOfProjectLoop;
 		setUpConfigurationOfProjectIssue95;
-		yourself
+		yourself		

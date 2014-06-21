@@ -5,3 +5,4 @@ setUpConfigurationOfProjectIssue136
 	| versionInfo |
 	versionInfo := self setUpConfigurationOfProjectIssue136dkh1.
 	versionInfo := self setUpConfigurationOfProjectIssue136dkh2: {versionInfo}.
+	
