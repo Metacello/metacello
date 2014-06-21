@@ -18,18 +18,14 @@ packageNamed: aString forLoad: ignored forMap: map ifAbsent: absentBlock
                 do: [ :assoc | 
                   ((assoc value includes: aString) and: [ map includesKey: assoc key ])
                     ifTrue: [ 
-                      importSpec := (map at: assoc key) copy
-                        name: aString;
+                      importSpec := (map at: assoc key)
                         mergeImportLoads: {aString};
-                        yourself.
-                      importSpec projectReference name: aString ] ] ].
+                        yourself ] ] ].
           importSpec
             ifNil: [ 
-              importSpec := (map at: self import ifAbsent: absentBlock) copy
-                name: aString;
+              importSpec := (map at: self import ifAbsent: absentBlock)
                 mergeImportLoads: {aString};
-                yourself.
-              importSpec projectReference name: aString ].
+                yourself ].
           importSpec ]
         ifFalse: [ 
           (aString = 'default' or: [ aString = 'ALL' ])
