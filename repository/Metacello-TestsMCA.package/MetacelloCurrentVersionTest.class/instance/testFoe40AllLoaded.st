@@ -31,3 +31,4 @@ testFoe40AllLoaded
 	self assertProject: projectFee expectedVersionString: '4.0' expectedFidelity: #loadedMatchConstraints.
 	self assertProject: projectFoe expectedVersionString: '4.0' expectedFidelity: #allLoadedToSpec.
 	self assertProject: fum expectedVersionString: '4.0' expectedFidelity: #loadedMatchConstraints.
+

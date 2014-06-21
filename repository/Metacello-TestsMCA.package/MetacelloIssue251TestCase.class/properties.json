@@ -1,0 +1,14 @@
+{
+	"category" : "Metacello-TestsMCA",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 06/21/2014 07:24",
+	"instvars" : [
+		"tempRepositories" ],
+	"name" : "MetacelloIssue251TestCase",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }
