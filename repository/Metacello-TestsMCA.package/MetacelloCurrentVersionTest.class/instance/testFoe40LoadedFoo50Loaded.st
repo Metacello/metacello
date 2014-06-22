@@ -27,3 +27,4 @@ testFoe40LoadedFoo50Loaded
 	self assertProject: projectFee expectedVersionString: nil expectedFidelity: nil.
 	self assertProject: projectFoe expectedVersionString: '4.0' expectedFidelity: #loadedMatchConstraints.
 	self assertProject: fum expectedVersionString: '4.0' expectedFidelity: #loadedMatchConstraints.
+

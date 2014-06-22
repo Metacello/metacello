@@ -23,3 +23,4 @@ testFoo40Loaded
 	self assertProject: projectFie expectedVersionString: '4.0' expectedFidelity: #loadedToSpec.
 	self assertProject: projectFee expectedVersionString: nil expectedFidelity: nil.
 	self assertProject: fum expectedVersionString: '4.0' expectedFidelity: #loadedToSpec.
+

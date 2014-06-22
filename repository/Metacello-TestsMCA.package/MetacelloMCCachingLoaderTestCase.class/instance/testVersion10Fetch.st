@@ -13,3 +13,4 @@ testVersion10Fetch
 	pkgSpecs := version packages.
 	self assert: map size = pkgSpecs size.
 	pkgSpecs do: [:pkgSpec | map at: pkgSpec file ifAbsent: [ self assert: false ]].
+		

@@ -26,3 +26,4 @@ testFoo40Loaded1Package1EarlierPackage
 	self assertProject: projectFie expectedVersionString: '3.5' expectedFidelity: #loadedMatchConstraints.
 	self assertProject: projectFee expectedVersionString: nil expectedFidelity: nil.
 	self assertProject: fum expectedVersionString: nil expectedFidelity: nil.
+

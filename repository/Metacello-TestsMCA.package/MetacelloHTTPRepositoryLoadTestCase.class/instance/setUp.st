@@ -8,3 +8,4 @@ setUp
 		package: 'BogusConfiguration';
 		package: 'Bogus';
 		package: 'BogusExt'
+		

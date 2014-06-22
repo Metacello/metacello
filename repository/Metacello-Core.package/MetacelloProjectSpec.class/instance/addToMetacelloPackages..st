@@ -11,3 +11,4 @@ addToMetacelloPackages: aMetacelloPackagesSpec
 			name: spec name;
 			spec: spec;
 			yourself)
+			

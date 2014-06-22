@@ -28,3 +28,6 @@ tearDownPackages: aGoferInstance
 		ifTrue: [ aGoferInstance package: 'MetacelloTestConfigurationOfUmbrellaB' ].
 	(self hasPackage: 'MetacelloTestConfigurationOfProjectIssue86')
 		ifTrue: [ aGoferInstance package: 'MetacelloTestConfigurationOfProjectIssue86' ].
+		
+		
+	

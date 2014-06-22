@@ -5,4 +5,4 @@ ensureLoadUsing: aLoader
 
   [ super ensureLoadUsing: aLoader ]
     on: MetacelloIgnorePackageLoaded
-    do: [ :ex | ex resume: true ]
+    do: [ :ex | ex resume: ex packageSpec name = self name ]
