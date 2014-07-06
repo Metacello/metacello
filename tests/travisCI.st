@@ -19,6 +19,8 @@ Metacello new
   repository: 'filetree://', gitPath, '/metacello-work/repository';
   get.
 
+Transcript cr; show: 'load list: ', (Smalltalk at: #'TRAVIS_LOAD_LIST') printString.
+
 Metacello new
 	baseline: 'Metacello';
   repository: 'filetree://', gitPath, '/metacello-work/repository';
