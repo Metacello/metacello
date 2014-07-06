@@ -14,13 +14,23 @@ Smalltalk at: #CommandLineToolSet ifPresent: [:cls |
 
   MetacelloProjectRegistration registry baselineRegistry values
     do: [ :registration |
-      Transcript cr; show: registraion printString.
+      Transcript cr; show: registration printString.
       registration projectName
         ifNil: [ Transcript show: ' - no name: ']
         ifNotNil: [
           registration configurationProjectSpec
             ifNil: [ registration baselineProjectSpec ifNil: [Transcript show: ' - nil config and nil baseline: ' ] ]
             ifNotNil: [ registration baselineProjectSpec ifNotNil: [Transcript show: ' - nonNil config and nonNil baseline' ] ] ] ].
+  MetacelloProjectRegistration registry configurationRegistry values
+    do: [ :registration |
+      Transcript cr; show: registration printString.
+      registration projectName
+        ifNil: [ Transcript show: ' - no name: ']
+        ifNotNil: [
+          registration configurationProjectSpec
+            ifNil: [ registration baselineProjectSpec ifNil: [Transcript show: ' - nil config and nil baseline: ' ] ]
+            ifNotNil: [ registration baselineProjectSpec ifNotNil: [Transcript show: ' - nonNil config and nonNil baseline' ] ] ] ].
+
 
 "Load Metacello ... "
 
