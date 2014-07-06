@@ -12,10 +12,11 @@ Smalltalk at: #CommandLineToolSet ifPresent: [:cls |
   (Smalltalk at: #ToolSet) default: cls.
 ].
 
+Smalltalk at: #MetacelloProjectRegistration ifPresent: [:cls |
   "Issue #212: cannot repair registry from a Metacello load ... registry is copied during load, so any invalid registrations
    are restored immediately after load is finished"
 
-  (MetacelloProjectRegistration registry baselineRegistry values
+  (cls registry baselineRegistry values
     detect: [ :registration |
       "inline MetacelloProjectRegistration>>isValid to correct invalid definition ... detecting INVALID registrations"
       registration projectName
@@ -31,7 +32,7 @@ Smalltalk at: #CommandLineToolSet ifPresent: [:cls |
           show:
               'priming registry from image. See https://github.com/dalehenrich/metacello-work/issues/197'.
         [
-        MetacelloProjectRegistration
+        cls
           resetRegistry;
           primeRegistryFromImage ]
           on: Warning
@@ -39,7 +40,7 @@ Smalltalk at: #CommandLineToolSet ifPresent: [:cls |
             Transcript
               cr;
               show: 'Warning resumed: ' , ex description.
-            ex resume ] ].
+            ex resume ] ] ].
 
 "Load the Metacello Tests ... "
 [
