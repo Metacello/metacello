@@ -11,7 +11,7 @@ testIssue136Loading
       the first one loaded (BaselineOfGithubRefVII) should win
 	 "
 
-  | conflictSeen |
+  | conflictSeen upgradeSeen |
   Metacello new
     baseline: 'GithubRefVII';
     repository: 'filetree://' , externalDirectory fullName;
@@ -24,19 +24,25 @@ testIssue136Loading
     expectedBaselineClassName: 'BaselineOfExternal'
     expectedBaselineVersion: 'baseline'
     expectedBaselineRepository: 'http://ss3.gemtalksystems.com/ss/external'.
-  conflictSeen := false.
+  upgradeSeen := conflictSeen := false.
   Metacello new
     baseline: 'GithubRefVIII';
     repository: 'filetree://' , externalDirectory fullName;
     onConflict: [ :ex | 
-          ex existingProjectRegistration name = 'External'
+          ex existingProjectRegistration projectName = 'External'
             ifTrue: [ 
               conflictSeen := true.
-              ex allow ]
-            ifFalse: [ ex ] ];
+              ex disallow ].
+          ex pass ];
+    onUpgrade: [ :ex | 
+          upgradeSeen := true.
+          ex existingProjectRegistration projectName = 'External'
+            ifTrue: [ ex allow ].
+          ex pass ];
     silently;
     load.
   self assert: conflictSeen.
+  self deny: upgradeSeen.
   self
     validateExpectedConfigurationClassName: nil
     expectedConfigurationVersion: nil
