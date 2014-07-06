@@ -4,4 +4,4 @@ canUpgradeTo: aMetacelloRepositorySpec
     ifTrue: [ ^ true ].
   self type = 'github'
     ifTrue: [ ^ self createRepository canUpgradeTo: aMetacelloRepositorySpec createRepository ].
-  ^ true
+  ^ false
