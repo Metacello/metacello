@@ -1,0 +1,1 @@
+(name 'Metacello-GemStone-TestsMCB-dkh.1' message 'split out Metacello-GemStone-TestsMCB so that Metacello-TestsMCB doesn''t get loaded with both TravisCI_1 and TravisCI_3 (for GemStone)' id '762efa98-797b-4164-8c06-8840628d07d2' date '07/05/2014' time '20:02:40' author 'dkh' ancestors () stepChildren ())

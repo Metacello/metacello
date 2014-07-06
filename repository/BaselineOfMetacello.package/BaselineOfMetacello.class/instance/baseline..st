@@ -258,12 +258,15 @@ baseline: spec
         package: 'Metacello-TestsPlatform'
           with: [ 
               spec
-                requires: #('Metacello-Platform' 'Metacello-TestsMCB');
+                requires: #('Metacello-Platform');
                 file: 'Metacello-TestsPlatform.gemstone' ];
+        package: 'Metacello-GemStone-TestsMCB'
+          with: [ spec requires: #('Metacello-TestsMCB') ];
         yourself.
       spec
         group: 'Tests' with: #('Metacello-TestsPlatform');
         group: 'TravisCI_1' with: #('Metacello-TestsPlatform');
+        group: 'TravisCI_3' with: #('Metacello-GemStone-TestsMCB');
         yourself ].
   spec
     for: #'gs2.x'

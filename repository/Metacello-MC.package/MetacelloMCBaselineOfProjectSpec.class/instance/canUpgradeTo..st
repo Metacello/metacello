@@ -1,5 +1,7 @@
 scripting
 canUpgradeTo: aProjectSpec
-    "cannot upgrade between baselines"
+  "cannot upgrade between baselines unless repositories can be upgraded"
 
-    ^ false
+  (self repositories canUpgradeTo: aProjectSpec repositories)
+    ifTrue: [ ^ true ].
+  ^ false
