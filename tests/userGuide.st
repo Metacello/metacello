@@ -12,6 +12,7 @@ Smalltalk at: #CommandLineToolSet ifPresent: [:cls |
   (Smalltalk at: #ToolSet) default: cls.
 ].
 
+Transcript cr; show: 'BASELINES:'.
   MetacelloProjectRegistration registry baselineRegistry values
     do: [ :registration |
       Transcript cr; show: registration printString.
@@ -21,6 +22,7 @@ Smalltalk at: #CommandLineToolSet ifPresent: [:cls |
           registration configurationProjectSpec
             ifNil: [ registration baselineProjectSpec ifNil: [Transcript show: ' - nil config and nil baseline: ' ] ]
             ifNotNil: [ registration baselineProjectSpec ifNotNil: [Transcript show: ' - nonNil config and nonNil baseline' ] ] ] ].
+Transcript cr; show: 'CONFIGURATIONS:'.
   MetacelloProjectRegistration registry configurationRegistry values
     do: [ :registration |
       Transcript cr; show: registration printString.
