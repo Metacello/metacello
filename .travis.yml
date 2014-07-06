@@ -39,8 +39,6 @@ env:
 #   - ST=GemStone-3.0.1 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
    - ST=GemStone-3.1.0.6 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
    - ST=GemStone-3.1.0.6 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
-   - ST=GemStone-3.2.0 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
-   - ST=GemStone-3.2.0 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
 
 
 
