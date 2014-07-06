@@ -1,9 +1,9 @@
 mc support
-hasNoLoadConflicts: aMetacelloProjectSpec
-  self description = aMetacelloProjectSpec description
+hasNoLoadConflicts: aMetacelloRepositorySpec
+  self description = aMetacelloRepositorySpec description
     ifTrue: [ ^ true ].
   self type = 'github'
     ifTrue: [ 
       ^ self createRepository
-        hasNoLoadConflicts: aMetacelloProjectSpec createRepository ].
+        hasNoLoadConflicts: aMetacelloRepositorySpec createRepository ].
   ^ false
