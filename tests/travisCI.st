@@ -1,5 +1,5 @@
 "Load and run tests to be performed by TravisCI"
-| gitCache gitPath invalid |
+| gitCache gitPath |
 Transcript cr; show: 'travis---->travisCI.st'.
 
 gitCache := 'git_cache'.
@@ -12,26 +12,12 @@ Smalltalk at: #CommandLineToolSet ifPresent: [:cls |
   (Smalltalk at: #ToolSet) default: cls.
 ].
 
-invalid := MetacelloProjectRegistration registry baselineRegistry values
-    detect: [ :registration | 
-      "inline MetacelloProjectRegistration>>isValid to correct invalid definition ... detecting INVALID registrations"
-      registration projectName
-        ifNil: [ true ]
-        ifNotNil: [ 
-          registration configurationProjectSpec
-            ifNil: [ registration baselineProjectSpec isNil ]
-            ifNotNil: [ registration baselineProjectSpec notNil ] ] ]
-    ifNone: [ ].
-invalid ifNotNil: [Transcript cr; show: 'INVALID: ', invalid printString].
-
 "Load the Metacello Tests ... "
 [
 Metacello new
   baseline: 'Metacello';
   repository: 'filetree://', gitPath, '/metacello-work/repository';
   get.
-
-Transcript cr; show: 'load list: ', (Smalltalk at: #'TRAVIS_LOAD_LIST') printString.
 
 Metacello new
   baseline: 'Metacello';
