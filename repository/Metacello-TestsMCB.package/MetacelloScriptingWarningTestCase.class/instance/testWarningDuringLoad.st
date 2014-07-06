@@ -2,11 +2,17 @@ as yet unclassified
 testWarningDuringLoad
   [ 
   | producedWarning externalCoreClass |
+  Transcript
+    cr;
+    show: 'testWarningDuringLoad [0]'.
   Metacello new
     configuration: 'Issue181';
     version: '0.9.1';
     repository: 'dictionary://Metacello_Configuration_Test_Repository';
     load.
+  Transcript
+    cr;
+    show: 'testWarningDuringLoad [1]'.
   producedWarning := false.
   externalCoreClass := Smalltalk
     at: #'ExternalCore'
@@ -14,6 +20,9 @@ testWarningDuringLoad
   self deny: (externalCoreClass selectors includes: #'forceWarning').
   externalCoreClass compile: 'forceWarning ^self'.	"dirty the package"
   self assert: (externalCoreClass selectors includes: #'forceWarning').
+  Transcript
+    cr;
+    show: 'testWarningDuringLoad [2]'.
   Metacello new
     configuration: 'Issue181';
     version: '0.9.3';
