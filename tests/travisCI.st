@@ -21,8 +21,8 @@ invalid := MetacelloProjectRegistration registry baselineRegistry values
           registration configurationProjectSpec
             ifNil: [ registration baselineProjectSpec isNil ]
             ifNotNil: [ registration baselineProjectSpec notNil ] ] ]
-    ifNone: [ #() ].
-invalid isEmpty ifFalse: [Transcript cr; show: 'INVALID: ', invalid printString].
+    ifNone: [ ].
+invalid ifNotNil: [Transcript cr; show: 'INVALID: ', invalid printString].
 
 "Load the Metacello Tests ... "
 [
