@@ -12,27 +12,34 @@ Smalltalk at: #CommandLineToolSet ifPresent: [:cls |
   (Smalltalk at: #ToolSet) default: cls.
 ].
 
-Transcript cr; show: 'BASELINES:'.
-  MetacelloProjectRegistration registry baselineRegistry values
-    do: [ :registration |
-      Transcript cr; show: registration printString.
-      registration projectName
-        ifNil: [ Transcript show: ' - no name: ']
-        ifNotNil: [
-          registration configurationProjectSpec
-            ifNil: [ registration baselineProjectSpec ifNil: [Transcript show: ' - nil config and nil baseline: ' ] ]
-            ifNotNil: [ registration baselineProjectSpec ifNotNil: [Transcript show: ' - nonNil config and nonNil baseline' ] ] ] ].
-Transcript cr; show: 'CONFIGURATIONS:'.
-  MetacelloProjectRegistration registry configurationRegistry values
-    do: [ :registration |
-      Transcript cr; show: registration printString.
-      registration projectName
-        ifNil: [ Transcript show: ' - no name: ']
-        ifNotNil: [
-          registration configurationProjectSpec
-            ifNil: [ registration baselineProjectSpec ifNil: [Transcript show: ' - nil config and nil baseline: ' ] ]
-            ifNotNil: [ registration baselineProjectSpec ifNotNil: [Transcript show: ' - nonNil config and nonNil baseline' ] ] ] ].
+  "Issue #212: cannot repair registry from a Metacello load ... registry is copied during load, so any invalid registrations
+   are restored immediately after load is finished"
 
+  (MetacelloProjectRegistration registry baselineRegistry values
+    detect: [ :registration | 
+      "inline MetacelloProjectRegistration>>isValid to correct invalid definition ... detecting INVALID registrations"
+      registration projectName
+        ifNil: [ true ]
+        ifNotNil: [ 
+          registration configurationProjectSpec
+            ifNil: [ registration baselineProjectSpec isNil ]
+            ifNotNil: [ registration baselineProjectSpec notNil ] ] ]
+    ifNone: [ "no invalid registrations, don't reset and prime" ])
+      ifNotNil: [
+        Transcript
+          cr;
+          show:
+              'priming registry from image. See https://github.com/dalehenrich/metacello-work/issues/197'.
+        [ 
+        MetacelloProjectRegistration
+          resetRegistry;
+          primeRegistryFromImage ]
+          on: Warning
+          do: [ :ex | 
+            Transcript
+              cr;
+              show: 'Warning resumed: ' , ex description.
+            ex resume ] ].
 
 "Load Metacello ... "
 
