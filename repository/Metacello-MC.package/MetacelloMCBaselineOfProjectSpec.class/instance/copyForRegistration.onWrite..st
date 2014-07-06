@@ -1,7 +1,6 @@
 mutability
 copyForRegistration: aMetacelloProjectRegistration onWrite: aBlock
   | copy |
-  aMetacelloProjectRegistration validate.
   aMetacelloProjectRegistration
     baselineProjectSpecIfPresent: [ :spec | 
       copy := spec copy.
