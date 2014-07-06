@@ -32,4 +32,5 @@ testWarningDuringLoad
         cr;
         show: ex description;
         cr;
-        show: (GsProcess stackReportToLevel: 100) ]
+        show: (GsProcess stackReportToLevel: 100).
+      ex pass ]
