@@ -1,5 +1,6 @@
 as yet unclassified
 testWarningDuringLoad
+  [ 
   | producedWarning externalCoreClass |
   Metacello new
     configuration: 'Issue181';
@@ -22,4 +23,13 @@ testWarningDuringLoad
           producedWarning := true.
           ex resume ];
     load.
-  self assert: producedWarning
+  self assert: producedWarning ]
+    on: Error
+    do: [ :ex | 
+      Transcript
+        cr;
+        show: 'testWarningDuringLoad';
+        cr;
+        show: ex description;
+        cr;
+        show: (GsProcess stackReportToLevel: 100) ]
