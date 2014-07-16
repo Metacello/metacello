@@ -26,4 +26,4 @@ testPrimeRegistryFromImage5
   rgstry
     primeRegistryFromImage: {(Smalltalk at: #'ConfigurationOfExternal')}
     baselineClasses: {(Smalltalk at: #'BaselineOfExternal')}.
-  self validateBaseline: rgstry
+  self validateLockedBaseline: rgstry

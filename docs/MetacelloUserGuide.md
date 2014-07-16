@@ -165,7 +165,7 @@ into your image without actually loading the project itself:
 ```Smalltalk
 Metacello image
   configuration: 'SeasideRest';
-  squeaksource: 'Seaside30';
+  repository: 'http://smalltalkhub.com/mc/Seaside/MetacelloConfigurations/main';
   get.
 ```
 
@@ -281,7 +281,7 @@ Let's say that when you load the SeasideRest project you have decided
 that in this particular case you would like to bypass the lock and let
 the version of Seaside specified by the SeasideRest project to be loaded.
 
-We'll use `onLock:` to `allow` the new version of the Seaside project to
+We'll use `onLock:` to `break` the new version of the Seaside project to
 be loaded:
 
 ```Smalltalk
@@ -290,10 +290,14 @@ Metacello new
   version: #stable;
   onLock: [:ex :existing :new | 
     existing baseName = 'Seaside30'
-      ifTrue: [ ex allow ].
+      ifTrue: [ ex break ].
     ex pass ];
   load.
 ```
+
+use the message `honor` if you want to honor the lock and not load the new version.
+
+`break` is a synonym for `allow` and `honor` is a synonym for `disallow`.
 
 ### Upgrading a locked project
 
@@ -309,6 +313,10 @@ Metacello image
 ```
 
 The newly loaded of the project will continue to be locked.
+
+### Locking Example
+
+A [detailed locking example project](LockCommandReference.md) is available.
 
 ## Switching Project Repositories
 
@@ -348,7 +356,7 @@ Metacello new
 Metacello new
   baseline: 'Zinc';
   repository: 'filetree:///opt/git/zinc/repository';
-  onConflict: [:ex | ex allow ];
+  onConflict: [:ex | ex useNew ];
   load: 'Tests'
 ```
 
@@ -359,8 +367,8 @@ from a different repository than the one originally used and that is
 considered an error. Metacello signals a **MetacelloConflictingProjectError**.
 
 To avoid the **MetacelloConflictingProjectError** you use the
-`onConflict:` block to `allow` the error and Metacello will go ahead an
-load the project from a different repository.
+`onConflict:` block and send `useNew` to the exception to use the new project
+or `useExisting` to preserve the loaded state`.
 
 ## Project upgrades initiated by dependent proejcts
 

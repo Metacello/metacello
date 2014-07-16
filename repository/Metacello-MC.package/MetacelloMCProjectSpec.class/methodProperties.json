@@ -1,12 +1,13 @@
 {
 	"class" : {
-		 },
+		"new" : "otto 11/19/2013 10:27" },
 	"instance" : {
 		"allPackagesLoaded:" : "dkh 6/14/2012 15:53",
 		"asBaselineProjectSpec" : "dkh 6/8/2012 14:04:22",
 		"asConfigurationProjectSpec" : "dkh 6/8/2012 14:04:22",
-		"asProjectRegistration" : "dkh 6/8/2012 14:04:22",
+		"asProjectRegistration" : "dkh 06/30/2014 17:13",
 		"asProjectSpec" : "dkh 6/8/2012 14:04:22",
+		"baseName" : "otto 11/18/2013 12:59",
 		"canDowngradeTo:" : "dkh 6/8/2012 14:04:22",
 		"canUpgradeTo:" : "dkh 6/8/2012 14:04:22",
 		"className:" : "dkh 6/8/2012 14:04:22",
@@ -25,8 +26,12 @@
 		"file:" : "dkh 7/19/2012 16:03",
 		"file:constructor:" : "dkh 6/8/2012 14:04:22",
 		"getFile" : "dkh 6/8/2012 14:04:22",
-		"hasConflictWithBaseline:" : "dkh 07/28/2013 09:45",
+		"hasConflictWithBaselineSpec:" : "otto 11/18/2013 12:10",
+		"hasConflictWithConfigurationSpec:" : "otto 11/18/2013 12:07",
+		"hasConflictWithProjectSpec:" : "otto 11/18/2013 13:58",
 		"hasNoLoadConflicts:" : "dkh 04/02/2013 20:23",
+		"isBaselineOfProjectSpec" : "talita 11/18/2013 22:22",
+		"isConfigurationOfProjectSpec" : "talita 11/18/2013 22:20",
 		"isPartiallyLoaded:" : "dkh 6/8/2012 14:04:22",
 		"isPossibleBaseline" : "dkh 6/8/2012 14:04:22",
 		"loadPackageList" : "dkh 6/8/2012 14:04:22",
@@ -44,4 +49,5 @@
 		"validateForScriptLoad:withDefaultVersionString:withDefaultRepositoryDecription:" : "dkh 7/23/2012 11:17",
 		"validateVersionString:withDefaultVersionString:" : "dkh 7/23/2012 11:56",
 		"version" : "dkh 6/8/2012 14:04:22",
-		"versionForScriptEngine:" : "dkh 7/27/2012 04:59" } }
+		"versionForScriptEngine:" : "dkh 7/27/2012 04:59",
+		"workingCopy" : "dkh 05/15/2014 15:44" } }

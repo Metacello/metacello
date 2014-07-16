@@ -1,4 +1,4 @@
 lookup
 lookupConfigurationSpec
-    configurationProjectSpec ifNotNil: [ :spec | ^ spec ].
-    ^ baselineProjectSpec
+  configurationProjectSpec ifNotNil: [ :spec | ^ spec ].
+  ^ baselineProjectSpec

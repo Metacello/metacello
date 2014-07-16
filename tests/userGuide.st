@@ -12,16 +12,45 @@ Smalltalk at: #CommandLineToolSet ifPresent: [:cls |
   (Smalltalk at: #ToolSet) default: cls.
 ].
 
+  "Issue #212: cannot repair registry from a Metacello load ... registry is copied during load, so any invalid registrations
+   are restored immediately after load is finished"
+
+  (MetacelloProjectRegistration registry baselineRegistry values
+    detect: [ :registration | 
+      "inline MetacelloProjectRegistration>>isValid to correct invalid definition ... detecting INVALID registrations"
+      registration projectName
+        ifNil: [ true ]
+        ifNotNil: [ 
+          registration configurationProjectSpec
+            ifNil: [ registration baselineProjectSpec isNil ]
+            ifNotNil: [ registration baselineProjectSpec notNil ] ] ]
+    ifNone: [ "no invalid registrations, don't reset and prime" ])
+      ifNotNil: [
+        Transcript
+          cr;
+          show:
+              'priming registry from image. See https://github.com/dalehenrich/metacello-work/issues/197'.
+        [ 
+        MetacelloProjectRegistration
+          resetRegistry;
+          primeRegistryFromImage ]
+          on: Warning
+          do: [ :ex | 
+            Transcript
+              cr;
+              show: 'Warning resumed: ' , ex description.
+            ex resume ] ].
+
 "Load Metacello ... "
 
 Metacello new
-	baseline: 'Metacello';
+  baseline: 'Metacello';
   repository: 'filetree://', gitPath, '/metacello-work/repository';
   get.
 
 [
 Metacello new
-	baseline: 'Metacello';
+  baseline: 'Metacello';
   repository: 'filetree://', gitPath, '/metacello-work/repository';
   onConflict: [:ex | 
     "allow new version of Metacello to be loaded"
@@ -71,17 +100,22 @@ Metacello new
   smalltalkhubUser: 'Seaside' project: 'Seaside30';
   list.
 
+false ifTrue: [
+  "no longer interested in locking configurations"
 Transcript cr; show: '---lock'.
 Metacello image
   configuration: 'Seaside30';
   version: #'stable';
   lock.
+].
 
-Transcript cr; show: '---load (REST)'.
 Metacello new
   configuration: 'SeasideRest';
   onWarning: [:ex | 
     Transcript cr; show: 'Warning: ', ex description.
     ex resume ];
+  repository: 'http://smalltalkhub.com/mc/Seaside/MetacelloConfigurations/main';
   load.
 
+TravisCISuccessNoFailure
+      value: 'TravisCISuccess.txt'.

@@ -1,7 +1,14 @@
 doits
 reprimeRegistryIssue197
   MetacelloProjectRegistration registry baselineRegistry values
-    detect: [ :registration | registration isValid not ]
+    detect: [ :registration | 
+      "inline MetacelloProjectRegistration>>isValid to correct invalid definition ... detecting INVALID registrations"
+      registration projectName
+        ifNil: [ true ]
+        ifNotNil: [ 
+          registration configurationProjectSpec
+            ifNil: [ registration baselineProjectSpec isNil ]
+            ifNotNil: [ registration baselineProjectSpec notNil ] ] ]
     ifNone: [ 
       "no invalid registrations, don't reset and prime"
       ^ self ].

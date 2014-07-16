@@ -12,15 +12,45 @@ Smalltalk at: #CommandLineToolSet ifPresent: [:cls |
   (Smalltalk at: #ToolSet) default: cls.
 ].
 
+Smalltalk at: #MetacelloProjectRegistration ifPresent: [:cls |
+  "Issue #212: cannot repair registry from a Metacello load ... registry is copied during load, so any invalid registrations
+   are restored immediately after load is finished"
+
+  (cls registry baselineRegistry values
+    detect: [ :registration |
+      "inline MetacelloProjectRegistration>>isValid to correct invalid definition ... detecting INVALID registrations"
+      registration projectName
+        ifNil: [ true ]
+        ifNotNil: [
+          registration configurationProjectSpec
+            ifNil: [ registration baselineProjectSpec isNil ]
+            ifNotNil: [ registration baselineProjectSpec notNil ] ] ]
+    ifNone: [ "no invalid registrations, don't reset and prime" ])
+      ifNotNil: [
+        Transcript
+          cr;
+          show:
+              'priming registry from image. See https://github.com/dalehenrich/metacello-work/issues/197'.
+        [
+        cls
+          resetRegistry;
+          primeRegistryFromImage ]
+          on: Warning
+          do: [ :ex |
+            Transcript
+              cr;
+              show: 'Warning resumed: ' , ex description.
+            ex resume ] ] ].
+
 "Load the Metacello Tests ... "
 [
 Metacello new
-	baseline: 'Metacello';
+  baseline: 'Metacello';
   repository: 'filetree://', gitPath, '/metacello-work/repository';
   get.
 
 Metacello new
-	baseline: 'Metacello';
+  baseline: 'Metacello';
   repository: 'filetree://', gitPath, '/metacello-work/repository';
   onConflict: [:ex | 
     "allow new version of Metacello to be loaded"

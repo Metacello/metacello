@@ -2,11 +2,17 @@
 	"class" : {
 		 },
 	"instance" : {
-		"baselineProjectSpec" : "dkh 07/28/2013 14:48",
-		"configurationProjectSpec" : "dkh 07/28/2013 14:48",
-		"testBasicBaselineRegistration" : "dkh 6/12/2012 15:41:23.319",
-		"testBasicConfigurationRegistration" : "dkh 6/12/2012 15:41:23.319",
-		"testBasicHasLoadConflicts" : "dkh 07/28/2013 14:28",
-		"testBasicNoLoadConflicts" : "dkh 07/28/2013 14:51",
-		"testBasicRegistration" : "dkh 07/28/2013 14:53",
-		"testBasicValidRegistration" : "dkh 07/28/2013 14:53" } }
+		"checkRegistrationValidity" : "otto 11/19/2013 12:38",
+		"createBaselineProjectSpec" : "otto 11/19/2013 12:13",
+		"createConfigurationProjectSpec" : "otto 11/19/2013 12:14",
+		"setUp" : "otto 11/19/2013 12:14",
+		"testAsProjectRegistration" : "otto 11/19/2013 12:22",
+		"testBaselineAndConfigurationHasLoadConflicts" : "otto 11/19/2013 12:11",
+		"testBaselinesHasLoadConflicts" : "otto 11/19/2013 12:19",
+		"testBasicBaselineRegistration" : "otto 11/19/2013 12:38",
+		"testBasicConfigurationRegistration" : "otto 11/19/2013 12:38",
+		"testBasicNoLoadConflicts" : "otto 11/19/2013 12:34",
+		"testConfigurationsHasLoadConflicts" : "otto 11/19/2013 12:14",
+		"testHasLoadConflictsRaisesErrorsIfInvalid" : "otto 11/19/2013 12:35",
+		"testInvalidRegistration" : "otto 11/19/2013 12:22",
+		"testVersionInfo" : "dkh 05/08/2014 16:04" } }

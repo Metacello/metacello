@@ -1,7 +1,7 @@
 ## INSTALL Preview Version
 
 ```Smalltalk
-"Get the Metacello configuration (for Pharo users)"
+"Get the Metacello configuration (for older Pharo versions - installed by default in Pharo 3.0)"
 Gofer new
   gemsource: 'metacello';
   package: 'ConfigurationOfMetacello';
@@ -25,7 +25,7 @@ Installer gemsource
   load.
 ```
 
-**GemStone2.4**, **PharoCore 1.3**, **PharoCore 1.4**, **Squeak4.3**, **Squeak4.4** and **Squeak4.5** are currently supported.
+**GemStone2.4**, **PharoCore 1.3**, **PharoCore 1.4**, **PharoCore 2.0**, **Squeak4.3**, **Squeak4.4** and **Squeak4.5** are currently supported.
 
 If you are interested in using GitHub with the Metacello Preview, you should check out 
 [Getting Started with GitHub][1], the [Metacello User Guide][2], the [Metacello Scripting API][3], and [Issue #136 detail][4].
@@ -37,8 +37,9 @@ If you are interested in using GitHub with the Metacello Preview, you should che
 
 **1.0-beta.31.1.5 branch**: [![Build Status](https://secure.travis-ci.org/dalehenrich/metacello-work.png?branch=1.0-beta.31.1.5)](http://travis-ci.org/dalehenrich/metacello-work)
 
-[1]: https://github.com/dalehenrich/metacello-work/blob/master/docs/GettingStartedWithGitHub.md
-[2]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloUserGuide.md
-[3]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md
-[4]: https://github.com/dalehenrich/metacello-work/blob/master/docs/Issue_136Detail.md
+[1]: docs/GettingStartedWithGitHub.md
+[2]: docs/MetacelloUserGuide.md
+[3]: docs/MetacelloScriptingAPI.md
+[4]: docs/Issue_136Detail.md
+
 
