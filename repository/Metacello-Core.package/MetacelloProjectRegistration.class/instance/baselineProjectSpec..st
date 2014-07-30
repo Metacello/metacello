@@ -1,9 +1,11 @@
 accessing
 baselineProjectSpec: anObject
-	"only one of baselineProjectSpec or configurationProjectSpec should ever be set"
+  "force the registration to be consistent -- difficult for Metacello to 
+   repair registrations during load -- I've tried. "
 
-	self shouldBeMutable.
-	self
-		assert: configurationProjectSpec isNil;
-		assert: anObject isBaselineOfProjectSpec.
-	baselineProjectSpec := anObject
+  "https://github.com/dalehenrich/metacello-work/issues/212"
+
+  self shouldBeMutable.
+  configurationProjectSpec := nil.
+  self assert: anObject isBaselineOfProjectSpec.
+  baselineProjectSpec := anObject

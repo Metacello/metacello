@@ -1,3 +1,5 @@
 running
 tearDownPackageList
-    ^ #('GoferFoo' 'GoferBar' 'GoferFaux' 'GoferBeau' 'MetacelloTestConfigurationOfFoo' 'GeauxFoo' 'GeauxBar' 'GeauxFaux' 'GeauxBeau' 'MetacelloTestConfigurationOfFum' 'MetacelloTestConfigurationOfFoo' 'MetacelloTestConfigurationOfFan' 'MetacelloTestConfigurationOfFeaux' 'MetacelloTestConfigurationOfProjectFie' 'MetacelloTestConfigurationOfProjectFoe' 'MetacelloTestConfigurationOfProjectFee' 'MetacelloTestConfigurationOfProjectFum')
+  ^ super tearDownPackageList
+    ,
+      #('GoferFoo' 'GoferBar' 'GoferFaux' 'GoferBeau' 'MetacelloTestConfigurationOfFoo' 'GeauxFoo' 'GeauxBar' 'GeauxFaux' 'GeauxBeau' 'MetacelloTestConfigurationOfFum' 'MetacelloTestConfigurationOfFoo' 'MetacelloTestConfigurationOfFan' 'MetacelloTestConfigurationOfFeaux' 'MetacelloTestConfigurationOfProjectFie' 'MetacelloTestConfigurationOfProjectFoe' 'MetacelloTestConfigurationOfProjectFee' 'MetacelloTestConfigurationOfProjectFum')

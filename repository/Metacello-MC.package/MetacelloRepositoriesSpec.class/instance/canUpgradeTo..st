@@ -1,5 +1,5 @@
 scripting
-hasNoLoadConflicts: aMetacelloRepositoriesSpec
+canUpgradeTo: aMetacelloRepositoriesSpec
   | repositorySpecs anotherRepositorySpecs |
   repositorySpecs := self map values
     sort: [ :a :b | a description <= b description ].
@@ -11,6 +11,6 @@ hasNoLoadConflicts: aMetacelloRepositoriesSpec
     | repoSpec anotherRepoSpec |
     repoSpec := repositorySpecs at: index.
     anotherRepoSpec := anotherRepositorySpecs at: index.
-    (repoSpec hasNoLoadConflicts: anotherRepoSpec)
-      ifFalse: [ ^ false ] ].
-  ^ true
+    (repoSpec canUpgradeTo: anotherRepoSpec)
+      ifTrue: [ ^ true ] ].
+  ^ false
