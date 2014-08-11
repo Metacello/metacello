@@ -2,7 +2,10 @@ accessing
 currentBranchName
   ^ self configurationProjectSpec
     ifNotNil: [ 
-      configurationProjectSpec versionOrNil
-        ifNil: [ '' ]
-        ifNotNil: [ :vrsn | vrsn blessing asString ] ]
+      | projectVersion |
+      projectVersion := self versionInfo projectVersion.
+      projectVersion
+        ifNil: [ self versionInfo projectVersion: configurationProjectSpec versionOrNil ].
+      projectVersion ifNil: [ ^ '' ].
+      ^ projectVersion blessing asString ]
     ifNil: [ baselineProjectSpec repositoryBranchName ]
