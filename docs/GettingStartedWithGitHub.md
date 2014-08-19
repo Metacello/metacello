@@ -39,7 +39,7 @@ These expressions install the Metacello Preview and [FileTree][3].
 ```Smalltalk
 "Get the Metacello configuration"
 Gofer new
-  gemsource: 'metacello';
+  url: 'http://seaside.gemtalksystems.com/ss/metacello/';
   package: 'ConfigurationOfMetacello';
   load.
 
