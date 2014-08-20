@@ -13,4 +13,3 @@ mergeSpec: anotherSpec
 	(anotherAnswers := map at: #answers) ~~ nil
 		ifTrue: [ newSpec setAnswers: self answers, anotherAnswers ].
 	^newSpec
-	
