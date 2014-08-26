@@ -12,38 +12,12 @@ Smalltalk at: #CommandLineToolSet ifPresent: [:cls |
   (Smalltalk at: #ToolSet) default: cls.
 ].
 
-false ifTrue:[ 
-Smalltalk at: #MetacelloProjectRegistration ifPresent: [:cls |
-  "Issue #212: cannot repair registry from a Metacello load ... registry is copied during load, so any invalid registrations
-   are restored immediately after load is finished"
-
-  (cls registry baselineRegistry values
-    detect: [ :registration |
-      "inline MetacelloProjectRegistration>>isValid to correct invalid definition ... detecting INVALID registrations"
-      registration projectName
-        ifNil: [ true ]
-        ifNotNil: [
-          registration configurationProjectSpec
-            ifNil: [ registration baselineProjectSpec isNil ]
-            ifNotNil: [ registration baselineProjectSpec notNil ] ] ]
-    ifNone: [ "no invalid registrations, don't reset and prime" ])
-      ifNotNil: [
-        Transcript
-          cr;
-          show:
-              'priming registry from image. See https://github.com/dalehenrich/metacello-work/issues/197'.
-        [
-        cls
-          resetRegistry;
-          primeRegistryFromImage ]
-          on: Warning
-          do: [ :ex |
-            Transcript
-              cr;
-              show: 'Warning resumed: ' , ex description.
-            ex resume ] ] ] ].
-
-"Load the Metacello Tests ... "
+"Load Metacello... "
+Smalltalk at: #ConfigurationOfGLASS ifPresent: [:glassConfigClass |
+  "approved way of bootstrapping Metacello for GemStone"
+  glassConfigClass project updateProject.
+  (Smalltalk at: #GsDeployer)
+    deploy: [ (glassConfigClass project version: '1.0-beta.9.3') load ]].
 [
 Metacello new
   baseline: 'Metacello';

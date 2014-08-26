@@ -1,12 +1,37 @@
 ## INSTALL Preview Version
 
+###GemStone
+
+```Smalltalk
+"Metacello Preview #stable is bootstrapped as part of GLASS 1.0-beta.9.3"
+ConfigurationOfGLASS project updateProject.
+GsDeployer
+  deploy: [ (ConfigurationOfGLASS project version: '1.0-beta.9.3') load ].
+```
+
+###Pharo
+
 ```Smalltalk
 "Get the Metacello configuration (for older Pharo versions - installed by default in Pharo 3.0)"
 Gofer new
   gemsource: 'metacello';
   package: 'ConfigurationOfMetacello';
   load.
+"Bootstrap Metacello Preview, using mcz files (#'previewBootstrap' symbolic version"
+((Smalltalk at: #ConfigurationOfMetacello) project 
+  version: #'previewBootstrap') load.
 
+"Load the Preview version of Metacello from GitHub"
+(Smalltalk at: #Metacello) new
+  configuration: 'MetacelloPreview';
+  version: #stable;
+  repository: 'github://dalehenrich/metacello-work:configuration';
+  load.
+```
+
+###Squeak
+
+```Smalltalk
 "Get the Metacello configuration (for Squeak users)"
 Installer gemsource
     project: 'metacello';
@@ -24,6 +49,7 @@ Installer gemsource
   repository: 'github://dalehenrich/metacello-work:configuration';
   load.
 ```
+
 
 **GemStone2.4**, **PharoCore 1.3**, **PharoCore 1.4**, **PharoCore 2.0**, **Squeak4.3**, **Squeak4.4** and **Squeak4.5** are currently supported.
 
