@@ -1,6 +1,24 @@
 language: erlang
 
 env:
+# Tested platforms and versions:
+#
+# GemStone
+#  GemStone-2.4.5.1
+#  GemStone-3.1.0.6
+#  GemStone-3.2.2
+#
+# Pharo
+#  Pharo-1.4
+#  Pharo-2.0
+#  Pharo-3.0 (although travis tests not passing)
+#
+# Squeak
+#  Squeak-4.3
+#  Squeak-4.4
+#  Squeak-4.5
+#  Squeak-Trunk
+#
    - ST=Pharo-1.4 LoadList="'default'" TRAVIS_SCRIPT=userGuide.st 
 #   - ST=GemStone-3.1.0.6 LoadList="'default'" TRAVIS_SCRIPT=userGuide.st # disable until Issue #241 addressed
 
