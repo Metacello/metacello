@@ -51,7 +51,7 @@ Installer gemsource
 ```
 
 
-**GemStone2.4**, **PharoCore 1.3**, **PharoCore 1.4**, **PharoCore 2.0**, **Squeak4.3**, **Squeak4.4** and **Squeak4.5** are currently supported.
+See the [.travis.yml file](./.travis.yml) for list of supported platforms and versions.
 
 If you are interested in using GitHub with the Metacello Preview, you should check out 
 [Getting Started with GitHub][1], the [Metacello User Guide][2], the [Metacello Scripting API][3], and [Issue #136 detail][4].
