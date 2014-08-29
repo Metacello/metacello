@@ -12,6 +12,7 @@ Smalltalk at: #CommandLineToolSet ifPresent: [:cls |
   (Smalltalk at: #ToolSet) default: cls.
 ].
 
+false ifTrue:[ 
 Smalltalk at: #MetacelloProjectRegistration ifPresent: [:cls |
   "Issue #212: cannot repair registry from a Metacello load ... registry is copied during load, so any invalid registrations
    are restored immediately after load is finished"
@@ -40,7 +41,7 @@ Smalltalk at: #MetacelloProjectRegistration ifPresent: [:cls |
             Transcript
               cr;
               show: 'Warning resumed: ' , ex description.
-            ex resume ] ] ].
+            ex resume ] ] ] ].
 
 "Load the Metacello Tests ... "
 [
