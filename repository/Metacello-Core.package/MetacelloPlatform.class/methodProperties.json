@@ -44,6 +44,7 @@
 		"stackCacheFor:cacheClass:at:doing:" : "dkh 6/5/2012 19:01:24",
 		"string:includesSubstring:" : "ChristopheDemarey 5/31/2013 13:02",
 		"suspendSystemUpdateEventsDuring:" : "ChristopheDemarey 4/29/2013 16:17",
+		"tempFileFor:suffix:" : "ChristopheDemarey 8/29/2014 17:13",
 		"timestamp" : "dkh 6/5/2012 19:01:24",
 		"transact:" : "dkh 6/5/2012 19:01:24",
 		"useStackCacheDuring:defaultDictionary:" : "dkh 6/5/2012 19:01:24" } }
