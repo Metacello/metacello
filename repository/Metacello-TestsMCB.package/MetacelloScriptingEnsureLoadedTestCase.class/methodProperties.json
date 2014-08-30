@@ -2,8 +2,8 @@
 	"class" : {
 		 },
 	"instance" : {
-		"tearDown" : "dkh 11/16/2013 22:06",
 		"tearDownPackageList" : "dkh 11/16/2013 22:00",
+		"tearDownPackages" : "dkh 08/30/2014 11:55",
 		"testBasicDefaultVersion" : "dkh 11/16/2013 21:57",
 		"testDefaultVersionUpgrade" : "dkh 11/16/2013 21:57",
 		"testEnsureLoad" : "dkh 11/16/2013 21:57" } }

@@ -1,6 +1,6 @@
 running
 tearDown
-  | aGofer finalWorkingCopyList |
+  | aGofer finalWorkingCopyList diff |
   super tearDown.
   aGofer := Gofer new.
   self tearDownPackageNames
@@ -13,4 +13,11 @@ tearDown
   Smalltalk removeKey: #'Metacello_Configuration_Test_Repository' ifAbsent: [  ].
   finalWorkingCopyList := (MCWorkingCopy allManagers
     collect: [ :each | each packageName ]) asIdentitySet.
-  self assert: (finalWorkingCopyList - initialWorkingCopyList) isEmpty
+  diff := finalWorkingCopyList - initialWorkingCopyList.
+  diff
+    do: [ :leak | 
+      Transcript
+        cr;
+        show:
+            'leaked package from ' , self printString , ' -> ' , leak printString ].
+  self assert: diff isEmpty

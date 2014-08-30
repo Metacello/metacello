@@ -1,10 +1,17 @@
 running
 tearDown
-  | finalWorkingCopyList |
+  | finalWorkingCopyList diff |
   super tearDown.
   self tearDownPackages.
   self tearDownRepositories.
   MetacelloProjectRegistration registry: registry.
   finalWorkingCopyList := (MCWorkingCopy allManagers
     collect: [ :each | each packageName ]) asIdentitySet.
-  self assert: (finalWorkingCopyList - initialWorkingCopyList) isEmpty
+  diff := finalWorkingCopyList - initialWorkingCopyList.
+  diff
+    do: [ :leak | 
+      Transcript
+        cr;
+        show:
+            'leaked package from ' , self printString , ' -> ' , leak printString ].
+  self assert: diff isEmpty

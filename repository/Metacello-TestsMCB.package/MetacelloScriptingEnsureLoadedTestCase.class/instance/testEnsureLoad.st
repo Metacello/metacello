@@ -1,4 +1,4 @@
-running
+tests
 testEnsureLoad
   "https://github.com/dalehenrich/metacello-work/issues/199"
 
