@@ -5,5 +5,5 @@ setUp
   self setUpRepositories.
   self setUpRepositoryContents.
   MetacelloProjectRegistration resetRegistry.
-  initialWorkingCopyList := (MCWorkingCopy allManagers
-    collect: [ :each | each packageName ]) asIdentitySet
+  initialWorkingCopyList := MCWorkingCopy allManagers
+    collect: [ :each | each packageName ]

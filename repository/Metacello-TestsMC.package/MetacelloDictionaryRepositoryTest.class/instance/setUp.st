@@ -13,5 +13,5 @@ setUp
   repo := self configurationRepository.
   self tempRepositories add: repo.
   Smalltalk at: #'Metacello_Configuration_Test_Repository' put: repo.
-  initialWorkingCopyList := (MCWorkingCopy allManagers
-    collect: [ :each | each packageName ]) asIdentitySet
+  initialWorkingCopyList := MCWorkingCopy allManagers
+    collect: [ :each | each packageName ]

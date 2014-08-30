@@ -11,9 +11,9 @@ tearDown
     ifTrue: [ aGofer metacelloUnload ].
   Smalltalk removeKey: #'Metacello_Gofer_Test_Repository' ifAbsent: [  ].
   Smalltalk removeKey: #'Metacello_Configuration_Test_Repository' ifAbsent: [  ].
-  finalWorkingCopyList := (MCWorkingCopy allManagers
-    collect: [ :each | each packageName ]) asIdentitySet.
-  diff := finalWorkingCopyList - initialWorkingCopyList.
+  finalWorkingCopyList := MCWorkingCopy allManagers
+    collect: [ :each | each packageName ].
+  diff := finalWorkingCopyList difference: initialWorkingCopyList.
   diff
     do: [ :leak | 
       Transcript

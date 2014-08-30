@@ -13,9 +13,9 @@ tearDown
     ifAbsent: [  ].
   self tempRepositories
     do: [ :repo | MCRepositoryGroup default removeRepository: repo ].
-  finalWorkingCopyList := (MCWorkingCopy allManagers
-    collect: [ :each | each packageName ]) asIdentitySet.
-  diff := finalWorkingCopyList - initialWorkingCopyList.
+  finalWorkingCopyList := MCWorkingCopy allManagers
+    collect: [ :each | each packageName ].
+  diff := finalWorkingCopyList difference: initialWorkingCopyList.
   diff
     do: [ :leak | 
       Transcript

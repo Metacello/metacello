@@ -5,9 +5,9 @@ tearDown
   self tearDownPackages.
   self tearDownRepositories.
   MetacelloProjectRegistration registry: registry.
-  finalWorkingCopyList := (MCWorkingCopy allManagers
-    collect: [ :each | each packageName ]) asIdentitySet.
-  diff := finalWorkingCopyList - initialWorkingCopyList.
+  finalWorkingCopyList := MCWorkingCopy allManagers
+    collect: [ :each | each packageName ].
+  diff := finalWorkingCopyList difference: initialWorkingCopyList.
   diff
     do: [ :leak | 
       Transcript
