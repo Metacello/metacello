@@ -13,11 +13,6 @@ Smalltalk at: #CommandLineToolSet ifPresent: [:cls |
 ].
 
 "Load Metacello... "
-Smalltalk at: #ConfigurationOfGLASS ifPresent: [:glassConfigClass |
-  "approved way of bootstrapping Metacello for GemStone"
-  glassConfigClass project updateProject.
-  (Smalltalk at: #GsDeployer)
-    deploy: [ (glassConfigClass project version: '1.0-beta.9.3') load ]].
 [
 Metacello new
   baseline: 'Metacello';
