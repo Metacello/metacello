@@ -19,9 +19,6 @@ Metacello new
   repository: 'filetree://', gitPath, '/metacello-work/repository';
   get.
 
-Transcript cr; show: 'Load: ', (Smalltalk at: #'TRAVIS_LOAD_LIST') printString.
-Transcript cr; show: (Metacello new baseline: 'Metacello'; repository: 'filetree://', gitPath, '/metacello-work/repository'; record: (Smalltalk at: #'TRAVIS_LOAD_LIST')) printString.
-
 Metacello new
   baseline: 'Metacello';
   repository: 'filetree://', gitPath, '/metacello-work/repository';
@@ -44,7 +41,6 @@ MetacelloPlatform current authorName: 'testMonkey'. "These tests save code ... n
 
 Transcript cr; show: '---Start running tests...'.
 
-true ifTrue: [ ^nil ].
 [
 TravisCIHarness
   value: #( 'BaselineOfMetacello' )
