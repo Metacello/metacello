@@ -6,7 +6,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"tempRepositories" ],
+		"tempRepositories",
+		"initialWorkingCopyList" ],
 	"name" : "MetacelloIssue108TestCase",
 	"pools" : [
 		 ],

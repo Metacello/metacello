@@ -11,4 +11,4 @@ setUp
   gofer repository: repo.
   Smalltalk at: #'Metacello_Configuration_Test_Repository' put: repo.
   initialWorkingCopyList := (MCWorkingCopy allManagers
-    select: [ :each | each packageName ]) asIdentitySet
+    collect: [ :each | each packageName ]) asIdentitySet
