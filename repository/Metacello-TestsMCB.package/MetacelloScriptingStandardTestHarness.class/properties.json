@@ -8,7 +8,8 @@
 	"instvars" : [
 		"registry",
 		"monticelloRepository",
-		"configurationRepository" ],
+		"configurationRepository",
+		"initialWorkingCopyList" ],
 	"name" : "MetacelloScriptingStandardTestHarness",
 	"pools" : [
 		 ],
