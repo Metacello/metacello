@@ -1,0 +1,22 @@
+{
+	"class" : {
+		"DevelopmentSupport" : "ChristopheDemarey 1/15/2014 11:32",
+		"baseConfigurationClassIfAbsent:" : "ChristopheDemarey 1/15/2014 11:32",
+		"ensureMetacello" : "ChristopheDemarey 1/15/2014 11:32",
+		"ensureMetacelloBaseConfiguration" : "ChristopheDemarey 1/15/2014 11:32",
+		"isMetacelloConfig" : "ChristopheDemarey 1/15/2014 11:32",
+		"load" : "ChristopheDemarey 1/15/2014 11:32",
+		"loadBleedingEdge" : "ChristopheDemarey 1/15/2014 11:32",
+		"loadDevelopment" : "ChristopheDemarey 1/15/2014 11:32",
+		"project" : "ChristopheDemarey 1/15/2014 11:32",
+		"validate" : "ChristopheDemarey 1/15/2014 11:32" },
+	"instance" : {
+		"baseline10:" : "ChristopheDemarey 1/15/2014 11:32",
+		"customProjectAttributes" : "ChristopheDemarey 1/15/2014 11:32",
+		"development:" : "ChristopheDemarey 1/15/2014 11:32",
+		"fileSystemLegacy:" : "ChristopheDemarey 1/15/2014 11:32",
+		"fuelMetalevel:" : "ChristopheDemarey 1/15/2014 11:32",
+		"project" : "ChristopheDemarey 1/15/2014 11:32",
+		"stable:" : "ChristopheDemarey 1/15/2014 11:32",
+		"version10:" : "ChristopheDemarey 1/15/2014 11:32",
+		"versionDevelopment:" : "ChristopheDemarey 1/15/2014 11:32" } }
