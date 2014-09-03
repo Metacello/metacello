@@ -11,17 +11,9 @@ testConfigurationConflict6WithLock1
     configuration: 'Conflict';
     version: '1.2.0';
     repository: 'filetree://' , configurationDirectory fullName;
-    onLock: [ :ex | ex break ];
-    onConflict: [ :ex :existing :new | 
-          baseName := existing baseName.
-          existingVersion := existing configurationProjectSpec versionString.
-          newVersion := new configurationProjectSpec versionString.
-          ex allow	"trigger lock" ];
+    onLock: [ :ex | ex honor ];
     silently;
     load.
-  self assert: baseName = 'ExternalX'.
-  self assert: existingVersion = '0.9.1'.
-  self assert: newVersion = '0.9.2'.
   self
     validateExpectedConfigurationClassName: 'ConfigurationOfConflict'
     expectedConfigurationVersion: '1.2.0'

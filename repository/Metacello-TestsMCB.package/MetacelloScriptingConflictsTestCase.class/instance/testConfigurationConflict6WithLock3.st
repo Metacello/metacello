@@ -12,10 +12,6 @@ testConfigurationConflict6WithLock3
     version: '1.2.0';
     repository: 'filetree://' , configurationDirectory fullName;
     onLock: [ :ex | ex honor ];
-    onConflict: [ :ex :existing :new | 
-          existing locked
-            ifTrue: [ ex useNew ].
-          ex pass ];
     silently;
     load.
   self
