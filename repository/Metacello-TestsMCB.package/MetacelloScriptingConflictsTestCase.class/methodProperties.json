@@ -2,8 +2,8 @@
 	"class" : {
 		 },
 	"instance" : {
-		"setUpRepositoryContents" : "dkh 6/12/2012 15:41:23.319",
-		"tearDownPackageList" : "dkh 6/12/2012 15:41:23.319",
+		"setUpRepositoryContents" : "dkh 09/03/2014 13:11",
+		"tearDownPackageList" : "dkh 09/03/2014 13:12",
 		"tearDownRepositories" : "dkh 6/12/2012 15:41:23.319",
 		"testConfigurationConflict1" : "dkh 07/28/2013 08:16",
 		"testConfigurationConflict10" : "dkh 06/11/2014 17:26",
@@ -18,7 +18,9 @@
 		"testConfigurationConflict7" : "dkh 06/11/2014 17:26",
 		"testConfigurationConflict8" : "dkh 07/28/2013 08:19",
 		"testConfigurationConflict9" : "dkh 07/28/2013 08:19",
+		"testConfigurationConflictIssue261" : "dkh 09/03/2014 13:13",
 		"testFileTreeLoadConfigurationVersion" : "dkh 07/28/2013 08:12",
 		"testFileTreeLoadConfigurationVersions" : "dkh 07/28/2013 08:13",
 		"testFileTreeLoadConfigurationVersionsNotification1" : "dkh 07/28/2013 08:19",
-		"testFileTreeLoadConfigurationVersionsNotification3" : "dkh 07/28/2013 08:19" } }
+		"testFileTreeLoadConfigurationVersionsNotification3" : "dkh 07/28/2013 08:19",
+		"testFileTreeLoadIssue261" : "dkh 09/03/2014 13:04" } }

@@ -1,3 +1,3 @@
 running
 tearDownPackageList
-    ^ #('ConfigurationOfExternalX' 'BaselineOfExternalX' 'External-CoreX' 'ConfigurationOfConflict')
+  ^ #('ConfigurationOfExternalX' 'BaselineOfExternalX' 'External-CoreX' 'ConfigurationOfConflict' 'MarianosImage')
