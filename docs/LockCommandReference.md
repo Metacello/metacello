@@ -337,7 +337,7 @@ Metacello registry
   baseline: 'Example';
   onConflict: [ :ex :existing | 
     existing locked
-      ifTrue: [ ex useIncoming ].
+      ifTrue: [ ex useNew ].
     ex pass ];
   onLock: [ :ex | ex honor ];
   load: 'Tests'.

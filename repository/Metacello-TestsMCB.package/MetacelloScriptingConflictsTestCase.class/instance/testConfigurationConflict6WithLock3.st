@@ -1,5 +1,5 @@
 tests
-testConfigurationConflict6WithLock1
+testConfigurationConflict6WithLock3
   | newVersion existingVersion baseName |
   self testFileTreeLoadConfigurationVersions.
   Metacello new
@@ -11,17 +11,13 @@ testConfigurationConflict6WithLock1
     configuration: 'Conflict';
     version: '1.2.0';
     repository: 'filetree://' , configurationDirectory fullName;
-    onLock: [ :ex | ex break ];
+    onLock: [ :ex | ex honor ];
     onConflict: [ :ex :existing :new | 
-          baseName := existing baseName.
-          existingVersion := existing configurationProjectSpec versionString.
-          newVersion := new configurationProjectSpec versionString.
-          ex allow	"trigger lock" ];
+          existing locked
+            ifTrue: [ ex useNew ].
+          ex pass ];
     silently;
     load.
-  self assert: baseName = 'ExternalX'.
-  self assert: existingVersion = '0.9.1'.
-  self assert: newVersion = '0.9.2'.
   self
     validateExpectedConfigurationClassName: 'ConfigurationOfConflict'
     expectedConfigurationVersion: '1.2.0'
