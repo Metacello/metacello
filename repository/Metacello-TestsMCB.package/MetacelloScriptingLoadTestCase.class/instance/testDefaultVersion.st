@@ -8,6 +8,6 @@ testDefaultVersion
   projectSpec := Metacello registry
     configuration: 'ExternalX';
     list.
-  defaultVersion := (Smalltalk at: 'ConfigurationOfExternalX') project
+  defaultVersion := (Smalltalk at: #'ConfigurationOfExternalX') project
     version: MetacelloScriptEngine defaultVersionString.
   self assert: projectSpec version = defaultVersion
