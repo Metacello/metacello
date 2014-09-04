@@ -13,4 +13,5 @@ testSymbolicLock
   projectSpec := Metacello registry
     configuration: 'ExternalX';
     list.
-  self assert: projectSpec registration locked
+  self assert: projectSpec registration locked.
+  self assert: projectSpec versionString = #'stable'
