@@ -1,23 +1,19 @@
 tests
-testConfigurationConflict6WithLock2
-  | sawLockWarning |
+testConfigurationConflict6WithLock3
+  | newVersion existingVersion baseName |
   self testFileTreeLoadConfigurationVersions.
   Metacello new
     configuration: 'ExternalX';
     version: '0.9.1';
     repository: 'filetree://' , configurationDirectory fullName;
     lock.
-  sawLockWarning := false.
   Metacello new
     configuration: 'Conflict';
     version: '1.2.0';
     repository: 'filetree://' , configurationDirectory fullName;
-    onWarning: [ :ex | 
-          sawLockWarning := true.
-          ex resume ];
+    onLock: [ :ex | ex honor ];
     silently;
     load.
-  self assert: sawLockWarning.
   self
     validateExpectedConfigurationClassName: 'ConfigurationOfConflict'
     expectedConfigurationVersion: '1.2.0'
