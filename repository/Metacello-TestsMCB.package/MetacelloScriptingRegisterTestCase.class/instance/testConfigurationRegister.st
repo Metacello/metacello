@@ -5,9 +5,9 @@ testConfigurationRegister
     configuration: 'Sample';
     version: '1.0.1';
     register.
-  projectSpec := Metacello registry
+  projectSpec := (Metacello registry
     configuration: 'Sample';
-    list.
+    list) first.
   self
     assert:
       projectSpec repositoryDescriptions asArray

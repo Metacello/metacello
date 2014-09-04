@@ -3,10 +3,10 @@
 		 },
 	"instance" : {
 		"tearDownPackageList" : "dkh 7/24/2012 20:07",
-		"testDefaultRepository" : "dkh 07/24/2012 04:21",
-		"testDefaultVersion" : "dkh 09/04/2014 12:06",
+		"testDefaultRepository" : "dkh 09/04/2014 14:28",
+		"testDefaultVersion" : "dkh 09/04/2014 14:28",
 		"testIssue84" : "dkh 7/24/2012 20:50",
 		"testIssue87" : "dkh 7/24/2012 22:14",
-		"testStableLoadA" : "dkh 09/04/2014 09:46",
-		"testStableLoadB" : "dkh 09/04/2014 09:47",
-		"testStableLoadC" : "dkh 09/04/2014 09:48" } }
+		"testStableLoadA" : "dkh 09/04/2014 14:28",
+		"testStableLoadB" : "dkh 09/04/2014 14:29",
+		"testStableLoadC" : "dkh 09/04/2014 14:29" } }

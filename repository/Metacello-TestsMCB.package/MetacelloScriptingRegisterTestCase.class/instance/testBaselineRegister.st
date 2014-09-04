@@ -6,9 +6,9 @@ testBaselineRegister
     baseline: 'Sample';
     repository: 'github://dalehenrich/sample:master/repository';
     register.
-  projectSpec := Metacello registry
+  projectSpec := (Metacello registry
     baseline: 'Sample';
-    list.
+    list) first.
   self
     assert:
       projectSpec repositoryDescriptions asArray

@@ -1,15 +1,15 @@
 validation
 validateRegistryNameFilter
   | spec |
-  spec := Metacello registry
+  spec := (Metacello registry
     baseline: 'GithubRefIV';
-    list.
+    list) first.
   self assert: 'BaselineOfGithubRefIV' = spec className.
-  spec := Metacello registry
+  spec := (Metacello registry
     configuration: 'Issue32';
-    list.
+    list) first.
   self assert: 'ConfigurationOfIssue32' = spec className.
-  spec := Metacello registry
+  spec := (Metacello registry
     project: 'Issue32';
-    list.
+    list) first.
   self assert: 'ConfigurationOfIssue32' = spec className
