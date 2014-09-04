@@ -2,7 +2,7 @@ registration
 registerProjectRegistration: aMetacelloProjectRegistration
   "unconditionally register <newRegistration> ... use with care"
 
-  aMetacelloProjectRegistration configurationProjectSpec
+  aMetacelloProjectRegistration configurationProjectSpec copy
     ifNotNil: [ :spec | 
       self configurationRegistry
         at: spec className
@@ -15,6 +15,11 @@ registerProjectRegistration: aMetacelloProjectRegistration
                     'REGISTRATION OF INCOMPATABLE PROJECTS: ' , existing printString
                         , ' REPLACED BY '
                         , aMetacelloProjectRegistration printString ] ].
+      spec versionOrNil
+        ifNotNil: [ :version | 
+          "resolve symbolic versions for loaded projects"
+          spec versionString: version versionString ].
+      aMetacelloProjectRegistration configurationProjectSpec: spec.
       (aMetacelloProjectRegistration respondsTo: #'versionInfo')
         ifTrue: [ aMetacelloProjectRegistration versionInfo versionString: spec versionString ].
       spec immutable.

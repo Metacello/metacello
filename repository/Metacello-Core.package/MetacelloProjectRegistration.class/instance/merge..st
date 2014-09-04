@@ -6,7 +6,11 @@ merge: aProjectRegistration
   aProjectRegistration validate.
   aProjectRegistration configurationProjectSpec
     ifNotNilDo: [ :aSpec | 
-      configurationProjectSpec := aSpec.
+      configurationProjectSpec := aSpec copy.
+      configurationProjectSpec versionOrNil
+        ifNotNil: [ :version | 
+          "resolve symbolic versions for loaded projects"
+          configurationProjectSpec versionString: version versionString ].
       baselineProjectSpec := nil.
       self versionInfo versionString: configurationProjectSpec versionString ]
     ifNil: [ 
