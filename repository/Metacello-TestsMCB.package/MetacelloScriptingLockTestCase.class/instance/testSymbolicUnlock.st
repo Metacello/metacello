@@ -10,14 +10,14 @@ testSymbolicUnlock
       (Metacello image
         configuration: 'ExternalX';
         list) isEmpty.
-  projectSpec := Metacello registry
+  projectSpec := (Metacello registry
     configuration: 'ExternalX';
-    list.
+    list) first.
   self assert: projectSpec registration locked.
   Metacello registry
     configuration: 'ExternalX';
     unlock.
-  projectSpec := Metacello registry
+  projectSpec := (Metacello registry
     configuration: 'ExternalX';
-    list.
+    list) first.
   self deny: projectSpec registration locked

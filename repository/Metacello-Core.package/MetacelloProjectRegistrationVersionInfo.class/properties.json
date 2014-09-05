@@ -6,7 +6,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"versionString" ],
+		"versionString",
+		"projectVersion" ],
 	"name" : "MetacelloProjectRegistrationVersionInfo",
 	"pools" : [
 		 ],

@@ -1,2 +1,3 @@
 accessing
-projectVersion: ignoredForNow
+projectVersion: anObject
+  projectVersion := anObject

@@ -335,16 +335,9 @@ Metacello new
   get.
 Metacello registry
   baseline: 'Example';
-  onConflict: [ :ex :existing | 
-    existing locked
-      ifTrue: [ ex useIncoming ].
-    ex pass ];
   onLock: [ :ex | ex honor ];
   load: 'Tests'.
 ```
-The `onConflict:` block gets triggered because the locked project
-specification does not match the incoming specification. 
-
 The `onLock:` block gets triggered every time a locked project is loaded, 
 because you should always be informed when a locked project is
 referenced, since you always run the risk of introducing an
@@ -565,10 +558,6 @@ Metacello new
 Metacello new
   baseline: 'Alternate';
   repository: 'github://dalehenrich/alternate:otto/repository';
-  onConflict: [ :ex :existing :incoming | 
-    existing locked
-      ifTrue: [ ex useExisting ].
-    ex pass ];
   onLock: [ :ex | ex honor ];
   load: 'Tests'.
 ```

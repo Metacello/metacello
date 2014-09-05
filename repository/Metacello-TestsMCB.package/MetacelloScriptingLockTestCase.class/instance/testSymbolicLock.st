@@ -10,7 +10,8 @@ testSymbolicLock
       (Metacello image
         configuration: 'ExternalX';
         list) isEmpty.
-  projectSpec := Metacello registry
+  projectSpec := (Metacello registry
     configuration: 'ExternalX';
-    list.
-  self assert: projectSpec registration locked
+    list) first.
+  self assert: projectSpec registration locked.
+  self assert: projectSpec versionString = #'stable'

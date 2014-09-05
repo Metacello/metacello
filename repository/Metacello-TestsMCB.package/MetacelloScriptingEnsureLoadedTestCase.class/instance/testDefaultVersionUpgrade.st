@@ -1,4 +1,4 @@
-running
+tests
 testDefaultVersionUpgrade
   "https://github.com/dalehenrich/metacello-work/issues/198"
 

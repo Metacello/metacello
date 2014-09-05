@@ -1,15 +1,15 @@
 validation
 validateImageNameFilter
   | spec |
-  spec := Metacello image
+  spec := (Metacello image
     baseline: 'GithubRefIV';
-    list.
+    list) first.
   self assert: 'BaselineOfGithubRefIV' = spec className.
-  spec := Metacello image
+  spec := (Metacello image
     configuration: 'External';
-    list.
+    list) first.
   self assert: 'ConfigurationOfExternal' = spec className.
-  spec := Metacello image
+  spec := (Metacello image
     project: 'External';
-    list.
+    list) first.
   self assert: 'ConfigurationOfExternal' = spec className
