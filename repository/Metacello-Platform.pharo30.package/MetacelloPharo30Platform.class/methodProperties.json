@@ -2,6 +2,7 @@
 	"class" : {
 		"initialize" : "ChristopheDemarey 4/29/2013 14:22" },
 	"instance" : {
+		"compiler" : "ChristopheDemarey 9/1/2014 17:14",
 		"defaultDirectory" : "ChristopheDemarey 4/29/2013 14:17",
 		"directoryFromPath:relativeTo:" : "ChristopheDemarey 4/29/2013 15:14",
 		"downloadFile:to:" : "ChristopheDemarey 9/19/2013 11:02",
