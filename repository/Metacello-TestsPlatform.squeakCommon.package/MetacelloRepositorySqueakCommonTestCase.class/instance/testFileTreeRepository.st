@@ -17,10 +17,10 @@ testFileTreeRepository
   repo := repoSpec createRepository.
   self
     assert: repo class == (Smalltalk at: #'MCFileTreeRepository' ifAbsent: [  ]).
-  Transcript cr; show: 'testFileTreeRepository: ', (fileUtils directoryFromPath: '/temp/repo' relativeTo: fileUtils default) fullName.
+  Transcript cr; show: 'testFileTreeRepository: ', (fileUtils directoryFromPath: 'temp/repo' relativeTo: fileUtils default) fullName.
   self
     assert:
-      repo description  = ('filetree://' , (fileUtils directoryFromPath: '/temp/repo' relativeTo: fileUtils default) fullName )]
+      repo description  = ('filetree://' , (fileUtils directoryFromPath: 'temp/repo' relativeTo: fileUtils default) fullName )]
     ensure: [ 
       (fileUtils directoryExists: tempDir)
         ifTrue: [ fileUtils deleteAll: tempDir ] ]
