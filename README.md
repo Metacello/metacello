@@ -8,13 +8,17 @@ Gofer new
   package: 'GsUpgrader-Core';
   url: 'http://ss3.gemtalksystems.com/ss/gsUpgrader';
   load.
-(Smalltalk at: #GsUpgrader) metacelloReport.
+(Smalltalk at: #GsUpgrader) upgradeMetacello.
 ```
 
 ###Pharo3.0
 Metacello Preview  is pre-installed in Pharo3.0 the following installs the latest released version:
 
 ```Smalltalk
+Metacello new
+  baseline: 'Metacello';
+  repository: 'github://dalehenrich/metacello-work:master/repository';
+  get.
 Metacello new
   baseline: 'Metacello';
   repository: 'github://dalehenrich/metacello-work:master/repository';
