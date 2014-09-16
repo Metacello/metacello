@@ -1,18 +1,30 @@
 ## INSTALL Preview Version
 
 ###GemStone
+GsUpgrader works on all versions of GemStone against all Versions of GLASS:
 
 ```Smalltalk
-"Metacello Preview #stable is bootstrapped as part of GLASS 1.0-beta.9.3"
-ConfigurationOfGLASS project updateProject.
-GsDeployer
-  deploy: [ (ConfigurationOfGLASS project version: '1.0-beta.9.3') load ].
+Gofer new
+  package: 'GsUpgrader-Core';
+  url: 'http://ss3.gemtalksystems.com/ss/gsUpgrader';
+  load.
+(Smalltalk at: #GsUpgrader) metacelloReport.
 ```
 
-###Pharo
+###Pharo3.0
+Metacello Preview  is pre-installed in Pharo3.0 the following installs the latest released version:
 
 ```Smalltalk
-"Get the Metacello configuration (for older Pharo versions - installed by default in Pharo 3.0)"
+Metacello new
+  baseline: 'Metacello';
+  repository: 'github://dalehenrich/metacello-work:master/repository';
+  load
+```
+
+###Pharo (older than Pharo3.0)
+
+```Smalltalk
+"Get the Metacello configuration"
 Gofer new
   gemsource: 'metacello';
   package: 'ConfigurationOfMetacello';
