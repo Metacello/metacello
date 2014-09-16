@@ -8,7 +8,7 @@ Gofer new
   package: 'GsUpgrader-Core';
   url: 'http://ss3.gemtalksystems.com/ss/gsUpgrader';
   load.
-(Smalltalk at: #GsUpgrader) metacelloReport.
+(Smalltalk at: #GsUpgrader) upgradeMetacello.
 ```
 
 ###Pharo3.0
