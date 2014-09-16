@@ -18,6 +18,10 @@ Metacello Preview  is pre-installed in Pharo3.0 the following installs the lates
 Metacello new
   baseline: 'Metacello';
   repository: 'github://dalehenrich/metacello-work:master/repository';
+  get.
+Metacello new
+  baseline: 'Metacello';
+  repository: 'github://dalehenrich/metacello-work:master/repository';
   load
 ```
 
