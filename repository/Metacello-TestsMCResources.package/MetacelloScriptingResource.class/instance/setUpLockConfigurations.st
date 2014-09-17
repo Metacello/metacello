@@ -38,6 +38,13 @@ setUpLockConfigurations
   (MCMethodDefinition
     className: className asString
     classIsMeta: false
+    selector: 'lockConfiguration13:'
+    category: 'cat'
+    timeStamp: ''
+    source: (self class sourceCodeAt: #'lockConfiguration13:') asString).
+  (MCMethodDefinition
+    className: className asString
+    classIsMeta: false
     selector: 'customProjectAttributes'
     category: 'cat'
     timeStamp: ''
