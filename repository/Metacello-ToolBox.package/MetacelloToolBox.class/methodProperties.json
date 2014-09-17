@@ -88,6 +88,7 @@
 		"importFrom:projectAttributes:inactiveAttributes:updateProjects:updatePackages:versionSpecsDo:" : "dkh 9/14/2012 09:47",
 		"importFrom:updateProjects:updatePackages:versionSpecsDo:" : "dkh 9/13/2012 16:05",
 		"imports:" : "dkh 3/7/2012 17:08:50",
+		"methodSectionsFrom:do:" : "dkh 09/17/2014 16:41",
 		"methodSpec" : "dkh 3/7/2012 17:08:50",
 		"modifiedPackageSpecs:packageSpecsDo:" : "dkh 3/7/2012 17:08:50",
 		"modifySection:repository:requiredProjects:packages:dependencies:includes:files:repositories:preLoadDoIts:postLoadDoIts:supplyingAnswers:groups:versionSpecsDo:" : "dkh 9/8/2012 05:04",
