@@ -14,6 +14,6 @@ testMethodSectionsFromDo
       false ] ]
     on: MetacelloCannotUpdateReleasedVersionError
     do: [ :ex | ex resume ].
-  expected := #('GeauxFaux-tg.32' 'GeauxBeau-dkh.55' 'GoferFoo-lr.1' 'GoferFaux-tg.32' 'GoferBeau-dkh.55' 'GoferBar-lr.0').
+  expected := #('GeauxFaux-tg.32' 'GeauxBeau-dkh.55' 'GoferFoo-lr.1' 'GoferFaux-tg.32' 'GoferBeau-dkh.55' 'GoferBar-lr.1').
   self assert: fileNames size = expected size.
   self assert: (fileNames difference: expected asSet) isEmpty
