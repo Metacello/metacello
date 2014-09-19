@@ -5,7 +5,7 @@
 		"setUpRepositories" : "dkh 07/16/2013 14:01",
 		"tearDownPackageList" : "dkh 08/30/2014 09:48",
 		"testBaselineLoad" : "dkh 07/16/2013 19:15",
-		"testBaselineLockIssue253" : "dkh 07/05/2014 18:28",
+		"testBaselineLockIssue253" : "dkh 09/19/2014 11:02",
 		"testIssue185a" : "dkh 07/19/2013 14:29",
 		"testIssue185b" : "dkh 07/19/2013 15:30",
 		"testIssue185c" : "dkh 07/19/2013 15:45",

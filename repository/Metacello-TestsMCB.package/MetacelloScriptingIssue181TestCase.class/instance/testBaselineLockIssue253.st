@@ -18,4 +18,4 @@ testBaselineLockIssue253
           ex honor ];
     silently;
     load.
-  self assert: lockSeen	"we get a conflict here ... the honor lock does not see, to have an effect ... when it should be enough ... the honor works if it is just a version change .... the conflict is issued BEFORE the onLock is handled, so there is somethid deeper going on here..."
+  self assert: lockSeen

@@ -5,7 +5,7 @@ lockConfiguration14: spec
     for: #'common'
     do: [ 
       spec blessing: #'release'.
-      spec description: 'MetacelloScriptingResource>>lockConfiguration10: '.
+      spec description: 'MetacelloScriptingResource>>lockConfiguration14: '.
       spec
         configuration: 'ExternalX'
         with: [ 
