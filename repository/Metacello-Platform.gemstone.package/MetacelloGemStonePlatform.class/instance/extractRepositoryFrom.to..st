@@ -2,18 +2,21 @@ github support
 extractRepositoryFrom: zipFile to: directory
   "unzip <zipFile> into <directory>"
 
-  | errorMessage |
+  | errorMessage pid zipErrorFileName |
+  pid := self processPID.
   (ServerFileDirectory on: directory) assureExistence.
-  (ServerFileDirectory on: '/tmp') deleteFileNamed: 'zip.err'.
+  zipErrorFileName := 'github-' , pid , '-zip.err'.
+  (ServerFileDirectory on: '/tmp') deleteFileNamed: zipErrorFileName.
   System
     performOnServer:
-      '/usr/bin/unzip -u ' , zipFile , ' -d ' , directory , ' 2> /tmp/zip.err'.
+      '/usr/bin/unzip -u ' , zipFile , ' -d ' , directory , ' 2> /tmp/'
+        , zipErrorFileName.
   (ServerFileDirectory on: '/tmp')
-    readOnlyFileNamed: 'zip.err'
+    readOnlyFileNamed: zipErrorFileName
     do: [ :fileStream | 
       (errorMessage := fileStream contentsOfEntireFile) notEmpty
         ifTrue: [ self error: 'unzip failure: ' , errorMessage printString ]
         ifFalse: [ 
           (ServerFileDirectory on: '/tmp')
             deleteFileNamed: zipFile;
-            deleteFileNamed: (self downloadErrorFileNameFor: zipFile) ] ]
+            deleteFileNamed: zipErrorFileName ] ]

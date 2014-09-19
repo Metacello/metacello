@@ -15,11 +15,6 @@ downloadFile: url to: outputFileName
   zipfile containingDirectory
     readOnlyFileNamed: zipfile localName
     do: [ :fileStream | stream := RWBinaryOrTextStream on: fileStream contents ].
-  [ archive readFrom: stream ]
-    on: Error
-    do: [ :ex | 
-      (ServerFileDirectory on: '/tmp')
-        deleteFileNamed: outputFileName;
-        deleteFileNamed: (self downloadErrorFileNameFor: errorFileName).
-      ex pass ].
+  archive readFrom: stream.
+  (ServerFileDirectory on: '/tmp') deleteFileNamed: errorFileName.
   ^ archive

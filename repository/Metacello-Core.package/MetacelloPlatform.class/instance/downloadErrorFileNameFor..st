@@ -1,3 +1,6 @@
-as yet unclassified
+github support
 downloadErrorFileNameFor: zipFileName
-  ^ '/tmp/curl-' , (zipFileName select: [ :c | c isAlphaNumeric ]) , '.err'
+  | pid |
+  pid := self processPID.
+  ^ '/tmp/curl-' pid , '-' , (zipFileName select: [ :c | c isAlphaNumeric ])
+    , '.err'
