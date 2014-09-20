@@ -3,5 +3,5 @@ projectVersionEscaped
   | pv |
   pv := self projectVersion.
   (projectVersion includes: $/)
-    ifFalse: [ ^ pv ].
-  ^ pv copyReplaceAll: '/' with: '\/'
+    ifTrue: [ ^ pv copyReplaceAll: '/' with: '\/' ].
+  ^ pv

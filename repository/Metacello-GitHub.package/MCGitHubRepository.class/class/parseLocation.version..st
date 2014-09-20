@@ -40,7 +40,7 @@ parseLocation: locationUrl version: versionString
                     ifTrue: [ 
                       escaped
                         ifTrue: [ 
-                          strm nextPut: char.
+                          "$\ not legal in branch name ... literally ignored"
                           escaped := false ]
                         ifFalse: [ escaped := true ] ]
                     ifFalse: [ 

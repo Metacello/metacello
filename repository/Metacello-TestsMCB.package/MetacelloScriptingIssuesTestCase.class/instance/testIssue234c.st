@@ -5,7 +5,7 @@ testIssue234c
   | projectSpec |
   Metacello new
     baseline: 'External';
-    repository: 'github://dalehenrich/external:issue\\234/repository';
+    repository: 'github://dalehenrich/external:issue\/xxx\/branch/repository';
     lock.
   Metacello registry
     baseline: 'External';
@@ -13,5 +13,8 @@ testIssue234c
   projectSpec := (Metacello registry
     baseline: 'External';
     list) first.
-  self assert: projectSpec registration currentVersionString = '6f0ba00'.
+  self
+    assert:
+      projectSpec registration currentVersionString
+        = MetacelloScriptingResource externalCustomIssue234ShortSHA.
   self assert: projectSpec registration locked

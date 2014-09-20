@@ -13,5 +13,8 @@ testIssue234a
   projectSpec := (Metacello registry
     baseline: 'External';
     list) first.
-  self assert: projectSpec registration currentVersionString = '6f0ba00'.
+  self
+    assert:
+      projectSpec registration currentVersionString
+        = MetacelloScriptingResource externalCustomIssue234ShortSHA.
   self assert: projectSpec registration locked
