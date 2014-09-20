@@ -20,7 +20,7 @@
 	"instance" : {
 		"asRepositorySpecFor:" : "dkh 5/16/2012 14:52:41",
 		"canUpgradeTo:" : "dkh 07/06/2014 09:15",
-		"description" : "dkh 5/16/2012 14:52:41",
+		"description" : "dkh 09/19/2014 17:54",
 		"directory" : "dkh 07/01/2013 13:23",
 		"directoryDescription" : "dkh 6/16/2012 09:03",
 		"flushCache" : "dkh 6/16/2012 09:11",
@@ -34,5 +34,6 @@
 		"projectPath:" : "dkh 5/16/2012 14:52:41",
 		"projectVersion" : "dkh 5/16/2012 14:52:41",
 		"projectVersion:" : "dkh 5/16/2012 14:52:41",
+		"projectVersionEscaped" : "dkh 09/19/2014 17:56",
 		"repoPath" : "dkh 5/16/2012 14:52:41",
 		"repoPath:" : "dkh 5/16/2012 14:52:41" } }
