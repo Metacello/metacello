@@ -15,6 +15,21 @@ downloadFile: url to: outputFileName
   zipfile containingDirectory
     readOnlyFileNamed: zipfile localName
     do: [ :fileStream | stream := RWBinaryOrTextStream on: fileStream contents ].
-  archive readFrom: stream.
+  [ archive readFrom: stream ]
+    on: Error
+    do: [ :ex | 
+      | dir curlErrorString |
+      dir := ServerFileDirectory on: errorFileName.
+      (dir fileExists: errorFileName)
+        ifTrue: [ 
+          dir
+            readOnlyFileNamed: errorFileName
+            do: [ :fileStream | 
+              curlErrorString := '. Error could have been caused by: '
+                , fileStream contents printString ] ]
+        ifFalse: [ curlErrorString := '.' ].
+      self
+        error:
+          'Error during download: ' , ex description printString , curlErrorString ].
   (ServerFileDirectory on: '/tmp') deleteFileNamed: errorFileName.
   ^ archive
