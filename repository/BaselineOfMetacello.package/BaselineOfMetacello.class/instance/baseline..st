@@ -101,12 +101,6 @@ baseline: spec
                 versionString: '1.1';
                 loads: #('Core');
                 repository: 'http://www.squeaksource.com/MetacelloRepository' ];
-        configuration: 'OSProcess'
-          with: [ 
-              spec
-                versionString: '4.4.5';
-                repository: 'http://www.squeaksource.com/MetacelloRepository';
-                repository: 'http://seaside.gemtalksystems.com/ss/metacello' ];
         yourself.
       spec
         package: 'Metacello-TestsPlatform'
@@ -131,7 +125,12 @@ baseline: spec
                 versionString: #'stable';
                 repository:
                     'http://smalltalkhub.com/mc/PharoExtras/ProfStef/main' ];
-        configuration: 'OSProcess' with: [ spec versionString: #'stable' ];
+        configuration: 'OSProcess'
+          with: [ 
+              spec
+                versionString: #'stable';
+                repository: 'http://www.squeaksource.com/MetacelloRepository';
+                repository: 'http://seaside.gemtalksystems.com/ss/metacello' ];
         yourself.
       spec
         package: 'Metacello-ProfStef'
@@ -220,11 +219,15 @@ baseline: spec
           with: [ spec repository: 'github://dalehenrich/filetree:squeak4.3/repository' ];
         yourself.
       spec
-        package: 'Metacello-Platform'
+        package: 'SqueakSSL-Core'
+          with: [spec repository: 'http://www.squeaksource.com/SqueakSSL'];
+        package: 'WebClient-Core'
+          with: [spec repository: 'http://ss3.gemstone.com/ss/WebClient'];
+       package: 'Metacello-Platform'
           with: [ 
               spec
                 file: 'Metacello-Platform.squeak';
-                requires: #('OSProcess') ];
+                requires: #('WebClient-Core' 'SqueakSSL-Core') ];
         yourself ].
   spec
     for: #'gemstone'
