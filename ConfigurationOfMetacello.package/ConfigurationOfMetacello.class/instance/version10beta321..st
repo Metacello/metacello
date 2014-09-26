@@ -81,7 +81,6 @@ version10beta321: spec
     for: #'squeakCommon'
     do: [ 
       spec
-        project: 'OSProcess' with: '4.4.5';
         project: 'HelpSystem' with: '1.1'.
       spec
         package: 'Metacello-TestsPlatform'
@@ -125,7 +124,11 @@ version10beta321: spec
           with: 'Metacello-TestsCommonMC.pharo20-dkh.3' ].
   spec
     for: #'squeak'
-    do: [ spec package: 'Metacello-Platform' with: 'Metacello-Platform.squeak-dkh.23' ].
+    do: [ 
+	spec
+        package: 'SqueakSSL-Core' with: 'SqueakSSL-Core-ar.26';
+        package: 'WebClient-Core' with: 'WebClient-Core-topa.93';
+        package: 'Metacello-Platform' with: 'Metacello-Platform.squeak-tfel.25' ].
   spec
     for: #'gemstone'
     do: [ 
