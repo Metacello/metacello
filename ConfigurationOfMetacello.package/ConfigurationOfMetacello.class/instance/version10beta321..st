@@ -48,16 +48,20 @@ version10beta321: spec
 1.0-beta.32.1 (dkh.782):
 - final fix for Issue #187: avoid OSProcess dependency for Pharo3.0
   https://github.com/dalehenrich/metacello-work/issues/181'.
-      spec postLoadDoIt: #'metacelloPrimeRegistry'.
+      spec postLoadDoIt: #'metacelloPrimeRegistry
+1.0-beta.32.1 (dkh.797):
+- Issue #281: backport PR #257
+1.0-beta.32.1 (dkh.798):
+- Issue #281: backport Issue #227'.
       spec author: 'dkh'.
-      spec timestamp: '10/5/2013 15:13'.
+      spec timestamp: '9/26/2014 14:13'.
       spec
         project: 'FileTree' with: #'stable';
         project: 'Gofer' with: #'stable';
         project: 'Gofer Tests' with: #'stable'.
       spec
         package: 'Metacello-Base' with: 'Metacello-Base-dkh.109';
-        package: 'Metacello-Core' with: 'Metacello-Core-dkh.694';
+        package: 'Metacello-Core' with: 'Metacello-Core-dkh.695';
         package: 'Metacello-FileTree' with: 'Metacello-FileTree-dkh.29';
         package: 'Metacello-GitHub' with: 'Metacello-GitHub-dkh.29';
         package: 'Metacello-MC' with: 'Metacello-MC-dkh.680';
