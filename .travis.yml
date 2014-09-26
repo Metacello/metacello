@@ -6,8 +6,9 @@ env:
 #   - ST=Pharo-3.0 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st # preview is present in Pharo-3.0, bootstrap not appropriate
    - ST=Squeak-4.3 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
    - ST=Squeak-4.4 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
-#   - ST=Squeak-4.5 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st # until Issue #189 fixed: https://github.com/dalehenrich/metacello-work/issues/189
-   - ST=GemStone-3.1.0.4 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
+   - ST=Squeak-4.5 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
+   - ST=Squeak-Trunk BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
+   - ST=GemStone-3.1.0.6 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
 
    - ST=PharoCore-1.1 BUILD_ARG=-X TRAVIS_SCRIPT=travisCI.st
    - ST=PharoCore-1.2 BUILD_ARG=-X TRAVIS_SCRIPT=travisCI.st
@@ -17,7 +18,8 @@ env:
 #   - ST=Pharo-3.0 BUILD_ARG=-X TRAVIS_SCRIPT=travisCI.st # do not test against 1.0-beta.31.1.x
    - ST=Squeak-4.3 BUILD_ARG=-X TRAVIS_SCRIPT=travisCI.st
    - ST=Squeak-4.4 BUILD_ARG=-X TRAVIS_SCRIPT=travisCI.st
-#   - ST=Squeak-4.5 BUILD_ARG=-X TRAVIS_SCRIPT=travisCI.st # until Issue #189 fixed: https://github.com/dalehenrich/metacello-work/issues/189
+   - ST=Squeak-4.5 BUILD_ARG=-X TRAVIS_SCRIPT=travisCI.st 
+   - ST=Squeak-Trunk BUILD_ARG=-X TRAVIS_SCRIPT=travisCI.st 
 
    - ST=PharoCore-1.1 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
    - ST=PharoCore-1.2 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
@@ -37,6 +39,7 @@ env:
    - ST=GemStone-3.0.1 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
    - ST=GemStone-3.1.0.6 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
    - ST=GemStone-3.2.0 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
+   - ST=GemStone-3.2.2 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
 
 install:
    - export PROJECT_HOME="$(pwd)"
