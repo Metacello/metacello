@@ -35,7 +35,6 @@ projectDirectoryFrom: projectPath version: versionString
             extractRepositoryFrom: zipFileName
             to: githubCacheDirectory fullName ].
       self downloadCache at: downloadCacheKey put: cachePath.
-      (ServerFileDirectory on: '/tmp') deleteFileNamed: zipFileName.
       projectDirectory := mcPlatform
         directoryFromPath: cachePath
         relativeTo: githubCacheDirectory ].
