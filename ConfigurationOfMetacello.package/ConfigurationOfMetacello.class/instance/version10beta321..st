@@ -52,9 +52,11 @@ version10beta321: spec
 1.0-beta.32.1 (dkh.797):
 - Issue #281: backport PR #257
 1.0-beta.32.1 (dkh.798):
-- Issue #281: backport Issue #227'.
+- Issue #281: backport Issue #227
+1.0-beta.32.1 (dkh.799):
+- Issue #281: backport Issue #226 fix'.
       spec author: 'dkh'.
-      spec timestamp: '9/26/2014 14:13'.
+      spec timestamp: '9/26/2014 14:27'.
       spec
         project: 'FileTree' with: #'stable';
         project: 'Gofer' with: #'stable';
@@ -145,4 +147,4 @@ version10beta321: spec
         package: 'Metacello-TestsPlatform'
           with: 'Metacello-TestsPlatform.gemstone-.6';
         package: 'Metacello-Platform'
-          with: 'Metacello-Platform.gemstone-dkh.32' ]
+          with: 'Metacello-Platform.gemstone-dkh.33' ]
