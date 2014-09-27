@@ -4,8 +4,8 @@ In this guide we'll take a walk through a couple of common development
 scenarios and highlight some of the features of the *Metacello Scripting
 API*.
 
-*For installatation and more detailed documentation on the Metacello
-Scripting API, see the [Metcello Scripting API Documentation][1].*
+*For installation and more detailed documentation on the Metacello
+Scripting API, see the [Metacello Scripting API Documentation][1].*
 
 ## Introduction
 
