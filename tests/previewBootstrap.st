@@ -32,14 +32,20 @@ Gofer new
 "Run the Metacello tests"
 (Smalltalk at: #MetacelloPlatform) current authorName: 'testMonkey'. "These tests save code ... need an Author"
 
+Transcript cr; show: 'BEFORE'.
 (Smalltalk at: #'FileDirectory' ifAbsent: [  ])
     ifNil: [ 
       (metacelloDir / 'tests' / 'travisCIHarness.st')
              readStreamDo: [ :fileStream | fileStream fileIn ] ]
     ifNotNil: [ :fileDirectoryClass |
+      Transcript cr; show: 'notnil block'.
       (metacelloDir directoryNamed: 'tests')
           fileNamed: 'travisCIHarness.st'
-          do: [:fileStream | fileStream fileIn ] ].
+          do: [:fileStream | | result |
+                 Transcript cr; show: 'before filein'.
+                 result := fileStream fileIn.
+                 Transcript cr; show: 'after filein: ', result printString ] ].
+Transcript cr; show: 'AFTER'.
 
 Transcript cr; show: 'Starting tests------'.
 
