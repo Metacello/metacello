@@ -19,7 +19,7 @@ env:
 #  Squeak-4.5
 #  Squeak-Trunk
 
-   - ST=Pharo-1.4 LoadList="'default'" TRAVIS_SCRIPT=userGuide.st 
+#   - ST=Pharo-1.4 LoadList="'default'" TRAVIS_SCRIPT=userGuide.st 
 #   - ST=GemStone-3.1.0.6 LoadList="'default'" TRAVIS_SCRIPT=userGuide.st # disable until Issue #241 addressed
 
    - ST=Pharo-2.0 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
