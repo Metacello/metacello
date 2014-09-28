@@ -13,7 +13,7 @@ testBasicLockNLockedProjectIssue275b
     load.
   self
     validateExpectedConfigurationClassName: 'ConfigurationOfExternalX'
-    expectedConfigurationVersion: '0.9.0'
+    expectedConfigurationVersion: '0.9.1'
     expectedConfigurationRepository:
       'dictionary://Metacello_Config_Test_Repository'
     expectedBaselineClassName: nil
