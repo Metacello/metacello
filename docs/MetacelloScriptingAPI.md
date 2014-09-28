@@ -187,9 +187,12 @@ linear load :
   is executed, the existing configuration is used. Use the [get](#getting)
   command to refresh the configuration.
 
-* The default repository is platform-dependent. See the documentation
-  for your platform to determine which repository is used. 
-  Currently `http:www.squeaksource.com/MetacelloRepository` is used as the default.
+* The default repository is platform-dependent. Evaluate the following Smalltalk expression
+  to determine the default repository for your platform:
+
+  ```Smalltalk
+  MetacelloPlatform  current defaultRepositoryDescription
+  ```
 
 * `github://` projects are implicitly [locked](#locking) when loaded.
 
