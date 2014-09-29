@@ -1,0 +1,14 @@
+{
+	"category" : "Metacello-Gitorious",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MCGitoriousRepository",
+	"pools" : [
+		 ],
+	"super" : "MCGitBasedRepository",
+	"type" : "normal" }

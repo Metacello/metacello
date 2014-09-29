@@ -1,5 +1,7 @@
 initialization
 flushDownloadCache
-    "self flushDownloadCache"
+  "use class var to survive upgrade when MCGitHubRepository moved to subclass of MCGitBasedRepository"
 
-    DownloadCache := nil
+  "self flushDownloadCache"
+
+  DownloadCache := nil

@@ -9,6 +9,7 @@
 	"instance" : {
 		"addStatement:args:" : "dkh 5/31/2012 17:57:13",
 		"baseline:" : "dkh 7/12/2012 13:45",
+		"bitbucketUser:project:commitish:path:" : "dkh 09/29/2014 12:34",
 		"blueplane:" : "dkh 7/17/2012 16:46",
 		"cacheRepository:" : "dkh 7/23/2012 16:17",
 		"className:" : "dkh 7/12/2012 13:45",
@@ -23,6 +24,7 @@
 		"gemsource:" : "dkh 06/28/2013 16:52",
 		"get" : "dkh 5/31/2012 17:57:13",
 		"githubUser:project:commitish:path:" : "dkh 07/25/2013 15:26",
+		"gitoriousUser:project:commitish:path:" : "dkh 09/29/2014 12:33",
 		"ignoreImage" : "dkh 6/13/2012 16:05",
 		"impara:" : "dkh 7/17/2012 16:48",
 		"list" : "dkh 7/13/2012 16:35",

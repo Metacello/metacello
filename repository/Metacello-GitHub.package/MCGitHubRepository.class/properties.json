@@ -7,11 +7,9 @@
 		"DownloadCache" ],
 	"commentStamp" : "",
 	"instvars" : [
-		"projectPath",
-		"projectVersion",
-		"repoPath" ],
+		 ],
 	"name" : "MCGitHubRepository",
 	"pools" : [
 		 ],
-	"super" : "MCFileTreeRepository",
+	"super" : "MCGitBasedRepository",
 	"type" : "normal" }

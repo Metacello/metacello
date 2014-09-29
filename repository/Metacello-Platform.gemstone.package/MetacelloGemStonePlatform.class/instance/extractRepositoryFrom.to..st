@@ -5,7 +5,7 @@ extractRepositoryFrom: zipFile to: directory
   | errorMessage pid zipErrorFileName |
   pid := self processPID.
   (ServerFileDirectory on: directory) assureExistence.
-  zipErrorFileName := 'github-' , pid , '-zip.err'.
+  zipErrorFileName := 'gitbased-' , pid , '-zip.err'.
   (ServerFileDirectory on: '/tmp') deleteFileNamed: zipErrorFileName.
   System
     performOnServer:

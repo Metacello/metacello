@@ -1,0 +1,17 @@
+{
+	"category" : "Metacello-GitBasedRepository",
+	"classinstvars" : [
+		"repoCacheDirectory",
+		"repoDownloadCache" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"projectPath",
+		"projectVersion",
+		"repoPath" ],
+	"name" : "MCGitBasedRepository",
+	"pools" : [
+		 ],
+	"super" : "MCFileTreeRepository",
+	"type" : "normal" }
