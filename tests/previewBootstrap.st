@@ -37,6 +37,7 @@ Gofer new
       (metacelloDir / 'tests' / 'travisCIHarness.st')
              readStreamDo: [ :fileStream | fileStream fileIn ] ]
     ifNotNil: [ :fileDirectoryClass |
+      Transcript cr; show: 'notnil block'.
       (metacelloDir directoryNamed: 'tests')
           fileNamed: 'travisCIHarness.st'
           do: [:fileStream | fileStream fileIn ] ].

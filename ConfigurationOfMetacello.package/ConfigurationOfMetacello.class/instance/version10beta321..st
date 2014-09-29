@@ -47,17 +47,23 @@ version10beta321: spec
   https://github.com/dalehenrich/metacello-work/issues/181
 1.0-beta.32.1 (dkh.782):
 - final fix for Issue #187: avoid OSProcess dependency for Pharo3.0
-  https://github.com/dalehenrich/metacello-work/issues/181'.
+  https://github.com/dalehenrich/metacello-work/issues/181
+1.0-beta.32.1 (dkh.797):
+- Issue #281: backport PR #257
+1.0-beta.32.1 (dkh.798):
+- Issue #281: backport Issue #227
+1.0-beta.32.1 (dkh.799):
+- Issue #281: backport Issue #226 fix'.
       spec postLoadDoIt: #'metacelloPrimeRegistry'.
       spec author: 'dkh'.
-      spec timestamp: '10/5/2013 15:13'.
+      spec timestamp: '9/26/2014 14:42'.
       spec
         project: 'FileTree' with: #'stable';
         project: 'Gofer' with: #'stable';
         project: 'Gofer Tests' with: #'stable'.
       spec
         package: 'Metacello-Base' with: 'Metacello-Base-dkh.109';
-        package: 'Metacello-Core' with: 'Metacello-Core-dkh.694';
+        package: 'Metacello-Core' with: 'Metacello-Core-dkh.695';
         package: 'Metacello-FileTree' with: 'Metacello-FileTree-dkh.29';
         package: 'Metacello-GitHub' with: 'Metacello-GitHub-dkh.29';
         package: 'Metacello-MC' with: 'Metacello-MC-dkh.680';
@@ -81,7 +87,6 @@ version10beta321: spec
     for: #'squeakCommon'
     do: [ 
       spec
-        project: 'OSProcess' with: '4.4.5';
         project: 'HelpSystem' with: '1.1'.
       spec
         package: 'Metacello-TestsPlatform'
@@ -125,7 +130,11 @@ version10beta321: spec
           with: 'Metacello-TestsCommonMC.pharo20-dkh.3' ].
   spec
     for: #'squeak'
-    do: [ spec package: 'Metacello-Platform' with: 'Metacello-Platform.squeak-dkh.23' ].
+    do: [ 
+	spec
+        package: 'SqueakSSL-Core' with: 'SqueakSSL-Core-ar.26';
+        package: 'WebClient-Core' with: 'WebClient-Core-topa.93';
+        package: 'Metacello-Platform' with: 'Metacello-Platform.squeak-tfel.25' ].
   spec
     for: #'gemstone'
     do: [ 
@@ -138,4 +147,4 @@ version10beta321: spec
         package: 'Metacello-TestsPlatform'
           with: 'Metacello-TestsPlatform.gemstone-.6';
         package: 'Metacello-Platform'
-          with: 'Metacello-Platform.gemstone-dkh.32' ]
+          with: 'Metacello-Platform.gemstone-dkh.33' ]
