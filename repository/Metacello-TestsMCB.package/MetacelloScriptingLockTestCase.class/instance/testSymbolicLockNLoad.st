@@ -1,5 +1,6 @@
 tests
 testSymbolicLockNLoad
+  | projectSpec |
   Metacello new
     configuration: 'ExternalX';
     version: #'stable';
@@ -15,4 +16,9 @@ testSymbolicLockNLoad
       'dictionary://Metacello_Config_Test_Repository'
     expectedBaselineClassName: nil
     expectedBaselineVersion: nil
-    expectedBaselineRepository: nil
+    expectedBaselineRepository: nil.
+  projectSpec := (Metacello registry
+    configuration: 'ExternalX';
+    list) first.
+  self assert: projectSpec registration locked.
+  self assert: projectSpec versionString = '0.9.0'
