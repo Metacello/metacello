@@ -14,7 +14,8 @@ downloadFile: url to: outputFileName
   zipfile := ServerFileDirectory on: outputFileName.
   zipfile containingDirectory
     readOnlyFileNamed: zipfile localName
-    do: [ :fileStream | stream := RWBinaryOrTextStream on: fileStream contents ].
+    do: [ :fileStream | 
+      stream := RWBinaryOrTextStream on: fileStream contents ].
   [ archive readFrom: stream ]
     on: Error
     do: [ :ex | 
