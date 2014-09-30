@@ -241,30 +241,13 @@ baseline: spec
     do: [ 
       spec
         baseline: 'FileTree'
-          with: [ spec repository: 'github://dalehenrich/filetree:gemstone2.4/repository' ];
-        project: 'GsCore'
-          with: [ 
-              spec
-                className: 'ConfigurationOfGsCore';
-                versionString: '0.247';
-                repository:
-                    'http://seaside.gemtalksystems.com/ss/MetacelloRepository' ];
-        project: 'GsMonticello'
-          with: [ 
-              spec
-                className: 'ConfigurationOfGsMonticello';
-                versionString: '0.242';
-                repository:
-                    'http://seaside.gemtalksystems.com/ss/MetacelloRepository' ];
-        yourself.
+        with: [ spec repository: 'github://dalehenrich/filetree:gemstone2.4/repository' ].
       spec
-        package: 'Metacello-GitHub' with: [ spec requires: #('GsCore') ];
         package: 'Metacello-Platform'
           with: [ 
               spec
                 file: 'Metacello-Platform.gemstone';
-                postLoadDoIt: #'gemstone10beta311PostLoadDoIt';
-                requires: 'GsMonticello' ];
+                postLoadDoIt: #'gemstone10beta311PostLoadDoIt' ];
         package: 'Metacello-TestsPlatform'
           with: [ 
               spec
