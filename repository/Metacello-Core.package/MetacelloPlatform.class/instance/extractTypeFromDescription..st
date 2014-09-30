@@ -11,7 +11,7 @@ extractTypeFromDescription: description
   (description beginsWith: 'github://')
     ifTrue: [ ^ 'github' ].
   (description beginsWith: 'gitorious://')
-    ifTrue: [ ^ 'gitgitorious' ].
+    ifTrue: [ ^ 'gitorious' ].
   (description beginsWith: 'bitbucket://')
     ifTrue: [ ^ 'bitbucket' ].
   ^ 'http'
