@@ -8,6 +8,7 @@ testIssue175
   5. verify that BaselineOfExternal can be seen
 "
 
+  [ 
   | oldCacheDir fileUtils workingDir newCacheDir |
   oldCacheDir := MCGitHubRepository cacheDirectory.
   fileUtils := MCFileTreeFileUtils current.
@@ -33,4 +34,10 @@ testIssue175
     ensure: [ 
       MCGitHubRepository cacheDirectory: oldCacheDir.
       (fileUtils directoryExists: newCacheDir)
-        ifTrue: [ fileUtils deleteAll: newCacheDir ] ]
+        ifTrue: [ fileUtils deleteAll: newCacheDir ] ] ]
+    on: Error
+    do: [ :ex | 
+      Transcript
+        cr;
+        show: 'testIssue175 error: ' , ex description printString.
+      ex pass ]
