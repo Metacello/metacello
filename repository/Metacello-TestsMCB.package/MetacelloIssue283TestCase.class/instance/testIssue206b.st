@@ -8,4 +8,4 @@ testIssue206b
   project := (Smalltalk at: #'ConfigurationOfProjectIssue283') project.
   (project version: #'bleedingEdge') load.
   wc := (GoferPackageReference name: 'GoferFoo') workingCopy.
-  self assert: wc ancestry ancestors first name = 'GoferFoo-lr.4'
+  self assert: wc ancestry ancestors first name = 'GoferFoo-lr.2'
