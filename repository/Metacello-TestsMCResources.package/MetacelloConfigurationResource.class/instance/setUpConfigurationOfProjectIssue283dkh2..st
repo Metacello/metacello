@@ -33,6 +33,12 @@ setUpConfigurationOfProjectIssue283dkh2: ancestors
     source: (self class sourceCodeAt: #'stableVersion283B:') asString).
   (MCMethodDefinition
     className: className asString
+    selector: 'bleedingEdge206B:'
+    category: 'cat'
+    timeStamp: ''
+    source: (self class sourceCodeAt: #'bleedingEdge206B:') asString).
+  (MCMethodDefinition
+    className: className asString
     selector: 'version20Issue283:'
     category: 'cat'
     timeStamp: ''

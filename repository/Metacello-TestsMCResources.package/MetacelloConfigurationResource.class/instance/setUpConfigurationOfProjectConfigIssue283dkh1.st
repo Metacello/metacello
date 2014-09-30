@@ -30,7 +30,13 @@ setUpConfigurationOfProjectConfigIssue283dkh1
     selector: 'projectVersion10Issue283:'
     category: 'cat'
     timeStamp: ''
-    source: (self class sourceCodeAt: #'projectVersion10Issue283:') asString)}.
+    source: (self class sourceCodeAt: #'projectVersion10Issue283:') asString).
+  (MCMethodDefinition
+    className: className asString
+    selector: 'projectVersion20Issue283:'
+    category: 'cat'
+    timeStamp: ''
+    source: (self class sourceCodeAt: #'projectVersion20Issue283:') asString)}.
   monticelloRepository
     basicStoreVersion:
       (MCVersion new
