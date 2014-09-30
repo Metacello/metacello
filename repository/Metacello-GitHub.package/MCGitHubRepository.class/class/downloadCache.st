@@ -1,4 +1,6 @@
 accessing
 downloadCache
-    DownloadCache ifNil: [ DownloadCache := Dictionary new ].
-    ^ DownloadCache
+  "use class var to survive upgrade when MCGitHubRepository moved to subclass of MCGitBasedRepository"
+
+  DownloadCache ifNil: [ DownloadCache := Dictionary new ].
+  ^ DownloadCache

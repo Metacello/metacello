@@ -1,4 +1,4 @@
-github support
+github/bitbucket support
 fileDirectoryClass
 
 	^ServerFileDirectory
