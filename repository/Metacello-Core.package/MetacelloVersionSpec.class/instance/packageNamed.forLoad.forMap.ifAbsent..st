@@ -6,7 +6,7 @@ packageNamed: aString forLoad: ignored forMap: map ifAbsent: absentBlock
    arg from system"
 
   | importSpec |
-  map
+  ^ map
     at: aString
     ifAbsent: [ 
       (self importArray notNil or: [ self import notNil ])
@@ -27,7 +27,7 @@ packageNamed: aString forLoad: ignored forMap: map ifAbsent: absentBlock
               ^ (map at: self import ifAbsent: absentBlock)
                 mergeImportLoads: {aString};
                 yourself ] ].
-      ^ (aString = 'default' or: [ aString = 'ALL' ])
+      (aString = 'default' or: [ aString = 'ALL' ])
         ifTrue: [ 
           self project groupSpec
             name: aString;
