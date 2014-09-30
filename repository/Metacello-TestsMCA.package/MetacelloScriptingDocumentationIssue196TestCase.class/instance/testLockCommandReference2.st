@@ -1,18 +1,13 @@
 tests
 testLockCommandReference2
+  "https://github.com/dalehenrich/metacello-work/blob/dev/docs/LockCommandReference.md#lock-command"
+
   | projectSpec |
   Metacello new
     baseline: 'External';
-    repository:
-        'github://dalehenrich/external:' , MetacelloScriptingResource externalCustomSHA
-            , '/repository';
-    get.
-  Metacello registry
-    baseline: 'External';
-    onLock: [ :ex | ex honor ];
-    load.
+    repository: 'github://dalehenrich/external:master/repository';
+    lock.
   projectSpec := (Metacello registry
-    baseline: 'External';
+    project: 'External';
     list) first.
-  self assert: projectSpec registration currentVersionString = '1ac5850'.
-  self assert: projectSpec registration locked not
+  self assert: projectSpec registration locked
