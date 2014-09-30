@@ -36,8 +36,6 @@ baseline: spec
           with: [ spec requires: #('Metacello-GitBasedRepository') ];
         package: 'Metacello-Bitbucket'
           with: [ spec requires: #('Metacello-GitBasedRepository') ];
-        package: 'Metacello-Gitorious'
-          with: [ spec requires: #('Metacello-GitBasedRepository') ];
         package: 'Metacello-MC'
           with: [ spec requires: #('Metacello-Core' 'Gofer') ];
         package: 'Metacello-Platform'
@@ -63,7 +61,7 @@ baseline: spec
           with: [ 
               spec
                 requires:
-                  #('Metacello-MC' 'Gofer Tests' 'Metacello-ToolBox' 'Metacello-GitHub' 'Metacello-Bitbucket' 'Metacello-Gitorious' 'Metacello-TestsMCResources') ];
+                  #('Metacello-MC' 'Gofer Tests' 'Metacello-ToolBox' 'Metacello-GitHub' 'Metacello-Bitbucket' 'Metacello-TestsMCResources') ];
         package: 'Metacello-TestsMCA'
           with: [ spec requires: #('Metacello-TestsMC') ];
         package: 'Metacello-TestsMCB'
@@ -81,8 +79,7 @@ baseline: spec
       spec
         group: 'default' with: #('batch' 'Metacello-ToolBox');
         group: 'batch'
-          with:
-            #('Metacello-Core' 'Metacello-GitHub' 'Metacello-Bitbucket' 'Metacello-Gitorious');
+          with: #('Metacello-Core' 'Metacello-GitHub' 'Metacello-Bitbucket');
         group: 'Base Configuration' with: #('Metacello-Base');
         group: 'Core' with: #('default');
         group: 'Cypress' with: #('Metacello-Cypress');
