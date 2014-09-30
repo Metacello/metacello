@@ -1,13 +1,13 @@
 {
-	"category" : "Metacello-TestsMCB",
+	"category" : "Metacello-TestsMCA",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "dkh 09/30/2014 14:49",
 	"instvars" : [
 		 ],
-	"name" : "MetacelloBasicScriptingTestCase",
+	"name" : "MetacelloScriptingDocumentationTestCase",
 	"pools" : [
 		 ],
 	"super" : "MetacelloScriptingTestCase",
