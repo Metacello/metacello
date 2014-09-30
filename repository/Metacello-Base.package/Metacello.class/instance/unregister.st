@@ -2,5 +2,4 @@ api actions
 unregister
   "unlock projects in registry"
 
-  self addStatement: #'unregister' args: #().
-  ^ self execute
+  ^ self execute: #'unregister' args: #()

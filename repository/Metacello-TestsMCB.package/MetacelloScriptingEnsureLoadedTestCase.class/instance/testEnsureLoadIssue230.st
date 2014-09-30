@@ -1,32 +1,29 @@
 tests
-testEnsureLoad
+testEnsureLoadIssue230
+  "https://github.com/dalehenrich/metacello-work/issues/230"
+
   "https://github.com/dalehenrich/metacello-work/issues/199"
 
   "preload ConfigurationOfExternal-dkh.1 and force ensureLoad 
 	ConfigurationOfExternal-dkh.2 which has version 0.9.1"
 
-  | registration spec |
+  | registration spec metacello |
   Gofer new
     version: 'ConfigurationOfExternal-dkh.1';
     repository: externalRepository;
     load.
-  Metacello new
-    configuration: 'ExternalRef';
-    repository: 'dictionary://Metacello_Configuration_Test_Repository';
-    get.
-  Metacello new
+  (metacello := Metacello new)
     configuration: 'ExternalRef';
     version: '0.9.0';
     repository: 'dictionary://Metacello_Configuration_Test_Repository';
+    get;
     load.
   registration := Metacello registrations
     detect: [ :each | each projectName = 'ExternalRef' ].
   spec := registration projectSpec.
   self assert: spec versionString = '0.9.0'.
-  Metacello new
-    configuration: 'ExternalRef';
+  metacello
     version: '0.9.1';
-    repository: 'dictionary://Metacello_Configuration_Test_Repository';
     load.
   registration := Metacello registrations
     detect: [ :each | each projectName = 'ExternalRef' ].

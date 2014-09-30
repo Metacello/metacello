@@ -1,6 +1,5 @@
 api actions
 list
-    "list projects in registry"
+  "list projects in registry"
 
-    self addStatement: #'list' args: #().
-    ^ self execute
+  ^ self execute: #'list' args: #()

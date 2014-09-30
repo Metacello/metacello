@@ -1,5 +1,7 @@
 tests
-testDefaultVersionUpgrade
+testDefaultVersionUpgradeIssue230
+  "https://github.com/dalehenrich/metacello-work/issues/230"
+
   "https://github.com/dalehenrich/metacello-work/issues/198"
 
   | registration spec |
@@ -9,12 +11,9 @@ testDefaultVersionUpgrade
     load.
   Metacello new
     configuration: 'ExternalRef';
-    repository: 'dictionary://Metacello_Configuration_Test_Repository';
-    get.
-  Metacello new
-    configuration: 'ExternalRef';
     version: '0.9.0';
     repository: 'dictionary://Metacello_Configuration_Test_Repository';
+    get;
     load.
   registration := Metacello registrations
     detect: [ :each | each projectName = 'ExternalRef' ].

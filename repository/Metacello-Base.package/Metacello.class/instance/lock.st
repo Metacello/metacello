@@ -1,6 +1,5 @@
 api actions
 lock
-    "lock projects in registry"
+  "lock projects in registry"
 
-    self addStatement: #'lock' args: #().
-    ^ self execute
+  ^ self execute: #'lock' args: #()

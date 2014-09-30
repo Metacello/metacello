@@ -1,4 +1,3 @@
 api actions
 record
-    self addStatement: #'record:' args: #(#()).
-    ^ self execute
+  ^ self execute: #'record:' args: #(#())
