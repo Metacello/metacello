@@ -4,10 +4,10 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "dkh 09/30/2014 14:49",
+	"commentStamp" : "dkh 09/30/2014 15:33",
 	"instvars" : [
 		 ],
-	"name" : "MetacelloScriptingDocumentationTestCase",
+	"name" : "MetacelloScriptingDocumentationIssue196TestCase",
 	"pools" : [
 		 ],
 	"super" : "MetacelloScriptingTestCase",

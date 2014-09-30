@@ -1,0 +1,9 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"setUpRepositories" : "dkh 09/30/2014 15:33",
+		"tearDownPackageList" : "dkh 09/30/2014 15:33",
+		"testGettingStartedWithGitHub1" : "dkh 09/30/2014 15:33",
+		"testLockCommandReference1" : "dkh 09/30/2014 15:33",
+		"testLockCommandReference2" : "dkh 09/30/2014 15:33" } }
