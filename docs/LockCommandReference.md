@@ -246,6 +246,7 @@ Metacello new
   repository: 'http://ss3.gemtalksystems.com/ss/external';
   cacheRepository: 'filetree:///opt/git/externalDir/repository';
   ignoreImage;
+  get; "get will download the ConfigurationOfExternal to the cache repository"
   fetch: 'ALL'.
 ```
 If you project is more complex (i.e., has dependent projects) then you
