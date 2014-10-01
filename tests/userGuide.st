@@ -88,9 +88,14 @@ Metacello new
   get.
 
 Transcript cr; show: '---load (default)'.
-Metacello new
-  configuration: 'Seaside3';
-  load.
+[
+  Metacello new
+    configuration: 'Seaside3';
+    load ] 
+      on: Warning
+      do: [:ex | 
+        Transcript cr; show: ex description.
+        ex resume ].
 
 Transcript cr; show: '---get'.
 Metacello new
