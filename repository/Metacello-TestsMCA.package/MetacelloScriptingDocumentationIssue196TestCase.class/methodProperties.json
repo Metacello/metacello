@@ -4,13 +4,14 @@
 	"instance" : {
 		"setUpRepositories" : "dkh 10/01/2014 11:28",
 		"setUpRepositoryContents" : "dkh 10/01/2014 11:36",
-		"setupDocumentationRepositories" : "dkh 10/01/2014 11:39",
-		"tearDownPackageList" : "dkh 10/01/2014 11:24",
+		"setupDocumentationRepositories" : "dkh 10/01/2014 12:29",
+		"tearDownPackageList" : "dkh 10/01/2014 12:33",
 		"tearDownRepositories" : "dkh 10/01/2014 11:40",
 		"testGettingStartedWithGitHub1" : "dkh 09/30/2014 15:33",
+		"testIssue294" : "dkh 10/01/2014 12:17",
 		"testLockCommandReference1" : "dkh 09/30/2014 15:53",
 		"testLockCommandReference2" : "dkh 09/30/2014 15:54",
 		"testLockCommandReference3" : "dkh 09/30/2014 15:54",
 		"testLockCommandReference4" : "dkh 09/30/2014 15:54",
 		"testLockCommandReference5" : "dkh 09/30/2014 15:57",
-		"testLockCommandReference6" : "dkh 10/01/2014 11:49" } }
+		"testLockCommandReference6" : "dkh 10/01/2014 12:20" } }

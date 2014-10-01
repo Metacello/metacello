@@ -17,11 +17,9 @@ testLockCommandReference6
     baseline: 'Sample';
     repository: 'filetree://' , sampleDirectory fullName;
     lock.
-  false
-    ifTrue: [ 
-      Metacello new
-        baseline: 'Example';
-        repository: 'github://dalehenrich/example:otto/repository';
-        onLock: [ :ex | ex honor ];
-        get;
-        load: 'Tests' ]
+  Metacello new
+    baseline: 'Example';
+    repository: 'github://dalehenrich/example:otto/repository';
+    onLock: [ :ex | ex honor ];
+    get;
+    load: 'Tests'
