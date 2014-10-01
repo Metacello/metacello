@@ -4,9 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "dkh 09/30/2014 15:33",
+	"commentStamp" : "",
 	"instvars" : [
-		 ],
+		"alternateDirectory",
+		"alternateRepository",
+		"sampleRepository" ],
 	"name" : "MetacelloScriptingDocumentationIssue196TestCase",
 	"pools" : [
 		 ],

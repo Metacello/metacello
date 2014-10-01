@@ -2,14 +2,26 @@ tests
 testLockCommandReference6
   "https://github.com/dalehenrich/metacello-work/blob/dev/docs/LockCommandReference.md#lock-the-projects"
 
-  | alternateDirectory |
-  alternateDirectory := MetacelloPlatform current
-    directoryFromPath: 'alternate'
-    relativeTo: externalDirectory.
-  MetacelloPlatform current ensureDirectoryExists: alternateDirectory.
+  "https://github.com/dalehenrich/metacello-work/blob/dev/docs/LockCommandReference.md#load-the-example"
+
+  self setupDocumentationRepositories.
   Metacello new
     baseline: 'Alternate';
-    repository: 'github://dalehenrich/alternate:otto/repository';
-    cacheRepository: 'filetree://' , alternateDirectory fullName;
-    ignoreImage;
-    fetch: 'ALL'
+    repository: 'filetree://' , alternateDirectory fullName;
+    lock.
+  Metacello new
+    baseline: 'External';
+    repository: 'filetree://' , externalDirectory fullName;
+    lock.
+  Metacello new
+    baseline: 'Sample';
+    repository: 'filetree://' , sampleDirectory fullName;
+    lock.
+  false
+    ifTrue: [ 
+      Metacello new
+        baseline: 'Example';
+        repository: 'github://dalehenrich/example:otto/repository';
+        onLock: [ :ex | ex honor ];
+        get;
+        load: 'Tests' ]
