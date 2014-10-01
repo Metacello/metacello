@@ -158,7 +158,7 @@ Metacello image
   lock.
 
 Transcript cr; show: '---load (REST onlock)'.
-Metacello new
+Metacello registry
   configuration: 'SeasideRest';
   version: #stable;
   onLock: [:ex :existing :new | 
