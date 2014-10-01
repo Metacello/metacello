@@ -48,7 +48,7 @@ Metacello new
 ```
 
 Here is a variant
-of the same expression with the (current) default values explicitly specified:
+of the same expression with the default version explicitly specified (the default repository description varies depending upon the platform that you are running on):
 
 ```Smalltalk
 Metacello new
@@ -59,8 +59,8 @@ Metacello new
 ```
 
 The `version` attribute can be any legal [version number][10].
-`ss3:` is a [repository shortcut][4]. You can also specify the
-full [repository description][3] as follows:
+`smalltalkhubUser:project:` is a [repository shortcut][4]. You can also specify the
+full [repository description][3] as an URL:
 
 ```Smalltalk
 Metacello new
@@ -69,6 +69,8 @@ Metacello new
   repository: 'http://smalltalkhub.com/mc/Seaside/Seaside31/main';
   load.
 ```
+
+#PROGRESS MARKER
 
 ##Listing
 
