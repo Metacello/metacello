@@ -253,7 +253,7 @@ If you don't want an interactive Warning to be raised during your load,
 you can use `onWarning:` to log and resume the Warning:
 
 ```Smalltalk
-Metacello new
+Metacello registry
   configuration: 'SeasideRest';
   version: #stable;
   onWarning: [:ex | 
@@ -266,7 +266,7 @@ If you want to track the use of locks explicitly you can use `onLock:`
 which is only triggered when a locked project is involved:
 
 ```Smalltalk
-Metacello new
+Metacello registry
   configuration: 'SeasideRest';
   version: #stable;
   onLock: [:ex :existing :new | 
@@ -285,7 +285,7 @@ We'll use `onLock:` to `break` the new version of the Seaside project to
 be loaded:
 
 ```Smalltalk
-Metacello new
+Metacello registry
   configuration: 'SeasideRest';
   version: #stable;
   onLock: [:ex :existing :new | 

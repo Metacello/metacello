@@ -167,7 +167,7 @@ Metacello registry
   load.
 
 Transcript cr; show: '---load (REST breaklock)'.
-Metacello new
+Metacello registry
   configuration: 'SeasideRest';
   version: #stable;
   onLock: [:ex :existing :new | 
