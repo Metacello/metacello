@@ -47,6 +47,10 @@ Metacello new
   baseline: 'Metacello';
   repository: 'filetree://', gitPath, '/metacello-work/repository';
   get.
+Metacello new
+  baseline: 'Metacello';
+  repository: 'filetree://', gitPath, '/metacello-work/repository';
+  lock.
 
 [
 Metacello new
