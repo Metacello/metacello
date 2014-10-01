@@ -79,40 +79,30 @@ Smalltalk at: #ConfigurationOfGLASS ifPresent: [:ignored |
 "Run smattering of expressions used in Metacello User Guide ... 
  not all expressions are implemented yet...
  We just want these expressions to run without error"
-
+[
 Transcript cr; show: '---Start running documentation script..'.
 
+"Loading"
 Transcript cr; show: '---get (default)'.
 Metacello new
   configuration: 'Seaside3';
   get.
 
 Transcript cr; show: '---load (default)'.
-[
   Metacello new
     configuration: 'Seaside3';
-    load ] 
-      on: Warning
-      do: [:ex | 
-        Transcript cr; show: ex description.
-        ex resume ].
-
-Transcript cr; show: '---get'.
-Metacello new
-  configuration: 'Seaside3';
-  smalltalkhubUser: 'Seaside' project: 'MetacelloConfigurations';
-  get.
+    load.
 
 Transcript cr; show: '---load'.
 Metacello registry
   configuration: 'Seaside3';
   version: #stable;
-  onWarning: [:ex | 
-    Transcript cr; show: 'WARNING: ', ex description.
-    ex resume];
-  onUpgrade: [:ex | ex allow ];
+  onConflict: [:ex | ex allow ];
+  smalltalkhubUser: 'Seaside' project: 'MetacelloConfigurations';
+  get;
   load.
 
+"Listing"
 Transcript cr; show: '---list (1)'.
 Metacello image
   configuration: [:spec | true ];
@@ -128,6 +118,7 @@ Metacello new
   smalltalkhubUser: 'Seaside' project: 'Seaside31';
   list.
 
+"Getting"
 Transcript cr; show: '---get (image)'.
 Metacello image
   configuration: 'Seaside3';
@@ -139,10 +130,33 @@ Metacello image
   smalltalkhubUser: 'Seaside' project: 'MetacelloConfigurations';
   get.
 
+Transcript cr; show: '---get (Magritte3)'.
+Metacello image
+  configuration: 'Magritte3';
+  repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
+  get.
+
+"Load the new version"
+Transcript cr; show: '---load (Seaside3)'.
+Metacello image
+  configuration: 'Seaside3';
+  version: #stable;
+  load.
+
+Transcript cr; show: '---load (Magritte3)'.
+Metacello image
+  configuration: 'Seaside3';
+  lock. "lock to preserve currently loaded Seaside..."
+
+Metacello registry
+  configuration: 'Magritte';
+  version: #stable;
+  load.
+
+"Locking"
 Transcript cr; show: '---lock'.
 Metacello image
   configuration: 'Seaside3';
-  version: #'stable';
   lock.
 
 Transcript cr; show: '---lock (3.1.2)'.
@@ -151,19 +165,45 @@ Metacello image
   version: '3.1.2';
   lock.
 
-Transcript cr; show: '---load (Zinc)'.
-Metacello new
-  baseline: 'Zinc';
-  repository: 'github://glassdb/zinc:gemstone3.1/repository';
-  get;
-  load: 'Tests'.
-
-Transcript cr; show: '---load (Zinc onConflict)'.
+Transcript cr; show: '---lock warning'.
 Metacello registry
-  baseline: 'Zinc';
-  onConflict: [:ex | ex useNew ];
-  get;
-  load: 'Tests'.
+  configuration: 'Magritte3';
+  onWarning: [:ex | 
+    Transcript cr; show: 'Warning: ', ex description.
+    ex resume ];
+  load.
+
+Transcript cr; show: '---lock tracking'.
+Metacello registry
+  configuration: 'Magritte3';
+  onLock: [:ex :existing :new | 
+    Transcript cr; show: 'Locked project: ', existing projectName printString.
+    ex pass ];
+  load.
+
+Transcript cr; show: '---lock breaking'.
+Metacello registry
+  configuration: 'Magritte3';
+  onLock: [:ex :existing :new | 
+    existing baseName = 'Seaside3'
+      ifTrue: [ ex break ].
+    ex pass ];
+  load.
+
+"upgrading a locked project"
+Transcript cr; show: '---lock upgrading'.
+Metacello image
+  configuration: 'Seaside3';
+  version: '3.1.2';
+  lock.
+
+"locking example"
+
+] 
+  on: Warning
+  do: [:ex | 
+    Transcript cr; show: ex description.
+    ex resume ]
 
 TravisCISuccessNoFailure
       value: 'TravisCISuccess.txt'.

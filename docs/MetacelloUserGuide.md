@@ -70,8 +70,6 @@ Metacello new
   load.
 ```
 
-#PROGRESS MARKER
-
 ##Listing
 
 Once you've loaded one or more projects into your image, you may want to
@@ -97,7 +95,7 @@ specifying the names of the projects you'd like to select:
 
 ```Smalltalk
 Metacello registry
-  configuration: #('Seaside30' 'MetacelloPreview');
+  configuration: #('Seaside3' 'MetacelloPreview');
   list.
 ```
 
@@ -126,7 +124,7 @@ with `Seaside` in the
 Once you've loaded a project into your image the next logical step is
 upgrading your project to a new version. 
 
-Let's say that a new `#stable` version of Seaside30 has been released
+Let's say that a new `#stable` version of Seaside3 has been released
 and that you want to upgrade. This is a two step process: 
 
 * [get a new version of the configuration][11]
@@ -147,7 +145,7 @@ By using the `image` message, you can leverage the fact that the [registry][8] r
 from which repository you loaded the original version of the configuration.
 
 The `get` command simply downloads the latest version of the
-configuration package from the repository.
+configuration package from that repository.
 
 You may download the configuration from a different repository:
 
@@ -166,12 +164,12 @@ into your image without actually loading the project itself:
 
 ```Smalltalk
 Metacello image
-  configuration: 'SeasideRest';
-  repository: 'http://smalltalkhub.com/mc/Seaside/MetacelloConfigurations/main';
+  configuration: 'Magritte3';
+  repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
   get.
 ```
 
-The 'SeasideRest' project information will be registered in the [registry][8] and marked
+The 'Magritte3' project information will be registered in the [registry][8] and marked
 as *unloaded*.
 
 ### Load the new version
@@ -194,11 +192,11 @@ command operation.
 Of course, the `load` command updates the [registry][8].
 
 If you want to load a project for which you've already done a `get`
-(like the SeasideRest project earlier), you can do the following:
+(like the Magritte project earlier), you can do the following:
 
 ```Smalltalk
 Metacello registry
-  configuration: 'SeasideRest';
+  configuration: 'Magritte';
   version: #stable;
   load.
 ```
@@ -208,21 +206,21 @@ interested in both *loaded* and *unloaded* projects.
 
 ##Locking
 
-Let's say that you are using an older version of Seaside30 (say 3.0.5)
-instead of the #stable version (3.0.7) and that your application doesn't
-work with newer versions of Seaside30 (you've tried and it's more work
-to get you application to work with the newer version of Seaside30 than
+Let's say that you are using an older version of Seaside3 (say 3.1.1)
+instead of the #stable version (3.1.3) and that your application doesn't
+work with newer versions of Seaside3 (you've tried and it's more work
+to get you application to work with the newer version of Seaside3 than
 it's worth).
 
 Let's also say that you want to try out something in the
-SeasideRest project, but when you try loading SeasideRest, you end up
-having Seaside 3.0.7 loaded as well. 
+Magritte project, but when you try loading Magritte, you end up
+having Seaside 3.1.3 loaded as well. 
 
 This is an unfortunate side effect of Metacello trying to *do the right
 thing*, only in your case it is the wrong thing.
 
 Fortunately, the [`lock` command][9] can give you control. First you
-need to `lock` the Seaside30 project:
+need to `lock` the Seaside3 project:
 
 ```Smalltalk
 Metacello image
@@ -256,8 +254,7 @@ you can use `onWarning:` to log and resume the Warning:
 
 ```Smalltalk
 Metacello registry
-  configuration: 'SeasideRest';
-  version: #stable;
+  configuration: 'Magritte3';
   onWarning: [:ex | 
     Transcript cr; show: 'Warning: ', ex description.
     ex resume ];
@@ -269,29 +266,27 @@ which is only triggered when a locked project is involved:
 
 ```Smalltalk
 Metacello registry
-  configuration: 'SeasideRest';
-  version: #stable;
+  configuration: 'Magritte3';
   onLock: [:ex :existing :new | 
     Transcript cr; show: 'Locked project: ', existing projectName printString.
-    ex pass ];
+    ex honor];
   load.
 ```
 
-### Bypassing locks
+### Breaking locks
 
-Let's say that when you load the SeasideRest project you have decided
+Let's say that when you load the Magritte3 project you have decided
 that in this particular case you would like to bypass the lock and let
-the version of Seaside specified by the SeasideRest project to be loaded.
+the version of Seaside specified by the Magritte3 project to be loaded.
 
-We'll use `onLock:` to `break` the new version of the Seaside project to
+We'll use `onLock:` to `break` the lock and allow the new version of the Seaside project to
 be loaded:
 
 ```Smalltalk
 Metacello registry
-  configuration: 'SeasideRest';
-  version: #stable;
+  configuration: 'Magritte3';
   onLock: [:ex :existing :new | 
-    existing baseName = 'Seaside31'
+    existing baseName = 'Seaside3'
       ifTrue: [ ex break ].
     ex pass ];
   load.
