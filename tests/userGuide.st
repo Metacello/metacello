@@ -133,12 +133,6 @@ Metacello image
   configuration: 'Seaside3';
   get.
 
-Transcript cr; show: '---get (REST)'.
-Metacello image
-  configuration: 'SeasideRest';
-  repository: 'http://smalltalkhub.com/mc/Seaside/MetacelloConfigurations/main';
-  get.
-
 Transcript cr; show: '---get (image 2)'.
 Metacello image
   configuration: 'Seaside3';
@@ -157,24 +151,19 @@ Metacello image
   version: '3.1.2';
   lock.
 
-Transcript cr; show: '---load (REST onlock)'.
-Metacello registry
-  configuration: 'SeasideRest';
-  version: #stable;
-  onLock: [:ex :existing :new | 
-    Transcript cr; show: 'Locked project: ', existing projectName printString.
-    ex pass ];
-  load.
+Transcript cr; show: '---load (Zinc)'.
+Metacello new
+  baseline: 'Zinc';
+  repository: 'github://glassdb/zinc:gemstone3.1/repository';
+  get;
+  load: 'Tests'.
 
-Transcript cr; show: '---load (REST breaklock)'.
+Transcript cr; show: '---load (Zinc onConflict)'.
 Metacello registry
-  configuration: 'SeasideRest';
-  version: #stable;
-  onLock: [:ex :existing :new | 
-    existing baseName = 'Seaside31'
-      ifTrue: [ ex break ].
-    ex pass ];
-  load.
+  baseline: 'Zinc';
+  onConflict: [:ex | ex useNew ];
+  get;
+  load: 'Tests'.
 
 TravisCISuccessNoFailure
       value: 'TravisCISuccess.txt'.

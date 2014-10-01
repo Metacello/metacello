@@ -327,10 +327,7 @@ the Zinc repository:
 Metacello new
   baseline: 'Zinc';
   repository: 'github://glassdb/zinc:gemstone3.1/repository';
-  get.
-Metacello new
-  baseline: 'Zinc';
-  repository: 'github://glassdb/zinc:gemstone3.1/repository';
+  get;
   load: 'Tests'
 ```
 
@@ -352,11 +349,8 @@ Then load Zinc from the local git repository using a
 Metacello new
   baseline: 'Zinc';
   repository: 'filetree:///opt/git/zinc/repository';
-  get.
-Metacello new
-  baseline: 'Zinc';
-  repository: 'filetree:///opt/git/zinc/repository';
   onConflict: [:ex | ex useNew ];
+  get;
   load: 'Tests'
 ```
 
@@ -372,13 +366,13 @@ or `useExisting` to preserve the loaded state`.
 
 ## Project upgrades initiated by dependent proejcts
 
-If we return to the earlier example where we have loaded Seaside 3.0.5
+If we return to the earlier example where we have loaded Seaside 3.1.2
 into our image:
 
 ```Smalltalk
 Metacello image
-  configuration: 'Seaside30';
-  version: '3.0.5';
+  configuration: 'Seaside3';
+  version: '3.1.2';
   load.
 ```
 
