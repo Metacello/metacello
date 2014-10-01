@@ -1,5 +1,6 @@
 doits
 reprimeRegistryIssue197
+  MetacelloScriptEngine defaultRepositoryDescription: nil.
   MetacelloProjectRegistration registry baselineRegistry values
     detect: [ :registration | 
       "inline MetacelloProjectRegistration>>isValid to correct invalid definition ... detecting INVALID registrations"
