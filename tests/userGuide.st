@@ -63,6 +63,15 @@ Metacello new
       Transcript cr; show: 'WARNING: ', ex description.
       ex resume ].
 
+Smalltalk at: #ConfigurationOfGLASS ifPresent: [:ignored |
+  "On GemStone need to upgrade Grease to survive Seaside loads"
+  Gofer new
+    package: 'GsUpgrader-Core';
+    url: 'http://ss3.gemtalksystems.com/ss/gsUpgrader';
+    load.
+  (Smalltalk at: #GsUpgrader) upgradeGrease.
+].
+
 "Run smattering of expressions used in Metacello User Guide ... 
  not all expressions are implemented yet...
  We just want these expressions to run without error"
