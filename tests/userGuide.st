@@ -203,7 +203,7 @@ Metacello image
   on: Warning
   do: [:ex | 
     Transcript cr; show: ex description.
-    ex resume ]
+    ex resume ].
 
 TravisCISuccessNoFailure
       value: 'TravisCISuccess.txt'.
