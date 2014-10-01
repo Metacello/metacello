@@ -17,10 +17,10 @@ project using Metacello:
 
 ```Smalltalk
 Gofer new
-  package: 'ConfigurationOfSeaside30';
-  ss3: 'MetaRepoForPharo20';
+  package: 'ConfigurationOfSeaside3';
+  smalltalkhubUser: 'Seaside' project: 'Seaside31';
   load.
-((Smalltalk at: #ConfigurationOfSeaside30) version: #stable) load.
+((Smalltalk at: #ConfigurationOfSeaside3) version: #stable) load.
 ```
 
 In the early days of Metacello (and Gofer) this was a great improvement
@@ -31,7 +31,7 @@ following:
 
 ```Smalltalk
 Metacello new
-  configuration: 'Seaside30';
+  configuration: 'Seaside3';
   load.
 ```
 
@@ -43,7 +43,7 @@ default values, namely the `version` of the project and the `repository` where t
 
 ```Smalltalk
 Metacello new
-  configuration: 'Seaside30';
+  configuration: 'Seaside3';
   load.
 ```
 
@@ -52,9 +52,9 @@ of the same expression with the (current) default values explicitly specified:
 
 ```Smalltalk
 Metacello new
-  configuration: 'Seaside30';
+  configuration: 'Seaside3';
   version: #stable;
-  ss3: 'MetaRepoForPharo20';
+  smalltalkhubUser: 'Seaside' project: 'Seaside31';
   load.
 ```
 
@@ -64,9 +64,9 @@ full [repository description][3] as follows:
 
 ```Smalltalk
 Metacello new
-  configuration: 'Seaside30';
+  configuration: 'Seaside3';
   version: #stable;
-  repository: 'http://ss3.gemtalksystems.com/ss/MetaRepoForPharo20';
+  repository: 'http://smalltalkhub.com/mc/Seaside/Seaside31/main';
   load.
 ```
 
@@ -111,13 +111,13 @@ Monticello repositories. For example:
 ```Smalltalk
 Metacello new
   configuration: [:spec | spec name beginsWith: 'Seaside'];
-  ss3: 'MetaRepoForPharo20';
+  smalltalkhubUser: 'Seaside' project: 'Seaside31';
   list.
 ```
 
 lists the configurations whose names (sans the `ConfigurationOf`) begin
-with `Seaside` in the `MetaRepoForPharo20` in the
-[ss3](http://ss3.gemtalksystems.com/) repostory.
+with `Seaside` in the
+[smalltalk hub](http://smalltalkhub.com/mc/Seaside/Seaside31/main) repostory.
 
 ## Getting
 
@@ -137,7 +137,7 @@ configuration:
 
 ```Smalltalk
 Metacello image
-  configuration: 'Seaside30';
+  configuration: 'Seaside3';
   get.
 ```
 
@@ -179,7 +179,7 @@ upgrade your image with the following expression:
 
 ```Smalltalk
 Metacello image
-  configuration: 'Seaside30';
+  configuration: 'Seaside3';
   version: #stable;
   load.
 ```
@@ -224,7 +224,7 @@ need to `lock` the Seaside30 project:
 
 ```Smalltalk
 Metacello image
-  configuration: 'Seaside30';
+  configuration: 'Seaside3';
   lock.
 ```
 
@@ -236,8 +236,8 @@ locked:
 
 ```Smalltalk
 Metacello image
-  configuration: 'Seaside30';
-  version: '3.0.5';
+  configuration: 'Seaside3';
+  version: '3.1.2';
   lock.
 ```
 
@@ -289,7 +289,7 @@ Metacello new
   configuration: 'SeasideRest';
   version: #stable;
   onLock: [:ex :existing :new | 
-    existing baseName = 'Seaside30'
+    existing baseName = 'Seaside31'
       ifTrue: [ ex break ].
     ex pass ];
   load.
@@ -307,8 +307,8 @@ If you want to explicitly upgrade a locked project, you can use the
 
  ```Smalltalk
 Metacello image
-  configuration: 'Seaside30';
-  version: '3.0.6';
+  configuration: 'Seaside3';
+  version: '3.1.2';
   lock.
 ```
 
@@ -398,7 +398,8 @@ upgrades, you can use `onUpgrade:`:
 ```Smalltalk
 Metacello image
   configuration: 'SeasideRest';
-  version: #'stable';
+  version: #'stable';:w
+
   onUpgrade: [:ex :existing :new |
     existing baseName = 'Seaside30'
       ifTrue: [ 
@@ -442,7 +443,7 @@ Metacello image
 Metacello will silently ignore the downgrade request for Seaside and
 leave Seaside 3.0.9 installed in the image.
 
-If you want to have Seaside 3.0.9 downgraded then you used the `onDowngrade:` block:
+If you want to have Seaside 3.0.9 downgraded then you used the `onDowngrade:` block
 
 ```Smalltalk
 Metacello image

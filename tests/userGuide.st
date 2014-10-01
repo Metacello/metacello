@@ -71,8 +71,13 @@ Transcript cr; show: '---Start running documentation script..'.
 
 Transcript cr; show: '---get (default)'.
 Metacello new
-  configuration: 'Seaside30';
+  configuration: 'Seaside3';
   get.
+
+Transcript cr; show: '---load (default)'.
+Metacello new
+  configuration: 'Seaside3';
+  load.
 
 Transcript cr; show: '---get'.
 Metacello new
@@ -82,7 +87,7 @@ Metacello new
 
 Transcript cr; show: '---load'.
 Metacello registry
-  configuration: 'Seaside30';
+  configuration: 'Seaside3';
   version: #stable;
   onWarning: [:ex | 
     Transcript cr; show: 'WARNING: ', ex description.
@@ -90,28 +95,67 @@ Metacello registry
   onUpgrade: [:ex | ex allow ];
   load.
 
-Transcript cr; show: '---list'.
+Transcript cr; show: '---list (1)'.
+Metacello image
+  configuration: [:spec | true ];
+  list.
+
+Transcript cr; show: '---list (2)'.
 Metacello registry
-  configuration: #('Seaside30' 'MetacelloPreview');
+  configuration: #('Seaside3' 'MetacelloPreview');
   list.
 
 Metacello new
   configuration: [:spec | spec name beginsWith: 'Seaside'];
-  smalltalkhubUser: 'Seaside' project: 'Seaside30';
+  smalltalkhubUser: 'Seaside' project: 'Seaside31';
   list.
+
+Transcript cr; show: '---get (image)'.
+Metacello image
+  configuration: 'Seaside3';
+  get.
+
+Transcript cr; show: '---get (REST)'.
+Metacello image
+  configuration: 'SeasideRest';
+  repository: 'http://smalltalkhub.com/mc/Seaside/MetacelloConfigurations/main';
+  get.
+
+Transcript cr; show: '---get (image 2)'.
+Metacello image
+  configuration: 'Seaside3';
+  smalltalkhubUser: 'Seaside' project: 'MetacelloConfigurations';
+  get.
 
 Transcript cr; show: '---lock'.
 Metacello image
-  configuration: 'Seaside30';
+  configuration: 'Seaside3';
   version: #'stable';
   lock.
 
+Transcript cr; show: '---lock (3.1.2)'.
+Metacello image
+  configuration: 'Seaside3';
+  version: '3.1.2';
+  lock.
+
+Transcript cr; show: '---load (REST onlock)'.
 Metacello new
   configuration: 'SeasideRest';
-  onWarning: [:ex | 
-    Transcript cr; show: 'Warning: ', ex description.
-    ex resume ];
-  repository: 'http://smalltalkhub.com/mc/Seaside/MetacelloConfigurations/main';
+  version: #stable;
+  onLock: [:ex :existing :new | 
+    Transcript cr; show: 'Locked project: ', existing projectName printString.
+    ex pass ];
+  load.
+
+Transcript cr; show: '---load (REST breaklock)'.
+Metacello new
+  configuration: 'SeasideRest';
+  version: #stable;
+  onLock: [:ex :existing :new | 
+    existing baseName = 'Seaside31'
+      ifTrue: [ ex break ].
+    ex pass ];
   load.
 
 TravisCISuccessNoFailure
