@@ -299,8 +299,8 @@ use the message `honor` if you want to honor the lock and not load the new versi
 ### Upgrading a locked project
 
 If you want to explicitly upgrade a locked project, you can use the
-`load` command. The following command will upgrade Seaside30 to version
-3.0.6 even if it is locked:
+`load` command. The following command will upgrade Seaside3 to version
+3.1.2 even if it is locked:
 
  ```Smalltalk
 Metacello image
