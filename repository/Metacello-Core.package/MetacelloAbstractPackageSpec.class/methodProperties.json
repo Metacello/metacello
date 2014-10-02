@@ -25,6 +25,7 @@
 		"removeFromMetacelloPackages:" : "dkh 6/5/2012 19:01:24",
 		"requires" : "dkh 6/5/2012 19:01:24",
 		"requires:" : "dkh 6/5/2012 19:01:24",
+		"requiresForPackageOrdering:" : "dkh 10/01/2014 17:05",
 		"setAnswers:" : "dkh 6/5/2012 19:01:24",
 		"setIncludes:" : "dkh 6/5/2012 19:01:24",
 		"setRequires:" : "dkh 6/5/2012 19:01:24" } }

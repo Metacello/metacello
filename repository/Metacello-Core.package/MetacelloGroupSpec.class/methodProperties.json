@@ -6,4 +6,5 @@
 		"configMethodCascadeOn:member:last:indent:" : "dkh 6/5/2012 19:01:24",
 		"configMethodOn:indent:" : "dkh 6/5/2012 19:01:24",
 		"projectDo:packageDo:groupDo:" : "dkh 6/5/2012 19:01:24",
-		"requires:" : "dkh 6/5/2012 19:01:24" } }
+		"requires:" : "dkh 6/5/2012 19:01:24",
+		"requiresForPackageOrdering:" : "dkh 10/01/2014 17:19" } }

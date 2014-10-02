@@ -1,10 +1,10 @@
 *metacello-mc
-resolveToPackagesIn: aVersionSpec visited: visited
+resolveToPackagesIn: aVersionSpec andProjects: andProjectsBool visited: visited
   | packages |
   packages := Dictionary new.
   self
     resolveToPackagesIn: aVersionSpec
-    andProjects: false
+    andProjects: andProjectsBool
     into: packages
     visited: visited.
   ^ packages values asOrderedCollection
