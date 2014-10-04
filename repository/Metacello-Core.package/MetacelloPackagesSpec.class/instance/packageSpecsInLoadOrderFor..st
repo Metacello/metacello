@@ -6,16 +6,20 @@ packageSpecsInLoadOrderFor: aVersionSpec
   map := self map.
   orderedPackageSpecs := OrderedCollection new.
   groupSpecs := Set new.
-  map values
-    do: [ :spec | 
-      spec
-        projectDo: [ :prjSpec | 
-          "specification order is the default order"
-          orderedPackageSpecs add: prjSpec ]
-        packageDo: [ :pkgSpec | 
-          "specification order is the default order"
-          orderedPackageSpecs add: pkgSpec ]
-        groupDo: [ :groupSpec | groupSpecs add: groupSpec ] ].
+  self list
+    do: [ :member | 
+      | spec |
+      spec := map at: member name ifAbsent: [  ].
+      (spec == nil or: [ orderedPackageSpecs includes: spec ])
+        ifFalse: [ 
+          spec
+            projectDo: [ :prjSpec | 
+              "specification order is the default order"
+              orderedPackageSpecs add: prjSpec ]
+            packageDo: [ :pkgSpec | 
+              "specification order is the default order"
+              orderedPackageSpecs add: pkgSpec ]
+            groupDo: [ :groupSpec | groupSpecs add: groupSpec ] ] ].
   orderedPackageSpecs isEmpty
     ifTrue: [ ^ orderedPackageSpecs , groupSpecs asOrderedCollection ].
   moved := true.

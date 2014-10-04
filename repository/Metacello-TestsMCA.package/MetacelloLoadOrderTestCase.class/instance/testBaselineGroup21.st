@@ -32,6 +32,6 @@ testBaselineGroup21
         (loadedPackages indexOf: 'Example-TestsUI')
             > (loadedPackages indexOf: 'Example-Sub2');
     assert:
-        (loadedPackages indexOf: 'Example-Sub2')
-            > (loadedPackages indexOf: 'Example-UI');
+        (loadedPackages indexOf: 'Example-UI')
+            > (loadedPackages indexOf: 'Example-CoreB');
     yourself
