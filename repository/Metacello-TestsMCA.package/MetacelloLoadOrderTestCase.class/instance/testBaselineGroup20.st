@@ -1,6 +1,6 @@
 testing
-testBaseline10
+testBaselineGroup20
   | project loader |
   project := self class new project.
-  loader := project load: '1.0-baseline'.
+  loader := project load: '2.0-baseline'.
   self baseline10Group20: loader

@@ -1,5 +1,5 @@
 private
-requiresForPackageOrdering: aVersionSpec
+requiresSpecsForPackageOrdering: aVersionSpec
   "expand the names in the group to a package or project"
 
   | packageOrProjectSpecs |

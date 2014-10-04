@@ -1,20 +1,27 @@
 accessing
 packageSpecsInLoadOrderFor: aVersionSpec
-  | orderedSpecs moved lastMovedSpecs count terminationLimit map specsWithIncludes firstTime |
-  "specification order is the default order"
+  "order only the packageSpecs and projectSpecs. groupSpec order does not matter"
+
+  | orderedPackageSpecs groupSpecs moved lastMovedSpecs count terminationLimit map specsWithIncludes firstTime groupLoops |
   map := self map.
-  orderedSpecs := OrderedCollection new.
-  self list
-    do: [ :member | 
-      | spec |
-      spec := map at: member name ifAbsent: [  ].
-      (spec == nil or: [ orderedSpecs includes: spec ])
-        ifFalse: [ orderedSpecs add: spec ] ].
-  orderedSpecs isEmpty
-    ifTrue: [ ^ orderedSpecs ].
+  orderedPackageSpecs := OrderedCollection new.
+  groupSpecs := Set new.
+  map values
+    do: [ :spec | 
+      spec
+        projectDo: [ :prjSpec | 
+          "specification order is the default order"
+          orderedPackageSpecs add: prjSpec ]
+        packageDo: [ :pkgSpec | 
+          "specification order is the default order"
+          orderedPackageSpecs add: pkgSpec ]
+        groupDo: [ :groupSpec | groupSpecs add: groupSpec ] ].
+  orderedPackageSpecs isEmpty
+    ifTrue: [ ^ orderedPackageSpecs , groupSpecs asOrderedCollection ].
   moved := true.
   count := 0.
-  terminationLimit := orderedSpecs size * 2.
+  terminationLimit := orderedPackageSpecs size * 2.
+  groupLoops := IdentitySet new.
   [ moved ]
     whileTrue: [ 
       count := count + 1.
@@ -23,14 +30,19 @@ packageSpecsInLoadOrderFor: aVersionSpec
           "Cheap termination hack - an APPARENT loop"
           self error: 'Apparent loop in before/after dependency definitions' ].
       moved := false.
-      orderedSpecs
+      orderedPackageSpecs copy
         do: [ :packageSpec | 
           moved := moved
-            or: [ self sortPackageSpecs: orderedSpecs packageSpec: packageSpec for: aVersionSpec ] ] ].
+            or: [ 
+              self
+                sortPackageSpecs: orderedPackageSpecs
+                packageSpec: packageSpec
+                groupLoops: groupLoops
+                for: aVersionSpec ] ] ].
   lastMovedSpecs := Set new.
   moved := true.
   count := 0.
-  specsWithIncludes := orderedSpecs
+  specsWithIncludes := orderedPackageSpecs
     select: [ :pkgSpec | pkgSpec includesForPackageOrdering isEmpty not ].
   firstTime := true.
   [ moved ]
@@ -48,7 +60,7 @@ packageSpecsInLoadOrderFor: aVersionSpec
           result
             addAll:
               (self
-                applyIncludesTo: orderedSpecs
+                applyIncludesTo: orderedPackageSpecs
                 for: packageSpec
                 firstTime: firstTime
                 for: aVersionSpec) ].
@@ -61,4 +73,4 @@ packageSpecsInLoadOrderFor: aVersionSpec
         ifFalse: [ moved := true ].
       lastMovedSpecs := result.
       firstTime := false ].
-  ^ orderedSpecs
+  ^ orderedPackageSpecs , groupSpecs asOrderedCollection
