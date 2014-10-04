@@ -26,7 +26,34 @@ sortPackageSpecs: orderedSpecs packageSpec: packageSpec groupLoops: groupLoops f
                     ,
                       ' requires a group that includes itself. If you resume, the group loop will be ignored and details will be written to the Transcript.'.
               groupLoopDetected := true.
-              groupLoops add: packageSpec ].
+              groupLoops add: packageSpec.
+              Transcript
+                cr;
+                show: 'Package: ' , packageSpec name printString;
+                cr;
+                tab;
+                show: 'Raw Requires:'.
+              packageSpec requires
+                do: [ :each | 
+                  Transcript
+                    cr;
+                    tab;
+                    tab;
+                    show: each name ].
+              Transcript
+                cr;
+                show:
+                    'Package: ' , packageSpec name printString , ' has a group loop:';
+                cr;
+                tab;
+                show: 'Expanded Requires:'.
+              targetSpecNames
+                do: [ :each | 
+                  Transcript
+                    cr;
+                    tab;
+                    tab;
+                    show: each name ] ].
           movePackage := movePackage or: [ packageIndex < targetIndex ].
           false
             ifTrue: [ 
