@@ -8,7 +8,7 @@ applyIncludesTo: orderedSpecs for: pkgSpec firstTime: firstTime for: aVersionSpe
       | includedSpecName spec |
       includedSpecName := includedSpec name.
       spec := orderedSpecs
-        detect: [ :spec | spec name = includedSpecName ]
+        detect: [ :aSpec | aSpec name = includedSpecName ]
         ifNone: [  ].
       (self
         slideIn: orderedSpecs
