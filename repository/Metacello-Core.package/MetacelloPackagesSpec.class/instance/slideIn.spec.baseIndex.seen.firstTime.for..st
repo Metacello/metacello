@@ -1,6 +1,6 @@
 accessing
 slideIn: orderedSpecs spec: targetSpec baseIndex: baseIndex seen: seen firstTime: firstTime for: aVersionSpec
-  | targetIndex requiredSpecs targetRequires targetRequiresIndexes minIndex baseSpec required |
+  | targetIndex requiredSpecNames targetRequires targetRequiresIndexes minIndex baseSpec required |
   (seen includes: targetSpec)
     ifTrue: [ ^ false ].
   targetIndex := orderedSpecs indexOf: targetSpec.
@@ -11,15 +11,17 @@ slideIn: orderedSpecs spec: targetSpec baseIndex: baseIndex seen: seen firstTime
   baseIndex + 1 to: targetIndex - 1 do: [ :index | 
     | spec |
     spec := orderedSpecs at: index.
-    ((spec requiredSpecNamesForPackageOrdering: aVersionSpec) includes: baseSpec)
+    ((spec requiredSpecNamesForPackageOrdering: aVersionSpec)
+      includes: baseSpec name)
       ifTrue: [ required := true ] ].
   firstTime
     ifFalse: [ 
       required
         ifFalse: [ ^ false ] ].
-  requiredSpecs := targetSpec requiredSpecNamesForPackageOrdering: aVersionSpec.
+  requiredSpecNames := targetSpec
+    requiredSpecNamesForPackageOrdering: aVersionSpec.
   targetRequires := orderedSpecs
-    select: [ :spec | requiredSpecs includes: spec ].
+    select: [ :spec | requiredSpecNames includes: spec name ].
   targetRequiresIndexes := targetRequires
     collect: [ :spec | orderedSpecs indexOf: spec ].
   targetRequiresIndexes add: baseIndex.

@@ -54,7 +54,7 @@ sortPackageSpecs: orderedSpecs packageSpec: packageSpec groupLoops: groupLoops f
                     tab;
                     tab;
                     show: each name ] ].
-          movePackage := movePackage or: [ packageIndex < targetIndex ].
+          movePackage := movePackage or: [ packageIndex <= targetIndex ].
           false
             ifTrue: [ 
               "use for debugging non-obvious reference loops"
