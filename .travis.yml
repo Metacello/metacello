@@ -20,7 +20,7 @@ env:
 #  Squeak-Trunk
 
    - ST=Pharo-3.0 LoadList="'default'" TRAVIS_SCRIPT=userGuide.st 
-#   - ST=GemStone-3.2.2 LoadList="'default'" TRAVIS_SCRIPT=userGuide.st # until https://github.com/GsDevKit/Seaside31/issues/51 fixed (a Seaside3.1 issue)
+   - ST=GemStone-3.2.2 LoadList="'default'" TRAVIS_SCRIPT=userGuide.st
 
 #   - ST=Pharo-2.0 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
 #   - ST=Pharo-2.0 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
@@ -41,11 +41,11 @@ env:
 #   - ST=Pharo-3.0 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st 
 ##   - ST=Squeak-4.3 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
 ##   - ST=Squeak-4.3 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
-#   - ST=Squeak-4.4 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
-#   - ST=Squeak-4.4 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+   - ST=Squeak-4.4 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+   - ST=Squeak-4.4 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
 #
-   - ST=Squeak-Trunk LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
-   - ST=Squeak-Trunk LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+#   - ST=Squeak-Trunk LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+#   - ST=Squeak-Trunk LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
 #
 ##   - ST=GemStone-2.4.4.1 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
 ##   - ST=GemStone-2.4.4.1 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
