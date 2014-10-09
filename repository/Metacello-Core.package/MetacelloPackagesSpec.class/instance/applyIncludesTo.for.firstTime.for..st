@@ -1,6 +1,6 @@
 accessing
 applyIncludesTo: orderedSpecs for: pkgSpec firstTime: firstTime for: aVersionSpec
-  | movedSpecs baseIndex includedSpec result |
+  | movedSpecs baseIndex |
   movedSpecs := Set new.
   baseIndex := orderedSpecs indexOf: pkgSpec.
   (pkgSpec includeSpecNamesForPackageOrdering: aVersionSpec)
