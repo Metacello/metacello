@@ -105,33 +105,33 @@ Version conflicts are divided into two categories: [upgrade](#upgrade) and [down
 
 ####Upgrade
 When a later version of an already loaded project is indirecty loaded, a **MetacelloAllowProjectUpgrade** exception is signaled.
-By default, upgrades are allowed. 
+By default, upgrades are allowed (`useIncoming`). 
 
-If you want to override the default behavior you can use the following expressions:
+If you want to override the default behavior you can use one the following messages:
 
-1. Disallow the upgrade of the Seaside3 project:
-
-  ```Smalltalk
-  Metacello new
-    configuration: 'Magritte3';
-    version: '3.1.4';
-    repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
-    disallowUpgrades: #('Seaside3');
-    load: 'Seaside'.
-  ```
-
-2. Dsallow upgrades for all projects:
+1. Disallow the upgrade of the Seaside3 project with the **#disallowUpgrades:** message:
 
   ```Smalltalk
   Metacello new
     configuration: 'Magritte3';
     version: '3.1.4';
     repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
-    disallowUpgrades;
+    onUpgradeUseLoaded: #('Seaside3');
     load: 'Seaside'.
   ```
 
-3. Access the underlying exception and the loaded and incoming Metacello regitrations:
+2. Dsallow upgrades for all projects with the **#disallowUpgrades** message:
+
+  ```Smalltalk
+  Metacello new
+    configuration: 'Magritte3';
+    version: '3.1.4';
+    repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
+    onUpgradeUseLoaded;
+    load: 'Seaside'.
+  ```
+
+3. Access the underlying exception and the loaded and incoming Metacello regitrations with the **#onUpgrade:** message:
 
   ```Smalltalk
   Metacello new
@@ -140,54 +140,113 @@ If you want to override the default behavior you can use the following expressio
     repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
     onUpgrade: [:ex :loaded :incoming |
       incoming baseName = 'Seaside3'
-        ifTrue: [ ex disallow ]
-        ifFalse: [ ex allow ];
+        ifTrue: [ ex useLoaded ]
+        ifFalse: [ 
+          "default"
+          ex useIncoming ];
     load: 'Seaside'.
   ```
 
 ####Downgrade
-When an earlier version of an already loaded project is implicitly requested, a **MetacelloAllowProjectDowngrade** exception is signaled.
-By default, downgrades are disallowed. 
+When an earlier version of an already loaded project is indirectly loaded, a **MetacelloAllowProjectDowngrade** exception is signaled.
+By default, downgrades are disallowed (`useLoaded`). 
 
-Let's assume that you have Seaside 3.1.5 already loaded when you load Magritte-Seaside and we'll assume that Magritte-Seaside depends upon Seaside 3.1.3. 
-This time, we'll assume that you do want to downgrade to Seaside 3.1.3.
-The following expression will allow a downgrade of Seaside:
+If you want to override the default behavior you can use one of the following expressions:
 
-```Smalltalk
-Metacello new
-  configuration: 'Magritte3';
-  version: '3.1.4';
-  repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
-  allowDowngrades: #('Seaside3');
-  load: 'Seaside'.
-```
+1. Allow a downgrade of Seaside3 project with the **allowDowngrades:** message:
 
-If you want to allow downgrades for all projects, use the following expression:
+  ```Smalltalk
+  Metacello new
+    configuration: 'Magritte3';
+    version: '3.1.4';
+    repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
+    onDowngradeUseIncoming: #('Seaside3');
+    load: 'Seaside'.
+  ```
 
-```Smalltalk
-Metacello new
-  configuration: 'Magritte3';
-  version: '3.1.4';
-  repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
-  allowUpgrades;
-  load: 'Seaside'.
-```
+2. Allow downgrades for all projects with the **allowDowngrades** message:
 
-If you want access to the underlying exception and Metacello regitrations, use the following expression:
+  ```Smalltalk
+  Metacello new
+    configuration: 'Magritte3';
+    version: '3.1.4';
+    repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
+    onDowngradeUseIncoming;
+    load: 'Seaside'.
+  ```
 
-```Smalltalk
-Metacello new
-  configuration: 'Magritte3';
-  version: '3.1.4';
-  repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
-  onDowngrade: [:ex :loaded :incoming |
-    incoming baseName = 'Seaside3'
-      ifTrue: [ ex allow ]
-      ifFalse: [ ex disallow ];
-  load: 'Seaside'.
-```
+3. Access the underlying exception and the loaded and incoming Metacello regitrations with the **#onDowngrade:** message:
+
+  ```Smalltalk
+  Metacello new
+    configuration: 'Magritte3';
+    version: '3.1.4';
+    repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
+    onDowngrade: [:ex :loaded :incoming |
+      incoming baseName = 'Seaside3'
+        ifTrue: [ ex useIncoming ]
+        ifFalse: [ 
+          "default"
+          ex useLoaded ];
+    load: 'Seaside'.
+  ```
 
 ####Conflicts
+When the type of project (configuration or baseline) or repository for an already loaded project is changed while doing an indirect load, a **MetacelloAllowConflictingProjectUpgrade** exception is signaled.
+By default, a **MetacelloConflictingProjectError** is signalled if the **MetacelloAllowConflictingProjectUpgrade** exception is unhandled.
+As a consequence, you must decide how you want to have the conflict resolved: 
+
+* use the incoming project specification
+* use the loaded project specification
+
+1. The **onConflictUseIncoming:useLoaded:** message can be used to specify the names of the projects for which you want to use the incoming or loaded project specifications:
+
+  ```Smalltalk
+  Metacello new
+    configuration: 'Magritte3';
+    version: '3.1.4';
+    repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
+    onConflictUseIncoming: #('Seaside3') useLoaded: #('Grease');
+    load: 'Seaside'.
+  ```
+
+2. Use the incoming project specifications for all projects with the **onConflictsUseIncoming** message:
+
+  ```Smalltalk
+  Metacello new
+    configuration: 'Magritte3';
+    version: '3.1.4';
+    repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
+    onConflictsUseIncoming;
+    load: 'Seaside'.
+  ```
+
+3. Use the loaded project specifications for all projects with the **onConflictsUseLoaded** message:
+
+  ```Smalltalk
+  Metacello new
+    configuration: 'Magritte3';
+    version: '3.1.4';
+    repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
+    onConflictsUseLoaded;
+    load: 'Seaside'.
+  ```
+
+4. Access the underlying exception and the loaded and incoming Metacello regitrations with the **#onConflict:** message:
+
+  ```Smalltalk
+  Metacello new
+    configuration: 'Magritte3';
+    version: '3.1.4';
+    repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
+    onConflict: [:ex :loaded :incoming |
+      incoming baseName = 'Seaside3'
+        ifTrue: [ ex useIncoming ]
+        ifFalse: [ 
+          "default - throw error"
+          ex pass ];
+    load: 'Seaside'.
+  ```
 
 ##Listing
 
