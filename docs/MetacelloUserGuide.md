@@ -71,10 +71,10 @@ Metacello new
 ```
 
 ###Load Conflicts
-Metacello always obeys direct load requests for projects.
+Load conflicts occur if any one of the load attributes is changed when doing an *indirect* load of a project that has already been loaded into your image.
 
-####Direct loads
-Let's say that you've directly loaded version '3.1.1' of Seaside:
+A *direct* load is a project load occurs when the project is named in the Metacello load expression.
+In the following expression the version 3.1.1 of Seaside is *directly* loaded:
 
 ```Smalltalk
 Metacello new
@@ -84,96 +84,68 @@ Metacello new
   load.
 ```
 
-and then you decide to directly load a different version either an upgrade to version '3.1.2':
+An *indirect* load is a project load that occurs as a result of a project dependency.
+In the following expression a version (3.1.3 as of this writing) of Seaside is *indirectly* loaded:
 
 ```Smalltalk
 Metacello new
-  configuration: 'Seaside3';
-  version: '3.1.2';
-  repository: 'http://smalltalkhub.com/mc/Seaside/Seaside31/main';
-  load.
+  configuration: 'Magritte3';
+  version: '3.1.4';
+  repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
+  load: 'Seaside'.
 ```
 
-or a downgrade to version '3.1.0':
+Load attributes that count towards conflicts are:
 
-```Smalltalk
-Metacello new
-  configuration: 'Seaside3';
-  version: '3.1.0';
-  repository: 'http://smalltalkhub.com/mc/Seaside/Seaside31/main';
-  load.
-```
+* configuration versus baseline
+* version
+* repository
 
-If you decide to directly load Seaside using a conflicting repository:
+Version conflicts are divided into two categories: [upgrade](#upgrade) and [downgrade](#downgrade). 
 
-```Smalltalk
-Metacello new
-  configuration: 'Seaside3';
-  version: '3.1.0';
-  repository: '/home/dkh/monticello/Seaside3';
-  load.
-```
-
-or directly load a baseline on top of a configuration:
-
-```Smalltalk
-Metacello new
-  baseline: 'Seaside3';
-  repository: 'github://GsDevKit/Seaside31:v3.1.3-gs/repository';
-  load.
-```
-
-####Indirect loads 
-
-Load conflicts occur when an indirect load (i.e., a load initiated by a dependent pro
-
-an implicit load for a project changes the repository
-
-However, if you load a project indirectly (i.e., the project is referenced from a project that you are loading) then Metacello will signal exceptions for version changes (downgrade or upgrace) and configuration changes (baseline to configuration, configuration to baseline and repository changes).
-
-####Upgrades
-When a later version of an already loaded project is indirecty requested, a **MetacelloAllowProjectUpgrade** exception is signaled.
+####Upgrade
+When a later version of an already loaded project is indirecty loaded, a **MetacelloAllowProjectUpgrade** exception is signaled.
 By default, upgrades are allowed. 
 
-Let's say that you already have Seaside 3.1.1 loaded and you are now loading Magritte-Seaside and we'll assume that Magritte-Seaside depends upon Seaside 3.1.3. 
-Furthermore we'll assume that you don't want to upgrade to Seaside 3.1.3 just yet.
-The following expression will disallow an upgrade of Seaside:
+If you want to override the default behavior you can use the following expressions:
 
-```Smalltalk
-Metacello new
-  configuration: 'Magritte3';
-  version: '3.1.4';
-  repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
-  disallowUpgrades: #('Seaside3');
-  load: 'Seaside'.
-```
+1. Disallow the upgrade of the Seaside3 project:
 
-If you want to disallow upgrades for all projects, use the following expression:
+  ```Smalltalk
+  Metacello new
+    configuration: 'Magritte3';
+    version: '3.1.4';
+    repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
+    disallowUpgrades: #('Seaside3');
+    load: 'Seaside'.
+  ```
 
-```Smalltalk
-Metacello new
-  configuration: 'Magritte3';
-  version: '3.1.4';
-  repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
-  disallowUpgrades;
-  load: 'Seaside'.
-```
+2. Dsallow upgrades for all projects:
 
-If you want access to the underlying exception and Metacello regitrations, use the following expression:
+  ```Smalltalk
+  Metacello new
+    configuration: 'Magritte3';
+    version: '3.1.4';
+    repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
+    disallowUpgrades;
+    load: 'Seaside'.
+  ```
 
-```Smalltalk
-Metacello new
-  configuration: 'Magritte3';
-  version: '3.1.4';
-  repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
-  onUpgrade: [:ex :loaded :incoming |
-    incoming baseName = 'Seaside3'
-      ifTrue: [ ex disallow ]
-      ifFalse: [ ex allow ];
-  load: 'Seaside'.
-```
+3. Access the underlying exception and the loaded and incoming Metacello regitrations:
 
-####Downgrades
+  ```Smalltalk
+  Metacello new
+    configuration: 'Magritte3';
+    version: '3.1.4';
+    repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
+    onUpgrade: [:ex :loaded :incoming |
+      incoming baseName = 'Seaside3'
+        ifTrue: [ ex disallow ]
+        ifFalse: [ ex allow ];
+    load: 'Seaside'.
+  ```
+
+####Downgrade
 When an earlier version of an already loaded project is implicitly requested, a **MetacelloAllowProjectDowngrade** exception is signaled.
 By default, downgrades are disallowed. 
 
