@@ -217,7 +217,7 @@ As a consequence, you must decide how you want to have the conflict resolved:
     configuration: 'Magritte3';
     version: '3.1.4';
     repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
-    onConflictsUseIncoming;
+    onConflictUseIncoming;
     load: 'Seaside'.
   ```
 
@@ -228,7 +228,7 @@ As a consequence, you must decide how you want to have the conflict resolved:
     configuration: 'Magritte3';
     version: '3.1.4';
     repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
-    onConflictsUseLoaded;
+    onConflictUseLoaded;
     load: 'Seaside'.
   ```
 
