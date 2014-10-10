@@ -9,10 +9,10 @@ testConfigurationConflict10
     version: '1.0.0';
     repository: 'filetree://' , configurationDirectory fullName;
     silently;
-    onConflict: [ :ex | ex useExisting ];
+    onConflict: [ :ex | ex useLoaded ];
     load ]
     on: MetacelloAllowProjectUpgrade
-    do: [ :ex | ex useExisting ].
+    do: [ :ex | ex useLoaded ].
   self
     validateExpectedConfigurationClassName: 'ConfigurationOfConflict'
     expectedConfigurationVersion: '1.0.0'

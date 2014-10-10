@@ -9,5 +9,5 @@ testConfigurationConflictIssue261
     version: '1.0.0';
     repository: 'filetree://' , configurationDirectory fullName;
     silently;
-    onConflict: [ :ex | ex useExisting ];
+    onConflict: [ :ex | ex useLoaded ];
     load
