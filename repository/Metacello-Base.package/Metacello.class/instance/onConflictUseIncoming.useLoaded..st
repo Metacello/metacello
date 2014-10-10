@@ -1,10 +1,10 @@
 api options
-onConflictUseIncoming: incoming useLoaded: loaded
+onConflictUseIncoming: incomingProjects useLoaded: loadedProjects
   self
     onConflict: [ :ex :loaded :incoming | 
-      (incoming includes: incoming baseName)
+      (incomingProjects includes: incoming baseName)
         ifTrue: [ ex useIncoming ]
         ifFalse: [ 
-          (loaded includes: incoming baseName)
+          (loadedProjects includes: incoming baseName)
             ifTrue: [ ex useLoaded ] ].
       ex pass ]
