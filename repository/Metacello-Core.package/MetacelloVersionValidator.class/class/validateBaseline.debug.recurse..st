@@ -4,4 +4,4 @@ validateBaseline: baselineClass debug: debugList recurse: aBool
     configurationClass: baselineClass;
     debug: debugList;
     recurse: aBool;
-    yourself) validate
+    yourself) validateBaselineOf
