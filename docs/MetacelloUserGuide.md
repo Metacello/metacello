@@ -70,6 +70,153 @@ Metacello new
   load.
 ```
 
+###Load Conflicts
+Metacello always obeys direct load requests for projects.
+
+####Direct loads
+Let's say that you've directly loaded version '3.1.1' of Seaside:
+
+```Smalltalk
+Metacello new
+  configuration: 'Seaside3';
+  version: '3.1.1';
+  repository: 'http://smalltalkhub.com/mc/Seaside/Seaside31/main';
+  load.
+```
+
+and then you decide to directly load a different version either an upgrade to version '3.1.2':
+
+```Smalltalk
+Metacello new
+  configuration: 'Seaside3';
+  version: '3.1.2';
+  repository: 'http://smalltalkhub.com/mc/Seaside/Seaside31/main';
+  load.
+```
+
+or a downgrade to version '3.1.0':
+
+```Smalltalk
+Metacello new
+  configuration: 'Seaside3';
+  version: '3.1.0';
+  repository: 'http://smalltalkhub.com/mc/Seaside/Seaside31/main';
+  load.
+```
+
+If you decide to directly load Seaside using a conflicting repository:
+
+```Smalltalk
+Metacello new
+  configuration: 'Seaside3';
+  version: '3.1.0';
+  repository: '/home/dkh/monticello/Seaside3';
+  load.
+```
+
+or directly load a baseline on top of a configuration:
+
+```Smalltalk
+Metacello new
+  baseline: 'Seaside3';
+  repository: 'github://GsDevKit/Seaside31:v3.1.3-gs/repository';
+  load.
+```
+
+####Indirect loads 
+
+Load conflicts occur when an indirect load (i.e., a load initiated by a dependent pro
+
+an implicit load for a project changes the repository
+
+However, if you load a project indirectly (i.e., the project is referenced from a project that you are loading) then Metacello will signal exceptions for version changes (downgrade or upgrace) and configuration changes (baseline to configuration, configuration to baseline and repository changes).
+
+####Upgrades
+When a later version of an already loaded project is indirecty requested, a **MetacelloAllowProjectUpgrade** exception is signaled.
+By default, upgrades are allowed. 
+
+Let's say that you already have Seaside 3.1.1 loaded and you are now loading Magritte-Seaside and we'll assume that Magritte-Seaside depends upon Seaside 3.1.3. 
+Furthermore we'll assume that you don't want to upgrade to Seaside 3.1.3 just yet.
+The following expression will disallow an upgrade of Seaside:
+
+```Smalltalk
+Metacello new
+  configuration: 'Magritte3';
+  version: '3.1.4';
+  repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
+  disallowUpgrades: #('Seaside3');
+  load: 'Seaside'.
+```
+
+If you want to disallow upgrades for all projects, use the following expression:
+
+```Smalltalk
+Metacello new
+  configuration: 'Magritte3';
+  version: '3.1.4';
+  repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
+  disallowUpgrades;
+  load: 'Seaside'.
+```
+
+If you want access to the underlying exception and Metacello regitrations, use the following expression:
+
+```Smalltalk
+Metacello new
+  configuration: 'Magritte3';
+  version: '3.1.4';
+  repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
+  onUpgrade: [:ex :loaded :incoming |
+    incoming baseName = 'Seaside3'
+      ifTrue: [ ex disallow ]
+      ifFalse: [ ex allow ];
+  load: 'Seaside'.
+```
+
+####Downgrades
+When an earlier version of an already loaded project is implicitly requested, a **MetacelloAllowProjectDowngrade** exception is signaled.
+By default, downgrades are disallowed. 
+
+Let's assume that you have Seaside 3.1.5 already loaded when you load Magritte-Seaside and we'll assume that Magritte-Seaside depends upon Seaside 3.1.3. 
+This time, we'll assume that you do want to downgrade to Seaside 3.1.3.
+The following expression will allow a downgrade of Seaside:
+
+```Smalltalk
+Metacello new
+  configuration: 'Magritte3';
+  version: '3.1.4';
+  repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
+  allowDowngrades: #('Seaside3');
+  load: 'Seaside'.
+```
+
+If you want to allow downgrades for all projects, use the following expression:
+
+```Smalltalk
+Metacello new
+  configuration: 'Magritte3';
+  version: '3.1.4';
+  repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
+  allowUpgrades;
+  load: 'Seaside'.
+```
+
+If you want access to the underlying exception and Metacello regitrations, use the following expression:
+
+```Smalltalk
+Metacello new
+  configuration: 'Magritte3';
+  version: '3.1.4';
+  repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
+  onDowngrade: [:ex :loaded :incoming |
+    incoming baseName = 'Seaside3'
+      ifTrue: [ ex allow ]
+      ifFalse: [ ex disallow ];
+  load: 'Seaside'.
+```
+
+####Conflicts
+
 ##Listing
 
 Once you've loaded one or more projects into your image, you may want to
@@ -309,7 +456,7 @@ Metacello image
   lock.
 ```
 
-The newly loaded of the project will continue to be locked.
+The newly loaded version of the project will continue to be locked.
 
 [1]: MetacelloScriptingAPI.md
 [2]: http://www.lukas-renggli.ch/blog/gofer
