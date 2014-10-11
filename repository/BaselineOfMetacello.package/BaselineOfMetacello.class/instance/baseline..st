@@ -134,7 +134,6 @@ baseline: spec
           with: [ 
               spec
                 versionString: #'stable';
-                repository: 'http://www.squeaksource.com/MetacelloRepository';
                 repository: 'http://seaside.gemtalksystems.com/ss/metacello' ];
         yourself.
       spec
@@ -155,11 +154,13 @@ baseline: spec
     for: #'pharo1.x'
     do: [ 
       spec
-        package: 'Metacello-Platform'
-        with: [ 
-          spec
-            file: 'Metacello-Platform.pharo';
-            requires: #('OSProcess') ] ].
+       configuration: 'OSProcess'
+          with: [ spec repository: 'http://www.squeaksource.com/MetacelloRepository' ];
+       package: 'Metacello-Platform'
+          with: [ 
+            spec
+              file: 'Metacello-Platform.pharo';
+              requires: #('OSProcess') ] ].
   spec
     for: #'pharo1.1.x'
     do: [ 
