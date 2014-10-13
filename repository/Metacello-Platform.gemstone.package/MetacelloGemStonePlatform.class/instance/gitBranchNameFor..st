@@ -5,4 +5,4 @@ gitBranchNameFor: gitPath
   | command result |
   command := 'cd ' , gitPath , '; git rev-parse --abbrev-ref HEAD'.
   result := System performOnServer: command.
-  ^ result trimBoth
+  ^ result trimWhiteSpace
