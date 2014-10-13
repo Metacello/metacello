@@ -46,9 +46,9 @@ env:
 #
    - ST=Squeak-Trunk LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
    - ST=Squeak-Trunk LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
-#
-##   - ST=GemStone-2.4.4.1 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
-##   - ST=GemStone-2.4.4.1 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+
+   - ST=GemStone-2.4.4.1 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+   - ST=GemStone-2.4.4.1 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
 ##   - ST=GemStone-2.4.4.7 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
 ##   - ST=GemStone-2.4.4.7 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
 ##   - ST=GemStone-2.4.5 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
