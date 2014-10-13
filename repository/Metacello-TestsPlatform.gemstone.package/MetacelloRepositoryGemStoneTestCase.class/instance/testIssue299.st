@@ -4,4 +4,4 @@ testIssue299
 
   | str |
   str := 'abcdefg'.
-  self asser: str trimWhiteSpace equals: str
+  self assert: str trimWhiteSpace equals: str
