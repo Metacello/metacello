@@ -5,6 +5,8 @@
 		"tearDownPackageList" : "dkh 7/20/2012 16:37",
 		"testBasicBaselineLock" : "dkh 09/19/2014 11:26",
 		"testBasicBaselineLockNLockedProjectBreak" : "dkh 09/19/2014 11:25",
+		"testBasicBaselineLockNLockedProjectBreakA" : "dkh 10/13/2014 09:34",
+		"testBasicBaselineLockNLockedProjectBreakB" : "dkh 10/13/2014 09:34",
 		"testBasicBaselineLockNLockedProjectEnforce" : "dkh 09/19/2014 11:29",
 		"testBasicBaselineLockNLockedProjectWarning" : "dkh 09/19/2014 11:31",
 		"testBasicBaselineLockNUnlockNload" : "dkh 09/19/2014 11:38",
