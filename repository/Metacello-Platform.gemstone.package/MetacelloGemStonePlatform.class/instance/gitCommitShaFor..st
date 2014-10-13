@@ -7,4 +7,4 @@ gitCommitShaFor: gitPath
   result := System performOnServer: command.
   (result beginsWith: 'fatal:')
     ifTrue: [ ^ nil ].
-  ^ result trimBoth
+  ^ result trimWhiteSpace

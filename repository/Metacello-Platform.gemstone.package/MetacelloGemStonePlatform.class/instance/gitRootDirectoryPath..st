@@ -7,4 +7,4 @@ gitRootDirectoryPath: directoryPath
     performOnServer: 'cd ' , directoryPath , '; git rev-parse --show-toplevel'.
   (gitPath beginsWith: 'fatal:')
     ifTrue: [ ^ self error: 'not a git directory' ].
-  ^ gitPath trimBoth
+  ^ gitPath trimWhiteSpace
