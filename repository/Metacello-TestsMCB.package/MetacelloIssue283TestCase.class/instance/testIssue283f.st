@@ -1,5 +1,7 @@
 tests
 testIssue283f
+  "using Metacello Scripting API, the configuration is not auto-loaded"
+
   "https://github.com/dalehenrich/metacello-work/issues/283"
 
   | project wc |
