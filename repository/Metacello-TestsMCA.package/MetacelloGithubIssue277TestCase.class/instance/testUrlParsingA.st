@@ -1,0 +1,49 @@
+tests
+testUrlParsingA
+  "only have to use github://, since url parsing code is currently identical between bitbucket and github"
+
+  {{'github://project/user:/repository'.
+  'github://project/user:master/repository'.
+  'project/user'.
+  'master'.
+  'repository'}.
+  {'github://project/user:/repository/'.
+  'github://project/user:master/repository/'.
+  'project/user'.
+  'master'.
+  'repository/'}.
+  {'github://project/user:/repository/with/long/path/'.
+  'github://project/user:master/repository/with/long/path/'.
+  'project/user'.
+  'master'.
+  'repository/with/long/path/'}.
+  {'github://project/user:master/repository'.
+  'github://project/user:master/repository'.
+  'project/user'.
+  'master'.
+  'repository'}.
+  {'github://project/user:master'.
+  'github://project/user:master'.
+  'project/user'.
+  'master'.
+  ''}.
+  {'github://project/user:master/'.
+  'github://project/user:master'.
+  'project/user'.
+  'master'.
+  ''}.
+  {'github://project/user:/'.
+  'github://project/user:master'.
+  'project/user'.
+  'master'.
+  ''}.
+  {'github://project/user:'.
+  'github://project/user:master'.
+  'project/user'.
+  'master'.
+  ''}.
+  {'github://project/user'.
+  'github://project/user:master'.
+  'project/user'.
+  'master'.
+  ''}} do: [ :spec | self validate: spec ]

@@ -1,3 +1,4 @@
 accessing
 repoPath
-    ^ repoPath
+  repoPath ifNil: [ repoPath := '' ].
+  ^ repoPath

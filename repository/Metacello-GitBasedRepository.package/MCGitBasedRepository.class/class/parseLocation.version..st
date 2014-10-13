@@ -24,37 +24,13 @@ parseLocation: locationUrl version: versionString
       repoDelim == 0
         ifTrue: [ projectVersion := desc copyFrom: versionDelim + 1 to: desc size ]
         ifFalse: [ 
-          | strm done escaped |
-          "Issue #234: have to allow for commitish containing slashes"
-          strm := WriteStream on: String new.
-          repoDelim := versionDelim + 1.
-          escaped := done := false.
-          [ done ]
-            whileFalse: [ 
-              | char |
-              repoDelim > desc size
-                ifTrue: [ done := true ]
-                ifFalse: [ 
-                  char := desc at: repoDelim.
-                  char == $\
-                    ifTrue: [ 
-                      escaped
-                        ifTrue: [ 
-                          "$\ not legal in branch name ... literally ignored"
-                          escaped := false ]
-                        ifFalse: [ escaped := true ] ]
-                    ifFalse: [ 
-                      char == $/
-                        ifTrue: [ 
-                          escaped
-                            ifFalse: [ done := true ] ].
-                      done
-                        ifFalse: [ strm nextPut: char ].
-                      escaped := false ].
-                  repoDelim := repoDelim + 1 ] ].
-          repoDelim := repoDelim - 1.
-          projectVersion := strm contents.
-          repoPath := desc copyFrom: repoDelim + 1 to: desc size ] ].
+          projectPath := desc copyFrom: 1 to: versionDelim - 1.
+          self
+            parseProjectVersionField: [ :pv :rp | 
+              projectVersion := pv.
+              repoPath := rp ]
+            desc: desc
+            versionDelim: versionDelim ] ].
   versionString ~~ nil
     ifTrue: [ projectVersion := versionString ].
   ^ self new
