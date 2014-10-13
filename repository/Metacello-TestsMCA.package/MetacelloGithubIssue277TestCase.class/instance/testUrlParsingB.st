@@ -15,7 +15,7 @@ testUrlParsingB
   {'github://project/user:1.1.9/repository'.
   'github://project/user:1.1.9/repository'.
   'project/user'.
-  'v3.1.3-gs'.
+  '1.1.9'.
   'repository'}.
   {'github://project/user:v1.1.10/repository'.
   'github://project/user:v1.1.10/repository'.

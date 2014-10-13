@@ -19,6 +19,8 @@
 		"parseProjectVersionField:desc:versionDelim:" : "dkh 10/13/2014 12:15",
 		"parseProjectVersionField:versionDelim:" : "dkh 10/13/2014 13:02",
 		"projectDirectoryFrom:version:" : "dkh 09/29/2014 12:27",
+		"projectVersionFromString:" : "dkh 10/13/2014 15:54",
+		"projectVersionFromString:forPattern:" : "dkh 10/13/2014 15:49",
 		"projectZipUrlFor:versionString:" : "dkh 09/29/2014 12:24",
 		"resetCacheDirectoryIfInvalid" : "dkh 09/29/2014 12:10",
 		"startUp:" : "dkh 09/29/2014 12:06" },
