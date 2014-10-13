@@ -1,18 +1,27 @@
 tests
 testUrlParsingC
-  | spec repo projectVersion version versionPattern |
-  spec := {'github://dalehenrich/external:v1.*.*-gs/repository'.
-  'github://dalehenrich/external:v1.*.*-gs/repository'.
-  'dalehenrich/external'.
-  'v1.*.*-gs'.
+  {{'github://project/user:3.?/repository'.
+  'github://project/user:3.?/repository'.
+  'project/user'.
+  '3.?'.
   'repository'}.
-  repo := self validate: spec.
-  projectVersion := repo projectVersion.
-  (projectVersion beginsWith: 'v')
-    ifTrue: [ 
-      | versionString |
-      versionString := projectVersion copyFrom: 2 to: projectVersion size.
-      versionPattern := MetacelloSemanticVersionNumber
-        fromString: versionString
-        forPattern: true ].
-  versionPattern inspect
+  {'github://project/user:v3.?/repository'.
+  'github://project/user:v3.?/repository'.
+  'project/user'.
+  'v3.?'.
+  'repository'}.
+  {'github://project/user:v3.1.?/repository'.
+  'github://project/user:v3.1.?/repository'.
+  'project/user'.
+  'v3.1.?'.
+  'repository'}.
+  {'github://project/user:v3.1.*-gs/repository'.
+  'github://project/user:v3.1.*-gs/repository'.
+  'project/user'.
+  'v3.1.*-gs'.
+  'repository'}.
+  {'github://project/user:v3.1.*-g#/repository'.
+  'github://project/user:v3.1.*-g#/repository'.
+  'project/user'.
+  'v3.1.*-g#'.
+  'repository'}} do: [ :spec | self validate: spec ]
