@@ -428,14 +428,12 @@ Warning is raised notifying you that the locked project specification
 will be used.
 
 If you don't want an interactive Warning to be raised during your load,
-you can use `onWarning:` to log and resume the Warning:
+you can use `onWarningLog` to log and resume the Warning:
 
 ```Smalltalk
 Metacello registry
   configuration: 'Magritte3';
-  onWarning: [:ex | 
-    Transcript cr; show: 'Warning: ', ex description.
-    ex resume ];
+  onWarningLog;
   load.
 ```
 
@@ -473,6 +471,24 @@ Metacello registry
 use the message `honor` if you want to honor the lock and not load the new version.
 
 `break` is a synonym for `allow` and `honor` is a synonym for `disallow`.
+
+With `onLockBreak:` you only need to supply the name of the projects for which you want the locks broken:
+
+```Smalltalk
+Metacello registry
+  configuration: 'Magritte3';
+  onLockBreak: #( 'Seaside3' );
+  load.
+```
+
+If you want to `break` all locks uncoditionally then use `onLockBreak`:
+
+```Smalltalk
+Metacello registry
+  configuration: 'Magritte3';
+  onLockBreak;
+  load.
+```
 
 ### Upgrading a locked project
 
