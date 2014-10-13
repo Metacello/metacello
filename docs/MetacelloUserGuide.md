@@ -490,6 +490,9 @@ Metacello registry
   load.
 ```
 
+When a lock is broken, the project is not unlocked. 
+The lock remains and is applied to the to the freshly loaded version and repository.
+
 ### Upgrading a locked project
 
 If you want to explicitly upgrade a locked project, you can use the

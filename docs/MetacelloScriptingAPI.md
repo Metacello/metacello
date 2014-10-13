@@ -214,7 +214,7 @@ conditions:
 * You may be working with a git checkout of a project and you want to
   continue using the git checkout.
 
-you many not want to have particular projects upgraded automatically.
+you may not want to have particular projects upgraded automatically.
 The `lock` command gives you control.
 
 You can lock a project to a particular version:
@@ -546,10 +546,20 @@ is rooted in the projects HOME directory.
 ####cacheRepository:
 ####ignoreImage
 ####onConflict:
+####onConflictUseIncoming
+####onConflictUseIncoming:useLoaded:
+####onConflictUseLoaded
 ####onDowngrade:
+####onDowngradeUseIncoming
+####onDowngradeUseIncoming:
 ####onLock:
+####onLockBreak
+####onLockBreak:
 ####onUpgrade:
+####onUpgradeUseLoaded
+####onUpgradeUseLoaded:
 ####onWarning:
+####onWarningLog
 ####silently
 ### Metacello Project Registry
 ### Classes
