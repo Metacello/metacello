@@ -50,13 +50,13 @@ testVersionMatch
   ('2.0.0-gs' -> false)}}}
     do: [ :spec | 
       | patternString |
-      patternString := (MCGitBasedRepository
+      patternString := (MCGitBasedNetworkRepository
         projectVersionFromString: (spec at: 1)) asString.
       (spec at: 2)
         do: [ :matchAssoc | 
           | versionString expected version |
           versionString := matchAssoc key.
           expected := matchAssoc value.
-          version := MCGitBasedRepository
+          version := MCGitBasedNetworkRepository
             projectVersionFromString: versionString.
           self assert: (version match: patternString) == expected ] ]

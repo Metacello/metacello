@@ -5,12 +5,12 @@
 		"repoDownloadCache" ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "dkh 10/14/2014 09:42",
 	"instvars" : [
 		"projectPath",
 		"projectVersion",
 		"repoPath" ],
-	"name" : "MCGitBasedRepository",
+	"name" : "MCGitBasedNetworkRepository",
 	"pools" : [
 		 ],
 	"super" : "MCFileTreeRepository",

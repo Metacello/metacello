@@ -1,6 +1,6 @@
 accessing
 repositoryVersionString
-  "extract sha from the repository directory ... if possible"
+  "for git-based network repos, answer the SHA associated with the download: a commit SHA or tag SHA"
 
   | versionComponents versionElement pathElements gitBasedPath repositoryDirPath projectDirPath projectDir projectVersionDir |
   repositoryDirPath := self directory fullName.
