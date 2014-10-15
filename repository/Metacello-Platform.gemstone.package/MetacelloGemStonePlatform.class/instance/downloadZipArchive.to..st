@@ -1,6 +1,6 @@
 github/bitbucket support
-downloadFile: url to: outputFileName
-  "download from <url> into <outputFileName>"
+downloadZipArchive: url to: outputFileName
+  "download zip archive from <url> into <outputFileName>"
 
   | archive zipfile errorFileName stream |
   "Make a unique name for the error log and ensure that we can write the files"

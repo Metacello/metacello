@@ -1,0 +1,3 @@
+private
+bitbucketTagsJSON
+  ^ '{"1.0-beta.32Tests": {"node": "3f9b964d7971", "files": [{"type": "modified", "file": "core/External-Core.pkg/package"}, {"type": "modified", "file": "core/External-Core.pkg/version"}], "branches": [], "raw_author": "Dale Henrichs <dhenrich@vmware.com>", "utctimestamp": "2012-03-05 22:51:41+00:00", "author": "Dale Henrichs", "timestamp": "2012-03-05 23:51:41", "raw_node": "3f9b964d7971ebbdf571c0eb7456075a4b3177f9", "parents": ["7903304f1bcb"], "branch": null, "message": "regenerate package for good luck\n", "revision": null, "size": -1}}'

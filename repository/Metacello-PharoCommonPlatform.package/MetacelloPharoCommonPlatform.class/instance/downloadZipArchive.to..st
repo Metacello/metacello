@@ -1,8 +1,8 @@
 github support
-downloadFile: url to: outputFileName
-    "download from <url> into <outputFileName>"
+downloadZipArchive: url to: outputFileName
+  "download zip archive from <url> into <outputFileName>"
 
-    | in out err proc archive zipfile errorFileName|
+    | in out err proc archive zipfile errorFileName |
     "Make a unique name for the error log and ensure that we can write the files"
     errorFileName := self downloadErrorFileNameFor: outputFileName.
     in := (' -L ' , url) readStream.
@@ -20,6 +20,6 @@ downloadFile: url to: outputFileName
     out close.
     err close.
     archive := ZipArchive new.
-    zipfile := outputFileName asFileReference.
-    zipfile readStreamDo: [ :fileStream | archive readFrom: fileStream ].
+    zipfile := FileDirectory on: outputFileName.
+    zipfile containingDirectory readOnlyFileNamed: zipfile localName do: [ :fileStream | archive readFrom: fileStream ].
     ^ archive

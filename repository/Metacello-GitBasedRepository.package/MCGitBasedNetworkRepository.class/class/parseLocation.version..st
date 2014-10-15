@@ -34,7 +34,6 @@ parseLocation: locationUrl version: versionString
   versionString ~~ nil
     ifTrue: [ projectVersion := versionString ].
   ^ self new
-    projectPath: projectPath;
-    projectVersion: projectVersion;
-    repoPath: repoPath;
-    yourself
+    projectPath: projectPath
+    projectVersion: projectVersion
+    repoPath: repoPath

@@ -1,3 +1,13 @@
 accessing
-projectVersion: anObject
-    projectVersion := anObject
+projectVersion: aString
+  "Important that projectVersion be set AFTER projectPath, as projectPath needed for resolving projectVersionPattern"
+
+  | x |
+  (x := aString
+    findDelimiters:
+      {$#.
+      $*.
+      $?}
+    startingAt: 1) <= aString size
+    ifTrue: [ self resolveProjectVersionPattern: aString ]
+    ifFalse: [ projectVersion := aString ]

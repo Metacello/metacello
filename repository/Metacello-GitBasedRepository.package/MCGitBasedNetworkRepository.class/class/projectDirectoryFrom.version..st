@@ -26,7 +26,9 @@ projectDirectoryFrom: projectPath version: versionString
           self basicDescription , '-' , pid , '-'
             , (downloadCacheKey select: [ :c | c isAlphaNumeric ])
         suffix: '.zip'.
-      archive := MetacelloPlatform current downloadFile: url to: zipFileName.
+      archive := MetacelloPlatform current
+        downloadZipArchive: url
+        to: zipFileName.
       directory := mcPlatform
         directoryFromPath: (cachePath := archive members first fileName)
         relativeTo: theCacheDirectory.

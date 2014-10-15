@@ -1,6 +1,6 @@
 github support
-downloadFile: url to: outputFileName
-    "download from <url> into <outputFileName>"
+downloadZipArchive: url to: outputFileName
+  "download zip archive from <url> into <outputFileName>"
 
     | archive zipfile response |
     response := WebClient httpGet: url.
