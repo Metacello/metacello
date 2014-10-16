@@ -17,7 +17,11 @@ resolveProjectVersionPattern: aString
   matchingTags isEmpty
     ifTrue: [ 
       projectVersion := aString.
-      ^ self ].
+      ^ self
+        error:
+          'No tags matching the pattern ' , aString printString
+            , ' found for repository description '
+            , self description printString ].
   sortedMatchingTags := matchingTags asArray sort: [ :a :b | a key <= b key ].
   theTag := sortedMatchingTags last.
   projectVersionPattern := aString.

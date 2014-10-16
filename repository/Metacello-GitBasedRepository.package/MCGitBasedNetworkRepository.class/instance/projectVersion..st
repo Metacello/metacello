@@ -3,6 +3,10 @@ projectVersion: aString
   "Important that projectVersion be set AFTER projectPath, as projectPath needed for resolving projectVersionPattern"
 
   | x |
+  aString
+    ifNil: [ 
+      projectVersion := aString.
+      ^ self ].
   (x := aString
     findDelimiters:
       {$#.
