@@ -1,5 +1,5 @@
 github/bitbucket support
-downloadJSON: url
+downloadJSON: url username: username pass: pass
   " return result of parsing JSON downloaded from url"
 
   self subclassResponsibility

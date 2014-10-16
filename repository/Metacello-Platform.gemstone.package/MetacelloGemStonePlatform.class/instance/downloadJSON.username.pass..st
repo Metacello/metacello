@@ -1,10 +1,14 @@
 github/bitbucket support
-downloadJSON: url
+downloadJSON: url username: username pass: pass
   " return result of parsing JSON downloaded from url"
 
   | jsonFileName errorFileName jsonFile |
   jsonFileName := self tempFileFor: 'tags-' , self processPID suffix: 'json'.
-  errorFileName := self downloadBasicFile: url to: jsonFileName.
+  errorFileName := self
+    downloadBasicFile: url
+    to: jsonFileName
+    username: username
+    pass: pass.
   jsonFile := ServerFileDirectory on: jsonFileName.
   jsonFile containingDirectory
     readOnlyFileNamed: jsonFile localName
