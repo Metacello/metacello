@@ -2,7 +2,9 @@
 	"category" : "Metacello-GitBasedRepository",
 	"classinstvars" : [
 		"repoCacheDirectory",
-		"repoDownloadCache" ],
+		"repoDownloadCache",
+		"siteUsername",
+		"sitePassword" ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",

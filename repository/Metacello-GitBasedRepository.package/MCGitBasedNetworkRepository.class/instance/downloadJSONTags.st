@@ -4,6 +4,6 @@ downloadJSONTags
   tagsUrl := self projectTagsUrlFor: self projectPath.
   jsonObject := MetacelloPlatform current
     downloadJSON: tagsUrl
-    username: nil
-    pass: nil.
+    username: self class siteUsername
+    pass: self class sitePassword.
   ^ self normalizeTagsData: jsonObject
