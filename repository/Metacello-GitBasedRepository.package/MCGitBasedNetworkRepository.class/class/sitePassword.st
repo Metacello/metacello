@@ -1,3 +1,3 @@
-site account
+site credentials
 sitePassword
   ^ sitePassword
