@@ -8,8 +8,9 @@ clearPackageCache
   dir ~~ nil
     ifTrue: [ 
       "delete directory - Squeak and Pharo"
-      dir exists
-        ifTrue: [ self recursiveDelete: dir ] ]
+      [ self recursiveDelete: dir ]
+        on: Error
+        do: [ :ignore |  ] ]
     ifFalse: [ 
       "MCDictionaryRepository expected - GemStone"
       cache flushCache ]
