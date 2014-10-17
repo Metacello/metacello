@@ -9,5 +9,5 @@ downloadJSON: url username: username pass: pass
         username: username;
         password: pass;
         yourself ].
-    (client httpGet: url) content ].
+    client httpGet: url].
   ^ MCFileTreeJsonParser parse: json
