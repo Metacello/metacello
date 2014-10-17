@@ -5,6 +5,8 @@ testBaselineGroup40
   errorSignaled := false.
   version := project version: '4.0-baseline'.
   [ version spec packageSpecsInLoadOrder ]
-    on: Error
-    do: [ :ex | errorSignaled := true ].
+    on: MetacelloNameNotDefinedError
+    do: [ :ex | 
+      errorSignaled := true.
+      ex resume ].
   self assert: errorSignaled

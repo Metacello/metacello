@@ -9,14 +9,17 @@ specs: specNames forPackageOrdering: aVersionSpec
       spec := aVersionSpec
         packageNamed: specName
         ifAbsent: [ 
-          self
-            error:
+          MetacelloNameNotDefinedError
+            signal:
               'project group, or package named: ' , specName printString
                 ,
                   ' not found when used in requires: or includes: field of package: '
                 , self name printString , ' for version: '
                 , aVersionSpec versionString , ' of '
-                , aVersionSpec projectLabel , '.' ].
-      packageOrProjectSpecs
-        addAll: (spec resolveSpecsForPackageOrdering: aVersionSpec) ].
+                , aVersionSpec projectLabel , '.'.
+          nil	"return nil if resumed" ].
+      spec
+        ifNotNil: [ 
+          packageOrProjectSpecs
+            addAll: (spec resolveSpecsForPackageOrdering: aVersionSpec) ] ].
   ^ packageOrProjectSpecs
