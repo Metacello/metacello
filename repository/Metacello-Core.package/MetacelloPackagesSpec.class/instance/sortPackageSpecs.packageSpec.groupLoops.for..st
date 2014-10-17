@@ -16,8 +16,11 @@ sortPackageSpecs: orderedSpecs packageSpec: packageSpec groupLoops: groupLoops f
               self
                 error:
                   'project group, or package named: ' , targetPackageOrProjectName printString
-                    , ' not found for version: ' , aVersionSpec versionString
-                    , ' of ' , aVersionSpec projectLabel , '.' ].
+                    ,
+                      ' not found when used in requires: or includes: field of package: '
+                    , packageSpec name printString , ' for version: '
+                    , aVersionSpec versionString , ' of '
+                    , aVersionSpec projectLabel , '.' ].
           targetIndex := orderedSpecs indexOf: targetPackage.
           (groupLoopDetected not and: [ packageIndex = targetIndex ])
             ifTrue: [ 

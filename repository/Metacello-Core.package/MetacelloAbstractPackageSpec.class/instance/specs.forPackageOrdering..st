@@ -12,8 +12,11 @@ specs: specNames forPackageOrdering: aVersionSpec
           self
             error:
               'project group, or package named: ' , specName printString
-                , ' not found for version: ' , aVersionSpec versionString
-                , ' of ' , aVersionSpec projectLabel , '.' ].
+                ,
+                  ' not found when used in requires: or includes: field of package: '
+                , self name printString , ' for version: '
+                , aVersionSpec versionString , ' of '
+                , aVersionSpec projectLabel , '.' ].
       packageOrProjectSpecs
         addAll: (spec resolveSpecsForPackageOrdering: aVersionSpec) ].
   ^ packageOrProjectSpecs
