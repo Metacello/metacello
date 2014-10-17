@@ -1,6 +1,5 @@
 tests
 testDefaultRepository
-  [ 
   | projectSpec |
   Metacello new
     configuration: 'Sample';
@@ -11,10 +10,4 @@ testDefaultRepository
   self
     assert:
       projectSpec repositoryDescriptions asArray
-        = {(MetacelloScriptEngine defaultRepositoryDescription)} ]
-    on: Error
-    do: [ :ex | 
-      Transcript
-        cr;
-        show: 'testDefaultRepository: ' , ex description.
-      ex pass ]
+        = {(MetacelloScriptEngine defaultRepositoryDescription)}

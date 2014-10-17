@@ -7,5 +7,6 @@ downloadJSON: url username: username pass: pass
     url: url;
     yourself.
   username ifNotNil: [ client username: username password: pass ].
+  client get.
   json := client contents.
   ^ MCFileTreeJsonParser parse: json
