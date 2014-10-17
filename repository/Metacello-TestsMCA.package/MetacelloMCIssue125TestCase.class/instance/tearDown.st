@@ -10,8 +10,10 @@ tearDown
   aGofer references notEmpty
     ifTrue: [ aGofer metacelloUnload ].
   MCRepositoryGroup default
-    removeRepository: (Smalltalk at: #'Metacello_Gofer_Test_Repository');
-    removeRepository: (Smalltalk at: #'Metacello_Configuration_Test_Repository');
+    removeRepository:
+        (Smalltalk at: #'Metacello_Gofer_Test_Repository' ifAbsent: [  ]);
+    removeRepository:
+        (Smalltalk at: #'Metacello_Configuration_Test_Repository' ifAbsent: [  ]);
     yourself.
   Smalltalk removeKey: #'Metacello_Gofer_Test_Repository' ifAbsent: [  ].
   Smalltalk removeKey: #'Metacello_Configuration_Test_Repository' ifAbsent: [  ].
