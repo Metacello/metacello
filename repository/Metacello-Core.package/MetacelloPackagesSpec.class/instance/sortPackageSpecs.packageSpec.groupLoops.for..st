@@ -15,8 +15,9 @@ sortPackageSpecs: orderedSpecs packageSpec: packageSpec groupLoops: groupLoops f
             ifNone: [ 
               self
                 error:
-                  'project or package named: ' , targetPackageOrProjectName printString
-                    , ' not found.' ].
+                  'project group, or package named: ' , targetPackageOrProjectName printString
+                    , ' not found for version: ' , aVersionSpec versionString
+                    , ' of ' , aVersionSpec projectLabel , '.' ].
           targetIndex := orderedSpecs indexOf: targetPackage.
           (groupLoopDetected not and: [ packageIndex = targetIndex ])
             ifTrue: [ 
