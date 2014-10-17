@@ -10,5 +10,4 @@ downloadJSON: url username: username pass: pass
     username: username
     pass: pass.
   jsonFile := self fileHandleOn: jsonFileName.
-  jsonFile readStreamDo:
-    do: [ :fileStream | ^ MCFileTreeJsonParser parseStream: fileStream ]
+  jsonFile readStreamDo: [ :fileStream | ^ MCFileTreeJsonParser parseStream: fileStream ]
