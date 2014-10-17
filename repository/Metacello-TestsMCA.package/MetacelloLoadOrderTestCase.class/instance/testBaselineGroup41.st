@@ -6,7 +6,5 @@ testBaselineGroup41
   version := project version: '4.1-baseline'.
   [ version spec packageSpecsInLoadOrder ]
     on: Error
-    do: [ :ex | 
-      errorSignaled := true.
-      ex pass ].
+    do: [ :ex | errorSignaled := true ].
   self assert: errorSignaled
