@@ -4,6 +4,7 @@ testLockCommandReference6
 
   "https://github.com/dalehenrich/metacello-work/blob/dev/docs/LockCommandReference.md#load-the-example"
 
+  [ 
   self setupDocumentationRepositories.
   Metacello new
     baseline: 'Alternate';
@@ -22,4 +23,9 @@ testLockCommandReference6
     repository: 'github://dalehenrich/example:otto/repository';
     onLock: [ :ex | ex honor ];
     get;
-    load: 'Tests'
+    load: 'Tests' ]
+    on: Error
+    do: [ :ex | 
+      Transcript
+        cr;
+        show: 'testLockCommandReference6: ' , ex description ]
