@@ -4,6 +4,7 @@ clearPackageCache
 
   | cache dir |
   cache := self defaultPackageCache.
+  cache flushCache.	"GemStone and Pharo1.4"
   dir := cache directory.
   dir ~~ nil
     ifTrue: [ 
@@ -11,6 +12,3 @@ clearPackageCache
       [ self recursiveDelete: dir ]
         on: Error
         do: [ :ignore |  ] ]
-    ifFalse: [ 
-      "MCDictionaryRepository expected - GemStone"
-      cache flushCache ]
