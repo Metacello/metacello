@@ -14,6 +14,9 @@ bea35be90ab1ba0be80af4f4275fccbfc071a74f - v2.2.0-gs
 "
 
   [ 
+  Transcript
+    cr;
+    show: 'testGitHubTagPatternLoad1 [0]: '.
   Metacello new
     baseline: 'External';
     repository: 'github://dalehenrich/external:v1.1.?/repository';
@@ -21,11 +24,14 @@ bea35be90ab1ba0be80af4f4275fccbfc071a74f - v2.2.0-gs
     load.
   self
     verify: 'External-Core'
-    loadedFrom: 'github://dalehenrich/external:v1.1.2-gs/repository' ]
+    loadedFrom: 'github://dalehenrich/external:v1.1.2-gs/repository'.
+  Transcript
+    cr;
+    show: 'testGitHubTagPatternLoad1 [1]: ' ]
     on: Error
     do: [ :ex | 
       "keep an eye out for rate limiting errors from github for anonymous api usage"
       Transcript
         cr;
-        show: 'testGitHubTagPatternLoad1: ' , ex description.
+        show: 'testGitHubTagPatternLoad1 [2]: ' , ex description.
       ex pass ]
