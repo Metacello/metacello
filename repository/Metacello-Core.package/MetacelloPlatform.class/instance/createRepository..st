@@ -42,12 +42,12 @@ createRepository: aRepositorySpec
         ifTrue: [ ^ cl location: aRepositorySpec description ] ].
   type = 'dictionary'
     ifTrue: [ 
-      | description headerSize globalName |
+      | description headerSize globalName repo |
       description := aRepositorySpec description.
       headerSize := 'dictionary://' size.
       globalName := (description copyFrom: headerSize + 1 to: description size)
         asSymbol.
-      ^ Smalltalk
+      repo := Smalltalk
         at: globalName
         ifAbsent: [ 
           Smalltalk
@@ -55,5 +55,7 @@ createRepository: aRepositorySpec
             put:
               (MCDictionaryRepository new
                 description: description;
-                yourself) ] ].
+                yourself) ].
+      repo description: description.	"associate the description with the repo, to make debugging easier"
+      ^ repo ].
   ^ nil
