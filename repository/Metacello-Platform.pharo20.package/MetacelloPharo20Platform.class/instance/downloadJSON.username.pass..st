@@ -10,6 +10,5 @@ downloadJSON: url username: username pass: pass
     username: username
     pass: pass.
   jsonFile := self fileHandleOn: jsonFileName.
-  jsonFile parent
-    readOnlyFileNamed: jsonFile basename
+  jsonFile readStreamDo:
     do: [ :fileStream | ^ MCFileTreeJsonParser parseStream: fileStream ]
