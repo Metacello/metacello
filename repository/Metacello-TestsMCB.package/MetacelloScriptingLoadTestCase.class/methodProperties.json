@@ -2,6 +2,8 @@
 	"class" : {
 		 },
 	"instance" : {
+		"setUp" : "dkh 10/16/2014 18:12",
+		"tearDown" : "dkh 10/16/2014 18:12",
 		"tearDownPackageList" : "dkh 7/24/2012 20:07",
 		"testDefaultRepository" : "dkh 10/16/2014 18:02",
 		"testDefaultVersion" : "dkh 09/04/2014 14:28",

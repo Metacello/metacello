@@ -19,8 +19,8 @@ env:
 #  Squeak-4.5
 #  Squeak-Trunk
 
-   - ST=Pharo-3.0 LoadList="'default'" TRAVIS_SCRIPT=userGuide.st 
-   - ST=GemStone-3.2.2 LoadList="'default'" TRAVIS_SCRIPT=userGuide.st
+#   - ST=Pharo-3.0 LoadList="'default'" TRAVIS_SCRIPT=userGuide.st 
+#   - ST=GemStone-3.2.2 LoadList="'default'" TRAVIS_SCRIPT=userGuide.st
 
    - ST=Pharo-2.0 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
    - ST=Pharo-2.0 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
