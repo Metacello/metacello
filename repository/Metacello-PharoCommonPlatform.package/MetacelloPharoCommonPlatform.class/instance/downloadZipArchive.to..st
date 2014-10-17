@@ -5,6 +5,6 @@ downloadZipArchive: url to: outputFileName
     | archive zipfile |
     self downloadBasicFile: url to: outputFileName username: nil pass: nil.
     archive := ZipArchive new.
-    zipfile := FileDirectory on: outputFileName.
+    zipfile := self fileHandleOn: outputFileName.
     zipfile containingDirectory readOnlyFileNamed: zipfile localName do: [ :fileStream | archive readFrom: fileStream ].
     ^ archive

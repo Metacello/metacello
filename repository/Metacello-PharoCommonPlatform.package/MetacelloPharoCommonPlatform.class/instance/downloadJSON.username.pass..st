@@ -9,7 +9,7 @@ downloadJSON: url username: username pass: pass
     to: jsonFileName
     username: username
     pass: pass.
-  jsonFile := FileDirectory on: jsonFileName.
+  jsonFile := self fileHandleOn: jsonFileName.
   jsonFile containingDirectory
     readOnlyFileNamed: jsonFile localName
     do: [ :fileStream | ^ MCFileTreeJsonParser parseStream: fileStream ]
