@@ -69,9 +69,11 @@ testLoadNGet
       (MCRepositoryGroup default repositories
         detect: [ :repo | repo description = 'Metacello_Configuration_Test_Repository' ]
         ifNone: [ 
-          MCDictionaryRepository new
-            dictionary: Dictionary new;
-            yourself ])
+          Transcript
+            cr;
+            show:
+                'testLoadNGet [7]: ' , 'Metacello_Configuration_Test_Repository not found'.
+          MCDictionaryRepository new ])
         dictionary keys
         do: [ :key | 
           Transcript
