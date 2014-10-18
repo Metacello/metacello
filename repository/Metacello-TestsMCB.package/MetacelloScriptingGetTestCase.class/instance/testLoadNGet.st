@@ -2,6 +2,7 @@ tests
 testLoadNGet
   "explicitly load ConfigurationOfExternalX-dkh.1 do load of 0.9.0, then get ... should have ConfigurationOfExternalX-dkh.2"
 
+  [ 
   | projectSpec |
   Gofer new
     version: 'ConfigurationOfExternalX-dkh.1';
@@ -35,4 +36,10 @@ testLoadNGet
   self
     assert:
       projectSpec repositoryDescriptions asArray
-        = #('dictionary://Metacello_Config_Test_Repository')
+        = #('dictionary://Metacello_Config_Test_Repository') ]
+    on: Error
+    do: [ :ex | 
+      Transcript
+        cr;
+        show: 'testLoadNGet: ' , ex description.
+      ex pass ]
