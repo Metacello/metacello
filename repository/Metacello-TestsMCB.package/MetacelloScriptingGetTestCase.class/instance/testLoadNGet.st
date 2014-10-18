@@ -6,7 +6,10 @@ testLoadNGet
   | projectSpec |
   Transcript
     cr;
-    show: 'testLoadNGet [0]'.
+    show:
+        'testLoadNGet [0]: '
+            ,
+              (Smalltalk at: #'Metacello_Configuration_Test_Repository') description.
   Gofer new
     version: 'ConfigurationOfExternalX-dkh.1';
     repository: configurationRepository;
@@ -54,4 +57,10 @@ testLoadNGet
       Transcript
         cr;
         show: 'testLoadNGet [4]: ' , ex description.
+      (Smalltalk at: #'Metacello_Configuration_Test_Repository') dictionary keys
+        do: [ :key | 
+          Transcript
+            cr;
+            tab;
+            show: key printString ].
       ex pass ]
