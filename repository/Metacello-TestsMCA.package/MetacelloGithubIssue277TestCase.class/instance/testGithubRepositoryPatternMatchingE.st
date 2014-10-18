@@ -12,4 +12,7 @@ testGithubRepositoryPatternMatchingE
       Transcript
         cr;
         show: 'testGithubRepositoryPatternMatchingE: ' , ex description.
-      ex pass ]
+      (ex description includesSubstring: 'API rate limit exceeded')
+        ifFalse: [ 
+          "don't fail test because github rate limit exceeded"
+          ex pass ] ]
