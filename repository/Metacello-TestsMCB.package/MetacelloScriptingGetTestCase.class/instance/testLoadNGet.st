@@ -4,6 +4,9 @@ testLoadNGet
 
   [ 
   | projectSpec |
+  Transcript
+    cr;
+    show: 'testLoadNGet [0]'.
   Gofer new
     version: 'ConfigurationOfExternalX-dkh.1';
     repository: configurationRepository;
@@ -13,6 +16,9 @@ testLoadNGet
     version: '0.9.0';
     repository: 'dictionary://Metacello_XXX_Test_Repository';
     load.	"random failure here ... could not resolve BaselineOfExternalX in package-cache"
+  Transcript
+    cr;
+    show: 'testLoadNGet [1]'.
   self
     verify: 'ConfigurationOfExternalX'
     version: 'ConfigurationOfExternalX-dkh.1'.
@@ -27,6 +33,9 @@ testLoadNGet
     configuration: 'ExternalX';
     repository: 'dictionary://Metacello_Config_Test_Repository';
     get.
+  Transcript
+    cr;
+    show: 'testLoadNGet [2]'.
   self
     verify: 'ConfigurationOfExternalX'
     version: 'ConfigurationOfExternalX-dkh.2'.
@@ -36,10 +45,13 @@ testLoadNGet
   self
     assert:
       projectSpec repositoryDescriptions asArray
-        = #('dictionary://Metacello_Config_Test_Repository') ]
+        = #('dictionary://Metacello_Config_Test_Repository').
+  Transcript
+    cr;
+    show: 'testLoadNGet [3]' ]
     on: Error
     do: [ :ex | 
       Transcript
         cr;
-        show: 'testLoadNGet: ' , ex description.
+        show: 'testLoadNGet [4]: ' , ex description.
       ex pass ]
