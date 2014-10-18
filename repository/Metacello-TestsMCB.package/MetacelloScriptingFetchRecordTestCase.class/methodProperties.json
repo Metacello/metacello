@@ -4,9 +4,9 @@
 	"instance" : {
 		"setUp" : "dkh 10/17/2014 15:31",
 		"setUpRepositories" : "dkh 7/23/2012 16:31",
-		"tearDown" : "dkh 10/18/2014 07:59",
+		"tearDown" : "dkh 10/18/2014 09:29",
 		"tearDownPackageList" : "dkh 07/05/2014 20:13",
-		"tearDownRepositories" : "dkh 10/17/2014 15:06",
+		"tearDownRepositories" : "dkh 10/18/2014 09:29",
 		"testBasicFetch001" : "dkh 06/11/2014 16:31",
 		"testBasicFetch002" : "dkh 7/23/2012 16:00",
 		"testBasicFetch003" : "dkh 7/23/2012 16:01",
@@ -19,5 +19,5 @@
 		"testBasicRecord004b" : "dkh 7/23/2012 15:28",
 		"testFetchCacheRepository" : "dkh 7/23/2012 16:44",
 		"testFetchIssue83" : "dkh 7/23/2012 16:02",
-		"testFetchRepositoryOverrides" : "dkh 10/18/2014 07:47",
+		"testFetchRepositoryOverrides" : "dkh 10/18/2014 09:29",
 		"testRecordIssue83" : "dkh 7/23/2012 16:03" } }

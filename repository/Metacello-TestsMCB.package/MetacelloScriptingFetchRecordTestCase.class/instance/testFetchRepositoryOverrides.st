@@ -18,11 +18,11 @@ testFetchRepositoryOverrides
   Smalltalk removeKey: #'Metacello_Gofer_Test_Repository' ifAbsent: [  ].
   Smalltalk removeKey: #'Metacello_Cache_Test_Repository' ifAbsent: [  ].
   MCRepositoryGroup default
-    removeRepository:
+    removeIdenticalRepository:
         (Smalltalk at: #'Metacello_Configuration_Test_Repository' ifAbsent: [  ]);
-    removeRepository:
+    removeIdenticalRepository:
         (Smalltalk at: #'Metacello_Gofer_Test_Repository' ifAbsent: [  ]);
-    removeRepository:
+    removeIdenticalRepository:
         (Smalltalk at: #'Metacello_Cache_Test_Repository' ifAbsent: [  ]).
   Gofer new
     package: 'MetacelloTestConfigurationOfFoo';

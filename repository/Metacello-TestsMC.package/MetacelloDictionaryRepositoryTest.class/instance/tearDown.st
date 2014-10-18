@@ -12,7 +12,7 @@ tearDown
     removeKey: #'Metacello_Configuration_Test_Alternate_Repository'
     ifAbsent: [  ].
   self tempRepositories
-    do: [ :repo | MCRepositoryGroup default removeRepository: repo ].
+    do: [ :repo | MCRepositoryGroup default removeIdenticalRepository: repo ].
   finalWorkingCopyList := MCWorkingCopy allManagers
     collect: [ :each | each packageName ].
   diff := finalWorkingCopyList difference: initialWorkingCopyList.

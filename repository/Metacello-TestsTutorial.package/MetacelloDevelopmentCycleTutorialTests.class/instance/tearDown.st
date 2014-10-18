@@ -12,7 +12,7 @@ tearDown
   Smalltalk removeKey: #'Metacello_Configuration_Test_Repository' ifAbsent: [  ].
   Smalltalk at: self configurationName ifPresent: [ :cl | cl removeFromSystem ].
   self tempRepositories
-    do: [ :repo | MCRepositoryGroup default removeRepository: repo ].
+    do: [ :repo | MCRepositoryGroup default removeIdenticalRepository: repo ].
   (self hasPackage: self configurationName asString)
     ifTrue: [ 
       Gofer new
