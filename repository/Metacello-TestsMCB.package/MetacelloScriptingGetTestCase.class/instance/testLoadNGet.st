@@ -63,4 +63,22 @@ testLoadNGet
             cr;
             tab;
             show: key printString ].
+      Transcript
+        cr;
+        show: 'testLoadNGet [5]'.
+      (MCRepositoryGroup default repositories
+        detect: [ :repo | repo description = 'Metacello_Configuration_Test_Repository' ]
+        ifNone: [ 
+          MCDictionaryRepository new
+            dictionary: Dictionary new;
+            yourself ])
+        dictionary keys
+        do: [ :key | 
+          Transcript
+            cr;
+            tab;
+            show: key printString ].
+      Transcript
+        cr;
+        show: 'testLoadNGet [6]'.
       ex pass ]
