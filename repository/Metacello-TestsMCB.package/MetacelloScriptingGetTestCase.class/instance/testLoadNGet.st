@@ -10,6 +10,20 @@ testLoadNGet
         'testLoadNGet [0]: '
             ,
               (Smalltalk at: #'Metacello_Configuration_Test_Repository') description.
+  (MCRepositoryGroup default repositories
+    detect: [ :repo | repo description = 'dictionary://Metacello_Configuration_Test_Repository' ]
+    ifNone: [ 
+      Transcript
+        cr;
+        show:
+            'testLoadNGet [0.5]: ' , 'Metacello_Configuration_Test_Repository not found'.
+      MCDictionaryRepository new ])
+    dictionary keys
+    do: [ :key | 
+      Transcript
+        cr;
+        tab;
+        show: key printString ].
   Gofer new
     version: 'ConfigurationOfExternalX-dkh.1';
     repository: configurationRepository;
@@ -67,7 +81,7 @@ testLoadNGet
         cr;
         show: 'testLoadNGet [5]'.
       (MCRepositoryGroup default repositories
-        detect: [ :repo | repo description = 'Metacello_Configuration_Test_Repository' ]
+        detect: [ :repo | repo description = 'dictionary://Metacello_Configuration_Test_Repository' ]
         ifNone: [ 
           Transcript
             cr;
