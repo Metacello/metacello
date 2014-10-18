@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"expectedFailures" : "dkh 10/18/2014 14:51",
 		"setUp" : "dkh 6/18/2012 14:40",
 		"setUpRepositories" : "dkh 6/18/2012 14:32",
 		"tearDown" : "dkh 10/18/2014 07:52",

@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"expectedFailures" : "dkh 10/18/2014 14:50",
 		"testBaselineRegister" : "dkh 10/18/2014 14:10",
 		"testBaselineUnregister" : "dkh 09/04/2014 14:32",
 		"testConfigurationRegister" : "dkh 09/04/2014 14:32",
