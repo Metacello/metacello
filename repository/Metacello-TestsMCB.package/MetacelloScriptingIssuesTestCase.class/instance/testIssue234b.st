@@ -2,6 +2,7 @@ tests
 testIssue234b
   "https://github.com/dalehenrich/metacello-work/issues/234"
 
+  [ 
   | projectSpec |
   Metacello new
     baseline: 'External';
@@ -17,4 +18,10 @@ testIssue234b
     assert:
       projectSpec registration currentVersionString
         = MetacelloScriptingResource externalCustomIssue234ShortMasterSHA.
-  self assert: projectSpec registration locked
+  self assert: projectSpec registration locked ]
+    on: Error
+    do: [ :ex | 
+      Transcript
+        cr;
+        show: 'testIssue234b: ' , ex description.
+      ex pass ]

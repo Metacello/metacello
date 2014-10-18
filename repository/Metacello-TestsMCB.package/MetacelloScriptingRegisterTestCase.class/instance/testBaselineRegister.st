@@ -1,5 +1,6 @@
 tests
 testBaselineRegister
+  [ 
   | projectSpec |
   Metacello new
     baseline: 'Sample';
@@ -11,4 +12,10 @@ testBaselineRegister
   self
     assert:
       projectSpec repositoryDescriptions asArray
-        = {'github://dalehenrich/sample:master/repository'}
+        = {'github://dalehenrich/sample:master/repository'} ]
+    on: Error
+    do: [ :ex | 
+      Transcript
+        cr;
+        show: 'testBaselineRegister: ' , ex description.
+      ex pass ]
