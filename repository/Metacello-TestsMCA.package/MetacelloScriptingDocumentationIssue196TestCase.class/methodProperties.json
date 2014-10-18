@@ -2,7 +2,6 @@
 	"class" : {
 		 },
 	"instance" : {
-		"expectedFailures" : "dkh 10/18/2014 15:14",
 		"setUpRepositories" : "dkh 10/01/2014 11:28",
 		"setUpRepositoryContents" : "dkh 10/01/2014 11:36",
 		"setupDocumentationRepositories" : "dkh 10/01/2014 12:29",
@@ -11,7 +10,7 @@
 		"testGettingStartedWithGitHub1" : "dkh 09/30/2014 15:33",
 		"testIssue294" : "dkh 10/01/2014 12:17",
 		"testLockCommandReference1" : "dkh 09/30/2014 15:53",
-		"testLockCommandReference2" : "dkh 09/30/2014 15:54",
+		"testLockCommandReference2" : "dkh 10/18/2014 15:51",
 		"testLockCommandReference3" : "dkh 09/30/2014 15:54",
 		"testLockCommandReference4" : "dkh 09/30/2014 15:54",
 		"testLockCommandReference5" : "dkh 09/30/2014 15:57",

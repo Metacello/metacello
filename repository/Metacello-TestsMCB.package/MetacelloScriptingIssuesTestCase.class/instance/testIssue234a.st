@@ -21,7 +21,8 @@ testIssue234a
   self assert: projectSpec registration locked ]
     on: Error
     do: [ :ex | 
-      Transcript
-        cr;
-        show: 'testIssue234a: ' , ex description.
-      ex pass ]
+      "see https://github.com/dalehenrich/metacello-work/issues/303"
+      (MetacelloPlatform current
+        string: ex description
+        includesSubstring: 'SSL error, code: -5')
+        ifFalse: [ ex pass ] ]
