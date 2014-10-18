@@ -2,6 +2,7 @@ running
 setUp
   | repo |
   super setUp.
+  MetacelloPlatform current clearPackageCache.
   repo := self monticelloRepository.
   gofer := Gofer new.
   gofer disablePackageCache.

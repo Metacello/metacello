@@ -4,7 +4,7 @@ tearDown
   super tearDown.
   Smalltalk removeKey: self repositoryName ifAbsent: [  ].
   self tempRepositories
-    do: [ :repo | MCRepositoryGroup default removeRepository: repo ].
+    do: [ :repo | MCRepositoryGroup default removeIdenticalRepository: repo ].
   aGofer := Gofer new.
   self tearDownPackageNames
     do: [ :pName | 

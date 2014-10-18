@@ -1,5 +1,7 @@
 baselines
 baselineGroup23: spec
+  "group loop"
+
   <version: '2.3-baseline'>
   spec
     for: #'common'

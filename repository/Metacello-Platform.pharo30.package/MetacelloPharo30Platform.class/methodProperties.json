@@ -4,8 +4,9 @@
 	"instance" : {
 		"compiler" : "ChristopheDemarey 9/1/2014 17:14",
 		"defaultDirectory" : "ChristopheDemarey 4/29/2013 14:17",
+		"defaultRepositoryDescription" : "ChristopheDemarey 09/12/2014 03:01:45",
 		"directoryFromPath:relativeTo:" : "ChristopheDemarey 4/29/2013 15:14",
-		"downloadFile:to:" : "ChristopheDemarey 9/19/2013 11:02",
+		"downloadZipArchive:to:" : "ChristopheDemarey 09/12/2014 03:01:45",
 		"ensureDirectoryExists:" : "ChristopheDemarey 7/22/2013 11:20",
 		"extractRepositoryFrom:to:" : "ChristopheDemarey 9/19/2013 10:35",
 		"fileDirectoryClass" : "ChristopheDemarey 4/29/2013 15:58",

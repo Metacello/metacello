@@ -13,10 +13,15 @@ sortPackageSpecs: orderedSpecs packageSpec: packageSpec groupLoops: groupLoops f
           targetPackage := orderedSpecs
             detect: [ :each | each name = targetPackageOrProjectName ]
             ifNone: [ 
-              self
-                error:
-                  'project or package named: ' , targetPackageOrProjectName printString
-                    , ' not found.' ].
+              MetacelloNameNotDefinedError
+                signal:
+                  'project group, or package named: ' , targetPackageOrProjectName printString
+                    ,
+                      ' not found when used in requires: or includes: field of package: '
+                    , packageSpec name printString , ' for version: '
+                    , aVersionSpec versionString , ' of '
+                    , aVersionSpec projectLabel , '.'.
+              nil	"return nil if resumed" ].
           targetIndex := orderedSpecs indexOf: targetPackage.
           (groupLoopDetected not and: [ packageIndex = targetIndex ])
             ifTrue: [ 

@@ -10,5 +10,5 @@
 	"name" : "MCBitbucketRepository",
 	"pools" : [
 		 ],
-	"super" : "MCGitBasedRepository",
+	"super" : "MCGitBasedNetworkRepository",
 	"type" : "normal" }

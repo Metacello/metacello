@@ -9,6 +9,12 @@ tearDown
         ifTrue: [ aGofer package: pName ] ].
   aGofer references notEmpty
     ifTrue: [ aGofer metacelloUnload ].
+  MCRepositoryGroup default
+    removeIdenticalRepository:
+        (Smalltalk at: #'Metacello_Gofer_Test_Repository' ifAbsent: [  ]);
+    removeIdenticalRepository:
+        (Smalltalk at: #'Metacello_Configuration_Test_Repository' ifAbsent: [  ]);
+    yourself.
   Smalltalk removeKey: #'Metacello_Gofer_Test_Repository' ifAbsent: [  ].
   Smalltalk removeKey: #'Metacello_Configuration_Test_Repository' ifAbsent: [  ].
   finalWorkingCopyList := MCWorkingCopy allManagers

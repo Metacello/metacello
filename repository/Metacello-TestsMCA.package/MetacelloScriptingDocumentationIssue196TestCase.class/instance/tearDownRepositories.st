@@ -5,6 +5,6 @@ tearDownRepositories
     ifTrue: [ MetacelloPlatform current recursiveDelete: alternateDirectory ].
   Smalltalk removeKey: #'Metacello_Configuration_Test_Repository' ifAbsent: [  ].
   MCRepositoryGroup default
-    removeRepository: externalRepository;
-    removeRepository: alternateRepository;
-    removeRepository: sampleRepository
+    removeIdenticalRepository: externalRepository;
+    removeIdenticalRepository: alternateRepository;
+    removeIdenticalRepository: sampleRepository
