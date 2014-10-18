@@ -14,7 +14,9 @@ testGithubRepositoryPatternMatchingA
       Transcript
         cr;
         show: 'testGithubRepositoryPatternMatchingA: ' , ex description.
-      (ex description includesSubstring: 'API rate limit exceeded')
+      (MetacelloPlatform current
+        string: ex description
+        includesSubstring: 'API rate limit exceeded')
         ifFalse: [ 
           "don't fail test because github rate limit exceeded"
           ex pass ] ]
