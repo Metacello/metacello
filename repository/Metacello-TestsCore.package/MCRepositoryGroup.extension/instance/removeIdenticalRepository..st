@@ -4,4 +4,4 @@ removeIdenticalRepository: aRepository
     (repositories at: index) == aRepository
       ifTrue: [ 
         repositories removeAt: index.
-        ^ self changed: #'repositories' ] ]
+        ^ self ] ]
