@@ -1,4 +1,3 @@
 api actions
 record: required
-    self addStatement: #'record:' args: {required}.
-    ^ self execute
+  ^ self execute: #'record:' args: {required}

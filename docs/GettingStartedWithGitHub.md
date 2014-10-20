@@ -156,9 +156,7 @@ you've done a git `checkout` or `pull`):
 ```Smalltalk
 Metacello image
   baseline: 'Sample';
-  get.
-Metacello image
-  baseline: 'Sample';
+  get;
   load.
 ```
 

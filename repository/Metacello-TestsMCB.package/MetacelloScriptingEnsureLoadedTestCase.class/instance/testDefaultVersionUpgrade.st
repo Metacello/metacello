@@ -3,10 +3,6 @@ testDefaultVersionUpgrade
   "https://github.com/dalehenrich/metacello-work/issues/198"
 
   | registration spec |
-  Transcript
-    cr;
-    show:
-        'MetacelloScriptingEnsureLoadedTestCase>>testDefaultVersionUpgrade [0]'.
   Gofer new
     version: 'ConfigurationOfExternal-dkh.1';
     repository: externalRepository;
@@ -23,9 +19,4 @@ testDefaultVersionUpgrade
   registration := Metacello registrations
     detect: [ :each | each projectName = 'ExternalRef' ].
   spec := registration projectSpec.
-  Transcript
-    cr;
-    show:
-        'MetacelloScriptingEnsureLoadedTestCase>>testDefaultVersionUpgrade [1]: '
-            , spec versionString printString.
   self assert: spec versionString = '0.9.0'

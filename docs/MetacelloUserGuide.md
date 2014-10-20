@@ -17,10 +17,10 @@ project using Metacello:
 
 ```Smalltalk
 Gofer new
-  package: 'ConfigurationOfSeaside30';
-  ss3: 'MetaRepoForPharo20';
+  package: 'ConfigurationOfSeaside3';
+  smalltalkhubUser: 'Seaside' project: 'Seaside31';
   load.
-((Smalltalk at: #ConfigurationOfSeaside30) version: #stable) load.
+((Smalltalk at: #ConfigurationOfSeaside3) version: #stable) load.
 ```
 
 In the early days of Metacello (and Gofer) this was a great improvement
@@ -31,7 +31,7 @@ following:
 
 ```Smalltalk
 Metacello new
-  configuration: 'Seaside30';
+  configuration: 'Seaside3';
   load.
 ```
 
@@ -43,32 +43,210 @@ default values, namely the `version` of the project and the `repository` where t
 
 ```Smalltalk
 Metacello new
-  configuration: 'Seaside30';
+  configuration: 'Seaside3';
   load.
 ```
 
 Here is a variant
-of the same expression with the (current) default values explicitly specified:
+of the same expression with the default version explicitly specified (the default repository description varies depending upon the platform that you are running on):
 
 ```Smalltalk
 Metacello new
-  configuration: 'Seaside30';
+  configuration: 'Seaside3';
   version: #stable;
-  ss3: 'MetaRepoForPharo20';
+  smalltalkhubUser: 'Seaside' project: 'Seaside31';
   load.
 ```
 
 The `version` attribute can be any legal [version number][10].
-`ss3:` is a [repository shortcut][4]. You can also specify the
-full [repository description][3] as follows:
+`smalltalkhubUser:project:` is a [repository shortcut][4]. You can also specify the
+full [repository description][3] as an URL:
 
 ```Smalltalk
 Metacello new
-  configuration: 'Seaside30';
+  configuration: 'Seaside3';
   version: #stable;
-  repository: 'http://ss3.gemtalksystems.com/ss/MetaRepoForPharo20';
+  repository: 'http://smalltalkhub.com/mc/Seaside/Seaside31/main';
   load.
 ```
+
+###Load Conflicts
+Load conflicts occur if any one of the load attributes is changed when doing an *indirect* load of a project that has already been loaded into your image.
+
+A *direct* load is a project load occurs when the project is named in the Metacello load expression.
+In the following expression the version 3.1.1 of Seaside is *directly* loaded:
+
+```Smalltalk
+Metacello new
+  configuration: 'Seaside3';
+  version: '3.1.1';
+  repository: 'http://smalltalkhub.com/mc/Seaside/Seaside31/main';
+  load.
+```
+
+An *indirect* load is a project load that occurs as a result of a project dependency.
+In the following expression a version (3.1.3 as of this writing) of Seaside is *indirectly* loaded:
+
+```Smalltalk
+Metacello new
+  configuration: 'Magritte3';
+  version: '3.1.4';
+  repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
+  load: 'Seaside'.
+```
+
+Load attributes that count towards conflicts are:
+
+* configuration versus baseline
+* version
+* repository
+
+Version conflicts are divided into two categories: [upgrade](#upgrade) and [downgrade](#downgrade). 
+
+####Upgrade
+When a later version of an already loaded project is indirecty loaded, a **MetacelloAllowProjectUpgrade** exception is signaled.
+By default, upgrades are allowed (`useIncoming`). 
+
+If you want to override the default behavior you can use one the following messages:
+
+1. Disallow the upgrade of the Seaside3 project with the **#disallowUpgrades:** message:
+
+  ```Smalltalk
+  Metacello new
+    configuration: 'Magritte3';
+    version: '3.1.4';
+    repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
+    onUpgradeUseLoaded: #('Seaside3');
+    load: 'Seaside'.
+  ```
+
+2. Dsallow upgrades for all projects with the **#disallowUpgrades** message:
+
+  ```Smalltalk
+  Metacello new
+    configuration: 'Magritte3';
+    version: '3.1.4';
+    repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
+    onUpgradeUseLoaded;
+    load: 'Seaside'.
+  ```
+
+3. Access the underlying exception and the loaded and incoming Metacello regitrations with the **#onUpgrade:** message:
+
+  ```Smalltalk
+  Metacello new
+    configuration: 'Magritte3';
+    version: '3.1.4';
+    repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
+    onUpgrade: [:ex :loaded :incoming |
+      incoming baseName = 'Seaside3'
+        ifTrue: [ ex useLoaded ]
+        ifFalse: [ 
+          "default"
+          ex useIncoming ];
+    load: 'Seaside'.
+  ```
+
+####Downgrade
+When an earlier version of an already loaded project is indirectly loaded, a **MetacelloAllowProjectDowngrade** exception is signaled.
+By default, downgrades are disallowed (`useLoaded`). 
+
+If you want to override the default behavior you can use one of the following expressions:
+
+1. Allow a downgrade of Seaside3 project with the **allowDowngrades:** message:
+
+  ```Smalltalk
+  Metacello new
+    configuration: 'Magritte3';
+    version: '3.1.4';
+    repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
+    onDowngradeUseIncoming: #('Seaside3');
+    load: 'Seaside'.
+  ```
+
+2. Allow downgrades for all projects with the **allowDowngrades** message:
+
+  ```Smalltalk
+  Metacello new
+    configuration: 'Magritte3';
+    version: '3.1.4';
+    repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
+    onDowngradeUseIncoming;
+    load: 'Seaside'.
+  ```
+
+3. Access the underlying exception and the loaded and incoming Metacello regitrations with the **#onDowngrade:** message:
+
+  ```Smalltalk
+  Metacello new
+    configuration: 'Magritte3';
+    version: '3.1.4';
+    repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
+    onDowngrade: [:ex :loaded :incoming |
+      incoming baseName = 'Seaside3'
+        ifTrue: [ ex useIncoming ]
+        ifFalse: [ 
+          "default"
+          ex useLoaded ];
+    load: 'Seaside'.
+  ```
+
+####Conflicts
+When the type of project (configuration or baseline) or repository for an already loaded project is changed while doing an indirect load, a **MetacelloAllowConflictingProjectUpgrade** exception is signaled.
+By default, a **MetacelloConflictingProjectError** is signalled if the **MetacelloAllowConflictingProjectUpgrade** exception is unhandled.
+As a consequence, you must decide how you want to have the conflict resolved: 
+
+* use the incoming project specification
+* use the loaded project specification
+
+1. The **onConflictUseIncoming:useLoaded:** message can be used to specify the names of the projects for which you want to use the incoming or loaded project specifications:
+
+  ```Smalltalk
+  Metacello new
+    configuration: 'Magritte3';
+    version: '3.1.4';
+    repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
+    onConflictUseIncoming: #('Seaside3') useLoaded: #('Grease');
+    load: 'Seaside'.
+  ```
+
+2. Use the incoming project specifications for all projects with the **onConflictsUseIncoming** message:
+
+  ```Smalltalk
+  Metacello new
+    configuration: 'Magritte3';
+    version: '3.1.4';
+    repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
+    onConflictUseIncoming;
+    load: 'Seaside'.
+  ```
+
+3. Use the loaded project specifications for all projects with the **onConflictsUseLoaded** message:
+
+  ```Smalltalk
+  Metacello new
+    configuration: 'Magritte3';
+    version: '3.1.4';
+    repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
+    onConflictUseLoaded;
+    load: 'Seaside'.
+  ```
+
+4. Access the underlying exception and the loaded and incoming Metacello regitrations with the **#onConflict:** message:
+
+  ```Smalltalk
+  Metacello new
+    configuration: 'Magritte3';
+    version: '3.1.4';
+    repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
+    onConflict: [:ex :loaded :incoming |
+      incoming baseName = 'Seaside3'
+        ifTrue: [ ex useIncoming ]
+        ifFalse: [ 
+          "default - throw error"
+          ex pass ];
+    load: 'Seaside'.
+  ```
 
 ##Listing
 
@@ -95,7 +273,7 @@ specifying the names of the projects you'd like to select:
 
 ```Smalltalk
 Metacello registry
-  configuration: #('Seaside30' 'MetacelloPreview');
+  configuration: #('Seaside3' 'MetacelloPreview');
   list.
 ```
 
@@ -111,20 +289,20 @@ Monticello repositories. For example:
 ```Smalltalk
 Metacello new
   configuration: [:spec | spec name beginsWith: 'Seaside'];
-  ss3: 'MetaRepoForPharo20';
+  smalltalkhubUser: 'Seaside' project: 'Seaside31';
   list.
 ```
 
 lists the configurations whose names (sans the `ConfigurationOf`) begin
-with `Seaside` in the `MetaRepoForPharo20` in the
-[ss3](http://ss3.gemtalksystems.com/) repostory.
+with `Seaside` in the
+[smalltalk hub](http://smalltalkhub.com/mc/Seaside/Seaside31/main) repostory.
 
 ## Getting
 
 Once you've loaded a project into your image the next logical step is
 upgrading your project to a new version. 
 
-Let's say that a new `#stable` version of Seaside30 has been released
+Let's say that a new `#stable` version of Seaside3 has been released
 and that you want to upgrade. This is a two step process: 
 
 * [get a new version of the configuration][11]
@@ -137,7 +315,7 @@ configuration:
 
 ```Smalltalk
 Metacello image
-  configuration: 'Seaside30';
+  configuration: 'Seaside3';
   get.
 ```
 
@@ -145,7 +323,7 @@ By using the `image` message, you can leverage the fact that the [registry][8] r
 from which repository you loaded the original version of the configuration.
 
 The `get` command simply downloads the latest version of the
-configuration package from the repository.
+configuration package from that repository.
 
 You may download the configuration from a different repository:
 
@@ -164,12 +342,12 @@ into your image without actually loading the project itself:
 
 ```Smalltalk
 Metacello image
-  configuration: 'SeasideRest';
-  repository: 'http://smalltalkhub.com/mc/Seaside/MetacelloConfigurations/main';
+  configuration: 'Magritte3';
+  repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main';
   get.
 ```
 
-The 'SeasideRest' project information will be registered in the [registry][8] and marked
+The 'Magritte3' project information will be registered in the [registry][8] and marked
 as *unloaded*.
 
 ### Load the new version
@@ -179,7 +357,7 @@ upgrade your image with the following expression:
 
 ```Smalltalk
 Metacello image
-  configuration: 'Seaside30';
+  configuration: 'Seaside3';
   version: #stable;
   load.
 ```
@@ -192,11 +370,11 @@ command operation.
 Of course, the `load` command updates the [registry][8].
 
 If you want to load a project for which you've already done a `get`
-(like the SeasideRest project earlier), you can do the following:
+(like the Magritte project earlier), you can do the following:
 
 ```Smalltalk
 Metacello registry
-  configuration: 'SeasideRest';
+  configuration: 'Magritte';
   version: #stable;
   load.
 ```
@@ -206,25 +384,25 @@ interested in both *loaded* and *unloaded* projects.
 
 ##Locking
 
-Let's say that you are using an older version of Seaside30 (say 3.0.5)
-instead of the #stable version (3.0.7) and that your application doesn't
-work with newer versions of Seaside30 (you've tried and it's more work
-to get you application to work with the newer version of Seaside30 than
+Let's say that you are using an older version of Seaside3 (say 3.1.1)
+instead of the #stable version (3.1.3) and that your application doesn't
+work with newer versions of Seaside3 (you've tried and it's more work
+to get you application to work with the newer version of Seaside3 than
 it's worth).
 
 Let's also say that you want to try out something in the
-SeasideRest project, but when you try loading SeasideRest, you end up
-having Seaside 3.0.7 loaded as well. 
+Magritte project, but when you try loading Magritte, you end up
+having Seaside 3.1.3 loaded as well. 
 
 This is an unfortunate side effect of Metacello trying to *do the right
 thing*, only in your case it is the wrong thing.
 
 Fortunately, the [`lock` command][9] can give you control. First you
-need to `lock` the Seaside30 project:
+need to `lock` the Seaside3 project:
 
 ```Smalltalk
 Metacello image
-  configuration: 'Seaside30';
+  configuration: 'Seaside3';
   lock.
 ```
 
@@ -236,8 +414,8 @@ locked:
 
 ```Smalltalk
 Metacello image
-  configuration: 'Seaside30';
-  version: '3.0.5';
+  configuration: 'Seaside3';
+  version: '3.1.2';
   lock.
 ```
 
@@ -250,15 +428,12 @@ Warning is raised notifying you that the locked project specification
 will be used.
 
 If you don't want an interactive Warning to be raised during your load,
-you can use `onWarning:` to log and resume the Warning:
+you can use `onWarningLog` to log and resume the Warning:
 
 ```Smalltalk
-Metacello new
-  configuration: 'SeasideRest';
-  version: #stable;
-  onWarning: [:ex | 
-    Transcript cr; show: 'Warning: ', ex description.
-    ex resume ];
+Metacello registry
+  configuration: 'Magritte3';
+  onWarningLog;
   load.
 ```
 
@@ -266,30 +441,28 @@ If you want to track the use of locks explicitly you can use `onLock:`
 which is only triggered when a locked project is involved:
 
 ```Smalltalk
-Metacello new
-  configuration: 'SeasideRest';
-  version: #stable;
+Metacello registry
+  configuration: 'Magritte3';
   onLock: [:ex :existing :new | 
     Transcript cr; show: 'Locked project: ', existing projectName printString.
-    ex pass ];
+    ex honor];
   load.
 ```
 
-### Bypassing locks
+### Breaking locks
 
-Let's say that when you load the SeasideRest project you have decided
+Let's say that when you load the Magritte3 project you have decided
 that in this particular case you would like to bypass the lock and let
-the version of Seaside specified by the SeasideRest project to be loaded.
+the version of Seaside specified by the Magritte3 project to be loaded.
 
-We'll use `onLock:` to `break` the new version of the Seaside project to
+We'll use `onLock:` to `break` the lock and allow the new version of the Seaside project to
 be loaded:
 
 ```Smalltalk
-Metacello new
-  configuration: 'SeasideRest';
-  version: #stable;
+Metacello registry
+  configuration: 'Magritte3';
   onLock: [:ex :existing :new | 
-    existing baseName = 'Seaside30'
+    existing baseName = 'Seaside3'
       ifTrue: [ ex break ].
     ex pass ];
   load.
@@ -299,163 +472,41 @@ use the message `honor` if you want to honor the lock and not load the new versi
 
 `break` is a synonym for `allow` and `honor` is a synonym for `disallow`.
 
+With `onLockBreak:` you only need to supply the name of the projects for which you want the locks broken:
+
+```Smalltalk
+Metacello registry
+  configuration: 'Magritte3';
+  onLockBreak: #( 'Seaside3' );
+  load.
+```
+
+If you want to `break` all locks uncoditionally then use `onLockBreak`:
+
+```Smalltalk
+Metacello registry
+  configuration: 'Magritte3';
+  onLockBreak;
+  load.
+```
+
+When a lock is broken, the project is not unlocked. 
+The lock remains and is applied to the to the freshly loaded version and repository.
+
 ### Upgrading a locked project
 
 If you want to explicitly upgrade a locked project, you can use the
-`load` command. The following command will upgrade Seaside30 to version
-3.0.6 even if it is locked:
+`load` command. The following command will upgrade Seaside3 to version
+3.1.2 even if it is locked:
 
  ```Smalltalk
 Metacello image
-  configuration: 'Seaside30';
-  version: '3.0.6';
+  configuration: 'Seaside3';
+  version: '3.1.2';
   lock.
 ```
 
-The newly loaded of the project will continue to be locked.
-
-### Locking Example
-
-A [detailed locking example project](LockCommandReference.md) is available.
-
-## Switching Project Repositories
-
-If you have loaded a project directly from GitHub, say
-the Zinc repository:
-
-```Smalltalk
-Metacello new
-  baseline: 'Zinc';
-  repository: 'github://glassdb/zinc:gemstone3.1/repository';
-  get.
-Metacello new
-  baseline: 'Zinc';
-  repository: 'github://glassdb/zinc:gemstone3.1/repository';
-  load: 'Tests'
-```
-
-The ``github://` repository is read only. If you want to save new versions 
-of packages to the repository, you must clone the GitHub repository to your
-local disk:
-
-```Shell
-cd /opt/git
-git clone https://github.com/glassdb/zinc.git
-cd zinc
-git checkout gemstone3.1
-```
-
-Then load Zinc from the local git repository using a
-`filetree://` repository:
-
-```Smalltalk
-Metacello new
-  baseline: 'Zinc';
-  repository: 'filetree:///opt/git/zinc/repository';
-  get.
-Metacello new
-  baseline: 'Zinc';
-  repository: 'filetree:///opt/git/zinc/repository';
-  onConflict: [:ex | ex useNew ];
-  load: 'Tests'
-```
-
-Note that we are using an `onConflict:` block.
-
-Metacello recognizes that you are loading the project
-from a different repository than the one originally used and that is 
-considered an error. Metacello signals a **MetacelloConflictingProjectError**.
-
-To avoid the **MetacelloConflictingProjectError** you use the
-`onConflict:` block and send `useNew` to the exception to use the new project
-or `useExisting` to preserve the loaded state`.
-
-## Project upgrades initiated by dependent proejcts
-
-If we return to the earlier example where we have loaded Seaside 3.0.5
-into our image:
-
-```Smalltalk
-Metacello image
-  configuration: 'Seaside30';
-  version: '3.0.5';
-  load.
-```
-
-and then attempt to load SeasideRest which requires Seaside 3.0.7:
-
-```Smalltalk
-Metacello image
-  configuration: 'SeasideRest';
-  version: #'stable';
-  load.
-```
-
-In the absence of locks, Metacello will silently upgrade the Seaside
-project to Seaside 3.0.7. If you'd like to explicitly track Seaside
-upgrades, you can use `onUpgrade:`:
-
-```Smalltalk
-Metacello image
-  configuration: 'SeasideRest';
-  version: #'stable';
-  onUpgrade: [:ex :existing :new |
-    existing baseName = 'Seaside30'
-      ifTrue: [ 
-        Transcript cr; show: 'Seaside30 upgraded to: ', new versionString ].
-    ex pass ].
-  load.
-```
-
-If you would like to explicitly prevent the upgrade (without using a
-lock) you can do the following:
-
-```Smalltalk
-Metacello image
-  configuration: 'SeasideRest';
-  version: #'stable';
-  onUpgrade: [:ex :existing :new |
-    existing baseName = 'Seaside30'
-      ifTrue: [ ex disallow ].
-    ex pass ].
-  load.
-```
-
-If we assume that you have already loaded Seaside 3.0.9
-into our image:
-
-```Smalltalk
-Metacello image
-  configuration: 'Seaside30';
-  version: '3.0.9';
-  load.
-```
-
-and then attempt to load SeasideRest which requires version Seaside 3.0.7:
-
-```Smalltalk
-Metacello image
-  configuration: 'SeasideRest';
-  version: #'stable';
-  load.
-```
-Metacello will silently ignore the downgrade request for Seaside and
-leave Seaside 3.0.9 installed in the image.
-
-If you want to have Seaside 3.0.9 downgraded then you used the `onDowngrade:` block:
-
-```Smalltalk
-Metacello image
-  configuration: 'SeasideRest';
-  version: #'stable';
-  onDowngrade: [:ex :existing :new |
-    existing baseName = 'Seaside30'
-      ifTrue: [ ex allow ].
-    ex pass ].
-  load.
-```
-
-and Seaside 3.0.7 will be loaded.
+The newly loaded version of the project will continue to be locked.
 
 [1]: MetacelloScriptingAPI.md
 [2]: http://www.lukas-renggli.ch/blog/gofer

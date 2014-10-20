@@ -1,6 +1,5 @@
 api actions
 unlock
-    "unlock projects in registry"
+  "unlock projects in registry"
 
-    self addStatement: #'unlock' args: #().
-    ^ self execute
+  ^ self execute: #'unlock' args: #()

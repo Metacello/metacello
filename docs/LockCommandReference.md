@@ -246,6 +246,7 @@ Metacello new
   repository: 'http://ss3.gemtalksystems.com/ss/external';
   cacheRepository: 'filetree:///opt/git/externalDir/repository';
   ignoreImage;
+  get; "get will download the ConfigurationOfExternal to the cache repository"
   fetch: 'ALL'.
 ```
 If you project is more complex (i.e., has dependent projects) then you
@@ -332,10 +333,8 @@ Use the following set of expressions to load the **Example** project:
 Metacello new
   baseline: 'Example';
   repository: 'github://dalehenrich/example:otto/repository';
-  get.
-Metacello registry
-  baseline: 'Example';
   onLock: [ :ex | ex honor ];
+  get;
   load: 'Tests'.
 ```
 The `onLock:` block gets triggered every time a locked project is loaded, 

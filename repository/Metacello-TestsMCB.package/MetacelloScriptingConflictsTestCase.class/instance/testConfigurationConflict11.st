@@ -1,6 +1,6 @@
 tests
 testConfigurationConflict11
-  "testConfigurationConflict4 with useNew"
+  "testConfigurationConflict4 with useIncoming"
 
   self testFileTreeLoadConfigurationVersions.
   [ 
@@ -11,7 +11,7 @@ testConfigurationConflict11
     silently;
     load ]
     on: MetacelloAllowProjectDowngrade
-    do: [ :ex | ex useNew ].
+    do: [ :ex | ex useIncoming ].
   self
     validateExpectedConfigurationClassName: 'ConfigurationOfConflict'
     expectedConfigurationVersion: '1.1.0'

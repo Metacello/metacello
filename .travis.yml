@@ -19,8 +19,8 @@ env:
 #  Squeak-4.5
 #  Squeak-Trunk
 
-#   - ST=Pharo-1.4 LoadList="'default'" TRAVIS_SCRIPT=userGuide.st 
-#   - ST=GemStone-3.1.0.6 LoadList="'default'" TRAVIS_SCRIPT=userGuide.st # disable until Issue #241 addressed
+   - ST=Pharo-3.0 LoadList="'default'" TRAVIS_SCRIPT=userGuide.st 
+   - ST=GemStone-3.2.2 LoadList="'default'" TRAVIS_SCRIPT=userGuide.st
 
    - ST=Pharo-2.0 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
    - ST=Pharo-2.0 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
@@ -44,12 +44,11 @@ env:
    - ST=Squeak-4.4 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
    - ST=Squeak-4.4 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
 
-#   see https://github.com/dalehenrich/metacello-work/issues/262
    - ST=Squeak-Trunk LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
    - ST=Squeak-Trunk LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
 
-#   - ST=GemStone-2.4.4.1 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
-#   - ST=GemStone-2.4.4.1 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+   - ST=GemStone-2.4.4.1 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+   - ST=GemStone-2.4.4.1 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
 #   - ST=GemStone-2.4.4.7 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
 #   - ST=GemStone-2.4.4.7 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
 #   - ST=GemStone-2.4.5 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st

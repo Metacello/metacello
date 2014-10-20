@@ -4,6 +4,7 @@
 	"instance" : {
 		"setUpRepositoryContents" : "dkh 05/10/2013 14:48",
 		"tearDownPackageList" : "dkh 07/28/2013 10:41",
+		"tearDownRepositories" : "dkh 10/18/2014 09:28",
 		"testBaselineThenConfigurationConflict" : "dkh 07/28/2013 10:44",
 		"testBaselineThenConfigurationCorrect" : "dkh 07/28/2013 10:42",
 		"testConfigurationLoadingBaseline" : "dkh 07/28/2013 10:34",

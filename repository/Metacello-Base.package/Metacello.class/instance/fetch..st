@@ -1,4 +1,3 @@
 api actions
 fetch: required
-    self addStatement: #'fetch:' args: {required}.
-    ^ self execute
+  ^ self execute: #'fetch:' args: {required}

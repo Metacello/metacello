@@ -1,0 +1,16 @@
+{
+	"category" : "Metacello-TestsMCA",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"alternateDirectory",
+		"alternateRepository",
+		"sampleRepository" ],
+	"name" : "MetacelloScriptingDocumentationIssue196TestCase",
+	"pools" : [
+		 ],
+	"super" : "MetacelloScriptingTestCase",
+	"type" : "normal" }

@@ -6,7 +6,8 @@
 		"downloadCache" : "dkh 09/29/2014 12:17",
 		"flushDownloadCache" : "dkh 09/29/2014 12:17",
 		"isEnabled" : "JohanBrichau 10/11/2014 02:04",
+		"projectTagsUrlFor:" : "dkh 10/14/2014 14:26",
 		"projectZipUrlFor:versionString:" : "dkh 09/29/2014 12:24",
 		"resetCacheDirectoryIfInvalid" : "dkh 09/29/2014 12:17" },
 	"instance" : {
-		 } }
+		"normalizeTagsData:" : "dkh 10/14/2014 15:18" } }

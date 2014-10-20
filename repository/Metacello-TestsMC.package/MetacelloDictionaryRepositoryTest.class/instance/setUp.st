@@ -2,6 +2,7 @@ running
 setUp
   | repo |
   super setUp.
+  MetacelloPlatform current clearPackageCache.
   MetacelloConfigurationResource projectAttributes: nil.
   repo := self monticelloRepository.
   self tempRepositories add: repo.

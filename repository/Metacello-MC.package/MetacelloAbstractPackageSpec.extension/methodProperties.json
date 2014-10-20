@@ -13,6 +13,7 @@
 		"resolveToAllPackagesIn:into:visited:" : "dkh 6/8/2012 14:04:22",
 		"resolveToAllPackagesIn:visited:" : "dkh 6/8/2012 14:04:22",
 		"resolveToLoadableSpec" : "dkh 6/8/2012 14:04:22",
+		"resolveToPackagesIn:andProjects:visited:" : "dkh 10/01/2014 17:20",
 		"resolveToPackagesIn:visited:" : "dkh 6/8/2012 14:04:22",
 		"updateForSpawnMethod:" : "dkh 6/8/2012 14:04:22",
 		"updatePackageRepositoriesFor:" : "dkh 6/8/2012 14:04:22",

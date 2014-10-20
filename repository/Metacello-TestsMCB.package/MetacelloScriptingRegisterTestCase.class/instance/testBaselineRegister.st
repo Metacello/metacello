@@ -15,7 +15,8 @@ testBaselineRegister
         = {'github://dalehenrich/sample:master/repository'} ]
     on: Error
     do: [ :ex | 
-      Transcript
-        cr;
-        show: 'testBaselineRegister error: ' , ex description.
-      ex pass ]
+      "see https://github.com/dalehenrich/metacello-work/issues/303"
+      (MetacelloPlatform current
+        string: ex description
+        includesSubstring: 'SSL error, code: -5')
+        ifFalse: [ ex pass ] ]
