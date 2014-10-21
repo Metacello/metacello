@@ -154,13 +154,13 @@ baseline: spec
     for: #'pharo1.x'
     do: [ 
       spec
-       configuration: 'OSProcess'
+        configuration: 'OSProcess'
           with: [ spec repository: 'http://www.squeaksource.com/MetacelloRepository' ];
-       package: 'Metacello-Platform'
+        package: 'Metacello-Platform'
           with: [ 
-            spec
-              file: 'Metacello-Platform.pharo';
-              requires: #('OSProcess') ] ].
+              spec
+                file: 'Metacello-Platform.pharo';
+                requires: #('OSProcess') ] ].
   spec
     for: #'pharo1.1.x'
     do: [ 
@@ -270,4 +270,13 @@ baseline: spec
           with: [ spec requires: 'Metacello-Platform' ];
         package: 'Metacello-Platform'
           with: [ spec includes: 'Metacello-GS2x-Platform' ];
+        yourself ].
+  spec
+    for: #'gs3.x'
+    do: [ 
+      spec
+        package: 'Metacello-GS3x-Platform'
+          with: [ spec requires: 'Metacello-Platform' ];
+        package: 'Metacello-Platform'
+          with: [ spec includes: 'Metacello-GS3x-Platform' ];
         yourself ]

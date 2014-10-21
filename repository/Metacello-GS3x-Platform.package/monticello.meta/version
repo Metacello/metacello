@@ -1,0 +1,1 @@
+(name 'Metacello-GS3x-Platform-dkh.1' message 'Issue #306: move MetacelloNameNotDefinedError extension method to 3.x specific package' id '5f50eed7-28da-4d37-bddf-67f86a5fc0f4' date '10/20/2014' time '18:38:18' author 'dkh' ancestors () stepChildren ())
