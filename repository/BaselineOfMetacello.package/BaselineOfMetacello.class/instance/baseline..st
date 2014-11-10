@@ -120,7 +120,7 @@ baseline: spec
         group: 'TravisCI_1' with: #('Metacello-TestsPlatform');
         yourself ].
   spec
-    for: #'pharo'
+    for: #(#'pharo1.x' #'pharo2.x')
     do: [ 
       spec
         project: 'ProfStef'
@@ -207,10 +207,14 @@ baseline: spec
   spec
     for: #(#'pharo3.x' #'pharo4.x')
     do: [ 
-      spec removeProject: 'OSProcess'.
       spec
+        package: 'Metacello-PharoCommonPlatform'
+          with: [ spec requires: #('Metacello-MC') ];
         package: 'Metacello-Platform'
-          with: [ spec file: 'Metacello-Platform.pharo30' ];
+          with: [ 
+              spec
+                file: 'Metacello-Platform.pharo30';
+                requires: #('Metacello-PharoCommonPlatform') ];
         package: 'Metacello-TestsCommonMC'
           with: [ spec file: 'Metacello-TestsCommonMC.pharo20' ];
         yourself.
