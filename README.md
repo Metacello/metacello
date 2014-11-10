@@ -22,6 +22,7 @@ Metacello new
 Metacello new
   baseline: 'Metacello';
   repository: 'github://dalehenrich/metacello-work:master/repository';
+  onConflict: [:ex | ex allow];
   load
 ```
 
@@ -43,6 +44,16 @@ Gofer new
   version: #stable;
   repository: 'github://dalehenrich/metacello-work:configuration';
   load.
+"Now load latest version of Metacello"
+Metacello new
+  baseline: 'Metacello';
+  repository: 'github://dalehenrich/metacello-work:master/repository';
+  get.
+Metacello new
+  baseline: 'Metacello';
+  repository: 'github://dalehenrich/metacello-work:master/repository';
+  onConflict: [:ex | ex allow];
+  load
 ```
 
 ###Squeak
@@ -64,6 +75,16 @@ Installer gemsource
   version: #stable;
   repository: 'github://dalehenrich/metacello-work:configuration';
   load.
+"Now load latest version of Metacello"
+Metacello new
+  baseline: 'Metacello';
+  repository: 'github://dalehenrich/metacello-work:master/repository';
+  get.
+Metacello new
+  baseline: 'Metacello';
+  repository: 'github://dalehenrich/metacello-work:master/repository';
+  onConflict: [:ex | ex allow];
+  load
 ```
 
 
