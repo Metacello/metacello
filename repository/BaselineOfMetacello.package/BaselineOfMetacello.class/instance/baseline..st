@@ -205,7 +205,7 @@ baseline: spec
         baseline: 'FileTree'
         with: [ spec repository: 'github://dalehenrich/filetree:pharo2.0/repository' ] ].
   spec
-    for: #'pharo3.x'
+    for: #(#'pharo3.x' #'pharo4.x')
     do: [ 
       spec removeProject: 'OSProcess'.
       spec
