@@ -25,10 +25,10 @@ env:
 
    - ST=Pharo-4.0 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
    - ST=Pharo-4.0 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
-#   - ST=GemStone-3.2.2 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
-#   - ST=GemStone-3.2.2 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
-#   - ST=Squeak-4.5 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st 
-#   - ST=Squeak-4.5 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st # until Issue 
+   - ST=GemStone-3.2.2 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+   - ST=GemStone-3.2.2 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+   - ST=Squeak-4.5 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st 
+   - ST=Squeak-4.5 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st # until Issue 
 #
 ##   - ST=PharoCore-1.1 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
 ##   - ST=PharoCore-1.1 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
