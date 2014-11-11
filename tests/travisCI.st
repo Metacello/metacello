@@ -9,28 +9,25 @@ metacelloDir := (Smalltalk at: #'FileDirectory' ifAbsent: [  ])
     (fileDirectoryClass default directoryNamed: gitCache, '/metacello-work' ) ].
 
 [
-MetacelloBuilderTravisCI retry: [ "https://github.com/dalehenrich/metacello-work/issues/308 : retry on failure"
-  Gofer new
+Gofer new
     url: 'http://ss3.gemtalksystems.com/ss/FileTree';
     package: 'ConfigurationOfFileTree';
-    load ].
+    load.
 ((Smalltalk at: #'ConfigurationOfFileTree') project version: #'stable')
   load: 'default'.
-MetacelloBuilderTravisCI retry: [ "https://github.com/dalehenrich/metacello-work/issues/308 : retry on failure"
-  Gofer new
+Gofer new
     url: 'http://seaside.gemtalksystems.com/ss/metacello';
     package: 'ConfigurationOfGofer';
-    load ].
+    load.
 ((Smalltalk at: #'ConfigurationOfGofer') project version: #'stable')
   load.
 metacelloConfigurationRepository := (Smalltalk at: #'MCFileTreeRepository') new
   directory: metacelloDir;
   yourself.
-MetacelloBuilderTravisCI retry: [ "https://github.com/dalehenrich/metacello-work/issues/308 : retry on failure"
-  Gofer new
+Gofer new
     repository: metacelloConfigurationRepository;
     package: 'ConfigurationOfMetacello';
-    load ].
+    load.
 (version := (Smalltalk at: #'ConfigurationOfMetacello') project version: #stable)
   load: 'TravisCI'.
 
