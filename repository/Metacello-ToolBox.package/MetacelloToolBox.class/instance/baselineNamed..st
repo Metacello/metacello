@@ -14,6 +14,6 @@ baselineNamed: baseName
         classInstVars: #()
         poolDictionaries: #()
         category: baselineName.
-      PackageInfo registerPackageName: baselineName ].
+      MetacelloPlatform current registerPackageNamed: baselineName ].
   project := (MetacelloPlatform current globalNamed: baselineName asSymbol)
     project

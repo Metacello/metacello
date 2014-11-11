@@ -12,7 +12,7 @@ testCommitNewPackageSpec
     package: 'GoferBar';
     metacelloLoad.	"Create new package"
   packageName := 'GoferFaux'.
-  PackageInfo registerPackageName: packageName.
+  MetacelloPlatform current registerPackageNamed: packageName.
   MCWorkingCopy forPackage: (MetacelloTestsMCPackage new name: packageName).
   (MCClassDefinition
     name: (packageName copyWithout: $-) asSymbol

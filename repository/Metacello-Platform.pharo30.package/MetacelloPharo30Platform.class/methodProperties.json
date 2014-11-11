@@ -6,6 +6,7 @@
 		"defaultDirectory" : "ChristopheDemarey 4/29/2013 14:17",
 		"defaultRepositoryDescription" : "ChristopheDemarey 09/12/2014 03:01:45",
 		"directoryFromPath:relativeTo:" : "ChristopheDemarey 4/29/2013 15:14",
+		"downloadJSON:username:pass:" : "dkh 10/14/2014 17:20:04",
 		"downloadZipArchive:to:" : "ChristopheDemarey 09/12/2014 03:01:45",
 		"ensureDirectoryExists:" : "ChristopheDemarey 7/22/2013 11:20",
 		"extractRepositoryFrom:to:" : "ChristopheDemarey 9/19/2013 10:35",
@@ -17,6 +18,7 @@
 		"parentDirectoryOf:" : "ChristopheDemarey 5/29/2013 18:16",
 		"readStreamOn:do:" : "ChristopheDemarey 5/14/2013 17:55",
 		"recursiveDelete:" : "ChristopheDemarey 5/27/2013 17:43",
+		"registerPackageNamed:" : "dkh 10/14/2014 17:20:04",
 		"string:includesSubstring:" : "ChristopheDemarey 5/31/2013 13:02",
 		"suspendSystemUpdateEventsDuring:" : "ChristopheDemarey 5/27/2013 16:18",
 		"tempFileFor:suffix:" : "ChristopheDemarey 7/15/2014 15:48" } }
