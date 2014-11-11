@@ -14,9 +14,8 @@ version10beta3217: spec
       spec
         baseline: 'Metacello'
           with: [ 
-              "This SHA is only temporary ... pointing at issue_273 branch not master ... for testing only"
               spec
                 loads: #('batch');
                 repository:
-                    'github://dalehenrich/metacello-work:a7f763f558741c918784cc7818b48fdea2ea46bd/repository' ];
+                    'github://dalehenrich/metacello-work:e54f0a833fa31e7a7728bf886aca6c43e1e8f6a5/repository' ];
         import: 'Metacello' ]
