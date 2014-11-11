@@ -1,6 +1,5 @@
 attributes
 defaultPlatformAttributes
-
-	| stoneVersionAtts |
-	(stoneVersionAtts := self stoneVersionAttributes) ifNil: [^ #( #gemstone )].
-	^ stoneVersionAtts
+  | stoneVersionAtts |
+  (stoneVersionAtts := self stoneVersionAttributes) ifNil: [ ^ #(#'gemstone') ].
+  ^ stoneVersionAtts , self devKitPlatformAttributes
