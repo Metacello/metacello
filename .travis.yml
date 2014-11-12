@@ -11,19 +11,20 @@ env:
 # Pharo
 #  Pharo-1.4
 #  Pharo-2.0
-#  Pharo-3.0 (although travis tests not passing)
+#  Pharo-3.0 
+#  Pharo-4.0 
 #
 # Squeak
-#  Squeak-4.3
+#  Squeak-4.3 (not all tests are passing)
 #  Squeak-4.4
 #  Squeak-4.5
 #  Squeak-Trunk
 
-   - ST=Pharo-3.0 LoadList="'default'" TRAVIS_SCRIPT=userGuide.st 
+   - ST=Pharo-4.0 LoadList="'default'" TRAVIS_SCRIPT=userGuide.st 
    - ST=GemStone-3.2.2 LoadList="'default'" TRAVIS_SCRIPT=userGuide.st
 
-#   - ST=Pharo-4.0 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
-#   - ST=Pharo-4.0 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+   - ST=Pharo-4.0 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+   - ST=Pharo-4.0 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
    - ST=GemStone-3.2.2 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
    - ST=GemStone-3.2.2 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
    - ST=Squeak-4.5 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st 
@@ -51,12 +52,14 @@ env:
 
    - ST=GemStone-2.4.4.1 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
    - ST=GemStone-2.4.4.1 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
-#   - ST=GemStone-2.4.4.7 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
-#   - ST=GemStone-2.4.4.7 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+#   - ST=GemStone-2.4.4.8 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+#   - ST=GemStone-2.4.4.8 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
 #   - ST=GemStone-2.4.5 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
 #   - ST=GemStone-2.4.5 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
-   - ST=GemStone-2.4.5.1 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
-   - ST=GemStone-2.4.5.1 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+   - ST=GemStone-2.4.5.3 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+   - ST=GemStone-2.4.5.3 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+   - ST=GemStone-2.4.6 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+   - ST=GemStone-2.4.6 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
 #   - ST=GemStone-3.0.1 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
 #   - ST=GemStone-3.0.1 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
    - ST=GemStone-3.1.0.6 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
