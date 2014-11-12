@@ -4,7 +4,7 @@ version10beta3217: spec
   spec
     for: #'common'
     do: [ 
-      spec blessing: #'development'.
+      spec blessing: #'release'.
       spec
         description:
           '1.0-beta.32.17: add support for Pharo4.0
