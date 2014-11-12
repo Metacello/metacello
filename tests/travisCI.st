@@ -10,24 +10,24 @@ metacelloDir := (Smalltalk at: #'FileDirectory' ifAbsent: [  ])
 
 [
 Gofer new
-  url: 'http://ss3.gemtalksystems.com/ss/FileTree';
-  package: 'ConfigurationOfFileTree';
-  load.
+    url: 'http://ss3.gemtalksystems.com/ss/FileTree';
+    package: 'ConfigurationOfFileTree';
+    load.
 ((Smalltalk at: #'ConfigurationOfFileTree') project version: #'stable')
   load: 'default'.
 Gofer new
-  url: 'http://seaside.gemtalksystems.com/ss/metacello';
-  package: 'ConfigurationOfGofer';
-  load.
+    url: 'http://seaside.gemtalksystems.com/ss/metacello';
+    package: 'ConfigurationOfGofer';
+    load.
 ((Smalltalk at: #'ConfigurationOfGofer') project version: #'stable')
   load.
 metacelloConfigurationRepository := (Smalltalk at: #'MCFileTreeRepository') new
   directory: metacelloDir;
   yourself.
 Gofer new
-  repository: metacelloConfigurationRepository;
-  package: 'ConfigurationOfMetacello';
-  load.
+    repository: metacelloConfigurationRepository;
+    package: 'ConfigurationOfMetacello';
+    load.
 (version := (Smalltalk at: #'ConfigurationOfMetacello') project version: #stable)
   load: 'TravisCI'.
 
