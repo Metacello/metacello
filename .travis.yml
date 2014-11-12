@@ -34,7 +34,7 @@ env:
    - ST=Pharo-3.0 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
 #   - ST=Pharo-4.0 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
 
-   - ST=Squeak-4.3 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
+#   - ST=Squeak-4.3 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
    - ST=Squeak-4.4 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
    - ST=Squeak-4.5 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
    - ST=Squeak-Trunk BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
