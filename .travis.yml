@@ -4,9 +4,9 @@ env:
 # Tested platforms and versions:
 #
 # GemStone
-#  GemStone-2.4.5.1
-#  GemStone-3.1.0.6
-#  GemStone-3.2.2
+#  GemStone-2.4.x
+#  GemStone-3.1.x
+#  GemStone-3.2.x
 #
 # Pharo
 #  Pharo-1.4
@@ -58,8 +58,8 @@ env:
 #   - ST=GemStone-2.4.5 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
    - ST=GemStone-2.4.5.3 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
    - ST=GemStone-2.4.5.3 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
-   - ST=GemStone-2.4.6 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
-   - ST=GemStone-2.4.6 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+#   - ST=GemStone-2.4.6 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st # https://github.com/dalehenrich/metacello-work/issues/312
+#   - ST=GemStone-2.4.6 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st # https://github.com/dalehenrich/metacello-work/issues/312
 #   - ST=GemStone-3.0.1 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
 #   - ST=GemStone-3.0.1 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
    - ST=GemStone-3.1.0.6 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
