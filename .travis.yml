@@ -8,7 +8,7 @@ env:
    - ST=Squeak-4.3 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
    - ST=Squeak-4.4 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
    - ST=Squeak-4.5 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
-   - ST=Squeak-Trunk BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
+#   - ST=Squeak-Trunk BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st # https://github.com/dalehenrich/metacello-work/issues/308 ... not going to be fixed
    - ST=GemStone-2.4.5.1 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
    - ST=GemStone-2.4.4.7 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
    - ST=GemStone-3.0.1 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
@@ -24,7 +24,7 @@ env:
    - ST=Squeak-4.3 BUILD_ARG=-X TRAVIS_SCRIPT=travisCI.st
    - ST=Squeak-4.4 BUILD_ARG=-X TRAVIS_SCRIPT=travisCI.st
    - ST=Squeak-4.5 BUILD_ARG=-X TRAVIS_SCRIPT=travisCI.st 
-   - ST=Squeak-Trunk BUILD_ARG=-X TRAVIS_SCRIPT=travisCI.st # https://github.com/dalehenrich/metacello-work/issues/308 ... not going to be fixed
+#   - ST=Squeak-Trunk BUILD_ARG=-X TRAVIS_SCRIPT=travisCI.st # https://github.com/dalehenrich/metacello-work/issues/308 ... not going to be fixed
 
    - ST=PharoCore-1.1 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
    - ST=PharoCore-1.2 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
