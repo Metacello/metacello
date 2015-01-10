@@ -21,12 +21,12 @@ env:
 #  Squeak-Trunk
 
    - ST=Pharo-4.0 LoadList="'default'" TRAVIS_SCRIPT=userGuide.st 
-   - ST=GemStone-3.2.2 LoadList="'default'" TRAVIS_SCRIPT=userGuide.st
+   - ST=GemStone-3.2.3 LoadList="'default'" TRAVIS_SCRIPT=userGuide.st
 
    - ST=Pharo-4.0 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
    - ST=Pharo-4.0 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
-   - ST=GemStone-3.2.2 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
-   - ST=GemStone-3.2.2 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+   - ST=GemStone-3.2.3 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+   - ST=GemStone-3.2.3 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
    - ST=Squeak-4.5 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st 
    - ST=Squeak-4.5 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st # until Issue 
 
@@ -64,6 +64,14 @@ env:
 #   - ST=GemStone-3.0.1 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
    - ST=GemStone-3.1.0.6 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
    - ST=GemStone-3.1.0.6 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+
+notifications:
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/47796c01bb932d6a0300 # dalehenrich/chat
+    on_success: always  # options: [always|never|change] default: always
+    on_failure: always  # options: [always|never|change] default: always
+    on_start: false     # default: false
 
 install:
    - export PROJECT_HOME="$(pwd)"
