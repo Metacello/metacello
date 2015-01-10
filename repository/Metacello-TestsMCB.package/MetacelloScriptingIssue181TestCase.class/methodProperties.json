@@ -3,7 +3,7 @@
 		 },
 	"instance" : {
 		"setUpRepositories" : "dkh 07/16/2013 14:01",
-		"tearDownPackageList" : "dkh 08/30/2014 09:48",
+		"tearDownPackageList" : "dkh 01/10/2015 09:07",
 		"testBaselineLoad" : "dkh 07/16/2013 19:15",
 		"testBaselineLockIssue253" : "dkh 09/19/2014 11:02",
 		"testIssue185a" : "dkh 07/19/2013 14:29",
@@ -11,4 +11,7 @@
 		"testIssue185c" : "dkh 07/19/2013 15:45",
 		"testIssue215a" : "dkh 11/24/2013 20:29",
 		"testIssue215b" : "dkh 11/24/2013 20:27",
-		"testIssue215c" : "dkh 11/24/2013 20:53" } }
+		"testIssue215c" : "dkh 11/24/2013 20:53",
+		"testIssue317a" : "dkh 01/10/2015 09:02",
+		"testIssue317b" : "dkh 01/10/2015 09:04",
+		"testIssue317c" : "dkh 01/10/2015 09:09" } }
