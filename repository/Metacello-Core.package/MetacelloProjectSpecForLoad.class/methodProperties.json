@@ -2,10 +2,13 @@
 	"class" : {
 		 },
 	"instance" : {
+		"hasLoaded" : "dkh 01/11/2015 14:31",
 		"hasOverride" : "dkh 6/5/2012 19:01:24",
+		"loadedProjectSpec" : "dkh 01/11/2015 13:14",
+		"loadedProjectSpec:" : "dkh 01/11/2015 13:14",
 		"overrideProjectSpec" : "dkh 6/5/2012 19:01:24",
 		"overrideProjectSpec:" : "dkh 6/5/2012 19:01:24",
-		"performCurrentVersionTestAgainst:operator:targetVersionStatus:using:" : "dkh 01/11/2015 08:28",
+		"performCurrentVersionTestAgainst:operator:targetVersionStatus:using:" : "dkh 01/11/2015 14:51",
 		"performLoad" : "dkh 11/23/2013 15:32",
 		"projectSpec" : "dkh 6/5/2012 19:01:24",
 		"projectSpec:" : "dkh 6/5/2012 19:01:24",

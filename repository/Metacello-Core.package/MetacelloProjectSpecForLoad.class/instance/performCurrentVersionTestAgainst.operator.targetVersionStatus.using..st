@@ -2,7 +2,7 @@ operations
 performCurrentVersionTestAgainst: vrsn operator: anOperator targetVersionStatus: targetVersionStatus using: anMCLoader
   "answer true if the current state of image is to be left as is"
 
-  | currentVersion existing new |
+  | loadedVersion existing new |
   vrsn ifNil: [ ^ false ].
   self useDetermineVersionForLoad
     ifTrue: [ 
@@ -19,8 +19,14 @@ performCurrentVersionTestAgainst: vrsn operator: anOperator targetVersionStatus:
       (targetVersionStatus includes: cv versionStatus)
         ifTrue: [ ^ cv perform: anOperator with: vrsn ].
       ^ false ].
+  self hasLoaded not
+    ifTrue: [ 
+      "the project is not currently loaded"
+      ^ false ].
   (self hasOverride not or: [ targetVersionStatus ~= #(#'allLoadedToSpec') ])
-    ifTrue: [ ^ false ].
+    ifTrue: [ 
+      "load the specified project"
+      ^ false ].
   (self overrideProjectSpec allPackagesLoaded: anMCLoader)
     ifFalse: [ 
       "roughly equivalent to versionStatus test above (#'allLoadedToSpec')"
@@ -30,17 +36,17 @@ performCurrentVersionTestAgainst: vrsn operator: anOperator targetVersionStatus:
     ifFalse: [ 
       "if the project is not loaded at all"
       ^ false ].
-  (currentVersion := self overrideProjectSpec versionOrNil) ifNil: [ ^ false ].
-  currentVersion = vrsn
+  (loadedVersion := self loadedProjectSpec versionOrNil) ifNil: [ ^ false ].
+  loadedVersion = vrsn
     ifTrue: [ 
       "same version but are they equal"
-      ^ self projectSpec compareEqual: self overrideProjectSpec ].
-  existing := self overrideProjectSpec asProjectRegistration.
+      ^ self loadedProjectSpec compareEqual: self overrideProjectSpec ].
+  existing := self loadedProjectSpec asProjectRegistration.
   new := self projectSpec asProjectRegistration.
-  ^ currentVersion > vrsn
+  ^ loadedVersion > vrsn
     ifTrue: [ 
       "answer false if downgrade allowed"
-      (MetacelloAllowProjectDowngrade new
+      ^ (MetacelloAllowProjectDowngrade new
         existingProjectRegistration: existing;
         newProjectRegistration: new;
         signal) == existing ]

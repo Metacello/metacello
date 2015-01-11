@@ -8,7 +8,8 @@
 	"instvars" : [
 		"projectSpec",
 		"useDetermineVersionForLoad",
-		"overrideProjectSpec" ],
+		"overrideProjectSpec",
+		"loadedProjectSpec" ],
 	"name" : "MetacelloProjectSpecForLoad",
 	"pools" : [
 		 ],

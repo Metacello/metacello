@@ -28,7 +28,7 @@ testIssue317c
     configuration: 'ReferenceIssue317';
     version: '1.0.0';
     onDowngrade: [ :ex :existing :new | 
-          new projectSpec operator: #'='.
+          "new projectSpec operator: #'='."
           ex allow ];
     repository: 'dictionary://Metacello_Configuration_Test_Repository';
     silently;
