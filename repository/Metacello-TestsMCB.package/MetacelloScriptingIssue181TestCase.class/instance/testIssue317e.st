@@ -1,5 +1,5 @@
 running
-testIssue317c
+testIssue317e
   "https://github.com/dalehenrich/metacello-work/issues/317"
 
   | wc |
@@ -27,7 +27,7 @@ testIssue317c
   Metacello new
     configuration: 'ReferenceIssue317';
     version: '1.0.0';
-    onDowngrade: [ :ex | ex allow ];
+    onDowngradeUseIncoming: #('Issue317');
     repository: 'dictionary://Metacello_Configuration_Test_Repository';
     silently;
     get;

@@ -13,6 +13,8 @@ performLoad
       | override |
       override := self overrideProjectSpec copy.
       override mergeScriptLoads: spec.
+      self isDowngrade
+        ifTrue: [ override operator: #'=' ].
       override loadVersion: nil ]
     ifFalse: [ 
       spec
