@@ -32,7 +32,9 @@ performCurrentVersionTestAgainst: vrsn operator: anOperator targetVersionStatus:
       ^ false ].
   (currentVersion := self overrideProjectSpec versionOrNil) ifNil: [ ^ false ].
   currentVersion = vrsn
-    ifTrue: [ ^ true ].
+    ifTrue: [ 
+      "same version but are they equal"
+      ^ self projectSpec compareEqual: self overrideProjectSpec ].
   existing := self overrideProjectSpec asProjectRegistration.
   new := self projectSpec asProjectRegistration.
   ^ currentVersion > vrsn
