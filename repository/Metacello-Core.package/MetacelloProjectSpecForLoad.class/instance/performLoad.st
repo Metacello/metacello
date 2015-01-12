@@ -14,8 +14,16 @@ performLoad
       override := self overrideProjectSpec copy.
       override mergeScriptLoads: spec.
       self isDowngrade
-        ifTrue: [ override operator: #'=' ].
-      override loadVersion: nil ]
+        ifTrue: [ 
+          | oldOperator |
+          oldOperator := override operator.
+          override operator: #'='.
+          [ override loadVersion: nil ]
+            on: MetacelloProjectSpecLoadedNotification
+            do: [ :ex | 
+              ex projectSpec operator: oldOperator.
+              ex pass ] ]
+        ifFalse: [ override loadVersion: nil ] ]
     ifFalse: [ 
       spec
         loadVersion:
