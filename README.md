@@ -1,7 +1,5 @@
 ## INSTALL Preview Version
 
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dalehenrich/metacello-work?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 ###GemStone
 GsUpgrader works on all versions of GemStone against all Versions of GLASS:
 
@@ -101,7 +99,7 @@ If you are interested in using GitHub with the Metacello Preview, you should che
 2. [Metacello mailing list](https://groups.google.com/forum/#!forum/metacello)
 
 ###TravisCI Status
-**master branch**: [![Build Status](https://secure.travis-ci.org/dalehenrich/metacello-work.png?branch=master)](http://travis-ci.org/dalehenrich/metacello-work)
+**master branch**: [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dalehenrich/metacello-work?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 **configuration branch**: [![Build Status](https://secure.travis-ci.org/dalehenrich/metacello-work.png?branch=configuration)](http://travis-ci.org/dalehenrich/metacello-work)
 
@@ -109,5 +107,3 @@ If you are interested in using GitHub with the Metacello Preview, you should che
 [2]: docs/MetacelloUserGuide.md
 [3]: docs/MetacelloScriptingAPI.md
 [4]: docs/Issue_136Detail.md
-
-
