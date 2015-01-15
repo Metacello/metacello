@@ -93,6 +93,11 @@ See the [.travis.yml file](./.travis.yml) for list of supported platforms and ve
 If you are interested in using GitHub with the Metacello Preview, you should check out 
 [Getting Started with GitHub][1], the [Metacello User Guide][2], the [Metacello Scripting API][3], and [Issue #136 detail][4].
 
+## Questions [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dalehenrich/metacello-work?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+1. [Gitter chat](https://gitter.im/dalehenrich/metacello-work)
+2. [Metacello mailing list](https://groups.google.com/forum/#!forum/metacello)
+
 ###TravisCI Status
 **master branch**: [![Build Status](https://secure.travis-ci.org/dalehenrich/metacello-work.png?branch=master)](http://travis-ci.org/dalehenrich/metacello-work)
 

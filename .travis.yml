@@ -1,5 +1,14 @@
 language: erlang
 
+notifications:
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/47796c01bb932d6a0300 # dalehenrich/chat
+      - https://webhooks.gitter.im/e/d6dd211bd92050b46647 # metacello-work chat
+    on_success: always  # options: [always|never|change] default: always
+    on_failure: always  # options: [always|never|change] default: always
+    on_start: false     # default: false
+
 env:
 # Tested platforms and versions:
 #
