@@ -190,16 +190,23 @@ baseline10beta321: spec
   spec
     for: #'squeak'
     do: [ 
+     spec
+        project: 'WebClient'
+          with: [ 
+              spec
+                className: 'ConfigurationOfWebClient';
+                versionString: #stable;
+                loads: #('Core');
+                repository: 'http://www.squeaksource.com/MetacelloRepository';
+                repository: 'http://ss3.gemtalksystems.com/ss/WebClient' ].
       spec
         package: 'SqueakSSL-Core'
  	    with: [spec repository: 'http://www.squeaksource.com/SqueakSSL'];
-        package: 'WebClient-Core'
-          with: [spec repository: 'http://ss3.gemstone.com/ss/WebClient'];
         package: 'Metacello-Platform'
           with: [ 
               spec
                 file: 'Metacello-Platform.squeak';
-                requires: #('WebClient-Core' 'SqueakSSL-Core') ];
+                requires: #('WebClient' 'SqueakSSL-Core') ];
         yourself ].
   spec
     for: #'gemstone'
