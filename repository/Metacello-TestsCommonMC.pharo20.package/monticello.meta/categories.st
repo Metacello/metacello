@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #'Metacello-TestsPharo20MC'!
+SystemOrganization addCategory: #'Metacello-TestsCommonMC'!
