@@ -21,7 +21,7 @@ registerProjectRegistration: aMetacelloProjectRegistration
           spec versionString: version versionString ].
       aMetacelloProjectRegistration configurationProjectSpec: spec.
       (aMetacelloProjectRegistration respondsTo: #'versionInfo')
-        ifTrue: [ aMetacelloProjectRegistration versionInfo versionString: spec versionString ].
+        ifTrue: [ aMetacelloProjectRegistration versionInfo setVersionString: spec versionString ].
       spec immutable.
       self configurationRegistry
         at: spec className
@@ -42,7 +42,7 @@ registerProjectRegistration: aMetacelloProjectRegistration
       (aMetacelloProjectRegistration respondsTo: #'versionInfo')
         ifTrue: [ 
           aMetacelloProjectRegistration versionInfo
-            versionString: spec repositoryVersionString ].
+            setVersionString: spec repositoryVersionString ].
       spec immutable.
       self baselineRegistry
         at: spec className
