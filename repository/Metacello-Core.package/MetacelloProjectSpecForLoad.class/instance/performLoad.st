@@ -15,8 +15,8 @@ performLoad
       override mergeScriptLoads: spec.
       override loadVersion: nil ]
     ifFalse: [ 
-      spec
-        loadVersion:
-          (self useDetermineVersionForLoad
-            ifTrue: [ spec determineCurrentVersionForLoad ]
-            ifFalse: [ spec versionOrNil ]) ]
+      | vrsn |
+      vrsn := self useDetermineVersionForLoad
+        ifTrue: [ spec determineCurrentVersionForLoad ]
+        ifFalse: [ spec versionOrNil ].
+      (spec asProjectSpecForVersion: vrsn) loadVersion: vrsn ]

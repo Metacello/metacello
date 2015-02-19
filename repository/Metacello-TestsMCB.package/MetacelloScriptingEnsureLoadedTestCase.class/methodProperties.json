@@ -8,4 +8,5 @@
 		"testDefaultVersionUpgrade" : "dkh 09/30/2014 14:23",
 		"testDefaultVersionUpgradeIssue230" : "dkh 09/30/2014 14:24",
 		"testEnsureLoad" : "dkh 09/30/2014 14:25",
-		"testEnsureLoadIssue230" : "dkh 09/30/2014 14:27" } }
+		"testEnsureLoadIssue230" : "dkh 09/30/2014 14:27",
+		"testIssue331" : "dkh 02/19/2015 13:34" } }
