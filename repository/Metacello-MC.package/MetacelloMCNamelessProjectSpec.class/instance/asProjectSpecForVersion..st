@@ -5,7 +5,9 @@ asProjectSpecForVersion: vrsn
   "https://github.com/dalehenrich/metacello-work/issues/331"
 
   | proj spec |
-  proj := vrsn versionSpec project.
+  proj := vrsn
+    ifNil: [ self projectClassProject ]
+    ifNotNil: [ vrsn versionSpec project ].
   spec := proj configurationOfProjectSpecClass for: proj.
   self copyForScriptingInto: spec.
   self assert: (self className beginsWith: 'BaselineOf') not.
