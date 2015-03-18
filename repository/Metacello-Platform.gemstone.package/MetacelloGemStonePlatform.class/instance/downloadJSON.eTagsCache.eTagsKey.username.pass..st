@@ -11,12 +11,12 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
     ifNotNil: [ 
       eTagsCache
         at: eTagsKey
-        ifAbsent: [ 
-          eTagInfo := Dictionary new.
-          eTagsCache at: eTagsKey put: eTagInfo ]
         ifPresent: [ :info | 
           eTagsUrl := eTagsUrl , ' -H ''If-None-Match: ' , (info at: 'ETag') , ''''.
-          eTagInfo := info ] ].
+          eTagInfo := info ]
+        ifAbsent: [ 
+          eTagInfo := Dictionary new.
+          eTagsCache at: eTagsKey put: eTagInfo ] ].
   errorFileName := self
     downloadBasicFile: eTagsUrl
     to: jsonFileName
