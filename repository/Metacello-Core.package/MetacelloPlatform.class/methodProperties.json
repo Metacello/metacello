@@ -25,6 +25,7 @@
 		"directoryFromPath:relativeTo:" : "ChristopheDemarey 4/29/2013 15:11",
 		"do:displaying:" : "dkh 6/5/2012 19:01:24",
 		"downloadErrorFileNameFor:" : "dkh 09/19/2014 15:36",
+		"downloadJSON:eTagsCache:eTagsKey:username:pass:" : "dkh 03/18/2015 06:40",
 		"downloadJSON:username:pass:" : "dkh 10/16/2014 13:52",
 		"downloadZipArchive:to:" : "dkh 10/14/2014 10:51",
 		"ensureDirectoryExists:" : "ChristopheDemarey 4/29/2013 15:17",
