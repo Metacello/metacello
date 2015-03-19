@@ -12,7 +12,9 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
       eTagsCache
         at: eTagsKey
         ifPresent: [ :info | 
-          eTagsUrl := eTagsUrl , ' -H ''If-None-Match: ' , (info at: 'ETag') , ''''.
+          | etag |
+          etag := info at: 'ETag' ifAbsent: [ '1234' ].
+          eTagsUrl := eTagsUrl , ' -H ''If-None-Match: ' , etag , ''''.
           eTagInfo := info ]
         ifAbsent: [ 
           eTagInfo := Dictionary new.
@@ -54,7 +56,8 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
                   "cached info is not valid"
                   jsonObject := MCFileTreeJsonParser parse: payload.
                   eTagInfo
-                    at: 'ETag' put: (headerDict at: 'ETag');
+                    at: 'ETag'
+                      put: (headerDict at: 'ETag' ifAbsent: [ '1234' ]);
                     at: 'Last-Modified' put: (headerDict at: 'Last-Modified');
                     at: 'jsonObject' put: jsonObject;
                     at: 'X-RateLimit-Remaining'
@@ -72,6 +75,9 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
                     eTagInfo: eTagInfo
                     username: username
                     pass: pass
-                    onError: errorBlock ] ] ] ]
+                    onError: errorBlock ].
+              self
+                error:
+                  'Unexpected JSON tag request STATUS: ' , (headerDict at: 'Status') printString ] ] ]
         on: Error
         do: [ :ex | errorBlock value: ex value: errorFileName ] ]

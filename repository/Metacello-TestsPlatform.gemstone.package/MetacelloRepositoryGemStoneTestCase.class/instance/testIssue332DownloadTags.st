@@ -2,6 +2,7 @@ tests
 testIssue332DownloadTags
   "https://github.com/dalehenrich/metacello-work/issues/332"
 
+  [ 
   | repo tags cache expectedTags rateLimitRemaining x |
   cache := MCGitHubRepository eTagsCache.
   repo := MCGitHubRepository
@@ -16,4 +17,16 @@ testIssue332DownloadTags
   self
     assert:
       rateLimitRemaining
-        = (x := (cache at: 'dalehenrich/external') at: 'X-RateLimit-Remaining')
+        = (x := (cache at: 'dalehenrich/external') at: 'X-RateLimit-Remaining') ]
+    on: Error
+    do: [ :ex | 
+      "keep an eye out for rate limiting errors from github for anonymous api usage"
+      Transcript
+        cr;
+        show: 'testIssue332DownloadTags: ' , ex description.
+      (MetacelloPlatform current
+        string: ex description
+        includesSubstring: 'API rate limit exceeded')
+        ifFalse: [ 
+          "don't fail test because github rate limit exceeded"
+          ex pass ] ]
