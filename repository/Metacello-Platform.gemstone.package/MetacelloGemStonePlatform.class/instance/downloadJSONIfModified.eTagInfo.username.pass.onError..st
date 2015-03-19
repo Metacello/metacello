@@ -22,7 +22,9 @@ downloadJSONIfModified: url eTagInfo: eTagInfo username: username pass: pass onE
       self
         extractHTTPHeader: (ReadStream on: fileStream contents)
         do: [ :headerDict :payload | 
-          ((headerDict at: 'Status') beginsWith: '200')
+          | status |
+          status := headerDict at: 'Status'.
+          (status beginsWith: '200')
             ifTrue: [ 
               | jsonObject |
               "Last-Modified date changed"
@@ -34,12 +36,20 @@ downloadJSONIfModified: url eTagInfo: eTagInfo username: username pass: pass onE
                   put: (headerDict at: 'X-RateLimit-Remaining');
                 yourself.
               ^ jsonObject ].
-          ((headerDict at: 'Status') beginsWith: '304')
+          (status beginsWith: '304')
             ifTrue: [ 
               "eTagCache hit ... need to know if data still valid"
               eTagInfo
                 at: 'X-RateLimit-Remaining'
                 put: (headerDict at: 'X-RateLimit-Remaining').
-              ^ eTagInfo at: 'jsonObject' ] ] ]
+              ^ eTagInfo at: 'jsonObject' ].
+          (status beginsWith: '403')
+            ifTrue: [ 
+              | jsonObject |
+              "Oh snap! Rate limit exceeded"
+              jsonObject := MCFileTreeJsonParser parse: payload.
+              self error: (jsonObject at: 'message') ].
+          self
+            error: 'Unexpected JSON tag request STATUS: ' , status printString ] ]
         on: Error
         do: [ :ex | errorBlock value: ex value: errorFileName ] ]
