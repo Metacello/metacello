@@ -12,7 +12,9 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
       eTagsCache
         at: eTagsKey
         ifPresent: [ :info | 
-          eTagsUrl := eTagsUrl , ' -H ''If-None-Match: ' , (info at: 'ETag') , ''''.
+          | etag |
+          etag := info at: 'ETag' ifAbsent: [ '1234' ].
+          eTagsUrl := eTagsUrl , ' -H ''If-None-Match: ' , etag , ''''.
           eTagInfo := info ]
         ifAbsent: [ 
           eTagInfo := Dictionary new.
@@ -48,20 +50,23 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
           self
             extractHTTPHeader: (ReadStream on: fileStream contents)
             do: [ :headerDict :payload | 
-              ((headerDict at: 'Status') beginsWith: '200')
+              | status |
+              status := headerDict at: 'Status'.
+              (status beginsWith: '200')
                 ifTrue: [ 
                   | jsonObject |
                   "cached info is not valid"
                   jsonObject := MCFileTreeJsonParser parse: payload.
                   eTagInfo
-                    at: 'ETag' put: (headerDict at: 'ETag');
+                    at: 'ETag'
+                      put: (headerDict at: 'ETag' ifAbsent: [ '1234' ]);
                     at: 'Last-Modified' put: (headerDict at: 'Last-Modified');
                     at: 'jsonObject' put: jsonObject;
                     at: 'X-RateLimit-Remaining'
                       put: (headerDict at: 'X-RateLimit-Remaining');
                     yourself.
                   ^ jsonObject ].
-              ((headerDict at: 'Status') beginsWith: '304')
+              (status beginsWith: '304')
                 ifTrue: [ 
                   "eTagCache hit ... need to know if data still valid"
                   eTagInfo
@@ -72,6 +77,15 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
                     eTagInfo: eTagInfo
                     username: username
                     pass: pass
-                    onError: errorBlock ] ] ] ]
+                    onError: errorBlock ].
+              (status beginsWith: '403')
+                ifTrue: [ 
+                  | jsonObject |
+                  "Oh snap! Rate limit exceeded"
+                  jsonObject := MCFileTreeJsonParser parse: payload.
+                  self error: (jsonObject at: 'message') ].
+              self
+                error:
+                  'Unexpected JSON tag request STATUS: ' , status printString ] ] ]
         on: Error
         do: [ :ex | errorBlock value: ex value: errorFileName ] ]
