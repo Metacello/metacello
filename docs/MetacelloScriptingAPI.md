@@ -498,17 +498,21 @@ The layout of the *location* is dependent upon the *scheme* being used.
   github:// <github user> / <github project>  [ : <version identifier> ] [ / <repository path> ]
 ```
 
-*gitthub://* is the scheme identifier for the GitHub repository description.
+The semantics used are based on those of the GitHub API used to retrieve a ZIP archive of parts of a GitHub repository.
+Unfortunately GitHub has no official documentation on the matter. Apparently, to get a ZIP archive of some resource
+the URL must look like this: `https://github.com/<github user>/<github project>/zipball/<version identifier>/`
 
-*github user* is the user name or organization name of the owner of the GitHub proejct.
+**gitthub://** is the scheme identifier for the GitHub repository description.
 
-*github project* is the name of the GitHub project.
+**github user* *is the user name or organization name of the owner of the GitHub proejct.
 
-*version identifier* is the name of a *branch*, the name of a *tag* or the *SHA* of a commit. The *tag name* and *SHA*  
+**github project** is the name of the GitHub project.
+
+**version identifier** is the name of a *branch*, the name of a *tag* or the *SHA* of a commit. The *tag name* and *SHA*  
 identifies a specific commit. The *branch name* resolves to the current HEAD of the branch. The **version identifier** is 
-optional. 
+optional.
 
-*repository path* is the path to a subdirectory in the project where the repository is rooted. If absent the repository 
+**repository path** is the path to a subdirectory in the project where the repository is rooted. If absent the repository 
 is rooted in the projects HOME directory.
 
 ##http://

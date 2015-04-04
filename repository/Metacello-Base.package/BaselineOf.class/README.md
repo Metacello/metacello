@@ -44,6 +44,21 @@ To create a new Metacello baseline:
 
 3. Create a Monticello package for your **BaselineOf** class and save it in the repository where your packages are stored.
 
+4. To load a package from GitHub that contains a baseline evaluate the following:
+
+```Smalltalk
+| repositorySpec |
+"edit to match your username, repository name and branch"
+repositorySpec := 'dalehenrich/metacello-work:master'.
+Metacello new
+  baseline: 'Sample';
+  repository: 'github://', repositorySpec;
+  load.
+```
+
+For further documentation see For more information on the [github://](MetacelloScriptingAPI.md#github) url specifigation see the [Metacello Scripting API
+reference](MetacelloScriptingAPI.md). There more information on [working with GitHub here](GettingStartedWithGitHub.md).
+
 [1]: http://git-scm.com/
 [2]: https://github.com/dalehenrich/metacello-work/blob/master/repository/Metacello-Base.package/ConfigurationOf.class/README.md
 [3]: https://github.com/dalehenrich/sample/tree/configuration/ConfigurationOfSample.package/ConfigurationOfSample.class
