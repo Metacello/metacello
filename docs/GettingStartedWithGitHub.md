@@ -141,7 +141,7 @@ baseline: spec
 
   spec for: #common do: [
     spec baseline: 'Sample' with: [
-      repository: 'github://dalehenrich/Sample:master ].
+      repository: 'github://dalehenrich/Sample:master' ].
     spec package: 'OtherProject-Core with: [
       spec requires: 'Sample' ] ].
 ```
@@ -159,7 +159,7 @@ baseline: spec
 
   spec for: #common do: [
     spec baseline: 'Sample' with: [
-      repository: 'github://dalehenrich/Sample:master ].
+      repository: 'github://dalehenrich/Sample:master' ].
     spec import: 'Sample'.
     spec package: 'OtherProject-Core with: [
       spec requires: 'default' ] ].
@@ -173,19 +173,15 @@ Example:
 baseline: spec
   <baseline>
 
-```Smalltalk
-baseline: spec
-  <baseline>
-
   spec for: #common do: [
     "Sample defines the group 'default'"
     spec baseline: 'Sample' with: [
-      repository: 'github://dalehenrich/Sample:master ].
+      repository: 'github://dalehenrich/Sample:master' ].
     spec import: 'Sample'.
 
     "OtherSample *also* defines the group 'default'"
     spec baseline: 'OtherSample' with: [
-      repository: 'github://dalehenrich/Sample:master ].
+      repository: 'github://dalehenrich/Sample:master' ].
     spec import: 'OtherSample'.
 
     "'default' is now ambiguous"
@@ -193,7 +189,7 @@ baseline: spec
       spec requires: 'default' ] ].
 ```
 
-To solve these ambiguities, newer version of Metacello include the message
+To solve these ambiguities, newer versions of Metacello include the message
 `#import:provides:` which allows you to specify the explicit relationship:
 
 ```Smalltalk
@@ -203,12 +199,12 @@ baseline: spec
   spec for: #common do: [
     "Sample defines the group 'default'"
     spec baseline: 'Sample' with: [
-      repository: 'github://dalehenrich/Sample:master ].
+      repository: 'github://dalehenrich/Sample:master' ].
     spec import: 'Sample' provides: #('default').
 
     "OtherSample *also* defines the group 'default'"
     spec baseline: 'OtherSample' with: [
-      repository: 'github://dalehenrich/Sample:master ].
+      repository: 'github://dalehenrich/Sample:master' ].
     spec import: 'OtherSample' provides: #('default').
 
     "'default' can now be successfully resolved, even though
