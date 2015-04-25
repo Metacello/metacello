@@ -133,7 +133,7 @@ For more information about creating Metacello configurations, see the
 After you've created the **BaselineOf**, save it into
 your project repository.
 
-To use a basline in another configuration or baseline simply do this:
+To use a **BaselineOf** in another configuration or baseline simply do this:
 
 ```Smalltalk
 baseline: spec
@@ -144,6 +144,77 @@ baseline: spec
       repository: 'github://dalehenrich/Sample:master ].
     spec package: 'OtherProject-Core with: [
       spec requires: 'Sample' ] ].
+```
+
+If your **BaselineOf** provides groups or multiple packages, you need to tell
+Metacello that it shouldn't complain about names it can not initially resolve.
+Names defined by a **BaselineOf** can only be resolved after it has been loaded,
+so Metacello needs to assume that unresolved names will be resolvable in the
+**BaselineOf**.
+Use the message `#import:` to do that:
+
+```Smalltalk
+baseline: spec
+  <baseline>
+
+  spec for: #common do: [
+    spec baseline: 'Sample' with: [
+      repository: 'github://dalehenrich/Sample:master ].
+    spec import: 'Sample'.
+    spec package: 'OtherProject-Core with: [
+      spec requires: 'default' ] ].
+```
+
+The `#import:` message has one drawback: if your configuration references multiple
+**BaselineOf** Metacello does not know with which one to resolve ambiguous names.
+Example:
+
+```Smalltalk
+baseline: spec
+  <baseline>
+
+```Smalltalk
+baseline: spec
+  <baseline>
+
+  spec for: #common do: [
+    "Sample defines the group 'default'"
+    spec baseline: 'Sample' with: [
+      repository: 'github://dalehenrich/Sample:master ].
+    spec import: 'Sample'.
+
+    "OtherSample *also* defines the group 'default'"
+    spec baseline: 'OtherSample' with: [
+      repository: 'github://dalehenrich/Sample:master ].
+    spec import: 'OtherSample'.
+
+    "'default' is now ambiguous"
+    spec package: 'OtherProject-Core with: [
+      spec requires: 'default' ] ].
+```
+
+To solve these ambiguities, newer version of Metacello include the message
+`#import:provides:` which allows you to specify the explicit relationship:
+
+```Smalltalk
+baseline: spec
+  <baseline>
+
+  spec for: #common do: [
+    "Sample defines the group 'default'"
+    spec baseline: 'Sample' with: [
+      repository: 'github://dalehenrich/Sample:master ].
+    spec import: 'Sample' provides: #('default').
+
+    "OtherSample *also* defines the group 'default'"
+    spec baseline: 'OtherSample' with: [
+      repository: 'github://dalehenrich/Sample:master ].
+    spec import: 'OtherSample' provides: #('default').
+
+    "'default' can now be successfully resolved, even though
+    both projects define the same name"
+    spec package: 'OtherProject-Core with: [
+      spec requires: 'default' ] ].
 ```
 
 ## Prime Metacello registry
