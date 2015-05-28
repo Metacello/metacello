@@ -121,7 +121,7 @@ baseline: spec
         version: #stable;
         repository: 'http://www.squeaksource.com/MetacelloRepository' ].
     spec
-      package: 'Sample-Core'with: [
+      package: 'Sample-Core' with: [
         spec requires: 'Seaside30' ];
       package: 'Sample-Tests' with: [
         spec requires: 'Sample-Core' ]].
@@ -133,6 +133,86 @@ For more information about creating Metacello configurations, see the
 After you've created the **BaselineOf**, save it into
 your project repository.
 
+To use a **BaselineOf** in another configuration or baseline simply do this:
+
+```Smalltalk
+baseline: spec
+  <baseline>
+
+  spec for: #common do: [
+    spec baseline: 'Sample' with: [
+      repository: 'github://dalehenrich/Sample:master' ].
+    spec package: 'OtherProject-Core with: [
+      spec requires: 'Sample' ] ].
+```
+
+If your **BaselineOf** provides groups or multiple packages, you need to tell
+Metacello that it shouldn't complain about names it can not initially resolve.
+Names defined by a **BaselineOf** can only be resolved after it has been loaded,
+so Metacello needs to assume that unresolved names will be resolvable in the
+**BaselineOf**.
+Use the message `#import:` to do that:
+
+```Smalltalk
+baseline: spec
+  <baseline>
+
+  spec for: #common do: [
+    spec baseline: 'Sample' with: [
+      repository: 'github://dalehenrich/Sample:master' ].
+    spec import: 'Sample'.
+    spec package: 'OtherProject-Core with: [
+      spec requires: 'default' ] ].
+```
+
+The `#import:` message has one drawback: if your configuration references multiple
+**BaselineOf** Metacello does not know with which one to resolve ambiguous names.
+Example:
+
+```Smalltalk
+baseline: spec
+  <baseline>
+
+  spec for: #common do: [
+    "Sample defines the group 'default'"
+    spec baseline: 'Sample' with: [
+      repository: 'github://dalehenrich/Sample:master' ].
+    spec import: 'Sample'.
+
+    "OtherSample *also* defines the group 'default'"
+    spec baseline: 'OtherSample' with: [
+      repository: 'github://dalehenrich/Sample:master' ].
+    spec import: 'OtherSample'.
+
+    "'default' is now ambiguous"
+    spec package: 'OtherProject-Core with: [
+      spec requires: 'default' ] ].
+```
+
+To solve these ambiguities, newer versions of Metacello include the message
+`#import:provides:` which allows you to specify the explicit relationship:
+
+```Smalltalk
+baseline: spec
+  <baseline>
+
+  spec for: #common do: [
+    "Sample defines the group 'default'"
+    spec baseline: 'Sample' with: [
+      repository: 'github://dalehenrich/Sample:master' ].
+    spec import: 'Sample' provides: #('default').
+
+    "OtherSample *also* defines the group 'default'"
+    spec baseline: 'OtherSample' with: [
+      repository: 'github://dalehenrich/Sample:master' ].
+    spec import: 'OtherSample' provides: #('default').
+
+    "'default' can now be successfully resolved, even though
+    both projects define the same name"
+    spec package: 'OtherProject-Core with: [
+      spec requires: 'default' ] ].
+```
+
 ## Prime Metacello registry
 
 You must do at least one fully-specified load of a project to make sure
@@ -140,7 +220,7 @@ that the project is correctly registered in the *Metacello Project
 Registry*:
 
 ```Smalltalk
-| pathToPackageDirectory packageDirectory repo |
+| pathToPackageDirectory |
 "edit to match the path to your chosen package directory"
 pathToPackageDirectory := '/opt/git/Sample/packages'.
 Metacello new
@@ -148,6 +228,21 @@ Metacello new
   repository: 'filetree://', pathToPackageDirectory;
   load.
 ```
+For GitHub repositories specifically you can use the following to fetch your project from GitHub:
+
+```Smalltalk
+| repositorySpec |
+"edit to match your username, repository name and branch"
+repositorySpec := 'dalehenrich/metacello-work:master'.
+Metacello new
+  baseline: 'Sample';
+  repository: 'github://', repositorySpec;
+  load.
+```
+
+For more information on the `github://dalehenrich/sample:cecd1626d27f67175f22e6075ca2d1177da1d525/packages` description see the section on
+[github://](MetacelloScriptingAPI.md#github) in the [Metacello Scripting API
+reference](MetacelloScriptingAPI.md).
 
 Once you've done the first load, you can execute the following
 expressions to refresh the *baseline* and reload the project (useful if
