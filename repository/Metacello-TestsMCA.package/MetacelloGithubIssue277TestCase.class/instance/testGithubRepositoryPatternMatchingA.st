@@ -5,7 +5,7 @@ testGithubRepositoryPatternMatchingA
   | repo |
   [ 
   repo := MCGitHubRepository
-    parseLocation: 'github://GsDevKit/Seaside31:v3.?/repository'
+    parseLocation: 'github://GsDevKit/Seaside31:v3.1.3.?/repository'
     version: nil.
   self assert: repo projectVersion = 'v3.1.3.1-gs' ]
     on: Error
