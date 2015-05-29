@@ -22,6 +22,7 @@ env:
 #  Pharo-2.0
 #  Pharo-3.0 
 #  Pharo-4.0 
+#  Pharo-5.0 
 #
 # Squeak
 #  Squeak-4.3 (not all tests are passing)
@@ -29,11 +30,11 @@ env:
 #  Squeak-4.5
 #  Squeak-Trunk
 
-   - ST=Pharo-4.0 LoadList="'default'" TRAVIS_SCRIPT=userGuide.st 
+   - ST=Pharo-5.0 LoadList="'default'" TRAVIS_SCRIPT=userGuide.st 
    - ST=GemStone-3.2.6 LoadList="'default'" TRAVIS_SCRIPT=userGuide.st
 
-   - ST=Pharo-4.0 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
-   - ST=Pharo-4.0 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+   - ST=Pharo-5.0 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+   - ST=Pharo-5.0 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
    - ST=GemStone-3.2.6 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
    - ST=GemStone-3.2.6 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
    - ST=Squeak-4.5 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st 
@@ -51,6 +52,8 @@ env:
    - ST=Pharo-2.0 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
    - ST=Pharo-3.0 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st 
    - ST=Pharo-3.0 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st 
+   - ST=Pharo-4.0 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+   - ST=Pharo-4.0 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
 #   - ST=Squeak-4.3 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
 #   - ST=Squeak-4.3 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
    - ST=Squeak-4.4 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
