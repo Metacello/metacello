@@ -9,7 +9,7 @@ extractRepositoryFrom: zipFile to: directory
   (ServerFileDirectory on: '/tmp') deleteFileNamed: zipErrorFileName.
   System
     performOnServer:
-      '/usr/bin/unzip -u ' , zipFile , ' -d ' , directory , ' 2> /tmp/'
+      '/usr/bin/unzip -u ' , zipFile , ' -d ' , directory , ' 1> /dev/null 2> /tmp/'
         , zipErrorFileName.
   (ServerFileDirectory on: '/tmp')
     readOnlyFileNamed: zipErrorFileName

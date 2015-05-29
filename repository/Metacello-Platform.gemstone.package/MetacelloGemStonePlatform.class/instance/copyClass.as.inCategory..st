@@ -12,4 +12,4 @@ copyClass: oldClass as: newName inCategory: newCategoryName
 	newClass 
 		copyMethodsFrom: oldClass 
 		dictionaries: GsSession currentSession symbolList.
-	^ newClass	
+	^ newClass
