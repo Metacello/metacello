@@ -217,10 +217,19 @@ baseline: spec
                 requires: #('Metacello-PharoCommonPlatform') ];
         package: 'Metacello-TestsCommonMC'
           with: [ spec file: 'Metacello-TestsCommonMC.pharo20' ];
-        yourself.
+        yourself ].
+  spec
+    for: #(#'pharo3.x')
+    do: [ 
       spec
         baseline: 'FileTree'
         with: [ spec repository: 'github://dalehenrich/filetree:pharo3.0/repository' ] ].
+  spec
+    for: #(#'pharo4.x')
+    do: [ 
+      spec
+        baseline: 'FileTree'
+        with: [ spec repository: 'github://dalehenrich/filetree:pharo4.0/repository' ] ].
   spec
     for: #'squeak'
     do: [ 
