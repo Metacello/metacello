@@ -74,6 +74,11 @@ env:
    - ST=GemStone-3.1.0.6 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
    - ST=GemStone-3.1.0.6 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
 
+matrix:
+   allow_failures:
+   - env: ST=Squeak-4.4 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+   - env: ST=Squeak-4.4 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+
 install:
    - export PROJECT_HOME="$(pwd)"
    - cd $HOME
