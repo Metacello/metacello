@@ -18,4 +18,10 @@ testLockCommandReference2
       (MetacelloPlatform current
         string: ex description
         includesSubstring: 'SSL error, code: -5')
-        ifFalse: [ ex pass ] ]
+        ifFalse: [ 
+          Transcript
+            cr;
+            show: 'testLockCommandReference2: ' , ex description;
+            cr;
+            show: (GsProcess stackReportToLevel: 100).
+          ex pass ] ]
