@@ -10,5 +10,7 @@ testBitbucketRepositoryPatternMatchingA
     do: [ :ex | 
       Transcript
         cr;
-        show: 'testBitbucketRepositoryPatternMatchingA: ' , ex description.
+        show: 'testBitbucketRepositoryPatternMatchingA: ' , ex description;
+        cr;
+        show: (GsProcess stackReportToLevel: 100).
       ex pass ]
