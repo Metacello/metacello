@@ -86,7 +86,6 @@ Installer gemsource
 (Smalltalk at: #Metacello) new
   baseline: 'Metacello';
   repository: 'github://dalehenrich/metacello-work:master/repository';
-  onConflict: [:ex | ex allow];
   load.
 ```
 
