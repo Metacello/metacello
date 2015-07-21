@@ -1,23 +1,28 @@
 attributes
 defaultPlatformAttributes
-	| attributes versionString |
+	| attributes  |
 	attributes := OrderedCollection with: #squeakCommon with: #squeak.
 	Smalltalk
 		at: #SystemVersion
-		ifPresent: [:cl | 
-			versionString := cl current version.
-			(versionString beginsWith: 'Squeak3.10')
-				ifTrue: [attributes add: #'squeak3.10.x'].
-			(versionString beginsWith: 'Squeak4')
-				ifTrue: [attributes add: #'squeak4.x'.
-					(versionString beginsWith: 'Squeak4.1')
-						ifTrue: [attributes add: #'squeak4.1.x']
-						ifFalse: [(versionString beginsWith: 'Squeak4.2')
-								ifTrue: [attributes add: #'squeak4.2.x']
-								ifFalse: [(versionString beginsWith: 'Squeak4.3')
-									ifTrue: [attributes add: #'squeak4.3.x']
-									ifFalse: [(versionString beginsWith: 'Squeak4.4')
-										ifTrue: [attributes add: #'squeak4.4.x']
-											ifFalse: [(versionString beginsWith: 'Squeak4.5')
-												ifTrue: [attributes add: #'squeak4.5.x']]]]]]].
+		ifPresent: [:cl | |versionString|
+			versionString := cl current version asString.
+			" Major version "
+			#(	'Squeak3.10' (#'squeak3.10.x' ())
+				'Squeak4' (#'squeak4.x' (
+					'Squeak4.1' #'squeak4.1.x'
+					'Squeak4.2' #'squeak4.2.x'
+					'Squeak4.3' #'squeak4.3.x'
+					'Squeak4.4' #'squeak4.4.x'
+					'Squeak4.5' #'squeak4.5.x'
+					'Squeak4.6' #'squeak4.6.x'))
+				'Squeak5' (#'squeak5.x' (
+					'Squeak5.0' #'squeak5.0.x')))
+			pairsDo: [:major :allAttributes |
+				(versionString beginsWith: major) ifTrue: [
+					attributes add: allAttributes first.
+					allAttributes second ifNotEmpty: [:minorVersions |
+						minorVersions pairsDo: [:minor :attribute |
+							(versionString beginsWith: minor) ifTrue: [
+								attributes add: attribute.
+								^ attributes]]]]]].
 	^ attributes
