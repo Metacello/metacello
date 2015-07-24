@@ -205,7 +205,7 @@ baseline: spec
         baseline: 'FileTree'
         with: [ spec repository: 'github://dalehenrich/filetree:pharo2.0/repository' ] ].
   spec
-    for: #(#'pharo3.x' #'pharo4.x')
+    for: #(#'pharo3.x' #'pharo4.x' #'pharo5.x')
     do: [ 
       spec
         package: 'Metacello-PharoCommonPlatform'
@@ -225,7 +225,7 @@ baseline: spec
         baseline: 'FileTree'
         with: [ spec repository: 'github://dalehenrich/filetree:pharo3.0/repository' ] ].
   spec
-    for: #(#'pharo4.x')
+    for: #(#'pharo4.x' #'pharo5.x')
     do: [ 
       spec
         baseline: 'FileTree'
