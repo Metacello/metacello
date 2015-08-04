@@ -1,3 +1,3 @@
 utilities
 compiler
-	^ Compiler
+	^ #Compiler asClass
