@@ -1,5 +1,7 @@
 language: erlang
 
+sudo: required
+
 notifications:
   webhooks:
     urls:
