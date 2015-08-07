@@ -5,7 +5,7 @@ lockConfiguration15: spec
     for: #'common'
     do: [ 
       spec blessing: #'release'.
-      spec description: 'MetacelloScriptingResource>>lockConfiguration15: '.
+      spec description: self name , '>>lockConfiguration15: '.
       spec
         baseline: 'External'
         with: [ 
