@@ -2,7 +2,7 @@ git-based http repo support
 downloadBasicFile: url to: outputFileName username: username pass: pass
     "download from <url> into <outputFileName>"
 
-    | out err proc archive zipfile errorFileName args |
+    | out err proc errorFileName args |
     "Make a unique name for the error log and ensure that we can write the files"
     errorFileName := self downloadErrorFileNameFor: outputFileName.
     out := FileStream forceNewFileNamed: outputFileName.
