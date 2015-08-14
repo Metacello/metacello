@@ -5,8 +5,7 @@ resolveProjectVersionPattern: aString
   | patternString tagDictionary matchingTags tagAssocs sortedMatchingTags theTag |
   self projectPath
     ifNil: [ self error: 'projectPath must be set to resolve project version pattern.' ].
-  patternString := (MCGitBasedNetworkRepository
-    projectVersionFromString: aString) asString.
+  patternString := (self class projectVersionFromString: aString) asString.
   tagDictionary := self downloadJSONTags.
   tagAssocs := tagDictionary keys
     collect: [ :tagName | 
