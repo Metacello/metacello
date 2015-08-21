@@ -1,4 +1,4 @@
-*metacello-platform
+*Metacello-Platform
 asRepositorySpecFor: aMetacelloMCProject
   ^ aMetacelloMCProject repositorySpec
     description: self fullName;
