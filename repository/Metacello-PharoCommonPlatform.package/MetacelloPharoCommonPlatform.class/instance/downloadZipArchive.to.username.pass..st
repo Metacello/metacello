@@ -1,9 +1,9 @@
 github support
-downloadZipArchive: url to: outputFileName
+downloadZipArchive: url to: outputFileName username: username pass: password
   "download zip archive from <url> into <outputFileName>"
 
     | archive zipfile |
-    self downloadBasicFile: url to: outputFileName username: nil pass: nil.
+    self downloadBasicFile: url to: outputFileName username: username pass: password.
     archive := ZipArchive new.
     zipfile := self fileHandleOn: outputFileName.
     zipfile containingDirectory readOnlyFileNamed: zipfile localName do: [ :fileStream | archive readFrom: fileStream ].
