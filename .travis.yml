@@ -9,6 +9,8 @@ env:
 #
    - ST=Squeak-4.4 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
    - ST=Squeak-4.5 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
+   - ST=Squeak-4.6 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
+   - ST=Squeak-5.0 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
 #   - ST=Squeak-Trunk BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st # https://github.com/dalehenrich/metacello-work/issues/308 ... not going to be fixed
    - ST=GemStone-2.4.5.1 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
    - ST=GemStone-2.4.4.7 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
