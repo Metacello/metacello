@@ -20,7 +20,7 @@ env:
 # #  Squeak-4.5
 # #  Squeak-4.6
 # #  Squeak-5.0
-# #  Squeak-Trunk
+# #  Squeak-Trunk (appears to be very unstable)
    - ST=Pharo-1.4 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
    - ST=Pharo-2.0 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st
 #   - ST=Pharo-3.0 BUILD_ARG=-X TRAVIS_SCRIPT=previewBootstrap.st # preview is present in Pharo-3.0, bootstrap not appropriate
@@ -64,7 +64,7 @@ env:
    - ST=Squeak-4.5 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
    - ST=Squeak-4.6 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
    - ST=Squeak-5.0 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
-   - ST=Squeak-Trunk BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
+#   - ST=Squeak-Trunk BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
 
    #  GemStone should only be tested with Preview only (for now)
    - ST=GemStone-2.4.4.1 BUILD_ARG=-m TRAVIS_SCRIPT=travisPreviewCI.st
