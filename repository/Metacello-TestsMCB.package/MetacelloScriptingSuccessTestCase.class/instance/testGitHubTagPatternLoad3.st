@@ -20,7 +20,7 @@ bea35be90ab1ba0be80af4f4275fccbfc071a74f - v2.2.0-gs
     get;
     load.
   self
-    verify: 'External-Core'
+    verify: 'ExternalCore'
     loadedFrom: 'github://dalehenrich/external:v3.0.0-gs/repository' ]
     on: Error
     do: [ :ex | 
