@@ -60,6 +60,10 @@ env:
 #   - ST=Squeak-4.3 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
    - ST=Squeak-4.4 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
    - ST=Squeak-4.4 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+   - ST=Squeak-4.6 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+   - ST=Squeak-4.6 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+   - ST=Squeak-5.0 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+   - ST=Squeak-5.0 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
 
    - ST=Squeak-Trunk LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
    - ST=Squeak-Trunk LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
