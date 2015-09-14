@@ -8,6 +8,7 @@ Currently **GemStone2.4**, **PharoCore 1.3**, **PharoCore 1.4** and **Squeak4.3*
 4. [Install Metacello](#install-metacello)
 5. [Attach to git repository](#attach-to-git-repository)
 7. [Create baseline](#create-baseline)
+7. [Converting an existing baseline](#create-an-existing-baseline)
 8. [Prime Metacello registry](#prime-metacello-registry)
 9. [Saving your work](#saving-your-work)
 11. [Create configuration](#create-configuration)
@@ -83,7 +84,7 @@ MCRepositoryGroup default addRepository: repo.
 **MCFileTreeRepository** can be used anywhere that *normal* Monticello
 repositories can be used. I.e., you can copy packages into and out of an **MCFileTreeRepository** repository like any other repository.
 
-## Create baseline
+## Create Baseline
 
 During development phase of a project using a FileTree repository, you
 only need to create a baseline for your project.
@@ -211,6 +212,78 @@ baseline: spec
     both projects define the same name"
     spec package: 'OtherProject-Core with: [
       spec requires: 'default' ] ].
+```
+
+## Convert an existing baseline
+
+If you are converting a project for which you have an existing baseline, there are a few simple rules to follow:
+
+  1. change the name of the baeline method to `baseline:`.
+  2. switch the pragma to `<baseline>`.
+  3. remove the `blessing:` and `repository:` messages at the project level
+
+For example given the following baseline method from a **ConfigurationOfXXX**:
+
+```Smalltalk
+baseline122: spec
+  <version: '1.022-baseline'>
+  spec
+    for: #'common'
+    do: [ 
+      spec blessing: #'baseline'.
+      spec repository: 'http://ss3.gemtalksystems.com/ss/Application'.
+      spec
+        project: 'XMLSupport'
+        with: [ 
+          spec
+            className: 'ConfigurationOfXMLSupport';
+            versionString: '1.2.2.1';
+            loads: #('Core');
+            file: 'ConfigurationOfXMLSupport';
+            repository: 'http://www.squeaksource.com/XMLSupport' ].
+      spec package: 'Application' with: [ spec requires: 'XMLSupport' ] ]
+```
+
+The converted `baseline:` for your **BaselineOfXXX** would be:
+
+```Smalltalk
+baseline: spec
+ <baseline>
+
+  spec
+    for: #'common'
+    do: [
+      spec repository: 'http://ss3.gemtalksystems.com/ss/Application'.
+      spec
+        project: 'XMLSupport'
+        with: [
+          spec
+            className: 'ConfigurationOfXMLSupport';
+            versionString: '1.2.2.1';
+            loads: #('Core');
+            file: 'ConfigurationOfXMLSupport';
+            repository: 'http://www.squeaksource.com/XMLSupport' ].
+      spec package: 'Application' with: [ spec requires: 'XMLSupport' ] ] 
+```
+
+for extra credit you can use the new `configuration:` message to streamline the specification of your required project to produce the following:
+
+```Smalltalk
+baseline: spec
+ <baseline>
+
+  spec
+    for: #'common'
+    do: [
+      spec repository: 'http://ss3.gemtalksystems.com/ss/Orbeon'.
+      spec
+        configuration: 'XMLSupport'
+        with: [
+          spec
+            versionString: '1.2.2.1';
+            loads: #('Core');
+            repository: 'http://www.squeaksource.com/XMLSupport' ].
+      spec package: 'Orbeon-BrunoBB' with: [ spec requires: 'XMLSupport' ] ]
 ```
 
 ## Prime Metacello registry
