@@ -14,7 +14,7 @@
 		"tearDownPackages" : "dkh 6/12/2012 15:41:23.319",
 		"tearDownRepositories" : "dkh 6/12/2012 15:41:23.319",
 		"unloadPackage:" : "dkh 05/14/2014 06:35",
-		"validateExpConfigClassName:expConfigVersion:expConfigRepo:expBaselineClassName:expBaselineVersion:expBaselineRepo:" : "dkh 09/25/2015 14:30",
+		"validate:expConfigVersion:expConfigRepo:expBaselineClassName:expBaselineVersion:expBaselineRepo:" : "dkh 09/25/2015 15:15",
 		"validateProjects:" : "dkh 6/15/2012 05:26",
 		"verify:loadedFrom:" : "dkh 6/12/2012 15:41:23.319",
 		"verify:version:" : "dkh 6/12/2012 15:41:23.319",
