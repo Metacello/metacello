@@ -10,5 +10,5 @@
 	"name" : "MetacelloDetermineCurrentVersionForLoadScriptTest",
 	"pools" : [
 		 ],
-	"super" : "MetacelloScriptingStandardTestHarness",
+	"super" : "MetacelloScriptingStdTstHarness",
 	"type" : "normal" }

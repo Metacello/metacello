@@ -10,5 +10,5 @@
 	"name" : "MetacelloGoferBasedLoaderScriptTestCase",
 	"pools" : [
 		 ],
-	"super" : "MetacelloScriptingStandardTestHarness",
+	"super" : "MetacelloScriptingStdTstHarness",
 	"type" : "normal" }
