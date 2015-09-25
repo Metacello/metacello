@@ -18,12 +18,12 @@ testIssue136Loading
     silently;
     load.
   self
-    validateExpectedConfigurationClassName: nil
-    expectedConfigurationVersion: nil
-    expectedConfigurationRepository: nil
-    expectedBaselineClassName: 'BaselineOfExternal'
-    expectedBaselineVersion: 'baseline'
-    expectedBaselineRepository: 'http://ss3.gemtalksystems.com/ss/external'.
+    validate: nil
+    expConfigVersion: nil
+    expConfigRepo: nil
+    expBaselineClassName: 'BaselineOfExternal'
+    expBaselineVersion: 'baseline'
+    expBaselineRepo: 'http://ss3.gemtalksystems.com/ss/external'.
   upgradeSeen := conflictSeen := false.
   Metacello new
     baseline: 'GithubRefVIII';
@@ -44,9 +44,9 @@ testIssue136Loading
   self assert: conflictSeen.
   self deny: upgradeSeen.
   self
-    validateExpectedConfigurationClassName: nil
-    expectedConfigurationVersion: nil
-    expectedConfigurationRepository: nil
-    expectedBaselineClassName: 'BaselineOfExternal'
-    expectedBaselineVersion: 'baseline'
-    expectedBaselineRepository: 'http://ss3.gemtalksystems.com/ss/external'
+    validate: nil
+    expConfigVersion: nil
+    expConfigRepo: nil
+    expBaselineClassName: 'BaselineOfExternal'
+    expBaselineVersion: 'baseline'
+    expBaselineRepo: 'http://ss3.gemtalksystems.com/ss/external'

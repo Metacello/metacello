@@ -12,14 +12,14 @@ testConfigurationConflict3
     silently;
     load.
   self
-    validateExpConfigClassName: 'ConfigurationOfConflict'
+    validate: 'ConfigurationOfConflict'
     expConfigVersion: '1.1.0'
     expConfigRepo: 'filetree://' , configurationDirectory fullName
     expBaselineClassName: nil
     expBaselineVersion: nil
     expBaselineRepo: nil.
   self
-    validateExpConfigClassName: 'ConfigurationOfExternalX'
+    validate: 'ConfigurationOfExternalX'
     expConfigVersion: '0.9.1'
     expConfigRepo: 'filetree://' , configurationDirectory fullName
     expBaselineClassName: nil

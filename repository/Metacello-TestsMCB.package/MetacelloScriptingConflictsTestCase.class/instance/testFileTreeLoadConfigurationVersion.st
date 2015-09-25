@@ -7,7 +7,7 @@ testFileTreeLoadConfigurationVersion
     silently;
     load.
   self
-    validateExpConfigClassName: 'ConfigurationOfExternalX'
+    validate: 'ConfigurationOfExternalX'
     expConfigVersion: '0.9.0'
     expConfigRepo: 'filetree://' , configurationDirectory fullName
     expBaselineClassName: nil

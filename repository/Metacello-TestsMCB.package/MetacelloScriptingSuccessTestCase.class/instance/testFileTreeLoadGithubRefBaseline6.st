@@ -8,21 +8,21 @@ testFileTreeLoadGithubRefBaseline6
     silently;
     load.
   self
-    validateExpectedConfigurationClassName: nil
-    expectedConfigurationVersion: nil
-    expectedConfigurationRepository: nil
-    expectedBaselineClassName: 'BaselineOfGithubRefVI'
-    expectedBaselineVersion: 'baseline'
-    expectedBaselineRepository: 'filetree://' , externalDirectory fullName.
+    validate: nil
+    expConfigVersion: nil
+    expConfigRepo: nil
+    expBaselineClassName: 'BaselineOfGithubRefVI'
+    expBaselineVersion: 'baseline'
+    expBaselineRepo: 'filetree://' , externalDirectory fullName.
   self
     verify: 'External-Core'
     loadedFrom:
       'github://dalehenrich/external:' , MetacelloScriptingResource externalCustomSHA
         , '/repository'.
   self
-    validateExpectedConfigurationClassName: 'ConfigurationOfExternal'
-    expectedConfigurationVersion: '0.9.0'
-    expectedConfigurationRepository: 'http://ss3.gemtalksystems.com/ss/external'
-    expectedBaselineClassName: nil
-    expectedBaselineVersion: nil
-    expectedBaselineRepository: nil
+    validate: 'ConfigurationOfExternal'
+    expConfigVersion: '0.9.0'
+    expConfigRepo: 'http://ss3.gemtalksystems.com/ss/external'
+    expBaselineClassName: nil
+    expBaselineVersion: nil
+    expBaselineRepo: nil

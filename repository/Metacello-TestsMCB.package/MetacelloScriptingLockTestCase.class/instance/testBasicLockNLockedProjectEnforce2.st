@@ -21,10 +21,9 @@ testBasicLockNLockedProjectEnforce2
     load.
   self deny: sawLock.
   self
-    validateExpectedConfigurationClassName: 'ConfigurationOfExternalX'
-    expectedConfigurationVersion: '0.9.0'
-    expectedConfigurationRepository:
-      'dictionary://Metacello_Config_Test_Repository'
-    expectedBaselineClassName: nil
-    expectedBaselineVersion: nil
-    expectedBaselineRepository: nil
+    validate: 'ConfigurationOfExternalX'
+    expConfigVersion: '0.9.0'
+    expConfigRepo: 'dictionary://Metacello_Config_Test_Repository'
+    expBaselineClassName: nil
+    expBaselineVersion: nil
+    expBaselineRepo: nil

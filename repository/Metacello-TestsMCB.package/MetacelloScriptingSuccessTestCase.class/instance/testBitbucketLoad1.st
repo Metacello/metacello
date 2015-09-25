@@ -8,10 +8,9 @@ testBitbucketLoad1
     verify: 'External-Core'
     loadedFrom: 'bitbucket://dalehenrich/external:master/repository'.
   self
-    validateExpectedConfigurationClassName: nil
-    expectedConfigurationVersion: nil
-    expectedConfigurationRepository: nil
-    expectedBaselineClassName: 'BaselineOfExternal'
-    expectedBaselineVersion: 'baseline'
-    expectedBaselineRepository:
-      'bitbucket://dalehenrich/external:master/repository'
+    validate: nil
+    expConfigVersion: nil
+    expConfigRepo: nil
+    expBaselineClassName: 'BaselineOfExternal'
+    expBaselineVersion: 'baseline'
+    expBaselineRepo: 'bitbucket://dalehenrich/external:master/repository'

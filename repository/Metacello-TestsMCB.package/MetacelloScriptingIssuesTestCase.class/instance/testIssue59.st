@@ -15,11 +15,9 @@ testIssue59
   self assert: (Smalltalk at: #'Metacello_Configuration_Test_POST_DoIt_Result').
   self assert: (Smalltalk at: #'Metacello_Configuration_Test_DoIt_Result').
   self
-    validateExpectedConfigurationClassName: 'ConfigurationOfIssue59'
-    expectedConfigurationVersion: '1.0'
-    expectedConfigurationRepository:
-      'dictionary://Metacello_Configuration_Test_Repository'
-    expectedBaselineClassName: 'BaselineOfIssue32'
-    expectedBaselineVersion: 'baseline'
-    expectedBaselineRepository:
-      'dictionary://Metacello_External_Test_Repository'
+    validate: 'ConfigurationOfIssue59'
+    expConfigVersion: '1.0'
+    expConfigRepo: 'dictionary://Metacello_Configuration_Test_Repository'
+    expBaselineClassName: 'BaselineOfIssue32'
+    expBaselineVersion: 'baseline'
+    expBaselineRepo: 'dictionary://Metacello_External_Test_Repository'

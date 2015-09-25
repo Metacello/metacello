@@ -17,14 +17,14 @@ testConfigurationConflict5
     load.
   self assert: baseName = 'ExternalX'.
   self
-    validateExpConfigClassName: 'ConfigurationOfConflict'
+    validate: 'ConfigurationOfConflict'
     expConfigVersion: '1.0.0'
     expConfigRepo: 'filetree://' , configurationDirectory fullName
     expBaselineClassName: nil
     expBaselineVersion: nil
     expBaselineRepo: nil.
   self
-    validateExpConfigClassName: 'ConfigurationOfExternalX'
+    validate: 'ConfigurationOfExternalX'
     expConfigVersion: '0.9.1'
     expConfigRepo: 'dictionary://Metacello_Conflict_Test_Repository'
     expBaselineClassName: nil

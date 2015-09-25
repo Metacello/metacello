@@ -23,14 +23,14 @@ testConfigurationConflict6
   self assert: existingVersion = '0.9.1'.
   self assert: newVersion = '0.9.2'.
   self
-    validateExpConfigClassName: 'ConfigurationOfConflict'
+    validate: 'ConfigurationOfConflict'
     expConfigVersion: '1.2.0'
     expConfigRepo: 'filetree://' , configurationDirectory fullName
     expBaselineClassName: nil
     expBaselineVersion: nil
     expBaselineRepo: nil.
   self
-    validateExpConfigClassName: 'ConfigurationOfExternalX'
+    validate: 'ConfigurationOfExternalX'
     expConfigVersion: '0.9.1'
     expConfigRepo: 'filetree://' , configurationDirectory fullName
     expBaselineClassName: nil
