@@ -23,18 +23,16 @@ testConfigurationConflict6
   self assert: existingVersion = '0.9.1'.
   self assert: newVersion = '0.9.2'.
   self
-    validateExpectedConfigurationClassName: 'ConfigurationOfConflict'
-    expectedConfigurationVersion: '1.2.0'
-    expectedConfigurationRepository:
-      'filetree://' , configurationDirectory fullName
-    expectedBaselineClassName: nil
-    expectedBaselineVersion: nil
-    expectedBaselineRepository: nil.
+    validateExpConfigClassName: 'ConfigurationOfConflict'
+    expConfigVersion: '1.2.0'
+    expConfigRepo: 'filetree://' , configurationDirectory fullName
+    expBaselineClassName: nil
+    expBaselineVersion: nil
+    expBaselineRepo: nil.
   self
-    validateExpectedConfigurationClassName: 'ConfigurationOfExternalX'
-    expectedConfigurationVersion: '0.9.1'
-    expectedConfigurationRepository:
-      'filetree://' , configurationDirectory fullName
-    expectedBaselineClassName: nil
-    expectedBaselineVersion: nil
-    expectedBaselineRepository: nil
+    validateExpConfigClassName: 'ConfigurationOfExternalX'
+    expConfigVersion: '0.9.1'
+    expConfigRepo: 'filetree://' , configurationDirectory fullName
+    expBaselineClassName: nil
+    expBaselineVersion: nil
+    expBaselineRepo: nil

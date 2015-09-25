@@ -9,10 +9,9 @@ testFileTreeLoadConfigurationVersions
     onUpgrade: [ :ex | ex allow ];
     load.
   self
-    validateExpectedConfigurationClassName: 'ConfigurationOfExternalX'
-    expectedConfigurationVersion: '0.9.1'
-    expectedConfigurationRepository:
-      'filetree://' , configurationDirectory fullName
-    expectedBaselineClassName: nil
-    expectedBaselineVersion: nil
-    expectedBaselineRepository: nil
+    validateExpConfigClassName: 'ConfigurationOfExternalX'
+    expConfigVersion: '0.9.1'
+    expConfigRepo: 'filetree://' , configurationDirectory fullName
+    expBaselineClassName: nil
+    expBaselineVersion: nil
+    expBaselineRepo: nil
