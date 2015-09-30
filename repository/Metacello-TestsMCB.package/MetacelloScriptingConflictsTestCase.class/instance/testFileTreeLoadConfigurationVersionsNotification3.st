@@ -16,4 +16,3 @@ testFileTreeLoadConfigurationVersionsNotification3
     expBaselineClassName: nil
     expBaselineVersion: nil
     expBaselineRepo: nil
-    expectedBaselineRepository: nil
