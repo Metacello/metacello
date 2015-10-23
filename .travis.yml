@@ -33,12 +33,12 @@ env:
 #  Squeak-Trunk
 
    - ST=Pharo-4.0 LoadList="'default'" TRAVIS_SCRIPT=userGuide.st     # use Pharo4.0 here until https://github.com/dalehenrich/metacello-work/issues/360 is fixed
-   - ST=GemStone-3.2.6 LoadList="'default'" TRAVIS_SCRIPT=userGuide.st
+   - ST=GemStone-3.2.10 LoadList="'default'" TRAVIS_SCRIPT=userGuide.st
 
    - ST=Pharo-5.0 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
    - ST=Pharo-5.0 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
-   - ST=GemStone-3.2.6 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
-   - ST=GemStone-3.2.6 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+   - ST=GemStone-3.2.10 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+   - ST=GemStone-3.2.10 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
    - ST=Squeak-4.5 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st 
    - ST=Squeak-4.5 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st # until Issue 
 
