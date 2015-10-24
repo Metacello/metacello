@@ -2,6 +2,7 @@ tests BaselineOf
 testBaselineOfAddSection1
   "Add section as part of creating a new version"
 
+  [ 
   | x y |
   (MetacelloToolBox baselineNamed: self baselineName asString)
     createBaselineOfMethod: 'baseline:' inCategory: 'baseline';
@@ -30,4 +31,10 @@ testBaselineOfAddSection1
   self
     assert:
       (x := (Smalltalk at: self baselineName) sourceCodeAt: #'baseline:')
-        = (y := self baselineOfAddSection1SourceString)
+        = (y := self baselineOfAddSection1SourceString) ]
+    on: Error
+    do: [ :ex | 
+      Transcript
+        cr;
+        show: 'testBaselineOf: ' , ex description.
+      ex pass ]

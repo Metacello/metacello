@@ -1,5 +1,6 @@
 tests BaselineOf
 testBaselineOf
+  [ 
   (MetacelloToolBox baselineNamed: self baselineName asString)
     createBaselineOfMethod: 'baseline:' inCategory: 'baseline';
     addBaselineOfSection: #'common'
@@ -21,4 +22,10 @@ testBaselineOf
   self
     assert:
       ((Smalltalk at: self baselineName) sourceCodeAt: #'baseline:')
-        = self baselineOfSourceString
+        = self baselineOfSourceString ]
+    on: Error
+    do: [ :ex | 
+      Transcript
+        cr;
+        show: 'testBaselineOf: ' , ex description.
+      ex pass ]
