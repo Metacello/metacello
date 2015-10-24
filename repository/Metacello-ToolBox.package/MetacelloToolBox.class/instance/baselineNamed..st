@@ -9,10 +9,9 @@ baselineNamed: baseName
       self ensureMetacello.
       BaselineOf
         subclass: baselineName
-        instVarNames: #()
-        classVars: #()
-        classInstVars: #()
-        poolDictionaries: #()
+        instanceVariableNames: ''
+        classVariableNames: ''
+        poolDictionaries: ''
         category: baselineName.
       MetacelloPlatform current registerPackageNamed: baselineName.
       (MetacelloPlatform current globalNamed: baselineName asSymbol)
