@@ -1,0 +1,14 @@
+{
+	"category" : "Metacello-Core-Constructors",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 10/23/2015 16:26",
+	"instvars" : [
+		 ],
+	"name" : "MetacelloBaselineOfMethodSpec",
+	"pools" : [
+		 ],
+	"super" : "MetacelloVersionMethodSpec",
+	"type" : "normal" }
