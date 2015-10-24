@@ -4,13 +4,13 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "dkh 09/25/2015 16:28",
 	"instvars" : [
 		"registry",
 		"monticelloRepository",
 		"configurationRepository",
 		"initialWorkingCopyList" ],
-	"name" : "MetacelloScriptingStandardTestHarness",
+	"name" : "MetacelloScriptingStdTstHarness",
 	"pools" : [
 		 ],
 	"super" : "TestCase",

@@ -8,19 +8,19 @@ testFileTreeLoadGithubRefBaseline7
     silently;
     load.
   self
-    validateExpectedConfigurationClassName: nil
-    expectedConfigurationVersion: nil
-    expectedConfigurationRepository: nil
-    expectedBaselineClassName: 'BaselineOfGithubRefVII'
-    expectedBaselineVersion: 'baseline'
-    expectedBaselineRepository: 'filetree://' , externalDirectory fullName.
+    validate: nil
+    expConfigVersion: nil
+    expConfigRepo: nil
+    expBaselineClassName: 'BaselineOfGithubRefVII'
+    expBaselineVersion: 'baseline'
+    expBaselineRepo: 'filetree://' , externalDirectory fullName.
   self
     verify: 'External-Core'
     loadedFrom: 'http://ss3.gemtalksystems.com/ss/external'.
   self
-    validateExpectedConfigurationClassName: nil
-    expectedConfigurationVersion: nil
-    expectedConfigurationRepository: nil
-    expectedBaselineClassName: 'BaselineOfExternal'
-    expectedBaselineVersion: 'baseline'
-    expectedBaselineRepository: 'http://ss3.gemtalksystems.com/ss/external'
+    validate: nil
+    expConfigVersion: nil
+    expConfigRepo: nil
+    expBaselineClassName: 'BaselineOfExternal'
+    expBaselineVersion: 'baseline'
+    expBaselineRepo: 'http://ss3.gemtalksystems.com/ss/external'

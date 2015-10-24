@@ -10,5 +10,5 @@
 	"name" : "MetacelloCurrentVersionScriptTestCase",
 	"pools" : [
 		 ],
-	"super" : "MetacelloScriptingStandardTestHarness",
+	"super" : "MetacelloScriptingStdTstHarness",
 	"type" : "normal" }

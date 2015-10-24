@@ -18,12 +18,11 @@ testIssue63a092
     verify: 'GoferFoo' version: 'GoferFoo-lr.2';
     verify: 'GoferBar' version: 'GoferBar-lr.1'.
   self
-    validateExpectedConfigurationClassName: 'ConfigurationOfIssue63'
-    expectedConfigurationVersion: '0.9.2'
-    expectedConfigurationRepository:
-      'dictionary://Metacello_Configuration_Test_Repository'
-    expectedBaselineClassName: 'BaselineOfExternal'
-    expectedBaselineVersion: 'baseline'
-    expectedBaselineRepository:
+    validate: 'ConfigurationOfIssue63'
+    expConfigVersion: '0.9.2'
+    expConfigRepo: 'dictionary://Metacello_Configuration_Test_Repository'
+    expBaselineClassName: 'BaselineOfExternal'
+    expBaselineVersion: 'baseline'
+    expBaselineRepo:
       'github://dalehenrich/external:' , MetacelloScriptingResource externalCustomSHA
         , '/repository'

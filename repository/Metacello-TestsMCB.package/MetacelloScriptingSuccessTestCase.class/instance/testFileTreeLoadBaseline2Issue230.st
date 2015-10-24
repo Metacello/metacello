@@ -9,9 +9,9 @@ testFileTreeLoadBaseline2Issue230
     get;
     load.
   self
-    validateExpectedConfigurationClassName: nil
-    expectedConfigurationVersion: nil
-    expectedConfigurationRepository: nil
-    expectedBaselineClassName: 'BaselineOfExternalX'
-    expectedBaselineVersion: 'baseline'
-    expectedBaselineRepository: 'filetree://' , externalDirectory fullName
+    validate: nil
+    expConfigVersion: nil
+    expConfigRepo: nil
+    expBaselineClassName: 'BaselineOfExternalX'
+    expBaselineVersion: 'baseline'
+    expBaselineRepo: 'filetree://' , externalDirectory fullName

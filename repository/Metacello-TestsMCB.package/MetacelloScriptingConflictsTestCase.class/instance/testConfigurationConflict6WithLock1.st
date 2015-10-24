@@ -15,18 +15,16 @@ testConfigurationConflict6WithLock1
     silently;
     load.
   self
-    validateExpectedConfigurationClassName: 'ConfigurationOfConflict'
-    expectedConfigurationVersion: '1.2.0'
-    expectedConfigurationRepository:
-      'filetree://' , configurationDirectory fullName
-    expectedBaselineClassName: nil
-    expectedBaselineVersion: nil
-    expectedBaselineRepository: nil.
+    validate: 'ConfigurationOfConflict'
+    expConfigVersion: '1.2.0'
+    expConfigRepo: 'filetree://' , configurationDirectory fullName
+    expBaselineClassName: nil
+    expBaselineVersion: nil
+    expBaselineRepo: nil.
   self
-    validateExpectedConfigurationClassName: 'ConfigurationOfExternalX'
-    expectedConfigurationVersion: '0.9.1'
-    expectedConfigurationRepository:
-      'filetree://' , configurationDirectory fullName
-    expectedBaselineClassName: nil
-    expectedBaselineVersion: nil
-    expectedBaselineRepository: nil
+    validate: 'ConfigurationOfExternalX'
+    expConfigVersion: '0.9.1'
+    expConfigRepo: 'filetree://' , configurationDirectory fullName
+    expBaselineClassName: nil
+    expBaselineVersion: nil
+    expBaselineRepo: nil

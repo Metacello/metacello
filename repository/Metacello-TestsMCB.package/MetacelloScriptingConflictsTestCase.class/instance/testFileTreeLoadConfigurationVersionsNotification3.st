@@ -10,10 +10,9 @@ testFileTreeLoadConfigurationVersionsNotification3
     silently;
     load.
   self
-    validateExpectedConfigurationClassName: 'ConfigurationOfExternalX'
-    expectedConfigurationVersion: '0.9.0'
-    expectedConfigurationRepository:
-      'filetree://' , configurationDirectory fullName
-    expectedBaselineClassName: nil
-    expectedBaselineVersion: nil
-    expectedBaselineRepository: nil
+    validate: 'ConfigurationOfExternalX'
+    expConfigVersion: '0.9.0'
+    expConfigRepo: 'filetree://' , configurationDirectory fullName
+    expBaselineClassName: nil
+    expBaselineVersion: nil
+    expBaselineRepo: nil

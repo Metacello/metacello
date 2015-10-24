@@ -23,18 +23,16 @@ testConfigurationConflict7
   self assert: existingVersion = '0.9.1'.
   self assert: newVersion = '0.9.0'.
   self
-    validateExpectedConfigurationClassName: 'ConfigurationOfConflict'
-    expectedConfigurationVersion: '1.1.0'
-    expectedConfigurationRepository:
-      'filetree://' , configurationDirectory fullName
-    expectedBaselineClassName: nil
-    expectedBaselineVersion: nil
-    expectedBaselineRepository: nil.
+    validate: 'ConfigurationOfConflict'
+    expConfigVersion: '1.1.0'
+    expConfigRepo: 'filetree://' , configurationDirectory fullName
+    expBaselineClassName: nil
+    expBaselineVersion: nil
+    expBaselineRepo: nil.
   self
-    validateExpectedConfigurationClassName: 'ConfigurationOfExternalX'
-    expectedConfigurationVersion: '0.9.0'
-    expectedConfigurationRepository:
-      'dictionary://Metacello_Conflict_Test_Repository'
-    expectedBaselineClassName: nil
-    expectedBaselineVersion: nil
-    expectedBaselineRepository: nil
+    validate: 'ConfigurationOfExternalX'
+    expConfigVersion: '0.9.0'
+    expConfigRepo: 'dictionary://Metacello_Conflict_Test_Repository'
+    expBaselineClassName: nil
+    expBaselineVersion: nil
+    expBaselineRepo: nil

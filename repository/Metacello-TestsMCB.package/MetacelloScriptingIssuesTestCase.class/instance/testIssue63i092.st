@@ -14,10 +14,9 @@ testIssue63i092
     verify: 'GoferBar' version: 'GoferBar-lr.1';
     verifyPackageNotLoaded: 'GoferFoo'.
   self
-    validateExpectedConfigurationClassName: 'ConfigurationOfIssue63'
-    expectedConfigurationVersion: '0.9.2'
-    expectedConfigurationRepository:
-      'dictionary://Metacello_Configuration_Test_Repository'
-    expectedBaselineClassName: nil
-    expectedBaselineVersion: nil
-    expectedBaselineRepository: nil
+    validate: 'ConfigurationOfIssue63'
+    expConfigVersion: '0.9.2'
+    expConfigRepo: 'dictionary://Metacello_Configuration_Test_Repository'
+    expBaselineClassName: nil
+    expBaselineVersion: nil
+    expBaselineRepo: nil

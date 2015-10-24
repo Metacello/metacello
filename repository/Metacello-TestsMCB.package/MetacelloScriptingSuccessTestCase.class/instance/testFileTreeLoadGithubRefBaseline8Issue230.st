@@ -11,23 +11,23 @@ testFileTreeLoadGithubRefBaseline8Issue230
     get;
     load.
   self
-    validateExpectedConfigurationClassName: nil
-    expectedConfigurationVersion: nil
-    expectedConfigurationRepository: nil
-    expectedBaselineClassName: 'BaselineOfGithubRefVIII'
-    expectedBaselineVersion: 'baseline'
-    expectedBaselineRepository: 'filetree://' , externalDirectory fullName.
+    validate: nil
+    expConfigVersion: nil
+    expConfigRepo: nil
+    expBaselineClassName: 'BaselineOfGithubRefVIII'
+    expBaselineVersion: 'baseline'
+    expBaselineRepo: 'filetree://' , externalDirectory fullName.
   self
     verify: 'External-Core'
     loadedFrom:
       'github://dalehenrich/external:' , MetacelloScriptingResource externalCustomSHA
         , '/repository'.
   self
-    validateExpectedConfigurationClassName: nil
-    expectedConfigurationVersion: nil
-    expectedConfigurationRepository: nil
-    expectedBaselineClassName: 'BaselineOfExternal'
-    expectedBaselineVersion: 'baseline'
-    expectedBaselineRepository:
+    validate: nil
+    expConfigVersion: nil
+    expConfigRepo: nil
+    expBaselineClassName: 'BaselineOfExternal'
+    expBaselineVersion: 'baseline'
+    expBaselineRepo:
       'github://dalehenrich/external:' , MetacelloScriptingResource externalCustomSHA
         , '/repository'

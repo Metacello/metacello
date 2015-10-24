@@ -1,5 +1,5 @@
 utilities
-validateExpectedConfigurationClassName: expectedConfigurationClassName expectedConfigurationVersion: expectedConfigurationVersion expectedConfigurationRepository: expectedConfigurationRepository expectedBaselineClassName: expectedBaselineClassName expectedBaselineVersion: expectedBaselineVersion expectedBaselineRepository: expectedBaselineRepository
+validate: expectedConfigurationClassName expConfigVersion: expectedConfigurationVersion expConfigRepo: expectedConfigurationRepository expBaselineClassName: expectedBaselineClassName expBaselineVersion: expectedBaselineVersion expBaselineRepo: expectedBaselineRepository
   MetacelloProjectRegistration registry configurationRegistry
     at: expectedConfigurationClassName
     ifPresent: [ :existing | 
