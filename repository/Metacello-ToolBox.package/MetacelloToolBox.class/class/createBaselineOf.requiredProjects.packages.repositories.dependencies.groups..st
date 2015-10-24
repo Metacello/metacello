@@ -13,7 +13,7 @@ createBaselineOf: baselineBasename requiredProjects: projectList packages: packa
   | toolbox |
   (toolbox := self baselineNamed: baselineBasename)
     createBaselineOfMethod: 'baseline:' inCategory: 'baseline';
-    addSection: #'common'
+    addBaselineOfSection: #'common'
       requiredProjects: projectList
       packages: packageList
       repositories: repositories

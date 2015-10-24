@@ -1,5 +1,5 @@
 api-configuration
-addSection: sectionAttributeOrPath requiredProjects: projectList packages: packageList dependencies: dependecies includes: includes files: files repositories: repositories preLoadDoIts: preLoadDoIts postLoadDoIts: postLoadDoIts supplyingAnswers: supplyingAnswers groups: groups versionSpecsDo: aBlock
+addBaselineOfSection: sectionAttributeOrPath requiredProjects: projectList packages: packageList dependencies: dependecies includes: includes files: files repositories: repositories preLoadDoIts: preLoadDoIts postLoadDoIts: postLoadDoIts supplyingAnswers: supplyingAnswers groups: groups versionSpecsDo: aBlock
   "
 		projectList - collection of project base names (without ConfigurationOf prefix)
 		packageList - collection of package base names
