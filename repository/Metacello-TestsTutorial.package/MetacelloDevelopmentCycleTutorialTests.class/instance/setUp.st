@@ -11,7 +11,6 @@ setUp
   self tempRepositories add: repo.
   Smalltalk at: self alternatRepositoryName put: repo.
   Smalltalk at: self configurationName ifPresent: [ :cl | cl removeFromSystem ].
-  Smalltalk at: self baselineName ifPresent: [ :cl | cl removeFromSystem ].
   repo := MetacelloConfigurationResource current monticelloRepository.
   self tempRepositories add: repo.
   Smalltalk at: #'Metacello_Configuration_Test_Repository' put: repo.
