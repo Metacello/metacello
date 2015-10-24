@@ -72,7 +72,7 @@
 		"addSectionsFrom:forBaseline:updateProjects:updatePackages:versionSpecsDo:" : "dkh 9/8/2012 05:17",
 		"addSymbolicSection:version:" : "dkh 9/7/2012 07:50",
 		"baselineNameFrom:" : "dkh 05/15/2013 20:39",
-		"baselineNamed:" : "dkh 10/23/2015 20:39",
+		"baselineNamed:" : "dkh 10/24/2015 08:32",
 		"buildMapFrom:for:" : "dkh 3/7/2012 17:08:50",
 		"clearVersionSpec:fullVersionSpec:updateProjects:updatePackages:" : "dkh 3/7/2012 17:08:50",
 		"commitBaselineOfMethod" : "dkh 10/23/2015 16:25",

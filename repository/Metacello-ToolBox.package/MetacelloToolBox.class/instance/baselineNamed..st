@@ -8,7 +8,7 @@ baselineNamed: baseName
       "Create the configuration class"
       self ensureMetacello.
       BaselineOf
-        subclass: baselineName
+        subclass: baselineName asSymbol
         instanceVariableNames: ''
         classVariableNames: ''
         poolDictionaries: ''
