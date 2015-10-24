@@ -1,8 +1,24 @@
 tests BaselineOf
 testBaselineOf
-  | x y |
-  self createBaselineOf.
+  (MetacelloToolBox baselineNamed: self baselineName asString)
+    createBaselineOfMethod: 'baseline:' inCategory: 'baseline';
+    addBaselineOfSection: #'common'
+      requiredProjects: #('MetacelloTestConfigurationOfFoo')
+      packages: #('GeauxFaux' 'GeauxBeau')
+      repositories:
+        {('MetacelloTestConfigurationOfFoo'
+          -> {('dictionary://' , self repositoryName asString)})}
+      dependencies:
+        {('GeauxFaux' -> #('MetacelloTestConfigurationOfFoo')).
+        ('GeauxBeau' -> #('GeauxFaux'))}
+      groups:
+        {('default' -> #('Core')).
+        ('Core' -> #('GeauxFaux')).
+        ('Tests' -> #('GeauxBeau')).
+        ('Core Tests' -> #('Core' 'Tests'))}
+      versionSpecsDo: [ :versionSpec |  ];
+    commitBaselineOfMethod.
   self
     assert:
-      (x := (Smalltalk at: self baselineName) sourceCodeAt: #'baseline:')
-        = (y := self baselineOfSourceString)
+      ((Smalltalk at: self baselineName) sourceCodeAt: #'baseline:')
+        = self baselineOfSourceString
