@@ -25,7 +25,7 @@ configShortCutMethodOn: aStream member: aMember indent: indent
       aStream
         tab: indent;
         nextPutAll: 'spec'.
-      self configMethodBodyOn: aStream indent: indent.
+      self configMethodBodyOn: aStream indent: indent fromShortCut: true.
       aStream nextPutAll: ' ]'.
       ^ self ].
   hasVersionString
