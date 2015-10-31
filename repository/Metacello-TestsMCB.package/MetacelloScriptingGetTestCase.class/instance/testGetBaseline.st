@@ -1,6 +1,6 @@
 tests
 testGetBaseline
-  | projectSpecs expected |
+  | projectSpecs expected x |
   Metacello new
     baseline: 'ExternalX';
     repository: 'filetree://' , externalDirectory fullName;
@@ -10,8 +10,7 @@ testGetBaseline
     list.
   expected := 'spec 
 	name: ''ExternalX'';
-	versionString: ''baseline'';
 	repository: ''filetree://'
     , externalDirectory fullName , '''.'.
   self assert: projectSpecs size = 1.
-  self assert: projectSpecs first printString = expected
+  self assert: (x := projectSpecs first printString) = expected

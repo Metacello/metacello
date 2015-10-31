@@ -122,13 +122,9 @@ configMethodBodyOn: aStream indent: indent
           repos := self repositories map values.
           repos size = 1
             ifTrue: [ 
-              hasClassName | hasVersionString | hasOperator | hasLoads | hasPreLoadDoIt
-                | hasPostLoadDoIt | hasName
-                ifTrue: [ 
-                  aStream
-                    cr;
-                    tab: indent + 1 ]
-                ifFalse: [ aStream space ].
+              aStream
+                cr;
+                tab: indent + 1.
               repos first configMethodCascadeOn: aStream lastCascade: true ]
             ifFalse: [ 
               aStream cr.
