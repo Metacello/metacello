@@ -10,4 +10,3 @@ compareVersionsIn: aConfigurationClass
 		compareVersion: previousVersion versionString
 		for: aConfigurationClass name asString
 		to: developmentVersion versionString
-	
