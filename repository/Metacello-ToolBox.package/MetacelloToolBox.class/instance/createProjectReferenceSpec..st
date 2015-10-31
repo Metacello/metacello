@@ -5,11 +5,7 @@ createProjectReferenceSpec: projectBaseName
     project: projectBaseName;
     list)
     detect: [ :each | true ]
-    ifNone: [ 
-      self
-        error:
-          'The project ' , projectBaseName printString
-            , ' is not currently loaded in the image.' ].
+    ifNone: [ ^ self classicCreateProjectReferenceSpec: projectBaseName ].
   ^ project projectReferenceSpec
     name: projectBaseName;
     projectReference: projectSpec;
