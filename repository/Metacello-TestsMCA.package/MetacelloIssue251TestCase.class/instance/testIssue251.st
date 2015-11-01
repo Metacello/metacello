@@ -11,5 +11,6 @@ testIssue251
   expected := 'spec 
 	name: ''Seaside3'';
 	projectReference: [
-		spec repository: ''github://glassdb/Seaside31:3.1.1-gs31/repository'' ].'.
+		spec
+			repository: ''github://glassdb/Seaside31:3.1.1-gs31/repository'' ].'.
   self assert: actual = expected
