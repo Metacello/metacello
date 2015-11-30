@@ -143,7 +143,7 @@ baseline: spec
   spec for: #common do: [
     spec baseline: 'Sample' with: [
       repository: 'github://dalehenrich/Sample:master' ].
-    spec package: 'OtherProject-Core with: [
+    spec package: 'OtherProject-Core' with: [
       spec requires: 'Sample' ] ].
 ```
 
