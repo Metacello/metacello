@@ -7,16 +7,6 @@ lookupProjectSpecFor: aProjectSpec
     registrationForProjectSpec: aProjectSpec
     ifAbsent: [ :new | new ]
     ifPresent: [ :existing :new | 
-      existing locked
-        ifTrue: [ 
-          | reg |
-          reg := MetacelloAllowLockedProjectChange new
-            operationString: 'pre-emptive lock enforced check';
-            existingProjectRegistration: existing;
-            newProjectRegistration: new;
-            signal.
-          reg == existing
-            ifTrue: [ ^ reg projectSpec ] ].
       (existing hasLoadConflicts: new)
         ifTrue: [ 
           ((existing canUpgradeTo: new)
