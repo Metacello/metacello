@@ -7,7 +7,7 @@ lookupProjectSpecFor: aProjectSpec
     registrationForProjectSpec: aProjectSpec
     ifAbsent: [ :new | new ]
     ifPresent: [ :existing :new | 
-      existing isLocked
+      existing locked
         ifTrue: [ 
           | reg |
           reg := MetacelloAllowLockedProjectChange new
