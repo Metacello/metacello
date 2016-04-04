@@ -8,7 +8,7 @@ SmalltalkCISpec {
       #directory : 'repository'
     }
   ],
-  #testing : [
+  #testing : {
     #categories : [ 'Metacello-TestsCommonMC', 'Metacello-TestsCore', 
       'Metacello-TestsCore-Configs', 'Metacello-TestsCore-Specs', 
       'Metacello-TestsMC', 'Metacello-TestsMCA', 'Metacello-TestsMCB', 
@@ -16,5 +16,5 @@ SmalltalkCISpec {
       'Metacello-TestsPlatform', 'Metacello-TestsReference', 
       'Metacello-TestsTutorial'
     ]
-  ]
+  }
 }
