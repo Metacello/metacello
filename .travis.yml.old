@@ -1,0 +1,109 @@
+language: erlang
+
+sudo: required
+
+notifications:
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/47796c01bb932d6a0300 # dalehenrich/chat
+      - https://webhooks.gitter.im/e/d6dd211bd92050b46647 # metacello-work chat
+    on_success: always  # options: [always|never|change] default: always
+    on_failure: always  # options: [always|never|change] default: always
+    on_start: false     # default: false
+
+env:
+# Tested platforms and versions:
+#
+# GemStone
+#  GemStone-2.4.x
+#  GemStone-3.1.x
+#  GemStone-3.2.x
+#
+# Pharo
+#  Pharo-1.4
+#  Pharo-2.0
+#  Pharo-3.0 
+#  Pharo-4.0 
+#  Pharo-5.0 
+#
+# Squeak
+#  Squeak-4.3 (not all tests are passing)
+#  Squeak-4.4
+#  Squeak-4.5
+#  Squeak-Trunk
+
+#   - ST=Pharo-4.0 LoadList="'default'" TRAVIS_SCRIPT=userGuide.st     # use Pharo4.0 here until https://github.com/dalehenrich/metacello-work/issues/360 is fixed
+   - ST=GemStone-3.3.0 LoadList="'default'" TRAVIS_SCRIPT=userGuide.st
+
+   - ST=Pharo-5.0 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+   - ST=Pharo-5.0 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+   - ST=GemStone-3.3.0 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+   - ST=GemStone-3.3.0 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+   - ST=Squeak-4.5 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st 
+   - ST=Squeak-4.5 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st # until Issue 
+
+##   - ST=PharoCore-1.1 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+##   - ST=PharoCore-1.1 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+##   - ST=PharoCore-1.2 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+##   - ST=PharoCore-1.2 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+##   - ST=PharoCore-1.3 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+##   - ST=PharoCore-1.3 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+#   - ST=Pharo-1.4 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+#   - ST=Pharo-1.4 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+#   - ST=Pharo-2.0 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+#   - ST=Pharo-2.0 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+#   - ST=Pharo-3.0 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st 
+#   - ST=Pharo-3.0 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st 
+#   - ST=Pharo-4.0 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+#   - ST=Pharo-4.0 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+##   - ST=Squeak-4.3 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+##   - ST=Squeak-4.3 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+#   - ST=Squeak-4.4 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+#   - ST=Squeak-4.4 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+#   - ST=Squeak-4.6 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+#   - ST=Squeak-4.6 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+#   - ST=Squeak-5.0 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+#   - ST=Squeak-5.0 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+#
+#   - ST=Squeak-Trunk LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+#   - ST=Squeak-Trunk LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+#
+#   - ST=GemStone-2.4.4.1 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+#   - ST=GemStone-2.4.4.1 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+##   - ST=GemStone-2.4.4.8 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+##   - ST=GemStone-2.4.4.8 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+##   - ST=GemStone-2.4.5 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+##   - ST=GemStone-2.4.5 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+#   - ST=GemStone-2.4.5.3 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+#   - ST=GemStone-2.4.5.3 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+##   - ST=GemStone-2.4.6 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st # https://github.com/dalehenrich/metacello-work/issues/312
+##   - ST=GemStone-2.4.6 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st # https://github.com/dalehenrich/metacello-work/issues/312
+##   - ST=GemStone-3.0.1 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+##   - ST=GemStone-3.0.1 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+#   - ST=GemStone-3.1.0.6 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+#   - ST=GemStone-3.1.0.6 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+#   - ST=GemStone-3.2.12 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+#   - ST=GemStone-3.2.12 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+
+matrix:
+   allow_failures:
+   - env: ST=Squeak-4.4 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+   - env: ST=Squeak-4.4 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+   - env: ST=Squeak-Trunk LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+   - env: ST=Squeak-Trunk LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+   - env: ST=Squeak-4.6 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
+   - env: ST=Squeak-5.0 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+
+
+install:
+   - export PROJECT_HOME="$(pwd)"
+   - cd $HOME
+   - wget -q -O builderCI.zip https://github.com/dalehenrich/builderCI/zipball/master
+   - unzip -q builderCI.zip
+   - cd dalehenrich-builderCI*
+   - source build_env_vars
+   - ln -s $PROJECT_HOME $GIT_PATH
+   - ./build_image.sh
+
+script: $PROJECT_HOME/tests/testTravisCI.sh  -verbose
+

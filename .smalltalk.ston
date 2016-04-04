@@ -1,0 +1,10 @@
+SmalltalkCISpec {
+  #specName : 'Metacello',
+  #loading : [
+    SCIMetacelloLoadSpec {
+      #baseline : 'Metacello',
+      #load : [ 'Tests' ],
+      #directory : 'repository'
+    }
+  ]
+}
