@@ -1,7 +1,7 @@
 private
 integerFromString: aString
   aString
-    detect: [ :char | char isNumeric not ]
+    detect: [ :char | char isDigit not ]
     ifNone: [ 
       | integer |
       integer := aString asInteger.
