@@ -10,8 +10,7 @@ SmalltalkCISpec {
   ],
   #testing : {
     #categories : [ 
-      'Metacello-TestsCore', 'Metacello-TestsReference', 
-      'Metacello-TestsMCCore', 'Metacello-TestsMCA'
+      'Metacello-TestsMCB', 'Metacello-TestsTutorial'
     ]
   }
 }

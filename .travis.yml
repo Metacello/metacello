@@ -4,6 +4,10 @@ sudo: false
 os:
   - linux
 
+smalltalk_config:
+  - .smalltalk.ston
+  - .smalltalk_2.ston
+
 smalltalk:
   - Pharo-5.0
   - Squeak-4.5
