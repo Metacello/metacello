@@ -40,7 +40,7 @@ env:
    - ST=GemStone-3.3.0 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
    - ST=GemStone-3.3.0 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
    - ST=Squeak-4.5 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st 
-   - ST=Squeak-4.5 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st # until Issue 
+   - ST=Squeak-4.5 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st 
 
 #   - ST=PharoCore-1.1 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
 #   - ST=PharoCore-1.1 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
@@ -89,6 +89,7 @@ matrix:
    allow_failures:
    - env: ST=Squeak-4.4 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
    - env: ST=Squeak-4.4 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
+   - env: ST=Squeak-4.5 LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
    - env: ST=Squeak-Trunk LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
    - env: ST=Squeak-Trunk LoadList="'TravisCI_3'" TRAVIS_SCRIPT=travisCI.st
    - env: ST=Squeak-4.6 LoadList="'TravisCI_1' 'TravisCI_2'" TRAVIS_SCRIPT=travisCI.st
