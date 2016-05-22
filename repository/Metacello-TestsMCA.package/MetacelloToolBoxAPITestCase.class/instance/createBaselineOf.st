@@ -1,8 +1,5 @@
-tests BaselineOf
-testBaselineOfAddSection1
-  "Add section as part of creating a new version"
-
-  | x y |
+private BaselineOf
+createBaselineOf
   (MetacelloToolBox baselineNamed: self baselineName asString)
     createBaselineOfMethod: 'baseline:' inCategory: 'baseline';
     addBaselineOfSection: #'common'
@@ -20,14 +17,4 @@ testBaselineOfAddSection1
         ('Tests' -> #('GeauxBeau')).
         ('Core Tests' -> #('Core' 'Tests'))}
       versionSpecsDo: [ :versionSpec |  ];
-    addBaselineOfSection: #'pharo'
-      requiredProjects: #()
-      packages: #('GoferFoo' 'GoferBar')
-      dependencies: {('GoferBar' -> #('GoferFoo'))}
-      groups: {('UI' -> #('GoferBar'))}
-      versionSpecsDo: [ :versionSpec |  ];
-    commitBaselineOfMethod.
-  self
-    assert:
-      (x := (Smalltalk at: self baselineName) sourceCodeAt: #'baseline:')
-        = (y := self baselineOfAddSection1SourceString)
+    commitBaselineOfMethod
