@@ -142,8 +142,8 @@ baseline: spec
 
   spec for: #common do: [
     spec baseline: 'Sample' with: [
-      repository: 'github://dalehenrich/Sample:master' ].
-    spec package: 'OtherProject-Core with: [
+      spec repository: 'github://dalehenrich/Sample:master' ].
+    spec package: 'OtherProject-Core' with: [
       spec requires: 'Sample' ] ].
 ```
 
@@ -160,7 +160,7 @@ baseline: spec
 
   spec for: #common do: [
     spec baseline: 'Sample' with: [
-      repository: 'github://dalehenrich/Sample:master' ].
+      spec repository: 'github://dalehenrich/Sample:master' ].
     spec import: 'Sample'.
     spec package: 'OtherProject-Core with: [
       spec requires: 'default' ] ].
@@ -177,12 +177,12 @@ baseline: spec
   spec for: #common do: [
     "Sample defines the group 'default'"
     spec baseline: 'Sample' with: [
-      repository: 'github://dalehenrich/Sample:master' ].
+      spec repository: 'github://dalehenrich/Sample:master' ].
     spec import: 'Sample'.
 
     "OtherSample *also* defines the group 'default'"
     spec baseline: 'OtherSample' with: [
-      repository: 'github://dalehenrich/Sample:master' ].
+      spec repository: 'github://dalehenrich/Sample:master' ].
     spec import: 'OtherSample'.
 
     "'default' is now ambiguous"
@@ -200,12 +200,12 @@ baseline: spec
   spec for: #common do: [
     "Sample defines the group 'default'"
     spec baseline: 'Sample' with: [
-      repository: 'github://dalehenrich/Sample:master' ].
+      spec repository: 'github://dalehenrich/Sample:master' ].
     spec import: 'Sample' provides: #('default').
 
     "OtherSample *also* defines the group 'default'"
     spec baseline: 'OtherSample' with: [
-      repository: 'github://dalehenrich/Sample:master' ].
+      spec repository: 'github://dalehenrich/Sample:master' ].
     spec import: 'OtherSample' provides: #('default').
 
     "'default' can now be successfully resolved, even though

@@ -13,7 +13,7 @@ Gofer new
 (Smalltalk at: #GsUpgrader) upgradeMetacello.
 ```
 
-###Pharo3.0
+###Pharo3.0, Pharo4.0, and Pharo5.0
 Metacello Preview  is pre-installed in Pharo3.0 the following installs the latest released version:
 
 ```Smalltalk

@@ -29,7 +29,7 @@ testConfigurationConflict9
   self
     validate: 'ConfigurationOfExternalX'
     expConfigVersion: '0.9.1'
-    expConfigRepo: 'dictionary://Metacello_Conflict_Test_Repository'
+    expConfigRepo: 'filetree://' , configurationDirectory fullName
     expBaselineClassName: nil
     expBaselineVersion: nil
     expBaselineRepo: nil

@@ -6,5 +6,7 @@ repositoryVersionString
 
   | spec repo |
   self repositorySpecs do: [ :repoSpec | spec := repoSpec ].
-  repo := spec createRepository.
+  [ repo := spec createRepository ]
+    on: Error
+    do: [ :ex | ^ '' ].
   ^ repo repositoryVersionString

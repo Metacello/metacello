@@ -1,0 +1,20 @@
+SmalltalkCISpec {
+  #specName : 'Metacello',
+  #loading : [
+    SCIMetacelloLoadSpec {
+      #baseline : 'Metacello',
+      #onWarningLog : true,
+      #load : [ 'Tests' ],
+      #directory : 'repository'
+    }
+  ],
+  #testing : {
+    #categories : [ 'Metacello-TestsCommonMC', 'Metacello-TestsCore', 
+      'Metacello-TestsCore-Configs', 'Metacello-TestsCore-Specs', 
+      'Metacello-TestsMC', 'Metacello-TestsMCA', 'Metacello-TestsMCB', 
+      'Metacello-TestsMCCore', 'Metacello-TestsMCResources', 
+      'Metacello-TestsPlatform', 'Metacello-TestsReference', 
+      'Metacello-TestsTutorial'
+    ]
+  }
+}
