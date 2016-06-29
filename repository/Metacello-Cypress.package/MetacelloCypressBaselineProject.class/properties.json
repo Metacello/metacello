@@ -10,5 +10,5 @@
 	"name" : "MetacelloCypressBaselineProject",
 	"pools" : [
 		 ],
-	"super" : "MetacelloProject",
+	"super" : "MetacelloMCBaselineProject",
 	"type" : "normal" }
