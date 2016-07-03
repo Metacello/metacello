@@ -79,7 +79,8 @@ baseline: spec
       spec
         group: 'default' with: #('batch' 'Metacello-ToolBox');
         group: 'batch'
-          with: #('Metacello-Core' 'Metacello-GitHub' 'Metacello-Bitbucket');
+          with:
+            #('Metacello-Core' 'Metacello-GitHub' 'Metacello-Bitbucket' 'Cypress');
         group: 'Base Configuration' with: #('Metacello-Base');
         group: 'Core' with: #('default');
         group: 'Cypress' with: #('Metacello-Cypress');
