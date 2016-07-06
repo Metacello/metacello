@@ -22,4 +22,6 @@ tearDown
     ifAbsent: [  ].
   Smalltalk
     removeKey: #'Metacello_Configuration_Test_POST_DoIt_Result'
-    ifAbsent: [  ]
+    ifAbsent: [  ].
+  UserGlobals at: #'UndefinedSymbols' put: undefinedSymbols.
+  UndefinedSymbolList addLast: undefinedSymbols

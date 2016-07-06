@@ -14,4 +14,6 @@ tearDown
         cr;
         show:
             'leaked package from ' , self printString , ' -> ' , leak printString ].
-  self assert: diff isEmpty
+  self assert: diff isEmpty.
+  UserGlobals at: #'UndefinedSymbols' put: undefinedSymbols.
+  UndefinedSymbolList addLast: undefinedSymbols
