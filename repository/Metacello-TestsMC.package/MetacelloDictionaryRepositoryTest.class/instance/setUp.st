@@ -16,6 +16,4 @@ setUp
   Smalltalk at: #'Metacello_Configuration_Test_Repository' put: repo.
   initialWorkingCopyList := MCWorkingCopy allManagers
     collect: [ :each | each packageName ].
-  undefinedSymbols := UserGlobals at: #'UndefinedSymbols'.
-  UserGlobals removeKey: #'UndefinedSymbols'.
-  UndefinedSymbolList removeFirst
+  undefinedSymbols := MetacelloPlatform current disableUndefinedSybolUpdates

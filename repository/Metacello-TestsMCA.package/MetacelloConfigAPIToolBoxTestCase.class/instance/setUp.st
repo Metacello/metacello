@@ -15,6 +15,4 @@ setUp
   gofer metacelloLoad.
   Smalltalk at: #'Metacello_Configuration_Test_DoIt_Result' put: false.
   Smalltalk at: #'Metacello_Configuration_Test_POST_DoIt_Result' put: false.
-  undefinedSymbols := UserGlobals at: #'UndefinedSymbols'.
-  UserGlobals removeKey: #'UndefinedSymbols'.
-  UndefinedSymbolList removeFirst
+  undefinedSymbols := MetacelloPlatform current disableUndefinedSybolUpdates

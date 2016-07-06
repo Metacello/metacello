@@ -23,5 +23,4 @@ tearDown
   Smalltalk
     removeKey: #'Metacello_Configuration_Test_POST_DoIt_Result'
     ifAbsent: [  ].
-  UserGlobals at: #'UndefinedSymbols' put: undefinedSymbols.
-  UndefinedSymbolList addLast: undefinedSymbols
+  MetacelloPlatform current reenableUndefinedSybolUpdates: undefinedSymbols
