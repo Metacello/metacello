@@ -3,5 +3,4 @@
 		 },
 	"instance" : {
 		"doSilently" : "dkh 05/14/2014 06:56",
-		"testLoadConfigurationThenBaselineThenUnload" : "dkh 05/14/2014 06:28",
-		"testLoadConfigurationThenUnload" : "dkh 05/14/2014 06:37" } }
+		"testLoadConfigurationThenBaselineThenUnload" : "dkh 05/14/2014 06:28" } }
