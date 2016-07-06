@@ -13,7 +13,7 @@ smalltalk_config:
   - .smalltalkB.ston
 
 smalltalk:
-  - GemStone-3.3.0
+  - GemStone-3.3.1
   - Pharo-5.0
   - Squeak-5.0
 #  - GemStone-2.4.8
