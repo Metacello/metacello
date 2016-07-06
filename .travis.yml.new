@@ -4,6 +4,14 @@ sudo: false
 os:
   - linux
 
+smalltalk_edge:
+  source: hpi-swa/smalltalkCI
+  branch: dkh-1
+
+smalltalk_config:
+  - .smalltalkA.ston
+  - .smalltalkB.ston
+
 smalltalk:
   - Pharo-5.0
   - Squeak-4.5

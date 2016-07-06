@@ -4,7 +4,7 @@ SmalltalkCISpec {
     SCIMetacelloLoadSpec {
       #baseline : 'Metacello',
       #onWarningLog : true,
-      #load : [ 'Tests' ],
+      #load : [ 'TravisCI_3' ],
       #directory : 'repository'
     }
   ]
