@@ -15,4 +15,5 @@ tearDown
         show:
             'leaked package from ' , self printString , ' -> ' , leak printString ].
   self assert: diff isEmpty.
-  MetacelloPlatform current reenableUndefinedSybolUpdates: undefinedSymbols
+  self disableUndefinedSymbolTracking
+    ifTrue: [ MetacelloPlatform current reenableUndefinedSybolUpdates: undefinedSymbols ]

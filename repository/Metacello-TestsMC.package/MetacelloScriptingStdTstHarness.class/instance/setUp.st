@@ -8,4 +8,5 @@ setUp
   MetacelloProjectRegistration resetRegistry.
   initialWorkingCopyList := MCWorkingCopy allManagers
     collect: [ :each | each packageName ].
-  undefinedSymbols := MetacelloPlatform current disableUndefinedSybolUpdates
+  self disableUndefinedSymbolTracking
+    ifTrue: [ undefinedSymbols := MetacelloPlatform current disableUndefinedSybolUpdates ]
