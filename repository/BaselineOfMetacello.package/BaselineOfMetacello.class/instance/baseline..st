@@ -278,7 +278,8 @@ baseline: spec
           with: [ spec requires: #('Metacello-TestsMCB') ];
         yourself.
       spec
-        group: 'Tests' with: #('Metacello-TestsPlatform');
+        group: 'Tests'
+          with: #('Metacello-TestsPlatform' 'Metacello-GemStone-TestsMCB');
         group: 'TravisCI_1' with: #('Metacello-TestsPlatform');
         group: 'TravisCI_3' with: #('Metacello-GemStone-TestsMCB');
         yourself ].
