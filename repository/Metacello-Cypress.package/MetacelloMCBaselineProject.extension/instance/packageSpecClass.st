@@ -1,0 +1,3 @@
+*metacello-cypress
+packageSpecClass
+  ^ MetacelloCypressPackageSpec
