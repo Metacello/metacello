@@ -8,10 +8,6 @@ smalltalk_edge:
   source: hpi-swa/smalltalkCI
   branch: dkh-1
 
-smalltalk_config:
-  - .smalltalkA.ston
-  - .smalltalkB.ston
-
 smalltalk:
   - GemStone-3.3.1
   - Pharo-5.0
@@ -25,6 +21,10 @@ smalltalk:
   - Squeak-4.5
   - Squeak-4.6
   - Squeak-trunk
+
+smalltalk_config:
+  - .smalltalkA.ston
+  - .smalltalkB.ston
 
 matrix:
   allow_failures:
