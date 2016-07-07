@@ -1,7 +1,8 @@
 {
 	"class" : {
+		"allTestSelectors" : "dkh 07/07/2016 12:09",
 		"lookupHierarchyRoot" : "dkh 07/07/2016 07:45",
-		"shouldInheritSelectors" : "dkh 07/07/2016 10:53" },
+		"shouldInheritSelectors" : "dkh 07/07/2016 12:08" },
 	"instance" : {
 		"setUp" : "dkh 07/07/2016 07:47",
 		"tearDown" : "dkh 07/07/2016 07:43" } }
