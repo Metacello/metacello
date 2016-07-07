@@ -1,6 +1,7 @@
 {
 	"class" : {
-		"lookupHierarchyRoot" : "dkh 07/07/2016 07:45" },
+		"lookupHierarchyRoot" : "dkh 07/07/2016 07:45",
+		"shouldInheritSelectors" : "dkh 07/07/2016 10:53" },
 	"instance" : {
 		"setUp" : "dkh 07/07/2016 07:47",
 		"tearDown" : "dkh 07/07/2016 07:43" } }
