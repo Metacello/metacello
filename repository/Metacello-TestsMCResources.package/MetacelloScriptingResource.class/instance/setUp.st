@@ -41,4 +41,8 @@ setUp
     setUpConfiguration181;
     setUpBaselineIssue215;
     setUpConfigurationIssue339;
+    setUpIssue399CoreSample;
+    setUpIssue399CoreExternal;
+    setUpBaselineIssue399;
+    setUpBaselineIssue399Cypress;
     yourself
