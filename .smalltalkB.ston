@@ -3,7 +3,6 @@ SmalltalkCISpec {
   #loading : [
     SCIMetacelloLoadSpec {
       #baseline : 'Metacello',
-      #onWarningLog : true,
       #load : [ 'TravisCI_3' ],
       #directory : 'repository'
     }

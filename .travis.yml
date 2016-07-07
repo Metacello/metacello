@@ -32,7 +32,7 @@ matrix:
     - smalltalk: Squeak-4.5
     - smalltalk: Squeak-4.6
     - smalltalk: Squeak-5.0
-    - smalltalk: Squeak-Trunk
+    - smalltalk: Squeak-trunk
     - smalltalk: Pharo-6.0
 
 cache:
