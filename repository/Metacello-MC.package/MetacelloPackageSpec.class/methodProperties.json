@@ -70,6 +70,7 @@
 		"requires:constructor:" : "dkh 6/8/2012 14:04:22",
 		"resolveToPackagesIn:visited:" : "dkh 6/8/2012 14:04:22",
 		"savePackage" : "dkh 6/8/2012 14:04:22",
+		"searchCacheRepositoryForPackage:" : "dkh 07/07/2016 10:29",
 		"setPostLoadDoIt:" : "dkh 6/8/2012 14:04:22",
 		"setPreLoadDoIt:" : "dkh 6/8/2012 14:04:22",
 		"supplyingAnswers:constructor:" : "dkh 6/8/2012 14:04:22",
