@@ -13,6 +13,7 @@ tearDown
     ifAbsent: [  ].
   self tempRepositories
     do: [ :repo | MCRepositoryGroup default removeIdenticalRepository: repo ].
+  MetacelloPlatform current reenableUndefinedSybolUpdates: undefinedSymbols.
   finalWorkingCopyList := MCWorkingCopy allManagers
     collect: [ :each | each packageName ].
   diff := finalWorkingCopyList difference: initialWorkingCopyList.
@@ -22,5 +23,4 @@ tearDown
         cr;
         show:
             'leaked package from ' , self printString , ' -> ' , leak printString ].
-  self assert: diff isEmpty.
-  MetacelloPlatform current reenableUndefinedSybolUpdates: undefinedSymbols
+  self assert: diff isEmpty

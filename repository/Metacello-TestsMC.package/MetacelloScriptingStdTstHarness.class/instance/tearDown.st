@@ -5,6 +5,8 @@ tearDown
   self tearDownPackages.
   self tearDownRepositories.
   MetacelloProjectRegistration registry: registry.
+  self disableUndefinedSymbolTracking
+    ifTrue: [ MetacelloPlatform current reenableUndefinedSybolUpdates: undefinedSymbols ].
   finalWorkingCopyList := MCWorkingCopy allManagers
     collect: [ :each | each packageName ].
   diff := finalWorkingCopyList difference: initialWorkingCopyList.
@@ -14,6 +16,4 @@ tearDown
         cr;
         show:
             'leaked package from ' , self printString , ' -> ' , leak printString ].
-  self assert: diff isEmpty.
-  self disableUndefinedSymbolTracking
-    ifTrue: [ MetacelloPlatform current reenableUndefinedSybolUpdates: undefinedSymbols ]
+  self assert: diff isEmpty
