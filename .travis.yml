@@ -16,15 +16,15 @@ smalltalk:
   - GemStone-3.3.1
   - Pharo-5.0
   - Squeak-5.0
-#  - GemStone-2.4.8
-#  - GemStone-3.1.0.6
-#  - GemStone-3.2.15
-#  - Pharo-3.0
-#  - Pharo-4.0
-#  - Pharo-6.0
-#  - Squeak-4.5
-#  - Squeak-4.6
-#  - Squeak-trunk
+  - GemStone-2.4.8
+  - GemStone-3.1.0.6
+  - GemStone-3.2.15
+  - Pharo-3.0
+  - Pharo-4.0
+  - Pharo-6.0
+  - Squeak-4.5
+  - Squeak-4.6
+  - Squeak-trunk
 
 matrix:
   allow_failures:
