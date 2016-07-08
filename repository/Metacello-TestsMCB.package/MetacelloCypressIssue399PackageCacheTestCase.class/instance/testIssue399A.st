@@ -4,6 +4,10 @@ testIssue399A
 
   "Issue399-Core package is in sampleRepository and externalRepository. BaselineOfIssue399 package is in external repository"
 
+  "Verify that a package with same name/version in package-cache is not involved in load"
+
+  "See https://github.com/dalehenrich/metacello-work/issues/399#issuecomment-231464884"
+
   MCCacheRepository default flushCache.
   self
     setUpRepositoryContents: #('Issue399-Core-dkh.1')

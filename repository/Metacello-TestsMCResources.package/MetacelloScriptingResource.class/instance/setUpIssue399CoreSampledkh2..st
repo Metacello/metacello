@@ -1,16 +1,16 @@
 issue 399
-setUpIssue399CoreExternal
+setUpIssue399CoreSampledkh2: ancestors
   "two packages with same name and version number, but a different class created."
 
-  "this on goes into the external repository"
+  "this on goes into the sample repository"
 
   "add first package to the package cache, then load a baseline in repo with other package"
 
   "self reset"
 
   | reference className definitionArray versionInfo |
-  reference := GoferVersionReference name: 'Issue399-Core-dkh.1'.
-  className := #'Issue399External'.
+  reference := GoferVersionReference name: 'Issue399-Core-dkh.2'.
+  className := #'Issue399Sample'.
   definitionArray := {(MCOrganizationDefinition
     categories: (Array with: reference packageName asSymbol)).
   (MCClassDefinition
@@ -19,7 +19,7 @@ setUpIssue399CoreExternal
     category: reference packageName
     instVarNames: #()
     comment: '')}.
-  externalRepository
+  sampleRepository
     basicStoreVersion:
       (MCVersion new
         setPackage: (MetacelloTestsMCPackage new name: reference packageName)
@@ -31,7 +31,7 @@ setUpIssue399CoreExternal
             date: Date today
             time: Time now
             author: reference author
-            ancestors: #())
+            ancestors: ancestors)
         snapshot: (MCSnapshot fromDefinitions: definitionArray)
         dependencies: #()).
   ^ versionInfo

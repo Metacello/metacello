@@ -1,5 +1,5 @@
 issue 399
-setUpIssue399CoreSample
+setUpIssue399CoreSampledkh1
   "two packages with same name and version number, but a different class created."
 
   "this on goes into the sample repository"
