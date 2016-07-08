@@ -14,6 +14,6 @@ testIssue399B
     repository: 'filetree://' , externalDirectory fullName;
     silently;
     load.
-  self assert: (Smalltalk at: #'Issue399Sample') isNil.
-  self assert: (Smalltalk at: #'Issue399External') notNil.	"Confirm that package from external repo loaded"
+  self assert: (Smalltalk at: #'Issue399Sample' ifAbsent: [  ]) isNil.
+  self assert: (Smalltalk at: #'Issue399External' ifAbsent: [  ]) notNil.	"Confirm that package from external repo loaded"
   MCCacheRepository default flushCache
