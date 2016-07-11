@@ -1,7 +1,8 @@
 language: smalltalk
 sudo: false
 
-os: linux
+os:
+  - linux
 
 smalltalk:
   - GemStone-3.3.1
