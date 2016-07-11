@@ -1,2 +1,2 @@
 SystemOrganization addCategory: #'Metacello-Cypress'!
-SystemOrganization addCategory: #'Metacello-Cypress-Specs'!
+SystemOrganization addCategory: 'Metacello-Cypress-Specs'!

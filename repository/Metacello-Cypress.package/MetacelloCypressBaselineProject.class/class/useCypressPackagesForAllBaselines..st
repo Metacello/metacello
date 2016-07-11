@@ -1,3 +1,5 @@
 accessing
 useCypressPackagesForAllBaselines: aBool
-  UseCypressPackagesForAllBaselines := aBool
+	"self useCypressPackagesForAllBaselines: true"
+
+	UseCypressPackagesForAllBaselines := aBool

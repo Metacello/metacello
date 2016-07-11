@@ -2,7 +2,7 @@
 	"class" : {
 		"singletonVersionName" : "08/31/2013 23:33",
 		"useCypressPackagesForAllBaselines" : "dkh 07/07/2016 07:10",
-		"useCypressPackagesForAllBaselines:" : "dkh 07/07/2016 07:11",
+		"useCypressPackagesForAllBaselines:" : "TravisCI 7/10/2016 08:15",
 		"versionConstructorClass" : "08/31/2013 23:37" },
 	"instance" : {
 		"baselineOfProjectSpecClass" : "dkh 6/29/2016 15:25",
