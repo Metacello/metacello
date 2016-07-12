@@ -1,3 +1,0 @@
-scripting
-configurationOfProjectSpecClass
-  self shouldNotImplement

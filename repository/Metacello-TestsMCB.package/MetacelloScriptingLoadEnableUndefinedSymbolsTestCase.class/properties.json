@@ -1,0 +1,14 @@
+{
+	"category" : "Metacello-TestsMCB",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MetacelloScriptingLoadEnableUndefinedSymbolsTestCase",
+	"pools" : [
+		 ],
+	"super" : "MetacelloScriptingLoadTestCase",
+	"type" : "normal" }

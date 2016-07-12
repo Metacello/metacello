@@ -1,0 +1,14 @@
+{
+	"category" : "Metacello-TestsCypress",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MetacelloCypressScriptingSuccessDisableUndefinedSymbolsTestCase",
+	"pools" : [
+		 ],
+	"super" : "MetacelloScriptingSuccessDisableUndefinedSymbolsTestCase",
+	"type" : "normal" }

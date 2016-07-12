@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #'Metacello-Platform.pharo30'!
+SystemOrganization addCategory: #'Metacello-Platform'!
