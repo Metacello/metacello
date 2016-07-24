@@ -1,0 +1,14 @@
+{
+	"category" : "Metacello-TestsCypress",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MetacelloCypressScriptingSuccessTestCase",
+	"pools" : [
+		 ],
+	"super" : "MetacelloScriptingSuccessTestCase",
+	"type" : "normal" }

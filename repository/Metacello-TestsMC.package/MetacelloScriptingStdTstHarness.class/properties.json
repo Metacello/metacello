@@ -4,9 +4,10 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "dkh 09/25/2015 16:28",
+	"commentStamp" : "",
 	"instvars" : [
 		"registry",
+		"undefinedSymbols",
 		"monticelloRepository",
 		"configurationRepository",
 		"initialWorkingCopyList" ],

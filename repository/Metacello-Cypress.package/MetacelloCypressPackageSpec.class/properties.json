@@ -6,13 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"file",
-		"repositories",
-		"goferPackage",
-		"preLoadDoIt",
-		"postLoadDoIt" ],
+		 ],
 	"name" : "MetacelloCypressPackageSpec",
 	"pools" : [
 		 ],
-	"super" : "MetacelloAbstractPackageSpec",
+	"super" : "MetacelloPackageSpec",
 	"type" : "normal" }

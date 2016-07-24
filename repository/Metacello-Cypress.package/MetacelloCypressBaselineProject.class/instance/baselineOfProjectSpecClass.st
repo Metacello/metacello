@@ -1,3 +1,3 @@
 spec classes
 baselineOfProjectSpecClass
-  ^ MetacelloCypressBaselineProjectSpec
+    ^ MetacelloCypressBaselineProjectSpec

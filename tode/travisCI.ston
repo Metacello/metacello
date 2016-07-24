@@ -1,0 +1,64 @@
+TDScriptLeafNode{#name:'travisCI',#contents:'[ :topez :objIn :tokens :command :commandNode | 
+  | opts args |
+  \"for help: ./travisCI -h\"
+  command
+    getOptsMixedLongShort:
+      {#(\'help\' $h #\'none\').
+      #(\'TravisCI_1\' nil #\'none\').
+      #(\'TravisCI_2\' nil #\'none\').
+      #(\'TravisCI_3\' nil #\'none\')}
+    optionsAndArguments: [ :options :operands | 
+      opts := options.
+      args := operands ].
+  opts
+    at: \'help\'
+    ifAbsent: [ 
+      | pf homePath catDict label |
+      pf := topez toolInstanceFor: \'pf\'.
+      pf pfStart.
+      homePath := (pf resolveAtPathReference: \'@/sys/stone/home\') fullName.
+      catDict := Dictionary new
+        at: #\'categories\' put: {};
+        yourself.
+      label := \'Metacello profile for: \'.
+      opts
+        at: \'TravisCI_1\'
+        ifPresent: [ :ignored | 
+          label := label , \' TravisCI_1\'.
+          (catDict at: #\'categories\')
+            addAll:
+              #(\'Metacello-TestsCore\' \'Metacello-TestsReference\' \'Metacello-TestsMCCore\' \'Metacello-TestsPlatform\') ].
+      opts
+        at: \'TravisCI_2\'
+        ifPresent: [ :ignored | 
+          label := label , \' TravisCI_2\'.
+          (catDict at: #\'categories\') addAll: #(\'Metacello-TestsMCA\') ].
+      opts
+        at: \'TravisCI_3\'
+        ifPresent: [ :ignored | 
+          label := label , \' TravisCI_3\'.
+          (catDict at: #\'categories\')
+            addAll: #(\'Metacello-TestsMCB\' \'Metacello-TestsTutorial\') ].
+      (Smalltalk at: #\'SmalltalkCI\') platformClass basicNew
+        initialize;
+        xmlLogDirPath: homePath;
+        spec: ((Smalltalk at: #\'SmalltalkCISpec\') new testing: catDict);
+        test.
+      pf pfView: label ]
+    ifPresent: [ :ignored | 
+      TDManPage
+        viewManPage:
+          \'NAME
+  travisCI - travisCI script utility template
+SYNOPSIS
+  travisCI [-h|--help]
+DESCRIPTION
+  Run and profile TravisCI scripts in current image.
+
+EXAMPLES
+  ./travisCI -h
+
+  ./travisCI --TravisCI_1 --TravisCI_2
+  ./travisCI --TravisCI_3
+\'
+        topez: topez ] ]',#creationTime:DateAndTime['2016-07-06T17:06:24.8399178981781-07:00'],#modificationTime:DateAndTime['2016-07-06T17:07:57.17964696884155-07:00']}
