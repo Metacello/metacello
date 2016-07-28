@@ -1,3 +1,5 @@
 file system
 tempFileFor: aName suffix: aSuffixString
-	^ FileReference newTempFilePrefix: aName suffix: aSuffixString
+	^ (FileLocator temp asFileReference
+		/ (FileReference newTempFilePrefix: aName suffix: aSuffixString) basename)
+		fullName
