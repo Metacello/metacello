@@ -5,7 +5,7 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
   "To minimize GitHub rate limiting problems, we are caching the ETags for the tag request: https://developer.github.com/v3/#conditional-requests"
 
   | jsonFileName errorFileName jsonFile eTagsUrl eTagInfo errorBlock |
-  jsonFileName := self tempFileFor: 'tags-' , self processPID suffix: 'json'.
+  jsonFileName := self tempFileFor: 'tags-' , self processPID suffix: '.json'.
   eTagsUrl := url.
   eTagsCache
     ifNotNil: [ 
@@ -65,6 +65,7 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
                     at: 'X-RateLimit-Remaining'
                       put: (headerDict at: 'X-RateLimit-Remaining');
                     yourself.
+                  self deleteFileNamed: errorFileName.
                   ^ jsonObject ].
               (status beginsWith: '304')
                 ifTrue: [ 
@@ -72,6 +73,7 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
                   eTagInfo
                     at: 'X-RateLimit-Remaining'
                     put: (headerDict at: 'X-RateLimit-Remaining').
+                  self deleteFileNamed: errorFileName.
                   ^ self
                     downloadJSONIfModified: url
                     eTagInfo: eTagInfo

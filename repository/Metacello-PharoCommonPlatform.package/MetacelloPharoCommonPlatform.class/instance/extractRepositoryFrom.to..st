@@ -2,9 +2,10 @@ github support
 extractRepositoryFrom: zipFile to: directory
     "unzip <zipFile> into <directory>"
 
-    | out err proc errorMessage |
-    out := FileStream forceNewFileNamed: '/tmp/zip.out'.
-    err := FileStream forceNewFileNamed: '/tmp/zip.err'.
+    | out err proc errorMessage errorFileName |
+    errorFileName := self downloadErrorFileNameFor: zipFile.
+    out := FileStream forceNewFileNamed: '/dev/zip.out'.
+    err := FileStream forceNewFileNamed: errorFileName.
     errorMessage := ''.
     [ 
     proc := OSProcess thisOSProcess
@@ -22,11 +23,11 @@ extractRepositoryFrom: zipFile to: directory
             out close.
             err close ].
     FileStream
-        fileNamed: '/tmp/zip.err'
+        fileNamed: errorFileName
         do: [ :fileStream | 
             (errorMessage := fileStream contentsOfEntireFile) notEmpty
                 ifTrue: [ self error: 'unzip failure: ' , errorMessage printString ]
                 ifFalse: [
                     (self fileHandleOn: '/tmp')
                         deleteFileNamed: zipFile;
-                        deleteFileNamed: (self downloadErrorFileNameFor: zipFile) ] ]
+                        deleteFileNamed: errorFileName ] ]
