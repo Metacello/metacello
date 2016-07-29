@@ -35,6 +35,7 @@ downloadJSONIfModified: url eTagInfo: eTagInfo username: username pass: pass onE
                 at: 'X-RateLimit-Remaining'
                   put: (headerDict at: 'X-RateLimit-Remaining');
                 yourself.
+              self deleteFileNamed: errorFileName.
               ^ jsonObject ].
           (status beginsWith: '304')
             ifTrue: [ 
@@ -42,6 +43,7 @@ downloadJSONIfModified: url eTagInfo: eTagInfo username: username pass: pass onE
               eTagInfo
                 at: 'X-RateLimit-Remaining'
                 put: (headerDict at: 'X-RateLimit-Remaining').
+              self deleteFileNamed: errorFileName.
               ^ eTagInfo at: 'jsonObject' ].
           (status beginsWith: '403')
             ifTrue: [ 
