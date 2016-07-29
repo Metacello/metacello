@@ -5,11 +5,12 @@
 		"compiler" : "ChristopheDemarey 9/1/2014 17:14",
 		"defaultDirectory" : "ChristopheDemarey 4/29/2013 14:17",
 		"defaultRepositoryDescription" : "ChristopheDemarey 09/12/2014 03:01:45",
+		"deleteFileNamed:" : "TravisCI 7/28/2016 16:02",
 		"directoryFromPath:relativeTo:" : "ChristopheDemarey 4/29/2013 15:14",
 		"downloadJSON:username:pass:" : "dkh 10/14/2014 17:20:04",
 		"downloadZipArchive:to:" : "ChristopheDemarey 09/12/2014 03:01:45",
 		"ensureDirectoryExists:" : "ChristopheDemarey 7/22/2013 11:20",
-		"extractRepositoryFrom:to:" : "ChristopheDemarey 9/19/2013 10:35",
+		"extractRepositoryFrom:to:" : "TravisCI 7/28/2016 15:55",
 		"fileDirectoryClass" : "ChristopheDemarey 4/29/2013 15:58",
 		"fileFromPath:relativeTo:" : "ChristopheDemarey 5/14/2013 17:44",
 		"fileHandleOn:" : "ChristopheDemarey 4/29/2013 13:16",
@@ -21,4 +22,4 @@
 		"registerPackageNamed:" : "dkh 10/14/2014 17:20:04",
 		"string:includesSubstring:" : "ChristopheDemarey 5/31/2013 13:02",
 		"suspendSystemUpdateEventsDuring:" : "ChristopheDemarey 5/27/2013 16:18",
-		"tempFileFor:suffix:" : "ChristopheDemarey 7/15/2014 15:48" } }
+		"tempFileFor:suffix:" : "TravisCI 7/28/2016 15:35" } }
