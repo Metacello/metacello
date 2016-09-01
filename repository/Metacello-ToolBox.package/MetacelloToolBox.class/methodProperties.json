@@ -101,7 +101,6 @@
 		"methodSpec" : "dkh 3/7/2012 17:08:50",
 		"modifiedPackageSpecs:packageSpecsDo:" : "dkh 3/7/2012 17:08:50",
 		"modifyBaselineOf" : "dkh 05/21/2016 20:34",
-		"modifyBaselineOfMethodForVersionSpecsDo:" : "dkh 05/21/2016 16:11",
 		"modifySection:repository:requiredProjects:packages:dependencies:includes:files:repositories:preLoadDoIts:postLoadDoIts:supplyingAnswers:groups:versionSpecsDo:" : "dkh 9/8/2012 05:04",
 		"modifySection:sectionIndex:repository:requiredProjects:packages:dependencies:includes:files:repositories:preLoadDoIts:postLoadDoIts:supplyingAnswers:groups:versionSpecsDo:" : "dkh 9/8/2012 05:05",
 		"modifySymbolicVersionMethodFor:" : "dkh 3/7/2012 17:08:50",
