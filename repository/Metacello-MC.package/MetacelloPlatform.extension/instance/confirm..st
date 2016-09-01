@@ -1,4 +1,4 @@
-user interaction
+*metacello-mc
 confirm: aString
 	
 	^(Smalltalk hasClassNamed: #UIManager)

@@ -1,4 +1,4 @@
-repository creation
+*metacello-mc
 createRepository: aRepositorySpec
   | type |
   type := aRepositorySpec type.

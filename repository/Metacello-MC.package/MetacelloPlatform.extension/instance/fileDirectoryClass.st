@@ -1,4 +1,4 @@
-github/bitbucket support
+*metacello-mc
 fileDirectoryClass
 
 	^FileDirectory

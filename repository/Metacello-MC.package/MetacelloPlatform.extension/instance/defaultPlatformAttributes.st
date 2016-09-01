@@ -1,4 +1,4 @@
-attributes
+*metacello-mc
 defaultPlatformAttributes
   | versionString |
   Smalltalk
