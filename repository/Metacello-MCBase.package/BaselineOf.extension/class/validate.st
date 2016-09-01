@@ -1,4 +1,4 @@
-accessing
+*metacello-mcbase
 validate
   "Check the configuration for Errors, Critical Warnings, and Warnings (see class comment for MetacelloMCVersionValidator for more information). 
 	Errors identify specification issues that will result in unexpected behaviour when you load the configuration. 
