@@ -1,3 +1,3 @@
-accessing
+*metacello-mc
 projectClass
     ^ MetacelloMCBaselineProject

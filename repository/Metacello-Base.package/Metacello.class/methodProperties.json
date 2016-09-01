@@ -2,10 +2,8 @@
 	"class" : {
 		"classic" : "dkh 6/13/2012 16:09",
 		"image" : "dkh 7/16/2012 10:12",
-		"registrations" : "dkh 07/27/2013 08:45",
 		"registry" : "dkh 7/13/2012 09:13",
-		"scriptExecutorClass" : "dkh 7/13/2012 09:08",
-		"scriptExecutorClass:" : "dkh 7/13/2012 09:15" },
+		"scriptExecutorClass" : "dkh 7/13/2012 09:08" },
 	"instance" : {
 		"addStatement:args:" : "dkh 5/31/2012 17:57:13",
 		"baseline:" : "dkh 7/12/2012 13:45",

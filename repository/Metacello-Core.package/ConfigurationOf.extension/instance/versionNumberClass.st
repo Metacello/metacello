@@ -1,3 +1,3 @@
-accessing
+*metacello-core
 versionNumberClass
     ^ MetacelloSemanticVersionNumber
