@@ -1,4 +1,4 @@
-unloading Metacello
+*metacello-mcbase
 unloadMetacello
 	"Unload the classes that implement Metacello. Metacello is not needed once a project has been loaded, so it can safely be unloaded."
 

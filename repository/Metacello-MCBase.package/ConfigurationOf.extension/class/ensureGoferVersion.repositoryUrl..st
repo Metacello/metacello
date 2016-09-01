@@ -1,4 +1,4 @@
-private
+*metacello-mcbase
 ensureGoferVersion: goferVersion repositoryUrl: repositoryUrl
     "load the p=file goferVersion if Gofer isn't loaded or an earlier version of Gofer is currently loaded"
 

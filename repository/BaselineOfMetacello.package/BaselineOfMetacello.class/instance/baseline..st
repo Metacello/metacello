@@ -19,7 +19,8 @@ baseline: spec
           with: [ spec loads: #('Tests') ];
         yourself.
       spec
-        package: 'Metacello-Base';
+        package: 'Metacello-Base' with: [ spec includes: 'Metacello-MCBase' ];
+        package: 'Metacello-MCBase' with: [ spec requires: 'Metacello-Base' ];
         package: 'Metacello-ToolBox'
           with: [ spec requires: #('Metacello-Base' 'Metacello-Core') ];
         package: 'Metacello-Core'

@@ -1,0 +1,1 @@
+(name 'Metacello-MCBase-dkh.1' message 'Create new package Metacello-MCBase to split out the Monticello support in Metacello-Base as I see how difficult it will be to port Metacello to the GemStone base image' id 'e76c3cfb-f502-4adc-99cb-3bf3dbdfbd0a' date '09/01/2016' time '15:12:39' author 'dkh' ancestors () stepChildren ())

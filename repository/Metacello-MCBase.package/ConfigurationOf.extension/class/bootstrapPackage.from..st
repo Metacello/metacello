@@ -1,4 +1,4 @@
-private
+*metacello-mcbase
 bootstrapPackage: aString from: aPath
     | repository version |
     repository := (MCCacheRepository default includesVersionNamed: aString)

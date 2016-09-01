@@ -1,4 +1,4 @@
-private
+*metacello-mcbase
 bootstrapMetacelloFrom: repositoryUrl
   "Corresponds to version 1.0.0-beta.32.6"
 

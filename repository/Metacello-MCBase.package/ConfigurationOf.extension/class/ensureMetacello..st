@@ -1,4 +1,4 @@
-private
+*metacello-mcbase
 ensureMetacello: loadList
   "Bootstrap Metacello, retry using alternate repository, if primary repository is not accessible"
 
