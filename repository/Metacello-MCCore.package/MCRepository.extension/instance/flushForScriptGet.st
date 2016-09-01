@@ -1,3 +1,3 @@
-*metacello-core
+*metacello-mccore
 flushForScriptGet
     "noop"

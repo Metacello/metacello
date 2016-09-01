@@ -27,7 +27,9 @@ baseline: spec
           with: [ 
               spec
                 requires: 'Metacello-Base';
-                includes: #('Metacello-MC' 'Metacello-Platform') ];
+                includes:
+                    #('Metacello-MC' 'Metacello-Platform' 'Metacello-MCCore') ];
+        package: 'Metacello-MCCore' with: [ spec requires: 'Metacello-Core' ];
         package: 'Metacello-Cypress' with: [ spec requires: 'Metacello-Core' ];
         package: 'Metacello-FileTree'
           with: [ spec requires: #('Metacello-MC' 'FileTree') ];
