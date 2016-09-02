@@ -1,4 +1,4 @@
-private
+*metacello-monticello-mc
 resolveDependencies: aResolvedReference nearest: nearestReference into: aCollection
   | block retryCount coll notDone |
   self flag: 'Not used, but retained to avoid upgrade issues'.
