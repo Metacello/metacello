@@ -3,7 +3,7 @@ retryingResolvePackageSpecReferences: packageSpec gofer: gofer
   | retryCount references repositoryError goferErrorClass |
   retryCount := 0.
   references := #().
-  goferErrorClass := Metacello current goferRepositoryErrorClass.
+  goferErrorClass := MetacelloPlatform current goferRepositoryErrorClass.
   [ references isEmpty and: [ retryCount < 3 ] ]
     whileTrue: [ 
       retryCount > 0
