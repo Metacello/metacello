@@ -1,4 +1,4 @@
-development support
+*metacello-monticello-mc
 updateProject: aLoaderPolicy
 	"load the latest version of the configuration package"
 

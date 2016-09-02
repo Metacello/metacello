@@ -1,4 +1,4 @@
-development support
+*metacello-monticello-mc
 projectPackage
   MCWorkingCopy
     managersForClass: self configuration class

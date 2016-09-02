@@ -1,4 +1,4 @@
-development support
+*metacello-monticello-mc
 fetchProject: aLoaderPolicy
 	"fetch the latest version of the configuration package"
 	

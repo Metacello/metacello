@@ -9,7 +9,6 @@
 		"createRepository:" : "dkh 6/8/2012 14:04:22",
 		"defaultLoaderClass" : "dkh 6/8/2012 14:04:22",
 		"fetchProject" : "dkh 6/8/2012 14:04:22",
-		"fetchProject:" : "dkh 6/8/2012 14:04:22",
 		"goferBranch:project:" : "dkh 6/8/2012 14:04:22",
 		"goferCommitProject:" : "dkh 6/8/2012 14:04:22",
 		"packageSpec" : "dkh 6/8/2012 14:04:22",
@@ -17,7 +16,6 @@
 		"packagesNeedSaving:" : "dkh 6/8/2012 14:04:22",
 		"pragmaKeywords" : "dkh 6/8/2012 14:04:22",
 		"projectForScriptEngine:unconditionalLoad:" : "dkh 6/8/2012 14:04:22",
-		"projectPackage" : "dkh 10/16/2014 09:47",
 		"projectSpecClass" : "otto 11/19/2013 10:26",
 		"repositoriesSpec" : "dkh 6/8/2012 14:04:22",
 		"repositoriesSpecClass" : "dkh 6/8/2012 14:04:22",
@@ -27,5 +25,4 @@
 		"setBaselineRepositoryDescription:" : "dkh 7/2/2012 16:41",
 		"updatePackageRepositoriesFor:" : "dkh 6/8/2012 14:04:22",
 		"updateProject" : "dkh 6/8/2012 14:04:22",
-		"updateProject:" : "dkh 6/8/2012 14:04:22",
 		"versionSpecClass" : "dkh 6/8/2012 14:04:22" } }
