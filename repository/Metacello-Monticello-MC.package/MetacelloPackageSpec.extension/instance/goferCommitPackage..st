@@ -1,4 +1,4 @@
-development support
+*metacello-monticello-mc
 goferCommitPackage: commitMessage
 	"uses gofer to do commit ... non-interactive"
 	

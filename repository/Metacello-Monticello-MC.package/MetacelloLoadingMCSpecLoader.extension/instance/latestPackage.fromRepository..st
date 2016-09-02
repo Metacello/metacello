@@ -1,4 +1,4 @@
-packages
+*metacello-monticello-mc
 latestPackage: aString fromRepository: repositorySpecs
 
 	| gofer |
