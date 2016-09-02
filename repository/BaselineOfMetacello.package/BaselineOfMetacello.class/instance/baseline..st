@@ -40,7 +40,12 @@ baseline: spec
         package: 'Metacello-Bitbucket'
           with: [ spec requires: #('Metacello-GitBasedRepository') ];
         package: 'Metacello-MC'
-          with: [ spec requires: #('Metacello-Core' 'Gofer') ];
+          with: [ 
+              spec
+                includes: 'Metacello-MCMonticello';
+                requires: #('Metacello-Core') ];
+        package: 'Metacello-MCMonticello'
+          with: [ spec requires: #('Metacello-MC' 'Gofer') ];
         package: 'Metacello-Platform'
           with: [ spec requires: #('Metacello-MC') ];
         package: 'Metacello-Reference'
