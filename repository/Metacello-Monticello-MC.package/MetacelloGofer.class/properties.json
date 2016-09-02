@@ -1,5 +1,5 @@
 {
-	"category" : "Metacello-MC-Gofer",
+	"category" : "Metacello-Monticello-MC-Gofer",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
@@ -7,8 +7,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "MetacelloGoferCommit",
+	"name" : "MetacelloGofer",
 	"pools" : [
 		 ],
-	"super" : "GoferCommit",
+	"super" : "Gofer",
 	"type" : "normal" }
