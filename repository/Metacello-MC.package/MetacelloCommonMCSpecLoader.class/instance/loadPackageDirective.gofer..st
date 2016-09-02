@@ -1,4 +1,4 @@
-*metacello-monticello-mc
+actions
 loadPackageDirective: aPackageLoadDirective gofer: aGofer
   | packageSpec |
   packageSpec := aPackageLoadDirective spec.
@@ -11,12 +11,9 @@ loadPackageDirective: aPackageLoadDirective gofer: aGofer
         ifTrue: [ 
           "Package version already loaded into image"
           ^ self ].
-      loadBlock := [ 
-      "mcLoader preLoad: packageSpec."
-      goferLoad := MetacelloGoferLoad on: aGofer.
-      goferLoad addResolved: resolvedReference.
-      goferLoad execute.
-      MetacelloPlatform current clearCurrentVersionCache	"mcLoader postLoad: packageSpec" ].
+      loadBlock := MetacelloPlatform current
+        goferLoadBlockFor: aGofer
+        resolvedReference: resolvedReference.
       (answers := packageSpec answers) notEmpty
         ifTrue: [ loadBlock valueSupplyingMetacelloAnswers: answers ]
         ifFalse: [ loadBlock value ].
