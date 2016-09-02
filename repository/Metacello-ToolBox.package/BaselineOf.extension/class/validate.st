@@ -9,7 +9,4 @@ validate
 
   <apiDocumentation>
   self ensureMetacello.
-  ^ ((Smalltalk at: #'MetacelloToolBox')
-    validateBaseline: self
-    debug: #()
-    recurse: false) explore
+  ^ (MetacelloToolBox validateBaseline: self debug: #() recurse: false) explore

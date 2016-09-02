@@ -19,17 +19,17 @@ baseline: spec
           with: [ spec loads: #('Tests') ];
         yourself.
       spec
-        package: 'Metacello-Base' with: [ spec includes: 'Metacello-MCBase' ];
-        package: 'Metacello-MCBase' with: [ spec requires: 'Metacello-Base' ];
+        package: 'Metacello-Base'
+          with: [ spec includes: 'Metacello-Monticello-Base' ];
+        package: 'Metacello-Monticello-Base'
+          with: [ spec requires: 'Metacello-Base' ];
         package: 'Metacello-ToolBox'
           with: [ spec requires: #('Metacello-Base' 'Metacello-Core') ];
         package: 'Metacello-Core'
           with: [ 
               spec
                 requires: 'Metacello-Base';
-                includes:
-                    #('Metacello-MC' 'Metacello-Platform' 'Metacello-MCCore') ];
-        package: 'Metacello-MCCore' with: [ spec requires: 'Metacello-Core' ];
+                includes: #('Metacello-MC' 'Metacello-Platform') ];
         package: 'Metacello-Cypress' with: [ spec requires: 'Metacello-Core' ];
         package: 'Metacello-FileTree'
           with: [ spec requires: #('Metacello-MC' 'FileTree') ];
@@ -42,9 +42,9 @@ baseline: spec
         package: 'Metacello-MC'
           with: [ 
               spec
-                includes: 'Metacello-MCMonticello';
+                includes: 'Metacello-Monticello-MC';
                 requires: #('Metacello-Core') ];
-        package: 'Metacello-MCMonticello'
+        package: 'Metacello-Monticello-MC'
           with: [ spec requires: #('Metacello-MC' 'Gofer') ];
         package: 'Metacello-Platform'
           with: [ spec requires: #('Metacello-MC') ];

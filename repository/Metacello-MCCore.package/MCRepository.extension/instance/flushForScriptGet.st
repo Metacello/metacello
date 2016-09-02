@@ -1,3 +1,0 @@
-*metacello-mccore
-flushForScriptGet
-    "noop"

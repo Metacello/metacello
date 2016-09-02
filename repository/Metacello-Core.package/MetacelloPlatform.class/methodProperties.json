@@ -5,6 +5,7 @@
 		"select" : "dkh 05/05/2013 13:39",
 		"unselect" : "dkh 05/05/2013 13:39" },
 	"instance" : {
+		"authorName" : "dkh 09/01/2016 17:10",
 		"authorName:" : "dkh 6/5/2012 19:01:24",
 		"bypassGoferLoadUpdateCategories" : "dkh 6/5/2012 19:01:24",
 		"bypassGoferLoadUpdateCategories:" : "dkh 6/5/2012 19:01:24",
@@ -13,7 +14,9 @@
 		"clearCurrentVersionCache" : "dkh 6/5/2012 19:01:24",
 		"clearPackageCache" : "dkh 10/16/2014 21:39",
 		"collection:do:displaying:" : "dkh 6/5/2012 19:01:24",
+		"confirm:" : "dkh 09/01/2016 17:12",
 		"copyClass:as:inCategory:" : "dkh 6/5/2012 19:01:24",
+		"createRepository:" : "dkh 09/02/2016 05:14",
 		"defaultDirectory" : "ChristopheDemarey 4/29/2013 14:17",
 		"defaultRepositoryDescription" : "dkh 7/23/2012 11:05",
 		"defaultTimeout" : "dkh 6/5/2012 19:01:24",
