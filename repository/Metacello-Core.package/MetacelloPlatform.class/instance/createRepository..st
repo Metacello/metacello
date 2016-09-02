@@ -57,7 +57,7 @@ createRepository: aRepositorySpec
           self
             globalNamed: globalName
             put:
-              (MCDictionaryRepository new
+              ((self globalNamed: #'MCDictionaryRepository') new
                 description: description;
                 yourself) ] ].
   ^ nil
