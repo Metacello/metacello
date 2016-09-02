@@ -1,4 +1,4 @@
-testing
+*metacello-monticello-mc
 isPartiallyCurrentAgainst: resolvedPackageAndProjectNames
 	| mcLoader status |
 	status := MetacelloMCPartiallyLoadedStatus new.

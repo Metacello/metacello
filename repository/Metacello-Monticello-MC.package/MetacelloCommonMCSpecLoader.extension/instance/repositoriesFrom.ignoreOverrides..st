@@ -1,4 +1,4 @@
-repositories
+*metacello-monticello-mc
 repositoriesFrom: aMetacelloMVRepositorySpecs ignoreOverrides: ignoreOverrides
 
 	| repositories repos |

@@ -1,4 +1,4 @@
-development support
+*metacello-monticello-mc
 copySpec: pkgSpec with: gofer to: aRepository
 
 	| repository resolvedReference |

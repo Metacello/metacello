@@ -1,4 +1,4 @@
-loading
+*metacello-monticello-mc
 validateCleanLoadAndTestsForVersion: version loads: loadList
 	| cleanLoad cleanTests |
 	cleanTests := cleanLoad := false.

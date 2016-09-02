@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"compareWorkingCopyNamed:using:" : "dkh 6/8/2012 14:04:22",
 		"currentPackageLoaded:comparing:notLoaded:using:" : "dkh 07/19/2013 15:50",
 		"goferBranchPackage:message:" : "dkh 6/8/2012 14:04:22",
 		"goferCommitPackage:" : "dkh 6/8/2012 14:04:22",

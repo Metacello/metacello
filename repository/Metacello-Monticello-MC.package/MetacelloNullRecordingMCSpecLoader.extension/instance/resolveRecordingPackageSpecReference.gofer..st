@@ -1,4 +1,4 @@
-private
+*metacello-monticello-mc
 resolveRecordingPackageSpecReference: packageSpec gofer: gofer
   | externalPackageReference |
   externalPackageReference := packageSpec file == nil

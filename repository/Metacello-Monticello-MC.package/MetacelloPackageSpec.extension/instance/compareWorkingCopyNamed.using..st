@@ -1,4 +1,4 @@
-testing
+*metacello-monticello-mc
 compareWorkingCopyNamed: wcName using: comarisonOperator
 	| fileRef wcRef |
 	fileRef := GoferResolvedReference name: self file.

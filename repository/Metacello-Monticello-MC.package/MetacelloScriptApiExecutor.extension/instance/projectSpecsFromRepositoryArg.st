@@ -1,4 +1,4 @@
-*metacello-mc
+*metacello-monticello-mc
 projectSpecsFromRepositoryArg
     | spec repo projectSpecs |
     repositoryArg ifNil: [ ^ #() ].

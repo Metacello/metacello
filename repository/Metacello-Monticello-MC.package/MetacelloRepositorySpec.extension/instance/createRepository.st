@@ -1,4 +1,4 @@
-mc support
+*metacello-monticello-mc
 createRepository
   | repo |
   repo := self project createRepository: self.

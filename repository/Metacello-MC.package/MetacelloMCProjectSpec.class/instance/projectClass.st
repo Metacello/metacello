@@ -1,5 +1,7 @@
 querying
 projectClass
-    self className == nil
-        ifTrue: [ ^ nil ].
-    ^ Smalltalk at: self className asSymbol ifAbsent: [  ]
+  self className == nil
+    ifTrue: [ ^ nil ].
+  ^ MetacelloPlatform current
+    globalNamed: self className asSymbol
+    ifAbsent: [  ]
