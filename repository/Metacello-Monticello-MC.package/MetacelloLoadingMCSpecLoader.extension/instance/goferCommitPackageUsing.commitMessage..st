@@ -1,4 +1,4 @@
-development support
+*metacello-monticello-mc
 goferCommitPackageUsing: repositorySpecs commitMessage: commitMessage
 
 	| gofer repoSpecs wc |

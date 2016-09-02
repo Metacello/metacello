@@ -1,4 +1,4 @@
-private
+*metacello-monticello-mc
 linearLoadPackageSpec: packageSpec gofer: gofer
   MetacelloPlatform current
     do: [ 

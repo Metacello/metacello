@@ -1,8 +1,8 @@
-actions
-explicitLoadWithPolicy: aLoadPolicy
+*metacello-monticello-mc
+loadWithPolicy: aLoadPolicy
 
 	| gofer |
 	gofer := MetacelloGofer new.
 	gofer disablePackageCache.
 	gofer repository: aLoadPolicy cacheRepository.
-	self explicitLoadUsing: self gofer: gofer
+	self loadUsing: self gofer: gofer

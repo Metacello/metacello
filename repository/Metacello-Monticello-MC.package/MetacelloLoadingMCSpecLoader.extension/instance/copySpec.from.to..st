@@ -1,4 +1,4 @@
-development support
+*metacello-monticello-mc
 copySpec: pkgSpec from: repositorySpecs to: repository
 
 	| gofer |

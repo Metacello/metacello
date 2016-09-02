@@ -1,4 +1,4 @@
-private
+*metacello-monticello-mc
 linearLoadPackageSpecs: packageSpecs repositories: repositories
 	
 	| gofer |

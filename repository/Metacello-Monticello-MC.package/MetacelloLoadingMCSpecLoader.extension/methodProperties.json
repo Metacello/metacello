@@ -2,4 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
-		"latestPackage:fromRepository:" : "dkh 6/8/2012 14:04:22" } }
+		"copySpec:from:to:" : "dkh 6/8/2012 14:04:22",
+		"goferCommitBranchPackage:using:commitMessage:" : "dkh 6/8/2012 14:04:22",
+		"goferCommitPackageUsing:commitMessage:" : "dkh 6/8/2012 14:04:22",
+		"latestPackage:fromRepository:" : "dkh 6/8/2012 14:04:22",
+		"linearLoadPackageSpec:gofer:" : "dkh 09/04/2014 13:52",
+		"resolveSpec:from:" : "dkh 6/8/2012 14:04:22" } }

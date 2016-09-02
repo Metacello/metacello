@@ -1,4 +1,4 @@
-development support
+*metacello-monticello-mc
 goferCommitBranchPackage: branchName using: repositorySpecs commitMessage: commitMessage
 	| gofer repoSpecs wc |
 	repoSpecs := self spec repositorySpecs notEmpty

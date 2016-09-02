@@ -15,7 +15,6 @@
 		"ignoreImage" : "dkh 6/8/2012 14:04:22",
 		"initialize" : "dkh 6/8/2012 14:04:22",
 		"linearLoadPackageSpec:gofer:" : "dkh 6/8/2012 14:04:22",
-		"linearLoadPackageSpecs:repositories:" : "dkh 6/8/2012 14:04:22",
 		"load" : "dkh 6/8/2012 14:04:22",
 		"loadPackageDirective:gofer:" : "dkh 09/04/2014 13:56",
 		"loadPackageDirectives:gofer:" : "dkh 09/04/2014 13:57",
@@ -32,7 +31,6 @@
 		"repositoriesFrom:ignoreOverrides:" : "dkh 6/8/2012 14:04:22",
 		"repositoryMap" : "dkh 6/8/2012 14:04:22",
 		"resolvePackageSpec:gofer:" : "dkh 06/02/2014 15:10",
-		"resolvePackageSpecReferences:gofer:" : "dkh 6/8/2012 14:04:22",
 		"retryingResolvePackageSpecReferences:gofer:" : "dkh 6/17/2012 19:52",
 		"shouldDisablePackageCache" : "dkh 6/8/2012 14:04:22",
 		"shouldDisablePackageCache:" : "dkh 6/8/2012 14:04:22" } }

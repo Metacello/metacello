@@ -1,4 +1,4 @@
-development support
+*metacello-monticello-mc
 resolveSpec: pkgSpec from: repositorySpecs
 
 	| gofer |
