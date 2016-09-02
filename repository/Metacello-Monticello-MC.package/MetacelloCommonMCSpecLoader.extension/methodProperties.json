@@ -2,7 +2,5 @@
 	"class" : {
 		 },
 	"instance" : {
-		"linearLoadPackageSpecs:repositories:" : "dkh 6/8/2012 14:04:22",
 		"loadPackageDirectives:gofer:" : "dkh 09/04/2014 13:57",
-		"repositoriesFrom:ignoreOverrides:" : "dkh 6/8/2012 14:04:22",
-		"resolvePackageSpecReferences:gofer:" : "dkh 6/8/2012 14:04:22" } }
+		"repositoriesFrom:ignoreOverrides:" : "dkh 6/8/2012 14:04:22" } }
