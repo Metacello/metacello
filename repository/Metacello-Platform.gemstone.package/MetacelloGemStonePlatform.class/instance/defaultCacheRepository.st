@@ -1,0 +1,3 @@
+monticello
+defaultCacheRepository
+  ^ MCDictionaryRepository new
