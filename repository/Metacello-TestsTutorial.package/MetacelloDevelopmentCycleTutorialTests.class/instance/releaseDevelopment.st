@@ -1,9 +1,10 @@
 lessons
 releaseDevelopment
-
-	MetacelloToolBox 
-		releaseDevelopmentVersionIn: (Smalltalk at: self configurationName)
-		description: '- release version 1.0'.
-	MetacelloToolBox 
-		copyConfiguration: (Smalltalk at: self configurationName) 
-		to: 'dictionary://', self alternatRepositoryName asString
+  MetacelloToolBox
+    releaseDevelopmentVersionIn:
+      (MetacelloPlatform current globalNamed: self configurationName)
+    description: '- release version 1.0'.
+  MetacelloToolBox
+    copyConfiguration:
+      (MetacelloPlatform current globalNamed: self configurationName)
+    to: 'dictionary://' , self alternatRepositoryName asString

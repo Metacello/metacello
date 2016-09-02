@@ -1,5 +1,7 @@
 ConfigurationOfFoo
 postloadDoIt
-	"self reset"
+  "self reset"
 
-	Smalltalk at: #'Metacello_Configuration_Test_POST_DoIt_Result' put: true
+  Metacello current
+    globalNamed: #'Metacello_Configuration_Test_POST_DoIt_Result'
+    put: true

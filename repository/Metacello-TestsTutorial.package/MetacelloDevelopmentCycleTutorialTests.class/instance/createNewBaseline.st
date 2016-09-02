@@ -1,6 +1,6 @@
 lessons
 createNewBaseline
-
-	MetacelloToolBox
-		createNewBaselineVersionIn: (Smalltalk at: self configurationName)
-		description: ''.
+  MetacelloToolBox
+    createNewBaselineVersionIn:
+      (MetacelloPlatform current globalNamed: self configurationName)
+    description: ''

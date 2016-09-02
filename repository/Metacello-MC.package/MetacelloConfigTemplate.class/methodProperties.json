@@ -1,7 +1,7 @@
 {
 	"class" : {
 		"DevelopmentSupport" : "dkh 6/8/2012 14:04:22",
-		"baseConfigurationClassIfAbsent:" : "dkh 6/8/2012 14:04:22",
+		"baseConfigurationClassIfAbsent:" : "dkh 09/01/2016 17:01",
 		"ensureMetacello" : "dkh 6/8/2012 14:04:22",
 		"ensureMetacelloBaseConfiguration" : "dkh 05/08/2013 11:39",
 		"isMetacelloConfig" : "dkh 6/8/2012 14:04:22",
@@ -12,4 +12,4 @@
 		"validate" : "dkh 6/8/2012 14:04:22" },
 	"instance" : {
 		"customProjectAttributes" : "dkh 6/8/2012 14:04:22",
-		"project" : "dkh 6/8/2012 14:04:22" } }
+		"project" : "dkh 09/01/2016 17:01" } }

@@ -1,6 +1,6 @@
 lessons
 createNewDevelopment
-
-	MetacelloToolBox
-		createNewDevelopmentVersionIn: (Smalltalk at: self configurationName)
-		description: ''.
+  MetacelloToolBox
+    createNewDevelopmentVersionIn:
+      (MetacelloPlatform current globalNamed: self configurationName)
+    description: ''

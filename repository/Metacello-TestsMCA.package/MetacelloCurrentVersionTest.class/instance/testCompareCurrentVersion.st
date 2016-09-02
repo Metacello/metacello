@@ -41,15 +41,18 @@ testCompareCurrentVersion
     package: 'MetacelloTestConfigurationOfProjectFee';
     package: 'MetacelloTestConfigurationOfProjectFoe';
     load.
-  fum := (Smalltalk at: #'MetacelloTestConfigurationOfFum') new project.
-  foo := (Smalltalk at: #'MetacelloTestConfigurationOfFoo') new project.
-  feaux := (Smalltalk at: #'MetacelloTestConfigurationOfFeaux') new project.
-  projectFie := (Smalltalk at: #'MetacelloTestConfigurationOfProjectFie') new
-    project.
-  projectFee := (Smalltalk at: #'MetacelloTestConfigurationOfProjectFee') new
-    project.
-  projectFoe := (Smalltalk at: #'MetacelloTestConfigurationOfProjectFoe') new
-    project.
+  fum := (MetacelloPlatform current
+    globalNamed: #'MetacelloTestConfigurationOfFum') new project.
+  foo := (MetacelloPlatform current
+    globalNamed: #'MetacelloTestConfigurationOfFoo') new project.
+  feaux := (MetacelloPlatform current
+    globalNamed: #'MetacelloTestConfigurationOfFeaux') new project.
+  projectFie := (MetacelloPlatform current
+    globalNamed: #'MetacelloTestConfigurationOfProjectFie') new project.
+  projectFee := (MetacelloPlatform current
+    globalNamed: #'MetacelloTestConfigurationOfProjectFee') new project.
+  projectFoe := (MetacelloPlatform current
+    globalNamed: #'MetacelloTestConfigurationOfProjectFoe') new project.
   gofer
     version: 'GeauxBeau-dkh.56';
     load.

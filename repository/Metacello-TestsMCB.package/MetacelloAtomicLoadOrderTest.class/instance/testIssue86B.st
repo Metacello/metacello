@@ -7,10 +7,14 @@ testIssue86B
   project := self project.
   version := project version: '6.1-baseline'.
   repo := MetacelloAtomicConfigurationResource current monticelloRepository.
-  Smalltalk at: #'Metacello_Configuration_Test_Repository' put: repo.
+  MetacelloPlatform current
+    globalNamed: #'Metacello_Configuration_Test_Repository'
+    put: repo.
   self tempRepositories add: repo.
   repo := MetacelloMonticelloResource current monticelloRepository.
-  Smalltalk at: #'Metacello_Gofer_Test_Repository' put: repo.
+  MetacelloPlatform current
+    globalNamed: #'Metacello_Gofer_Test_Repository'
+    put: repo.
   self tempRepositories add: repo.
   loadDirective := (version load: #('GeauxBeau')) loaderPolicy loadDirective.
   wc := (GoferPackageReference name: 'GoferFoo') workingCopy.

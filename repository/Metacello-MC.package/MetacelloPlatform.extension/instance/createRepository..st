@@ -12,8 +12,8 @@ createRepository: aRepositorySpec
     ifTrue: [ 
       ^ MCDirectoryRepository new
         directory: (self fileHandleOn: aRepositorySpec description) ].
-  Smalltalk
-    at: #'MCFileTreeRepository'
+  self
+    globalNamed: #'MCFileTreeRepository'
     ifPresent: [ :cl | 
       type = 'filetree'
         ifTrue: [ 
@@ -25,18 +25,18 @@ createRepository: aRepositorySpec
               (self
                 fileHandleOn:
                   (aRepositorySpec description copyFrom: headerSize + 1 to: description size)) ] ].
-  Smalltalk
-    at: #'MCGitHubRepository'
+  self
+    globalNamed: #'MCGitHubRepository'
     ifPresent: [ :cl | 
       type = 'github'
         ifTrue: [ ^ cl location: aRepositorySpec description ] ].
-  Smalltalk
-    at: #'MCBitbucketRepository'
+  self
+    globalNamed: #'MCBitbucketRepository'
     ifPresent: [ :cl | 
       type = 'bitbucket'
         ifTrue: [ ^ cl location: aRepositorySpec description ] ].
-  Smalltalk
-    at: #'MCGitoriousRepository'
+  self
+    globalNamed: #'MCGitoriousRepository'
     ifPresent: [ :cl | 
       type = 'gitorious'
         ifTrue: [ ^ cl location: aRepositorySpec description ] ].
@@ -47,11 +47,11 @@ createRepository: aRepositorySpec
       headerSize := 'dictionary://' size.
       globalName := (description copyFrom: headerSize + 1 to: description size)
         asSymbol.
-      ^ Smalltalk
-        at: globalName
+      ^ self
+        globalNamed: globalName
         ifAbsent: [ 
-          Smalltalk
-            at: globalName
+          self
+            globalNamed: globalName
             put:
               (MCDictionaryRepository new
                 description: description;

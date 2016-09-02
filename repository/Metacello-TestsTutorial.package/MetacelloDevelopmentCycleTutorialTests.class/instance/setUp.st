@@ -5,15 +5,19 @@ setUp
   repo := MCDictionaryRepository new.
   repo description: 'dictionary://' , self repositoryName asString.
   self tempRepositories add: repo.
-  Smalltalk at: self repositoryName put: repo.
+  MetacelloPlatform current globalNamed: self repositoryName put: repo.
   repo := MCDictionaryRepository new.
   repo description: 'dictionary://' , self alternatRepositoryName asString.
   self tempRepositories add: repo.
-  Smalltalk at: self alternatRepositoryName put: repo.
-  Smalltalk at: self configurationName ifPresent: [ :cl | cl removeFromSystem ].
+  MetacelloPlatform current globalNamed: self alternatRepositoryName put: repo.
+  MetacelloPlatform current
+    globalNamed: self configurationName
+    ifPresent: [ :cl | cl removeFromSystem ].
   repo := MetacelloConfigurationResource current monticelloRepository.
   self tempRepositories add: repo.
-  Smalltalk at: #'Metacello_Configuration_Test_Repository' put: repo.
+  MetacelloPlatform current
+    globalNamed: #'Metacello_Configuration_Test_Repository'
+    put: repo.
   gofer := Gofer new
     repository: repo;
     package: 'MetacelloTestConfigurationOfProjectFee';
@@ -21,8 +25,11 @@ setUp
   repo := MetacelloMonticelloResource current monticelloRepository.
   repo description: 'dictionary://Metacello_Gofer_Test_Repository'.
   self tempRepositories add: repo.
-  Smalltalk at: #'Metacello_Gofer_Test_Repository' put: repo.
-  (Smalltalk at: #'MetacelloTestConfigurationOfProjectFee') new project
+  MetacelloPlatform current
+    globalNamed: #'Metacello_Gofer_Test_Repository'
+    put: repo.
+  (MetacelloPlatform current
+    globalNamed: #'MetacelloTestConfigurationOfProjectFee') new project
     load: '4.0'.
   authorName := MetacelloPlatform current authorName.
   MetacelloPlatform current authorName: 'TesterBob'

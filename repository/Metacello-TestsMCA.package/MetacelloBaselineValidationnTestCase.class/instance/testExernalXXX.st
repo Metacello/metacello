@@ -6,4 +6,5 @@ testExernalXXX
     repository: repo;
     package: 'BaselineOfExternalXXX';
     load.
-  self validateBaseline: (Smalltalk at: #'BaselineOfExternalXXX')
+  self
+    validateBaseline: (Metacello current globalNamed: #'BaselineOfExternalXXX')

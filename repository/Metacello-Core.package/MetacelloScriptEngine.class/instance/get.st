@@ -13,7 +13,9 @@ get
       self cacheRepository
         ifNotNil: [ :cacheRepository | projectPackage loader loaderPolicy cacheRepository: cacheRepository ].
       projectPackage load.
-      self root: (Smalltalk at: spec className asSymbol) project.
+      self
+        root:
+          (MetacelloPlatform current globalNamed: spec className asSymbol) project.
       MetacelloProjectRegistration
         registrationForProjectSpec: spec
         ifAbsent: [ :new | new registerProject ]

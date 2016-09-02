@@ -2,9 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
-		"setUpRepositories" : "dkh 6/14/2012 14:59",
+		"setUpRepositories" : "dkh 09/01/2016 17:04",
 		"tearDownPackageList" : "dkh 6/14/2012 14:57",
-		"tearDownRepositories" : "dkh 10/18/2014 09:27",
+		"tearDownRepositories" : "dkh 09/01/2016 17:03",
 		"test001" : "dkh 6/14/2012 16:37",
 		"test001new" : "dkh 6/14/2012 18:58",
 		"test002" : "dkh 6/14/2012 19:03",

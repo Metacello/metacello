@@ -7,7 +7,8 @@ testGithubRefXIII
     package: 'BaselineOfGithubRefXIII';
     load.
   validations := MetacelloToolBox
-    validateBaseline: (Smalltalk at: #'BaselineOfGithubRefXIII').
+    validateBaseline:
+      (Metacello current globalNamed: #'BaselineOfGithubRefXIII').
   self assert: validations size = 2.
   validations
     detect: [ :validation | validation reasonCode == #'missingRecommendedProjectSpecField' ]

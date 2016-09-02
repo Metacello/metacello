@@ -11,16 +11,24 @@ tearDown
     ifTrue: [ aGofer metacelloUnload ].
   MCRepositoryGroup default
     removeIdenticalRepository:
-        (Smalltalk at: #'Metacello_Gofer_Test_Repository' ifAbsent: [  ]);
+        (Metacello current
+            globalNamed: #'Metacello_Gofer_Test_Repository'
+            ifAbsent: [  ]);
     removeIdenticalRepository:
-        (Smalltalk at: #'Metacello_Configuration_Test_Repository' ifAbsent: [  ]);
+        (Metacello current
+            globalNamed: #'Metacello_Configuration_Test_Repository'
+            ifAbsent: [  ]);
     yourself.
-  Smalltalk removeKey: #'Metacello_Gofer_Test_Repository' ifAbsent: [  ].
-  Smalltalk removeKey: #'Metacello_Configuration_Test_Repository' ifAbsent: [  ].
-  Smalltalk
-    removeKey: #'Metacello_Configuration_Test_DoIt_Result'
+  MetacelloPlatform current
+    removeGlobalNamed: #'Metacello_Gofer_Test_Repository'
     ifAbsent: [  ].
-  Smalltalk
-    removeKey: #'Metacello_Configuration_Test_POST_DoIt_Result'
+  MetacelloPlatform current
+    removeGlobalNamed: #'Metacello_Configuration_Test_Repository'
+    ifAbsent: [  ].
+  MetacelloPlatform current
+    removeGlobalNamed: #'Metacello_Configuration_Test_DoIt_Result'
+    ifAbsent: [  ].
+  MetacelloPlatform current
+    removeGlobalNamed: #'Metacello_Configuration_Test_POST_DoIt_Result'
     ifAbsent: [  ].
   MetacelloPlatform current reenableUndefinedSybolUpdates: undefinedSymbols

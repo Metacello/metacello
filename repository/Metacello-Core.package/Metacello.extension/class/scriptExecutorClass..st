@@ -1,4 +1,6 @@
 *metacello-core
 scriptExecutorClass: anExecutorSpec
-    Smalltalk at: anExecutorSpec key ifAbsent: [ ConfigurationOf ensureMetacello: anExecutorSpec value ].
-    ^ Smalltalk at: anExecutorSpec key
+  Metacello current
+    globalNamed: anExecutorSpec key
+    ifAbsent: [ ConfigurationOf ensureMetacello: anExecutorSpec value ].
+  ^ Metacello current globalNamed: anExecutorSpec key

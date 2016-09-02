@@ -2,9 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
-		"setUpRepositories" : "dkh 6/12/2012 15:41:23.319",
+		"setUpRepositories" : "dkh 09/01/2016 17:02",
 		"tearDownPackageList" : "dkh 07/14/2013 11:31",
-		"tearDownRepositories" : "dkh 10/18/2014 09:27",
+		"tearDownRepositories" : "dkh 09/01/2016 17:03",
 		"testBleedingEdgeLocking" : "dkh 07/25/2013 12:55",
 		"testCompareCurrentVersion" : "dkh 7/23/2012 18:55",
 		"testFeaux40Loaded" : "dkh 6/15/2012 05:30",

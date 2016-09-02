@@ -5,8 +5,8 @@ createConfiguration: baseName
   configurationName := (baseName beginsWith: 'ConfigurationOf')
     ifTrue: [ baseName ]
     ifFalse: [ 'ConfigurationOf' , baseName ].
-  (Smalltalk includesKey: configurationName asSymbol)
-    ifFalse: [ 
+  (MetacelloPlatform current globalNamed: configurationName asSymbol)
+    ifNil: [ 
       self ensureMetacello.	"Create the configuration class"
       MetacelloPlatform current
         copyClass:

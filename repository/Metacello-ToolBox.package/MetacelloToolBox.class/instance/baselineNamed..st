@@ -3,8 +3,8 @@ baselineNamed: baseName
   | baselineName |
   "Check if the class does not exist"
   baselineName := self baselineNameFrom: baseName.
-  (Smalltalk includesKey: baselineName asSymbol)
-    ifFalse: [ 
+  (MetacelloPlatform current globalNamed: baselineName asSymbol ifAbsent: [  ])
+    ifNil: [ 
       "Create the configuration class"
       self ensureMetacello.
       BaselineOf

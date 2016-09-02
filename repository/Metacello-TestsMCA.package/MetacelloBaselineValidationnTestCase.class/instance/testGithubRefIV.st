@@ -6,4 +6,5 @@ testGithubRefIV
     repository: repo;
     package: 'BaselineOfGithubRefIV';
     load.
-  self validateBaseline: (Smalltalk at: #'BaselineOfGithubRefIV')
+  self
+    validateBaseline: (Metacello current globalNamed: #'BaselineOfGithubRefIV')

@@ -1,8 +1,8 @@
 *metacello-mc
 defaultPlatformAttributes
   | versionString |
-  Smalltalk
-    at: #'SystemVersion'
+  self
+    globalNamed: #'SystemVersion'
     ifPresent: [ :cl | 
       versionString := cl current version.
       (versionString beginsWith: 'Pharo')

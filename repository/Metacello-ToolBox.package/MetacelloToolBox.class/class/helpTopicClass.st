@@ -1,4 +1,3 @@
 help
 helpTopicClass
-
-	^Smalltalk at: #HelpTopic ifAbsent: []
+  ^ MetacelloPlatform current globalNamed: #'HelpTopic' ifAbsent: [  ]
