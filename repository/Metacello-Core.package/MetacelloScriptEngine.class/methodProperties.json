@@ -7,7 +7,6 @@
 		"defaultRepositoryDescription:" : "dkh 09/30/2014 17:39",
 		"defaultVersionString" : "dkh 7/23/2012 10:03" },
 	"instance" : {
-		"cacheRepository" : "dkh 7/23/2012 16:30",
 		"defaultRepositoryDescription" : "dkh 7/23/2012 11:09",
 		"defaultVersionString" : "dkh 7/23/2012 10:02",
 		"fetch:" : "dkh 7/23/2012 15:53",
@@ -42,7 +41,6 @@
 		"record:" : "dkh 7/23/2012 15:53",
 		"register" : "dkh 05/21/2014 14:22",
 		"repositories" : "dkh 7/12/2012 14:25",
-		"repositoryOverrides" : "dkh 7/23/2012 19:31",
 		"root" : "dkh 7/12/2012 14:25",
 		"root:" : "dkh 7/12/2012 14:25",
 		"setDefaultsAndValidate:" : "dkh 04/03/2013 12:29",
