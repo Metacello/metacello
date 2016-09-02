@@ -1,4 +1,4 @@
-actions
+*metacello-monticello-mc
 loadPackageDirective: aPackageLoadDirective gofer: aGofer
   | packageSpec |
   packageSpec := aPackageLoadDirective spec.

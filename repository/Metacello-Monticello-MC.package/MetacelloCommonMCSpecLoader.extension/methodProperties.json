@@ -3,4 +3,6 @@
 		 },
 	"instance" : {
 		"linearLoadPackageSpecs:repositories:" : "dkh 6/8/2012 14:04:22",
+		"loadPackageDirective:gofer:" : "dkh 09/04/2014 13:56",
+		"loadPackageDirectives:gofer:" : "dkh 09/04/2014 13:57",
 		"resolvePackageSpecReferences:gofer:" : "dkh 6/8/2012 14:04:22" } }

@@ -1,4 +1,4 @@
-actions
+*metacello-monticello-mc
 loadPackageDirectives: pkgLoads gofer: aGofer
   MetacelloPlatform current
     do: [ 
