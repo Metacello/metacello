@@ -1,3 +1,3 @@
-accessing
+*metacello-mc
 versionString
   ^ MetacelloMCBaselineProject singletonVersionName
