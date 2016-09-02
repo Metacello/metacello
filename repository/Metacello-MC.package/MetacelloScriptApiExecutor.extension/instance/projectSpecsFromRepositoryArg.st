@@ -1,4 +1,4 @@
-execution callback
+*metacello-mc
 projectSpecsFromRepositoryArg
     | spec repo projectSpecs |
     repositoryArg ifNil: [ ^ #() ].
