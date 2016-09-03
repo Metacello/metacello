@@ -68,11 +68,13 @@ baseline: spec
           with: [ 
               spec
                 requires:
-                  #('Metacello-MC' 'Gofer Tests' 'Metacello-ToolBox' 'Metacello-GitHub' 'Metacello-Bitbucket' 'Metacello-TestsMCResources') ];
+                  #('Metacello-MC' 'Metacello-ToolBox' 'Metacello-GitHub' 'Metacello-Bitbucket' 'Metacello-TestsMCResources') ];
+        package: 'Metacello-TestsMonticello'
+          with: [ spec requires: #('Metacello-TestsMC' 'Gofer Tests') ];
         package: 'Metacello-TestsMCA'
-          with: [ spec requires: #('Metacello-TestsMC') ];
+          with: [ spec requires: #('Metacello-TestsMC' 'Metacello-TestsMCResources') ];
         package: 'Metacello-TestsMCB'
-          with: [ spec requires: #('Metacello-TestsMC') ];
+          with: [ spec requires: #('Metacello-TestsMC' 'Metacello-TestsMCResources') ];
         package: 'Metacello-TestsCommonMC'
           with: [ 
               spec
