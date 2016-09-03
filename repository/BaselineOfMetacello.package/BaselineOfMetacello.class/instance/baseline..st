@@ -24,13 +24,13 @@ baseline: spec
         package: 'Metacello-Monticello-Base'
           with: [ spec requires: 'Metacello-Base' ];
         package: 'Metacello-ToolBox'
-          with: [ spec requires: #('Metacello-Base' 'Metacello-Core') ];
+          with: [ spec requires: #('Metacello-Base' 'Metacello-MC') ];
         package: 'Metacello-Core'
           with: [ 
               spec
                 requires: 'Metacello-Base';
                 includes: #('Metacello-MC' 'Metacello-Platform') ];
-        package: 'Metacello-Cypress' with: [ spec requires: 'Metacello-Core' ];
+        package: 'Metacello-Cypress' with: [ spec requires: 'Metacello-MC' ];
         package: 'Metacello-FileTree'
           with: [ spec requires: #('Metacello-MC' 'FileTree') ];
         package: 'Metacello-GitBasedRepository'
@@ -50,20 +50,20 @@ baseline: spec
         package: 'Metacello-Reference'
           with: [ spec requires: #('Metacello-MC') ];
         package: 'Metacello-Tutorial'
-          with: [ spec requires: #('Metacello-Core') ];
+          with: [ spec requires: #('Metacello-MC') ];
         package: 'Metacello-TestsCore'
-          with: [ spec requires: #('Metacello-Core') ];
+          with: [ spec requires: #('Metacello-MC') ];
         package: 'Metacello-TestsMCResources'
           with: [ 
               spec
                 postLoadDoIt: #'testResourcePostLoadDoIt';
                 includes: #('Metacello-TestsCommonMC');
-                requires: #('Metacello-Core') ];
+                requires: #('Metacello-MC') ];
         package: 'Metacello-TestsMCCore'
           with: [ 
               spec
                 requires:
-                  #('Metacello-Core' 'Metacello-TestsCore' 'Metacello-ToolBox' 'Metacello-TestsMCResources') ];
+                  #('Metacello-MC' 'Metacello-TestsCore' 'Metacello-ToolBox' 'Metacello-TestsMCResources') ];
         package: 'Metacello-TestsMC'
           with: [ 
               spec
@@ -89,7 +89,7 @@ baseline: spec
         group: 'default' with: #('batch' 'Metacello-ToolBox');
         group: 'batch'
           with:
-            #('Metacello-Core' 'Metacello-GitHub' 'Metacello-Bitbucket' 'Cypress');
+            #('Metacello-MC' 'Metacello-GitHub' 'Metacello-Bitbucket' 'Cypress');
         group: 'Base Configuration' with: #('Metacello-Base');
         group: 'Core' with: #('default');
         group: 'Cypress' with: #('Metacello-Cypress');
@@ -149,7 +149,7 @@ baseline: spec
         yourself.
       spec
         package: 'Metacello-ProfStef'
-          with: [ spec requires: #('Metacello-Core' 'ProfStef' 'Metacello-ToolBox') ];
+          with: [ spec requires: #('Metacello-MC' 'ProfStef' 'Metacello-ToolBox') ];
         package: 'Metacello-TestsProfStef'
           with: [ spec requires: #('Metacello-ProfStef') ];
         package: 'Metacello-PharoCommonPlatform'
