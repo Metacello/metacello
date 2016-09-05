@@ -1,5 +1,10 @@
 tests
 testBitbucketLoad1
+  Transcript
+    cr;
+    show:
+        'MetacelloBasicScriptingTestCase>>testBitbucketLoad1 '
+            , UndefinedSymbolList printString.
   Metacello new
     baseline: 'External';
     repository: 'bitbucket://dalehenrich/external:master/repository';
