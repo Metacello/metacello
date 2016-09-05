@@ -1,6 +1,5 @@
 *metacello-platform
 asMetacelloCachingResolvedReference
-  ^ (MetacelloPlatform current
-    globalNamed: #'MetacelloCachingGoferResolvedReference')
+  ^ (Smalltalk at: #'MetacelloCachingGoferResolvedReference')
     name: self name
     repository: self repository
