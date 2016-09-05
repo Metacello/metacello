@@ -74,7 +74,10 @@ baseline: spec
         package: 'Metacello-TestsMCA'
           with: [ spec requires: #('Metacello-TestsMC' 'Metacello-TestsMCResources') ];
         package: 'Metacello-TestsMCB'
-          with: [ spec requires: #('Metacello-TestsMC' 'Metacello-TestsMCResources') ];
+          with: [ 
+              spec
+                requires:
+                  #('Metacello-TestsMC' 'Metacello-TestsMCResources' 'Metacello-TestsMonticello') ];
         package: 'Metacello-TestsCommonMC'
           with: [ 
               spec
