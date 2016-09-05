@@ -1,5 +1,6 @@
 *metacello-platform
 asMetacelloCachingResolvedReference
-  ^ (Smalltalk at: #'MetacelloCachingGoferResolvedReference')
-    name: self name
-    repository: self repository
+  | cl |
+  cl := Smalltalk at: #'MetacelloCachingGoferResolvedReference'.
+  cl ifNil: [ ^ self ].
+  ^ cl name: self name repository: self repository
