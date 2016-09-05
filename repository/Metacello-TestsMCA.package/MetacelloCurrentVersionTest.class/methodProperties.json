@@ -6,7 +6,7 @@
 		"defaultTimeout" : "dkh 6/12/2012 15:41:23.319",
 		"setUp" : "dkh 6/12/2012 15:41:23.319",
 		"tearDownPackages:" : "dkh 6/12/2012 15:41:23.319",
-		"testCompareCurrentVersion" : "dkh 09/05/2016 14:03",
+		"testCompareCurrentVersion" : "dkh 09/05/2016 14:18",
 		"testFeaux40Loaded" : "dkh 09/01/2016 17:08",
 		"testFoe40AllLoaded" : "dkh 09/01/2016 17:09",
 		"testFoe40AllLoadedDefaultPackageNamesToLoad" : "dkh 09/01/2016 17:09",

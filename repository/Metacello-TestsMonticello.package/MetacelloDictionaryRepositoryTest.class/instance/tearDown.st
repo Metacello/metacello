@@ -17,9 +17,6 @@ tearDown
     ifAbsent: [  ].
   self tempRepositories
     do: [ :repo | MCRepositoryGroup default removeIdenticalRepository: repo ].
-  Transcript
-    cr;
-    show: 'sender of reenableUndefinedSybolUpdates: ' , self printString.
   MetacelloPlatform current reenableUndefinedSybolUpdates: undefinedSymbols.
   finalWorkingCopyList := MCWorkingCopy allManagers
     collect: [ :each | each packageName ].

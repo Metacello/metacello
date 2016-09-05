@@ -1,11 +1,6 @@
 tests
 testGroupMergeSpec
   | groupA groupB group |
-  Transcript
-    cr;
-    show:
-        'MetacelloScriptingStdTstHarness>>testGroupMergeSpec: '
-            , UndefinedSymbolList printString.
   groupA := self groupSpec
     name: 'Platform';
     includes: 'Core';

@@ -13,7 +13,7 @@
 		"defaultPlatformAttributes" : "dkh 11/10/2014 15:49",
 		"defaultRepositoryDescription" : "dkh 09/28/2014 09:52",
 		"devKitPlatformAttributes" : "dkh 11/10/2014 15:48",
-		"disableUndefinedSybolUpdates" : "dkh 09/05/2016 12:18",
+		"disableUndefinedSybolUpdates" : "dkh 07/06/2016 14:55",
 		"downloadBasicFile:to:" : "dkh 10/15/2014 17:04",
 		"downloadBasicFile:to:includeHTTPHeader:username:pass:" : "dkh 03/18/2015 05:21",
 		"downloadBasicFile:to:username:pass:" : "dkh 03/18/2015 05:21",
@@ -37,7 +37,7 @@
 		"metacelloGoferClass" : "dkh 09/02/2016 15:23",
 		"metacelloGoferPackageFor:" : "dkh 09/05/2016 07:45",
 		"processPID" : "dkh 09/26/2014 14:58",
-		"reenableUndefinedSybolUpdates:" : "dkh 09/05/2016 12:33",
+		"reenableUndefinedSybolUpdates:" : "dkh 07/06/2016 22:31",
 		"stoneVersionAttributes" : "dkh 11/10/2011 09:52",
 		"timestamp" : "dkh 10/16/2009 11:53",
 		"transact:" : "dkh 01/06/2010 10:11" } }

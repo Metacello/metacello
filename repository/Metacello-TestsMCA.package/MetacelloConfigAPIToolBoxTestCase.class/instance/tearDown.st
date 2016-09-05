@@ -31,7 +31,4 @@ tearDown
   MetacelloPlatform current
     removeGlobalNamed: #'Metacello_Configuration_Test_POST_DoIt_Result'
     ifAbsent: [  ].
-  Transcript
-    cr;
-    show: 'sender of reenableUndefinedSybolUpdates: ' , self printString.
   MetacelloPlatform current reenableUndefinedSybolUpdates: undefinedSymbols

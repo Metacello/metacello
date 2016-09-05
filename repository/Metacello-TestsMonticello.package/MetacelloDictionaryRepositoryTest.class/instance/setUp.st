@@ -22,7 +22,4 @@ setUp
     put: repo.
   initialWorkingCopyList := MCWorkingCopy allManagers
     collect: [ :each | each packageName ].
-  Transcript
-    cr;
-    show: 'sender of disableUndefinedSybolUpdates ' , self printString.
   undefinedSymbols := MetacelloPlatform current disableUndefinedSybolUpdates
