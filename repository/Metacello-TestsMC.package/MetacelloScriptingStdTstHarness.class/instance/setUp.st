@@ -9,4 +9,8 @@ setUp
   initialWorkingCopyList := MCWorkingCopy allManagers
     collect: [ :each | each packageName ].
   self disableUndefinedSymbolTracking
-    ifTrue: [ undefinedSymbols := MetacelloPlatform current disableUndefinedSybolUpdates ]
+    ifTrue: [ 
+      Transcript
+        cr;
+        show: 'sender of disableUndefinedSybolUpdates ' , self printString.
+      undefinedSymbols := MetacelloPlatform current disableUndefinedSybolUpdates ]

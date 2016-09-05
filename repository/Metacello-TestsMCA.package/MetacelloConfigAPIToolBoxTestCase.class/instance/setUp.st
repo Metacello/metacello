@@ -21,4 +21,7 @@ setUp
   Metacello current
     globalNamed: #'Metacello_Configuration_Test_POST_DoIt_Result'
     put: false.
+  Transcript
+    cr;
+    show: 'sender of disableUndefinedSybolUpdates ' , self printString.
   undefinedSymbols := MetacelloPlatform current disableUndefinedSybolUpdates
