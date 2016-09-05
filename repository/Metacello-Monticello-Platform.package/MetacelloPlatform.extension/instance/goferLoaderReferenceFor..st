@@ -1,4 +1,4 @@
-monticello
+*metacello-monticello-platform
 goferLoaderReferenceFor: aMetacelloPackageSpec
   ^ aMetacelloPackageSpec getFile == nil
     ifTrue: [ GoferPackageReference name: aMetacelloPackageSpec name ]

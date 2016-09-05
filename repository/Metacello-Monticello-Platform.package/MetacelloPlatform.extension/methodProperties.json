@@ -1,0 +1,11 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"defaultCacheRepository" : "dkh 09/05/2016 15:58",
+		"goferLoadBlockFor:resolvedReference:" : "dkh 09/05/2016 15:59",
+		"goferLoaderReferenceFor:" : "dkh 09/05/2016 15:59",
+		"goferRepositoryErrorClass" : "dkh 09/05/2016 15:59",
+		"metacelloGoferClass" : "dkh 09/05/2016 15:59",
+		"metacelloGoferPackageFor:" : "dkh 09/05/2016 16:00",
+		"newVersionForWorkingCopy:" : "dkh 09/23/2013 13:59" } }

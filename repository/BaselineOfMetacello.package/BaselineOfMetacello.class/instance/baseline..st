@@ -43,10 +43,12 @@ baseline: spec
           with: [ 
               spec
                 includes: 'Metacello-Monticello-MC';
-                requires: #('Metacello-Core' 'Metacello-Platform') ];
+                requires: #('Metacello-Core' 'Metacello-Monticello-Platform') ];
         package: 'Metacello-Monticello-MC'
           with: [ spec requires: #('Metacello-MC' 'Gofer') ];
         package: 'Metacello-Platform' with: [ spec requires: 'Metacello-Core' ];
+        package: 'Metacello-Monticello-Platform'
+          with: [ spec requires: 'Metacello-Platform' ];
         package: 'Metacello-Reference'
           with: [ spec requires: #('Metacello-MC') ];
         package: 'Metacello-Tutorial'

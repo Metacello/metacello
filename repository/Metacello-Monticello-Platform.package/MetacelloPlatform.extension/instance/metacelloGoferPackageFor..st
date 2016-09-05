@@ -1,4 +1,4 @@
-monticello
+*metacello-monticello-platform
 metacelloGoferPackageFor: aMetacelloPackageSpec
   ^ MetacelloGoferPackage
     name: aMetacelloPackageSpec name

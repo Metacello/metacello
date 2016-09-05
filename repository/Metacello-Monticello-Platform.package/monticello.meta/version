@@ -1,0 +1,1 @@
+(name 'Metacello-Monticello-Platform-dkh.1' message 'add Metacello-Monticello-Platform package to hold the Monticello-specific methods that are shared across the Squeak/Pharo/GsDevKit Monticello eco-system ... ' id '79298d56-b358-4e23-b360-1f02f69523c3' date '09/05/2016' time '16:10:08' author 'dkh' ancestors () stepChildren ())
