@@ -2,6 +2,6 @@ ConfigurationOfFoo
 preloadDoIt
   "self reset"
 
-  Metacello current
+  MetacelloPlatform current
     globalNamed: #'Metacello_Configuration_Test_DoIt_Result'
     put: true

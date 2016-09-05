@@ -7,4 +7,5 @@ testExernalXX
     package: 'BaselineOfExternalXX';
     load.
   self
-    validateBaseline: (Metacello current globalNamed: #'BaselineOfExternalXX')
+    validateBaseline:
+      (MetacelloPlatform current globalNamed: #'BaselineOfExternalXX')

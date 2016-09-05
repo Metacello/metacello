@@ -8,8 +8,8 @@ testGithubRefIX
     repository: repo;
     package: 'BaselineOfGithubRefIX';
     load.
-  version := (Metacello current globalNamed: #'BaselineOfGithubRefIX') project
-    version.
+  version := (MetacelloPlatform current globalNamed: #'BaselineOfGithubRefIX')
+    project version.
   expected := 'spec description: ''MetacelloScriptingResource>>configurationGithubReferenceIV:''.
 spec project: ''External'' with: [
 		spec

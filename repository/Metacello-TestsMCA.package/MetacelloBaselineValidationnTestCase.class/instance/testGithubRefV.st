@@ -7,4 +7,5 @@ testGithubRefV
     package: 'BaselineOfGithubRefV';
     load.
   self
-    validateBaseline: (Metacello current globalNamed: #'BaselineOfGithubRefV')
+    validateBaseline:
+      (MetacelloPlatform current globalNamed: #'BaselineOfGithubRefV')

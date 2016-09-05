@@ -8,8 +8,8 @@ testGithubRefXIII
     repository: repo;
     package: 'BaselineOfGithubRefXIII';
     load.
-  version := (Metacello current globalNamed: #'BaselineOfGithubRefXIII') project
-    version.
+  version := (MetacelloPlatform current globalNamed: #'BaselineOfGithubRefXIII')
+    project version.
   expected := 'spec description: ''MetacelloScriptingResource>>baselineGithubReferenceVII:''.
 spec 
 	baseline: ''External Core'' with: [

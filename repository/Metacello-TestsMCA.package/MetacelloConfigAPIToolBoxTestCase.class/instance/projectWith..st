@@ -6,8 +6,8 @@ projectWith: projectAttributes
   project projectAttributes: projectAttributes.
   MetacelloVersionConstructor
     on:
-      (Metacello current globalNamed: #'MetacelloTestConfigurationOfProjectToolBox')
-        new
+      (MetacelloPlatform current
+        globalNamed: #'MetacelloTestConfigurationOfProjectToolBox') new
     project: project.
   project loader: MetacelloNullRecordingMCSpecLoader new.
   project loader evalDoits: true.

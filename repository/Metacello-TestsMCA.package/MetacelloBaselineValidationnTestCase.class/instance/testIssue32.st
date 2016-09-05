@@ -6,4 +6,6 @@ testIssue32
     repository: repo;
     package: 'BaselineOfIssue32';
     load.
-  self validateBaseline: (Metacello current globalNamed: #'BaselineOfIssue32')
+  self
+    validateBaseline:
+      (MetacelloPlatform current globalNamed: #'BaselineOfIssue32')

@@ -6,7 +6,7 @@ testInvalidConfigurations
     repository: repo;
     package: 'ConfigurationOfInvalidConfigurations';
     load.
-  project := (Metacello current
+  project := (MetacelloPlatform current
     globalNamed: #'ConfigurationOfInvalidConfigurations') project.
   issues := MetacelloToolBox validateProject: project version: '1.0.0'.
   self assert: issues size == 1.

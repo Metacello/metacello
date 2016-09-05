@@ -8,8 +8,8 @@ testExernalX
     repository: repo;
     package: 'BaselineOfExternalX';
     load.
-  version := (Metacello current globalNamed: #'BaselineOfExternalX') project
-    version.
+  version := (MetacelloPlatform current globalNamed: #'BaselineOfExternalX')
+    project version.
   expected := 'spec description: ''MetacelloScriptingResource>>externalBaselineX:''.
 spec 
 	package: ''External-CoreX'';

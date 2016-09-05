@@ -11,11 +11,11 @@ tearDown
     ifTrue: [ aGofer metacelloUnload ].
   MCRepositoryGroup default
     removeIdenticalRepository:
-        (Metacello current
+        (MetacelloPlatform current
             globalNamed: #'Metacello_Gofer_Test_Repository'
             ifAbsent: [  ]);
     removeIdenticalRepository:
-        (Metacello current
+        (MetacelloPlatform current
             globalNamed: #'Metacello_Configuration_Test_Repository'
             ifAbsent: [  ]);
     yourself.

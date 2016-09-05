@@ -12,7 +12,7 @@ testExernalXXXa
     projectAttributes: #();
     yourself.
   version := (constructor := MetacelloBaselineConstructor
-    on: (Metacello current globalNamed: #'BaselineOfExternalXXX') new
+    on: (MetacelloPlatform current globalNamed: #'BaselineOfExternalXXX') new
     project: project) project version.
   expected := 'spec description: ''MetacelloScriptingResource>>externalBaselineXXX:''.
 spec 

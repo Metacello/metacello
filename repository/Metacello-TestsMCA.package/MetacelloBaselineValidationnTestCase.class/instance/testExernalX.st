@@ -6,4 +6,6 @@ testExernalX
     repository: repo;
     package: 'BaselineOfExternalX';
     load.
-  self validateBaseline: (Metacello current globalNamed: #'BaselineOfExternalX')
+  self
+    validateBaseline:
+      (MetacelloPlatform current globalNamed: #'BaselineOfExternalX')

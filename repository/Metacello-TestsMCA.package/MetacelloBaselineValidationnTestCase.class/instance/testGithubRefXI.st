@@ -7,4 +7,5 @@ testGithubRefXI
     package: 'BaselineOfGithubRefXI';
     load.
   self
-    validateBaseline: (Metacello current globalNamed: #'BaselineOfGithubRefXI')
+    validateBaseline:
+      (MetacelloPlatform current globalNamed: #'BaselineOfGithubRefXI')

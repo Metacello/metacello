@@ -7,18 +7,20 @@ setUp
   gofer := Gofer new.
   gofer disablePackageCache.
   gofer repository: repo.
-  Metacello current globalNamed: #'Metacello_Gofer_Test_Repository' put: repo.
+  MetacelloPlatform current
+    globalNamed: #'Metacello_Gofer_Test_Repository'
+    put: repo.
   repo := self configurationRepository.
   gofer repository: repo.
-  Metacello current
+  MetacelloPlatform current
     globalNamed: #'Metacello_Configuration_Test_Repository'
     put: repo.
   gofer package: 'MetacelloTestConfigurationOfProjectToolBox'.
   gofer metacelloLoad.
-  Metacello current
+  MetacelloPlatform current
     globalNamed: #'Metacello_Configuration_Test_DoIt_Result'
     put: false.
-  Metacello current
+  MetacelloPlatform current
     globalNamed: #'Metacello_Configuration_Test_POST_DoIt_Result'
     put: false.
   Transcript
