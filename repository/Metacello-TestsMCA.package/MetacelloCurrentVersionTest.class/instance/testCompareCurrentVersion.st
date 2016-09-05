@@ -3,7 +3,7 @@ testCompareCurrentVersion
   | version cv fum projectFie projectFee projectFoe foo feaux map wc |
   Transcript
     cr;
-    show: 'STARTING testCompareCurrentVersion: ' self class name asString.
+    show: 'STARTING testCompareCurrentVersion: ' , self class name asString.
   Transcript
     cr;
     show: 'GoferBar'.

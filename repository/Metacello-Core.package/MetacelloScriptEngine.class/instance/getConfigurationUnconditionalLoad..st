@@ -2,7 +2,7 @@ project lookup
 getConfigurationUnconditionalLoad: unconditionalLoad
   | spec |
   spec := self projectSpec.
-  MetacelloPlatform
+  MetacelloPlatform current
     globalNamed: spec className asSymbol
     ifPresent: [ :cl | 
       unconditionalLoad
