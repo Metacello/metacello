@@ -3,6 +3,8 @@ sudo: false
 
 os: linux
 
+env: GSCI_DEVKIT_BRANCH=metacello_gs_port
+
 smalltalk:
   - GemStone-3.3.1
 #  - Pharo-5.0
