@@ -1,4 +1,4 @@
-*metacello-platform
+*metacello-monticello-platform
 asMetacelloCachingResolvedReference
   | cl |
   cl := Smalltalk at: #'MetacelloCachingGoferResolvedReference'.
