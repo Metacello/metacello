@@ -159,8 +159,7 @@ baseline: spec
           with: [ spec requires: #('Metacello-MC' 'ProfStef' 'Metacello-ToolBox') ];
         package: 'Metacello-TestsProfStef'
           with: [ spec requires: #('Metacello-ProfStef') ];
-        package: 'Metacello-PharoCommonPlatform'
-          with: [ spec requires: #('Metacello-MC') ];
+        package: 'Metacello-PharoCommonPlatform';
         package: 'Metacello-Platform'
           with: [ spec requires: #('Metacello-PharoCommonPlatform') ];
         yourself.
