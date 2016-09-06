@@ -1,4 +1,4 @@
-*metacello-testsmc
+*metacello-testsmonticello
 metacelloCleanup
 	"Cleans the specified packages."
 	

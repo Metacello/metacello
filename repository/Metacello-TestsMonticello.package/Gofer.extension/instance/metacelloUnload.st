@@ -1,4 +1,4 @@
-*metacello-testsmc
+*metacello-testsmonticello
 metacelloUnload
 	"Unload the specified packages."
 	

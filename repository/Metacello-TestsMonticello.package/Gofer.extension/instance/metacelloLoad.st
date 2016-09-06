@@ -1,4 +1,4 @@
-*metacello-testsmc
+*metacello-testsmonticello
 metacelloLoad
 	"Load the specified packages into the image."
 	
