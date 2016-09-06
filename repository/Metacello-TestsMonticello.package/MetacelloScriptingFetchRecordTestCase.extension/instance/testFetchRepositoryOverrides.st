@@ -1,4 +1,4 @@
-tests
+*metacello-testsmonticello
 testFetchRepositoryOverrides
   | cacheRepository newCacheRepository |
   Metacello new

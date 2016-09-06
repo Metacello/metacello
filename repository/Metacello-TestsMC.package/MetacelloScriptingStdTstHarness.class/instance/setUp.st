@@ -6,7 +6,6 @@ setUp
   self setUpRepositories.
   self setUpRepositoryContents.
   MetacelloProjectRegistration resetRegistry.
-  initialWorkingCopyList := MCWorkingCopy allManagers
-    collect: [ :each | each packageName ].
+  initialWorkingCopyList := MetacelloPlatform current workingCopyNames.
   self disableUndefinedSymbolTracking
     ifTrue: [ undefinedSymbols := MetacelloPlatform current disableUndefinedSybolUpdates ]

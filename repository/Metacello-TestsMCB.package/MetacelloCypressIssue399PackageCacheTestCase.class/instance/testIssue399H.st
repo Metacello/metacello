@@ -13,16 +13,28 @@ testIssue399H
     repository: 'filetree://' , externalDirectory fullName;
     silently;
     load.
-  self assert: (Smalltalk at: #'Issue399Sample' ifAbsent: [  ]) isNil.
-  self assert: (Smalltalk at: #'Issue399External' ifAbsent: [  ]) notNil.	"Confirm that package from external repo loaded"
+  self
+    assert:
+      (MetacelloPlatform current globalNamed: #'Issue399Sample' ifAbsent: [  ]) isNil.
+  self
+    assert:
+      (MetacelloPlatform current globalNamed: #'Issue399External' ifAbsent: [  ])
+        notNil.	"Confirm that package from external repo loaded"
   self
     setUpRepositoryContents: #('Issue399-Core-dkh.2')
     sourceRepo: MetacelloScriptingResource current sampleRepository
-    targetRepo: (MCFileTreeRepository new directory: externalDirectory).
+    targetRepo:
+      (MetacelloPlatform current
+        repositoryFromUrl: 'filetree://' , externalDirectory fullName) asUrl.
   Metacello new
     baseline: 'Issue399Cypress';
     repository: 'filetree://' , externalDirectory fullName;
     silently;
     load.
-  self assert: (Smalltalk at: #'Issue399Sample' ifAbsent: [  ]) notNil.	"Confirm that package from sample repo loaded"
-  self assert: (Smalltalk at: #'Issue399External' ifAbsent: [  ]) isNil
+  self
+    assert:
+      (MetacelloPlatform current globalNamed: #'Issue399Sample' ifAbsent: [  ]) notNil.	"Confirm that package from sample repo loaded"
+  self
+    assert:
+      (MetacelloPlatform current globalNamed: #'Issue399External' ifAbsent: [  ])
+        isNil

@@ -18,8 +18,7 @@ tearDown
   self tempRepositories
     do: [ :repo | MCRepositoryGroup default removeIdenticalRepository: repo ].
   MetacelloPlatform current reenableUndefinedSybolUpdates: undefinedSymbols.
-  finalWorkingCopyList := MCWorkingCopy allManagers
-    collect: [ :each | each packageName ].
+  finalWorkingCopyList := MetacelloPlatform current workingCopyNames.
   diff := finalWorkingCopyList difference: initialWorkingCopyList.
   diff
     do: [ :leak | 

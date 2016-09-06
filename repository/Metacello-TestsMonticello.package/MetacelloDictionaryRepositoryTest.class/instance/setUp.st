@@ -20,6 +20,5 @@ setUp
   MetacelloPlatform current
     globalNamed: #'Metacello_Configuration_Test_Repository'
     put: repo.
-  initialWorkingCopyList := MCWorkingCopy allManagers
-    collect: [ :each | each packageName ].
+  initialWorkingCopyList := MetacelloPlatform current workingCopyNames.
   undefinedSymbols := MetacelloPlatform current disableUndefinedSybolUpdates

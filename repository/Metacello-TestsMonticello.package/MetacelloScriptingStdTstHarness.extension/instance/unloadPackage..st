@@ -1,4 +1,4 @@
-running
+*metacello-testsmonticello
 unloadPackage: packageName
   | aGofer |
   aGofer := Gofer new.

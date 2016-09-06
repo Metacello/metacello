@@ -1,24 +1,25 @@
 running
 tearDown
-  | aGofer finalWorkingCopyList diff |
+  | finalWorkingCopyList diff |
   super tearDown.
-  aGofer := Gofer new.
-  self tearDownPackageNames
-    do: [ :pName | 
-      (self hasPackage: pName)
-        ifTrue: [ aGofer package: pName ] ].
-  aGofer references notEmpty
-    ifTrue: [ aGofer metacelloUnload ].
-  MCRepositoryGroup default
-    removeIdenticalRepository:
-        (Smalltalk at: #'Metacello_Gofer_Test_Repository' ifAbsent: [  ]);
-    removeIdenticalRepository:
-        (Smalltalk at: #'Metacello_Configuration_Test_Repository' ifAbsent: [  ]);
+  MetacelloPlatform current
+    metacelloUnloadPackages: self tearDownPackageNames;
+    cleanUpRepositoryGroupRemoving:
+        (MetacelloPlatform current
+            globalNamed: #'Metacello_Gofer_Test_Repository'
+            ifAbsent: [  ]);
+    cleanUpRepositoryGroupRemoving:
+        (MetacelloPlatform current
+            globalNamed: #'Metacello_Configuration_Test_Repository'
+            ifAbsent: [  ]);
     yourself.
-  Smalltalk removeKey: #'Metacello_Gofer_Test_Repository' ifAbsent: [  ].
-  Smalltalk removeKey: #'Metacello_Configuration_Test_Repository' ifAbsent: [  ].
-  finalWorkingCopyList := MCWorkingCopy allManagers
-    collect: [ :each | each packageName ].
+  MetacelloPlatform current
+    removeGlobalNamed: #'Metacello_Gofer_Test_Repository'
+    ifAbsent: [  ].
+  MetacelloPlatform current
+    removeGlobalNamed: #'Metacello_Configuration_Test_Repository'
+    ifAbsent: [  ].
+  finalWorkingCopyList := MetacelloPlatform current workingCopyNames.
   diff := finalWorkingCopyList difference: initialWorkingCopyList.
   diff
     do: [ :leak | 

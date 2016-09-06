@@ -7,8 +7,7 @@ tearDown
   MetacelloProjectRegistration registry: registry.
   self disableUndefinedSymbolTracking
     ifTrue: [ MetacelloPlatform current reenableUndefinedSybolUpdates: undefinedSymbols ].
-  finalWorkingCopyList := MCWorkingCopy allManagers
-    collect: [ :each | each packageName ].
+  finalWorkingCopyList := MetacelloPlatform current workingCopyNames.
   diff := finalWorkingCopyList difference: initialWorkingCopyList.
   diff
     do: [ :leak | 

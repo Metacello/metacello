@@ -24,16 +24,16 @@ setUpRepositories
   configurationRepository := MetacelloScriptingResource current
     configurationRepository.
   externalRepository := MetacelloScriptingResource current externalRepository.
-  Smalltalk
-    at: 'Metacello_Configuration_Test_Repository' asSymbol
+  MetacelloPlatform current
+    globalNamed: 'Metacello_Configuration_Test_Repository' asSymbol
     put: externalRepository.
   monticelloRepository := MetacelloMonticelloResource current
     monticelloRepository.
-  Smalltalk
-    at: 'Metacello_Gofer_Test_Repository' asSymbol
+  MetacelloPlatform current
+    globalNamed: 'Metacello_Gofer_Test_Repository' asSymbol
     put: monticelloRepository.
   mczConfigurationRepository := MetacelloConfigurationResource current
     monticelloRepository.
-  Smalltalk
-    at: 'Metacello_MczConfiguration_Test_Repository' asSymbol
+  MetacelloPlatform current
+    globalNamed: 'Metacello_MczConfiguration_Test_Repository' asSymbol
     put: mczConfigurationRepository

@@ -4,12 +4,19 @@ setUpRepositoryContents
   self
     setUpRepositoryContents: self configurationRepositoryContents
     sourceRepo: MetacelloScriptingResource current configurationRepository
-    targetRepo: (MCFileTreeRepository new directory: configurationDirectory).
+    targetRepo:
+      (MetacelloPlatform current
+        repositoryFromUrl: 'filetree://' , configurationDirectory fullName)
+        asUrl.
   self
     setUpRepositoryContents: self externalRepositoryContents
     sourceRepo: MetacelloScriptingResource current externalRepository
-    targetRepo: (MCFileTreeRepository new directory: externalDirectory).
+    targetRepo:
+      (MetacelloPlatform current
+        repositoryFromUrl: 'filetree://' , externalDirectory fullName) asUrl.
   self
     setUpRepositoryContents: self sampleRepositoryContents
     sourceRepo: MetacelloScriptingResource current sampleRepository
-    targetRepo: (MCFileTreeRepository new directory: sampleDirectory)
+    targetRepo:
+      (MetacelloPlatform current
+        repositoryFromUrl: 'filetree://' , sampleDirectory fullName) asUrl

@@ -7,7 +7,8 @@ setupDocumentationRepositories
     ignoreImage;
     get;
     fetch: 'ALL'.
-  alternateRepository := MCFileTreeRepository new directory: alternateDirectory.
+  alternateRepository := (MetacelloPlatform current
+    repositoryFromUrl: 'filetree://' , alternateDirectory fullName) asUrl.
   Metacello new
     baseline: 'External';
     repository: 'github://dalehenrich/external:master/repository';
@@ -15,7 +16,8 @@ setupDocumentationRepositories
     ignoreImage;
     get;
     fetch: 'ALL'.
-  externalRepository := MCFileTreeRepository new directory: externalDirectory.
+  externalRepository := (MetacelloPlatform current
+    repositoryFromUrl: 'filetree://' , externalDirectory fullName) asUrl.
   Metacello new
     baseline: 'Sample';
     repository: 'github://dalehenrich/sample:master/repository';
@@ -23,4 +25,5 @@ setupDocumentationRepositories
     ignoreImage;
     get;
     fetch: 'ALL'.
-  sampleRepository := MCFileTreeRepository new directory: sampleDirectory
+  sampleRepository := (MetacelloPlatform current
+    repositoryFromUrl: 'filetree://' , sampleDirectory fullName) asUrl

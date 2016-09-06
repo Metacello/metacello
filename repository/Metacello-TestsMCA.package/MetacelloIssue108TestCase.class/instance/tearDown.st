@@ -12,8 +12,7 @@ tearDown
         ifTrue: [ aGofer package: pName ] ].
   aGofer references notEmpty
     ifTrue: [ aGofer metacelloUnload ].
-  finalWorkingCopyList := MCWorkingCopy allManagers
-    collect: [ :each | each packageName ].
+  finalWorkingCopyList := MetacelloPlatform current workingCopyNames.
   diff := finalWorkingCopyList difference: initialWorkingCopyList.
   diff
     do: [ :leak | 

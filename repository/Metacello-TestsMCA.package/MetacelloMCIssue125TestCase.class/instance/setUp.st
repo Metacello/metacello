@@ -13,5 +13,4 @@ setUp
   Smalltalk at: #'Metacello_Configuration_Test_Repository' put: repo.
   gofer version: 'MetacelloTestConfigurationOfProjectIssue125-dkh.1'.
   gofer metacelloLoad.
-  initialWorkingCopyList := MCWorkingCopy allManagers
-    collect: [ :each | each packageName ]
+  initialWorkingCopyList := MetacelloPlatform current workingCopyNames

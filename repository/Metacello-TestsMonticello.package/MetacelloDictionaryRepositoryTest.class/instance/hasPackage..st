@@ -1,7 +1,3 @@
 utilities
-hasPackage: aString
-	| package |
-	package := MCWorkingCopy allManagers
-		detect: [ :each | each packageName = aString ]
-		ifNone: [ nil ].
-	^ package notNil
+hasPackage: aPackageName
+  ^ (MetacelloPlatform current workingCopyFor: aPackageName ifNone: [  ]) notNil

@@ -11,5 +11,4 @@ setUp
   repo := self configurationRepository.
   gofer repository: repo.
   Smalltalk at: #'Metacello_Configuration_Test_Repository' put: repo.
-  initialWorkingCopyList := MCWorkingCopy allManagers
-    collect: [ :each | each packageName ]
+  initialWorkingCopyList := MetacelloPlatform current workingCopyNames
