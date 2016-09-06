@@ -1,13 +1,13 @@
 {
-	"category" : "Metacello-TestsMCA",
+	"category" : "Metacello-TestsMonticello",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "MetacelloGoferFunctionalTest",
+		"platformCacheRepository" ],
+	"name" : "MetacelloMCCachingLoaderTestCase",
 	"pools" : [
 		 ],
 	"super" : "MetacelloDictionaryRepositoryTest",
