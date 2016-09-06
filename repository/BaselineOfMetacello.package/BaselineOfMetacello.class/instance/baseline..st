@@ -225,8 +225,6 @@ baseline: spec
     for: #(#'pharo3.x' #'pharo4.x' #'pharo5.x')
     do: [ 
       spec
-        package: 'Metacello-PharoCommonPlatform'
-          with: [ spec requires: #('Metacello-MC') ];
         package: 'Metacello-Platform'
           with: [ 
               spec
