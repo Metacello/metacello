@@ -1,0 +1,13 @@
+{
+	"category" : "Metacello-TestsGsCypressResources",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [ "monticelloRepository" ],
+	"name" : "MetacelloConfigurationResource",
+	"pools" : [
+		 ],
+	"super" : "TestResource",
+	"type" : "normal" }

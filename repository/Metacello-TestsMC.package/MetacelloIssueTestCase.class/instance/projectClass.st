@@ -1,3 +1,3 @@
 accessing
 projectClass
-    ^ Smalltalk at: self projectName asSymbol
+  ^ MetacelloPlatform current globalNamed: self projectName asSymbol
