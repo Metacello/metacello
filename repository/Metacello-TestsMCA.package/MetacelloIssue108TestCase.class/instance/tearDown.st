@@ -6,7 +6,7 @@ tearDown
 		removeGlobalNamed: self repositoryName
 		ifAbsent: [  ].
 	self tempRepositories
-		do: [ :repo | MCRepositoryGroup default removeIdenticalRepository: repo ].
+		do: [ :repo | MetacelloPlatform current cleanUpRepositoryGroupRemoving: repo ].
 	aGofer := Gofer new.
 	self tearDownPackageNames
 		do: [ :pName | 

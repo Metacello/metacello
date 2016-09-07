@@ -1,6 +1,5 @@
 running
 tearDownRepositories
-  super tearDownRepositories.
-  MCRepositoryGroup default
-    removeIdenticalRepository:
-      MetacelloScriptingResource current externalRepository
+	super tearDownRepositories.
+	MetacelloPlatform current
+		cleanUpRepositoryGroupRemoving: MetacelloScriptingResource current externalRepository

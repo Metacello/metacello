@@ -2,11 +2,11 @@ running
 tearDown
 	"these removals must be performed BEFORE super tearDown"
 
-	MCRepositoryGroup default
-		removeIdenticalRepository:
+	MetacelloPlatform current
+		cleanUpRepositoryGroupRemoving:
 			(Smalltalk at: #Metacello_Configuration_Test_Repository ifAbsent: [  ]);
-		removeIdenticalRepository: (Smalltalk at: #Metacello_Gofer_Test_Repository ifAbsent: [  ]);
-		removeIdenticalRepository: (Smalltalk at: #Metacello_Cache_Test_Repository ifAbsent: [  ]).
+		cleanUpRepositoryGroupRemoving: (Smalltalk at: #Metacello_Gofer_Test_Repository ifAbsent: [  ]);
+		cleanUpRepositoryGroupRemoving: (Smalltalk at: #Metacello_Cache_Test_Repository ifAbsent: [  ]).
 	MetacelloPlatform current
 		removeGlobalNamed: #Metacello_Configuration_Test_Repository
 		ifAbsent: [  ].

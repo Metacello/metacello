@@ -1,8 +1,8 @@
 accessing
 tearDownRepositories
 	super tearDownRepositories.
-	MCRepositoryGroup default
-		removeIdenticalRepository:
+	MetacelloPlatform current
+		cleanUpRepositoryGroupRemoving:
 			(Smalltalk
 				at: #Metacello_MczConfiguration_Test_Repository
 				ifAbsent: [  ]).
