@@ -1,15 +1,14 @@
 tests - critical validation errors
 testGithubRefXIII
-  | repo validations |
-  repo := MetacelloScriptingResource current externalRepository.
-  Gofer new
-    repository: repo;
-    package: 'BaselineOfGithubRefXIII';
-    load.
-  validations := MetacelloToolBox
-    validateBaseline:
-      (MetacelloPlatform current globalNamed: #'BaselineOfGithubRefXIII').
-  self assert: validations size = 2.
-  validations
-    detect: [ :validation | validation reasonCode == #'missingRecommendedProjectSpecField' ]
-    ifNone: [ self assert: false ]
+	| repo validations |
+	repo := MetacelloScriptingResource current externalRepository.
+	MetacelloPlatform current
+		metacelloLoadPackages: {'BaselineOfGithubRefXIII'}
+		from: {repo}.
+	validations := MetacelloToolBox
+		validateBaseline: (MetacelloPlatform current globalNamed: #BaselineOfGithubRefXIII).
+	self assert: validations size = 2.
+	validations
+		detect:
+			[ :validation | validation reasonCode == #missingRecommendedProjectSpecField ]
+		ifNone: [ self assert: false ]

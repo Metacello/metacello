@@ -1,12 +1,11 @@
 tests
 testBasicFetch004b
 	| result expected version |
-	Gofer new
-		repository:
-			(MetacelloPlatform current
-				globalNamed: #Metacello_Configuration_Test_Repository);
-		package: 'MetacelloTestConfigurationOfProjectFum';
-		load.
+	MetacelloPlatform current
+		metacelloLoadPackages: {'MetacelloTestConfigurationOfProjectFum'}
+		from:
+			{(MetacelloPlatform current
+				globalNamed: #Metacello_Configuration_Test_Repository)}.
 	version := (MetacelloPlatform current
 		globalNamed: #MetacelloTestConfigurationOfProjectFum) project
 		version: '1.0'.

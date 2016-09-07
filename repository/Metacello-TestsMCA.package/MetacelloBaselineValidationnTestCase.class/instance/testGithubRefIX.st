@@ -1,11 +1,9 @@
 tests - valid
 testGithubRefIX
-  | repo |
-  repo := MetacelloScriptingResource current externalRepository.
-  Gofer new
-    repository: repo;
-    package: 'BaselineOfGithubRefIX';
-    load.
-  self
-    validateBaseline:
-      (MetacelloPlatform current globalNamed: #'BaselineOfGithubRefIX')
+	| repo |
+	repo := MetacelloScriptingResource current externalRepository.
+	MetacelloPlatform current
+		metacelloLoadPackages: {'BaselineOfGithubRefIX'}
+		from: {repo}.
+	self
+		validateBaseline: (MetacelloPlatform current globalNamed: #BaselineOfGithubRefIX)
