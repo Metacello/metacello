@@ -2,8 +2,8 @@ accessing
 setUpRepositoryContents
 	| dict |
 	super setUpRepositoryContents.
-	Smalltalk
-		at: #Metacello_MczConfiguration_Test_Repository
+	MetacelloPlatform current
+		globalNamed: #Metacello_MczConfiguration_Test_Repository
 		put:
 			(MCDictionaryRepository new
 				dictionary: mczConfigurationRepository dictionary copy).

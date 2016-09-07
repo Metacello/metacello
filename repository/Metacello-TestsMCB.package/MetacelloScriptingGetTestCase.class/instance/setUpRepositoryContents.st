@@ -1,4 +1,6 @@
 running
 setUpRepositoryContents
-    super setUpRepositoryContents.
-    Smalltalk at: #'Metacello_Config_Test_Repository' put: configurationRepository
+	super setUpRepositoryContents.
+	MetacelloPlatform current
+		globalNamed: #Metacello_Config_Test_Repository
+		put: configurationRepository
