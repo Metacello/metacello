@@ -1,0 +1,14 @@
+{
+	"category" : "Metacello-TestsMonticello",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MetacelloScriptingIssue156TestCase",
+	"pools" : [
+		 ],
+	"super" : "MetacelloExternalScriptingTestCase",
+	"type" : "normal" }
