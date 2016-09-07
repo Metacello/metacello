@@ -4,10 +4,10 @@
 	"instance" : {
 		"setUpRepositories" : "dkh 9/7/2016 10:55",
 		"setUpRepositoryContents" : "dkh 10/01/2014 11:36",
-		"setupDocumentationRepositories" : "dkh 09/06/2016 15:51",
+		"setupDocumentationRepositories" : "dkh 09/07/2016 14:56",
 		"tearDownPackageList" : "dkh 10/01/2014 12:33",
 		"tearDownRepositories" : "dkh 9/7/2016 11:13",
-		"testIssue294" : "dkh 09/07/2016 11:01",
+		"testIssue294" : "dkh 09/07/2016 14:56",
 		"testLockCommandReference1" : "dkh 09/30/2014 15:53",
 		"testLockCommandReference2" : "dkh 07/09/2015 20:32",
 		"testLockCommandReference3" : "dkh 09/30/2014 15:54",

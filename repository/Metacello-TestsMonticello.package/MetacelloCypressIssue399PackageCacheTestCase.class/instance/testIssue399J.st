@@ -13,7 +13,7 @@ testIssue399J
     sourceRepo: MetacelloScriptingResource current sampleRepository
     targetRepo:
       (MetacelloPlatform current
-        repositoryFromUrl: 'filetree://' , externalDirectory fullName) asUrl.
+        repositoryFromUrl: ('filetree://' , externalDirectory fullName) asUrl).
   Metacello new
     baseline: 'Issue399Cypress';
     repository: 'filetree://' , externalDirectory fullName;
@@ -31,7 +31,7 @@ testIssue399J
     sourceRepo: MetacelloScriptingResource current externalRepository
     targetRepo:
       (MetacelloPlatform current
-        repositoryFromUrl: 'filetree://' , externalDirectory fullName) asUrl.
+        repositoryFromUrl: ('filetree://' , externalDirectory fullName) asUrl).
   Metacello new
     baseline: 'Issue399Cypress';
     repository: 'filetree://' , externalDirectory fullName;
