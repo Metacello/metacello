@@ -1,11 +1,12 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"tearDownPackageList" : "dkh 7/24/2012 20:07",
-		"testDefaultRepository" : "dkh 09/04/2014 14:28",
-		"testDefaultVersion" : "dkh 9/7/2016 10:48",
-		"testIssue84" : "dkh 9/7/2016 10:48",
-		"testStableLoadA" : "dkh 09/04/2014 14:28",
 		"testStableLoadB" : "dkh 09/04/2014 14:29",
-		"testStableLoadC" : "dkh 09/04/2014 14:29" } }
+		"tearDownPackageList" : "dkh 7/24/2012 20:07",
+		"testIssue84" : "dkh 9/7/2016 10:48",
+		"testDefaultVersion" : "dkh 9/7/2016 10:48",
+		"testStableLoadA" : "dkh 09/04/2014 14:28",
+		"testStableLoadC" : "dkh 09/04/2014 14:29",
+		"testDefaultRepository" : "dkh 09/04/2014 14:28"
+	},
+	"class" : { }
+}

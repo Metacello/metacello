@@ -1,11 +1,12 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"setUpRepositories" : "dkh 9/7/2016 10:55",
+		"testNestedLoad2" : "dkh 6/15/2012 05:30",
+		"tearDownRepositories" : "dkh 9/7/2016 11:13",
 		"tearDown" : "dkh 6/12/2012 15:41:23.319",
 		"tearDownPackageList" : "dkh 6/12/2012 15:41:23.319",
-		"tearDownRepositories" : "dkh 9/7/2016 11:13",
 		"testNestedLoad1" : "dkh 6/15/2012 05:30",
-		"testNestedLoad2" : "dkh 6/15/2012 05:30",
-		"testNestedLoad3" : "dkh 6/15/2012 05:31" } }
+		"testNestedLoad3" : "dkh 6/15/2012 05:31",
+		"setUpRepositories" : "dkh 9/7/2016 10:55"
+	},
+	"class" : { }
+}

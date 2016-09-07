@@ -1,9 +1,10 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"disableUndefinedSymbolTracking" : "dkh 07/06/2016 16:06",
 		"testIssue32" : "dkh 9/7/2016 10:48",
-		"testIssue339" : "dkh 07/06/2016 16:07",
 		"testIssue47" : "dkh 9/7/2016 10:48",
-		"testIssue59" : "dkh 9/7/2016 10:48" } }
+		"testIssue339" : "dkh 07/06/2016 16:07",
+		"disableUndefinedSymbolTracking" : "dkh 07/06/2016 16:06",
+		"testIssue59" : "dkh 9/7/2016 10:48"
+	},
+	"class" : { }
+}

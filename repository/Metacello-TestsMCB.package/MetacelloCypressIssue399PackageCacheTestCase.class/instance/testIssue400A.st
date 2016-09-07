@@ -16,5 +16,12 @@ testIssue400A
 		repository: 'filetree://' , externalDirectory fullName;
 		cacheRepository: 'dictionary://Metacello_Cache_Test_Repository';
 		load.
-	self assert: (Smalltalk at: #Issue399Sample ifAbsent: [  ]) notNil.	"Confirm that package from package-cache loaded"
-	self assert: (Smalltalk at: #Issue399External ifAbsent: [  ]) isNil
+	self
+		assert:
+			(MetacelloPlatform current globalNamed: #Issue399Sample ifAbsent: [  ])
+				notNil.	"Confirm that package from package-cache loaded"
+	self
+		assert:
+			(MetacelloPlatform current
+				globalNamed: #Issue399External
+				ifAbsent: [  ]) isNil

@@ -4,9 +4,17 @@ tearDown
 
 	MetacelloPlatform current
 		cleanUpRepositoryGroupRemoving:
-			(Smalltalk at: #Metacello_Configuration_Test_Repository ifAbsent: [  ]);
-		cleanUpRepositoryGroupRemoving: (Smalltalk at: #Metacello_Gofer_Test_Repository ifAbsent: [  ]);
-		cleanUpRepositoryGroupRemoving: (Smalltalk at: #Metacello_Cache_Test_Repository ifAbsent: [  ]).
+			(MetacelloPlatform current
+				globalNamed: #Metacello_Configuration_Test_Repository
+				ifAbsent: [  ]);
+		cleanUpRepositoryGroupRemoving:
+			(MetacelloPlatform current
+				globalNamed: #Metacello_Gofer_Test_Repository
+				ifAbsent: [  ]);
+		cleanUpRepositoryGroupRemoving:
+			(MetacelloPlatform current
+				globalNamed: #Metacello_Cache_Test_Repository
+				ifAbsent: [  ]).
 	MetacelloPlatform current
 		removeGlobalNamed: #Metacello_Configuration_Test_Repository
 		ifAbsent: [  ].

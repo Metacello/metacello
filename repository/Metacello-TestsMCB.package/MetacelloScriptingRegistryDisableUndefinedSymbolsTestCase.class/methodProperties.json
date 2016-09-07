@@ -1,6 +1,7 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"disableUndefinedSymbolTracking" : "dkh 07/06/2016 16:17",
-		"tearDownPackageList" : "dkh 07/06/2016 23:34" } }
+		"tearDownPackageList" : "dkh 07/06/2016 23:34",
+		"disableUndefinedSymbolTracking" : "dkh 07/06/2016 16:17"
+	},
+	"class" : { }
+}
