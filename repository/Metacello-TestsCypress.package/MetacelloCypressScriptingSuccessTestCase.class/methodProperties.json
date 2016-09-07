@@ -1,6 +1,9 @@
 {
-	"class" : {
-		"lookupHierarchyRoot" : "dkh 07/07/2016 07:45" },
 	"instance" : {
-		"setUp" : "dkh 07/07/2016 07:47",
-		"tearDown" : "dkh 07/07/2016 07:42" } }
+		"tearDown" : "dkh 07/07/2016 07:42",
+		"setUp" : "dkh 07/07/2016 07:47"
+	},
+	"class" : {
+		"lookupHierarchyRoot" : "dkh 07/07/2016 07:45"
+	}
+}

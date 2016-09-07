@@ -1,8 +1,11 @@
 {
-	"class" : {
-		"allTestSelectors" : "dkh 07/07/2016 12:24",
-		"lookupHierarchyRoot" : "dkh 07/07/2016 07:45",
-		"shouldInheritSelectors" : "dkh 07/07/2016 12:24" },
 	"instance" : {
-		"setUp" : "dkh 07/07/2016 07:47",
-		"tearDown" : "dkh 07/07/2016 07:43" } }
+		"tearDown" : "dkh 07/07/2016 07:43",
+		"setUp" : "dkh 07/07/2016 07:47"
+	},
+	"class" : {
+		"lookupHierarchyRoot" : "dkh 07/07/2016 07:45",
+		"allTestSelectors" : "dkh 9/7/2016 11:57",
+		"shouldInheritSelectors" : "dkh 9/7/2016 11:57"
+	}
+}
