@@ -1,6 +1,6 @@
 {
 	"instance" : {
-		"tearDownRepositories" : "dkh 7/16/2012 11:59",
+		"tearDownRepositories" : "dkh 9/7/2016 11:06",
 		"validateImageBlockFilter" : "dkh 07/28/2013 09:56",
 		"testGetCollectionFilter" : "dkh 7/16/2012 16:57",
 		"testLockedFilter" : "dkh 07/25/2013 16:00",

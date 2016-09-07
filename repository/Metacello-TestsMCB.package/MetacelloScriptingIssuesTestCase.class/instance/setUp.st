@@ -1,5 +1,9 @@
 running
 setUp
-    super setUp.
-    Smalltalk removeKey: #'Metacello_Configuration_Test_POST_DoIt_Result' ifAbsent: [  ].
-    Smalltalk removeKey: #'Metacello_Configuration_Test_DoIt_Result' ifAbsent: [  ]
+	super setUp.
+	MetacelloPlatform current
+		removeGlobalNamed: #Metacello_Configuration_Test_POST_DoIt_Result
+		ifAbsent: [  ].
+	MetacelloPlatform current
+		removeGlobalNamed: #Metacello_Configuration_Test_DoIt_Result
+		ifAbsent: [  ]

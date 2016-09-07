@@ -1,7 +1,7 @@
 {
 	"instance" : {
 		"testBaselineThenConfigurationCorrect" : "dkh 07/28/2013 10:42",
-		"tearDownRepositories" : "dkh 10/18/2014 09:28",
+		"tearDownRepositories" : "dkh 9/7/2016 11:06",
 		"tearDownPackageList" : "dkh 07/28/2013 10:41",
 		"setUpRepositoryContents" : "dkh 9/7/2016 10:55",
 		"testBaselineThenConfigurationConflict" : "dkh 07/28/2013 10:44",

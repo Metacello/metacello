@@ -1,4 +1,6 @@
 running
 tearDownRepositories
-    super tearDownRepositories.
-    Smalltalk removeKey: #'Metacello_Conflict_Test_Repository' ifAbsent: [  ]
+	super tearDownRepositories.
+	MetacelloPlatform current
+		removeGlobalNamed: #Metacello_Conflict_Test_Repository
+		ifAbsent: [  ]

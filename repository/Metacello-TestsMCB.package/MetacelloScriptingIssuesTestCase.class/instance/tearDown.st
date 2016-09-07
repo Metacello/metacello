@@ -1,10 +1,12 @@
 running
 tearDown
-  super tearDown.
-  Smalltalk
-    removeKey: #'Metacello_Configuration_Test_POST_DoIt_Result'
-    ifAbsent: [  ].
-  Smalltalk
-    removeKey: #'Metacello_Configuration_Test_DoIt_Result'
-    ifAbsent: [  ].
-  Smalltalk removeKey: #'Metacello_External_Test_Repository' ifAbsent: [  ]
+	super tearDown.
+	MetacelloPlatform current
+		removeGlobalNamed: #Metacello_Configuration_Test_POST_DoIt_Result
+		ifAbsent: [  ].
+	MetacelloPlatform current
+		removeGlobalNamed: #Metacello_Configuration_Test_DoIt_Result
+		ifAbsent: [  ].
+	MetacelloPlatform current
+		removeGlobalNamed: #Metacello_External_Test_Repository
+		ifAbsent: [  ]

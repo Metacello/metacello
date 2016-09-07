@@ -1,6 +1,6 @@
 {
 	"instance" : {
-		"tearDownRepositories" : "dkh 10/18/2014 09:28",
+		"tearDownRepositories" : "dkh 9/7/2016 11:06",
 		"testFileTreeGetBaseline" : "dkh 7/17/2012 10:11",
 		"testGetRefresh" : "dkh 9/7/2016 10:55",
 		"setUpRepositoryContents" : "dkh 9/7/2016 10:55",
