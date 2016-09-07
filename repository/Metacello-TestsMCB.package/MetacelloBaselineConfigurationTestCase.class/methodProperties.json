@@ -1,18 +1,17 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"tearDownRepositories" : "dkh 9/7/2016 11:13",
-		"testGithubRefXII" : "dkh 9/7/2016 11:24",
-		"testGithubRefVI" : "dkh 9/7/2016 11:24",
 		"tearDownPackageList" : "dkh 6/12/2012 15:41:23.319",
+		"tearDownRepositories" : "dkh 9/7/2016 11:13",
 		"testExernalX" : "dkh 9/7/2016 11:24",
+		"testExernalXX" : "dkh 9/7/2016 11:24",
 		"testExernalXXXa" : "dkh 9/7/2016 11:24",
-		"testGithubRefIV" : "dkh 9/7/2016 11:24",
-		"testGithubRefXI" : "dkh 9/7/2016 11:24",
-		"testGithubRefXIII" : "dkh 9/7/2016 11:24",
-		"testGithubRefV" : "dkh 9/7/2016 11:24",
-		"testGithubRefIX" : "dkh 9/7/2016 11:24",
 		"testExernalXXXb" : "dkh 9/7/2016 11:24",
-		"testExernalXX" : "dkh 9/7/2016 11:24"
-	},
-	"class" : { }
-}
+		"testGithubRefIV" : "dkh 9/7/2016 11:24",
+		"testGithubRefIX" : "dkh 9/7/2016 11:24",
+		"testGithubRefV" : "dkh 9/7/2016 11:24",
+		"testGithubRefVI" : "dkh 9/7/2016 11:24",
+		"testGithubRefXI" : "dkh 9/7/2016 11:24",
+		"testGithubRefXII" : "dkh 9/7/2016 11:24",
+		"testGithubRefXIII" : "dkh 9/7/2016 11:24" } }

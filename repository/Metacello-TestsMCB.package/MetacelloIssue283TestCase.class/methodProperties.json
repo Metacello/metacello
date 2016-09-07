@@ -1,20 +1,19 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"tearDownPackageNames" : "dkh 09/30/2014 11:44",
-		"tearDown" : "dkh 09/30/2014 12:42",
-		"testIssue283c" : "dkh 9/7/2016 10:48",
-		"testIssue283f" : "dkh 10/13/2014 11:58",
-		"testIssue206d" : "dkh 9/7/2016 10:48",
-		"testIssue283e" : "dkh 9/7/2016 10:48",
-		"testIssue283b" : "dkh 9/7/2016 10:48",
-		"projectWith:" : "dkh 09/30/2014 11:01",
-		"testIssue206f" : "dkh 09/30/2014 13:01",
-		"testIssue206b" : "dkh 9/7/2016 10:48",
-		"testIssue283d" : "dkh 9/7/2016 10:48",
-		"testIssue283a" : "dkh 9/7/2016 10:48",
 		"projectName" : "dkh 09/30/2014 10:34",
+		"projectWith:" : "dkh 09/30/2014 11:01",
+		"tearDown" : "dkh 09/30/2014 12:42",
+		"tearDownPackageNames" : "dkh 09/30/2014 11:44",
+		"testIssue206b" : "dkh 9/7/2016 10:48",
+		"testIssue206d" : "dkh 9/7/2016 10:48",
 		"testIssue206e" : "dkh 9/7/2016 10:48",
-		"testIssue283g" : "dkh 10/13/2014 11:59"
-	},
-	"class" : { }
-}
+		"testIssue206f" : "dkh 09/30/2014 13:01",
+		"testIssue283a" : "dkh 9/7/2016 10:48",
+		"testIssue283b" : "dkh 9/7/2016 10:48",
+		"testIssue283c" : "dkh 9/7/2016 10:48",
+		"testIssue283d" : "dkh 9/7/2016 10:48",
+		"testIssue283e" : "dkh 9/7/2016 10:48",
+		"testIssue283f" : "dkh 10/13/2014 11:58",
+		"testIssue283g" : "dkh 10/13/2014 11:59" } }

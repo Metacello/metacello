@@ -1,19 +1,18 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"testOriginalFie40Foo35FooLoad" : "dkh 9/7/2016 10:48",
-		"testClassicFie35Foo35FeauxLoad" : "dkh 6/12/2012 15:41:23.319",
-		"testOriginalFie35Feaux40FeauxLoad" : "dkh 9/7/2016 10:48",
-		"testClassicFie40Foo35FeauxLoad" : "dkh 6/12/2012 15:41:23.319",
-		"testOriginalFie40Feaux35FeauxLoad" : "dkh 9/7/2016 10:48",
-		"testOriginalFie35Foo35FeauxLoad" : "dkh 9/7/2016 10:48",
-		"testClassicFie35Foo40FooLoad" : "dkh 6/12/2012 15:41:23.319",
-		"testClassicFie35Foo40FeauxLoad" : "dkh 6/12/2012 15:41:23.319",
-		"testOriginalFie35Foo40FooLoad" : "dkh 9/7/2016 10:48",
-		"testOriginalFie40Foo35FeauxLoad" : "dkh 9/7/2016 10:48",
 		"testClassicFie35Feaux40FeauxLoad" : "dkh 6/12/2012 15:41:23.319",
+		"testClassicFie35Foo35FeauxLoad" : "dkh 6/12/2012 15:41:23.319",
+		"testClassicFie35Foo40FeauxLoad" : "dkh 6/12/2012 15:41:23.319",
+		"testClassicFie35Foo40FooLoad" : "dkh 6/12/2012 15:41:23.319",
+		"testClassicFie40Feaux35FeauxLoad" : "dkh 7/18/2012 20:05",
+		"testClassicFie40Foo35FeauxLoad" : "dkh 6/12/2012 15:41:23.319",
 		"testClassicFie40Foo35FooLoad" : "dkh 7/18/2012 20:15",
+		"testOriginalFie35Feaux40FeauxLoad" : "dkh 9/7/2016 10:48",
+		"testOriginalFie35Foo35FeauxLoad" : "dkh 9/7/2016 10:48",
 		"testOriginalFie35Foo40FeauxLoad" : "dkh 9/7/2016 10:48",
-		"testClassicFie40Feaux35FeauxLoad" : "dkh 7/18/2012 20:05"
-	},
-	"class" : { }
-}
+		"testOriginalFie35Foo40FooLoad" : "dkh 9/7/2016 10:48",
+		"testOriginalFie40Feaux35FeauxLoad" : "dkh 9/7/2016 10:48",
+		"testOriginalFie40Foo35FeauxLoad" : "dkh 9/7/2016 10:48",
+		"testOriginalFie40Foo35FooLoad" : "dkh 9/7/2016 10:48" } }

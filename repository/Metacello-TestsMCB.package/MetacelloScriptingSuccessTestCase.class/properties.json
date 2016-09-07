@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "MetacelloBasicScriptingTestCase",
 	"category" : "Metacello-TestsMCB",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
-		"useCypressPackagesForAllBaselines"
-	],
+		"useCypressPackagesForAllBaselines" ],
 	"name" : "MetacelloScriptingSuccessTestCase",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "MetacelloBasicScriptingTestCase",
+	"type" : "normal" }

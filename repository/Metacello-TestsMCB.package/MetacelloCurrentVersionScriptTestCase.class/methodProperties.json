@@ -1,12 +1,11 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"testCompareCurrentVersion" : "dkh 7/23/2012 18:55",
-		"testFoe40LoadedFoo50Loaded" : "dkh 6/15/2012 05:30",
-		"tearDownRepositories" : "dkh 9/7/2016 11:13",
+		"setUpRepositories" : "dkh 09/05/2016 13:37",
 		"tearDownPackageList" : "dkh 07/14/2013 11:31",
+		"tearDownRepositories" : "dkh 9/7/2016 11:13",
 		"testBleedingEdgeLocking" : "dkh 07/25/2013 12:55",
+		"testCompareCurrentVersion" : "dkh 7/23/2012 18:55",
 		"testFeaux40Loaded" : "dkh 6/15/2012 05:30",
-		"setUpRepositories" : "dkh 09/05/2016 13:37"
-	},
-	"class" : { }
-}
+		"testFoe40LoadedFoo50Loaded" : "dkh 6/15/2012 05:30" } }

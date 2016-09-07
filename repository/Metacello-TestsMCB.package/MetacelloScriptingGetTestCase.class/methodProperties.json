@@ -1,20 +1,19 @@
 {
+	"class" : {
+		 },
 	"instance" : {
+		"setUpRepositoryContents" : "dkh 9/7/2016 10:55",
 		"tearDownRepositories" : "dkh 9/7/2016 12:23",
 		"testFileTreeGetBaseline" : "dkh 7/17/2012 10:11",
-		"testGetRefresh" : "dkh 9/7/2016 10:55",
-		"setUpRepositoryContents" : "dkh 9/7/2016 10:55",
-		"testLoadNGet" : "dkh 9/7/2016 10:48",
-		"testFileTreeGetConfigurationVersionSpecXX" : "dkh 6/22/2012 17:43",
-		"testFileTreeGetConfigurationVersionSpecX" : "dkh 6/22/2012 17:43",
 		"testFileTreeGetConfigurationBasicSpecIV" : "dkh 6/22/2012 17:42",
+		"testFileTreeGetConfigurationBasicSpecX" : "dkh 6/22/2012 17:42",
 		"testFileTreeGetConfigurationBasicSpecXX" : "dkh 6/22/2012 17:42",
+		"testFileTreeGetConfigurationBasicSpecXXX" : "dkh 6/22/2012 17:43",
 		"testFileTreeGetConfigurationVersionSpecIV" : "dkh 6/22/2012 17:43",
+		"testFileTreeGetConfigurationVersionSpecX" : "dkh 6/22/2012 17:43",
+		"testFileTreeGetConfigurationVersionSpecXX" : "dkh 6/22/2012 17:43",
 		"testFileTreeGetConfigurationVersionSpecXXX" : "dkh 6/22/2012 17:43",
 		"testGetBaseline" : "dkh 10/31/2015 13:44",
 		"testGetNLoad" : "dkh 09/25/2015 16:21",
-		"testFileTreeGetConfigurationBasicSpecX" : "dkh 6/22/2012 17:42",
-		"testFileTreeGetConfigurationBasicSpecXXX" : "dkh 6/22/2012 17:43"
-	},
-	"class" : { }
-}
+		"testGetRefresh" : "dkh 9/7/2016 10:55",
+		"testLoadNGet" : "dkh 9/7/2016 10:48" } }

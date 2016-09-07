@@ -39,7 +39,5 @@ testIssue399I
     load.
   self
     assert:
-      (MetacelloPlatform current
-        globalNamed: Smalltalk
-        at: #'Issue399External'
-        ifAbsent: [  ]) notNil	"Confirm that package from external repo loaded"
+      (MetacelloPlatform current globalNamed: #'Issue399External' ifAbsent: [  ])
+        notNil	"Confirm that package from external repo loaded"

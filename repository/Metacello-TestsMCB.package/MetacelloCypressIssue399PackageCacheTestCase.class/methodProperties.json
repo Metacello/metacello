@@ -1,25 +1,24 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"testIssue399I" : "dkh 09/06/2016 15:10",
-		"testIssue399B" : "dkh 9/7/2016 12:23",
-		"testIssue400B" : "dkh 9/7/2016 12:23",
+		"disableUndefinedSymbolTracking" : "dkh 07/08/2016 10:48",
 		"expectedFailures" : "dkh 07/08/2016 13:13",
 		"externalRepositoryContents" : "dkh 07/07/2016 15:06",
-		"testGoferLoadA" : "dkh 9/7/2016 12:23",
-		"testIssue399G" : "dkh 09/06/2016 15:09",
-		"disableUndefinedSymbolTracking" : "dkh 07/08/2016 10:48",
-		"testIssue399L" : "dkh 09/06/2016 15:12",
-		"testIssue399E" : "dkh 9/7/2016 12:23",
-		"testIssue399J" : "dkh 09/06/2016 15:11",
 		"tearDownPackageList" : "dkh 07/07/2016 15:06",
-		"testIssue399C" : "dkh 9/7/2016 12:23",
-		"testIssue399H" : "dkh 09/06/2016 15:09",
-		"testIssue399A" : "dkh 9/7/2016 12:23",
+		"testGoferLoadA" : "dkh 9/7/2016 12:23",
 		"testGoferLoadB" : "dkh 9/7/2016 12:23",
-		"testIssue400A" : "dkh 9/7/2016 12:23",
+		"testIssue399A" : "dkh 9/7/2016 12:23",
+		"testIssue399B" : "dkh 9/7/2016 12:23",
+		"testIssue399C" : "dkh 9/7/2016 12:23",
+		"testIssue399D" : "dkh 9/7/2016 12:23",
+		"testIssue399E" : "dkh 9/7/2016 12:23",
 		"testIssue399F" : "dkh 9/7/2016 12:23",
+		"testIssue399G" : "dkh 09/06/2016 15:09",
+		"testIssue399H" : "dkh 09/06/2016 15:09",
+		"testIssue399I" : "dkh 09/07/2016 12:26",
+		"testIssue399J" : "dkh 09/06/2016 15:11",
 		"testIssue399K" : "dkh 09/06/2016 15:11",
-		"testIssue399D" : "dkh 9/7/2016 12:23"
-	},
-	"class" : { }
-}
+		"testIssue399L" : "dkh 09/06/2016 15:12",
+		"testIssue400A" : "dkh 9/7/2016 12:23",
+		"testIssue400B" : "dkh 9/7/2016 12:23" } }

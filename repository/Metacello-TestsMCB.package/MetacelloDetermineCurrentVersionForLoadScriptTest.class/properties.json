@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "dkh 6/14/2012 14:55",
-	"super" : "MetacelloScriptingStdTstHarness",
 	"category" : "Metacello-TestsMCB",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 6/14/2012 14:55",
+	"instvars" : [
+		 ],
 	"name" : "MetacelloDetermineCurrentVersionForLoadScriptTest",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "MetacelloScriptingStdTstHarness",
+	"type" : "normal" }

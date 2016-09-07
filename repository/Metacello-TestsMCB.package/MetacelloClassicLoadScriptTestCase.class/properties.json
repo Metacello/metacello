@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "dkh 6/8/2012 13:01",
-	"super" : "MetacelloRegistryLoadScriptHarness",
 	"category" : "Metacello-TestsMCB",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 6/8/2012 13:01",
+	"instvars" : [
+		 ],
 	"name" : "MetacelloClassicLoadScriptTestCase",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "MetacelloRegistryLoadScriptHarness",
+	"type" : "normal" }

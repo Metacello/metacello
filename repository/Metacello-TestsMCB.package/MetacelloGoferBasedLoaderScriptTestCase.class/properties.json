@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "dkh 6/7/2012 13:31",
-	"super" : "MetacelloScriptingStdTstHarness",
 	"category" : "Metacello-TestsMCB",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 6/7/2012 13:31",
+	"instvars" : [
+		 ],
 	"name" : "MetacelloGoferBasedLoaderScriptTestCase",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "MetacelloScriptingStdTstHarness",
+	"type" : "normal" }
