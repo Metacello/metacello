@@ -1,5 +1,5 @@
 {
-	"category" : "Metacello-TestsMCA",
+	"category" : "Metacello-TestsMonticello",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
@@ -7,8 +7,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "MetacelloConfigCoreAPITestCase",
+	"name" : "MetacelloGoferPackageTestCase",
 	"pools" : [
 		 ],
-	"super" : "MetacelloConfigAbstractAPITestCase",
+	"super" : "TestCase",
 	"type" : "normal" }

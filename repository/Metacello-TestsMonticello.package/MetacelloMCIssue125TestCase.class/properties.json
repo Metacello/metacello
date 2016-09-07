@@ -1,13 +1,14 @@
 {
-	"category" : "Metacello-TestsMCA",
+	"category" : "Metacello-TestsMonticello",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "MetacelloGoferPackageTestCase",
+		"gofer",
+		"initialWorkingCopyList" ],
+	"name" : "MetacelloMCIssue125TestCase",
 	"pools" : [
 		 ],
 	"super" : "TestCase",

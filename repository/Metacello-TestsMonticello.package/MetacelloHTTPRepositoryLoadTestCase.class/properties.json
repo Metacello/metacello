@@ -1,14 +1,13 @@
 {
-	"category" : "Metacello-TestsMCA",
+	"category" : "Metacello-TestsMonticello",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"gofer",
-		"initialWorkingCopyList" ],
-	"name" : "MetacelloMCIssue125TestCase",
+		"gofer" ],
+	"name" : "MetacelloHTTPRepositoryLoadTestCase",
 	"pools" : [
 		 ],
 	"super" : "TestCase",

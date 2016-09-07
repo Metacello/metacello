@@ -1,6 +1,6 @@
 private
 validateBaseline: baselineClass
-  (MetacelloMCVersionValidator validateBaseline: baselineClass)
+  (self basicValidateBaseline: baselineClass)
     select: [ :issue | 
       "should have no critical issues"
       self assert: issue isCritical not ]

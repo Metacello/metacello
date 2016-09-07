@@ -1,13 +1,14 @@
 {
-	"category" : "Metacello-TestsMCA",
+	"category" : "Metacello-TestsMonticello",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "MetacelloGithubIssue175TestCase",
+		"tempRepositories",
+		"initialWorkingCopyList" ],
+	"name" : "MetacelloIssue108TestCase",
 	"pools" : [
 		 ],
 	"super" : "TestCase",
