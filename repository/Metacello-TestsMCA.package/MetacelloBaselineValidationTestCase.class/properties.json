@@ -4,12 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "dkh 09/07/2016 11:27",
 	"instvars" : [
-		"gofer",
-		"initialWorkingCopyList" ],
-	"name" : "MetacelloMCIssue125TestCase",
+		 ],
+	"name" : "MetacelloBaselineValidationTestCase",
 	"pools" : [
 		 ],
-	"super" : "TestCase",
+	"super" : "MetacelloScriptingStdTstHarness",
 	"type" : "normal" }
