@@ -1,6 +1,5 @@
 tests
 testFileTreeUrl
   | repo |
-  repo := MetacelloPlatform current
-    repositoryFromUrl: 'filetree:///opt/git/filetree/repository' asUrl.
+  repo := MetacelloPlatform current repositoryFromUrl: 'filetree:///tmp' asUrl.
   self assert: repo class == MCFileTreeRepository
