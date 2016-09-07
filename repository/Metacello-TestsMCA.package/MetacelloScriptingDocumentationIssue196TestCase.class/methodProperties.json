@@ -1,16 +1,15 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"tearDownRepositories" : "dkh 10/18/2014 09:29",
-		"testIssue294" : "dkh 10/01/2014 12:17",
-		"setUpRepositoryContents" : "dkh 10/01/2014 11:36",
-		"tearDownPackageList" : "dkh 10/01/2014 12:33",
-		"testLockCommandReference2" : "dkh 07/09/2015 20:32",
-		"testLockCommandReference5" : "dkh 09/30/2014 15:57",
-		"setupDocumentationRepositories" : "dkh 09/06/2016 15:51",
-		"testLockCommandReference4" : "dkh 09/30/2014 15:54",
-		"testLockCommandReference1" : "dkh 09/30/2014 15:53",
 		"setUpRepositories" : "dkh 9/7/2016 10:55",
-		"testLockCommandReference3" : "dkh 09/30/2014 15:54"
-	},
-	"class" : { }
-}
+		"setUpRepositoryContents" : "dkh 10/01/2014 11:36",
+		"setupDocumentationRepositories" : "dkh 09/06/2016 15:51",
+		"tearDownPackageList" : "dkh 10/01/2014 12:33",
+		"tearDownRepositories" : "dkh 10/18/2014 09:29",
+		"testIssue294" : "dkh 09/07/2016 11:01",
+		"testLockCommandReference1" : "dkh 09/30/2014 15:53",
+		"testLockCommandReference2" : "dkh 07/09/2015 20:32",
+		"testLockCommandReference3" : "dkh 09/30/2014 15:54",
+		"testLockCommandReference4" : "dkh 09/30/2014 15:54",
+		"testLockCommandReference5" : "dkh 09/30/2014 15:57" } }

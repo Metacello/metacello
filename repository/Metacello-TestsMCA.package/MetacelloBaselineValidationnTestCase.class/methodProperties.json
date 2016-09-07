@@ -1,22 +1,21 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"tearDownRepositories" : "dkh 10/18/2014 09:26",
-		"validateBaseline:" : "dkh 10/09/2014 17:02",
-		"testGithubRefXII" : "dkh 09/05/2016 13:35",
 		"tearDownPackageList" : "dkh 10/09/2014 17:19",
+		"tearDownRepositories" : "dkh 10/18/2014 09:26",
 		"testExernalX" : "dkh 09/05/2016 13:34",
-		"testGithubRefVI" : "dkh 09/05/2016 13:35",
-		"testGithubRefXX" : "dkh 09/05/2016 13:35",
-		"testGithubRefIV" : "dkh 09/05/2016 13:34",
-		"testGithubRefXI" : "dkh 09/05/2016 13:35",
-		"testGithubRefXIII" : "dkh 09/05/2016 13:35",
-		"testGithubRefV" : "dkh 09/05/2016 13:34",
-		"testGithubRefVIII" : "dkh 09/05/2016 13:35",
-		"testGithubRefIX" : "dkh 09/05/2016 13:34",
-		"testGithubRefVII" : "dkh 09/05/2016 13:35",
+		"testExernalXX" : "dkh 09/05/2016 13:34",
 		"testExernalXXX" : "dkh 09/05/2016 13:34",
+		"testGithubRefIV" : "dkh 09/05/2016 13:34",
+		"testGithubRefIX" : "dkh 09/05/2016 13:34",
+		"testGithubRefV" : "dkh 09/05/2016 13:34",
+		"testGithubRefVI" : "dkh 09/05/2016 13:35",
+		"testGithubRefVII" : "dkh 09/05/2016 13:35",
+		"testGithubRefVIII" : "dkh 09/05/2016 13:35",
+		"testGithubRefXI" : "dkh 09/05/2016 13:35",
+		"testGithubRefXII" : "dkh 09/05/2016 13:35",
+		"testGithubRefXIII" : "dkh 09/05/2016 13:35",
+		"testGithubRefXX" : "dkh 09/05/2016 13:35",
 		"testIssue32" : "dkh 09/05/2016 13:35",
-		"testExernalXX" : "dkh 09/05/2016 13:34"
-	},
-	"class" : { }
-}
+		"validateBaseline:" : "dkh 10/09/2014 17:02" } }

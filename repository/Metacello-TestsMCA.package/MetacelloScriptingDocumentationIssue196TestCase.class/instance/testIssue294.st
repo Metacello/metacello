@@ -7,7 +7,8 @@ testIssue294
     repository: 'github://dalehenrich/alternate:otto/repository';
     cacheRepository: 'filetree://' , alternateDirectory fullName;
     get.
-  alternateRepository := MCFileTreeRepository new directory: alternateDirectory.
+  alternateRepository := (MetacelloPlatform current
+    repositoryFromUrl: 'filetree://' , alternateDirectory fullName) asUrl.
   alternateRepository allFileNames
     detect: [ :packageName | packageName beginsWith: 'BaselineOfAlternate' ]
     ifNone: [ self assert: false ]
