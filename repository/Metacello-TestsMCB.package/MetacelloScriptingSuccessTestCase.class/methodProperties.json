@@ -1,25 +1,24 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"testFileTreeLoadGithubRefBaseline5" : "dkh 09/25/2015 16:22",
-		"testGitHubTagPatternLoad2" : "dkh 10/18/2014 12:08",
-		"testGithubRefBaselineLoad2" : "dkh 09/25/2015 16:22",
-		"testBitbucketLoad3" : "dkh 09/25/2015 16:22",
-		"testFileTreeLoadGithubRefBaseline8" : "dkh 09/25/2015 16:22",
 		"disableUndefinedSymbolTracking" : "dkh 07/06/2016 16:11",
 		"testBitbucketLoad1" : "dkh 09/05/2016 14:19",
-		"testFileTreeLoadGithubRefBaseline6" : "dkh 09/25/2015 16:22",
-		"testGitHubTagPatternLoad2B" : "dkh 10/18/2014 12:08",
-		"testGitHubTagPatternLoad3" : "dkh 02/16/2015 17:39",
-		"testGithubRefBaselineLoad3" : "dkh 09/25/2015 16:22",
-		"testFileTreeLoadGithubRefBaseline4" : "dkh 09/25/2015 16:22",
+		"testBitbucketLoad2" : "dkh 09/25/2015 16:22",
+		"testBitbucketLoad3" : "dkh 09/25/2015 16:22",
 		"testBitbucketLoad4" : "dkh 09/25/2015 16:22",
-		"testGitHubTagPatternLoad1" : "dkh 10/18/2014 12:08",
 		"testFileTreeLoadGithubRefBaseline2" : "dkh 09/25/2015 16:22",
-		"testGithubRefBaselineLoad1" : "dkh 09/25/2015 16:22",
+		"testFileTreeLoadGithubRefBaseline4" : "dkh 09/25/2015 16:22",
+		"testFileTreeLoadGithubRefBaseline5" : "dkh 09/25/2015 16:22",
+		"testFileTreeLoadGithubRefBaseline6" : "dkh 09/25/2015 16:22",
+		"testFileTreeLoadGithubRefBaseline8" : "dkh 09/25/2015 16:22",
+		"testFileTreeLoadGithubRefBaseline8Issue230" : "dkh 09/25/2015 16:22",
 		"testFileTreeLoadGithubRefBaseline9" : "dkh 09/25/2015 16:22",
 		"testGitHubLoad1" : "dkh 09/25/2015 16:22",
-		"testBitbucketLoad2" : "dkh 09/25/2015 16:22",
-		"testFileTreeLoadGithubRefBaseline8Issue230" : "dkh 09/25/2015 16:22"
-	},
-	"class" : { }
-}
+		"testGitHubTagPatternLoad1" : "dkh 10/18/2014 12:08",
+		"testGitHubTagPatternLoad2" : "dkh 10/18/2014 12:08",
+		"testGitHubTagPatternLoad2B" : "dkh 10/18/2014 12:08",
+		"testGitHubTagPatternLoad3" : "dkh 02/16/2015 17:39",
+		"testGithubRefBaselineLoad1" : "dkh 09/25/2015 16:22",
+		"testGithubRefBaselineLoad2" : "dkh 09/25/2015 16:22",
+		"testGithubRefBaselineLoad3" : "dkh 09/25/2015 16:22" } }

@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "MetacelloScriptingProjectFilterTestCase",
 	"category" : "Metacello-TestsMCB",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "MetacelloScriptingProjectFilterEnableUndefinedSymbolsTestCase",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "MetacelloScriptingProjectFilterTestCase",
+	"type" : "normal" }

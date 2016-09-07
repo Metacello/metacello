@@ -1,18 +1,17 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"tearDownRepositories" : "dkh 9/7/2016 11:13",
-		"test003" : "dkh 6/14/2012 16:45",
+		"setUpRepositories" : "dkh 09/01/2016 17:04",
 		"tearDownPackageList" : "dkh 6/14/2012 14:57",
-		"testIssue112" : "dkh 07/19/2013 22:51",
-		"test003new" : "dkh 6/14/2012 19:07",
+		"tearDownRepositories" : "dkh 9/7/2016 11:13",
+		"test001" : "dkh 6/14/2012 16:37",
 		"test001new" : "dkh 6/14/2012 18:58",
 		"test002" : "dkh 6/14/2012 19:03",
-		"setUpRepositories" : "dkh 09/01/2016 17:04",
-		"testIssue112new" : "dkh 07/19/2013 22:51",
-		"test004new" : "dkh 7/17/2012 11:15",
+		"test002new" : "dkh 6/14/2012 19:04",
+		"test003" : "dkh 6/14/2012 16:45",
+		"test003new" : "dkh 6/14/2012 19:07",
 		"test004" : "dkh 6/14/2012 16:48",
-		"test001" : "dkh 6/14/2012 16:37",
-		"test002new" : "dkh 6/14/2012 19:04"
-	},
-	"class" : { }
-}
+		"test004new" : "dkh 7/17/2012 11:15",
+		"testIssue112" : "dkh 07/19/2013 22:51",
+		"testIssue112new" : "dkh 07/19/2013 22:51" } }

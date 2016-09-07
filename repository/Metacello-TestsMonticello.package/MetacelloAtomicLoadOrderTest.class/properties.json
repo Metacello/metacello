@@ -1,0 +1,14 @@
+{
+	"category" : "Metacello-TestsMonticello",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"loadType" ],
+	"name" : "MetacelloAtomicLoadOrderTest",
+	"pools" : [
+		 ],
+	"super" : "MetacelloDictionaryRepositoryTest",
+	"type" : "normal" }
