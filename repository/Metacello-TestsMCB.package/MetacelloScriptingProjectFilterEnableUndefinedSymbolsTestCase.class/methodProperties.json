@@ -1,8 +1,9 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"disableUndefinedSymbolTracking" : "dkh 07/06/2016 16:15",
 		"testListFilters" : "dkh 07/06/2016 16:15",
 		"testLoadBlockFilter" : "dkh 07/06/2016 16:16",
-		"testLoadCollectionFilter" : "dkh 07/06/2016 16:16" } }
+		"disableUndefinedSymbolTracking" : "dkh 07/06/2016 16:15",
+		"testLoadCollectionFilter" : "dkh 07/06/2016 16:16"
+	},
+	"class" : { }
+}

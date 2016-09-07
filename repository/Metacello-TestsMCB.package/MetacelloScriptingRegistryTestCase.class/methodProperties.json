@@ -1,20 +1,21 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"disableUndefinedSymbolTracking" : "dkh 07/06/2016 16:17",
 		"externalRepositoryContents" : "dkh 07/29/2013 14:40",
-		"tearDownPackageList" : "dkh 05/10/2014 21:46",
-		"tearDownPackages" : "dkh 09/06/2016 16:06",
-		"testLoadConfigurationThenBaseline" : "dkh 07/29/2013 14:43",
 		"testLoadConfigurationWithBaseline" : "dkh 07/29/2013 14:43",
-		"testPrimeRegistryFromImage1" : "dkh 05/08/2014 16:11",
-		"testPrimeRegistryFromImage2" : "dkh 05/08/2014 16:14",
-		"testPrimeRegistryFromImage3" : "dkh 05/10/2014 22:18",
-		"testPrimeRegistryFromImage4" : "dkh 05/26/2014 07:40",
-		"testPrimeRegistryFromImage5" : "dkh 05/07/2014 17:03",
+		"testPrimeRegistryFromImage3" : "dkh 9/7/2016 10:48",
 		"validateBaseline:" : "dkh 07/27/2013 07:56",
+		"tearDownPackageList" : "dkh 05/10/2014 21:46",
+		"testLoadConfigurationThenBaseline" : "dkh 07/29/2013 14:43",
+		"disableUndefinedSymbolTracking" : "dkh 07/06/2016 16:17",
+		"tearDownPackages" : "dkh 09/06/2016 16:06",
+		"testPrimeRegistryFromImage2" : "dkh 9/7/2016 10:48",
+		"testPrimeRegistryFromImage5" : "dkh 9/7/2016 10:48",
 		"validateConfiguration:" : "dkh 07/27/2013 07:49",
 		"validateLockedBaseline:" : "dkh 05/07/2014 16:58",
 		"validateLockedRegistrations:" : "dkh 05/07/2014 17:06",
-		"validateRegistrations:" : "dkh 07/27/2013 07:48" } }
+		"validateRegistrations:" : "dkh 07/27/2013 07:48",
+		"testPrimeRegistryFromImage4" : "dkh 9/7/2016 10:48",
+		"testPrimeRegistryFromImage1" : "dkh 9/7/2016 10:48"
+	},
+	"class" : { }
+}

@@ -1,4 +1,7 @@
 assertions
 assertClass: aClassSymbol selector: aMethodSymbol
 	self assertClass: aClassSymbol.
-	self assert: ((Smalltalk at: aClassSymbol) includesSelector: aMethodSymbol)
+	self
+		assert:
+			((MetacelloPlatform current globalNamed: aClassSymbol)
+				includesSelector: aMethodSymbol)

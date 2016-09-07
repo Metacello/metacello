@@ -1,11 +1,12 @@
 tests
 testIssue206d
-  "https://github.com/dalehenrich/metacello-work/issues/206"
+	"https://github.com/dalehenrich/metacello-work/issues/206"
 
-  | project wc |
-  gofer version: 'ConfigurationOfProjectIssue283-dkh.2'.
-  gofer metacelloLoad.
-  project := (Smalltalk at: #'ConfigurationOfProjectIssue283') project.
-  (project version: #'bleedingEdge') load.
-  wc := (GoferPackageReference name: 'GoferFoo') workingCopy.
-  self assert: wc ancestry ancestors first name = 'GoferFoo-lr.4'
+	| project wc |
+	gofer version: 'ConfigurationOfProjectIssue283-dkh.2'.
+	gofer metacelloLoad.
+	project := (MetacelloPlatform current
+		globalNamed: #ConfigurationOfProjectIssue283) project.
+	(project version: #bleedingEdge) load.
+	wc := (GoferPackageReference name: 'GoferFoo') workingCopy.
+	self assert: wc ancestry ancestors first name = 'GoferFoo-lr.4'

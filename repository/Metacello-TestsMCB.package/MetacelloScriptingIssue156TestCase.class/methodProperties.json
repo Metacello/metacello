@@ -1,13 +1,14 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"setUpRepositoryContents" : "dkh 05/10/2013 14:48",
-		"tearDownPackageList" : "dkh 07/28/2013 10:41",
-		"tearDownRepositories" : "dkh 10/18/2014 09:28",
-		"testBaselineThenConfigurationConflict" : "dkh 07/28/2013 10:44",
 		"testBaselineThenConfigurationCorrect" : "dkh 07/28/2013 10:42",
+		"tearDownRepositories" : "dkh 10/18/2014 09:28",
+		"tearDownPackageList" : "dkh 07/28/2013 10:41",
+		"setUpRepositoryContents" : "dkh 9/7/2016 10:48",
+		"testBaselineThenConfigurationConflict" : "dkh 07/28/2013 10:44",
 		"testConfigurationLoadingBaseline" : "dkh 07/28/2013 10:34",
 		"testConfigurationThenBaselineMNU" : "dkh 05/11/2013 08:15",
-		"testConfigurationThenBaselineNoPreload" : "dkh 05/11/2013 07:38",
-		"testIndirectConfigurationLoadingBaseline" : "dkh 05/11/2013 08:55" } }
+		"testIndirectConfigurationLoadingBaseline" : "dkh 05/11/2013 08:55",
+		"testConfigurationThenBaselineNoPreload" : "dkh 05/11/2013 07:38"
+	},
+	"class" : { }
+}

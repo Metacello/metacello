@@ -1,12 +1,13 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"getTestRepository" : "dkh 9/5/2012 16:23",
-		"getTestRepositoryDirectory" : "dkh 10/16/2014 09:47",
-		"hasPackage:" : "dkh 09/06/2016 12:42",
 		"runCase" : "ChristopheDemarey 4/29/2013 16:23",
+		"testIssue111" : "07/12/2013 07:56",
 		"setUp" : "dkh 9/5/2012 16:08",
 		"tearDown" : "dkh 9/5/2012 16:33",
+		"hasPackage:" : "dkh 09/06/2016 12:42",
+		"getTestRepositoryDirectory" : "dkh 10/16/2014 09:47",
 		"tearDownPackageNames" : "dkh 9/5/2012 16:09",
-		"testIssue111" : "07/12/2013 07:56" } }
+		"getTestRepository" : "dkh 9/5/2012 16:23"
+	},
+	"class" : { }
+}

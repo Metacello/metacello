@@ -1,7 +1,8 @@
 {
-	"class" : {
-		 },
 	"instance" : {
 		"tearDownPackageList" : "ChristopheDemarey 9/12/2013 22:12",
 		"tearDownRepositories" : "dkh 10/18/2014 09:27",
-		"testInvalidConfigurations" : "dkh 09/05/2016 13:37" } }
+		"testInvalidConfigurations" : "dkh 09/05/2016 13:37"
+	},
+	"class" : { }
+}

@@ -1,14 +1,11 @@
 {
-	"category" : "Metacello-TestsMCA",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "MetacelloVersionQueryExampleConfig",
-	"pools" : [
-		 ],
 	"super" : "MetacelloMCTestsAbstractConfig",
-	"type" : "normal" }
+	"category" : "Metacello-TestsMCA",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MetacelloVersionQueryExampleConfig",
+	"type" : "normal"
+}

@@ -1,8 +1,9 @@
 {
-	"class" : {
-		 },
 	"instance" : {
+		"testIssue171b" : "dkh 05/09/2013 12:12",
 		"projectName" : "dkh 6/12/2012 15:41:23.319",
 		"tearDownPackageNames" : "dkh 6/12/2012 15:41:23.319",
-		"testIssue171a" : "dkh 05/09/2013 12:12",
-		"testIssue171b" : "dkh 05/09/2013 12:12" } }
+		"testIssue171a" : "dkh 05/09/2013 12:12"
+	},
+	"class" : { }
+}

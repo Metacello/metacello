@@ -1,14 +1,11 @@
 {
-	"category" : "Metacello-TestsMCA",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "MetacelloScriptingDocumentationIssue196EnableUndefinedTestCase",
-	"pools" : [
-		 ],
 	"super" : "MetacelloScriptingDocumentationIssue196TestCase",
-	"type" : "normal" }
+	"category" : "Metacello-TestsMCA",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MetacelloScriptingDocumentationIssue196EnableUndefinedTestCase",
+	"type" : "normal"
+}
