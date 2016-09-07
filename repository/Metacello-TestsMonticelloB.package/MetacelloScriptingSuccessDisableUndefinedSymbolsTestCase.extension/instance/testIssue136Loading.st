@@ -1,4 +1,4 @@
-tests
+*metacello-testsmonticellob
 testIssue136Loading
   "https://github.com/dalehenrich/metacello-work/issues/136"
 

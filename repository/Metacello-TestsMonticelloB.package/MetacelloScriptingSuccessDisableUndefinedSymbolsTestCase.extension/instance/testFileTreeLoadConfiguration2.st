@@ -1,4 +1,4 @@
-tests
+*metacello-testsmonticellob
 testFileTreeLoadConfiguration2
   Metacello new
     configuration: 'ExternalX';

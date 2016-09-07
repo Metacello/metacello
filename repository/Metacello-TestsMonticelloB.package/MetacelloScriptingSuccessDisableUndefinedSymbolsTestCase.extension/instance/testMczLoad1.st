@@ -1,4 +1,4 @@
-tests
+*metacello-testsmonticellob
 testMczLoad1
   Metacello new
     project: 'MetacelloExample';

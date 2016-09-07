@@ -1,4 +1,4 @@
-tests
+*metacello-testsmonticellob
 testIssue27Caching
 	| repoDescription githubRepo platform |
 	repoDescription := 'github://dalehenrich/external:' , MetacelloScriptingResource externalCustomSHA , '/repository'.

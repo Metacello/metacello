@@ -1,4 +1,4 @@
-tests
+*metacello-testsmonticellob
 testFileTreeLoadGithubRefBaseline7
   "BaselineOfExternal reference from http://ss3.gemstone.com/ss/external.html using #baseline:with:"
 

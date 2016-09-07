@@ -5,13 +5,4 @@
 		"disableUndefinedSymbolTracking" : "dkh 07/06/2016 16:12",
 		"testFileTreeLoadBaseline1" : "dkh 07/06/2016 16:12",
 		"testFileTreeLoadBaseline2" : "dkh 07/06/2016 16:12",
-		"testFileTreeLoadBaseline2Issue230" : "dkh 07/06/2016 16:12",
-		"testFileTreeLoadConfiguration1" : "dkh 07/06/2016 16:12",
-		"testFileTreeLoadConfiguration2" : "dkh 07/06/2016 16:13",
-		"testFileTreeLoadGithubRefBaseline7" : "dkh 07/06/2016 16:13",
-		"testFileTreeLoadMarianosImage1" : "dkh 07/06/2016 16:13",
-		"testFileTreeLoadMarianosImage2" : "dkh 07/06/2016 16:13",
-		"testIssue136Loading" : "dkh 07/06/2016 16:13",
-		"testIssue27Caching" : "dkh 07/06/2016 16:13",
-		"testMczLoad1" : "dkh 07/06/2016 16:14",
-		"testMczLoad2" : "dkh 07/06/2016 16:14" } }
+		"testFileTreeLoadBaseline2Issue230" : "dkh 07/06/2016 16:12" } }

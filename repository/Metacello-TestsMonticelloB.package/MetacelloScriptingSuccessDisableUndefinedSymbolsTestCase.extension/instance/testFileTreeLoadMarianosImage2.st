@@ -1,4 +1,4 @@
-tests
+*metacello-testsmonticellob
 testFileTreeLoadMarianosImage2
   Metacello new
     project: 'DifferentName';

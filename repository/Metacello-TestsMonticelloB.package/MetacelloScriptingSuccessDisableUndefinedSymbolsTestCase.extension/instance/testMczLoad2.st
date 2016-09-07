@@ -1,4 +1,4 @@
-tests
+*metacello-testsmonticellob
 testMczLoad2
   Metacello new
     configuration: 'MetacelloExample';

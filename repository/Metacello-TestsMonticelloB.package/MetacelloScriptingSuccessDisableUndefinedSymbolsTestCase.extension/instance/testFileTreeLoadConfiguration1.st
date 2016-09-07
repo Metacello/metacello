@@ -1,4 +1,4 @@
-tests
+*metacello-testsmonticellob
 testFileTreeLoadConfiguration1
   Metacello new
     project: 'ExternalX';
