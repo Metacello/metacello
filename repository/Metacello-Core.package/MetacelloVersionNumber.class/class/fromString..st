@@ -10,7 +10,7 @@ fromString: aString
       strs size > 1
         ifTrue: [ 
           "remaining are uncoditionally Strings, because of leading $-"
-          components addAll: strs allButFirst ] ].
+          components addAll: (strs copyFrom: 2 to: strs size) ] ].
   new := self new: components size.
   1 to: components size do: [ :i | new at: i put: (components at: i) ].
   ^ new
