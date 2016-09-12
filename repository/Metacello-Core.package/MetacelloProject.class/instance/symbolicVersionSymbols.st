@@ -1,4 +1,5 @@
 versions
 symbolicVersionSymbols
-
-	^self symbolicVersionMap keys asArray sort: [:a :b | a <= b ]
+  ^ MetacelloPlatform current
+    sort: self symbolicVersionMap keys asArray
+    with: [ :a :b | a <= b ]

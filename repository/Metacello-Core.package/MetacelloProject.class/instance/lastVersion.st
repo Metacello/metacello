@@ -1,7 +1,9 @@
 versions
 lastVersion
-
-	| coll |
-	coll := (self map values asArray sort: [:a :b | a <= b ]) asOrderedCollection.
-	coll isEmpty ifTrue: [ ^nil ].
-	^coll last
+  | coll |
+  coll := (MetacelloPlatform current
+    sort: self map values asArray
+    with: [ :a :b | a <= b ]) asOrderedCollection.
+  coll isEmpty
+    ifTrue: [ ^ nil ].
+  ^ coll last

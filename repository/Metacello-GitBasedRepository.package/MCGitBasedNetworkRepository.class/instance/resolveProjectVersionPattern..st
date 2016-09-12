@@ -21,7 +21,9 @@ resolveProjectVersionPattern: aString
           'No tags matching the pattern ' , aString printString
             , ' found for repository description '
             , self description printString ].
-  sortedMatchingTags := matchingTags asArray sort: [ :a :b | a key <= b key ].
+  sortedMatchingTags := MetacelloPlatform current
+    sort: matchingTags asArray
+    with: [ :a :b | a key <= b key ].
   theTag := sortedMatchingTags last.
   projectVersionPattern := aString.
   projectVersion := theTag value

@@ -1,10 +1,12 @@
 scripting
 hasNoLoadConflicts: aMetacelloRepositoriesSpec
   | repositorySpecs anotherRepositorySpecs |
-  repositorySpecs := self map values
-    sort: [ :a :b | a description <= b description ].
-  anotherRepositorySpecs := aMetacelloRepositoriesSpec map values
-    sort: [ :a :b | a description <= b description ].
+  repositorySpecs := MetacelloPlatform current
+    sort: self map values
+    with: [ :a :b | a description <= b description ].
+  anotherRepositorySpecs := MetacelloPlatform current
+    sort: aMetacelloRepositoriesSpec map values
+    with: [ :a :b | a description <= b description ].
   repositorySpecs size ~= anotherRepositorySpecs size
     ifTrue: [ ^ false ].
   1 to: repositorySpecs size do: [ :index | 

@@ -1,4 +1,5 @@
 versions
 versions
-
-	^self map values asArray sort: [:a :b | a <= b ]
+  ^ MetacelloPlatform current
+    sort: self map values asArray
+    with: [ :a :b | a <= b ]
