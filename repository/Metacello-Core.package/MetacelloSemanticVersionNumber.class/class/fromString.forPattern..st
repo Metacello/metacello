@@ -16,7 +16,7 @@ fromString: aString forPattern: forPattern
     ifFalse: [ preRelease - 1 ].
   versionString := aString copyFrom: 1 to: normalEnd.
   identifierCount := 0.
-  (versionString findTokens: '.')
+  (MetacelloPlatform current findTokens: '.' in: versionString)
     do: [ :subString | 
       | integer |
       forPattern
@@ -39,7 +39,7 @@ fromString: aString forPattern: forPattern
   preRelease > 0
     ifTrue: [ 
       versionString := aString copyFrom: preRelease + 1 to: preReleaseEnd.
-      (versionString findTokens: '.')
+      (MetacelloPlatform current findTokens: '.' in: versionString)
         do: [ :subString | 
           (forPattern or: [ self isSemanticIdentifier: subString ])
             ifFalse: [ 
@@ -52,7 +52,7 @@ fromString: aString forPattern: forPattern
   build > 0
     ifTrue: [ 
       versionString := aString copyFrom: build + 1 to: aString size.
-      (versionString findTokens: '.')
+      (MetacelloPlatform current findTokens: '.' in: versionString)
         do: [ :subString | 
           (forPattern or: [ self isSemanticIdentifier: subString ])
             ifFalse: [ 

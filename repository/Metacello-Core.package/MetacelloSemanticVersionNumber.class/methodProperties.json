@@ -2,7 +2,7 @@
 	"class" : {
 		"extractNumericComponent:forPattern:" : "dkh 6/22/2012 14:53",
 		"fromString:" : "dkh 05/03/2016 07:42",
-		"fromString:forPattern:" : "dkh 05/03/2016 07:12",
+		"fromString:forPattern:" : "dkh 09/12/2016 11:26",
 		"integerFromString:" : "dkh 05/04/2016 06:24",
 		"isSemanticIdentifier:" : "dkh 6/21/2012 18:43",
 		"validateVersionNumber:against:" : "dkh 05/03/2016 07:45" },

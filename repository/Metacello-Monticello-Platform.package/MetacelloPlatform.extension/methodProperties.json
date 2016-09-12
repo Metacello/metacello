@@ -4,6 +4,7 @@
 	"instance" : {
 		"cleanUpRepositoryGroupRemoving:" : "dkh 09/06/2016 15:55",
 		"defaultCacheRepository" : "dkh 09/05/2016 15:58",
+		"findTokens:in:" : "dkh 09/12/2016 11:24",
 		"goferClass" : "dkh 09/06/2016 16:18",
 		"goferLoadBlockFor:resolvedReference:" : "dkh 09/05/2016 15:59",
 		"goferLoaderReferenceFor:" : "dkh 09/05/2016 15:59",
