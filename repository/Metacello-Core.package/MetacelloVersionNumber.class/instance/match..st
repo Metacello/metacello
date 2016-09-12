@@ -1,6 +1,6 @@
 comparing
 match: aVersionPattern
-	"Answer whether the version number of the receiver matches the given pattern string.
+  "Answer whether the version number of the receiver matches the given pattern string.
 
 	 A Metacello version number is made up of version sequences delimited by the characters $. and $-.
 	 The $. introduces a numeric version sequence and $- introduces an alphanumeric version sequence.
@@ -13,23 +13,30 @@ match: aVersionPattern
 	 version sequences. '?' as the version pattern matches all versions. No more version pattern 
 	 sequences are permitted once the '?' sequence is used. If used, it is the last version pattern
 	 sequence. "
-	
-	| patternVersion mySize patternSize |
-	patternVersion := aVersionPattern asMetacelloVersionNumber.
-	mySize := self size.
-	patternSize := patternVersion size.
-	mySize = patternSize 
-		ifFalse: [ 
-			mySize < patternSize ifTrue: [ ^false ].
-			(patternVersion at: patternSize) ~= '?' ifTrue: [ ^false ].
-			mySize := patternSize ].
-	1 to: mySize do: [:i | | pattern |
-		pattern := (patternVersion at: i) asString.
-		pattern = '?'
-			ifTrue: [i = mySize ifFalse: [ ^self error: 'Invalid version match pattern: ', aVersionPattern printString ]]
-			ifFalse: [ (pattern match: (self at: i) asString)  ifFalse: [ ^false ]]].
-	^true
-"
+
+  | patternVersion mySize patternSize platform |
+  patternVersion := aVersionPattern asMetacelloVersionNumber.
+  mySize := self size.
+  patternSize := patternVersion size.
+  mySize = patternSize
+    ifFalse: [ 
+      mySize < patternSize
+        ifTrue: [ ^ false ].
+      (patternVersion at: patternSize) ~= '?'
+        ifTrue: [ ^ false ].
+      mySize := patternSize ].
+  platform := MetacelloPlatform current.
+  1 to: mySize do: [ :i | 
+    | pattern |
+    pattern := (patternVersion at: i) asString.
+    pattern = '?'
+      ifTrue: [ 
+        i = mySize
+          ifFalse: [ ^ self error: 'Invalid version match pattern: ' , aVersionPattern printString ] ]
+      ifFalse: [ 
+        (platform matchPattern: pattern in: (self at: i) asString)
+          ifFalse: [ ^ false ] ] ].
+  ^ true	"
   '1.1.1' asMetacelloVersionNumber match: '*.*.*'. -> true
   '1.1.1' asMetacelloVersionNumber match: '*.#.*'. -> true
   '1.10.1' asMetacelloVersionNumber match: '*.#.*'. -> false

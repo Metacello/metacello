@@ -1,6 +1,6 @@
 comparing
 match: aVersionPattern
-    "Answer whether the version number of the receiver matches the given pattern string.
+  "Answer whether the version number of the receiver matches the given pattern string.
 
 	 A Metacello version number is made up of version sequences delimited by the characters $. and $-.
 	 The $. introduces a numeric version sequence and $- introduces an alphanumeric version sequence.
@@ -14,26 +14,28 @@ match: aVersionPattern
 	 sequences are permitted once the '?' sequence is used. If used, it is the last version pattern
 	 sequence. "
 
-    | patternVersion mySize patternSize components |
-    patternVersion := (self class fromString: aVersionPattern forPattern: true) versionComponents.
-    components := self versionComponents.
-    mySize := components size.
-    patternSize := patternVersion size.
-    mySize = patternSize
-        ifFalse: [ 
-            mySize < patternSize
-                ifTrue: [ ^ false ].
-            (patternVersion at: patternSize) ~= '?'
-                ifTrue: [ ^ false ].
-            mySize := patternSize ].
-    1 to: mySize do: [ :i | 
-        | pattern |
-        pattern := (patternVersion at: i) asString.
-        pattern = '?'
-            ifTrue: [ 
-                i = mySize
-                    ifFalse: [ ^ self error: 'Invalid version match pattern: ' , aVersionPattern printString ] ]
-            ifFalse: [ 
-                (pattern match: (components at: i) asString)
-                    ifFalse: [ ^ false ] ] ].
-    ^ true
+  | patternVersion mySize patternSize components platform |
+  patternVersion := (self class fromString: aVersionPattern forPattern: true)
+    versionComponents.
+  components := self versionComponents.
+  mySize := components size.
+  patternSize := patternVersion size.
+  mySize = patternSize
+    ifFalse: [ 
+      mySize < patternSize
+        ifTrue: [ ^ false ].
+      (patternVersion at: patternSize) ~= '?'
+        ifTrue: [ ^ false ].
+      mySize := patternSize ].
+  platform := MetacelloPlatform current.
+  1 to: mySize do: [ :i | 
+    | pattern |
+    pattern := (patternVersion at: i) asString.
+    pattern = '?'
+      ifTrue: [ 
+        i = mySize
+          ifFalse: [ ^ self error: 'Invalid version match pattern: ' , aVersionPattern printString ] ]
+      ifFalse: [ 
+        (platform matchPattern: pattern in: (components at: i) asString)
+          ifFalse: [ ^ false ] ] ].
+  ^ true
