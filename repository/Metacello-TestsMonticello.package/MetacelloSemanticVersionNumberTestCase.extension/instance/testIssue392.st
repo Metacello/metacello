@@ -1,4 +1,4 @@
-tests
+*metacello-testsmonticello
 testIssue392
   "semantic version strings that are actually invalid, but were allowed by MetacelloOldSemanticVersionNumber"
 

@@ -5,7 +5,6 @@
 		"sampleVersionStrings" : "dkh 6/22/2012 11:18",
 		"testEqualityComparison" : "dkh 6/22/2012 09:00",
 		"testInvalidSpecialMatch" : "dkh 6/22/2012 12:15",
-		"testIssue392" : "dkh 05/03/2016 07:40",
 		"testLessThanComparison" : "dkh 6/22/2012 11:29",
 		"testPrinting" : "dkh 6/22/2012 08:59",
 		"testSemanticVersioning" : "dkh 6/22/2012 15:34",
