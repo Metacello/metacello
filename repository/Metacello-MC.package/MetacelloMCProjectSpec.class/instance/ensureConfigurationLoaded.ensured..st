@@ -4,7 +4,8 @@ ensureConfigurationLoaded: vrsn ensured: ensured
     blessing is #development
     symbolic version (https://github.com/dalehenrich/metacello-work/issues/283)"
 
-  (vrsn blessing == #'development' or: [ self versionString isSymbol ])
+  (vrsn blessing == #'development'
+    or: [ MetacelloPlatform current isSymbol: self versionString ])
     ifTrue: [ 
       ensured ~~ #'latest'
         ifTrue: [ ^ MetacelloScriptEnsureProjectLoadedForDevelopment signal ] ].

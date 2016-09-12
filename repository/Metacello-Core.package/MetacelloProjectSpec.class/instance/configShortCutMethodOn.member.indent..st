@@ -33,6 +33,6 @@ configShortCutMethodOn: aStream member: aMember indent: indent
       | vs |
       vs := self versionString.
       aStream nextPutAll: 'with: '.
-      vs isSymbol
+      (MetacelloPlatform current isSymbol: vs)
         ifTrue: [ aStream nextPut: $# ].
       aStream nextPutAll: vs asString printString ]

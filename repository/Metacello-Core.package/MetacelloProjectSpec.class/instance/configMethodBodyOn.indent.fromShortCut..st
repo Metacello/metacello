@@ -33,7 +33,7 @@ configMethodBodyOn: aStream indent: indent fromShortCut: fromShortCut
         ifFalse: [ aStream space ].
       vs := self versionString.
       aStream nextPutAll: 'versionString: '.
-      vs isSymbol
+      (MetacelloPlatform current isSymbol: vs)
         ifTrue: [ aStream nextPut: $# ].
       aStream nextPutAll: vs asString printString.
       hasPreLoadDoIt | hasPostLoadDoIt | hasOperator | hasProjectPackage
@@ -48,7 +48,7 @@ configMethodBodyOn: aStream indent: indent fromShortCut: fromShortCut
             tab: indent + 1 ]
         ifFalse: [ aStream space ].
       aStream nextPutAll: 'preLoadDoIt: '.
-      self preLoadDoIt value isSymbol
+      (MetacelloPlatform current isSymbol: self preLoadDoIt value)
         ifTrue: [ 
           aStream
             nextPut: $#;
@@ -65,7 +65,7 @@ configMethodBodyOn: aStream indent: indent fromShortCut: fromShortCut
             tab: indent + 1 ]
         ifFalse: [ aStream space ].
       aStream nextPutAll: 'postLoadDoIt: '.
-      self postLoadDoIt value isSymbol
+      (MetacelloPlatform current isSymbol: self postLoadDoIt value)
         ifTrue: [ 
           aStream
             nextPut: $#;

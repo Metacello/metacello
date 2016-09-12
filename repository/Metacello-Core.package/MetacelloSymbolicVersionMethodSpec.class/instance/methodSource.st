@@ -17,7 +17,7 @@ methodSource
         nextPutAll:
             'spec for: ' , methodSection attributePrintString , ' version: '.
       vs := methodSection versionString.
-      vs isSymbol
+      (MetacelloPlatform current isSymbol: vs)
         ifTrue: [ strm nextPut: $# ].
       strm
         nextPutAll: vs asString printString , '.';

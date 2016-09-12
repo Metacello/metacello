@@ -1,17 +1,29 @@
 versions
 version: aVersionString
-    | vrsn |
-    aVersionString isSymbol
+  | vrsn |
+  (MetacelloPlatform current isSymbol: aVersionString)
+    ifTrue: [ 
+      | symbolicVersionString |
+      symbolicVersionString := self symbolicVersionMap
+        at: aVersionString
+        ifAbsent: [ 
+          (MetacelloSymbolicVersionDoesNotExistError
+            project: self project
+            versionString: aVersionString) signal ].
+      symbolicVersionString == #'notDefined'
         ifTrue: [ 
-            | symbolicVersionString |
-            symbolicVersionString := self symbolicVersionMap
-                at: aVersionString
-                ifAbsent: [ (MetacelloSymbolicVersionDoesNotExistError project: self project versionString: aVersionString) signal ].
-            symbolicVersionString == #'notDefined'
-                ifTrue: [ (MetacelloSymbolicVersionNotDefinedError project: self project versionString: aVersionString) signal ].
-            ^ self
-                lookupVersion: symbolicVersionString
-                ifAbsent: [ (MetacelloSymbolicVersionDoesNotExistError project: self project versionString: symbolicVersionString) signal ] ].
-    ^ self
-        lookupVersion: aVersionString
-        ifAbsent: [ (MetacelloVersionDoesNotExistError project: self project versionString: aVersionString) signal ]
+          (MetacelloSymbolicVersionNotDefinedError
+            project: self project
+            versionString: aVersionString) signal ].
+      ^ self
+        lookupVersion: symbolicVersionString
+        ifAbsent: [ 
+          (MetacelloSymbolicVersionDoesNotExistError
+            project: self project
+            versionString: symbolicVersionString) signal ] ].
+  ^ self
+    lookupVersion: aVersionString
+    ifAbsent: [ 
+      (MetacelloVersionDoesNotExistError
+        project: self project
+        versionString: aVersionString) signal ]

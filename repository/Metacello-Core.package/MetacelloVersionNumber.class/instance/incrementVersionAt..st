@@ -1,6 +1,7 @@
 private
 incrementVersionAt: index
-  | int |
+  | int platform |
+  platform := MetacelloPlatform current.
   int := self at: index.
-  (int := self at: index) isString
+  (platform isString: (int := self at: index))
     ifFalse: [ self at: index put: int + 1 ]
