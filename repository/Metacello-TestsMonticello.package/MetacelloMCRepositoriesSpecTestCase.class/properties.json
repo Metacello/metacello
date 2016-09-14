@@ -1,0 +1,14 @@
+{
+	"category" : "Metacello-TestsMonticello",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 09/14/2016 15:07",
+	"instvars" : [
+		 ],
+	"name" : "MetacelloMCRepositoriesSpecTestCase",
+	"pools" : [
+		 ],
+	"super" : "MetacelloRepositoriesSpecTestCase",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "Metacello-TestsMCCore",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 09/14/2016 14:45",
+	"instvars" : [
+		 ],
+	"name" : "MetacelloBaselineProjectReferenceSpecTestCase",
+	"pools" : [
+		 ],
+	"super" : "MetacelloProjectReferenceSpecTestCase",
+	"type" : "normal" }
