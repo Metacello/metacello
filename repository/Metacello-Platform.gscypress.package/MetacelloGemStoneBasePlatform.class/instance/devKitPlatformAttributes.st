@@ -2,11 +2,11 @@ attributes
 devKitPlatformAttributes
   | baselineClassName |
   baselineClassName := 'BaselineOfDevKit'.
-  Smalltalk
-    at: baselineClassName
+  self
+    globalNamed: baselineClassName
     ifPresent: [ :ignored | 
-      Smalltalk
-        at: #'MetacelloProjectRegistration'
+      self
+        globalNamed: 'MetacelloProjectRegistration'
         ifPresent: [ :cls | 
           (cls registrationForClassNamed: baselineClassName ifAbsent: [  ])
             ifNotNil: [ :registration | 
