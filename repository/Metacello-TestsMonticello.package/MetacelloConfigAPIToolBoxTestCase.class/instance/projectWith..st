@@ -4,7 +4,7 @@ projectWith: projectAttributes
   "Construct Metacello project"
   project := MetacelloMCProject new.
   project projectAttributes: projectAttributes.
-  MetacelloVersionConstructor
+  project class versionConstructorClass
     on:
       (MetacelloPlatform current
         globalNamed: #'MetacelloTestConfigurationOfProjectToolBox') new
