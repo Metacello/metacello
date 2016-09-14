@@ -1,4 +1,4 @@
-private
+*metacello-monticello-base
 retry: aBlock retryCount: retryCount
     | count |
     count := 1.

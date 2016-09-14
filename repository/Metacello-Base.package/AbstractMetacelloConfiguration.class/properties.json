@@ -4,11 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "dkh 5/30/2012 16:31",
+	"commentStamp" : "dkh 09/14/2016 09:49",
 	"instvars" : [
-		 ],
-	"name" : "ConfigurationOf",
+		"project" ],
+	"name" : "AbstractMetacelloConfiguration",
 	"pools" : [
 		 ],
-	"super" : "AbstractMetacelloConfiguration",
+	"super" : "Object",
 	"type" : "normal" }

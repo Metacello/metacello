@@ -1,3 +1,3 @@
-private
+*metacello-monticello-base
 retry: aBlock
     self retry: aBlock retryCount: 3
