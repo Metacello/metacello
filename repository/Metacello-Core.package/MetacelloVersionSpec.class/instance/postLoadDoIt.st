@@ -1,3 +1,3 @@
 querying
 postLoadDoIt
-  ^ postLoadDoIt ifNil: [ postLoadDoIt := super postLoadDoIt ]
+  ^ postLoadDoIt ifNil: [ super postLoadDoIt ]

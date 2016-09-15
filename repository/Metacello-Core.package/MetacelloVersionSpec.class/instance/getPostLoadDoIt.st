@@ -1,3 +1,3 @@
 accessing
 getPostLoadDoIt
-  ^ self postLoadDoIt value
+  ^ postLoadDoIt

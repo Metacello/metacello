@@ -1,3 +1,3 @@
 querying
 getPostLoadDoIt
-  ^ self postLoadDoIt value
+  ^ postLoadDoIt
