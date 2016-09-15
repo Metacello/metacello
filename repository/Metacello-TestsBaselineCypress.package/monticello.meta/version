@@ -1,0 +1,1 @@
+(name 'Metacello-TestsBaselineCypress-dkh.1' message 'gearing up to create pure baseline/filetree tests that can be shared between a Monticello Filetree reader and a Cypress FileTree reader ... resources are there for populating the "repository"' id '79f3ad40-231b-4bd7-8b33-93d2b261658f' date '09/15/2016' time '16:02:24' author 'dkh' ancestors () stepChildren ())

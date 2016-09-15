@@ -1,0 +1,14 @@
+{
+	"category" : "Metacello-TestsBaselineMonticello",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MetacelloMonticelloBaselineTests",
+	"pools" : [
+		 ],
+	"super" : "MetacelloAbstractBaselineTests",
+	"type" : "normal" }

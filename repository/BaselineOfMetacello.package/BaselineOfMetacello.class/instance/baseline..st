@@ -55,6 +55,10 @@ baseline: spec
           with: [ spec requires: #('Metacello-MC') ];
         package: 'Metacello-TestsCore'
           with: [ spec requires: #('Metacello-MC') ];
+        package: 'Metacello-TestsBaselineCypress'
+          with: [ spec requires: #('Metacello-TestsMCCore') ];
+        package: 'Metacello-TestsBaselineMonticello'
+          with: [ spec requires: #('Metacello-TestsMCCore') ];
         package: 'Metacello-TestsMCResources'
           with: [ 
               spec
@@ -114,7 +118,7 @@ baseline: spec
         group: 'TravisCI' with: #('TravisCI_1' 'TravisCI_2' 'TravisCI_3');
         group: 'Tests'
           with:
-            #('batch' 'Metacello-TestsCore' 'Metacello-TestsTutorial' 'Metacello-TestsMCA' 'Metacello-TestsMCB' 'Metacello-TestsReference' 'Metacello-TestsMCCore' 'Metacello-TestsCypress' 'Metacello-TestsMonticelloB');
+            #('batch' 'Metacello-TestsCore' 'Metacello-TestsTutorial' 'Metacello-TestsMCA' 'Metacello-TestsMCB' 'Metacello-TestsReference' 'Metacello-TestsMCCore' 'Metacello-TestsCypress' 'Metacello-TestsMonticelloB' 'Metacello-TestsBaselineCypress' 'Metacello-TestsBaselineMonticello');
         yourself ].
   spec
     for: #'squeakCommon'
