@@ -1,6 +1,6 @@
 {
 	"class" : {
-		 },
+		"isAbstract" : "dkh 09/14/2016 18:20" },
 	"instance" : {
 		"testAddGroupA" : "dkh 5/4/2012 20:37:12",
 		"testAddGroupB" : "dkh 5/4/2012 20:37:12",

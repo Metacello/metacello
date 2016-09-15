@@ -1,6 +1,6 @@
 {
 	"class" : {
-		 },
+		"isAbstract" : "dkh 09/14/2016 18:21" },
 	"instance" : {
 		"testBaselineProjectReferenceMergeSpec" : "dkh 09/14/2016 14:56",
 		"testBaselineProjectReferenceSpec" : "dkh 09/14/2016 14:56" } }

@@ -1,6 +1,6 @@
 {
 	"class" : {
-		 },
+		"isAbstract" : "dkh 09/14/2016 18:21" },
 	"instance" : {
 		"testGroupMergeSpec" : "dkh 09/05/2016 14:19",
 		"testGroupSpec" : "dkh 5/4/2012 20:37:12" } }
