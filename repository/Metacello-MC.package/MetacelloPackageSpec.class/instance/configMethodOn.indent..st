@@ -7,7 +7,8 @@ configMethodOn: aStream indent: indent
   hasPostLoadDoIt := self getPostLoadDoIt ~~ nil.
   hasRequiresOrIncludesOrAnswers := (self requires isEmpty
     and: [ self includes isEmpty and: [ self answers isEmpty ] ]) not.
-  indent timesRepeat: [ aStream tab ] aStream nextPutAll: 'spec '.
+  indent timesRepeat: [ aStream tab ].
+  aStream nextPutAll: 'spec '.
   hasFile | hasRepositories | hasPreLoadDoIt | hasPostLoadDoIt
     | hasRequiresOrIncludesOrAnswers
     ifTrue: [ 
