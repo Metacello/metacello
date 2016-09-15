@@ -1,5 +1,5 @@
 {
-	"category" : "Metacello-TestsMC",
+	"category" : "Metacello-TestsMCCommon",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
@@ -7,8 +7,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "MetacelloExternalScriptingTestCase",
+	"name" : "MetacelloBasicScriptingTestCase",
 	"pools" : [
 		 ],
-	"super" : "MetacelloBasicScriptingTestCase",
+	"super" : "MetacelloScriptingTestCase",
 	"type" : "normal" }
