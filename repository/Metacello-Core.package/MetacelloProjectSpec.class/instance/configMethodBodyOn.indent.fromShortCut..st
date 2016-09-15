@@ -48,12 +48,12 @@ configMethodBodyOn: aStream indent: indent fromShortCut: fromShortCut
             tab: indent + 1 ]
         ifFalse: [ aStream space ].
       aStream nextPutAll: 'preLoadDoIt: '.
-      (MetacelloPlatform current isSymbol: self preLoadDoIt value)
+      (MetacelloPlatform current isSymbol: self preLoadDoIt)
         ifTrue: [ 
           aStream
             nextPut: $#;
-            nextPutAll: self preLoadDoIt value asString printString ]
-        ifFalse: [ aStream nextPutAll: self preLoadDoIt value asString ].
+            nextPutAll: self preLoadDoIt asString printString ]
+        ifFalse: [ aStream nextPutAll: self preLoadDoIt asString ].
       hasPostLoadDoIt | hasOperator | hasProjectPackage | hasLoads
         ifTrue: [ aStream nextPut: $; ] ].
   hasPostLoadDoIt
