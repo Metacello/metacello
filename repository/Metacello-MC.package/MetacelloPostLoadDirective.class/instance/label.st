@@ -1,3 +1,4 @@
 printing
 label
-  ^ super label , ' >> ' , self spec postLoadDoIt asString
+
+	^super label, ' >> ', self spec postLoadDoIt value asString

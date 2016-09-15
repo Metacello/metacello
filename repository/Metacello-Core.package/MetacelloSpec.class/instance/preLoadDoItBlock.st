@@ -1,3 +1,4 @@
 doits
 preLoadDoItBlock
-  ^ self doItBlock: self preLoadDoIt
+
+	^self doItBlock: self preLoadDoIt value

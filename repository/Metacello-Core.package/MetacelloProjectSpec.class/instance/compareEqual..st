@@ -10,5 +10,5 @@ compareEqual: aMetacelloProjectSpec
             and: [ 
               self loads = aMetacelloProjectSpec loads
                 and: [ 
-                  self preLoadDoIt == aMetacelloProjectSpec preLoadDoIt
-                    and: [ self postLoadDoIt == aMetacelloProjectSpec postLoadDoIt ] ] ] ] ]
+                  self preLoadDoIt value == aMetacelloProjectSpec preLoadDoIt value
+                    and: [ self postLoadDoIt value == aMetacelloProjectSpec postLoadDoIt value ] ] ] ] ]

@@ -1,4 +1,4 @@
 actions
 addTo: aLoaderDirective
-  spec postLoadDoIt ~~ nil
-    ifTrue: [ aLoaderDirective add: self ]
+
+	spec postLoadDoIt value ~~ nil ifTrue: [ aLoaderDirective add: self ]

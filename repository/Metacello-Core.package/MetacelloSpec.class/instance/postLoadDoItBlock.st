@@ -1,3 +1,4 @@
 doits
 postLoadDoItBlock
-  ^ self doItBlock: self postLoadDoIt
+
+	^self doItBlock: self postLoadDoIt value

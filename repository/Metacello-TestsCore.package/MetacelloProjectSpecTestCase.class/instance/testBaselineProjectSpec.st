@@ -14,8 +14,8 @@ testBaselineProjectSpec
   self assert: project className = 'BaselineOfProject'.
   self assert: project versionString = nil.	"characteristic of a nameless project spec ... tis cool"
   self assert: project loads = #('MyPackage' 'MyTests').
-  self assert: project preLoadDoIt == #'preLoadDoIt'.
-  self assert: project postLoadDoIt == #'postLoadDoIt'.
+  self assert: project preLoadDoIt value == #'preLoadDoIt'.
+  self assert: project postLoadDoIt value == #'postLoadDoIt'.
   self should: [ project includes: #() ] raise: Error.
   self should: [ project requires: #() ] raise: Error.
   self should: [ project answers: #() ] raise: Error.

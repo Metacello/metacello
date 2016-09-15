@@ -19,5 +19,5 @@ testBaselineProjectMergeSpec
   self assert: project name = 'Project'.
   self assert: project className = 'BaselineOfProjectB'.
   self assert: project loads = #('MyPackage' 'MyTests').
-  self assert: project preLoadDoIt == #'preLoadDoItB'.
-  self assert: project postLoadDoIt == #'postLoadDoItB'
+  self assert: project preLoadDoIt value == #'preLoadDoItB'.
+  self assert: project postLoadDoIt value == #'postLoadDoItB'
