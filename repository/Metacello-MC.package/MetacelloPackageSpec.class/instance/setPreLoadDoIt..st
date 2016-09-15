@@ -1,4 +1,3 @@
 accessing
-setPreLoadDoIt: aSymbol
-
-	preLoadDoIt := aSymbol
+setPreLoadDoIt: aSymbolOrValueHolderSpec
+  preLoadDoIt := aSymbolOrValueHolderSpec

@@ -1,5 +1,7 @@
 doits
 postLoadDoIt
-	"noop unless non-nil value returned"
+  "noop unless non-nil value returned"
 
-	^nil
+  ^ self project valueHolderSpec
+    value: self;
+    yourself

@@ -1,4 +1,3 @@
 querying
 preLoadDoIt
-
-	^preLoadDoIt
+  ^ preLoadDoIt ifNil: [ preLoadDoIt := super preLoadDoIt ]

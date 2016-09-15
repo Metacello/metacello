@@ -1,4 +1,3 @@
 accessing
-setPostLoadDoIt: aSymbol
-
-	postLoadDoIt := aSymbol
+setPostLoadDoIt: aSymbolOrValueHolderSpec
+  postLoadDoIt := aSymbolOrValueHolderSpec

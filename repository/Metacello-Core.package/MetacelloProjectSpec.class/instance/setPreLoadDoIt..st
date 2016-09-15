@@ -1,4 +1,4 @@
 accessing
-setPreLoadDoIt: aSymbol
-    self shouldBeMutable.
-    preLoadDoIt := aSymbol
+setPreLoadDoIt: aSymbolOrValueHolderSpec
+  self shouldBeMutable.
+  preLoadDoIt := aSymbolOrValueHolderSpec

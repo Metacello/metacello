@@ -1,4 +1,4 @@
 accessing
-setPostLoadDoIt: aSymbol
-    self shouldBeMutable.
-    postLoadDoIt := aSymbol
+setPostLoadDoIt: aSymbolOrValueHolderSpec
+  self shouldBeMutable.
+  postLoadDoIt := aSymbolOrValueHolderSpec
