@@ -1,3 +1,3 @@
 accessing
 getPreLoadDoIt
-	^preLoadDoIt
+  ^ self preLoadDoIt value

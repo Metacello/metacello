@@ -1,4 +1,3 @@
 querying
 getPreLoadDoIt
-
-	^preLoadDoIt
+  ^ self preLoadDoIt value
