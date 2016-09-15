@@ -1,3 +1,3 @@
 api spec callbacks
 projectForVersion: aString
-    self project: aString with: ''
+  self project: aString with: nil
