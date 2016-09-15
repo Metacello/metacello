@@ -6,8 +6,7 @@ configMethodValueOn: aStream for: spec selector: selector last: last indent: ind
   valuePrintString := (MetacelloPlatform current isSymbol: spec value)
     ifTrue: [ '#' , spec value asString printString ]
     ifFalse: [ spec value printString ].
-  aStream
-    tab: indent;
-    nextPutAll: 'spec ' , selector , ' ' , valuePrintString , '.'.
+  indent timesRepeat: [ aStream tab ].
+  aStream nextPutAll: 'spec ' , selector , ' ' , valuePrintString , '.'.
   last
     ifFalse: [ aStream cr ]

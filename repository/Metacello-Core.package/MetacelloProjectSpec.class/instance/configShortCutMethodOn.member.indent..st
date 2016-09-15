@@ -22,9 +22,8 @@ configShortCutMethodOn: aStream member: aMember indent: indent
           aStream
             nextPutAll: 'overrides: [';
             cr ].
-      aStream
-        tab: indent;
-        nextPutAll: 'spec'.
+      indent timesRepeat: [ aStream tab ].
+      aStream nextPutAll: 'spec'.
       self configMethodBodyOn: aStream indent: indent fromShortCut: true.
       aStream nextPutAll: ' ]'.
       ^ self ].

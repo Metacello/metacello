@@ -10,9 +10,8 @@ configMethodBodyOn: aStream hasName: hasName cascading: cascading indent: indent
     ifTrue: [ 
       hasName | hasIncludes | hasAnswers | hasCascading
         ifTrue: [ 
-          aStream
-            cr;
-            tab: indent ].
+          aStream cr.
+          indent timesRepeat: [ aStream tab ] ].
       aStream nextPutAll: 'requires: #('.
       self requires do: [ :str | aStream nextPutAll: str printString , ' ' ].
       hasIncludes | hasAnswers | hasCascading
@@ -22,9 +21,8 @@ configMethodBodyOn: aStream hasName: hasName cascading: cascading indent: indent
     ifTrue: [ 
       hasName | hasRequires | hasAnswers | hasCascading
         ifTrue: [ 
-          aStream
-            cr;
-            tab: indent ].
+          aStream cr.
+          indent timesRepeat: [ aStream tab ] ].
       aStream nextPutAll: 'includes: #('.
       self includes do: [ :str | aStream nextPutAll: str printString , ' ' ].
       hasAnswers | hasCascading
@@ -34,9 +32,8 @@ configMethodBodyOn: aStream hasName: hasName cascading: cascading indent: indent
     ifTrue: [ 
       hasName | hasRequires | hasIncludes | hasCascading
         ifTrue: [ 
-          aStream
-            cr;
-            tab: indent ].
+          aStream cr.
+          indent timesRepeat: [ aStream tab ] ].
       aStream nextPutAll: 'supplyingAnswers: #( '.
       self answers
         do: [ :ar | 

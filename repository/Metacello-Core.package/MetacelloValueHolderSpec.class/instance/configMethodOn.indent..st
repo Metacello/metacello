@@ -1,4 +1,4 @@
 printing
 configMethodOn: aStream indent: indent
-
-	aStream tab: indent; nextPutAll: 'spec value: ', self value printString
+  indent timesRepeat: [ aStream tab ].
+  aStream nextPutAll: 'spec value: ' , self value printString

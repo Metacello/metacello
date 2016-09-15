@@ -6,9 +6,9 @@ methodSource
   self
     methodSection: self
     pre: [ :methodSection :indent | 
+      strm cr.
+      indent timesRepeat: [ strm tab ].
       strm
-        cr;
-        tab: indent;
         nextPutAll: 'spec for: ' , methodSection attributePrintString , ' do: [';
         cr.
       methodSection versionSpec

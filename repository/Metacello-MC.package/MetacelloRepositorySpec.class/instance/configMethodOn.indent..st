@@ -1,7 +1,5 @@
 printing
 configMethodOn: aStream indent: indent
-
-	aStream 
-		tab: indent; 
-		nextPutAll: 'spec '.
-	self configMethodCascadeOn: aStream lastCascade: true
+  indent timesRepeat: [ aStream tab ].
+  aStream nextPutAll: 'spec '.
+  self configMethodCascadeOn: aStream lastCascade: true

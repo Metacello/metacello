@@ -5,9 +5,8 @@ configMethodOn: aStream for: aValue selector: selector cascading: cascading casc
     ifTrue: [ ^ self ].
   cascading
     ifTrue: [ 
-      aStream
-        cr;
-        tab: indent ].
+      aStream cr.
+      indent timesRepeat: [ aStream tab ] ].
   valuePrintString := (MetacelloPlatform current isSymbol: aValue value)
     ifTrue: [ '#' , aValue value asString printString ]
     ifFalse: [ aValue value printString ].

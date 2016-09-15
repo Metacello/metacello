@@ -13,9 +13,8 @@ configMethodBodyOn: aStream indent: indent fromShortCut: fromShortCut
     ifTrue: [ 
       hasVersionString | hasOperator | hasProjectPackage | hasLoads
         ifTrue: [ 
-          aStream
-            cr;
-            tab: indent + 1 ]
+          aStream cr.
+          indent + 1 timesRepeat: [ aStream tab ] ]
         ifFalse: [ aStream space ].
       aStream nextPutAll: 'className: ' , self className printString.
       hasVersionString | hasPreLoadDoIt | hasPostLoadDoIt | hasOperator
@@ -27,9 +26,8 @@ configMethodBodyOn: aStream indent: indent fromShortCut: fromShortCut
       hasClassName | hasOperator | hasProjectPackage | hasLoads | hasPreLoadDoIt
         | hasPostLoadDoIt
         ifTrue: [ 
-          aStream
-            cr;
-            tab: indent + 1 ]
+          aStream cr.
+          indent + 1 timesRepeat: [ aStream tab ] ]
         ifFalse: [ aStream space ].
       vs := self versionString.
       aStream nextPutAll: 'versionString: '.
@@ -43,9 +41,8 @@ configMethodBodyOn: aStream indent: indent fromShortCut: fromShortCut
     ifTrue: [ 
       hasClassName | hasOperator | hasProjectPackage | hasLoads | hasPreLoadDoIt
         ifTrue: [ 
-          aStream
-            cr;
-            tab: indent + 1 ]
+          aStream cr.
+          indent + 1 timesRepeat: [ aStream tab ] ]
         ifFalse: [ aStream space ].
       aStream nextPutAll: 'preLoadDoIt: '.
       (MetacelloPlatform current isSymbol: self preLoadDoIt value)
@@ -60,9 +57,8 @@ configMethodBodyOn: aStream indent: indent fromShortCut: fromShortCut
     ifTrue: [ 
       hasClassName | hasOperator | hasProjectPackage | hasLoads | hasPostLoadDoIt
         ifTrue: [ 
-          aStream
-            cr;
-            tab: indent + 1 ]
+          aStream cr.
+          indent + 1 timesRepeat: [ aStream tab ] ]
         ifFalse: [ aStream space ].
       aStream nextPutAll: 'postLoadDoIt: '.
       (MetacelloPlatform current isSymbol: self postLoadDoIt value)
@@ -78,9 +74,8 @@ configMethodBodyOn: aStream indent: indent fromShortCut: fromShortCut
       hasClassName | hasVersionString | hasProjectPackage | hasLoads | hasPreLoadDoIt
         | hasPostLoadDoIt
         ifTrue: [ 
-          aStream
-            cr;
-            tab: indent + 1 ]
+          aStream cr.
+          indent + 1 timesRepeat: [ aStream tab ] ]
         ifFalse: [ aStream space ].
       aStream nextPutAll: 'operator: #' , self operator asString printString.
       hasProjectPackage | hasLoads
@@ -90,9 +85,8 @@ configMethodBodyOn: aStream indent: indent fromShortCut: fromShortCut
       hasClassName | hasVersionString | hasOperator | hasProjectPackage
         | hasPreLoadDoIt | hasPostLoadDoIt
         ifTrue: [ 
-          aStream
-            cr;
-            tab: indent + 1 ]
+          aStream cr.
+          indent + 1 timesRepeat: [ aStream tab ] ]
         ifFalse: [ aStream space ].
       aStream nextPutAll: 'loads: #('.
       self loads do: [ :str | aStream nextPutAll: str printString , ' ' ].
@@ -109,9 +103,8 @@ configMethodBodyOn: aStream indent: indent fromShortCut: fromShortCut
           hasClassName | hasVersionString | hasOperator | hasLoads | hasPreLoadDoIt
             | hasPostLoadDoIt
             ifTrue: [ 
-              aStream
-                cr;
-                tab: indent + 1 ]
+              aStream cr.
+              indent + 1 timesRepeat: [ aStream tab ] ]
             ifFalse: [ aStream space ].
           aStream nextPutAll: 'file: ' , self file printString.
           hasRepo
@@ -127,14 +120,12 @@ configMethodBodyOn: aStream indent: indent fromShortCut: fromShortCut
                   hasClassName | hasVersionString | hasOperator | hasLoads | hasPreLoadDoIt
                     | hasPostLoadDoIt | hasName
                     ifTrue: [ 
-                      aStream
-                        cr;
-                        tab: indent + 1 ]
+                      aStream cr.
+                      indent + 1 timesRepeat: [ aStream tab ] ]
                     ifFalse: [ aStream space ] ]
                 ifFalse: [ 
-                  aStream
-                    cr;
-                    tab: indent + 1 ].
+                  aStream cr.
+                  indent + 1 timesRepeat: [ aStream tab ] ].
               repos first configMethodCascadeOn: aStream lastCascade: true ]
             ifFalse: [ 
               aStream cr.
