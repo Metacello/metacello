@@ -12,7 +12,7 @@ testBaselineProjectSpec
     yourself.
   self assert: project name = 'Project'.
   self assert: project className = 'BaselineOfProject'.
-  self assert: project versionString = 'baseline'.
+  self assert: project versionString = nil.	"characteristic of a nameless project spec ... tis cool"
   self assert: project loads = #('MyPackage' 'MyTests').
   self assert: project preLoadDoIt value == #'preLoadDoIt'.
   self assert: project postLoadDoIt value == #'postLoadDoIt'.
