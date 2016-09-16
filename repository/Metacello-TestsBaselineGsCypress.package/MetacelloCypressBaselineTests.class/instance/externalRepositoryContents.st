@@ -1,4 +1,3 @@
 running
 externalRepositoryContents
-  ^ super externalRepositoryContents
-    , #('External-CoreX-dkh.1' 'BaselineOfExternalX-dkh.1')
+  ^ super externalRepositoryContents , #('External-CoreX' 'BaselineOfExternalX')

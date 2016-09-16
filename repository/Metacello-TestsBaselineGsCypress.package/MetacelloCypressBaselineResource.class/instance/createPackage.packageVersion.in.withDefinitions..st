@@ -14,4 +14,5 @@ createPackage: packageName packageVersion: packageVersion in: aRepository withDe
   package
     name: packageName , package packageExtension
     from: classDefinitions
-    classMap: classMap
+    classMap: classMap.
+  self externalPackages at: packageName put: package
