@@ -1,4 +1,4 @@
-file system
+*metacello-monticello-platform
 recursiveDelete: aDirectory
 	"delete this directory and all children of it"
 

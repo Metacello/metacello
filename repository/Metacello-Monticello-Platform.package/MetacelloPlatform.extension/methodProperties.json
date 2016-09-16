@@ -4,6 +4,10 @@
 	"instance" : {
 		"cleanUpRepositoryGroupRemoving:" : "dkh 09/06/2016 15:55",
 		"defaultCacheRepository" : "dkh 09/05/2016 15:58",
+		"defaultDirectory" : "ChristopheDemarey 4/29/2013 14:17",
+		"directoryExists:" : "dkh 09/16/2016 10:17",
+		"directoryFromPath:relativeTo:" : "ChristopheDemarey 4/29/2013 15:11",
+		"ensureDirectoryExists:" : "ChristopheDemarey 4/29/2013 15:17",
 		"findTokens:in:" : "dkh 09/12/2016 11:24",
 		"goferClass" : "dkh 09/06/2016 16:18",
 		"goferLoadBlockFor:resolvedReference:" : "dkh 09/05/2016 15:59",
@@ -19,6 +23,7 @@
 		"metacelloLoadPackages:from:" : "dkh 09/07/2016 11:21",
 		"metacelloUnloadPackages:" : "dkh 09/06/2016 15:59",
 		"newVersionForWorkingCopy:" : "dkh 09/23/2013 13:59",
+		"recursiveDelete:" : "ChristopheDemarey 5/27/2013 17:42",
 		"repositoryFromUrl:" : "dkh 09/06/2016 14:55",
 		"sort:with:" : "dkh 09/12/2016 13:46",
 		"workingCopyFor:ifNone:" : "dkh 09/06/2016 11:28",

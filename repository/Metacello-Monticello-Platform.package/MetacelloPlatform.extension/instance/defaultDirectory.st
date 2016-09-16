@@ -1,4 +1,4 @@
-file system
+*metacello-monticello-platform
 defaultDirectory
 	"Get the image default directory"
 	

@@ -1,4 +1,4 @@
-file system
+*metacello-monticello-platform
 ensureDirectoryExists: aDirectoryHandle
 	"Ensure the directory exists."
 
