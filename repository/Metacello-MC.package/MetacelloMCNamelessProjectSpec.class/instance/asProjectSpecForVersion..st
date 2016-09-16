@@ -9,5 +9,4 @@ asProjectSpecForVersion: vrsn
   spec := proj configurationOfProjectSpecClass for: proj.
   self copyForScriptingInto: spec.
   spec loader: self loader.
-  self assert: (self className beginsWith: 'BaselineOf') not.
   ^ spec

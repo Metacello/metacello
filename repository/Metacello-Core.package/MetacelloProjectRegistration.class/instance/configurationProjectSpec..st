@@ -7,5 +7,6 @@ configurationProjectSpec: anObject
 
   self shouldBeMutable.
   baselineProjectSpec := nil.
-  self assert: anObject isConfigurationOfProjectSpec.
+  anObject isConfigurationOfProjectSpec
+    ifFalse: [ self error: 'Expected a configuration' ].
   configurationProjectSpec := anObject

@@ -1,6 +1,7 @@
 accessing
 projectSpec
-	^ baselineProjectSpec
-		ifNil: [ 
-			self assert: configurationProjectSpec notNil.
-			configurationProjectSpec ]
+  ^ baselineProjectSpec
+    ifNil: [ 
+      configurationProjectSpec notNil
+        ifFalse: [ self error: 'Project spec unexpectedly nil.' ].
+      configurationProjectSpec ]
