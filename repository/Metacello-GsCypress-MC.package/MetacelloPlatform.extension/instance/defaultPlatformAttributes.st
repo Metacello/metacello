@@ -1,3 +1,3 @@
-*metacello-monticello-mc
+*Metacello-GsCypress-MC
 defaultPlatformAttributes
    ^ #(#'gemstone')
