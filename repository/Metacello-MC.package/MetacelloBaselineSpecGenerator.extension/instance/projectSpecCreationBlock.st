@@ -1,3 +1,3 @@
 *metacello-mc
 projectSpecCreationBlock
-    ^ [ :projectName | {(MetacelloMCBaselineProject new baselineOfProjectSpec name: projectName)} ]
+  ^ [ :projectName | {(MetacelloMCBaselineProject new baselineOfProjectSpec name: projectName)} ]

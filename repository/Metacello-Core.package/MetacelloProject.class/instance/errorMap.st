@@ -1,3 +1,4 @@
 accessing
 errorMap
-	^ errorMap
+  errorMap ifNil: [ errorMap := Dictionary new ].
+  ^ errorMap

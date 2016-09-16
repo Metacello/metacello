@@ -1,3 +1,3 @@
 merging
 mergeSpec: anotherSpec
-    ^ super mergeSpec: anotherSpec asBaselineProjectSpec
+  ^ super mergeSpec: anotherSpec asBaselineProjectSpec

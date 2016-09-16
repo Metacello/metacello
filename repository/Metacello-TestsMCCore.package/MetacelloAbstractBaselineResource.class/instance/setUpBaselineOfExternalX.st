@@ -22,7 +22,7 @@ setUpBaselineOfExternalX
     classIsMeta: false
     selector: 'projectClass'
     category: 'cat'
-    source: self sourceCodeForBaselineProjectClass)}.
+    source: self sourceCodeForCypressBaselineProjectClass)}.
   ^ self
     createPackage: basePackageName
     packageVersion: packageVersion

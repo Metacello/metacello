@@ -1,0 +1,3 @@
+scripting
+asCypressBaselineProject
+  ^ self

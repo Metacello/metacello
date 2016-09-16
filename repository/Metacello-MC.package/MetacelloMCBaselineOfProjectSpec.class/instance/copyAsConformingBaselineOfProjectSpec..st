@@ -1,0 +1,3 @@
+scripting
+copyAsConformingBaselineOfProjectSpec: aProjectSpec
+  ^ self
