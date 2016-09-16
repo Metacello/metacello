@@ -3,6 +3,7 @@
 		"isAbstract" : "dkh 09/15/2016 16:56",
 		"reset" : "dkh 09/15/2016 16:59" },
 	"instance" : {
+		"clearPackageCache" : "dkh 09/16/2016 06:47",
 		"createClassDefinitionFor:superclassName:category:instVarNames:comment:" : "dkh 09/15/2016 17:01",
 		"createMethodDefinitionFor:classIsMeta:selector:category:source:" : "dkh 09/15/2016 17:03",
 		"createPackage:packageVersion:in:withDefinitions:" : "dkh 09/15/2016 17:12",

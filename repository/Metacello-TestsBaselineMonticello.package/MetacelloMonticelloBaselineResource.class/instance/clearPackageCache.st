@@ -1,0 +1,3 @@
+repository setup
+clearPackageCache
+  MetacelloPlatform current clearPackageCache

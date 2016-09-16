@@ -1,7 +1,7 @@
 running
 setUp
   super setUp.
-  MetacelloPlatform current clearPackageCache.
+  self resourceClass current clearPackageCache.
   self setUpRepositories.
   self setUpRepositoryContents.
   registry := MetacelloProjectRegistration registry.
