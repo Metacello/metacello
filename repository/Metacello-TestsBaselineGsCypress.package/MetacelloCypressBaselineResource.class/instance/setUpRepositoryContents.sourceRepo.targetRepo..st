@@ -3,4 +3,5 @@ setUpRepositoryContents: packageList sourceRepo: packageStructureMap targetRepo:
   packageList
     do: [ :packageName | 
       | packageStructure |
-      packageStructure := packageStructureMap at: packageName ]
+      packageStructure := packageStructureMap at: packageName.
+      targetRepo writePackageStructure: packageStructure ]
