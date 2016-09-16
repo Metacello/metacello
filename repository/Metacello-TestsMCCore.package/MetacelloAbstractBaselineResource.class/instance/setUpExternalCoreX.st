@@ -3,8 +3,8 @@ setUpExternalCoreX
   "self reset"
 
   | basePackageName className definitionArray packageVersion |
-  basePackageName := #'External-CoreX'.
-  className := #'ExternalCoreX'.
+  basePackageName := 'External-CoreX'.
+  className := 'ExternalCoreX'.
   packageVersion := '-dkh.1'.
   definitionArray := {(self
     createClassDefinitionFor: className

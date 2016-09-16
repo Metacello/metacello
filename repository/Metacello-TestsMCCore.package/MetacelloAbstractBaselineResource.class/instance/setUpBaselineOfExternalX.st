@@ -3,11 +3,11 @@ setUpBaselineOfExternalX
   "self reset"
 
   | className basePackageName definitionArray packageVersion |
-  className := basePackageName := #'BaselineOfExternalX'.
+  className := basePackageName := 'BaselineOfExternalX'.
   packageVersion := '-dkh.1'.
   definitionArray := {(self
     createClassDefinitionFor: className
-    superclassName: #'BaselineOf'
+    superclassName: 'BaselineOf'
     category: basePackageName
     instVarNames: #()
     comment: '').
