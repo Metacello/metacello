@@ -1,0 +1,4 @@
+private
+sourceCodeForCypressBaselineProjectClass
+  ^ 'projectClass
+  ^ MetacelloCypressBaselineProject'

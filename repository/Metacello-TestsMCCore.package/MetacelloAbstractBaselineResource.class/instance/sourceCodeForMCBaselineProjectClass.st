@@ -1,0 +1,4 @@
+private
+sourceCodeForMCBaselineProjectClass
+  ^ 'projectClass
+  ^ MetacelloMCBaselineProject'

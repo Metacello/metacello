@@ -1,0 +1,3 @@
+private
+sourceCodeForBaselineProjectClass
+  ^ self sourceCodeForMCBaselineProjectClass

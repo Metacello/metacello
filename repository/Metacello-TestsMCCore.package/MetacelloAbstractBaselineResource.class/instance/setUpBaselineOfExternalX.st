@@ -16,7 +16,13 @@ setUpBaselineOfExternalX
     classIsMeta: false
     selector: 'externalBaselineX:'
     category: 'cat'
-    source: (self sourceCodeAt: #'externalBaselineX:'))}.
+    source: (self sourceCodeAt: #'externalBaselineX:')).
+  (self
+    createMethodDefinitionFor: className
+    classIsMeta: false
+    selector: 'projectClass'
+    category: 'cat'
+    source: self sourceCodeForBaselineProjectClass)}.
   ^ self
     createPackage: basePackageName
     packageVersion: packageVersion

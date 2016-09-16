@@ -8,5 +8,6 @@
 		"createPackage:packageVersion:in:withDefinitions:" : "dkh 09/15/2016 17:13",
 		"setUpRepositories" : "dkh 09/16/2016 04:48",
 		"setUpRepositoryContents:sourceRepo:targetRepo:" : "dkh 09/16/2016 04:51",
+		"sourceCodeForBaselineProjectClass" : "dkh 09/16/2016 11:43",
 		"teardownRepositories:" : "dkh 09/16/2016 05:08",
 		"unloadPackages:" : "dkh 09/16/2016 05:01" } }

@@ -7,4 +7,5 @@
 		"createMethodDefinitionFor:classIsMeta:selector:category:source:" : "dkh 09/16/2016 04:31",
 		"createPackage:packageVersion:in:withDefinitions:" : "dkh 09/16/2016 10:42",
 		"setUpRepositories" : "dkh 09/16/2016 04:48",
-		"setUpRepositoryContents:sourceRepo:targetRepo:" : "dkh 09/16/2016 06:41" } }
+		"setUpRepositoryContents:sourceRepo:targetRepo:" : "dkh 09/16/2016 06:41",
+		"sourceCodeForBaselineProjectClass" : "dkh 09/16/2016 11:43" } }
