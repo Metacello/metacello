@@ -6,4 +6,8 @@ setUpRepositoryContents
     sourceRepo: externalPackages
     targetRepo:
       (MetacelloPlatform current
-        repositoryFromUrl: ('filetree://' , externalDirectory fullName) asUrl)
+        repositoryFromUrl:
+          ('filetree://'
+            ,
+              (MetacelloPlatform current fullNameForDirectory: externalDirectory))
+            asUrl)
