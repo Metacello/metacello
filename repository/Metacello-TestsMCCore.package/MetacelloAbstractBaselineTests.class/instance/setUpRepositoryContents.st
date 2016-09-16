@@ -1,8 +1,9 @@
 running
 setUpRepositoryContents
-  self
+  externalPackages := self resourceClass current externalPackages.
+  self resourceClass current
     setUpRepositoryContents: self externalRepositoryContents
-    sourceRepo: self resourceClass current externalRepository
+    sourceRepo: externalPackages
     targetRepo:
       (MetacelloPlatform current
         repositoryFromUrl: ('filetree://' , externalDirectory fullName) asUrl)

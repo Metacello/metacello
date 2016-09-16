@@ -8,10 +8,13 @@
 		"createPackage:packageVersion:in:withDefinitions:" : "dkh 09/15/2016 17:12",
 		"externalAuthorName" : "dkh 09/15/2016 16:51",
 		"externalBaselineX:" : "dkh 09/15/2016 16:42",
-		"externalRepository" : "dkh 09/15/2016 16:21",
+		"externalPackages" : "dkh 09/16/2016 04:47",
 		"isExternal" : "dkh 09/15/2016 16:51",
 		"setUp" : "dkh 09/15/2016 16:49",
-		"setUpBaselineOfExternalX" : "dkh 09/15/2016 17:12",
-		"setUpExternalCoreX" : "dkh 09/15/2016 17:28",
+		"setUpBaselineOfExternalX" : "dkh 09/16/2016 04:48",
+		"setUpExternalCoreX" : "dkh 09/16/2016 04:48",
 		"setUpRepositories" : "dkh 09/15/2016 16:50",
-		"sourceCodeAt:" : "dkh 09/15/2016 16:55" } }
+		"setUpRepositoryContents:sourceRepo:targetRepo:" : "dkh 09/16/2016 04:51",
+		"sourceCodeAt:" : "dkh 09/15/2016 16:55",
+		"teardownRepositories:" : "dkh 09/16/2016 04:56",
+		"unloadPackages:" : "dkh 09/16/2016 05:00" } }

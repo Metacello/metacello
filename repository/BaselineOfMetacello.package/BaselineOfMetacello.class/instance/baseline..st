@@ -325,4 +325,14 @@ baseline: spec
           with: [ spec requires: 'Metacello-Platform' ];
         package: 'Metacello-Platform'
           with: [ spec includes: 'Metacello-GS3x-Platform' ];
+        yourself ].
+  spec
+    for: #'gs3.4.x'
+    do: [ 
+      spec
+        package: 'Metacello-TestsBaselineGsCypress'
+          with: [ spec requires: #('Metacello-TestsMCCore') ];
+        yourself.
+      spec
+        group: 'Tests' with: #('Metacello-TestsBaselineGsCypress');
         yourself ]

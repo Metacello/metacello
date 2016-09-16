@@ -1,4 +1,0 @@
-running
-tearDownRepositories
-  super tearDownRepositories.
-  MetacelloPlatform current cleanUpRepositoryGroupRemoving: externalRepository

@@ -1,3 +1,3 @@
 running
 tearDownPackages
-  MetacelloPlatform current metacelloUnloadPackages: self tearDownPackageList
+  self resourceClass current unloadPackages: self tearDownPackageList

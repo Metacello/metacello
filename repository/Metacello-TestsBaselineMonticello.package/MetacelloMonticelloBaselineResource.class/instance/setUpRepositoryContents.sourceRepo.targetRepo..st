@@ -1,4 +1,4 @@
-running
+repository setup
 setUpRepositoryContents: packageList sourceRepo: sourceRepo targetRepo: targetRepo
   packageList
     do: [ :package | 

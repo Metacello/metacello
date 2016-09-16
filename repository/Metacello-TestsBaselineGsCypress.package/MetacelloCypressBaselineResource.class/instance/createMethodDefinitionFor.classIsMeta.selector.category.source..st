@@ -1,8 +1,8 @@
 private
 createMethodDefinitionFor: className classIsMeta: isMeta selector: selector category: cat source: source
   ^ CypressMethodDefinition
-    className: className 
-    classIsMeta: isMeta 
+    className: className
+    classIsMeta: isMeta
     selector: selector
-    category: cat 
-    source: aSource
+    category: cat
+    source: source

@@ -27,5 +27,5 @@ setUpExternalCoreX
   ^ self
     createPackage: basePackageName
     packageVersion: packageVersion
-    in: externalRepository
+    in: externalPackages
     withDefinitions: definitionArray

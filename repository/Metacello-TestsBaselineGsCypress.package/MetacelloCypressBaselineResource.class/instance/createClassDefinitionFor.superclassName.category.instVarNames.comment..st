@@ -3,10 +3,10 @@ createClassDefinitionFor: className superclassName: superclassName category: bas
   ^ CypressClassDefinition
     name: className
     superclassName: superclassName
-    category: basePackageName 
-    instVarNames: instanceVarNames
-    classInstVarNames: #() 
-    classVarNames: #() 
-    poolDictionaryNames: #() 
-    comment: comment 
-    subclassType: '' 
+    category: basePackageName
+    instVarNames: instVarNames
+    classInstVarNames: #()
+    classVarNames: #()
+    poolDictionaryNames: #()
+    comment: comment
+    subclassType: ''
