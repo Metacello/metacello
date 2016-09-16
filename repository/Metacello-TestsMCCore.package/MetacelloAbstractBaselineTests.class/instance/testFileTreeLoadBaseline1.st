@@ -2,6 +2,9 @@ tests
 testFileTreeLoadBaseline1
   Metacello new
     baseline: 'ExternalX';
-    repository: 'filetree://' , externalDirectory fullName;
+    repository:
+        'filetree://'
+            ,
+              (MetacelloPlatform current fullNameForDirectory: externalDirectory);
     silently;
     load

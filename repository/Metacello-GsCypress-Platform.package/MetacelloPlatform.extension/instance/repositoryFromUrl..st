@@ -7,6 +7,6 @@ repositoryFromUrl: anUrl
     ifTrue: [ 
       locator last = $/ ifFalse: [ locator := locator, '/' ].
       ^ CypressAbstractRepository
-        onUrl: ('cypressfiletree:' , locator) asUrl
+        onUrl: ('cypress:' , locator) asUrl
         alias: 'Metacello repository' ].
   self error: 'Unknown repostiroy scheme: ' , scheme printString
