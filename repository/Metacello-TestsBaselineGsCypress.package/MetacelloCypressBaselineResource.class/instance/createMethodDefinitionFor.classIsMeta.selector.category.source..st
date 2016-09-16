@@ -1,9 +1,8 @@
 private
 createMethodDefinitionFor: className classIsMeta: isMeta selector: selector category: cat source: source
-  ^ MCMethodDefinition
-    className: className asString
-    classIsMeta: isMeta
+  ^ CypressMethodDefinition
+    className: className 
+    classIsMeta: isMeta 
     selector: selector
-    category: cat
-    timeStamp: ''
-    source: source
+    category: cat 
+    source: aSource
