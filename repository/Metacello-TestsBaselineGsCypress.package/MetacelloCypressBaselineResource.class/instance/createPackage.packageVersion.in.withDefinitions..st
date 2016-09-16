@@ -12,6 +12,6 @@ createPackage: packageName packageVersion: packageVersion in: aRepository withDe
             add: methodDefinition ] ].
   package := CypressPackageStructure new.
   package
-    named: packageName , package packageExtension
+    name: packageName , package packageExtension
     from: classDefinitions
     classMap: classMap
