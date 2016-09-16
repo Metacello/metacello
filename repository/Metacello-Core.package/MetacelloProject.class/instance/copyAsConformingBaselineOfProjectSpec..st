@@ -1,3 +1,5 @@
 scripting
 copyAsConformingBaselineOfProjectSpec: aProjectSpec
-  ^ self
+  "noop by default"
+
+  ^ aProjectSpec

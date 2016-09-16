@@ -1,6 +1,4 @@
 *Metacello-GsCypress-Platform
 createRepository: aRepositorySpec
 
-  ^ CypressAbstractRepository
-      onUrl: aRepositorySpec description asUrl
-      alias: 'MetacelloPlatform repo'.
+  ^self repositoryFromUrl: aRepositorySpec description asUrl.

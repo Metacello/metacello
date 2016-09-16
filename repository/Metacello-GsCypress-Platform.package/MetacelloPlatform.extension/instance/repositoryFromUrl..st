@@ -9,4 +9,4 @@ repositoryFromUrl: anUrl
       ^ CypressAbstractRepository
         onUrl: ('cypress:' , locator) asUrl
         alias: 'Metacello repository' ].
-  self error: 'Unknown repostiroy scheme: ' , scheme printString
+  self error: 'Unknown repository scheme: ' , scheme printString

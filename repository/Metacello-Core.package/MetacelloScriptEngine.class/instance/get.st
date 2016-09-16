@@ -16,7 +16,7 @@ get
       self
         root:
           (MetacelloPlatform current globalNamed: spec className asSymbol) project.
-      spec := spec copyAsConformingProjectSpec: self root projectSpec.
+      spec := spec copyAsConformingProjectSpec: self root.
       MetacelloProjectRegistration
         registrationForProjectSpec: spec
         ifAbsent: [ :new | new registerProject ]

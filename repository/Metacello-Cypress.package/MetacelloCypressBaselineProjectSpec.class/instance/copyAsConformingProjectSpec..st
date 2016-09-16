@@ -1,5 +1,5 @@
 scripting
-copyAsConformingProjectSpec: aProjectSpec
-  "no need for copy"
+copyAsConformingProjectSpec: aMetacelloProject
+  "Only needed when receiver is a MetacelloMCBaselineOfProjectSpec and aMetacelloProject is a MetacelloCypressBaselineProject"
 
   ^ self
