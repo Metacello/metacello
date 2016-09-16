@@ -5,18 +5,19 @@ get
   | spec projectPackage |
   MetacelloProjectRegistration
     copyRegistryRestoreOnErrorWhile: [ 
+      | rootProject |
       self setDefaultsAndValidateProjectSpec.
       spec := self projectSpec.
+      rootProject := (MetacelloPlatform current
+        globalNamed: spec className asSymbol) project.
+      spec := spec copyAsConformingProjectSpec: rootProject.
       projectPackage := spec projectPackage.
       projectPackage repositorySpecs
         do: [ :repoSpec | repoSpec createRepository flushForScriptGet ].
       self cacheRepository
         ifNotNil: [ :cacheRepository | projectPackage loader loaderPolicy cacheRepository: cacheRepository ].
       projectPackage load.
-      self
-        root:
-          (MetacelloPlatform current globalNamed: spec className asSymbol) project.
-      spec := spec copyAsConformingProjectSpec: self root.
+      self root: rootProject.
       MetacelloProjectRegistration
         registrationForProjectSpec: spec
         ifAbsent: [ :new | new registerProject ]
