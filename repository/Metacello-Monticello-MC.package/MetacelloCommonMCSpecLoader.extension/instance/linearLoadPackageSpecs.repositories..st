@@ -1,4 +1,4 @@
-actions
+*metacello-monticello-mc
 linearLoadPackageSpecs: packageSpecs repositories: repositories
   | gofer |
   gofer := MetacelloPlatform current metacelloGoferClass new.

@@ -2,7 +2,6 @@
 	"class" : {
 		 },
 	"instance" : {
-		"loadUsing:gofer:" : "dkh 6/8/2012 14:04:22",
 		"resolveToLoadableSpec" : "dkh 6/8/2012 14:04:22",
 		"resolveToPackagesIn:andProjects:into:visited:" : "dkh 10/01/2014 17:13",
 		"resolveToPackagesIn:andProjects:visited:" : "dkh 10/01/2014 17:13",
