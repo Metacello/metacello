@@ -7,4 +7,5 @@ testFileTreeLoadBaseline1
             ,
               (MetacelloPlatform current fullNameForDirectory: externalDirectory);
     silently;
+    get;
     load
