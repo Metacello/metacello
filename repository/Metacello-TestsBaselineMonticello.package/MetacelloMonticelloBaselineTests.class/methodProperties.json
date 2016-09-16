@@ -2,4 +2,8 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"externalRepositoryContents" : "dkh 09/15/2016 17:14",
+		"resourceClass" : "dkh 09/15/2016 16:20",
+		"setUpRepositoryContents:sourceRepo:targetRepo:" : "dkh 09/15/2016 16:15",
+		"tearDownPackageList" : "dkh 09/15/2016 17:15",
+		"tearDownRepositories" : "dkh 09/15/2016 16:26" } }

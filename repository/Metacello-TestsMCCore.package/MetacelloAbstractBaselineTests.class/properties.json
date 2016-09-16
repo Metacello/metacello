@@ -6,7 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"externalRepository" ],
+		"externalDirectory",
+		"externalRepository",
+		"registry" ],
 	"name" : "MetacelloAbstractBaselineTests",
 	"pools" : [
 		 ],

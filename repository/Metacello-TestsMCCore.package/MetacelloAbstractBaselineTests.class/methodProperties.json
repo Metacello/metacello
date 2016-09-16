@@ -1,5 +1,15 @@
 {
 	"class" : {
-		 },
+		"isAbstract" : "dkh 09/15/2016 16:19" },
 	"instance" : {
-		 } }
+		"externalRepositoryContents" : "dkh 09/15/2016 16:23",
+		"resourceClass" : "dkh 09/15/2016 16:19",
+		"setUp" : "dkh 09/15/2016 16:30",
+		"setUpRepositories" : "dkh 09/15/2016 16:31",
+		"setUpRepositoryContents" : "dkh 09/15/2016 16:31",
+		"setUpRepositoryContents:sourceRepo:targetRepo:" : "dkh 09/15/2016 16:17",
+		"tearDown" : "dkh 09/15/2016 16:28",
+		"tearDownPackageList" : "dkh 09/15/2016 16:24",
+		"tearDownPackages" : "dkh 09/15/2016 16:29",
+		"tearDownRepositories" : "dkh 09/15/2016 16:26",
+		"testFileTreeLoadBaseline1" : "dkh 09/15/2016 16:08" } }

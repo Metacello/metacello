@@ -2,4 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"createClassDefinitionFor:superclassName:category:instVarNames:comment:" : "dkh 09/15/2016 17:02",
+		"createMethodDefinitionFor:classIsMeta:selector:category:source:" : "dkh 09/15/2016 17:04",
+		"createPackage:packageVersion:in:withDefinitions:" : "dkh 09/15/2016 17:13",
+		"setUpRepositories" : "dkh 09/15/2016 16:50" } }
