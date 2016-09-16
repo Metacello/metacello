@@ -1,4 +1,4 @@
-repository creation
+*metacello-monticello-platform
 createRepository: aRepositorySpec
   | type |
   type := aRepositorySpec type.
