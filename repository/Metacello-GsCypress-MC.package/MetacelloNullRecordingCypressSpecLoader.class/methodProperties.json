@@ -1,0 +1,20 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"actionLabel" : "dkh 09/17/2016 07:00",
+		"afterLoads" : "dkh 09/17/2016 07:00",
+		"beforeLoads" : "dkh 09/17/2016 07:00",
+		"currentVersionInfoFor:" : "dkh 09/17/2016 07:00",
+		"doingLoads:" : "dkh 09/17/2016 07:00",
+		"ensureForDevelopment" : "dkh 09/17/2016 07:00",
+		"evalDoits" : "dkh 09/17/2016 07:00",
+		"evalDoits:" : "dkh 09/17/2016 07:00",
+		"linearLoadPackageSpec:gofer:" : "dkh 09/17/2016 07:00",
+		"loadedPackages" : "dkh 09/17/2016 07:00",
+		"loadedRepositories" : "dkh 09/17/2016 07:00",
+		"loadingSpecLoader" : "dkh 09/17/2016 07:00",
+		"packages" : "dkh 09/17/2016 07:00",
+		"postLoad:" : "dkh 09/17/2016 07:00",
+		"preLoad:" : "dkh 09/17/2016 07:00",
+		"recordingSpecLoader" : "dkh 09/17/2016 07:00" } }

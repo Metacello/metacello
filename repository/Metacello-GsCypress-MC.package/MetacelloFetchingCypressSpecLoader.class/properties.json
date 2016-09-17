@@ -1,0 +1,14 @@
+{
+	"category" : "Metacello-GsCypress-MC",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 09/17/2016 06:52",
+	"instvars" : [
+		 ],
+	"name" : "MetacelloFetchingCypressSpecLoader",
+	"pools" : [
+		 ],
+	"super" : "MetacelloCommonMCSpecLoader",
+	"type" : "normal" }
