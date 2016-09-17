@@ -1,4 +1,4 @@
-spec classes
+*metacello-monticello-mc
 defaultLoaderClass
 
 	^MetacelloLoadingMCSpecLoader
