@@ -1,4 +1,4 @@
-accessing
+*metacello-monticello-mc
 recordingSpecLoader
 
 	^(MetacelloNullRecordingMCSpecLoader on: self spec)
