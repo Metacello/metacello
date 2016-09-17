@@ -1,4 +1,4 @@
-private
+*metacello-monticello-mc
 retryingResolvePackageSpecReferences: packageSpec gofer: gofer
   | retryCount references repositoryError goferErrorClass |
   retryCount := 0.

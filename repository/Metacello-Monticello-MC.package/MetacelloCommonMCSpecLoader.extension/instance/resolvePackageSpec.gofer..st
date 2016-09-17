@@ -1,4 +1,4 @@
-private
+*metacello-monticello-mc
 resolvePackageSpec: packageSpec gofer: gofer
   | references resolvedReference mcVersion loadedVersionInfos |
   references := self

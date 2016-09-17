@@ -1,4 +1,4 @@
-private
+*metacello-monticello-mc
 resolvePackageSpecReferences: packageSpec gofer: gofer
   | versionReference references localGofer |
   localGofer := gofer.
