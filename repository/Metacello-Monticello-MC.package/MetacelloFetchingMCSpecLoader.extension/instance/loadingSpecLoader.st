@@ -1,4 +1,4 @@
-accessing
+*metacello-monticello-mc
 loadingSpecLoader
 
 	^(MetacelloLoadingMCSpecLoader on: self spec)
