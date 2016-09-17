@@ -3,7 +3,6 @@
 		 },
 	"instance" : {
 		"loadAtomicLoadDirective:gofer:" : "dkh 6/8/2012 14:04:22",
-		"loadExplicitLoadDirective:gofer:" : "dkh 6/8/2012 14:04:22",
 		"loadLinearLoadDirective:gofer:" : "dkh 6/8/2012 14:04:22",
 		"loadPackageDirective:gofer:" : "dkh 6/8/2012 14:04:22",
-		"loadWithPolicy:" : "dkh 6/8/2012 14:04:22" } }
+		"loadUsing:gofer:" : "dkh 6/8/2012 14:04:22" } }

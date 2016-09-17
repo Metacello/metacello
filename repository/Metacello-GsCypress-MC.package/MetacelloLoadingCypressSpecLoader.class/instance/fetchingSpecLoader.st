@@ -1,5 +1,5 @@
 accessing
 fetchingSpecLoader
-  (MetacelloFetchingMCSpecLoader on: self spec)
+  ^ (MetacelloFetchingMCSpecLoader on: self spec)
     loaderPolicy: self loaderPolicy copy;
     yourself

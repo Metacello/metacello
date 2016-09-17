@@ -1,4 +1,4 @@
-loading
+*metacello-monticello-mc
 loadPackageDirective: aPackageLoadDirective gofer: aGofer
 	"accumulate packages"
 	

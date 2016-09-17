@@ -1,4 +1,4 @@
-actions
+*metacello-monticello-mc
 loadLinearLoadDirective: aLoaderDirective gofer: aGofer
 
 	self finalizeLoad: aGofer.
