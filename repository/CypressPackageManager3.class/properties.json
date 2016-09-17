@@ -1,0 +1,14 @@
+{
+	"category" : "Metacello-GsCypress-MC",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"knownRepositories" ],
+	"name" : "CypressPackageManager3",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
