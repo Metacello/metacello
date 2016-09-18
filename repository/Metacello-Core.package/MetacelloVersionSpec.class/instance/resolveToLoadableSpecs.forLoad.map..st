@@ -1,9 +1,10 @@
 loading
 resolveToLoadableSpecs: required forLoad: forLoad map: packageMap
-  | reqd allReqd map newReqd spec |
+  | reqd allReqd map newReqd spec platform |
   reqd := required copy.
   allReqd := Set new.
   map := self packages map.
+  platform := MetacelloPlatform current.
   [ reqd isEmpty ]
     whileFalse: [ 
       newReqd := Set new.
@@ -18,7 +19,7 @@ resolveToLoadableSpecs: required forLoad: forLoad map: packageMap
               newReqd addAll: loadableSpec requires.
               newReqd addAll: loadableSpec includes ] ].
       allReqd addAll: reqd.
-      newReqd removeAllFoundIn: allReqd.
+      platform removeFrom: newReqd allFoundIn: allReqd.
       reqd := newReqd ].
   packageMap keys
     do: [ :pkgName | 
