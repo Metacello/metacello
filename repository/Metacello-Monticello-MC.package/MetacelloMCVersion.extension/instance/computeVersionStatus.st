@@ -1,4 +1,4 @@
-private
+*metacello-monticello-mc
 computeVersionStatus
 	"
 		#allLoadedToSpec - all projects and packages are loaded and match specification
