@@ -11,5 +11,6 @@ testFileTreeLoadBaseline1
   self assert: (platform globalNamed: 'BaselineOfExternalX') notNil.
   metacello load.
   self assert: (platform globalNamed: 'ExternalCoreX') notNil.
-  self deny: Object new isExternal.
-  self assert: Object new externalAuthorName = 'dkh'
+  self deny: Object isExternal.
+  self
+    assert: (platform globalNamed: 'ExternalCoreX') externalAuthorName = 'dkh'
