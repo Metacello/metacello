@@ -6,7 +6,7 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"defaultSymbolDictionaryName" ],
+		"knownRepositories", "defaultSymbolDictionaryName" ],
 	"name" : "CypressPackageManager3",
 	"pools" : [
 		 ],

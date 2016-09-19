@@ -1,3 +1,7 @@
 *Metacello-GsCypress-MC
 isPackageLoaded: aLoader
-  ^ CypressPackageManager3 isPackageLoaded: self file
+  
+  MetacelloPlatform current 
+    globalNamed: 'CypressPackageManager3'
+    ifPresent: [:cl | ^cl isPackageLoaded: self file ].
+  ^ false
