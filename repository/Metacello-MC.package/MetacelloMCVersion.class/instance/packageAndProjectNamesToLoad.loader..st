@@ -2,10 +2,11 @@ querying
 packageAndProjectNamesToLoad: defaultList loader: aLoader
   "Answer the list of packages and projects to be loaded: packages already loaded plust defaultList"
 
-  | loadedPackageNames projectMap loadedProjectNames list |
+  | loadedPackageNames projectMap loadedProjectNames |
   loadedPackageNames := ((self packages
     select: [ :pkg | pkg isPackageLoaded: aLoader ])
-    collect: [ :pkg | pkg name ]) asSet copy addAll: defaultList.
+    collect: [ :pkg | pkg name ]) asSet.
+  loadedPackageNames addAll: defaultList.
   projectMap := Dictionary new.
   self projects
     do: [ :prj | 
@@ -36,7 +37,7 @@ packageAndProjectNamesToLoad: defaultList loader: aLoader
               packageList := assoc value value.	"loadlist for project"
               (packageList difference: loaded) isEmpty
                 ifTrue: [ loadedProjectNames add: assoc key name ] ] ] ].
-  list := loadedPackageNames copy addAll: loadedProjectNames.
-  list isEmpty
+  loadedPackageNames addAll: loadedProjectNames.
+  loadedPackageNames isEmpty
     ifTrue: [ ^ self spec defaultPackageNames ].
-  ^ list
+  ^ loadedPackageNames
