@@ -1,11 +1,15 @@
 tests
 testFileTreeLoadBaseline1
-  Metacello new
+  | platform metacello |
+  platform := MetacelloPlatform current.
+  metacello := Metacello new
     baseline: 'ExternalX';
     repository:
-        'filetree://'
-            ,
-              (MetacelloPlatform current fullNameForDirectory: externalDirectory);
-    silently;
-    get;
-    load
+        'filetree://' , (platform fullNameForDirectory: externalDirectory);
+    silently.
+  metacello get.
+  self assert: (platform globalNamed: 'BaselineOfExternalX') notNil.
+  metacello load.
+  self assert: (platform globalNamed: 'ExternalCoreX') notNil.
+  self deny: Object new isExternal.
+  self assert: Object new externalAuthorName = 'dkh'
