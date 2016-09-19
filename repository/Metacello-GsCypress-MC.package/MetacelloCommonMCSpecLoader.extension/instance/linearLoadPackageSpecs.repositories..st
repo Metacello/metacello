@@ -4,12 +4,11 @@ linearLoadPackageSpecs: packageSpecs repositories: repositories
 
   | repo packageManager summary |
   repo := repositories at: 1.
-  packageManager := CypressPackageManager2 new.
+  packageManager := CypressPackageManager3 new.
   packageSpecs
             do: [ :spec | 
               summary := packageManager
-                loadPackageFrom: (CypressKnownPackageInformation named: spec file)
-                defaultSymbolDictionaryName: #'UserGlobals'
+                loadPackageFrom: (CypressPackageDefinition named: spec file)
                 inRepository: repo.
               summary isEmpty
                 ifFalse: [ self error: 'Could not load package named: ' , spec name printString ] ].
