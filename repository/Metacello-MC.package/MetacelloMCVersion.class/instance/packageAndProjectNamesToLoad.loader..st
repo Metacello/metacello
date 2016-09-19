@@ -5,7 +5,7 @@ packageAndProjectNamesToLoad: defaultList loader: aLoader
   | loadedPackageNames projectMap loadedProjectNames list |
   loadedPackageNames := ((self packages
     select: [ :pkg | pkg isPackageLoaded: aLoader ])
-    collect: [ :pkg | pkg name ]) asSet asArray , defaultList.
+    collect: [ :pkg | pkg name ]) asSet copy addAll: defaultList.
   projectMap := Dictionary new.
   self projects
     do: [ :prj | 
@@ -36,7 +36,7 @@ packageAndProjectNamesToLoad: defaultList loader: aLoader
               packageList := assoc value value.	"loadlist for project"
               (packageList difference: loaded) isEmpty
                 ifTrue: [ loadedProjectNames add: assoc key name ] ] ] ].
-  list := loadedPackageNames , loadedProjectNames.
+  list := loadedPackageNames copy addAll: loadedProjectNames.
   list isEmpty
     ifTrue: [ ^ self spec defaultPackageNames ].
   ^ list
