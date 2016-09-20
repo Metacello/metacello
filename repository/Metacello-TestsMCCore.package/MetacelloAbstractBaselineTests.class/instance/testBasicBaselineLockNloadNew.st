@@ -25,4 +25,5 @@ testBasicBaselineLockNloadNew
     baseline: 'ExternalX';
     list) first.
   self assert: projectSpec repositoryDescriptions asArray = {repoExternal}.
-  self assert: projectSpec registration locked
+  self assert: projectSpec registration locked.
+  self assert: Object externalPackageInfo = 'externalPackages'
