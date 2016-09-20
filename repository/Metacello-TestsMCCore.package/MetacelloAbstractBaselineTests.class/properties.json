@@ -6,6 +6,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
+		"alternateDirectory",
+		"alternatePackages",
 		"externalDirectory",
 		"externalPackages",
 		"registry" ],

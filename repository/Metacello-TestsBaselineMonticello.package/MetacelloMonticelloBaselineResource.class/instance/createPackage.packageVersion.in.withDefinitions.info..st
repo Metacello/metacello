@@ -1,5 +1,5 @@
 private
-createPackage: packageName packageVersion: packageVersion in: aRepository withDefinitions: definitionArray
+createPackage: packageName packageVersion: packageVersion in: aRepository withDefinitions: definitionArray info: infoArray
   | reference versionInfo |
   reference := GoferVersionReference name: packageName , packageVersion.
   aRepository
@@ -14,7 +14,7 @@ createPackage: packageName packageVersion: packageVersion in: aRepository withDe
             date: Date today
             time: Time now
             author: reference author
-            ancestors: #())
+            ancestors: infoArray)
         snapshot: (MCSnapshot fromDefinitions: definitionArray)
         dependencies: #()).
   ^ versionInfo

@@ -3,4 +3,5 @@ setUpRepositories
   "self reset"
 
   super setUpRepositories.
-  externalPackages := Dictionary new
+  externalPackages := Dictionary new.
+  alternatePackages := Dictionary new

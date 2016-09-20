@@ -6,5 +6,6 @@ setUp
   self
     setUpRepositories;
     setUpExternalCoreX;
-    setUpBaselineOfExternalX;
+    setUpBaselineOfExternalX_external;
+    setUpBaselineOfExternalX_alternate;
     yourself

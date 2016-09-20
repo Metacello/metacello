@@ -1,5 +1,5 @@
 private
-createPackage: packageName packageVersion: packageVersion in: aRepository withDefinitions: definitionArray
+createPackage: packageName packageVersion: packageVersion in: aRepository withDefinitions: definitionArray info: ignored
   | classDefinitions classMap package |
   classDefinitions := OrderedCollection new.
   classMap := Dictionary new.
@@ -15,4 +15,5 @@ createPackage: packageName packageVersion: packageVersion in: aRepository withDe
     name: packageName , package packageExtension
     from: classDefinitions
     classMap: classMap.
-  self externalPackages at: packageName put: package
+  self externalPackages at: packageName put: package.
+  ^ nil

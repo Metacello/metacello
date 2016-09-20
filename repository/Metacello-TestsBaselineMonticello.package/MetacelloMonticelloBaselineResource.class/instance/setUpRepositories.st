@@ -3,4 +3,5 @@ setUpRepositories
   "self reset"
 
   super setUpRepositories.
-  externalPackages := MCDictionaryRepository new
+  externalPackages := MCDictionaryRepository new.
+  alternatePackages := MCDictionaryRepository new

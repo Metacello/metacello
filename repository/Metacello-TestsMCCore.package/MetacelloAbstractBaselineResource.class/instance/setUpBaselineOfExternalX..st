@@ -1,5 +1,5 @@
 baseline pragma - external
-setUpBaselineOfExternalX
+setUpBaselineOfExternalX: packageRepo
   "self reset"
 
   | className basePackageName definitionArray packageVersion |
@@ -26,5 +26,5 @@ setUpBaselineOfExternalX
   ^ self
     createPackage: basePackageName
     packageVersion: packageVersion
-    in: externalPackages
+    in: packageRepo
     withDefinitions: definitionArray
