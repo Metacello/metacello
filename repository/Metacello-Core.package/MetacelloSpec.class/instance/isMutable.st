@@ -1,4 +1,3 @@
 mutability
 isMutable
-    mutable ifNil: [ ^ true ].
-    ^ mutable
+  ^ mutable ifNil: [ ^ true ]
