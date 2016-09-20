@@ -9,7 +9,7 @@ setUpRepositories
     ifTrue: [ MetacelloPlatform current recursiveDelete: externalDirectory ].
   MetacelloPlatform current ensureDirectoryExists: externalDirectory.
   alternateDirectory := MetacelloPlatform current
-    directoryFromPath: self externalPath
+    directoryFromPath: self alternatePath
     relativeTo: defaultDirectory.
   (MetacelloPlatform current directoryExists: alternateDirectory)
     ifTrue: [ MetacelloPlatform current recursiveDelete: alternateDirectory ].
