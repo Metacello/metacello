@@ -6,22 +6,22 @@ setUpExternalCoreX
   infoOrNil := self
     setUpExternalCoreX: externalPackages
     extraDefs:
-      (self
+      {(self
         createMethodDefinitionFor: 'Object'
         classIsMeta: true
         selector: 'externalPackageInfo'
         category: '*external-corex'
-        source: 'externalPackageInfo ^''externalPackages''')
+        source: 'externalPackageInfo ^''externalPackages''')}
     packageVersion: '-dkh.1'
     info: #().
   self
     setUpExternalCoreX: alternatePackages
     extraDefs:
-      (self
+      {(self
         createMethodDefinitionFor: 'Object'
         classIsMeta: true
         selector: 'externalPackageInfo'
         category: '*external-corex'
-        source: 'externalPackageInfo ^''alternatePackages''')
+        source: 'externalPackageInfo ^''alternatePackages''')}
     packageVersion: '-dkh.2'
     info: infoOrNil
