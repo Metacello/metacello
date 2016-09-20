@@ -2,4 +2,4 @@ baseline pragma - external
 setUpBaselineOfExternalX_alternate
   "self reset"
 
-  self setUpBaselineOfExternalX: alternatePackages
+  self setUpBaselineOfExternalX: alternatePackages packageVersion: '-dkh.2'

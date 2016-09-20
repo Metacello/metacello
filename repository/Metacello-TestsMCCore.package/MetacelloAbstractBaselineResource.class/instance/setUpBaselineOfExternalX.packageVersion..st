@@ -1,10 +1,9 @@
 baseline pragma - external
-setUpBaselineOfExternalX: packageRepo
+setUpBaselineOfExternalX: packageRepo packageVersion: packageVersion
   "self reset"
 
-  | className basePackageName definitionArray packageVersion |
+  | className basePackageName definitionArray |
   className := basePackageName := 'BaselineOfExternalX'.
-  packageVersion := '-dkh.1'.
   definitionArray := {(self
     createClassDefinitionFor: className
     superclassName: 'BaselineOf'
