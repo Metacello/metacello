@@ -12,7 +12,8 @@ setUpExternalCoreX
         selector: 'externalPackageInfo'
         category: '*external-corex'
         source: 'externalPackageInfo ^''externalPackages''')
-    packageVersion: '-dkh.1'.
+    packageVersion: '-dkh.1'
+    infor: #().
   self
     setUpExternalCoreX: alternatePackages
     extraDefs:
