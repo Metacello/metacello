@@ -14,7 +14,7 @@ setUpRepositoryContents
               (MetacelloPlatform current fullNameForDirectory: externalDirectory))
             asUrl).
   alternatePackages := self resourceClass current alternatePackages.
-  self
+  self resourceClass current
     setUpRepositoryContents: self alternateRepositoryContents
     sourceRepo: alternatePackages
     targetRepo:
