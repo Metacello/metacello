@@ -17,4 +17,4 @@ createPackage: packageName packageVersion: packageVersion in: aRepository withDe
             ancestors: infoArray)
         snapshot: (MCSnapshot fromDefinitions: definitionArray)
         dependencies: #()).
-  ^ versionInfo
+  ^ {versionInfo}

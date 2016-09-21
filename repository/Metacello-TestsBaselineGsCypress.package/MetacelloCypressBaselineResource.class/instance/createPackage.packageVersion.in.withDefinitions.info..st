@@ -16,4 +16,4 @@ createPackage: packageName packageVersion: packageVersion in: aRepository withDe
     from: classDefinitions
     classMap: classMap.
   aRepository at: packageName put: package.
-  ^ nil
+  ^ #()

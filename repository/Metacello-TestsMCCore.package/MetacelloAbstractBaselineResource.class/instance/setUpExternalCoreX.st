@@ -2,8 +2,8 @@ external core
 setUpExternalCoreX
   "self reset"
 
-  | infoOrNil |
-  infoOrNil := self
+  | infoArray |
+  infoArray := self
     setUpExternalCoreX: externalPackages
     extraDefs:
       {(self
@@ -24,4 +24,4 @@ setUpExternalCoreX
         category: '*external-corex'
         source: 'externalPackageInfo ^''alternatePackages''')}
     packageVersion: '-dkh.2'
-    info: infoOrNil
+    info: infoArray

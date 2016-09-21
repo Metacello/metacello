@@ -5,7 +5,7 @@
 		"clearPackageCache" : "dkh 09/16/2016 06:48",
 		"createClassDefinitionFor:superclassName:category:instVarNames:comment:" : "dkh 09/15/2016 17:02",
 		"createMethodDefinitionFor:classIsMeta:selector:category:source:" : "dkh 09/15/2016 17:04",
-		"createPackage:packageVersion:in:withDefinitions:info:" : "dkh 09/19/2016 17:04",
+		"createPackage:packageVersion:in:withDefinitions:info:" : "dkh 09/21/2016 09:27",
 		"setUpRepositories" : "dkh 09/19/2016 16:44",
 		"setUpRepositoryContents:sourceRepo:targetRepo:" : "dkh 09/16/2016 04:51",
 		"sourceCodeForBaselineProjectClass" : "dkh 09/16/2016 11:43",
