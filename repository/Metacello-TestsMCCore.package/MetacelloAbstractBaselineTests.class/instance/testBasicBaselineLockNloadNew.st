@@ -19,9 +19,8 @@ testBasicBaselineLockNloadNew
     on: Warning
     do: [ :ex | 
       sawWarning := true.
-      self halt.
       ex resume ].
-  self deny: sawWarning.
+  self assert: sawWarning.
   projectSpec := (Metacello registry
     baseline: 'ExternalX';
     list) first.

@@ -1,0 +1,3 @@
+handlers
+handleOnDownGrade: onDownGradeBlock onUpgrade: onUpgradeBlock onLockedProjectChange: onProjectChangeBlock
+  self subclassResponsibility

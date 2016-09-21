@@ -1,5 +1,5 @@
 actions api
-load: required onProjectDownGrade: onDownGradeBlock onProjectUpgrade: onUpgradeBlock
+load: required onProjectDownGrade: onDownGradeBlock onProjectUpgrade: onUpgradeBlock onLockedProjectChange: onProjectChangeBlock
   MetacelloProjectRegistration
     copyRegistryRestoreOnErrorWhile: [ 
       self
@@ -7,8 +7,14 @@ load: required onProjectDownGrade: onDownGradeBlock onProjectUpgrade: onUpgradeB
           | version loadedSpec |
           self setDefaultsAndValidateProjectSpec.
           [ loadedSpec := (self lookupProjectSpecFor: self projectSpec) copy ]
-            on: MetacelloAllowProjectDowngrade , MetacelloAllowProjectUpgrade
-            do: [ :ex | ex handleOnDownGrade: onDownGradeBlock onUpgrade: onUpgradeBlock ].
+            on:
+              MetacelloAllowProjectDowngrade , MetacelloAllowProjectUpgrade
+                , MetacelloAllowLockedProjectChange
+            do: [ :ex | 
+              ex
+                handleOnDownGrade: onDownGradeBlock
+                onUpgrade: onUpgradeBlock
+                onLockedProjectChange: onProjectChangeBlock ].
           version := loadedSpec versionForScriptEngine: self.
           self
             root:
