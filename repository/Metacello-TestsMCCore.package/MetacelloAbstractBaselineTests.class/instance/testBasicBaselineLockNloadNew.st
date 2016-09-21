@@ -19,11 +19,12 @@ testBasicBaselineLockNloadNew
     on: Warning
     do: [ :ex | 
       sawWarning := true.
+      self halt.
       ex resume ].
-  self assert: sawWarning.
+  self deny: sawWarning.
   projectSpec := (Metacello registry
     baseline: 'ExternalX';
     list) first.
-  self assert: projectSpec repositoryDescriptions asArray = {repoExternal}.
+  self assert: projectSpec repositoryDescriptions asArray = {repoAlternate}.
   self assert: projectSpec registration locked.
-  self assert: Object externalPackageInfo = 'externalPackages'
+  self assert: Object externalPackageInfo = 'alternatePackages'

@@ -20,9 +20,16 @@ testBasicBaselineLockNloadNew
     do: [ :ex | 
       sawWarning := true.
       ex resume ].
-  self assert: sawWarning.
+  self deny: sawWarning.
   projectSpec := (Metacello registry
     baseline: 'External';
     list) first.
   self assert: projectSpec registration currentVersionString = '29efb3d'.
-  self assert: projectSpec registration locked
+  self assert: projectSpec registration locked.
+  self
+    assert:
+      projectSpec repositoryDescriptions asArray
+        =
+          {('github://dalehenrich/external:'
+            , MetacelloScriptingResource externalCustomIssue185SHA
+            , '/repository')}
