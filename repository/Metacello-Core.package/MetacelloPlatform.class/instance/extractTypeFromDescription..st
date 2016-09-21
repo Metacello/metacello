@@ -14,4 +14,6 @@ extractTypeFromDescription: description
     ifTrue: [ ^ 'gitorious' ].
   (description beginsWith: 'bitbucket://')
     ifTrue: [ ^ 'bitbucket' ].
+  (description beginsWith: 'globalrepo:')
+    ifTrue: [ ^ 'globalrepo' ].
   ^ 'http'

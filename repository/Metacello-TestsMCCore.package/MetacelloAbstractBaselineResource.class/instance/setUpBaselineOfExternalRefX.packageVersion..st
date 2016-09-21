@@ -1,9 +1,9 @@
-baseline of ExternalX
-setUpBaselineOfExternalX: packageRepo packageVersion: packageVersion
+baseline of ExternalRefX
+setUpBaselineOfExternalRefX: packageRepo packageVersion: packageVersion
   "self reset"
 
   | className basePackageName definitionArray |
-  className := basePackageName := 'BaselineOfExternalX'.
+  className := basePackageName := 'BaselineOfExternalRefX'.
   definitionArray := {(self
     createClassDefinitionFor: className
     superclassName: 'BaselineOf'
@@ -13,9 +13,9 @@ setUpBaselineOfExternalX: packageRepo packageVersion: packageVersion
   (self
     createMethodDefinitionFor: className
     classIsMeta: false
-    selector: 'externalBaselineX:'
+    selector: 'externalBaselineRefX:'
     category: 'cat'
-    source: (self sourceCodeAt: #'externalBaselineX:')).
+    source: (self sourceCodeAt: #'externalBaselineRefX:')).
   (self
     createMethodDefinitionFor: className
     classIsMeta: false

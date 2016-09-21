@@ -1,4 +1,4 @@
 running
 alternateRepositoryContents
   ^ super alternateRepositoryContents
-    , #('External-CoreX' 'BaselineOfExternalX')
+    , #('External-CoreX' 'BaselineOfExternalX' 'BaselineOfExternalRefX')

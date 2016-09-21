@@ -8,4 +8,5 @@ setUp
     setUpExternalCoreX;
     setUpBaselineOfExternalX_external;
     setUpBaselineOfExternalX_alternate;
+    setUpBaselineOfExternalRefX_alternate;
     yourself

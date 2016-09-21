@@ -60,4 +60,10 @@ createRepository: aRepositorySpec
               ((self globalNamed: #'MCDictionaryRepository') new
                 description: description;
                 yourself) ] ].
+  type = 'globalrepo'
+    ifTrue: [ 
+      | url |
+      "primarily used for testing"
+      url := aRepositorySpec description asUrl.
+      ^ self repositoryFromUrl: (self globalNamed: url locator) asUrl ].
   ^ nil

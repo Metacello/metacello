@@ -3,7 +3,7 @@
 		 },
 	"instance" : {
 		"cleanUpRepositoryGroupRemoving:" : "dkh 09/06/2016 15:55",
-		"createRepository:" : "dkh 09/02/2016 06:12",
+		"createRepository:" : "dkh 09/21/2016 15:01",
 		"defaultCacheRepository" : "dkh 09/05/2016 15:58",
 		"defaultDirectory" : "ChristopheDemarey 4/29/2013 14:17",
 		"directoryExists:" : "dkh 09/16/2016 10:17",
@@ -27,7 +27,7 @@
 		"newVersionForWorkingCopy:" : "dkh 09/23/2013 13:59",
 		"recursiveDelete:" : "ChristopheDemarey 5/27/2013 17:42",
 		"removeFrom:allFoundIn:" : "dkh 09/18/2016 14:09",
-		"repositoryFromUrl:" : "dkh 09/06/2016 14:55",
+		"repositoryFromUrl:" : "dkh 09/21/2016 15:06",
 		"sort:with:" : "dkh 09/12/2016 13:46",
 		"workingCopyFor:ifNone:" : "dkh 09/06/2016 11:28",
 		"workingCopyNames" : "dkh 09/06/2016 12:46" } }

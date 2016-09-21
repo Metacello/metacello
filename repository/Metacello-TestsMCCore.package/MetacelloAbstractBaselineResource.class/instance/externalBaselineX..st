@@ -1,4 +1,4 @@
-baseline pragma - external
+baseline of ExternalX
 externalBaselineX: spec
   <baseline>
   spec description: 'MetacelloAbstractBaselineResource>>externalBaselineX:'.

@@ -1,4 +1,4 @@
-baseline pragma - external
+baseline of ExternalX
 setUpBaselineOfExternalX_alternate
   "self reset"
 

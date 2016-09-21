@@ -4,5 +4,8 @@ repositoryFromUrl: anUrl
   locator := anUrl locator.
   scheme := anUrl scheme.
   scheme = 'filetree'
-    ifTrue: [ ^ MCFileTreeRepository new directory: (ServerFileDirectory on: locator) ].
-  self error: 'Unknown repostiroy scheme: ' , scheme printString
+    ifTrue: [ 
+      ^ MCFileTreeRepository new
+        directory:
+          (ServerFileDirectory on: (locator copyFrom: 3 to: locator size)) ].
+  self error: 'Unknown repository scheme: ' , scheme printString
