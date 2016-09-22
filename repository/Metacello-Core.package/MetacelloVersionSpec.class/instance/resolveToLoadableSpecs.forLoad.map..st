@@ -1,6 +1,6 @@
 loading
 resolveToLoadableSpecs: required forLoad: forLoad map: packageMap
-  | reqd allReqd map newReqd spec platform |
+  | reqd allReqd map newReqd platform |
   reqd := required copy.
   allReqd := Set new.
   map := self packages map.
@@ -23,6 +23,8 @@ resolveToLoadableSpecs: required forLoad: forLoad map: packageMap
       reqd := newReqd ].
   packageMap keys
     do: [ :pkgName | 
-      (spec := (packageMap at: pkgName) resolveToLoadableSpec) == nil
+      | spec |
+      spec := (packageMap at: pkgName) resolveToLoadableSpec.
+      spec == nil
         ifTrue: [ packageMap removeKey: pkgName ]
-        ifFalse: [ packageMap at: pkgName put: (packageMap at: pkgName) resolveToLoadableSpec ] ]
+        ifFalse: [ packageMap at: pkgName put: spec ] ]
