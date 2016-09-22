@@ -2,4 +2,6 @@
 globalNamed: globalName put: anObject
   "which symbolDictionary should be used for storing Globals"
 
-  self halt.
+  "UserGlobals ?"
+
+  UserGlobals at: globalName asSymbol put: anObject
