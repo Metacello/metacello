@@ -1,4 +1,4 @@
-*Metacello-GsCypress-MC
+*metacello-mc
 cull: anArg
   ^ self numberArgs = 0
     ifTrue: [ self value ]
