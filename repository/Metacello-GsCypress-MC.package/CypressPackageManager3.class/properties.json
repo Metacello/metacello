@@ -4,9 +4,9 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
 	"instvars" : [
-		"knownRepositories", "defaultSymbolDictionaryName" ],
+		"knownRepositories",
+		"defaultSymbolDictionaryName" ],
 	"name" : "CypressPackageManager3",
 	"pools" : [
 		 ],
