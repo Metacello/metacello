@@ -1,3 +1,3 @@
 Updating
 addRepository: aRepository
-  self knownRepositories at: aRepository url put: aRepository
+  self knownRepositories at: aRepository url asString put: aRepository

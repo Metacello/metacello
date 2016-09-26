@@ -1,7 +1,9 @@
 private
 linearLoadPackageSpec: packageSpec packageManager: packageManager
-  | externalReference |
-  self halt.	"create a cypress external reference that specifies the packageSpec and repositorySpec combo to be loaded"
+  | externalReference references |
+  externalReference := self
+    resolvePackageSpecReference: packageSpec
+    packageManager: packageManager.	"look up package spec"
   self preLoad: packageSpec.
   (MetacelloDirective
     loadPackage: packageSpec
