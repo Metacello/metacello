@@ -1,12 +1,12 @@
 private
 linearLoadPackageSpec: packageSpec packageManager: packageManager
-  | externalReference references |
-  externalReference := self
+  | resolvedReference references |
+  resolvedReference := self
     resolvePackageSpecReference: packageSpec
     packageManager: packageManager.	"look up package spec"
   self preLoad: packageSpec.
   (MetacelloDirective
     loadPackage: packageSpec
-    externalReference: externalReference
+    resolvedReference: resolvedReference
     loader: self) addTo: self loadDirective.
   self postLoad: packageSpec
