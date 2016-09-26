@@ -5,8 +5,7 @@ repositoryFromUrl: anUrl
   scheme := anUrl scheme.
   scheme = 'filetree'
     ifTrue: [ 
-      locator last = $/ ifFalse: [ locator := locator, '/' ].
-      ^ CypressAbstractRepository
-        onUrl: ('cypress:' , locator) asUrl
-        alias: 'Metacello repository' ].
+      locator last = $/
+        ifFalse: [ locator := locator , '/' ].
+      ^ CypressAbstractRepository onUrl: ('cypress:' , locator) asUrl alias: '' ].
   self error: 'Unknown repository scheme: ' , scheme printString
