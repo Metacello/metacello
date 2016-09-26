@@ -1,9 +1,0 @@
-{
-	"class" : {
-		 },
-	"instance" : {
-		"defaultAction" : "dkh 7/18/2012 16:43",
-		"handleOnDownGrade:onUpgrade:" : "dkh 7/18/2012 16:46",
-		"handleOnDownGrade:onUpgrade:onLockedProjectChange:" : "dkh 09/21/2016 12:35",
-		"handleResolutionFor:" : "dkh 6/7/2012 15:50",
-		"operationString" : "dkh 07/29/2013 16:49" } }

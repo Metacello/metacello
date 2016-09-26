@@ -1,7 +1,7 @@
 utility
 configurationNameFrom: baseName
-    "Return the fully-qualified configuration class name."
+  "Return the fully-qualified configuration class name."
 
-    ^ (baseName indexOfSubCollection: 'ConfigurationOf') > 0
-        ifTrue: [ baseName ]
-        ifFalse: [ 'ConfigurationOf' , baseName ]
+  ^ (baseName indexOfSubCollection: 'ConfigurationOf' startingAt: 1) > 0
+    ifTrue: [ baseName ]
+    ifFalse: [ 'ConfigurationOf' , baseName ]
