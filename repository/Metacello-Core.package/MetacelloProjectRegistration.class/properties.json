@@ -4,6 +4,7 @@
 		 ],
 	"classvars" : [
 		"Registry" ],
+	"commentStamp" : "",
 	"instvars" : [
 		"projectName",
 		"configurationProjectSpec",

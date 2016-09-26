@@ -1,3 +1,3 @@
 running
 tearDownPackageList
-  ^ #('External-CoreX' 'BaselineOfExternalX')
+  ^ #('External-CoreX' 'BaselineOfExternalX' 'BaselineOfExternalRefX')

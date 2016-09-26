@@ -4,6 +4,7 @@
 		 ],
 	"classvars" : [
 		"Current" ],
+	"commentStamp" : "",
 	"instvars" : [
 		"bypassProgressBars",
 		"bypassGoferLoadUpdateCategories" ],

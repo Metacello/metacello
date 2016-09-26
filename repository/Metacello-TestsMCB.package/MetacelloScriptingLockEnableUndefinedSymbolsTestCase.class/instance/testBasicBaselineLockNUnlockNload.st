@@ -7,9 +7,19 @@ testBasicBaselineLockNUnlockNload
         'github://dalehenrich/external:' , MetacelloScriptingResource externalCustomSHA
             , '/repository';
     lock.
+  projectSpec := (Metacello registry
+    baseline: 'External';
+    list) first.
+  self assert: projectSpec registration locked.
   Metacello registry
     baseline: 'External';
     unlock.
+  projectSpec := (Metacello registry
+    baseline: 'External';
+    list) first.
+  self deny: projectSpec registration locked.
+  {projectSpec.
+  (projectSpec registration)} inspect.
   Metacello new
     baseline: 'External';
     repository:

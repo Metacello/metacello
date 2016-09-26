@@ -4,6 +4,7 @@
 		 ],
 	"classvars" : [
 		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"value" ],
 	"name" : "MetacelloValueHolderSpec",

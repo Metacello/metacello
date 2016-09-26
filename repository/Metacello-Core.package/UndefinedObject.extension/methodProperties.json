@@ -1,0 +1,15 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"asMetacelloSemanticVersionNumber" : "dkh 6/21/2012 18:06",
+		"asMetacelloVersionNumber" : "dkh 6/5/2012 19:01:24",
+		"metacelloRegistrationHash" : "dkh 6/5/2012 19:01:24",
+		"registrationsCompareEqual:" : "dkh 6/5/2012 19:01:24",
+		"setAuthorInMetacelloVersion:" : "dkh 6/5/2012 19:01:24",
+		"setBlessingInMetacelloVersion:" : "dkh 6/5/2012 19:01:24",
+		"setDescriptionInMetacelloVersion:" : "dkh 6/5/2012 19:01:24",
+		"setPostLoadDoItInMetacelloSpec:" : "dkh 6/5/2012 19:01:24",
+		"setPreLoadDoItInMetacelloSpec:" : "dkh 6/5/2012 19:01:24",
+		"setProject:withInMetacelloConfig:" : "dkh 6/5/2012 19:01:24",
+		"setTimestampInMetacelloVersion:" : "dkh 6/5/2012 19:01:24" } }

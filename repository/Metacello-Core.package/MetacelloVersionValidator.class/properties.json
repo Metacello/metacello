@@ -4,6 +4,7 @@
 		"reasonCodeDescriptions" ],
 	"classvars" : [
 		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"configurationClass",
 		"exludededValidations",

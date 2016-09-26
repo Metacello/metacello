@@ -1,0 +1,13 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"execute:against:" : "dkh 7/16/2012 10:51",
+		"setAuthorInMetacelloConfig:" : "dkh 6/5/2012 19:01:24",
+		"setBaseline:withInMetacelloConfig:" : "dkh 6/5/2012 19:01:24",
+		"setBlessingInMetacelloConfig:" : "dkh 6/5/2012 19:01:24",
+		"setConfiguration:withInMetacelloConfig:" : "dkh 6/5/2012 19:01:24",
+		"setDescriptionInMetacelloConfig:" : "dkh 6/5/2012 19:01:24",
+		"setPackage:withInMetacelloConfig:" : "dkh 6/5/2012 19:01:24",
+		"setProject:withInMetacelloConfig:" : "dkh 6/5/2012 19:01:24",
+		"setTimestampInMetacelloConfig:" : "dkh 6/5/2012 19:01:24" } }

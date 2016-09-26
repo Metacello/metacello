@@ -1,0 +1,13 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"answers:" : "dkh 6/5/2012 19:01:24",
+		"configMethodCascadeOn:member:last:indent:" : "dkh 6/5/2012 19:01:24",
+		"configMethodOn:indent:" : "dkh 09/15/2016 10:55",
+		"includeSpecNamesForPackageOrdering:" : "dkh 10/03/2014 18:45",
+		"projectDo:packageDo:groupDo:" : "dkh 6/5/2012 19:01:24",
+		"requiredSpecsForPackageOrdering:" : "dkh 10/03/2014 11:39",
+		"requires:" : "dkh 6/5/2012 19:01:24",
+		"requiresSpecsForPackageOrdering:" : "dkh 10/03/2014 14:39",
+		"resolveSpecsForPackageOrdering:" : "dkh 10/03/2014 18:42" } }

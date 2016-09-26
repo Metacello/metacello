@@ -1,0 +1,13 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"configurationClass" : "dkh 6/5/2012 19:01:24",
+		"extractAllVersionPragmas" : "dkh 6/5/2012 19:01:24",
+		"extractCommonDefaultSymbolicVersionPragmas" : "dkh 6/5/2012 19:01:24",
+		"extractDefaultSymbolicVersionPragmas" : "dkh 6/5/2012 19:01:24",
+		"extractPragmas:for:into:" : "dkh 6/5/2012 19:01:24",
+		"extractPragmas:into:" : "dkh 6/5/2012 19:01:24",
+		"extractSymbolicVersionPragmas" : "dkh 6/5/2012 19:01:24",
+		"extractVersionImportPragmas" : "dkh 6/5/2012 19:01:24",
+		"extractVersionPragmas" : "dkh 6/5/2012 19:01:24" } }

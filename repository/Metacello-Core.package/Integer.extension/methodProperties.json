@@ -1,0 +1,10 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"metacelloIntegerLessThanSelf:" : "dkh 6/5/2012 19:01:24",
+		"metacelloSemanticIntegerLessThanSelf:" : "dkh 6/21/2012 20:44",
+		"metacelloSemanticStringLessThanSelf:" : "dkh 6/21/2012 20:44",
+		"metacelloSemanticVersionComponentLessThan:" : "dkh 6/21/2012 20:47",
+		"metacelloStringLessThanSelf:" : "dkh 6/5/2012 19:01:24",
+		"metacelloVersionComponentLessThan:" : "dkh 6/5/2012 19:01:24" } }

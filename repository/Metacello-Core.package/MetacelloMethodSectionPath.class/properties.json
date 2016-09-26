@@ -4,10 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		 ],
 	"name" : "MetacelloMethodSectionPath",
 	"pools" : [
 		 ],
 	"super" : "Array",
-	"type" : "normal" }
+	"type" : "variable" }

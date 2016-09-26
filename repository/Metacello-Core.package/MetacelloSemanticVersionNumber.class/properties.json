@@ -4,6 +4,7 @@
 		 ],
 	"classvars" : [
 		 ],
+	"commentStamp" : "dkh 6/24/2012 18:20",
 	"instvars" : [
 		"normalVersion",
 		"preReleaseVersion",

@@ -4,6 +4,7 @@
 		 ],
 	"classvars" : [
 		 ],
+	"commentStamp" : "<historical>",
 	"instvars" : [
 		 ],
 	"name" : "MetacelloValidationError",
