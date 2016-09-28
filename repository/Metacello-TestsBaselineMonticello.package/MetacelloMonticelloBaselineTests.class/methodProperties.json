@@ -6,4 +6,6 @@
 		"alternateRepositoryContents" : "dkh 09/21/2016 13:59",
 		"externalPath" : "dkh 09/15/2016 17:23",
 		"externalRepositoryContents" : "dkh 09/15/2016 17:27",
-		"resourceClass" : "dkh 09/15/2016 16:20" } }
+		"resourceClass" : "dkh 09/15/2016 16:20",
+		"testOnWarningLogDuringLoad" : "dkh 09/28/2016 11:03",
+		"testWarningDuringLoad" : "dkh 09/28/2016 11:03" } }

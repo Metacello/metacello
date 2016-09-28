@@ -1,10 +1,10 @@
 tests
-testWarningDuringLoad
-  "dirty packages should casue a warning on load ... Cypress are you listening?"
+testOnWarningLogDuringLoad
+  "see MetacelloScriptingWarningTestCase"
 
-  "prerequisite for testOnWarningLogDuringLod"
+  "dirty packages should casue a warning on load ... Cypress doesn't support this feature yet"
 
-  | externalCoreClass repoExternal repoAlternate platform warningSignalled |
+  | externalCoreClass repoExternal repoAlternate platform |
   platform := MetacelloPlatform current.
   repoExternal := 'filetree://'
     , (platform fullNameForDirectory: externalDirectory).
@@ -22,13 +22,14 @@ testWarningDuringLoad
     inClass: externalCoreClass
     classified: 'testOnWarningLogDuringLoad'.	"dirty the package"
   self assert: (externalCoreClass selectors includes: #'forceWarning').
-  warningSignalled := false.
   [ 
   Metacello new
     baseline: 'ExternalX';
     repository: repoExternal;
+    onWarningLog;
     silently;
     load ]
     on: Warning
-    do: [ :ex | warningSignalled := true ].
-  self assert: warningSignalled
+    do: [ :ex | 
+      "onWarningLog should catch and resume the Warning"
+      self assert: false ]

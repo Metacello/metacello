@@ -46,6 +46,4 @@
 		"testGetBlockFilter" : "dkh 09/28/2016 06:41",
 		"testMissingClassNameError" : "dkh 09/28/2016 06:40",
 		"testMissingProjectError" : "dkh 09/28/2016 06:42",
-		"testOnWarningLogDuringLoad" : "dkh 09/28/2016 07:58:14",
-		"testWarningDuringLoad" : "dkh 09/28/2016 08:12",
 		"validateRegistrationForBaseline:expectedRepoDescription:" : "dkh 09/21/2016 15:19:28" } }
