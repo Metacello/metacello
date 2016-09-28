@@ -24,12 +24,17 @@ resolvePackageSpecReference: packageSpec packageManager: packageManager
                 space ] ].
       references isEmpty
         ifTrue: [ 
-          self
-            error:
-              'Reference for package ' , packageSpec file printString , ' not found in '
-                , repoString printString ].
+          (MetacelloPackageSpecResolutionError new
+            packageSpec: packageSpec;
+            repositories: packageManager knownRepositories values;
+            repositoryError:
+                (UserDefinedError new
+                    details:
+                      'Reference for package ' , packageSpec file printString , ' not found in '
+                        , repoString printString);
+            yourself) signal ].
       self
         error:
           'More than on package reference found for ' , packageSpec file printString
-            , ' in ' , repoString printString ].
+            , ' in ' , repoString printString , '. Not expected in Cypress' ].
   ^ references first
