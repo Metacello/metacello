@@ -1,6 +1,6 @@
 {
 	"class" : {
-		 },
+		"isAbstract" : "dkh 09/28/2016 11:58" },
 	"instance" : {
 		"handleExpectedValidationFailure:" : "dkh 09/28/2016 11:54",
 		"handleExpectedValidationFailure:reasonCode:" : "dkh 09/28/2016 11:54",
