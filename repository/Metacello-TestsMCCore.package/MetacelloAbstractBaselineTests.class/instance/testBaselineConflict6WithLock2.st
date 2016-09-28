@@ -1,5 +1,7 @@
 tests
 testBaselineConflict6WithLock2
+  "see MetacelloScriptingConflictsTestCase"
+
   | repoExternal repoAlternate platform sawLockWarning |
   platform := MetacelloPlatform current.
   repoExternal := 'filetree://'

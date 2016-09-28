@@ -1,5 +1,5 @@
 tests
-testBaselineConflict6WithLock8
+testBaselineConflict1B
   "see MetacelloScriptingConflictsTestCase"
 
   | repoExternal repoAlternate platform |
@@ -14,11 +14,11 @@ testBaselineConflict6WithLock8
   Metacello new
     baseline: 'ExternalX';
     repository: repoExternal;
-    lock.
+    load.
   Metacello new
     baseline: 'ExternalRefX';
     repository: repoAlternate;
-    onLockBreak: #('ExternalX');
+    onConflictUseIncoming: #() useLoaded: #('ExternalX');
     silently;
     load.
   self
@@ -26,4 +26,4 @@ testBaselineConflict6WithLock8
     expectedRepoDescription: repoAlternate.	"original repo"
   self
     validateRegistrationForBaseline: 'BaselineOfExternalX'
-    expectedRepoDescription: repoAlternate	"original repo - broken lock"
+    expectedRepoDescription: repoExternal	"locked repo"

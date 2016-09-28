@@ -1,6 +1,6 @@
 tests
 testGetBlockFilter
-  "original test in MetacelloScriptingProjectFilterTestCase"
+  "see MetacelloScriptingErrorsTestCase"
 
   | repoExternal platform expected result |
   platform := MetacelloPlatform current.

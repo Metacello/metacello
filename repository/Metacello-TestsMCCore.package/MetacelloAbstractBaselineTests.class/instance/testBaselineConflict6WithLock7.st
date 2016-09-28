@@ -1,5 +1,7 @@
 tests
 testBaselineConflict6WithLock7
+  "see MetacelloScriptingConflictsTestCase"
+
   | repoExternal repoAlternate platform |
   platform := MetacelloPlatform current.
   repoExternal := 'filetree://'
