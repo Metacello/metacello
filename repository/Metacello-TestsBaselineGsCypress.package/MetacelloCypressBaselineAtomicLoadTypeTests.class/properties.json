@@ -1,0 +1,14 @@
+{
+	"category" : "Metacello-TestsBaselineGsCypress",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MetacelloCypressBaselineAtomicLoadTypeTests",
+	"pools" : [
+		 ],
+	"super" : "MetacelloCommonCypressBaselineLoadTypeTests",
+	"type" : "normal" }

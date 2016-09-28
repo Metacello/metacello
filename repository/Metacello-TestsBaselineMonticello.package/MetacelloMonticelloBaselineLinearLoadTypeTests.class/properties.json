@@ -1,0 +1,14 @@
+{
+	"category" : "Metacello-TestsBaselineMonticello",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 09/28/2016 15:27",
+	"instvars" : [
+		 ],
+	"name" : "MetacelloMonticelloBaselineLinearLoadTypeTests",
+	"pools" : [
+		 ],
+	"super" : "MetacelloCommonMonticelloBaselineLoadTypeTests",
+	"type" : "normal" }
