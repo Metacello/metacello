@@ -10,5 +10,5 @@
 	"name" : "MetacelloMonticelloBaselineTests",
 	"pools" : [
 		 ],
-	"super" : "MetacelloAbstractBaselineTests",
+	"super" : "MetacelloCommonBaselineTests",
 	"type" : "normal" }

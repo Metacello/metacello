@@ -1,5 +1,5 @@
 {
-	"category" : "Metacello-TestsBaselineGsCypress",
+	"category" : "Metacello-TestsMCCore",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
@@ -7,8 +7,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "MetacelloCypressBaselineTests",
+	"name" : "MetacelloCommonBaselineTests",
 	"pools" : [
 		 ],
-	"super" : "MetacelloCommonBaselineTests",
+	"super" : "MetacelloAbstractBaselineTests",
 	"type" : "normal" }

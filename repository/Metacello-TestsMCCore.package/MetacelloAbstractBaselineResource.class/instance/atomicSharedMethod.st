@@ -1,0 +1,3 @@
+AtomicX
+atomicSharedMethod
+  ^ self name
