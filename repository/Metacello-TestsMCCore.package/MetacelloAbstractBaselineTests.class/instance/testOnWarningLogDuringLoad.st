@@ -15,7 +15,10 @@ testOnWarningLogDuringLoad
     globalNamed: #'ExternalCoreX'
     ifAbsent: [ self assert: false ].
   self deny: (externalCoreClass selectors includes: #'forceWarning').
-  externalCoreClass compile: 'forceWarning ^self'.	"dirty the package"
+  MetacelloPlatform current
+    compile: 'forceWarning ^self'
+    inClass: externalCoreClass
+    classified: 'testOnWarningLogDuringLoad'.	"dirty the package"
   self assert: (externalCoreClass selectors includes: #'forceWarning').
   [ 
   Metacello new
