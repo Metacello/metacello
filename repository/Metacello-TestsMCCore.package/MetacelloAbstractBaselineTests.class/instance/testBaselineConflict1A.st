@@ -26,4 +26,4 @@ testBaselineConflict1A
     expectedRepoDescription: repoAlternate.	"original repo"
   self
     validateRegistrationForBaseline: 'BaselineOfExternalX'
-    expectedRepoDescription: repoExternal	"locked repo"
+    expectedRepoDescription: repoExternal	"loaded repo"
