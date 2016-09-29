@@ -1,7 +1,8 @@
 repository setup
-setUpRepositoryContents: packageList sourceRepo: packageStructureMap targetRepo: targetRepo
+setUpRepositoryContents: packageList sourceRepo: sourceRepo targetRepo: targetRepo
   packageList
     do: [ :packageName | 
       | packageStructure |
-      packageStructure := packageStructureMap at: packageName.
+      packageStructure := sourceRepo
+        readPackageStructureForPackageNamed: packageName.
       targetRepo writePackageStructure: packageStructure ]
