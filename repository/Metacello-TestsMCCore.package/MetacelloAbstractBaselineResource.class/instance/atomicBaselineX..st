@@ -3,7 +3,8 @@ atomicBaselineX: spec
   <baseline>
   spec description: 'MetacelloAbstractBaselineResource>>externalBaselineX:'.
   spec
-    package: 'Atomic-CoreX-1';
+    package: 'Atomic-CoreX-1'
+      with: [ spec postLoadDoIt: #'atomicShareMethodSend' ];
     package: 'Atomic-CoreX-2' with: [ spec requires: 'Atomic-CoreX-1' ];
     yourself.
   spec

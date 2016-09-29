@@ -17,13 +17,13 @@ setUpAtomicCoreX2
     source: 'atomicVersionInfo ^''dkh-2'''.
   infoArray := self
     setUpAtomicCoreX2: externalPackages
-    extraDefs:
-      {def1.
-      (self atomicShareMethodDefinition: '*atomic-corex-2')}
+    extraDefs: {def1}
     packageVersion: '-dkh.1'
     info: #().
   self
     setUpAtomicCoreX2: alternatePackages
-    extraDefs: {def2}
+    extraDefs:
+      {def2.
+      (self atomicShareMethodDefinition: '*atomic-corex-2')}
     packageVersion: '-dkh.2'
     info: infoArray

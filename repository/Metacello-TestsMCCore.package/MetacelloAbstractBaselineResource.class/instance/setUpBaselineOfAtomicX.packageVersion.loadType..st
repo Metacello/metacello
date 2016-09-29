@@ -19,6 +19,12 @@ setUpBaselineOfAtomicX: packageRepo packageVersion: packageVersion loadType: loa
   (self
     createMethodDefinitionFor: className
     classIsMeta: false
+    selector: 'atomicShareMethodSend'
+    category: 'cat'
+    source: (self sourceCodeAt: #'atomicShareMethodSend')).
+  (self
+    createMethodDefinitionFor: className
+    classIsMeta: false
     selector: 'projectClass'
     category: 'cat'
     source: self sourceCodeForCypressBaselineProjectClass).
