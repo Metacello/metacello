@@ -1,5 +1,5 @@
 tests
-testBasicAtomicLoad
+testBasicLoad
   | platform repo expectMNU gotMNU |
   platform := MetacelloPlatform current.
   repo := 'filetree://' , (platform fullNameForDirectory: externalDirectory).

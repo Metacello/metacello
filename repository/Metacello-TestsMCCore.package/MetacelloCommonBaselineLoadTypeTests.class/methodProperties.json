@@ -3,6 +3,7 @@
 		"isAbstract" : "dkh 09/28/2016 12:03" },
 	"instance" : {
 		"projectLoadType" : "dkh 09/28/2016 15:31",
-		"setUpRepositoryContents" : "dkh 09/28/2016 15:46",
-		"tearDownPackageList" : "dkh 09/28/2016 15:34",
-		"testBasicAtomicLoad" : "dkh 09/29/2016 14:20" } }
+		"setUpRepositoryContents" : "dkh 09/29/2016 14:58",
+		"tearDownPackageList" : "dkh 09/29/2016 14:59",
+		"testBasicLoad" : "dkh 09/29/2016 14:50",
+		"testPrePostLoadDoits" : "dkh 09/29/2016 15:58" } }

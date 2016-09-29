@@ -1,4 +1,4 @@
-baseline of ExternalX
+ExternalX
 setUpBaselineOfExternalX_external
   "self reset"
 

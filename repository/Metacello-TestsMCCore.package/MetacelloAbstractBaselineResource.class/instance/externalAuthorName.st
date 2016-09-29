@@ -1,3 +1,3 @@
-external core
+External-Core
 externalAuthorName
     ^ 'dkh'

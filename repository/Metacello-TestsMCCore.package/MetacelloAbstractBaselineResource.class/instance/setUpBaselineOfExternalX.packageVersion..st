@@ -1,4 +1,4 @@
-baseline of ExternalX
+ExternalX
 setUpBaselineOfExternalX: packageRepo packageVersion: packageVersion
   "self reset"
 

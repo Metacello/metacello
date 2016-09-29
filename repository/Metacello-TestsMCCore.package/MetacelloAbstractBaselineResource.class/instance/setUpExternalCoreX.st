@@ -1,4 +1,4 @@
-external core
+External-Core
 setUpExternalCoreX
   "self reset"
 

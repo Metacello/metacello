@@ -1,4 +1,4 @@
-baseline of ExternalRefX
+ExternalRefX
 setUpBaselineOfExternalRefX: packageRepo packageVersion: packageVersion
   "self reset"
 

@@ -1,4 +1,4 @@
-baseline of ExternalRefX
+ExternalRefX
 setUpBaselineOfExternalRefX_alternate
   "self reset"
 

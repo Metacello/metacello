@@ -1,4 +1,4 @@
-external core
+External-Core
 setUpExternalCoreX: packageRepo extraDefs: extraDefinitionArray packageVersion: packageVersion info: infoArray
   "self reset"
 
