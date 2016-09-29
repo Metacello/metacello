@@ -15,5 +15,5 @@ createPackage: packageName packageVersion: packageVersion in: aRepository withDe
     name: packageName , package packageExtension
     from: classDefinitions
     classMap: classMap.
-  aRepository at: packageName put: package.
+  aRepository writePackageStructure: package.
   ^ #()

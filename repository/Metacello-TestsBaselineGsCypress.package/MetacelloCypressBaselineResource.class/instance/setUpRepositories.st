@@ -3,5 +3,5 @@ setUpRepositories
   "self reset"
 
   super setUpRepositories.
-  externalPackages := Dictionary new.
-  alternatePackages := Dictionary new
+  externalPackages := CypressDictionaryRepository on: Dictionary new.
+  alternatePackages := CypressDictionaryRepository on: Dictionary new
