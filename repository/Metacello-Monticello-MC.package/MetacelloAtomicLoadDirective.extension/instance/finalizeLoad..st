@@ -1,4 +1,4 @@
-actions
+*metacello-monticello-mc
 finalizeLoad: aGofer
 	"load the accumulated packages (if any), reset the package list"
 

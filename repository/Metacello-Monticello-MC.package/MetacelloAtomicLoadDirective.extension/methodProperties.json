@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"finalizeLoad:" : "dkh 6/8/2012 14:04:22",
 		"loadAtomicLoadDirective:gofer:" : "dkh 6/8/2012 14:04:22",
 		"loadLinearLoadDirective:gofer:" : "dkh 6/8/2012 14:04:22",
 		"loadPackageDirective:gofer:" : "dkh 6/8/2012 14:04:22",
