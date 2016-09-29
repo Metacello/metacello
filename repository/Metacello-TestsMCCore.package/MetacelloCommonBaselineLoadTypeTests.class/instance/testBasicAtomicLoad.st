@@ -27,7 +27,10 @@ testBasicAtomicLoad
     silently;
     load ]
     on: MessageNotUnderstood
-    do: [ :ex | gotMNU := true ].
+    do: [ :ex | 
+      ex selector == #'atomicSharedMethod'
+        ifTrue: [ gotMNU := true ]
+        ifFalse: [ ex pass ] ].
   self assert: expectMNU == gotMNU.
   expectMNU
     ifTrue: [ 
