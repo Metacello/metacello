@@ -1,0 +1,24 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"add:" : "dkh 09/20/2016 10:55:56",
+		"directivesDo:" : "dkh 09/20/2016 10:55:56",
+		"finalizeLoad:" : "dkh 09/20/2016 10:55:56",
+		"isExplicit" : "dkh 09/20/2016 10:55:56",
+		"label" : "dkh 09/20/2016 10:55:56",
+		"loadDirectives" : "dkh 09/20/2016 10:55:56",
+		"loadDirectives:" : "dkh 09/20/2016 10:55:56",
+		"loadPostloadDirective:" : "dkh 09/20/2016 10:55:56",
+		"loadPreloadDirective:" : "dkh 09/29/2016 14:10",
+		"packageDirectivesDo:" : "dkh 09/20/2016 10:55:56",
+		"packagesDo:" : "dkh 09/20/2016 10:55:56",
+		"prepostLoadDirectivesDo:" : "dkh 09/20/2016 10:55:56",
+		"prepostLoadsDo:" : "dkh 09/20/2016 10:55:56",
+		"printLoadDirectivesOn:indent:" : "dkh 09/20/2016 10:55:56",
+		"printOn:indent:" : "dkh 09/20/2016 10:55:56",
+		"spec" : "dkh 09/20/2016 10:55:56",
+		"versionDirectivesDepthFirstDo:" : "dkh 09/20/2016 10:55:56",
+		"versionDirectivesDo:" : "dkh 09/20/2016 10:55:56",
+		"versionDo:" : "dkh 09/20/2016 10:55:56",
+		"versionsDo:" : "dkh 09/20/2016 10:55:56" } }

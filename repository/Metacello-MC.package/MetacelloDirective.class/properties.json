@@ -4,6 +4,7 @@
 		 ],
 	"classvars" : [
 		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"spec",
 		"loader" ],

@@ -1,0 +1,14 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"packagesNeedSavingVisited:using:into:" : "dkh 09/20/2016 10:55:56",
+		"repository:" : "dkh 09/20/2016 10:55:56",
+		"resolveProjectSpec" : "dkh 09/20/2016 10:55:56",
+		"resolveToAllPackagesIn:into:visited:" : "dkh 09/20/2016 10:55:56",
+		"resolveToLoadableSpec" : "dkh 09/20/2016 10:55:56",
+		"resolveToPackagesIn:andProjects:visited:" : "dkh 09/20/2016 10:55:56",
+		"resolveToPackagesIn:visited:" : "dkh 09/20/2016 10:55:56",
+		"updateForSpawnMethod:" : "dkh 09/20/2016 10:55:56",
+		"updatePackageSpec:using:" : "dkh 09/20/2016 10:55:56",
+		"versionString" : "dkh 09/20/2016 10:55:56" } }
