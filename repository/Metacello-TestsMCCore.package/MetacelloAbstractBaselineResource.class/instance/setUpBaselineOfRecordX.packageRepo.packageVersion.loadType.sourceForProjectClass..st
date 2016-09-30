@@ -1,13 +1,13 @@
-PrePostLoadX
-setUpBaselineOfPrePostLoadX: packageRepo packageVersion: packageVersion loadType: loadType
+RecordX
+setUpBaselineOfRecordX: recordXBaslineClassName packageRepo: packageRepo packageVersion: packageVersion loadType: loadType sourceForProjectClass: sourceForProjectClass
   "self reset"
 
   | className basePackageName definitionArray |
-  className := basePackageName := 'BaselineOfPrePostLoadX'.
+  className := basePackageName := recordXBaslineClassName.
   definitionArray := self
     definitionsForPostPreloadDoitBaseline: className
     loadType: loadType
-    sourceForProjectClass: self sourceCodeForCypressBaselineProjectClass.
+    sourceForProjectClass: sourceForProjectClass.
   ^ self
     createPackage: basePackageName
     packageVersion: packageVersion

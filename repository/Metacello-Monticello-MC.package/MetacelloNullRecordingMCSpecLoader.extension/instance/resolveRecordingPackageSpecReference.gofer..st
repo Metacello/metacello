@@ -1,7 +1,7 @@
 *metacello-monticello-mc
 resolveRecordingPackageSpecReference: packageSpec gofer: gofer
   | externalPackageReference |
-  externalPackageReference := packageSpec file == nil
+  externalPackageReference := packageSpec getFile == nil
     ifTrue: [ GoferPackageReference name: packageSpec name ]
     ifFalse: [ GoferResolvedReference name: packageSpec file repository: nil ].
   packageSpec repositorySpecs isEmpty

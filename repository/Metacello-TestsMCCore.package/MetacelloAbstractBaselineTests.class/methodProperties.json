@@ -1,0 +1,17 @@
+{
+	"class" : {
+		"isAbstract" : "dkh 09/29/2016 16:24:55" },
+	"instance" : {
+		"alternatePath" : "dkh 09/29/2016 16:24:55",
+		"alternateRepositoryContents" : "dkh 09/29/2016 16:24:55",
+		"externalPath" : "dkh 09/29/2016 16:24:55",
+		"externalRepositoryContents" : "dkh 09/29/2016 16:24:55",
+		"resourceClass" : "dkh 09/29/2016 16:24:55",
+		"setUp" : "dkh 09/29/2016 16:24:55",
+		"setUpRepositories" : "dkh 09/29/2016 16:24:55",
+		"setUpRepositoryContents" : "dkh 09/29/2016 16:24:55",
+		"tearDown" : "dkh 09/29/2016 16:24:55",
+		"tearDownPackageList" : "dkh 09/29/2016 16:24:55",
+		"tearDownPackages" : "dkh 09/29/2016 16:24:55",
+		"tearDownRepositories" : "dkh 09/29/2016 16:24:55",
+		"tearDownRepositoryList" : "dkh 09/29/2016 16:24:55" } }

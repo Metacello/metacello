@@ -36,11 +36,11 @@ testPrePostLoadDoits
     ifTrue: [ 
       self assert: (doits at: 4) size = 3.
       self assert: (((doits at: 4) at: 3) isKindOf: MetacelloPackageSpec).
-      self assert: ((doits at: 4) at: 3) name = 'Atomic-CoreX-2' ]
+      self assert: ((doits at: 4) at: 3) name = 'Atomic-CoreX-Two' ]
     ifFalse: [ 
       self assert: (doits at: 3) size = 3.
       self assert: (((doits at: 3) at: 3) isKindOf: MetacelloPackageSpec).
-      self assert: ((doits at: 3) at: 3) name = 'Atomic-CoreX-2' ].
+      self assert: ((doits at: 3) at: 3) name = 'Atomic-CoreX-Two' ].
   self assert: (doits at: 6) size = 3.
   self assert: (((doits at: 6) at: 3) isKindOf: MetacelloVersionSpec).
   self assert: ((doits at: 6) at: 3) versionString = 'baseline'

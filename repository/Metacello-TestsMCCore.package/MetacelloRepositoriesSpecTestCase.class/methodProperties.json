@@ -1,0 +1,17 @@
+{
+	"class" : {
+		"isAbstract" : "dkh 09/29/2016 16:24:55" },
+	"instance" : {
+		"testAddA" : "dkh 09/29/2016 16:24:55",
+		"testAddB" : "dkh 09/29/2016 16:24:55",
+		"testAddC" : "dkh 09/29/2016 16:24:55",
+		"testAddE" : "dkh 09/29/2016 16:24:55",
+		"testAddF" : "dkh 09/29/2016 16:24:55",
+		"testCopyTo" : "dkh 09/29/2016 16:24:55",
+		"testMergeA" : "dkh 09/29/2016 16:24:55",
+		"testMergeB" : "dkh 09/29/2016 16:24:55",
+		"testMergeC" : "dkh 09/29/2016 16:24:55",
+		"testRemoveA" : "dkh 09/29/2016 16:24:55",
+		"testRemoveB" : "dkh 09/29/2016 16:24:55",
+		"testRemoveC" : "dkh 09/29/2016 16:24:55",
+		"testRemoveD" : "dkh 09/29/2016 16:24:55" } }

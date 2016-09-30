@@ -1,0 +1,16 @@
+{
+	"class" : {
+		"isAbstract" : "dkh 09/29/2016 16:24:55" },
+	"instance" : {
+		"testAddPackageA" : "dkh 09/29/2016 16:24:55",
+		"testAddPackageB" : "dkh 09/29/2016 16:24:55",
+		"testAddPackageC" : "dkh 09/29/2016 16:24:55",
+		"testAddPackageD" : "dkh 09/29/2016 16:24:55",
+		"testCopyToPackage" : "dkh 09/29/2016 16:24:55",
+		"testMergePackageA" : "dkh 09/29/2016 16:24:55",
+		"testMergePackageB" : "dkh 09/29/2016 16:24:55",
+		"testMergePackageD" : "dkh 09/29/2016 16:24:55",
+		"testRemovePackageA" : "dkh 09/29/2016 16:24:55",
+		"testRemovePackageB" : "dkh 09/29/2016 16:24:55",
+		"testRemovePackageC" : "dkh 09/29/2016 16:24:55",
+		"testRemovePackageD" : "dkh 09/29/2016 16:24:55" } }

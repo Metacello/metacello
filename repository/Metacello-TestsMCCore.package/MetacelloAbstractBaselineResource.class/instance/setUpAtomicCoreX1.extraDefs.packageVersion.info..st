@@ -3,7 +3,7 @@ setUpAtomicCoreX1: packageRepo extraDefs: extraDefinitionArray packageVersion: p
   "self reset"
 
   | basePackageName className definitionArray |
-  basePackageName := 'Atomic-CoreX-1'.
+  basePackageName := 'Atomic-CoreX-One'.
   className := 'AtomicCoreX1'.
   definitionArray := {(self
     createClassDefinitionFor: className

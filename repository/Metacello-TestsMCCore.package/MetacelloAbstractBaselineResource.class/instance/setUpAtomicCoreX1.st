@@ -7,19 +7,19 @@ setUpAtomicCoreX1
     createMethodDefinitionFor: 'AtomicCoreX1'
     classIsMeta: true
     selector: 'atomicVersionInfo'
-    category: '*atomic-corex-1'
+    category: '*atomic-corex-one'
     source: 'atomicVersionInfo ^''dkh-1'''.
   def2 := self
     createMethodDefinitionFor: 'AtomicCoreX1'
     classIsMeta: true
     selector: 'atomicVersionInfo'
-    category: '*atomic-corex-1'
+    category: '*atomic-corex-one'
     source: 'atomicVersionInfo ^''dkh-2'''.
   infoArray := self
     setUpAtomicCoreX1: externalPackages
     extraDefs:
       {def1.
-      (self atomicShareMethodDefinition: '*atomic-corex-1')}
+      (self atomicShareMethodDefinition: '*atomic-corex-one')}
     packageVersion: '-dkh.1'
     info: #().
   self

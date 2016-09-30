@@ -19,6 +19,18 @@ setUpRepositoryContents
     setUpBaselineOfPrePostLoadX: externalRepo
       packageVersion: '-dkh.1'
       loadType: self projectLoadType;
+    setUpBaselineOfRecordX: 'BaselineOfCypressRecordX'
+      packageRepo: externalRepo
+      packageVersion: '-dkh.1'
+      loadType: self projectLoadType
+      sourceForProjectClass:
+        self resourceClass current sourceCodeForCypressBaselineProjectClass;
+    setUpBaselineOfRecordX: 'BaselineOfMCRecordX'
+      packageRepo: externalRepo
+      packageVersion: '-dkh.1'
+      loadType: self projectLoadType
+      sourceForProjectClass:
+        self resourceClass current sourceCodeForMCBaselineProjectClass;
     setUpBaselineOfAtomicX: alternateRepo
       packageVersion: '-dkh.2'
       loadType: self projectLoadType;

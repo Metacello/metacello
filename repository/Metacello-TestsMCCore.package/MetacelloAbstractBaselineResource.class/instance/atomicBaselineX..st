@@ -6,11 +6,11 @@ atomicBaselineX: spec
     do: [ 
       spec description: 'MetacelloAbstractBaselineResource>>atomicBaselineX:'.
       spec
-        package: 'Atomic-CoreX-1'
+        package: 'Atomic-CoreX-One'
           with: [ spec postLoadDoIt: #'atomicShareMethodSend' ];
-        package: 'Atomic-CoreX-2' with: [ spec requires: 'Atomic-CoreX-1' ];
+        package: 'Atomic-CoreX-Two' with: [ spec requires: 'Atomic-CoreX-One' ];
         yourself.
       spec
-        group: 'Core' with: #('Atomic-CoreX-2');
+        group: 'Core' with: #('Atomic-CoreX-Two');
         group: 'default' with: #('Core');
         yourself ]

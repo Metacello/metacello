@@ -4,6 +4,7 @@
 		 ],
 	"classvars" : [
 		"DoItResults" ],
+	"commentStamp" : "",
 	"instvars" : [
 		"alternatePackages",
 		"externalPackages" ],
