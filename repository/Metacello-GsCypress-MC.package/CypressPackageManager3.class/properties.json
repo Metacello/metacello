@@ -6,7 +6,8 @@
 		 ],
 	"instvars" : [
 		"knownRepositories",
-		"defaultSymbolDictionaryName" ],
+		"defaultSymbolDictionaryName",
+		"resolvedPackageReferences" ],
 	"name" : "CypressPackageManager3",
 	"pools" : [
 		 ],
