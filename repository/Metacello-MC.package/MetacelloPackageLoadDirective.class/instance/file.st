@@ -1,4 +1,5 @@
 accessing
 file
-
-	^self externalReference name
+  ^ self externalReference
+    ifNotNil: [ :er | er name ]
+    ifNil: [ self resolvedReference name ]

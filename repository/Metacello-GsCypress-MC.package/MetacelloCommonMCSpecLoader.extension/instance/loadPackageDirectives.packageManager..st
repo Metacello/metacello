@@ -1,6 +1,7 @@
 *Metacello-GsCypress-MC
 loadPackageDirectives: pkgLoads packageManager: packageManager
   | cypressLoad |
+  cypressLoad := CypressPackageManager3 new.
   pkgLoads
     do: [ :packageLoadDirective | 
       | resolvedReference |

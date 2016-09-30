@@ -3,7 +3,7 @@ loadResolvedReferences
   | cypressLoader |
   cypressLoader := CypressLoader new.
   cypressLoader defaultSymbolDictionaryName: self defaultSymbolDictionaryName.
-  self resolvedReferences
+  self resolvedPackageReferences
     do: [ :resolvedReference | 
       | package repository snapshot |
       package := resolvedReference packageDefinition.
