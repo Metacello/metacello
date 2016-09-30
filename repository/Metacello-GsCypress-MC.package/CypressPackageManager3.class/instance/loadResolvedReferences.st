@@ -11,7 +11,6 @@ loadResolvedReferences
       snapshot := (repository readPackageStructureForPackageNamed: package name)
         snapshot.
       cypressLoader updatePackage: package withSnapshot: snapshot ].
-  self halt.
   cypressLoader load.
   cypressLoader unloadable notEmpty
     ifTrue: [ self error: 'Unloadable definitions' ].

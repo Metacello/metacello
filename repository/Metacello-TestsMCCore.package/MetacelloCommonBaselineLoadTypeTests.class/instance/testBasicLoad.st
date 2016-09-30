@@ -28,7 +28,6 @@ testBasicLoad
     load ]
     on: MessageNotUnderstood
     do: [ :ex | 
-      self halt.
       ex selector == #'atomicSharedMethod'
         ifTrue: [ gotMNU := true ]
         ifFalse: [ ex pass ] ].
