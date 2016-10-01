@@ -1,11 +1,11 @@
 tests
-testBasicMCRecord
+testBasicCypressRecord01
   | platform repo directive files |
   platform := MetacelloPlatform current.
   repo := 'filetree://' , (platform fullNameForDirectory: externalDirectory).
   MetacelloAbstractBaselineResource doitResults: nil.
   directive := Metacello new
-    baseline: 'MCRecordX';
+    baseline: 'CypressRecordX';
     repository: repo;
     silently;
     record.
