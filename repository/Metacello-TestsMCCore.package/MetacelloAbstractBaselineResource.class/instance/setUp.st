@@ -11,4 +11,5 @@ setUp
     setUpBaselineOfExternalRefX_alternate;
     setUpAtomicCoreX1;
     setUpAtomicCoreX2;
+    setUpBaselineOfRecordRefX_alternate;
     yourself

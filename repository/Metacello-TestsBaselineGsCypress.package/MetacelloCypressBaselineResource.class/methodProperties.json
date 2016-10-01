@@ -1,0 +1,13 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"clearPackageCache" : "dkh 09/29/2016 14:04:13",
+		"createClassDefinitionFor:superclassName:category:instVarNames:comment:" : "dkh 09/29/2016 14:04:13",
+		"createMethodDefinitionFor:classIsMeta:selector:category:source:" : "dkh 09/29/2016 14:04:13",
+		"createPackage:packageVersion:in:withDefinitions:info:" : "dkh 09/29/2016 14:04:13",
+		"setUpRepositories" : "dkh 09/29/2016 14:04:13",
+		"setUpRepositoryContents:sourceRepo:targetRepo:" : "dkh 09/29/2016 14:04:13",
+		"sourceCodeForBaselineProjectClass" : "dkh 09/29/2016 14:04:13",
+		"teardownRepositories:" : "dkh 09/29/2016 14:04:13",
+		"unloadPackages:" : "dkh 09/29/2016 14:04:13" } }
