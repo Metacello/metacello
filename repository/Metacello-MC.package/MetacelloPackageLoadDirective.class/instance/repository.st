@@ -1,4 +1,5 @@
 accessing
 repository
-
-	^self externalReference repository
+  ^ self externalReference
+    ifNotNil: [ :er | er repository ]
+    ifNil: [ self resolvedReference repository ]
