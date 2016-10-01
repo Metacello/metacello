@@ -13,4 +13,7 @@ testBasicMCRecord02
 	linear load : baseline [BaselineOfMCRecordX]
 		load : Atomic-CoreX-One
 		load : Atomic-CoreX-Two'.
-  self assert: (x := directive printString) = expectedPrintString
+  self
+    assert:
+      (x := directive printString) withUnixLineEndings
+        = expectedPrintString withUnixLineEndings

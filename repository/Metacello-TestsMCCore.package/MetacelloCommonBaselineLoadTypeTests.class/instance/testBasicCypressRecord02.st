@@ -13,4 +13,7 @@ testBasicCypressRecord02
 	linear load : baseline [BaselineOfCypressRecordX]
 		load : Atomic-CoreX-One
 		load : Atomic-CoreX-Two'.
-  self assert: (x := directive printString) = expectedPrintString
+  self
+    assert:
+      (x := directive printString) withUnixLineEndings
+        = expectedPrintString withUnixLineEndings
