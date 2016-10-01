@@ -1,6 +1,6 @@
 tests
 testBasicCypressRecord02
-  | platform repo directive files expectedPrintString x |
+  | platform repo directive files expectedPrintString x loadType |
   platform := MetacelloPlatform current.
   repo := 'filetree://' , (platform fullNameForDirectory: externalDirectory).
   MetacelloAbstractBaselineResource doitResults: nil.
@@ -9,8 +9,11 @@ testBasicCypressRecord02
     repository: repo;
     silently;
     record.
+  loadType := self projectLoadType asString.
   expectedPrintString := 'linear load : 
-	linear load : baseline [BaselineOfCypressRecordX]
+	' , loadType
+    ,
+      ' load : baseline [BaselineOfCypressRecordX]
 		load : Atomic-CoreX-One
 		load : Atomic-CoreX-Two'.
   self

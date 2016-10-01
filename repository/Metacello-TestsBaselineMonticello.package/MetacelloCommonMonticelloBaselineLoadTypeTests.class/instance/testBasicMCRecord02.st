@@ -1,6 +1,6 @@
 tests
 testBasicMCRecord02
-  | platform repo directive files expectedPrintString x |
+  | platform repo directive files expectedPrintString x loadType |
   platform := MetacelloPlatform current.
   repo := 'filetree://' , (platform fullNameForDirectory: externalDirectory).
   MetacelloAbstractBaselineResource doitResults: nil.
@@ -9,8 +9,11 @@ testBasicMCRecord02
     repository: repo;
     silently;
     record.
+  loadType := self projectLoadType asString.
   expectedPrintString := 'linear load : 
-	linear load : baseline [BaselineOfMCRecordX]
+	' , loadType
+    ,
+      ' load : baseline [BaselineOfMCRecordX]
 		load : Atomic-CoreX-One
 		load : Atomic-CoreX-Two'.
   self
