@@ -1,3 +1,3 @@
 running
 alternateRepositoryContents
-  ^ super alternateRepositoryContents , #('Atomic-CoreX-1' 'Atomic-CoreX-2')
+  ^ super alternateRepositoryContents , #('Atomic-CoreX-One' 'Atomic-CoreX-Two')
