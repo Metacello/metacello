@@ -19,11 +19,11 @@ testBaselineRecord
 	linear load : baseline [BaselineOfExternalRefX]
 		load : BaselineOfExternalX
 	linear load : baseline [BaselineOfExternalRefX]
-		explicit load : ExternalX'
+		explicit load : ExternalX
+			load : BaselineOfExternalX'
     , pkgVers
     ,
       '
-			load : BaselineOfExternalX
 		linear load : baseline [BaselineOfExternalX]
 			load : External-CoreX'.
   self
