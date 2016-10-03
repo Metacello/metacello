@@ -1,3 +1,0 @@
-Updating
-addResolvedReference: resolvedReference
-  self resolvedPackageReferences add: resolvedReference

@@ -1,10 +1,10 @@
 *Metacello-GsCypress-Platform
 repositoryFromUrl: anUrl
-  | locator scheme |
-  locator := anUrl locator.
+  | scheme |
   scheme := anUrl scheme.
   scheme = 'filetree'
-    ifTrue: [ 
+    ifTrue: [ | locator |
+      locator := anUrl locator.
       locator last = $/
         ifFalse: [ locator := locator , '/' ].
       ^ CypressAbstractRepository onUrl: ('cypress:' , locator) asUrl alias: '' ].
