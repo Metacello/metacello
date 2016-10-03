@@ -1,7 +1,7 @@
 repository creation
 repositoryFromUrl: anUrl
-  | scheme |
+  | scheme x |
   scheme := anUrl scheme.
-  ((FileUrl urlClassForScheme: scheme) isKindOf: CypressAbstractFileUrl)
-    ifTrue: [ ^ CypressAbstractRepository onUrl: anUrl ].
+  ((x := FileUrl urlClassForScheme: scheme) inheritsFrom: CypressAbstractFileUrl)
+    ifTrue: [ ^ CypressAbstractRepository onUrl: anUrl alias: '' ].
   ^ super repositoryFromUrl: anUrl
