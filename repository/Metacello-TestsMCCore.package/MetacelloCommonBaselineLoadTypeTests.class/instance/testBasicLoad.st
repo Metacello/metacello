@@ -13,13 +13,13 @@ testBasicLoad
     assert: (platform globalNamed: 'AtomicCoreX1') atomicVersionInfo = 'dkh-1';
     assert: (platform globalNamed: 'AtomicCoreX2') notNil;
     assert: (platform globalNamed: 'AtomicCoreX2') atomicVersionInfo = 'dkh-1';
+    assert: (platform globalNamed: 'AtomicCoreX3') atomicVersionInfo = 'dkh-1';
     assert:
         (platform globalNamed: 'AtomicCoreX1') atomicSharedMethod = #'AtomicCoreX1'.
   repo := 'filetree://' , (platform fullNameForDirectory: alternateDirectory).
   expectMNU := self projectLoadType == #'linear'.
   gotMNU := false.
-  [ 
-  Metacello new
+  [ Metacello new
     baseline: 'AtomicX';
     repository: repo;
     onConflictUseIncoming;
@@ -27,27 +27,28 @@ testBasicLoad
     silently;
     load ]
     on: MessageNotUnderstood
-    do: [ :ex | 
-      ex selector == #'atomicSharedMethod'
+    do: [ :ex | ex selector == #'atomicSharedMethod'
         ifTrue: [ gotMNU := true ]
         ifFalse: [ ex pass ] ].
   self assert: expectMNU == gotMNU.
   expectMNU
-    ifTrue: [ 
-      "AtomicCoreX2 not loaded, since MNU occurs after AtomicCoreX1-dkh.2 loaded, but before AtomicCoreX2-dkh.2 loaded"
+    ifTrue: [ "AtomicCoreX2 not loaded, since MNU occurs after AtomicCoreX1-dkh.2 loaded, but before AtomicCoreX2-dkh.2 loaded"
       self
         assert:
             (platform globalNamed: 'AtomicCoreX1') atomicVersionInfo = 'dkh-2';
         assert:
-            (platform globalNamed: 'AtomicCoreX2') atomicVersionInfo = 'dkh-1'.
+            (platform globalNamed: 'AtomicCoreX2') atomicVersionInfo = 'dkh-1';
+        assert:
+            (platform globalNamed: 'AtomicCoreX3') atomicVersionInfo = 'dkh-1'.
       self
         should: [ (platform globalNamed: 'AtomicCoreX1') atomicSharedMethod = #'AtomicCoreX1' ]
         raise: MessageNotUnderstood ]
-    ifFalse: [ 
-      self
+    ifFalse: [ self
         assert:
             (platform globalNamed: 'AtomicCoreX1') atomicVersionInfo = 'dkh-2';
         assert:
             (platform globalNamed: 'AtomicCoreX2') atomicVersionInfo = 'dkh-2';
+        assert:
+            (platform globalNamed: 'AtomicCoreX3') atomicVersionInfo = 'dkh-2';
         assert:
             (platform globalNamed: 'AtomicCoreX1') atomicSharedMethod = #'AtomicCoreX1' ]

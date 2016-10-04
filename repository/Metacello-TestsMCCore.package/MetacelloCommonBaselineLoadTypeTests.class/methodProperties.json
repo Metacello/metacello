@@ -4,9 +4,9 @@
 	"instance" : {
 		"projectLoadType" : "dkh 09/29/2016 16:24:55",
 		"setUpRepositoryContents" : "dkh 09/30/2016 16:42",
-		"tearDownPackageList" : "dkh 10/01/2016 13:50",
+		"tearDownPackageList" : "dkh 10/03/2016 20:06",
 		"testBasicCypressRecord01" : "dkh 10/01/2016 11:13",
 		"testBasicCypressRecord02" : "dkh 10/01/2016 11:46",
-		"testBasicLoad" : "dkh 09/29/2016 16:24:55",
+		"testBasicLoad" : "dkh 10/03/2016 20:17",
 		"testBasicRecord" : "dkh 10/01/2016 14:24",
 		"testPrePostLoadDoits" : "dkh 09/30/2016 16:09" } }

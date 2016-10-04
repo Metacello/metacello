@@ -1,3 +1,3 @@
 running
 tearDownPackageList
-  ^ #('Atomic-CoreX-One' 'Atomic-CoreX-Two' 'BaselineOfAtomicX' 'BaselineOfPrePostLoadX' 'BaselineOfCypressRecordX' 'BaselineOfMCRecordX' 'BaselineOfRecordRefX')
+  ^ #('Atomic-CoreX-One' 'Atomic-CoreX-Two' 'Atomic-CoreX-Three' 'BaselineOfAtomicX' 'BaselineOfPrePostLoadX' 'BaselineOfCypressRecordX' 'BaselineOfMCRecordX' 'BaselineOfRecordRefX')
