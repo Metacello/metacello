@@ -13,4 +13,6 @@ setUp
     setUpAtomicCoreX2;
     setUpAtomicCoreX3;
     setUpBaselineOfRecordRefX_alternate;
+    setUpBaselineOfBranchX_external;
+    setUpBranchCoreX;
     yourself
