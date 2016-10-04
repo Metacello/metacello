@@ -6,15 +6,13 @@ testGetBlockFilter
   platform := MetacelloPlatform current.
   repoExternal := 'filetree://'
     , (platform fullNameForDirectory: externalDirectory).
-  expected := #('BaselineOfExternalX' 'BaselineOfExternalRefX').
+  expected := #('BaselineOfExternalX' 'BaselineOfExternalRefX' 'BaselineOfBranchX').
   result := Metacello new
     baseline: [ :projectSpec | true ];
     repository: repoExternal;
     silently;
     get.
-  result
-    do: [ :project | 
-      | baselineName |
+  result do: [ :project | | baselineName |
       baselineName := project configuration class name asString.
       self assert: (expected includes: baselineName).
       self
