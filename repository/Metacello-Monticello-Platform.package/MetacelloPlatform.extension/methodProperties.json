@@ -6,6 +6,7 @@
 		"createRepository:" : "dkh 09/21/2016 15:01",
 		"defaultCacheRepository" : "dkh 09/05/2016 15:58",
 		"defaultDirectory" : "ChristopheDemarey 4/29/2013 14:17",
+		"detectMax:in:" : "dkh 10/04/2016 07:17",
 		"directoryExists:" : "dkh 09/16/2016 10:17",
 		"directoryFromPath:relativeTo:" : "ChristopheDemarey 4/29/2013 15:11",
 		"ensureDirectoryExists:" : "ChristopheDemarey 4/29/2013 15:17",

@@ -8,15 +8,13 @@ slideIn: orderedSpecs spec: targetSpec baseIndex: baseIndex seen: seen firstTime
     ifTrue: [ ^ false ].
   required := false.
   baseSpec := orderedSpecs at: baseIndex.
-  baseIndex + 1 to: targetIndex - 1 do: [ :index | 
-    | spec |
+  baseIndex + 1 to: targetIndex - 1 do: [ :index | | spec |
     spec := orderedSpecs at: index.
     ((spec requiredSpecNamesForPackageOrdering: aVersionSpec)
       includes: baseSpec name)
       ifTrue: [ required := true ] ].
   firstTime
-    ifFalse: [ 
-      required
+    ifFalse: [ required
         ifFalse: [ ^ false ] ].
   requiredSpecNames := targetSpec
     requiredSpecNamesForPackageOrdering: aVersionSpec.
@@ -25,14 +23,14 @@ slideIn: orderedSpecs spec: targetSpec baseIndex: baseIndex seen: seen firstTime
   targetRequiresIndexes := targetRequires
     collect: [ :spec | orderedSpecs indexOf: spec ].
   targetRequiresIndexes add: baseIndex.
-  minIndex := targetRequiresIndexes detectMax: [ :each | each ].
+  minIndex := MetacelloPlatform current
+    detectMax: [ :each | each ]
+    in: targetRequiresIndexes.
   minIndex + 1 < targetIndex
-    ifTrue: [ 
-      orderedSpecs remove: targetSpec.
+    ifTrue: [ orderedSpecs remove: targetSpec.
       orderedSpecs add: targetSpec afterIndex: minIndex.
       seen add: targetSpec ]
-    ifFalse: [ 
-      ^ self
+    ifFalse: [ ^ self
         slideIn: orderedSpecs
         spec: (orderedSpecs at: minIndex)
         baseIndex: 1

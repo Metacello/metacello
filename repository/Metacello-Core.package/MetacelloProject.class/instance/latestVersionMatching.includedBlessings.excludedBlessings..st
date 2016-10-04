@@ -3,10 +3,9 @@ latestVersionMatching: versionPatternString includedBlessings: included excluded
   | excluded |
   excluded := excludedBlessings asSet copy.
   MetacelloPlatform current removeFrom: excluded allFoundIn: included.
-  ^ (self map values
-    select: [ :version | 
-      (included isEmpty or: [ included includes: version blessing ])
-        and: [ 
-          (excluded includes: version blessing) not
-            and: [ version versionNumber match: versionPatternString ] ] ])
+  ^ MetacelloPlatform current
     detectMax: [ :version | version ]
+    in: (self map values
+        select: [ :version | (included isEmpty or: [ included includes: version blessing ])
+            and: [ (excluded includes: version blessing) not
+                and: [ version versionNumber match: versionPatternString ] ] ])
