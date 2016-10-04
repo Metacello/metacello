@@ -5,7 +5,7 @@ detectMax: aBlock in: aCollection
 	If collection empty, return nil.  This method might also be called elect:."
 
   | maxElement maxValue val |
-  self do: [ :each | maxValue == nil
+  aCollection do: [ :each | maxValue == nil
         ifFalse: [ val := aBlock value: each.
           (val notNil and: [ (val := aBlock value: each) > maxValue ])
             ifTrue: [ maxElement := each.
