@@ -1,3 +1,4 @@
 doits
 gemstoneBasePostLoadDoIt
-  (MetacelloPlatform globalNamed: #'MetacelloGemStoneBasePlatform') initialize
+  (MetacelloPlatform current globalNamed: #'MetacelloGemStoneBasePlatform')
+    initialize
