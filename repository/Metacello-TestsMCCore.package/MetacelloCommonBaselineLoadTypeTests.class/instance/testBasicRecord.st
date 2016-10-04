@@ -32,7 +32,8 @@ testBasicRecord
     ,
       ' load : baseline [BaselineOfAtomicX]
 			load : Atomic-CoreX-One
-			load : Atomic-CoreX-Two'.
+			load : Atomic-CoreX-Two
+			load : Atomic-CoreX-Three'.
   self
     assert:
       actualPrintString withUnixLineEndings = expectedPrintString withUnixLineEndings
