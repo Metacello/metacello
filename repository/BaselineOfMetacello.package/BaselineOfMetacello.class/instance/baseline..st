@@ -28,7 +28,7 @@ baseline: spec
           with: [ spec includes: 'Metacello-GsCypress-Base' ];
         package: 'Metacello-Platform' with: [ spec
                 file: 'Metacello-Platform.gscypress';
-                postLoadDoIt: #'gemstone10beta311PostLoadDoIt' ];
+                postLoadDoIt: #'gemstoneBasePostLoadDoIt' ];
         package: 'Metacello-GsCypress-Base'
           with: [ spec requires: 'Metacello-Base' ];
         package: 'Metacello-MC' with: [ spec
