@@ -1,0 +1,28 @@
+{
+	"class" : {
+		"loadPackage:externalReference:loader:" : "dkh 09/29/2016 16:45:16",
+		"loadPackage:resolvedReference:loader:" : "dkh 09/29/2016 16:45:16",
+		"loader:" : "dkh 09/29/2016 16:45:16",
+		"postLoadSpec:loader:" : "dkh 09/29/2016 16:45:16",
+		"preLoadSpec:loader:" : "dkh 09/29/2016 16:45:16" },
+	"instance" : {
+		"addTo:" : "dkh 09/29/2016 16:45:16",
+		"directivesDo:" : "dkh 09/29/2016 16:45:16",
+		"label" : "dkh 09/29/2016 16:45:16",
+		"loader" : "dkh 09/29/2016 16:45:16",
+		"loader:" : "dkh 09/29/2016 16:45:16",
+		"packageDirectivesDo:" : "dkh 09/29/2016 16:45:16",
+		"packageDo:" : "dkh 09/29/2016 16:45:16",
+		"postLoadDo:" : "dkh 09/29/2016 16:45:16",
+		"preLoadDo:" : "dkh 09/29/2016 16:45:16",
+		"prepostLoadDirectivesDo:" : "dkh 09/29/2016 16:45:16",
+		"prepostLoadDo:" : "dkh 09/29/2016 16:45:16",
+		"printOn:" : "dkh 09/29/2016 16:45:16",
+		"printOn:indent:" : "dkh 09/29/2016 16:45:16",
+		"printString" : "dkh 09/29/2016 16:45:16",
+		"spec" : "dkh 09/29/2016 16:45:16",
+		"spec:loader:" : "dkh 09/29/2016 16:45:16",
+		"title" : "dkh 09/29/2016 16:45:16",
+		"versionDirectivesDepthFirstDo:" : "dkh 09/29/2016 16:45:16",
+		"versionDirectivesDo:" : "dkh 09/29/2016 16:45:16",
+		"versionDo:" : "dkh 09/29/2016 16:45:16" } }

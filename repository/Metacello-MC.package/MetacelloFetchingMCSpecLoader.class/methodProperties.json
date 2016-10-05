@@ -1,0 +1,24 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"actionLabel" : "dkh 09/29/2016 16:45:16",
+		"ancestorsFor:" : "dkh 09/29/2016 16:45:16",
+		"atomicLoadPackageSpecs:repositories:" : "dkh 09/29/2016 16:45:16",
+		"cacheRepository" : "dkh 09/29/2016 16:45:16",
+		"currentVersionInfoFor:" : "dkh 09/29/2016 16:45:16",
+		"doLoad" : "dkh 09/29/2016 16:45:16",
+		"ensureSpecLoader" : "dkh 09/29/2016 16:45:16",
+		"ensuredMap" : "dkh 09/29/2016 16:45:16",
+		"explicitLoadPackageSpecs:repositories:" : "dkh 09/29/2016 16:45:16",
+		"linearLoadPackageSpecs:repositories:" : "dkh 09/29/2016 16:45:16",
+		"loadData" : "dkh 09/29/2016 16:45:16",
+		"loadDirective" : "dkh 09/29/2016 16:45:16",
+		"postLoad:" : "dkh 09/29/2016 16:45:16",
+		"preLoad:" : "dkh 09/29/2016 16:45:16",
+		"printOn:" : "dkh 09/29/2016 16:45:16",
+		"resolvePackageSpec:cachedGofer:" : "dkh 09/29/2016 16:45:16",
+		"scheduleFetchFor:cachedReference:" : "dkh 09/29/2016 16:45:16",
+		"scheduleFetchFor:externalReference:" : "dkh 09/29/2016 16:45:16",
+		"scheduleFetchFor:nearestReference:" : "dkh 09/29/2016 16:45:16",
+		"scheduleFetchFor:reference:message:" : "dkh 09/29/2016 16:45:16" } }

@@ -1,0 +1,26 @@
+{
+	"class" : {
+		"new" : "dkh 09/29/2016 16:45:16",
+		"overrideRepositories:" : "dkh 09/29/2016 16:45:16" },
+	"instance" : {
+		"cacheRepository:" : "dkh 09/29/2016 16:45:16",
+		"ensuredMap" : "dkh 09/29/2016 16:45:16",
+		"ensuredMap:" : "dkh 09/29/2016 16:45:16",
+		"hasRepositoryOverrides" : "dkh 09/29/2016 16:45:16",
+		"ignoreImage" : "dkh 09/29/2016 16:45:16",
+		"ignoreImage:" : "dkh 09/29/2016 16:45:16",
+		"initialize" : "dkh 09/29/2016 16:45:16",
+		"load" : "dkh 09/29/2016 16:45:16",
+		"loadData" : "dkh 09/29/2016 16:45:16",
+		"loadDirective" : "dkh 09/29/2016 16:45:16",
+		"overrideRepositories" : "dkh 09/29/2016 16:45:16",
+		"overrideRepositories:" : "dkh 09/29/2016 16:45:16",
+		"pushAtomicLoadDirectivesDuring:for:" : "dkh 09/29/2016 16:45:16",
+		"pushExplicitLoadDirectivesDuring:for:" : "dkh 09/29/2016 16:45:16",
+		"pushLinearLoadDirectivesDuring:for:" : "dkh 09/29/2016 16:45:16",
+		"pushLoadDirective:during:" : "dkh 09/29/2016 16:45:16",
+		"repositoryMap" : "dkh 09/29/2016 16:45:16",
+		"repositoryMap:" : "dkh 09/29/2016 16:45:16",
+		"resetCacheGofer" : "dkh 09/29/2016 16:45:16",
+		"silently" : "dkh 09/29/2016 16:45:16",
+		"silently:" : "dkh 09/29/2016 16:45:16" } }

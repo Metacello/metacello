@@ -1,0 +1,11 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"addToMetacelloRepositories:" : "dkh 09/29/2016 16:45:16",
+		"fetchRequiredForMetacelloMCVersion:" : "dkh 09/29/2016 16:45:16",
+		"loadRequiredForMetacelloMCVersion:" : "dkh 09/29/2016 16:45:16",
+		"mergeIntoMetacelloRepositories:" : "dkh 09/29/2016 16:45:16",
+		"recordRequiredForMetacelloMCVersion:" : "dkh 09/29/2016 16:45:16",
+		"removeFromMetacelloRepositories:" : "dkh 09/29/2016 16:45:16",
+		"resolvePackageSpecsNamedForMetacelloMCVersion:visited:ifAbsent:" : "dkh 09/29/2016 16:45:16" } }

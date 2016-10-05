@@ -1,0 +1,17 @@
+{
+	"class" : {
+		"populateReasonCodeDescriptions" : "dkh 09/29/2016 16:45:16",
+		"validateConfigurationLoad:" : "dkh 09/29/2016 16:45:16",
+		"validateConfigurationLoad:version:" : "dkh 09/29/2016 16:45:16",
+		"validateConfigurationLoad:version:loads:" : "dkh 09/29/2016 16:45:16" },
+	"instance" : {
+		"criticalWarningReasonCodes" : "dkh 09/29/2016 16:45:16",
+		"errorReasonCodes" : "dkh 09/29/2016 16:45:16",
+		"validateBaselineVersionSpec:" : "dkh 09/29/2016 16:45:16",
+		"validateProjectLoad" : "dkh 09/29/2016 16:45:16",
+		"validateProjectVersionLoad:loads:" : "dkh 09/29/2016 16:45:16",
+		"validateVersionLoad:loads:" : "dkh 09/29/2016 16:45:16",
+		"validateVersionSpec:" : "dkh 09/29/2016 16:45:16",
+		"validateVersionSpecForSymbolicVersion:symbolicVersion:" : "dkh 09/29/2016 16:45:16",
+		"validateVersionTests:" : "dkh 09/29/2016 16:45:16",
+		"warningReasonCodes" : "dkh 09/29/2016 16:45:16" } }

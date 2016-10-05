@@ -4,6 +4,7 @@
 		 ],
 	"classvars" : [
 		"RetryPackageResolution" ],
+	"commentStamp" : "",
 	"instvars" : [
 		"operator",
 		"loaderPolicy",

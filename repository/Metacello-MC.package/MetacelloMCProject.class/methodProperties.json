@@ -1,0 +1,27 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"asBaselineProject" : "dkh 09/29/2016 16:45:16",
+		"asConfigurationProject" : "dkh 09/29/2016 16:45:16",
+		"baselineOfProjectSpecClass" : "dkh 09/29/2016 16:45:16",
+		"configurationOfProjectSpecClass" : "dkh 09/29/2016 16:45:16",
+		"createRepository:" : "dkh 09/29/2016 16:45:16",
+		"fetchProject" : "dkh 09/29/2016 16:45:16",
+		"goferBranch:project:" : "dkh 09/29/2016 16:45:16",
+		"goferCommitProject:" : "dkh 09/29/2016 16:45:16",
+		"packageSpec" : "dkh 09/29/2016 16:45:16",
+		"packageSpecClass" : "dkh 09/29/2016 16:45:16",
+		"packagesNeedSaving:" : "dkh 09/29/2016 16:45:16",
+		"pragmaKeywords" : "dkh 09/29/2016 16:45:16",
+		"projectForScriptEngine:unconditionalLoad:" : "dkh 09/29/2016 16:45:16",
+		"projectSpecClass" : "dkh 09/29/2016 16:45:16",
+		"repositoriesSpec" : "dkh 09/29/2016 16:45:16",
+		"repositoriesSpecClass" : "dkh 09/29/2016 16:45:16",
+		"repositorySpec" : "dkh 09/29/2016 16:45:16",
+		"repositorySpecClass" : "dkh 09/29/2016 16:45:16",
+		"saveProject" : "dkh 09/29/2016 16:45:16",
+		"setBaselineRepositoryDescription:" : "dkh 09/29/2016 16:45:16",
+		"updatePackageRepositoriesFor:" : "dkh 09/29/2016 16:45:16",
+		"updateProject" : "dkh 09/29/2016 16:45:16",
+		"versionSpecClass" : "dkh 09/29/2016 16:45:16" } }
