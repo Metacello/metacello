@@ -23,7 +23,7 @@ baseline: spec
         group: 'Tests'
           with: #('batch' 'Metacello-TestsCore' 'Metacello-TestsMCCore');
         yourself ].
-  spec for: #'gemstoneBase' do: [ spec
+  spec for: #'gemstone64' do: [ spec
         package: 'Metacello-Base'
           with: [ spec includes: 'Metacello-GsCypress-Base' ];
         package: 'Metacello-Platform' with: [ spec
