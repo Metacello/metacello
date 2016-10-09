@@ -2,11 +2,10 @@ attributes
 extractAtrributesFrom: gsVersion
   | tokens attributes attribute |
   attributes := {#'gemstoneCommon'.
-  #'gemstoneBase'}.
+  #'gemstone64'}.
   tokens := gsVersion subStrings: $..
   attribute := ''.
-  1 to: tokens size do: [ :index | 
-    | token |
+  1 to: tokens size do: [ :index | | token |
     (token := tokens at: index) isEmpty
       ifTrue: [ ^ attributes ].
     attribute := attribute , token.
