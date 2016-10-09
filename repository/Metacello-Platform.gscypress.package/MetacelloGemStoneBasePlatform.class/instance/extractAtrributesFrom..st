@@ -10,6 +10,6 @@ extractAtrributesFrom: gsVersion
       ifTrue: [ ^ attributes ].
     attribute := attribute , token.
     attributes add: ('gsc' , attribute , '.x') asSymbol.
-    attributes add: ('gsb' , attribute , '.x') asSymbol.
+    attributes add: ('gs64' , attribute , '.x') asSymbol.
     attribute := attribute , '.' ].
   ^ attributes
