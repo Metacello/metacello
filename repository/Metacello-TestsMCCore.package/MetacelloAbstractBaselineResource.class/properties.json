@@ -3,7 +3,9 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
+		"CustomProjectAttributes",
 		"DoItResults" ],
+	"commentStamp" : "",
 	"instvars" : [
 		"alternatePackages",
 		"externalPackages" ],

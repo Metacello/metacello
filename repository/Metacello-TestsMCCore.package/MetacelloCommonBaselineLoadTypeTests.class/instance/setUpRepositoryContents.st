@@ -1,18 +1,15 @@
 running
 setUpRepositoryContents
   | externalRepo alternateRepo |
-  externalRepo := MetacelloPlatform current
-    repositoryFromUrl:
-      ('filetree://'
+  externalRepo := MetacelloPlatform current repositoryFromUrl: ('filetree://'
         , (MetacelloPlatform current fullNameForDirectory: externalDirectory))
         asUrl.
-  alternateRepo := MetacelloPlatform current
-    repositoryFromUrl:
-      ('filetree://'
+  alternateRepo := MetacelloPlatform current repositoryFromUrl: ('filetree://'
         , (MetacelloPlatform current fullNameForDirectory: alternateDirectory))
         asUrl.
   super setUpRepositoryContents.
   self resourceClass current
+    setUpBaselineOfNestedX: externalRepo packageVersion: '-dkh.1';
     setUpBaselineOfAtomicX: externalRepo
       packageVersion: '-dkh.1'
       loadType: self projectLoadType;

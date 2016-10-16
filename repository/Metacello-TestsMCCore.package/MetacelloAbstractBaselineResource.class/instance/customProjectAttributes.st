@@ -1,0 +1,3 @@
+NestedX
+customProjectAttributes
+  ^ MetacelloAbstractBaselineResource customProjectAttributes
