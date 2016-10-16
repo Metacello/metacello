@@ -1,5 +1,5 @@
 tests
-testNestedLoad01
+testNestedLoadX01
   | platform repo |
   platform := MetacelloPlatform current.
   repo := 'filetree://' , (platform fullNameForDirectory: externalDirectory).

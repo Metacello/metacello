@@ -1,11 +1,11 @@
 tests
-testNestedLoad02
+testNestedLoadY02
   | platform repo |
   platform := MetacelloPlatform current.
   repo := 'filetree://' , (platform fullNameForDirectory: externalDirectory).
   MetacelloAbstractBaselineResource customProjectAttributes: #(#'native').
   Metacello new
-    baseline: 'NestedX';
+    baseline: 'NestedY';
     repository: repo;
     silently;
     load.

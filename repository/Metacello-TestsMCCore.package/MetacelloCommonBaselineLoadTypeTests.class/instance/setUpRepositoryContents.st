@@ -10,6 +10,7 @@ setUpRepositoryContents
   super setUpRepositoryContents.
   self resourceClass current
     setUpBaselineOfNestedX: externalRepo packageVersion: '-dkh.1';
+    setUpBaselineOfNestedY: externalRepo packageVersion: '-dkh.1';
     setUpBaselineOfAtomicX: externalRepo
       packageVersion: '-dkh.1'
       loadType: self projectLoadType;

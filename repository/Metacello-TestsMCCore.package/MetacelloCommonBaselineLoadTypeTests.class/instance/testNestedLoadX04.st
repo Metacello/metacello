@@ -1,5 +1,5 @@
 tests
-testNestedLoad04
+testNestedLoadX04
   | platform repo directive expectedPrintString x |
   platform := MetacelloPlatform current.
   repo := 'filetree://' , (platform fullNameForDirectory: externalDirectory).
