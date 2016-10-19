@@ -6,6 +6,6 @@ currentlyLoadedClassesInVersion
     projectDo: [ :ignored |  ]
     packageDo: [ :packageSpec | 
       packageSpec isPackageLoaded
-        ifTrue: [ classes addAll: (CypressPackageDefinition named: packageName) classes ] ]
+        ifTrue: [ classes addAll: (CypressPackageDefinition named: packageSpec file) classes ] ]
     groupDo: [ :ignored |  ].
   ^ classes
