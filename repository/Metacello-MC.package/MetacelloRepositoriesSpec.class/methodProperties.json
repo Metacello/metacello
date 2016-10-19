@@ -2,16 +2,16 @@
 	"class" : {
 		 },
 	"instance" : {
-		"add:" : "dkh 09/29/2016 16:45:16",
+		"add:" : "dkh 6/8/2012 14:04:22",
 		"canUpgradeTo:" : "dkh 09/29/2016 16:45:16",
 		"compareEqual:" : "dkh 09/29/2016 16:45:16",
 		"configMethodCascadeOn:indent:" : "dkh 09/29/2016 16:45:16",
 		"configMethodOn:indent:" : "dkh 09/29/2016 16:45:16",
 		"hasNoLoadConflicts:" : "dkh 09/29/2016 16:45:16",
-		"merge:" : "dkh 09/29/2016 16:45:16",
+		"merge:" : "dkh 6/8/2012 14:04:22",
 		"metacelloRegistrationHash" : "dkh 09/29/2016 16:45:16",
-		"remove:" : "dkh 09/29/2016 16:45:16",
-		"repository:" : "dkh 09/29/2016 16:45:16",
-		"repository:constructor:" : "dkh 09/29/2016 16:45:16",
-		"repository:username:password:" : "dkh 09/29/2016 16:45:16",
-		"repository:username:password:constructor:" : "dkh 09/29/2016 16:45:16" } }
+		"remove:" : "dkh 6/8/2012 14:04:22",
+		"repository:" : "dkh 6/8/2012 14:04:22",
+		"repository:constructor:" : "dkh 6/8/2012 14:04:22",
+		"repository:username:password:" : "dkh 6/8/2012 14:04:22",
+		"repository:username:password:constructor:" : "dkh 6/8/2012 14:04:22" } }

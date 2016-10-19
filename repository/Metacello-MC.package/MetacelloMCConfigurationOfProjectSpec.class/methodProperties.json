@@ -2,13 +2,13 @@
 	"class" : {
 		 },
 	"instance" : {
-		"asConfigurationProjectSpec" : "dkh 09/29/2016 16:45:16",
-		"asProjectRegistration" : "dkh 09/29/2016 16:45:16",
-		"constructClassName" : "dkh 09/29/2016 16:45:16",
-		"copyForRegistration:onWrite:" : "dkh 09/29/2016 16:45:16",
-		"hasClassName" : "dkh 09/29/2016 16:45:16",
+		"asConfigurationProjectSpec" : "dkh 6/8/2012 14:04:22",
+		"asProjectRegistration" : "dkh 6/8/2012 14:04:22",
+		"constructClassName" : "dkh 6/8/2012 14:04:22",
+		"copyForRegistration:onWrite:" : "dkh 07/06/2014 11:35",
+		"hasClassName" : "dkh 6/8/2012 14:04:22",
 		"hasConflictWithBaselineSpec:" : "dkh 09/29/2016 16:45:16",
-		"hasConflictWithProjectSpec:" : "dkh 09/29/2016 16:45:16",
-		"isConfigurationOfProjectSpec" : "dkh 09/29/2016 16:45:16",
-		"mergeSpec:" : "dkh 09/29/2016 16:45:16",
-		"projectLabel" : "dkh 09/29/2016 16:45:16" } }
+		"hasConflictWithProjectSpec:" : "otto 11/18/2013 12:08",
+		"isConfigurationOfProjectSpec" : "talita 11/18/2013 22:21",
+		"mergeSpec:" : "dkh 6/8/2012 14:04:22",
+		"projectLabel" : "dkh 6/8/2012 14:04:22" } }

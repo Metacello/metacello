@@ -2,9 +2,16 @@
 	"class" : {
 		 },
 	"instance" : {
+		"ancestors" : "dkh 6/8/2012 14:04:22",
 		"compareWorkingCopyNamed:using:" : "dkh 6/8/2012 14:04:22",
 		"currentPackageLoaded:comparing:notLoaded:using:" : "dkh 07/19/2013 15:50",
+		"currentVersionInfo" : "dkh 6/8/2012 14:04:22",
 		"goferBranchPackage:message:" : "dkh 6/8/2012 14:04:22",
 		"goferCommitPackage:" : "dkh 6/8/2012 14:04:22",
+		"goferLoaderReference" : "dkh 09/29/2016 16:45:16",
+		"goferPackage" : "dkh 09/29/2016 16:45:16",
 		"isDirty" : "dkh 09/16/2016 16:10",
-		"loadUsing:gofer:" : "dkh 6/8/2012 14:04:22" } }
+		"loadUsing:gofer:" : "dkh 6/8/2012 14:04:22",
+		"workingCopy" : "dkh 6/8/2012 14:04:22",
+		"workingCopyName" : "dkh 6/8/2012 14:04:22",
+		"workingCopyNameFor:" : "dkh 6/8/2012 14:04:22" } }

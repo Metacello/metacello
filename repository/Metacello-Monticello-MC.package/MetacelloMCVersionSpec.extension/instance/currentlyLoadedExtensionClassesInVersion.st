@@ -1,4 +1,4 @@
-querying
+*metacello-monticello-mc
 currentlyLoadedExtensionClassesInVersion
   | classes |
   classes := Dictionary new.

@@ -2,11 +2,11 @@
 	"class" : {
 		 },
 	"instance" : {
-		"addVersion:versionInfo:resolvedReference:packageSpec:" : "dkh 09/29/2016 16:45:16",
-		"ancestorsFor:ifAbsent:" : "dkh 09/29/2016 16:45:16",
-		"currentVersionInfoFor:ifAbsent:" : "dkh 09/29/2016 16:45:16",
-		"dataMap" : "dkh 09/29/2016 16:45:16",
-		"do:" : "dkh 09/29/2016 16:45:16",
-		"isEmpty" : "dkh 09/29/2016 16:45:16",
-		"packageNameMap" : "dkh 09/29/2016 16:45:16",
-		"versionInfoMap" : "dkh 09/29/2016 16:45:16" } }
+		"addVersion:versionInfo:resolvedReference:packageSpec:" : "dkh 6/8/2012 14:04:22",
+		"ancestorsFor:ifAbsent:" : "dkh 6/8/2012 14:04:22",
+		"currentVersionInfoFor:ifAbsent:" : "dkh 6/8/2012 14:04:22",
+		"dataMap" : "dkh 6/8/2012 14:04:22",
+		"do:" : "dkh 6/8/2012 14:04:22",
+		"isEmpty" : "dkh 6/8/2012 14:04:22",
+		"packageNameMap" : "dkh 6/8/2012 14:04:22",
+		"versionInfoMap" : "dkh 6/8/2012 14:04:22" } }

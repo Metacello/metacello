@@ -1,4 +1,4 @@
-gofer
+*metacello-monticello-mc
 workingCopyName
 
 	| wc |

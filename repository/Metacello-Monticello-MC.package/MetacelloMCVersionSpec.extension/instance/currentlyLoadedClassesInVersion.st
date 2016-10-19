@@ -1,4 +1,4 @@
-querying
+*metacello-monticello-mc
 currentlyLoadedClassesInVersion
   | classes |
   classes := Set new.
