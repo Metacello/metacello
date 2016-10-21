@@ -3,7 +3,8 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		"Current" ],
+		"Current",
+                "PlatformClassAssociation" ],
 	"commentStamp" : "",
 	"instvars" : [
 		"bypassProgressBars",
