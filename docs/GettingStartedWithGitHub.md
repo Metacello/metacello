@@ -1,10 +1,10 @@
 # Getting Started with GitHub
 
-Currently **GemStone2.4**, **PharoCore 1.3**, **PharoCore 1.4** and **Squeak4.3** are supported.
+Currently **GemStone2.4**, **PharoCore 1.3**, **PharoCore 1.4**, **Pharo5** and **Squeak4.3** are supported.
 
 1. [Set up git][1].
 2. [Create a GitHub repository][2].
-3. [Create `filetree:` packages directory](#create-filetree-packages-direcotry)
+3. [Create `filetree:` repository directory](#create-filetree-repository-directory)
 4. [Install Metacello](#install-metacello)
 5. [Attach to git repository](#attach-to-git-repository)
 7. [Create baseline](#create-baseline)
@@ -14,8 +14,8 @@ Currently **GemStone2.4**, **PharoCore 1.3**, **PharoCore 1.4** and **Squeak4.3*
 11. [Create configuration](#create-configuration)
 12. [Git workflow](#git-workflow)
 
-## Create `filetree:` packages directory
-Technically the [FileTree][3] packages repository can be located in the root of
+## Create `filetree:` repository directory
+Technically the [FileTree][3] repository into which packages have to be persisted can be located in the root of
 your git checkout, but I like to provide some initial structure to the
 git repository so there is room for adding artifacts (like documentation) in
 addition to the packages.
@@ -27,11 +27,13 @@ I start my projects with the following files and directories:
   +-docs
   |  +-README.md
   +-license.txt
-  +-packages
+  +-repository
   +-README.md
 ```
 
-I put the Monticello packages in the `packages` directory.
+I put the Monticello packages in the `repository` directory.
+
+Some like to use other names. Common spotted naming schemes include: `mc`, `src`, `packages` (the use of this last one is actually not recommended because of some obscure GitHub reason related to MSProject).
 
 ## Install Metacello
 
@@ -56,6 +58,8 @@ Gofer new
   load.
 ```
 
+For Pharo 5 and beyond, Metacello/FileTree/GitFileTree are already in the base image.
+
 For Squeak, you will want to use **Installer** to load the
 *ConfigurationOfMetacello*.
 
@@ -71,7 +75,7 @@ If you prefer you can execute the following:
 ```Smalltalk
 | pathToPackageDirectory packageDirectory repo |
 "edit to match the path to your chosen package directory"
-pathToPackageDirectory := '/opt/git/Sample/packages'.
+pathToPackageDirectory := '/opt/git/Sample/repository'.
 packageDirectory := FileDirectory on: pathToPackageDirectory.
 "create a FileTree repository"
 repo := MCFileTreeRepository new
@@ -295,7 +299,7 @@ Registry*:
 ```Smalltalk
 | pathToPackageDirectory |
 "edit to match the path to your chosen package directory"
-pathToPackageDirectory := '/opt/git/Sample/packages'.
+pathToPackageDirectory := '/opt/git/Sample/repository'.
 Metacello new
   baseline: 'Sample';
   repository: 'filetree://', pathToPackageDirectory;
@@ -313,7 +317,7 @@ Metacello new
   load.
 ```
 
-For more information on the `github://dalehenrich/sample:cecd1626d27f67175f22e6075ca2d1177da1d525/packages` description see the section on
+For more information on the `github://dalehenrich/sample:cecd1626d27f67175f22e6075ca2d1177da1d525/repository` description see the section on
 [github://](MetacelloScriptingAPI.md#github) in the [Metacello Scripting API
 reference](MetacelloScriptingAPI.md).
 
@@ -350,6 +354,7 @@ Start by creating a subclass of **ConfigurationOf**:
 ```Smalltalk
 ConfigurationOf subclass: #ConfigurationOfSample
   instanceVariableNames: ''
+
   classVariableNames: ''
   poolDictionaries: ''
   category: 'ConfigurationOfSample'
@@ -366,14 +371,14 @@ version100: spec
             spec author: 'dkh'.
             spec timestamp: '7/30/2012 15:52'.
             spec
-                baseline: 'Sample' with: [ spec repository: 'github://dalehenrich/sample:cecd1626d27f67175f22e6075ca2d1177da1d525/packages' ];
+                baseline: 'Sample' with: [ spec repository: 'github://dalehenrich/sample:cecd1626d27f67175f22e6075ca2d1177da1d525/repository' ];
                 import: 'Sample' ]
 ```
 
 Note that you should only use this approach if you are sharing your
 configuration with folks who are participating in the Metacello Preview.
 
-For more information on the `github://dalehenrich/sample:cecd1626d27f67175f22e6075ca2d1177da1d525/packages` description see the section on
+For more information on the `github://dalehenrich/sample:cecd1626d27f67175f22e6075ca2d1177da1d525/repository` description see the section on
 [github://](MetacelloScriptingAPI.md#github) in the [Metacello Scripting API
 reference](MetacelloScriptingAPI.md).
 
@@ -389,3 +394,4 @@ worth reading about [git-flow][7].
 [5]: http://pharobyexample.org/
 [6]: http://scottchacon.com/2011/08/31/github-flow.html
 [7]: http://nvie.com/posts/a-successful-git-branching-model/
+
