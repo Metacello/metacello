@@ -120,7 +120,7 @@ If you want to override the default behavior you can use one the following messa
     load: 'Seaside'.
   ```
 
-2. Dsallow upgrades for all projects with the **#disallowUpgrades** message:
+2. Disallow upgrades for all projects with the **#disallowUpgrades** message:
 
   ```Smalltalk
   Metacello new
@@ -153,7 +153,7 @@ By default, downgrades are disallowed (`useLoaded`).
 
 If you want to override the default behavior you can use one of the following expressions:
 
-1. Allow a downgrade of Seaside3 project with the **allowDowngrades:** message:
+1. Allow a downgrade of Seaside3 project with the **allowDowngrades:** message: <--- _onDowngradeUseIncoming:_ seems to be what is used.
 
   ```Smalltalk
   Metacello new
@@ -164,7 +164,7 @@ If you want to override the default behavior you can use one of the following ex
     load: 'Seaside'.
   ```
 
-2. Allow downgrades for all projects with the **allowDowngrades** message:
+2. Allow downgrades for all projects with the **allowDowngrades** message:  <--- _onDowngrqdeUseIncoming_ seems to be what is used.
 
   ```Smalltalk
   Metacello new
@@ -251,7 +251,11 @@ As a consequence, you must decide how you want to have the conflict resolved:
 ##Listing
 
 Once you've loaded one or more projects into your image, you may want to
-list them. The following is an example of the [`list` command][6]:
+list them. 
+
+###Configurations
+
+The following is an example of the [`list` command][6]:
 
 ```Smalltalk
 Metacello image
@@ -296,6 +300,18 @@ Metacello new
 lists the configurations whose names (sans the `ConfigurationOf`) begin
 with `Seaside` in the
 [smalltalk hub](http://smalltalkhub.com/mc/Seaside/Seaside31/main) repostory.
+
+### Baselines
+There is another version of this allowing you to look at loaded baselines.
+
+```Smalltalk
+Metacello image
+  baseline: [:spec | true ];
+  list.
+```
+
+The `baseline:` message works in the same fashion as `configuration:` except that it deals with basenlines.
+
 
 ## Getting
 
