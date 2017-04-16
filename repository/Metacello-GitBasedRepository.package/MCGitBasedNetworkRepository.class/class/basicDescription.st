@@ -1,3 +1,3 @@
 accessing
 basicDescription
-  ^ self subclassResponsibility
+  ^ 'git'
