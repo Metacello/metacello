@@ -2,7 +2,7 @@
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dalehenrich/metacello-work?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-###GemStone
+### GemStone
 GsUpgrader works on all versions of GemStone against all Versions of GLASS:
 
 ```Smalltalk
@@ -13,7 +13,7 @@ Gofer new
 (Smalltalk at: #GsUpgrader) upgradeMetacello.
 ```
 
-###Pharo3.0, Pharo4.0, and Pharo5.0
+### Pharo3.0, Pharo4.0, and Pharo5.0
 Metacello Preview  is pre-installed in Pharo3.0 the following installs the latest released version:
 
 ```Smalltalk
@@ -28,7 +28,7 @@ Metacello new
   load
 ```
 
-###Pharo (older than Pharo3.0)
+### Pharo (older than Pharo3.0)
 
 ```Smalltalk
 "Get the Metacello configuration"
@@ -58,7 +58,7 @@ Metacello new
   load
 ```
 
-###Squeak
+### Squeak
 
 ```Smalltalk
 "Get the Metacello configuration (for Squeak users)"
@@ -92,10 +92,10 @@ Installer gemsource
 
 See the [.travis.yml file](./.travis.yml) for list of supported platforms and versions.
 
-If you are interested in using GitHub with the Metacello Preview, you should check out 
+If you are interested in using GitHub with the Metacello Preview, you should read The excellent [chapter on Metacello in Deep Into Pharo][5], then check out 
 [Getting Started with GitHub][1], the [Metacello User Guide][2], the [Metacello Scripting API][3], and [Issue #136 detail][4].
 
-###TravisCI Status
+### TravisCI Status
 **master branch**: [![Build Status](https://secure.travis-ci.org/dalehenrich/metacello-work.png?branch=master)](http://travis-ci.org/dalehenrich/metacello-work)
 
 **configuration branch**: [![Build Status](https://secure.travis-ci.org/dalehenrich/metacello-work.png?branch=configuration)](http://travis-ci.org/dalehenrich/metacello-work)
@@ -104,5 +104,6 @@ If you are interested in using GitHub with the Metacello Preview, you should che
 [2]: docs/MetacelloUserGuide.md
 [3]: docs/MetacelloScriptingAPI.md
 [4]: docs/Issue_136Detail.md
+[5]: http://pharobooks.gforge.inria.fr/PharoByExampleTwo-Eng/latest/Metacello.pdf
 
 
