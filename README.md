@@ -100,10 +100,17 @@ If you are interested in using GitHub with the Metacello Preview, you should rea
 
 **configuration branch**: [![Build Status](https://secure.travis-ci.org/dalehenrich/metacello-work.png?branch=configuration)](http://travis-ci.org/dalehenrich/metacello-work)
 
+### Some things to ponder 
+[Dear package managers: dependency resolution results should be in version control][6] ([twitter comment thread][7]).
+
+Interesting problem - non-reproducable builds when using non-exact dependent project versions. Wanders into the territory that Metacello locks for local git clones addresses ... but being able to communicate to others in some fashion is an interesting idea. 
+
 [1]: docs/GettingStartedWithGitHub.md
 [2]: docs/MetacelloUserGuide.md
 [3]: docs/MetacelloScriptingAPI.md
 [4]: docs/Issue_136Detail.md
 [5]: http://pharobooks.gforge.inria.fr/PharoByExampleTwo-Eng/latest/Metacello.pdf
+[6]: https://blog.ometer.com/2017/01/10/dear-package-managers-dependency-resolution-results-should-be-in-version-control/
+[7]: https://twitter.com/migueldeicaza/status/868450752347480064
 
 
