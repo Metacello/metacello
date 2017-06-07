@@ -70,7 +70,7 @@ Metacello new
   load.
 ```
 
-###Load Conflicts
+### Load Conflicts
 Load conflicts occur if any one of the load attributes is changed when doing an *indirect* load of a project that has already been loaded into your image.
 
 A *direct* load is a project load occurs when the project is named in the Metacello load expression.
@@ -103,7 +103,7 @@ Load attributes that count towards conflicts are:
 
 Version conflicts are divided into two categories: [upgrade](#upgrade) and [downgrade](#downgrade). 
 
-####Upgrade
+#### Upgrade
 When a later version of an already loaded project is indirecty loaded, a **MetacelloAllowProjectUpgrade** exception is signaled.
 By default, upgrades are allowed (`useIncoming`). 
 
@@ -147,7 +147,7 @@ If you want to override the default behavior you can use one the following messa
     load: 'Seaside'.
   ```
 
-####Downgrade
+#### Downgrade
 When an earlier version of an already loaded project is indirectly loaded, a **MetacelloAllowProjectDowngrade** exception is signaled.
 By default, downgrades are disallowed (`useLoaded`). 
 
@@ -191,7 +191,7 @@ If you want to override the default behavior you can use one of the following ex
     load: 'Seaside'.
   ```
 
-####Conflicts
+#### Conflicts
 When the type of project (configuration or baseline) or repository for an already loaded project is changed while doing an indirect load, a **MetacelloAllowConflictingProjectUpgrade** exception is signaled.
 By default, a **MetacelloConflictingProjectError** is signalled if the **MetacelloAllowConflictingProjectUpgrade** exception is unhandled.
 As a consequence, you must decide how you want to have the conflict resolved: 
@@ -248,12 +248,12 @@ As a consequence, you must decide how you want to have the conflict resolved:
     load: 'Seaside'.
   ```
 
-##Listing
+## Listing
 
 Once you've loaded one or more projects into your image, you may want to
 list them. 
 
-###Configurations
+### Configurations
 
 The following is an example of the [`list` command][6]:
 
@@ -398,7 +398,7 @@ Metacello registry
 In this case you use the `registry` message to indicate that you are
 interested in both *loaded* and *unloaded* projects.
 
-##Locking
+## Locking
 
 Let's say that you are using an older version of Seaside3 (say 3.1.1)
 instead of the #stable version (3.1.3) and that your application doesn't
