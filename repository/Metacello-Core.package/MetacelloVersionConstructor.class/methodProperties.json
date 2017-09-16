@@ -1,27 +1,30 @@
 {
+	"instance" : {
+		"collectAllSymbolicVersionsFromVersionPragmasInto:using:" : " 8/31/2017 07:16:49",
+		"collectAllVersionsFromVersionPragmasInto:using:" : " 8/31/2017 07:16:49",
+		"collectDefaultSymbolicVersionsFromVersionPragmasFrom:into:using:" : " 8/31/2017 07:16:49",
+		"calculate:project:" : " 8/31/2017 07:16:49",
+		"on:" : " 8/31/2017 07:16:49",
+		"verifyVersionImportPragmas:definedIn:" : "dkh 6/5/2012 19:01:24",
+		"defaultSymbolicVersionResolverBlock" : " 8/31/2017 07:16:49",
+		"symbolicVersionResolverBlock" : " 8/31/2017 07:16:49",
+		"prepareForMethodUpdate:sourceVersion:forceUpdate:generating:" : "dkh 6/5/2012 19:01:24",
+		"commonDefaultSymbolicVersionResolverBlock" : " 8/31/2017 07:16:49",
+		"validateVersionString:againstSpec:" : " 8/31/2017 07:16:49",
+		"on:project:" : " 8/31/2017 07:16:49",
+		"collectAllVersionsFromVersionImportPragmasInto:using:satisfiedPragmas:" : " 8/31/2017 07:16:49",
+		"spawnPackageMethodIn:category:named:sourceVersion:targetVersion:blessing:" : "dkh 6/5/2012 19:01:24",
+		"defaultSymbolicVersionResolverBlock:" : "EstebanLorenzano 9/16/2017 14:01",
+		"specResolverBlock" : " 8/31/2017 07:16:49",
+		"errorMap" : " 8/31/2017 07:16:49",
+		"updatePackageMethodIn:sourceVersion:" : "dkh 6/5/2012 19:01:24"
+	},
 	"class" : {
-		"on:" : "dkh 6/5/2012 19:01:24",
-		"on:project:" : "dkh 6/5/2012 19:01:24",
+		"spawnPackageMethodIn:named:sourceVersion:targetVersion:blessing:" : "dkh 6/5/2012 19:01:24",
+		"on:" : " 8/31/2017 07:16:49",
+		"on:project:" : " 8/31/2017 07:16:49",
 		"spawnPackageMethodIn:category:named:sourceVersion:targetVersion:blessing:" : "dkh 6/5/2012 19:01:24",
 		"spawnPackageMethodIn:named:sourceVersion:targetVersion:" : "dkh 6/5/2012 19:01:24",
-		"spawnPackageMethodIn:named:sourceVersion:targetVersion:blessing:" : "dkh 6/5/2012 19:01:24",
-		"updatePackageMethodIn:sourceVersion:" : "dkh 6/5/2012 19:01:24" },
-	"instance" : {
-		"calculate:project:" : "dkh 6/22/2012 12:43",
-		"collectAllSymbolicVersionsFromVersionPragmasInto:using:" : "dkh 6/5/2012 19:01:24",
-		"collectAllVersionsFromVersionImportPragmasInto:using:satisfiedPragmas:" : "pad 8/25/2015 13:30",
-		"collectAllVersionsFromVersionPragmasInto:using:" : "dkh 6/5/2012 19:01:24",
-		"collectDefaultSymbolicVersionsFromVersionPragmasFrom:into:using:" : "dkh 6/5/2012 19:01:24",
-		"commonDefaultSymbolicVersionResolverBlock" : "dkh 6/5/2012 19:01:24",
-		"defaultSymbolicVersionResolverBlock" : "dkh 6/5/2012 19:01:24",
-		"defaultSymbolicVersionResolverBlock:" : "dkh 6/5/2012 19:01:24",
-		"errorMap" : "dkh 6/5/2012 19:01:24",
-		"on:" : "dkh 6/5/2012 19:01:24",
-		"on:project:" : "dkh 6/5/2012 19:01:24",
-		"prepareForMethodUpdate:sourceVersion:forceUpdate:generating:" : "dkh 6/5/2012 19:01:24",
-		"spawnPackageMethodIn:category:named:sourceVersion:targetVersion:blessing:" : "dkh 6/5/2012 19:01:24",
-		"specResolverBlock" : "dkh 6/5/2012 19:01:24",
-		"symbolicVersionResolverBlock" : "dkh 6/5/2012 19:01:24",
-		"updatePackageMethodIn:sourceVersion:" : "dkh 6/5/2012 19:01:24",
-		"validateVersionString:againstSpec:" : "dkh 6/5/2012 19:01:24",
-		"verifyVersionImportPragmas:definedIn:" : "dkh 6/5/2012 19:01:24" } }
+		"updatePackageMethodIn:sourceVersion:" : "dkh 6/5/2012 19:01:24"
+	}
+}

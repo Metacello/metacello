@@ -1,8 +1,9 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"defaultAction" : "dkh 09/28/2014 15:00",
-		"handleOnDownGrade:onUpgrade:" : "dkh 7/18/2012 16:46",
-		"handleResolutionFor:" : "dkh 6/8/2012 10:41",
-		"operationString" : "dkh 07/29/2013 16:49" } }
+		"handleOnDownGrade:onUpgrade:" : " 8/31/2017 07:16:49",
+		"operationString" : " 8/31/2017 07:16:49",
+		"handleResolutionFor:" : " 8/31/2017 07:16:49",
+		"defaultAction" : " 8/31/2017 07:16:49"
+	},
+	"class" : { }
+}

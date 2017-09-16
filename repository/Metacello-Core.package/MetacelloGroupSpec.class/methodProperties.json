@@ -1,13 +1,14 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"answers:" : "dkh 6/5/2012 19:01:24",
-		"configMethodCascadeOn:member:last:indent:" : "dkh 6/5/2012 19:01:24",
-		"configMethodOn:indent:" : "dkh 6/5/2012 19:01:24",
-		"includeSpecNamesForPackageOrdering:" : "dkh 10/03/2014 18:45",
-		"projectDo:packageDo:groupDo:" : "dkh 6/5/2012 19:01:24",
-		"requiredSpecsForPackageOrdering:" : "dkh 10/03/2014 11:39",
-		"requires:" : "dkh 6/5/2012 19:01:24",
-		"requiresSpecsForPackageOrdering:" : "dkh 10/03/2014 14:39",
-		"resolveSpecsForPackageOrdering:" : "dkh 10/03/2014 18:42" } }
+		"resolveSpecsForPackageOrdering:" : " 8/31/2017 07:16:49",
+		"projectDo:packageDo:groupDo:" : " 8/31/2017 07:16:49",
+		"answers:" : " 8/31/2017 07:16:49",
+		"configMethodCascadeOn:member:last:indent:" : " 8/31/2017 07:16:49",
+		"requires:" : " 8/31/2017 07:16:49",
+		"requiresSpecsForPackageOrdering:" : " 8/31/2017 07:16:49",
+		"includeSpecNamesForPackageOrdering:" : " 8/31/2017 07:16:49",
+		"configMethodOn:indent:" : " 8/31/2017 07:16:49",
+		"requiredSpecsForPackageOrdering:" : " 8/31/2017 07:16:49"
+	},
+	"class" : { }
+}
