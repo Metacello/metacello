@@ -6,6 +6,16 @@
 #
 # Copyright (c) 2012-2013 VMware, Inc. All Rights Reserved <dhenrich@vmware.com>.
 #
+
+REPO="${TRAVIS_REPO_SLUG:-metacello-work}"
+REPO="${REPO##*/}"
+
+for stFile in ${PROJECT_HOME}/tests/*.st; do
+  mv "${stFile}" "${stFile}_"
+  sed -e "s/%REPO%/${REPO}/g" < "${stFile}_" > "${stFile}"
+  rm "${stFile}_"
+done
+
 ./build.sh -i $ST $BUILD_ARG -f "$PROJECT_HOME/tests/$TRAVIS_SCRIPT" -o travisCI
 if [[ $? != 0 ]] ; then 
   echo "ERROR: $(basename $0)"
