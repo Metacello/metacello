@@ -4,9 +4,9 @@ Transcript cr; show: 'travis---->travisCI.st'.
 gitCache := 'git_cache'.
 
 metacelloDir := (Smalltalk at: #'FileDirectory' ifAbsent: [  ])
-  ifNil: [ (Smalltalk at: #'FileSystem') workingDirectory / gitCache / 'metacello-work' ]
+  ifNil: [ (Smalltalk at: #'FileSystem') workingDirectory / gitCache / '%REPO%' ]
   ifNotNil: [:fileDirectoryClass | 
-    (fileDirectoryClass default directoryNamed: gitCache, '/metacello-work' ) ].
+    (fileDirectoryClass default directoryNamed: gitCache, '/%REPO%' ) ].
 
 [
 Gofer new
