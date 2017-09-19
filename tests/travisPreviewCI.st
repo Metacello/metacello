@@ -15,12 +15,12 @@ gitPath := (Smalltalk at: #'FileDirectory' ifAbsent: [  ])
 Metacello new
   configuration: 'MetacelloPreview';
   version: #stable;
-  repository: 'filetree://', gitPath, '/metacello-work';
+  repository: 'filetree://', gitPath, '/%REPO%';
   get.
 Metacello new
   configuration: 'MetacelloPreview';
   version: #stable;
-  repository: 'filetree://', gitPath, '/metacello-work';
+  repository: 'filetree://', gitPath, '/%REPO%';
   onConflict: [:ex :existing :new |
     "allow new version of Metacello to be loaded"
     existing baseName = 'Metacello'
