@@ -1,14 +1,11 @@
 {
-	"category" : "Metacello-TestsMCA",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "MetacelloGoferFunctionalTest",
-	"pools" : [
-		 ],
 	"super" : "MetacelloDictionaryRepositoryTest",
-	"type" : "normal" }
+	"category" : "Metacello-TestsMCA",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MetacelloGoferFunctionalTest",
+	"type" : "normal"
+}

@@ -1,14 +1,13 @@
 {
-	"category" : "Metacello-TestsMCA",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		"tempRepositories" ],
-	"name" : "MetacelloToolBoxAPITestCase",
-	"pools" : [
-		 ],
 	"super" : "TestCase",
-	"type" : "normal" }
+	"category" : "Metacello-TestsMCA",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"tempRepositories"
+	],
+	"name" : "MetacelloToolBoxAPITestCase",
+	"type" : "normal"
+}

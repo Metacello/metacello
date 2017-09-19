@@ -1,18 +1,17 @@
 {
-	"category" : "Metacello-TestsMCA",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "MetacelloConfigMCAPITestCase",
+	"category" : "Metacello-TestsMCA",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"alternatePreLoadExecuted",
 		"preLoadExecuted",
 		"postLoadExecuted",
 		"preloadAnswer",
-		"postloadAnswer" ],
+		"postloadAnswer"
+	],
 	"name" : "MetacelloConfigAPITestCase",
-	"pools" : [
-		 ],
-	"super" : "MetacelloConfigMCAPITestCase",
-	"type" : "normal" }
+	"type" : "normal"
+}

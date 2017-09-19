@@ -1,6 +1,7 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"testIssue175" : "dkh 10/16/2014 22:06",
-		"testIssue309" : "dkh 11/10/2014 14:53" } }
+		"testIssue309" : "dkh 11/10/2014 14:53",
+		"testIssue175" : "dkh 10/16/2014 22:06"
+	},
+	"class" : { }
+}
