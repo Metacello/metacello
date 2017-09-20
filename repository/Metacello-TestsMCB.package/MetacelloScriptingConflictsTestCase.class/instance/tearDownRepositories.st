@@ -1,4 +1,4 @@
 running
 tearDownRepositories
     super tearDownRepositories.
-    Smalltalk removeKey: #'Metacello_Conflict_Test_Repository' ifAbsent: [  ]
+    Smalltalk globals removeKey: #'Metacello_Conflict_Test_Repository' ifAbsent: [  ]

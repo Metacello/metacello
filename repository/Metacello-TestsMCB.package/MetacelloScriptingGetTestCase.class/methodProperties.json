@@ -3,7 +3,7 @@
 		 },
 	"instance" : {
 		"setUpRepositoryContents" : "dkh 7/17/2012 07:18",
-		"tearDownRepositories" : "dkh 10/18/2014 09:28",
+		"tearDownRepositories" : "topa 9/20/2017 11:04",
 		"testFileTreeGetBaseline" : "dkh 7/17/2012 10:11",
 		"testFileTreeGetConfigurationBasicSpecIV" : "dkh 6/22/2012 17:42",
 		"testFileTreeGetConfigurationBasicSpecX" : "dkh 6/22/2012 17:42",

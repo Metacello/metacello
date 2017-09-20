@@ -6,11 +6,11 @@ tearDown
   self tearDownPackages: aGofer.
   aGofer references notEmpty
     ifTrue: [ aGofer metacelloUnload ].
-  Smalltalk removeKey: self repositoryName ifAbsent: [  ].
-  Smalltalk removeKey: self alternatRepositoryName ifAbsent: [  ].
-  Smalltalk removeKey: #'Metacello_Gofer_Test_Repository' ifAbsent: [  ].
-  Smalltalk removeKey: #'Metacello_Configuration_Test_Repository' ifAbsent: [  ].
-  Smalltalk at: self configurationName ifPresent: [ :cl | cl removeFromSystem ].
+  Smalltalk globals removeKey: self repositoryName ifAbsent: [  ].
+  Smalltalk globals removeKey: self alternatRepositoryName ifAbsent: [  ].
+  Smalltalk globals removeKey: #'Metacello_Gofer_Test_Repository' ifAbsent: [  ].
+  Smalltalk globals removeKey: #'Metacello_Configuration_Test_Repository' ifAbsent: [  ].
+  Smalltalk globals at: self configurationName ifPresent: [ :cl | cl removeFromSystem ].
   self tempRepositories
     do: [ :repo | MCRepositoryGroup default removeIdenticalRepository: repo ].
   (self hasPackage: self configurationName asString)
