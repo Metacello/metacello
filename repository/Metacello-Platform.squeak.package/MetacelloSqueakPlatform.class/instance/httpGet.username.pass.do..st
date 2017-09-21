@@ -3,6 +3,7 @@ httpGet: url username: username pass: pass do: aBlock
 
   | client |
   client := WebClient new.
+  client debugLog: Transcript.
   username ifNotNil: [client username: username; password: [pass]].
   ^ (client httpGet: url do: aBlock)
     content;

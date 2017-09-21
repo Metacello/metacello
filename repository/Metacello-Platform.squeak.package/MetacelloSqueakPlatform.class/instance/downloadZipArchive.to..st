@@ -3,7 +3,7 @@ downloadZipArchive: url to: outputFileName
   "download zip archive from <url> into <outputFileName>"
 
     | archive zipfile response |
-    response := WebClient httpGet: url.
+    response := WebClient  httpDo:[:client| client debugLog: Transcript; httpGet: url].
     archive := ZipArchive new.
     zipfile := FileDirectory on: (FileDirectory default fullPathFor: outputFileName).
     zipfile containingDirectory assureExistence.
