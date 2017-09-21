@@ -12,15 +12,11 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
     info
       at: 'ETag'
       ifPresent: [:tag | req headerAt: 'If-None-Match' put: tag]
-      ifAbsent: [
-        Transcript show: 'no etag for ', eTagsKey; cr.
-         req headerAt: 'If-Modified-Since' put:  'Mon, 23 Apr 2012 14:17:47 GMT']].
-  Transcript show: 'req: ', response request; cr.
-  Transcript show: 'resp: ', response; cr.
+      ifAbsent: [req headerAt: 'If-Modified-Since' put:  'Mon, 23 Apr 2012 14:17:47 GMT']].
 
-"  response isSuccess | response isRedirect
+  response isSuccess | response isRedirect
     ifFalse: [ Transcript cr; show: 'downloadJSON:eTagsCache:eTagsKey:username:pass: ', response printString ].
- " 
+ 
   response code = 304 ifTrue: [" Not modified"
     ^ info
       at: 'jsonObject'
