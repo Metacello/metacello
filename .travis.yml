@@ -6,7 +6,7 @@ os: linux
 smalltalk:
   - GemStone-3.3.1
   - Pharo-5.0
-  - Squeak-5.0
+  - Squeak-5.1
   - GemStone-2.4.8
   - GemStone-3.1.0.6
   - GemStone-3.2.15
@@ -15,6 +15,7 @@ smalltalk:
   - Pharo-6.0
   - Squeak-4.5
   - Squeak-4.6
+  - Squeak-5.0
   - Squeak-trunk
 
 smalltalk_config:
@@ -27,6 +28,7 @@ matrix:
     - smalltalk: Squeak-4.5
     - smalltalk: Squeak-4.6
     - smalltalk: Squeak-5.0
+    - smalltalk: Squeak-5.1
     - smalltalk: Squeak-trunk
     - smalltalk: Pharo-6.0
 
