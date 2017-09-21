@@ -29,7 +29,6 @@ matrix:
     - smalltalk: Squeak-4.6
     - smalltalk: Squeak-5.0
     - smalltalk: Squeak-trunk
-    - smalltalk: Pharo-6.0
 
 cache:
   directories:
