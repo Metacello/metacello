@@ -6,11 +6,11 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
 
   | info response |
   eTagsCache ifNil: [^ self self downloadJSON: url username: username pass: pass].
-
+  Transcript cr.
   info := eTagsCache at: eTagsKey ifAbsentPut: [Dictionary new].
   response := self httpGet: url username: username pass: pass do: [:req |
-    (info at: 'ETag' ifPresent: [:tag | req headerAt: 'If-None-Match' put:  tag]).
-    Transcript show: 'req: ', req; cr.].
+    info at: 'ETag' ifPresent: [:tag | req headerAt: 'If-None-Match' put:  tag] ifAbsent: [Transcript show: 'no etag for ', eTagsKey; cr]].
+  Transcript show: 'req: ', response request; cr.
   Transcript show: 'resp: ', response; cr.
 
 "  response isSuccess | response isRedirect
