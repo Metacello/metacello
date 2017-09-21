@@ -1,12 +1,12 @@
 {
 	"class" : {
+		"cleanUp:" : "topa 9/21/2017 11:50",
 		"initialize" : "dkh 6/12/2012 10:18:46.076" },
 	"instance" : {
 		"authorName" : "dkh 6/12/2012 10:18:46.076",
 		"authorName:" : "dkh 6/12/2012 10:18:46.076",
 		"cacheJSONFor:in:" : "topa 9/20/2017 13:44",
 		"cacheMetadataFor:in:" : "topa 9/20/2017 13:43",
-		"cleanUp:" : "topa 9/20/2017 14:18",
 		"collection:do:displaying:" : "dkh 6/12/2012 10:18:46.076",
 		"copyClass:as:inCategory:" : "dkh 6/12/2012 10:18:46.076",
 		"createRepository:" : "dkh 6/12/2012 10:18:46.076",
@@ -21,6 +21,7 @@
 		"globalNamed:" : "dkh 6/12/2012 10:18:46.076",
 		"globalNamed:ifAbsent:" : "dkh 6/12/2012 10:18:46.076",
 		"httpGet:username:pass:do:" : "topa 9/20/2017 14:04",
+		"initialize" : "topa 9/21/2017 11:51",
 		"string:includesSubstring:" : "topa 9/21/2017 11:04",
 		"tempFileFor:suffix:" : "jr 10/19/2016 14:52",
 		"timestamp" : "dkh 6/12/2012 10:18:46.076",
