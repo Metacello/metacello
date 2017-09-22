@@ -1,7 +1,8 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"initialize" : "dkh 6/8/2012 14:04:22",
-		"pushProject:" : "dkh 6/8/2012 14:04:22",
-		"visit:doing:" : "dkh 6/8/2012 14:04:22" } }
+		"initialize" : " 9/21/2017 13:27:01",
+		"visit:doing:" : " 9/21/2017 13:27:01",
+		"pushProject:" : " 9/21/2017 13:27:01"
+	},
+	"class" : { }
+}

@@ -1,21 +1,22 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"actionLabel" : "dkh 6/8/2012 14:04:22",
-		"copySpec:from:to:" : "dkh 6/8/2012 14:04:22",
-		"copySpec:with:to:" : "dkh 6/8/2012 14:04:22",
-		"doLoad" : "dkh 6/8/2012 14:04:22",
-		"fetchingSpecLoader" : "dkh 6/8/2012 14:04:22",
-		"goferCommitBranchPackage:using:commitMessage:" : "dkh 6/8/2012 14:04:22",
-		"goferCommitPackageUsing:commitMessage:" : "dkh 6/8/2012 14:04:22",
-		"latestPackage:fromRepository:" : "dkh 6/8/2012 14:04:22",
-		"linearLoadPackageSpec:gofer:" : "dkh 09/04/2014 13:52",
-		"packagesNeedSavingUsing:into:" : "dkh 6/8/2012 14:04:22",
-		"postLoad:" : "dkh 6/8/2012 14:04:22",
-		"preLoad:" : "dkh 6/8/2012 14:04:22",
-		"repositoryFor:from:" : "dkh 6/8/2012 14:04:22",
-		"repositoryFor:with:" : "dkh 6/8/2012 14:04:22",
-		"resolveSpec:from:" : "dkh 6/8/2012 14:04:22",
-		"resolveSpec:with:" : "dkh 6/8/2012 14:04:22",
-		"savePackageUsing:" : "ChristopheDemarey 9/11/2013 13:21" } }
+		"resolveSpec:with:" : " 9/21/2017 13:27:01",
+		"packagesNeedSavingUsing:into:" : " 9/21/2017 13:27:01",
+		"repositoryFor:with:" : " 9/21/2017 13:27:01",
+		"copySpec:with:to:" : " 9/21/2017 13:27:01",
+		"actionLabel" : " 9/21/2017 13:27:01",
+		"goferCommitBranchPackage:using:commitMessage:" : " 9/21/2017 13:27:01",
+		"postLoad:" : " 9/21/2017 13:27:01",
+		"resolveSpec:from:" : " 9/21/2017 13:27:01",
+		"savePackageUsing:" : " 9/21/2017 13:27:01",
+		"latestPackage:fromRepository:" : " 9/21/2017 13:27:01",
+		"linearLoadPackageSpec:gofer:" : " 9/21/2017 13:27:01",
+		"doLoad" : " 9/21/2017 13:27:01",
+		"preLoad:" : " 9/21/2017 13:27:01",
+		"fetchingSpecLoader" : " 9/21/2017 13:27:01",
+		"goferCommitPackageUsing:commitMessage:" : " 9/21/2017 13:27:01",
+		"copySpec:from:to:" : " 9/21/2017 13:27:01",
+		"repositoryFor:from:" : " 9/21/2017 13:27:01"
+	},
+	"class" : { }
+}

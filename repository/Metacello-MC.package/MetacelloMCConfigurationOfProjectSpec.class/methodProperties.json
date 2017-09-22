@@ -1,14 +1,15 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"asConfigurationProjectSpec" : "dkh 6/8/2012 14:04:22",
-		"asProjectRegistration" : "dkh 6/8/2012 14:04:22",
-		"constructClassName" : "dkh 6/8/2012 14:04:22",
-		"copyForRegistration:onWrite:" : "dkh 07/06/2014 11:35",
-		"hasClassName" : "dkh 6/8/2012 14:04:22",
-		"hasConflictWithBaselineSpec:" : "otto 11/18/2013 12:09",
-		"hasConflictWithProjectSpec:" : "otto 11/18/2013 12:08",
-		"isConfigurationOfProjectSpec" : "talita 11/18/2013 22:21",
-		"mergeSpec:" : "dkh 6/8/2012 14:04:22",
-		"projectLabel" : "dkh 6/8/2012 14:04:22" } }
+		"hasConflictWithBaselineSpec:" : " 9/21/2017 13:27:01",
+		"asProjectRegistration" : " 9/21/2017 13:27:01",
+		"hasConflictWithProjectSpec:" : " 9/21/2017 13:27:01",
+		"isConfigurationOfProjectSpec" : " 9/21/2017 13:27:01",
+		"projectLabel" : " 9/21/2017 13:27:01",
+		"constructClassName" : " 9/21/2017 13:27:01",
+		"hasClassName" : " 9/21/2017 13:27:01",
+		"copyForRegistration:onWrite:" : " 9/21/2017 13:27:01",
+		"mergeSpec:" : " 9/21/2017 13:27:01",
+		"asConfigurationProjectSpec" : " 9/21/2017 13:27:01"
+	},
+	"class" : { }
+}

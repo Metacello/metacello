@@ -1,17 +1,18 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"add:" : "dkh 6/8/2012 14:04:22",
-		"canUpgradeTo:" : "dkh 07/05/2014 18:21",
-		"compareEqual:" : "dkh 6/15/2012 13:40",
-		"configMethodCascadeOn:indent:" : "dkh 6/8/2012 14:04:22",
-		"configMethodOn:indent:" : "dkh 6/8/2012 14:04:22",
-		"hasNoLoadConflicts:" : "dkh 07/05/2014 18:13",
-		"merge:" : "dkh 6/8/2012 14:04:22",
-		"metacelloRegistrationHash" : "dkh 6/8/2012 14:04:22",
-		"remove:" : "dkh 6/8/2012 14:04:22",
-		"repository:" : "dkh 6/8/2012 14:04:22",
-		"repository:constructor:" : "dkh 6/8/2012 14:04:22",
-		"repository:username:password:" : "dkh 6/8/2012 14:04:22",
-		"repository:username:password:constructor:" : "dkh 6/8/2012 14:04:22" } }
+		"hasNoLoadConflicts:" : " 9/21/2017 13:27:01",
+		"canUpgradeTo:" : " 9/21/2017 13:27:01",
+		"configMethodOn:indent:" : " 9/21/2017 13:27:01",
+		"add:" : " 9/21/2017 13:27:01",
+		"repository:username:password:" : " 9/21/2017 13:27:01",
+		"repository:username:password:constructor:" : " 9/21/2017 13:27:01",
+		"remove:" : " 9/21/2017 13:27:01",
+		"merge:" : " 9/21/2017 13:27:01",
+		"repository:" : " 9/21/2017 13:27:01",
+		"configMethodCascadeOn:indent:" : " 9/21/2017 13:27:01",
+		"metacelloRegistrationHash" : " 9/21/2017 13:27:01",
+		"repository:constructor:" : " 9/21/2017 13:27:01",
+		"compareEqual:" : " 9/21/2017 13:27:01"
+	},
+	"class" : { }
+}

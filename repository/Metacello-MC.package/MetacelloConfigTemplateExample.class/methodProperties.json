@@ -1,22 +1,25 @@
 {
-	"class" : {
-		"DevelopmentSupport" : "ChristopheDemarey 1/15/2014 11:32",
-		"baseConfigurationClassIfAbsent:" : "ChristopheDemarey 1/15/2014 11:32",
-		"ensureMetacello" : "ChristopheDemarey 1/15/2014 11:32",
-		"ensureMetacelloBaseConfiguration" : "ChristopheDemarey 1/15/2014 11:32",
-		"isMetacelloConfig" : "ChristopheDemarey 1/15/2014 11:32",
-		"load" : "ChristopheDemarey 1/15/2014 11:32",
-		"loadBleedingEdge" : "ChristopheDemarey 1/15/2014 11:32",
-		"loadDevelopment" : "ChristopheDemarey 1/15/2014 11:32",
-		"project" : "ChristopheDemarey 1/15/2014 11:32",
-		"validate" : "ChristopheDemarey 1/15/2014 11:32" },
 	"instance" : {
-		"baseline10:" : "ChristopheDemarey 1/15/2014 11:32",
-		"customProjectAttributes" : "ChristopheDemarey 1/15/2014 11:32",
-		"development:" : "ChristopheDemarey 1/15/2014 11:32",
-		"fileSystemLegacy:" : "ChristopheDemarey 1/15/2014 11:32",
-		"fuelMetalevel:" : "ChristopheDemarey 1/15/2014 11:32",
-		"project" : "ChristopheDemarey 1/15/2014 11:32",
-		"stable:" : "ChristopheDemarey 1/15/2014 11:32",
-		"version10:" : "ChristopheDemarey 1/15/2014 11:32",
-		"versionDevelopment:" : "ChristopheDemarey 1/15/2014 11:32" } }
+		"baseline10:" : " 9/21/2017 13:27:01",
+		"fuelMetalevel:" : " 9/21/2017 13:27:01",
+		"project" : " 9/21/2017 13:27:01",
+		"customProjectAttributes" : " 9/21/2017 13:27:01",
+		"version10:" : " 9/21/2017 13:27:01",
+		"versionDevelopment:" : " 9/21/2017 13:27:01",
+		"stable:" : " 9/21/2017 13:27:01",
+		"development:" : " 9/21/2017 13:27:01",
+		"fileSystemLegacy:" : " 9/21/2017 13:27:01"
+	},
+	"class" : {
+		"load" : " 9/21/2017 13:27:01",
+		"baseConfigurationClassIfAbsent:" : " 9/21/2017 13:27:01",
+		"DevelopmentSupport" : " 9/21/2017 13:27:01",
+		"ensureMetacello" : " 9/21/2017 13:27:01",
+		"loadDevelopment" : " 9/21/2017 13:27:01",
+		"isMetacelloConfig" : " 9/21/2017 13:27:01",
+		"ensureMetacelloBaseConfiguration" : " 9/21/2017 13:27:01",
+		"loadBleedingEdge" : " 9/21/2017 13:27:01",
+		"validate" : " 9/21/2017 13:27:01",
+		"project" : " 9/21/2017 13:27:01"
+	}
+}

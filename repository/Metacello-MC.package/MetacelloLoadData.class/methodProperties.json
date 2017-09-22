@@ -1,12 +1,13 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"addVersion:versionInfo:resolvedReference:packageSpec:" : "dkh 6/8/2012 14:04:22",
-		"ancestorsFor:ifAbsent:" : "dkh 6/8/2012 14:04:22",
-		"currentVersionInfoFor:ifAbsent:" : "dkh 6/8/2012 14:04:22",
-		"dataMap" : "dkh 6/8/2012 14:04:22",
-		"do:" : "dkh 6/8/2012 14:04:22",
-		"isEmpty" : "dkh 6/8/2012 14:04:22",
-		"packageNameMap" : "dkh 6/8/2012 14:04:22",
-		"versionInfoMap" : "dkh 6/8/2012 14:04:22" } }
+		"addVersion:versionInfo:resolvedReference:packageSpec:" : " 9/21/2017 13:27:01",
+		"currentVersionInfoFor:ifAbsent:" : "EstebanLorenzano 9/21/2017 16:36",
+		"do:" : " 9/21/2017 13:27:01",
+		"packageNameMap" : " 9/21/2017 13:27:01",
+		"ancestorsFor:ifAbsent:" : " 9/21/2017 13:27:01",
+		"versionInfoMap" : " 9/21/2017 13:27:01",
+		"dataMap" : " 9/21/2017 13:27:01",
+		"isEmpty" : " 9/21/2017 13:27:01"
+	},
+	"class" : { }
+}

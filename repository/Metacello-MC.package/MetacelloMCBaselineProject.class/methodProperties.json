@@ -1,26 +1,29 @@
 {
-	"class" : {
-		"singletonVersionName" : "dkh 6/13/2012 13:51",
-		"versionConstructorClass" : "dkh 6/8/2012 14:04:22" },
 	"instance" : {
-		"asBaselineProject" : "dkh 6/8/2012 14:04:22",
-		"asConfigurationProject" : "dkh 6/8/2012 14:04:22",
-		"bleedingEdge" : "dkh 6/8/2012 14:04:22",
-		"currentVersion" : "dkh 7/20/2012 12:12",
-		"currentVersionAgainst:" : "dkh 6/8/2012 14:04:22",
-		"development" : "dkh 6/8/2012 14:04:22",
-		"hasVersion:" : "dkh 6/8/2012 14:04:22",
-		"lastVersion" : "dkh 6/8/2012 14:04:22",
-		"latestVersion" : "dkh 6/8/2012 14:04:22",
-		"latestVersion:" : "dkh 6/8/2012 14:04:22",
-		"latestVersionMatching:" : "dkh 6/8/2012 14:04:22",
-		"latestVersionMatching:excludedBlessings:" : "dkh 6/8/2012 14:04:22",
-		"latestVersionMatching:includedBlessings:" : "dkh 6/8/2012 14:04:22",
-		"latestVersionMatching:includedBlessings:excludedBlessings:" : "dkh 6/8/2012 14:04:22",
-		"projectForScriptEngine:unconditionalLoad:" : "dkh 06/18/2014 09:55",
-		"setBaselineRepositoryDescription:" : "dkh 7/2/2012 16:42",
-		"singletonVersionName" : "dkh 6/13/2012 13:51",
-		"stableVersion" : "dkh 6/8/2012 14:04:22",
-		"symbolicVersionSymbols" : "dkh 6/8/2012 14:04:22",
-		"version" : "dkh 6/8/2012 14:04:22",
-		"versions" : "dkh 05/15/2013 21:02" } }
+		"setBaselineRepositoryDescription:" : " 9/21/2017 13:27:01",
+		"latestVersion" : " 9/21/2017 13:27:01",
+		"latestVersionMatching:excludedBlessings:" : " 9/21/2017 13:27:01",
+		"latestVersion:" : " 9/21/2017 13:27:01",
+		"singletonVersionName" : " 9/21/2017 13:27:01",
+		"hasVersion:" : " 9/21/2017 13:27:01",
+		"asConfigurationProject" : " 9/21/2017 13:27:01",
+		"lastVersion" : " 9/21/2017 13:27:01",
+		"bleedingEdge" : " 9/21/2017 13:27:01",
+		"latestVersionMatching:includedBlessings:excludedBlessings:" : " 9/21/2017 13:27:01",
+		"version" : " 9/21/2017 13:27:01",
+		"stableVersion" : " 9/21/2017 13:27:01",
+		"currentVersion" : " 9/21/2017 13:27:01",
+		"currentVersionAgainst:" : " 9/21/2017 13:27:01",
+		"development" : " 9/21/2017 13:27:01",
+		"symbolicVersionSymbols" : " 9/21/2017 13:27:01",
+		"projectForScriptEngine:unconditionalLoad:" : " 9/21/2017 13:27:01",
+		"latestVersionMatching:includedBlessings:" : " 9/21/2017 13:27:01",
+		"latestVersionMatching:" : " 9/21/2017 13:27:01",
+		"versions" : " 9/21/2017 13:27:01",
+		"asBaselineProject" : " 9/21/2017 13:27:01"
+	},
+	"class" : {
+		"singletonVersionName" : " 9/21/2017 13:27:01",
+		"versionConstructorClass" : " 9/21/2017 13:27:01"
+	}
+}

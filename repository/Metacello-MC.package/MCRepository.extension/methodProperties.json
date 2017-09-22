@@ -1,7 +1,8 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"asRepositorySpecFor:" : "dkh 6/8/2012 14:04:22",
-		"metacelloProjectClassFor:" : "dkh 6/8/2012 14:04:22",
-		"projectVersion:" : "dkh 6/8/2012 14:04:22" } }
+		"projectVersion:" : " 9/21/2017 13:27:01",
+		"asRepositorySpecFor:" : " 9/21/2017 13:27:01",
+		"metacelloProjectClassFor:" : " 9/21/2017 13:27:01"
+	},
+	"class" : { }
+}

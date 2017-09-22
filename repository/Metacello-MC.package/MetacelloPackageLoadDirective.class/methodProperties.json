@@ -1,16 +1,17 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"externalReference" : "dkh 6/8/2012 14:04:22",
-		"file" : "dkh 6/8/2012 14:04:22",
-		"label" : "dkh 6/8/2012 14:04:22",
-		"loadUsing:gofer:" : "dkh 6/8/2012 14:04:22",
-		"packageDirectivesDo:" : "dkh 6/8/2012 14:04:22",
-		"packageDo:" : "dkh 6/8/2012 14:04:22",
-		"packageName" : "dkh 6/8/2012 14:04:22",
-		"repository" : "dkh 6/8/2012 14:04:22",
-		"resolvedReference" : "dkh 6/8/2012 14:04:22",
-		"resolvedReference:" : "dkh 6/8/2012 14:04:22",
-		"spec:externalReference:loader:" : "dkh 6/8/2012 14:04:22",
-		"title" : "dkh 6/8/2012 14:04:22" } }
+		"label" : " 9/21/2017 13:27:01",
+		"externalReference" : " 9/21/2017 13:27:01",
+		"resolvedReference:" : " 9/21/2017 13:27:01",
+		"repository" : " 9/21/2017 13:27:01",
+		"loadUsing:gofer:" : " 9/21/2017 13:27:01",
+		"packageDo:" : " 9/21/2017 13:27:01",
+		"resolvedReference" : " 9/21/2017 13:27:01",
+		"file" : " 9/21/2017 13:27:01",
+		"packageDirectivesDo:" : " 9/21/2017 13:27:01",
+		"spec:externalReference:loader:" : " 9/21/2017 13:27:01",
+		"title" : " 9/21/2017 13:27:01",
+		"packageName" : " 9/21/2017 13:27:01"
+	},
+	"class" : { }
+}

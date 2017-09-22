@@ -1,15 +1,16 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"loadUsing:gofer:" : "dkh 6/8/2012 14:04:22",
-		"packagesNeedSavingVisited:using:into:" : "dkh 6/8/2012 14:04:22",
-		"repository:" : "dkh 6/8/2012 14:04:22",
-		"resolveProjectSpec" : "dkh 6/8/2012 14:04:22",
-		"resolveToAllPackagesIn:into:visited:" : "dkh 6/8/2012 14:04:22",
-		"resolveToLoadableSpec" : "dkh 6/8/2012 14:04:22",
-		"resolveToPackagesIn:andProjects:visited:" : "dkh 10/01/2014 17:29",
-		"resolveToPackagesIn:visited:" : "dkh 6/8/2012 14:04:22",
-		"updateForSpawnMethod:" : "dkh 6/8/2012 14:04:22",
-		"updatePackageSpec:using:" : "dkh 6/8/2012 14:04:22",
-		"versionString" : "dkh 6/8/2012 14:04:22" } }
+		"resolveToLoadableSpec" : " 9/21/2017 13:27:01",
+		"loadUsing:gofer:" : " 9/21/2017 13:27:01",
+		"packagesNeedSavingVisited:using:into:" : " 9/21/2017 13:27:01",
+		"resolveToAllPackagesIn:into:visited:" : " 9/21/2017 13:27:01",
+		"updatePackageSpec:using:" : " 9/21/2017 13:27:01",
+		"resolveProjectSpec" : " 9/21/2017 13:27:01",
+		"resolveToPackagesIn:visited:" : " 9/21/2017 13:27:01",
+		"repository:" : " 9/21/2017 13:27:01",
+		"resolveToPackagesIn:andProjects:visited:" : " 9/21/2017 13:27:01",
+		"updateForSpawnMethod:" : " 9/21/2017 13:27:01",
+		"versionString" : " 9/21/2017 13:27:01"
+	},
+	"class" : { }
+}
