@@ -3,8 +3,9 @@ currentVersionInfoFor: packageSpec ifAbsent: aBlock
 
 	^self versionInfoMap 
 		at: packageSpec file 
+		ifPresent: [ :v | v first ]
 		ifAbsent: [ 
-			self packageNameMap 
+			self  packageNameMap 
 				at: packageSpec name
-				ifPresent: [ :vi | vi first ]
+				ifPresent: [ :v | v first ]
 				ifAbsent: aBlock ]

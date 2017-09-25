@@ -1,29 +1,29 @@
 {
 	"instance" : {
-		"setBaselineRepositoryDescription:" : " 9/21/2017 13:27:01",
-		"latestVersion" : " 9/21/2017 13:27:01",
-		"latestVersionMatching:excludedBlessings:" : " 9/21/2017 13:27:01",
-		"latestVersion:" : " 9/21/2017 13:27:01",
-		"singletonVersionName" : " 9/21/2017 13:27:01",
-		"hasVersion:" : " 9/21/2017 13:27:01",
-		"asConfigurationProject" : " 9/21/2017 13:27:01",
-		"lastVersion" : " 9/21/2017 13:27:01",
-		"bleedingEdge" : " 9/21/2017 13:27:01",
-		"latestVersionMatching:includedBlessings:excludedBlessings:" : " 9/21/2017 13:27:01",
-		"version" : " 9/21/2017 13:27:01",
-		"stableVersion" : " 9/21/2017 13:27:01",
-		"currentVersion" : " 9/21/2017 13:27:01",
-		"currentVersionAgainst:" : " 9/21/2017 13:27:01",
-		"development" : " 9/21/2017 13:27:01",
-		"symbolicVersionSymbols" : " 9/21/2017 13:27:01",
-		"projectForScriptEngine:unconditionalLoad:" : " 9/21/2017 13:27:01",
-		"latestVersionMatching:includedBlessings:" : " 9/21/2017 13:27:01",
-		"latestVersionMatching:" : " 9/21/2017 13:27:01",
-		"versions" : " 9/21/2017 13:27:01",
-		"asBaselineProject" : " 9/21/2017 13:27:01"
+		"setBaselineRepositoryDescription:" : " 8/31/2017 07:16:20",
+		"latestVersion" : " 8/31/2017 07:16:20",
+		"latestVersionMatching:excludedBlessings:" : " 8/31/2017 07:16:20",
+		"latestVersion:" : " 8/31/2017 07:16:20",
+		"singletonVersionName" : " 8/31/2017 07:16:20",
+		"hasVersion:" : " 8/31/2017 07:16:20",
+		"asConfigurationProject" : " 8/31/2017 07:16:20",
+		"lastVersion" : " 8/31/2017 07:16:20",
+		"bleedingEdge" : " 8/31/2017 07:16:20",
+		"latestVersionMatching:includedBlessings:excludedBlessings:" : " 8/31/2017 07:16:20",
+		"version" : " 8/31/2017 07:16:20",
+		"stableVersion" : " 8/31/2017 07:16:20",
+		"currentVersion" : " 8/31/2017 07:16:20",
+		"currentVersionAgainst:" : " 8/31/2017 07:16:20",
+		"development" : " 8/31/2017 07:16:20",
+		"symbolicVersionSymbols" : " 8/31/2017 07:16:20",
+		"projectForScriptEngine:unconditionalLoad:" : " 8/31/2017 07:16:20",
+		"latestVersionMatching:includedBlessings:" : " 8/31/2017 07:16:20",
+		"latestVersionMatching:" : " 8/31/2017 07:16:20",
+		"versions" : " 8/31/2017 07:16:20",
+		"asBaselineProject" : " 8/31/2017 07:16:20"
 	},
 	"class" : {
-		"singletonVersionName" : " 9/21/2017 13:27:01",
-		"versionConstructorClass" : " 9/21/2017 13:27:01"
+		"singletonVersionName" : " 8/31/2017 07:16:20",
+		"versionConstructorClass" : " 8/31/2017 07:16:20"
 	}
 }

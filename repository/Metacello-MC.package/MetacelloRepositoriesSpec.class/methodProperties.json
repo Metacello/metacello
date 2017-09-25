@@ -1,18 +1,18 @@
 {
 	"instance" : {
-		"hasNoLoadConflicts:" : " 9/21/2017 13:27:01",
-		"canUpgradeTo:" : " 9/21/2017 13:27:01",
-		"configMethodOn:indent:" : " 9/21/2017 13:27:01",
-		"add:" : " 9/21/2017 13:27:01",
-		"repository:username:password:" : " 9/21/2017 13:27:01",
-		"repository:username:password:constructor:" : " 9/21/2017 13:27:01",
-		"remove:" : " 9/21/2017 13:27:01",
-		"merge:" : " 9/21/2017 13:27:01",
-		"repository:" : " 9/21/2017 13:27:01",
-		"configMethodCascadeOn:indent:" : " 9/21/2017 13:27:01",
-		"metacelloRegistrationHash" : " 9/21/2017 13:27:01",
-		"repository:constructor:" : " 9/21/2017 13:27:01",
-		"compareEqual:" : " 9/21/2017 13:27:01"
+		"hasNoLoadConflicts:" : " 8/31/2017 07:16:20",
+		"canUpgradeTo:" : " 8/31/2017 07:16:20",
+		"configMethodOn:indent:" : " 8/31/2017 07:16:20",
+		"add:" : " 8/31/2017 07:16:20",
+		"repository:username:password:" : " 8/31/2017 07:16:20",
+		"repository:username:password:constructor:" : " 8/31/2017 07:16:20",
+		"remove:" : " 8/31/2017 07:16:20",
+		"merge:" : " 8/31/2017 07:16:20",
+		"repository:" : " 8/31/2017 07:16:20",
+		"configMethodCascadeOn:indent:" : " 8/31/2017 07:16:20",
+		"metacelloRegistrationHash" : " 8/31/2017 07:16:20",
+		"repository:constructor:" : " 8/31/2017 07:16:20",
+		"compareEqual:" : " 8/31/2017 07:16:20"
 	},
 	"class" : { }
 }

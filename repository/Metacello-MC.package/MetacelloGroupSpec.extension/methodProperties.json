@@ -1,11 +1,11 @@
 {
 	"instance" : {
-		"resolveToPackagesIn:andProjects:visited:" : " 9/21/2017 13:27:01",
-		"resolveToPackagesIn:visited:" : " 9/21/2017 13:27:01",
-		"loadUsing:gofer:" : " 9/21/2017 13:27:01",
-		"resolveToPackagesIn:into:visited:" : " 9/21/2017 13:27:01",
-		"resolveToLoadableSpec" : " 9/21/2017 13:27:01",
-		"resolveToPackagesIn:andProjects:into:visited:" : " 9/21/2017 13:27:01"
+		"resolveToPackagesIn:andProjects:visited:" : " 8/31/2017 07:16:20",
+		"resolveToPackagesIn:visited:" : " 8/31/2017 07:16:20",
+		"loadUsing:gofer:" : " 8/31/2017 07:16:20",
+		"resolveToPackagesIn:into:visited:" : " 8/31/2017 07:16:20",
+		"resolveToLoadableSpec" : " 8/31/2017 07:16:20",
+		"resolveToPackagesIn:andProjects:into:visited:" : " 8/31/2017 07:16:20"
 	},
 	"class" : { }
 }

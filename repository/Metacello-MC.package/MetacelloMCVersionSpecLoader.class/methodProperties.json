@@ -1,26 +1,26 @@
 {
 	"instance" : {
-		"required:" : " 9/21/2017 13:27:01",
-		"name" : " 9/21/2017 13:27:01",
-		"resolveToLoadableSpecs" : " 9/21/2017 13:27:01",
-		"loaderPolicy" : " 9/21/2017 13:27:01",
-		"packageSpecsInLoadOrder" : " 9/21/2017 13:27:01",
-		"repositorySpecs" : " 9/21/2017 13:27:01",
-		"project" : " 9/21/2017 13:27:01",
-		"loaderPolicy:" : " 9/21/2017 13:27:01",
-		"versionSpec" : " 9/21/2017 13:27:01",
-		"loader" : " 9/21/2017 13:27:01",
-		"versionString" : " 9/21/2017 13:27:01",
-		"required" : " 9/21/2017 13:27:01",
-		"versionSpec:" : " 9/21/2017 13:27:01",
-		"label" : " 9/21/2017 13:27:01",
-		"packages" : " 9/21/2017 13:27:01",
-		"repositories" : " 9/21/2017 13:27:01",
-		"load" : " 9/21/2017 13:27:01",
-		"operator" : " 9/21/2017 13:27:01",
-		"resolvePackageNames" : " 9/21/2017 13:27:01"
+		"required:" : " 8/31/2017 07:16:20",
+		"name" : " 8/31/2017 07:16:20",
+		"resolveToLoadableSpecs" : " 8/31/2017 07:16:20",
+		"loaderPolicy" : " 8/31/2017 07:16:20",
+		"packageSpecsInLoadOrder" : " 8/31/2017 07:16:20",
+		"repositorySpecs" : " 8/31/2017 07:16:20",
+		"project" : " 8/31/2017 07:16:20",
+		"loaderPolicy:" : " 8/31/2017 07:16:20",
+		"versionSpec" : " 8/31/2017 07:16:20",
+		"loader" : " 8/31/2017 07:16:20",
+		"versionString" : " 8/31/2017 07:16:20",
+		"required" : " 8/31/2017 07:16:20",
+		"versionSpec:" : " 8/31/2017 07:16:20",
+		"label" : " 8/31/2017 07:16:20",
+		"packages" : " 8/31/2017 07:16:20",
+		"repositories" : " 8/31/2017 07:16:20",
+		"load" : " 8/31/2017 07:16:20",
+		"operator" : " 8/31/2017 07:16:20",
+		"resolvePackageNames" : " 8/31/2017 07:16:20"
 	},
 	"class" : {
-		"on:" : " 9/21/2017 13:27:01"
+		"on:" : " 8/31/2017 07:16:20"
 	}
 }
