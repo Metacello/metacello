@@ -268,18 +268,26 @@ baseline: spec
           with: [ spec repository: 'github://dalehenrich/filetree:squeak4.3/repository' ];
         yourself.
       spec
-        package: 'SqueakSSL-Core'
-        with: [ spec repository: 'http://www.squeaksource.com/SqueakSSL' ].
-      spec
-        package: 'WebClient-Core'
-        with: [ spec repository: 'http://ss3.gemstone.com/ss/WebClient' ].
-      spec
         package: 'Metacello-Platform'
+          with: [ spec file: 'Metacello-Platform.squeak' ];
+        yourself ].
+  spec
+    for: #( #'squeak4.1.x' #'squeak4.2.x' #'squeak4.3.x' #'squeak4.4.x' #'squeak4.5.x' )
+    do: [ 
+      spec
+        configuration: 'WebClient'
           with: [ 
               spec
-                file: 'Metacello-Platform.squeak';
-                requires: #('WebClient-Core' 'SqueakSSL-Core') ];
+                loads: #('Core');
+                repository: 'http://www.squeaksource.com/MetacelloRepository';
+                repository: 'http://ss3.gemtalksystems.com/ss/WebClient' ].
+      spec
+        package: 'SqueakSSL-Core'
+ 	    with: [spec repository: 'http://www.squeaksource.com/SqueakSSL'];
+        package: 'Metacello-Platform'
+          with: [ spec requires: #('WebClient' 'SqueakSSL-Core') ];
         yourself ].
+
   spec
     for: #'gemstone'
     do: [ 

@@ -4,14 +4,14 @@ tearDown
 
   MCRepositoryGroup default
     removeIdenticalRepository:
-        (Smalltalk at: #'Metacello_Configuration_Test_Repository' ifAbsent: [  ]);
+        (Smalltalk globals at: #'Metacello_Configuration_Test_Repository' ifAbsent: [  ]);
     removeIdenticalRepository:
-        (Smalltalk at: #'Metacello_Gofer_Test_Repository' ifAbsent: [  ]);
+        (Smalltalk globals at: #'Metacello_Gofer_Test_Repository' ifAbsent: [  ]);
     removeIdenticalRepository:
-        (Smalltalk at: #'Metacello_Cache_Test_Repository' ifAbsent: [  ]).
-  Smalltalk removeKey: #'Metacello_Configuration_Test_Repository' ifAbsent: [  ].
-  Smalltalk removeKey: #'Metacello_Gofer_Test_Repository' ifAbsent: [  ].
-  Smalltalk removeKey: #'Metacello_Cache_Test_Repository' ifAbsent: [  ].
+        (Smalltalk globals at: #'Metacello_Cache_Test_Repository' ifAbsent: [  ]).
+  Smalltalk globals removeKey: #'Metacello_Configuration_Test_Repository' ifAbsent: [  ].
+  Smalltalk globals removeKey: #'Metacello_Gofer_Test_Repository' ifAbsent: [  ].
+  Smalltalk globals removeKey: #'Metacello_Cache_Test_Repository' ifAbsent: [  ].
   super tearDown.
   (Metacello registry
     project: [ :spec | spec className beginsWith: 'MetacelloTest' ];

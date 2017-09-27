@@ -1,9 +1,8 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"reprimeRegistryIssue197" : "dkh 09/30/2014 17:40",
+		"baseline:" : "topa 9/14/2017 15:52",
 		"gemstone10beta311PostLoadDoIt" : "dkh 07/24/2012 18:09",
-		"baseline:" : "EstebanLorenzano 9/19/2017 11:16",
-		"testResourcePostLoadDoIt" : "dkh 6/1/2012 09:18:17"
-	},
-	"class" : { }
-}
+		"reprimeRegistryIssue197" : "dkh 09/30/2014 17:40",
+		"testResourcePostLoadDoIt" : "dkh 6/1/2012 09:18:17" } }
