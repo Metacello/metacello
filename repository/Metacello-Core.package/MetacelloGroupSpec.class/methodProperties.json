@@ -1,14 +1,14 @@
 {
 	"instance" : {
-		"resolveSpecsForPackageOrdering:" : " 8/31/2017 07:16:49",
-		"projectDo:packageDo:groupDo:" : " 8/31/2017 07:16:49",
-		"answers:" : " 8/31/2017 07:16:49",
-		"configMethodCascadeOn:member:last:indent:" : " 8/31/2017 07:16:49",
-		"requires:" : " 8/31/2017 07:16:49",
-		"requiresSpecsForPackageOrdering:" : " 8/31/2017 07:16:49",
-		"includeSpecNamesForPackageOrdering:" : " 8/31/2017 07:16:49",
-		"configMethodOn:indent:" : " 8/31/2017 07:16:49",
-		"requiredSpecsForPackageOrdering:" : " 8/31/2017 07:16:49"
+		"resolveSpecsForPackageOrdering:" : " 9/26/2017 13:31:02",
+		"projectDo:packageDo:groupDo:" : " 9/26/2017 13:31:02",
+		"answers:" : " 9/26/2017 13:31:02",
+		"configMethodCascadeOn:member:last:indent:" : " 9/26/2017 13:31:02",
+		"requires:" : " 9/26/2017 13:31:02",
+		"requiresSpecsForPackageOrdering:" : " 9/26/2017 13:31:02",
+		"includeSpecNamesForPackageOrdering:" : " 9/26/2017 13:31:02",
+		"configMethodOn:indent:" : " 9/26/2017 13:31:02",
+		"requiredSpecsForPackageOrdering:" : " 9/26/2017 13:31:02"
 	},
 	"class" : { }
 }
