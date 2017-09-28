@@ -2,9 +2,8 @@ initialization
 initialize
   "self initialize"
 
-	Smalltalk 
-		at: #SessionManager
-		ifPresent: [ :c | c default registerNetworkClassNamed: self name ]
-		ifAbsent:[ Smalltalk addToStartUpList: self ].
+	(Smalltalk classNamed: #SessionManager)
+		ifNotNil: [ :c | c default registerNetworkClassNamed: self name ]
+		ifNil:[ Smalltalk addToStartUpList: self ].
   self flushDownloadCache.
   self resetCacheDirectoryIfInvalid
