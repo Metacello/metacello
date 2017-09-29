@@ -1,6 +1,6 @@
 scripting
 asProjectRegistration
-  (self className beginsWith: 'BaselineOf')
+  ((self className indexOfSubCollection: 'BaselineOf') = 1)
     ifTrue: [ 
       ^ MetacelloProjectRegistration
         fromMCBaselineProjectSpec: self asBaselineProjectSpec ].

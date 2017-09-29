@@ -4,6 +4,6 @@ createRepository: aRepositorySpec
     ifTrue: [ 
       | url |
       "primarily used for testing"
-      url := aRepositorySpec description asUrl.
-      ^ self repositoryFromUrl: (self globalNamed: url locator) asUrl ].
-  ^ self repositoryFromUrl: aRepositorySpec description asUrl
+      url := CypressUrl absoluteFromText: aRepositorySpec description.
+      ^ self repositoryFromUrl: (CypressUrl absoluteFromText: (self globalNamed: url locator)) ].
+  ^ self repositoryFromUrl: (CypressUrl absoluteFromText: aRepositorySpec description)

@@ -4,8 +4,7 @@
 		 ],
 	"classvars" : [
 		"Current",
-                "PlatformClassAssociation" ],
-	"commentStamp" : "",
+		"PlatformClassAssociation" ],
 	"instvars" : [
 		"bypassProgressBars",
 		"bypassGoferLoadUpdateCategories" ],

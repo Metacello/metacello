@@ -2,18 +2,18 @@ repository creation
 extractTypeFromDescription: description
   description == nil
     ifTrue: [ ^ nil ].
-  ((description beginsWith: '/') or: [ description second = $: ])
+  (((description indexOfSubCollection: '/') = 1) or: [ description second = $: ])
     ifTrue: [ ^ 'directory' ].
-  (description beginsWith: 'dictionary://')
+  ((description indexOfSubCollection: 'dictionary://') = 1)
     ifTrue: [ ^ 'dictionary' ].
-  (description beginsWith: 'filetree://')
+  ((description indexOfSubCollection: 'filetree://') = 1)
     ifTrue: [ ^ 'filetree' ].
-  (description beginsWith: 'github://')
+  ((description indexOfSubCollection: 'github://') = 1)
     ifTrue: [ ^ 'github' ].
-  (description beginsWith: 'gitorious://')
+  ((description indexOfSubCollection: 'gitorious://') = 1)
     ifTrue: [ ^ 'gitorious' ].
-  (description beginsWith: 'bitbucket://')
+  ((description indexOfSubCollection: 'bitbucket://') = 1)
     ifTrue: [ ^ 'bitbucket' ].
-  (description beginsWith: 'globalrepo:')
+  ((description indexOfSubCollection: 'globalrepo:') = 1)
     ifTrue: [ ^ 'globalrepo' ].
   ^ 'http'
