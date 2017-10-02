@@ -1,18 +1,18 @@
 {
 	"instance" : {
-		"project" : " 8/31/2017 07:16:20",
-		"customProjectAttributes" : " 8/31/2017 07:16:20"
+		"project" : " 9/28/2017 08:53:29",
+		"customProjectAttributes" : " 9/28/2017 08:53:29"
 	},
 	"class" : {
-		"load" : " 8/31/2017 07:16:20",
-		"baseConfigurationClassIfAbsent:" : " 8/31/2017 07:16:20",
-		"DevelopmentSupport" : " 8/31/2017 07:16:20",
-		"ensureMetacello" : " 8/31/2017 07:16:20",
-		"loadDevelopment" : " 8/31/2017 07:16:20",
-		"isMetacelloConfig" : " 8/31/2017 07:16:20",
-		"ensureMetacelloBaseConfiguration" : " 8/31/2017 07:16:20",
-		"loadBleedingEdge" : " 8/31/2017 07:16:20",
-		"validate" : " 8/31/2017 07:16:20",
-		"project" : " 8/31/2017 07:16:20"
+		"load" : " 9/28/2017 08:53:29",
+		"baseConfigurationClassIfAbsent:" : " 9/28/2017 08:53:29",
+		"DevelopmentSupport" : " 9/28/2017 08:53:29",
+		"ensureMetacello" : " 9/28/2017 08:53:29",
+		"loadDevelopment" : " 9/28/2017 08:53:29",
+		"isMetacelloConfig" : " 9/28/2017 08:53:29",
+		"ensureMetacelloBaseConfiguration" : " 9/28/2017 08:53:29",
+		"loadBleedingEdge" : " 9/28/2017 08:53:29",
+		"validate" : " 9/28/2017 08:53:29",
+		"project" : " 9/28/2017 08:53:29"
 	}
 }

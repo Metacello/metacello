@@ -4,5 +4,5 @@ baselineIssue399: spec
   spec
     for: #'common'
     do: [ 
-      spec description: self name , '>>baselineIssue399:'.
+      spec description: self className , '>>baselineIssue399:'.
       spec package: 'Issue399-Core' ]
