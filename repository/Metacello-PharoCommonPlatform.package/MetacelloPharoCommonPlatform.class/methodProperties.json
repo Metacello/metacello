@@ -1,17 +1,18 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"authorName" : "ChristopheDemarey 4/30/2013 09:23",
-		"authorName:" : "ChristopheDemarey 4/30/2013 09:23",
-		"collection:do:displaying:" : "ChristopheDemarey 4/30/2013 09:24",
-		"compiler" : "ChristopheDemarey 8/4/2015 05:37:06",
-		"copyClass:as:inCategory:" : "CamilleTeruel 11/21/2013 12:43",
-		"createRepository:" : "ChristopheDemarey 4/30/2013 09:24",
-		"defaultPlatformAttributes" : "ChristopheDemarey 4/30/2013 09:24",
-		"downloadBasicFile:to:username:pass:" : "TravisCI 7/28/2016 16:39",
-		"downloadJSON:username:pass:" : "TravisCI 7/28/2016 17:02",
+		"extractRepositoryFrom:to:" : "EstebanLorenzano 9/27/2017 17:20",
+		"authorName:" : " 9/26/2017 13:30:52",
+		"compiler" : "EstebanLorenzano 9/27/2017 17:19",
+		"downloadBasicFile:to:username:pass:" : "EstebanLorenzano 9/27/2017 17:19",
+		"timestamp" : " 9/26/2017 13:30:52",
 		"downloadZipArchive:to:" : "TravisCI 7/28/2016 17:00",
-		"extractRepositoryFrom:to:" : "TravisCI 7/28/2016 16:54",
-		"extractTypeFromDescription:" : "ChristopheDemarey 4/30/2013 09:25",
-		"timestamp" : "ChristopheDemarey 4/30/2013 09:25" } }
+		"copyClass:as:inCategory:" : "EstebanLorenzano 9/27/2017 17:17",
+		"collection:do:displaying:" : " 9/26/2017 13:30:52",
+		"createRepository:" : " 9/26/2017 13:30:52",
+		"extractTypeFromDescription:" : " 9/26/2017 13:30:52",
+		"defaultPlatformAttributes" : " 9/26/2017 13:30:52",
+		"authorName" : "EstebanLorenzano 9/27/2017 17:19",
+		"downloadJSON:username:pass:" : "TravisCI 7/28/2016 17:02"
+	},
+	"class" : { }
+}

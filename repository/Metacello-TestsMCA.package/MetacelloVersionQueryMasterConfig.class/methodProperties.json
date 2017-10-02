@@ -1,6 +1,7 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"baselineProject30:" : "dkh 6/12/2012 15:41:23.319",
-		"baselineProject31:" : "dkh 6/12/2012 15:41:23.319" } }
+		"baselineProject31:" : "dkh 6/12/2012 15:41:23.319",
+		"baselineProject30:" : "dkh 6/12/2012 15:41:23.319"
+	},
+	"class" : { }
+}

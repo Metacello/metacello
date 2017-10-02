@@ -1,7 +1,10 @@
 {
-	"class" : {
-		"signal:" : "dkh 6/5/2012 19:01:24" },
 	"instance" : {
-		"defaultAction" : "dkh 6/5/2012 19:01:24",
-		"packageSpec" : "dkh 6/5/2012 19:01:24",
-		"packageSpec:" : "dkh 6/5/2012 19:01:24" } }
+		"packageSpec" : " 9/28/2017 08:54:38",
+		"packageSpec:" : " 9/28/2017 08:54:38",
+		"defaultAction" : " 9/28/2017 08:54:38"
+	},
+	"class" : {
+		"signal:" : " 9/28/2017 08:54:38"
+	}
+}

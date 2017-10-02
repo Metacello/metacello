@@ -10,8 +10,8 @@ modifyBaselineOf
   constructor extractMethodSectionsForClass: baselineClass.
   methodSpec := MetacelloBaselineOfMethodSpec new
     project: project;
-    selector: pragma selector;
-    category: (baselineClass whichCategoryIncludesSelector: pragma selector);
+    selector: (MetacelloPlatform current selectorForPragma: pragma);
+    category: (baselineClass whichCategoryIncludesSelector: (MetacelloPlatform current selectorForPragma: pragma));
     yourself.
   constructor methodSections
     do: [ :methodSection | self methodSpec methodSections add: methodSection ]

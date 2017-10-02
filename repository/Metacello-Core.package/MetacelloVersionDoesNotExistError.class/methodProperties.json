@@ -1,11 +1,14 @@
 {
-	"class" : {
-		"project:versionString:" : "dkh 6/5/2012 19:01:24" },
 	"instance" : {
-		"description" : "dkh 6/5/2012 19:01:24",
-		"possibleVersions" : "dkh 6/5/2012 19:01:24",
-		"project" : "dkh 6/5/2012 19:01:24",
-		"project:" : "dkh 6/5/2012 19:01:24",
-		"signal" : "dkh 09/26/2014 10:07",
-		"versionString" : "dkh 6/5/2012 19:01:24",
-		"versionString:" : "dkh 6/5/2012 19:01:24" } }
+		"description" : " 9/28/2017 08:54:38",
+		"project" : " 9/28/2017 08:54:38",
+		"possibleVersions" : " 9/28/2017 08:54:38",
+		"project:" : " 9/28/2017 08:54:38",
+		"versionString:" : " 9/28/2017 08:54:38",
+		"versionString" : " 9/28/2017 08:54:38",
+		"signal" : " 9/28/2017 08:54:38"
+	},
+	"class" : {
+		"project:versionString:" : " 9/28/2017 08:54:38"
+	}
+}

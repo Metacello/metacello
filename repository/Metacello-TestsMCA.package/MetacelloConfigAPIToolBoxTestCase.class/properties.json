@@ -1,15 +1,14 @@
 {
-	"category" : "Metacello-TestsMCA",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "MetacelloConfigMCAPITestCase",
+	"category" : "Metacello-TestsMCA",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"gofer",
-		"undefinedSymbols" ],
+		"undefinedSymbols"
+	],
 	"name" : "MetacelloConfigAPIToolBoxTestCase",
-	"pools" : [
-		 ],
-	"super" : "MetacelloConfigMCAPITestCase",
-	"type" : "normal" }
+	"type" : "normal"
+}

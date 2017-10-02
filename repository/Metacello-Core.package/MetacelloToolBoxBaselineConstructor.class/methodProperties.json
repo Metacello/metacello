@@ -1,8 +1,9 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"evaluateBaselineMethodSection:" : "dkh 05/21/2016 20:27",
 		"extractBaselinePragmaFor:" : "dkh 05/21/2016 20:22",
-		"extractMethodSectionsFor:" : "dkh 05/21/2016 20:34",
-		"extractMethodSectionsForClass:" : "dkh 05/21/2016 20:35" } }
+		"evaluateBaselineMethodSection:" : "dkh 05/21/2016 20:27",
+		"extractMethodSectionsForClass:" : "dkh 05/21/2016 20:35",
+		"extractMethodSectionsFor:" : "dkh 05/21/2016 20:34"
+	},
+	"class" : { }
+}

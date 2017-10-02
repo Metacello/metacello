@@ -1,10 +1,11 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"loadUsing:gofer:" : "dkh 6/8/2012 14:04:22",
-		"resolveToLoadableSpec" : "dkh 6/8/2012 14:04:22",
-		"resolveToPackagesIn:andProjects:into:visited:" : "dkh 10/01/2014 17:13",
-		"resolveToPackagesIn:andProjects:visited:" : "dkh 10/01/2014 17:13",
-		"resolveToPackagesIn:into:visited:" : "dkh 10/01/2014 17:13",
-		"resolveToPackagesIn:visited:" : "dkh 10/01/2014 17:14" } }
+		"resolveToPackagesIn:andProjects:visited:" : " 9/28/2017 08:53:29",
+		"resolveToPackagesIn:visited:" : " 9/28/2017 08:53:29",
+		"loadUsing:gofer:" : " 9/28/2017 08:53:29",
+		"resolveToPackagesIn:into:visited:" : " 9/28/2017 08:53:29",
+		"resolveToLoadableSpec" : " 9/28/2017 08:53:29",
+		"resolveToPackagesIn:andProjects:into:visited:" : " 9/28/2017 08:53:29"
+	},
+	"class" : { }
+}

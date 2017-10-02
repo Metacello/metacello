@@ -1,4 +1,7 @@
 private
 evaluatePragma: pragma
 	currentContext := pragma.
-	[ self configuration perform: pragma selector with: self ] ensure: [ currentContext := nil ]
+	[ self configuration 
+		perform: (MetacelloPlatform current selectorForPragma: pragma) 
+		with: self ] 
+	ensure: [ currentContext := nil ]
