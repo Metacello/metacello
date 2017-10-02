@@ -30,7 +30,9 @@ loadVersion: aVersionOrNil
 				ifAbsent: [ dict at: self projectClass put: Dictionary new ].
 			(cachedList := projectCache at: vrsn ifAbsent: [  ]) == nil
 				ifTrue: [ projectCache at: vrsn put: list ]
-				ifFalse: [ (cachedList size = list size and: [ cachedList includesAll: list ])
+				ifFalse: [ 
+					(cachedList size = list size 
+					and: [ cachedList allSatisfy: [ :each | list  includes: each ] ])
 						ifTrue:
 							[ "no need to refetch list ... recursion stoppper (Issue 95)" ^ self ]
 						ifFalse: [ projectCache at: vrsn put: list ] ].
