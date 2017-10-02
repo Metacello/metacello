@@ -7,5 +7,5 @@ repositoryFromUrl: anUrl
       locator := anUrl locator.
       locator last = $/
         ifFalse: [ locator := locator , '/' ].
-      ^ CypressAbstractRepository onUrl: ('cypresslax:' , locator) asUrl alias: '' ].
+      ^ CypressAbstractRepository onUrl: (CypressUrl absoluteFromText: 'cypresslax:' , locator) alias: '' ].
   self error: 'Unknown repository scheme: ' , scheme printString

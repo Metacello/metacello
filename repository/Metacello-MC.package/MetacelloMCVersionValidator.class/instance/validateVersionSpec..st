@@ -19,7 +19,7 @@ validateVersionSpec: versionSpec
         ifTrue: [ 
           referencedProjectSpec hasRepository
             ifTrue: [ 
-              (referencedProjectSpec file beginsWith: referencedProjectSpec className)
+              ((referencedProjectSpec file indexOfSubCollection: referencedProjectSpec className) = 1)
                 ifFalse: [ 
                   self
                     recordValidationCriticalWarning:
@@ -57,7 +57,7 @@ validateVersionSpec: versionSpec
                 callSite: #'validateVersionSpec:'
                 reasonCode: #'cannotResolveVersion' ] ] ]
     packageDo: [ :packageSpec | 
-      (packageSpec file beginsWith: packageSpec name)
+      ((packageSpec file indexOfSubCollection: packageSpec name) = 1)
         ifFalse: [ 
           self
             recordValidationCriticalWarning:

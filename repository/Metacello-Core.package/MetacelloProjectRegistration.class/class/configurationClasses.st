@@ -16,6 +16,6 @@ configurationClasses
                 ifFalse: [ 
                     (([ cl isMetacelloConfig ]
                         on: Error
-                        do: [ :ex | ex return: false ]) and: [ cl name asString beginsWith: 'ConfigurationOf' ])
+                        do: [ :ex | ex return: false ]) and: [ (cl name asString indexOfSubCollection: 'ConfigurationOf') = 1 ])
                         ifTrue: [ answer add: cl ] ] ].
     ^ answer

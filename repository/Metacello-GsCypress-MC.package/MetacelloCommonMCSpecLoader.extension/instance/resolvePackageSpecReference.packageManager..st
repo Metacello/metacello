@@ -14,14 +14,14 @@ resolvePackageSpecReference: packageSpec packageManager: packageManager
   references := packageReference resolveAllWith: packageManager.
   references size ~= 1
     ifTrue: [ 
-      | repoString |
-      repoString := String
-        streamContents: [ :stream | 
-          packageManager knownRepositories keys
-            do: [ :url | 
-              stream
-                nextPutAll: url;
-                space ] ].
+      | stream repoString |
+      stream := WriteStream on: String new.
+      packageManager knownRepositories keys
+        do: [ :url | 
+          stream
+            nextPutAll: url;
+            space ].
+      repoString := stream contents.
       references isEmpty
         ifTrue: [ 
           (MetacelloPackageSpecResolutionError new
