@@ -1,6 +1,6 @@
 merging
 validateMergeForSpec: aSpec
-    aSpec class = self class
+    aSpec speciesForMerge = self speciesForMerge
         ifFalse: [ 
             self
                 error:

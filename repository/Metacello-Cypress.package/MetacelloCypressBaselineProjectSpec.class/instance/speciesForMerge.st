@@ -1,0 +1,4 @@
+merging
+speciesForMerge
+
+  ^ MetacelloMCBaselineOfProjectSpec
