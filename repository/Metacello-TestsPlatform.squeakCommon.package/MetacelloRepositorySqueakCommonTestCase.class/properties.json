@@ -1,14 +1,11 @@
 {
-	"category" : "Metacello-TestsPlatform",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "MetacelloRepositorySqueakCommonTestCase",
-	"pools" : [
-		 ],
 	"super" : "TestCase",
-	"type" : "normal" }
+	"category" : "Metacello-TestsPlatform",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MetacelloRepositorySqueakCommonTestCase",
+	"type" : "normal"
+}
