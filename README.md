@@ -1,3 +1,5 @@
+# Work on Metacello has moved to: https://github.com/Metacello/metacello
+
 ## INSTALL Preview Version
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dalehenrich/metacello-work?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
