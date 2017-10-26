@@ -36,8 +36,7 @@ baseline: spec
           with: [ spec requires: #('Metacello-GitBasedRepository') ];
         package: 'Metacello-Bitbucket'
           with: [ spec requires: #('Metacello-GitBasedRepository') ];
-        package: 'Metacello-MC'
-          with: [ spec requires: #('Metacello-Core' 'Gofer') ];
+        package: 'Metacello-MC';
         package: 'Metacello-Platform'
           with: [ spec requires: #('Metacello-MC') ];
         package: 'Metacello-Reference'
@@ -141,6 +140,8 @@ baseline: spec
                 repository: 'http://seaside.gemtalksystems.com/ss/metacello' ];
         yourself.
       spec
+        package: 'Metacello-MC'
+          with: [ spec requires: #('Metacello-Core' 'Gofer') ];
         package: 'Metacello-ProfStef'
           with: [ spec requires: #('Metacello-Core' 'ProfStef' 'Metacello-ToolBox') ];
         package: 'Metacello-TestsProfStef'
@@ -212,6 +213,8 @@ baseline: spec
     for: #(#'pharo3.x' #'pharo4.x' #'pharo5.x')
     do: [ 
       spec
+        package: 'Metacello-MC'
+          with: [ spec requires: #('Metacello-Core' 'Gofer') ];
         package: 'Metacello-PharoCommonPlatform'
           with: [ spec requires: #('Metacello-MC') ];
         package: 'Metacello-Platform'
@@ -226,6 +229,8 @@ baseline: spec
     for: #(#'pharo6.x' #'pharo7.x')
     do: [ 
       spec
+        package: 'Metacello-MC'
+          with: [ spec requires: #('Metacello-Core') ];
         package: 'Metacello-PharoCommonPlatform'
           with: [ spec requires: #('Metacello-MC') ];
         package: 'Metacello-Platform'
@@ -268,6 +273,8 @@ baseline: spec
           with: [ spec repository: 'github://dalehenrich/filetree:squeak4.3/repository' ];
         yourself.
       spec
+        package: 'Metacello-MC'
+          with: [ spec requires: #('Metacello-Core' 'Gofer') ];
         package: 'Metacello-Platform'
           with: [ spec file: 'Metacello-Platform.squeak' ];
         yourself ].
@@ -295,6 +302,8 @@ baseline: spec
         baseline: 'FileTree'
         with: [ spec repository: 'github://dalehenrich/filetree:gemstone2.4/repository' ].
       spec
+        package: 'Metacello-MC'
+          with: [ spec requires: #('Metacello-Core' 'Gofer') ];
         package: 'Metacello-Platform'
           with: [ 
               spec
