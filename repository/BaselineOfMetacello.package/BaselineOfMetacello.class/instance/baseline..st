@@ -56,11 +56,7 @@ baseline: spec
               spec
                 requires:
                   #('Metacello-Core' 'Metacello-TestsCore' 'Metacello-ToolBox' 'Metacello-TestsMCResources') ];
-        package: 'Metacello-TestsMC'
-          with: [ 
-              spec
-                requires:
-                  #('Metacello-MC' 'Gofer Tests' 'Metacello-ToolBox' 'Metacello-GitHub' 'Metacello-Bitbucket' 'Metacello-TestsMCResources') ];
+        package: 'Metacello-TestsMC';
         package: 'Metacello-TestsMCA'
           with: [ spec requires: #('Metacello-TestsMC') ];
         package: 'Metacello-TestsMCB'
@@ -142,6 +138,8 @@ baseline: spec
       spec
         package: 'Metacello-MC'
           with: [ spec requires: #('Metacello-Core' 'Gofer') ];
+        package: 'Metacello-TestsMC'
+          with: [ spec requires: #('Metacello-MC' 'Gofer Tests' 'Metacello-ToolBox' 'Metacello-GitHub' 'Metacello-Bitbucket' 'Metacello-TestsMCResources') ];
         package: 'Metacello-ProfStef'
           with: [ spec requires: #('Metacello-Core' 'ProfStef' 'Metacello-ToolBox') ];
         package: 'Metacello-TestsProfStef'
@@ -215,6 +213,8 @@ baseline: spec
       spec
         package: 'Metacello-MC'
           with: [ spec requires: #('Metacello-Core' 'Gofer') ];
+        package: 'Metacello-TestsMC'
+          with: [ spec requires: #('Metacello-MC' 'Gofer Tests' 'Metacello-ToolBox' 'Metacello-GitHub' 'Metacello-Bitbucket' 'Metacello-TestsMCResources') ];
         package: 'Metacello-PharoCommonPlatform'
           with: [ spec requires: #('Metacello-MC') ];
         package: 'Metacello-Platform'
@@ -231,6 +231,8 @@ baseline: spec
       spec
         package: 'Metacello-MC'
           with: [ spec requires: #('Metacello-Core') ];
+        package: 'Metacello-TestsMC'
+          with: [ spec requires: #('Metacello-MC' 'Metacello-ToolBox' 'Metacello-GitHub' 'Metacello-Bitbucket' 'Metacello-TestsMCResources') ];
         package: 'Metacello-PharoCommonPlatform'
           with: [ spec requires: #('Metacello-MC') ];
         package: 'Metacello-Platform'
@@ -275,6 +277,8 @@ baseline: spec
       spec
         package: 'Metacello-MC'
           with: [ spec requires: #('Metacello-Core' 'Gofer') ];
+        package: 'Metacello-TestsMC'
+          with: [ spec requires: #('Metacello-MC' 'Gofer Tests' 'Metacello-ToolBox' 'Metacello-GitHub' 'Metacello-Bitbucket' 'Metacello-TestsMCResources') ];
         package: 'Metacello-Platform'
           with: [ spec file: 'Metacello-Platform.squeak' ];
         yourself ].
@@ -304,6 +308,8 @@ baseline: spec
       spec
         package: 'Metacello-MC'
           with: [ spec requires: #('Metacello-Core' 'Gofer') ];
+        package: 'Metacello-TestsMC'
+          with: [ spec requires: #('Metacello-MC' 'Gofer Tests' 'Metacello-ToolBox' 'Metacello-GitHub' 'Metacello-Bitbucket' 'Metacello-TestsMCResources') ];
         package: 'Metacello-Platform'
           with: [ 
               spec

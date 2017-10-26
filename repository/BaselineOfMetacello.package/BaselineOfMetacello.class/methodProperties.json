@@ -2,7 +2,7 @@
 	"instance" : {
 		"reprimeRegistryIssue197" : "dkh 09/30/2014 17:40",
 		"gemstone10beta311PostLoadDoIt" : "dkh 07/24/2012 18:09",
-		"baseline:" : "EstebanLorenzano 10/26/2017 10:40",
+		"baseline:" : "EstebanLorenzano 10/26/2017 11:22",
 		"testResourcePostLoadDoIt" : "dkh 6/1/2012 09:18:17"
 	},
 	"class" : { }
