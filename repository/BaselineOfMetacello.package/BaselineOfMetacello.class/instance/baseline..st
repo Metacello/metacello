@@ -5,19 +5,6 @@ baseline: spec
     for: #'common'
     do: [ 
       spec postLoadDoIt: #'reprimeRegistryIssue197'.
-      spec baseline: 'FileTree'.
-      spec
-        project: 'Gofer'
-          with: [ 
-              spec
-                className: 'ConfigurationOfGofer';
-                versionString: #'stable';
-                loads: #('Core');
-                repository: 'http://seaside.gemtalksystems.com/ss/metacello' ];
-        project: 'Gofer Tests'
-          copyFrom: 'Gofer'
-          with: [ spec loads: #('Tests') ];
-        yourself.
       spec
         package: 'Metacello-Base';
         package: 'Metacello-ToolBox'
@@ -36,7 +23,8 @@ baseline: spec
           with: [ spec requires: #('Metacello-GitBasedRepository') ];
         package: 'Metacello-Bitbucket'
           with: [ spec requires: #('Metacello-GitBasedRepository') ];
-        package: 'Metacello-MC';
+        package: 'Metacello-MC'
+          with: [ spec requires: #('Metacello-Core') ];
         package: 'Metacello-Platform'
           with: [ spec requires: #('Metacello-MC') ];
         package: 'Metacello-Reference'
@@ -56,7 +44,8 @@ baseline: spec
               spec
                 requires:
                   #('Metacello-Core' 'Metacello-TestsCore' 'Metacello-ToolBox' 'Metacello-TestsMCResources') ];
-        package: 'Metacello-TestsMC';
+        package: 'Metacello-TestsMC'
+          with: [ spec requires: #('Metacello-MC' 'Metacello-ToolBox' 'Metacello-GitHub' 'Metacello-Bitbucket' 'Metacello-TestsMCResources') ];
         package: 'Metacello-TestsMCA'
           with: [ spec requires: #('Metacello-TestsMC') ];
         package: 'Metacello-TestsMCB'
@@ -120,7 +109,9 @@ baseline: spec
         yourself ].
   spec
     for: #(#'pharo1.x' #'pharo2.x')
-    do: [ 
+    do: [
+		self filetree: spec.
+		self gofer: spec. 
       spec
         project: 'ProfStef'
           with: [ 
@@ -137,9 +128,9 @@ baseline: spec
         yourself.
       spec
         package: 'Metacello-MC'
-          with: [ spec requires: #('Metacello-Core' 'Gofer') ];
+          with: [ spec requires: #('Gofer') ];
         package: 'Metacello-TestsMC'
-          with: [ spec requires: #('Metacello-MC' 'Gofer Tests' 'Metacello-ToolBox' 'Metacello-GitHub' 'Metacello-Bitbucket' 'Metacello-TestsMCResources') ];
+          with: [ spec requires: #('Gofer Tests') ];
         package: 'Metacello-ProfStef'
           with: [ spec requires: #('Metacello-Core' 'ProfStef' 'Metacello-ToolBox') ];
         package: 'Metacello-TestsProfStef'
@@ -210,11 +201,13 @@ baseline: spec
   spec
     for: #(#'pharo3.x' #'pharo4.x' #'pharo5.x')
     do: [ 
+		self filetree: spec.
+		self gofer: spec. 
       spec
         package: 'Metacello-MC'
-          with: [ spec requires: #('Metacello-Core' 'Gofer') ];
+          with: [ spec requires: #('Gofer') ];
         package: 'Metacello-TestsMC'
-          with: [ spec requires: #('Metacello-MC' 'Gofer Tests' 'Metacello-ToolBox' 'Metacello-GitHub' 'Metacello-Bitbucket' 'Metacello-TestsMCResources') ];
+          with: [ spec requires: #('Gofer Tests') ];
         package: 'Metacello-PharoCommonPlatform'
           with: [ spec requires: #('Metacello-MC') ];
         package: 'Metacello-Platform'
@@ -270,15 +263,17 @@ baseline: spec
   spec
     for: #'squeak'
     do: [ 
+		self filetree: spec.
+		self gofer: spec. 
       spec
         baseline: 'FileTree'
           with: [ spec repository: 'github://dalehenrich/filetree:squeak4.3/repository' ];
         yourself.
       spec
         package: 'Metacello-MC'
-          with: [ spec requires: #('Metacello-Core' 'Gofer') ];
+          with: [ spec requires: #('Gofer') ];
         package: 'Metacello-TestsMC'
-          with: [ spec requires: #('Metacello-MC' 'Gofer Tests' 'Metacello-ToolBox' 'Metacello-GitHub' 'Metacello-Bitbucket' 'Metacello-TestsMCResources') ];
+          with: [ spec requires: #('Gofer Tests') ];
         package: 'Metacello-Platform'
           with: [ spec file: 'Metacello-Platform.squeak' ];
         yourself ].
@@ -302,14 +297,16 @@ baseline: spec
   spec
     for: #'gemstone'
     do: [ 
+		self filetree: spec.
+		self gofer: spec. 
       spec
         baseline: 'FileTree'
         with: [ spec repository: 'github://dalehenrich/filetree:gemstone2.4/repository' ].
       spec
         package: 'Metacello-MC'
-          with: [ spec requires: #('Metacello-Core' 'Gofer') ];
+          with: [ spec requires: #('Gofer') ];
         package: 'Metacello-TestsMC'
-          with: [ spec requires: #('Metacello-MC' 'Gofer Tests' 'Metacello-ToolBox' 'Metacello-GitHub' 'Metacello-Bitbucket' 'Metacello-TestsMCResources') ];
+          with: [ spec requires: #('Gofer Tests') ];
         package: 'Metacello-Platform'
           with: [ 
               spec
