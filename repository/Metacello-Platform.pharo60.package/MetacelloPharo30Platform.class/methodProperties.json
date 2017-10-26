@@ -1,27 +1,4 @@
 {
-	"instance" : {
-		"tempFileFor:suffix:" : "ChristopheDemarey 7/15/2014 15:48",
-		"fileFromPath:relativeTo:" : "ChristopheDemarey 5/14/2013 17:44",
-		"parentDirectoryOf:" : "ChristopheDemarey 5/29/2013 18:16",
-		"registerPackageNamed:" : "dkh 10/14/2014 17:20:04",
-		"directoryFromPath:relativeTo:" : "ChristopheDemarey 4/29/2013 15:14",
-		"defaultRepositoryDescription" : "ChristopheDemarey 09/12/2014 03:01:45",
-		"readStreamOn:do:" : "ChristopheDemarey 5/14/2013 17:55",
-		"suspendSystemUpdateEventsDuring:" : "ChristopheDemarey 5/27/2013 16:18",
-		"ensureDirectoryExists:" : "ChristopheDemarey 7/22/2013 11:20",
-		"string:includesSubstring:" : "ChristopheDemarey 5/31/2013 13:02",
-		"extractRepositoryFrom:to:" : "ChristopheDemarey 9/19/2013 10:35",
-		"fileHandleOn:" : "ChristopheDemarey 4/29/2013 13:16",
-		"downloadJSON:username:pass:" : "OffrayLuna 5/27/2016 10:02",
-		"fileDirectoryClass" : "ChristopheDemarey 4/29/2013 15:58",
-		"defaultDirectory" : "ChristopheDemarey 3/10/2016 11:55",
-		"newVersionForWorkingCopy:" : "ChristopheDemarey 9/12/2013 10:28",
-		"downloadZipArchive:to:" : "ChristopheDemarey 09/12/2014 03:01:45",
-		"compiler" : "ChristopheDemarey 9/1/2014 17:14",
-		"packageInfoFor:" : "dkh 5/8/2013 09:40",
-		"recursiveDelete:" : "ChristopheDemarey 5/27/2013 17:43"
-	},
-	"class" : {
-		"initialize" : "ChristopheDemarey 4/29/2013 14:22"
-	}
+	"instance" : { },
+	"class" : { }
 }
