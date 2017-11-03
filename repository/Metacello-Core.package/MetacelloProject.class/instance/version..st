@@ -1,6 +1,5 @@
 versions
 version: aVersionString
-  | vrsn |
   (MetacelloPlatform current isSymbol: aVersionString)
     ifTrue: [ 
       | symbolicVersionString |

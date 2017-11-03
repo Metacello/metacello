@@ -1,6 +1,6 @@
 private
 linearLoadPackageSpec: packageSpec packageManager: packageManager
-  | resolvedReference references |
+  | resolvedReference |
   resolvedReference := self
     resolvePackageSpecReference: packageSpec
     packageManager: packageManager.	"look up package spec"

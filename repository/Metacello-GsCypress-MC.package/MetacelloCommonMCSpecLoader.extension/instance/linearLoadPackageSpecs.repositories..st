@@ -1,7 +1,7 @@
 *Metacello-GsCypress-MC
 linearLoadPackageSpecs: packageSpecs repositories: repositories
 
-  | packageManager summary |
+  | packageManager |
   packageManager := CypressPackageManager3 new.
   repositories do: [:repo | packageManager addRepository: repo ].
-  packageSpecs do: [ :spec |  spec loadUsing: self packageManager: packageManager ]
+  packageSpecs do: [ :aSpec |  aSpec loadUsing: self packageManager: packageManager ]

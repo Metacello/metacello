@@ -8,7 +8,6 @@ configMethodCascadeOn: aStream indent: indent
     ifTrue: [ repositorySpecs first configMethodCascadeOn: aStream lastCascade: true ]
     ifFalse: [ 
       1 to: repositorySpecs size do: [ :index | 
-        | repositorySpec |
         indent + 1 timesRepeat: [ aStream tab ].
         (repositorySpecs at: index)
           configMethodCascadeOn: aStream

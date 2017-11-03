@@ -1,6 +1,6 @@
 instance creation
 fromString: aString forPattern: forPattern
-  | new tokens preRelease build versionString identifierCount normalEnd preReleaseEnd normalComponents preReleaseComponents buildComponents |
+  | preRelease build versionString identifierCount normalEnd preReleaseEnd normalComponents preReleaseComponents buildComponents |
   normalComponents := OrderedCollection new.
   preReleaseComponents := OrderedCollection new.
   buildComponents := OrderedCollection new.
