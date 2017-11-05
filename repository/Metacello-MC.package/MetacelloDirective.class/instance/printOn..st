@@ -1,7 +1,4 @@
 printing
 printOn: aStream
 
-    | stream |
-    stream := WriteStream on: String new.
-    self printOn: stream.
-    ^stream contents
+    self printOn: aStream indent: 0
