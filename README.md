@@ -17,11 +17,11 @@ Metacello Preview  is pre-installed in Pharo3.0 the following installs the lates
 ```Smalltalk
 Metacello new
   baseline: 'Metacello';
-  repository: 'github://dalehenrich/metacello-work:master/repository';
+  repository: 'github://Metacello/metacello:master/repository';
   get.
 Metacello new
   baseline: 'Metacello';
-  repository: 'github://dalehenrich/metacello-work:master/repository';
+  repository: 'github://Metacello/metacello:master/repository';
   onConflict: [:ex | ex allow];
   load
 ```
@@ -42,16 +42,16 @@ Gofer new
 (Smalltalk at: #Metacello) new
   configuration: 'MetacelloPreview';
   version: #stable;
-  repository: 'github://dalehenrich/metacello-work:configuration';
+  repository: 'github://Metacello/metacello:configuration';
   load.
 "Now load latest version of Metacello"
 Metacello new
   baseline: 'Metacello';
-  repository: 'github://dalehenrich/metacello-work:master/repository';
+  repository: 'github://Metacello/metacello:master/repository';
   get.
 Metacello new
   baseline: 'Metacello';
-  repository: 'github://dalehenrich/metacello-work:master/repository';
+  repository: 'github://Metacello/metacello:master/repository';
   onConflict: [:ex | ex allow];
   load
 ```
@@ -73,17 +73,17 @@ Installer gemsource
 (Smalltalk at: #Metacello) new
   configuration: 'MetacelloPreview';
   version: #stable;
-  repository: 'github://dalehenrich/metacello-work:configuration';
+  repository: 'github://Metacello/metacello:configuration';
   load.
 
 "Now load latest version of Metacello"
 (Smalltalk at: #Metacello) new
   baseline: 'Metacello';
-  repository: 'github://dalehenrich/metacello-work:master/repository';
+  repository: 'github://Metacello/metacello:master/repository';
   get.
 (Smalltalk at: #Metacello) new
   baseline: 'Metacello';
-  repository: 'github://dalehenrich/metacello-work:master/repository';
+  repository: 'github://Metacello/metacello:master/repository';
   load.
 ```
 
