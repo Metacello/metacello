@@ -1,3 +1,3 @@
 *Metacello-GsCypress-MC
 globalNamed: globalName
-  ^ GsSession currentSession symbolList objectNamed: globalName
+  ^ self lookupSymbolList objectNamed: globalName

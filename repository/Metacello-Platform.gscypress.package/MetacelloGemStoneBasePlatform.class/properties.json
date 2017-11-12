@@ -5,7 +5,8 @@
 	"classvars" : [
 		 ],
 	"instvars" : [
-		"stoneVersionAttribute" ],
+		"stoneVersionAttribute",
+		"lookupSymbolList" ],
 	"name" : "MetacelloGemStoneBasePlatform",
 	"pools" : [
 		 ],
