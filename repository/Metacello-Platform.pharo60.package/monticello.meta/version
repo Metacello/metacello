@@ -1,0 +1,3 @@
+(name 'Metacello-Platform.pharo60-EstebanLorenzano.1508155584' message 'attempt to fix bad package export' id '14faff09-c318-0d00-98a0-cef201354d78' date '25 October 2017' time '6:11:02.699602 pm' author 'EstebanLorenzano' ancestors ((name 'Metacello-Platform-GitHub.1508155583' message 'Merge pull request #92 from rajula96reddy/05723-Default-Working-Directory
+
+05723-Default-Working-Directory' id 'eec3be54-e2e9-5b54-af07-f98f6e24c609' date '16 October 2017' time '2:06:23 pm' author 'GitHub' ancestors () stepChildren ())) stepChildren ())

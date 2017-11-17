@@ -1,19 +1,20 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"allow" : "dkh 7/18/2012 16:40",
-		"allowEvenIfLocked" : "dkh 07/25/2013 11:57",
-		"checkAllowed" : "dkh 07/25/2013 04:44",
-		"defaultAction" : "dkh 7/18/2012 16:42",
-		"disallow" : "dkh 6/7/2012 15:25",
-		"existingProjectRegistration" : "dkh 5/29/2012 16:30",
-		"existingProjectRegistration:" : "dkh 5/29/2012 16:30",
-		"handleOnDownGrade:onUpgrade:" : "dkh 7/24/2012 11:37",
-		"newProjectRegistration" : "dkh 5/29/2012 16:30",
-		"newProjectRegistration:" : "dkh 5/29/2012 16:30",
-		"operationString" : "dkh 7/18/2012 17:08",
-		"useExisting" : "dkh 10/10/2014 14:36",
-		"useIncoming" : "dkh 10/10/2014 13:18",
-		"useLoaded" : "dkh 10/10/2014 13:21",
-		"useNew" : "dkh 10/10/2014 14:36" } }
+		"defaultAction" : " 9/28/2017 08:54:38",
+		"newProjectRegistration:" : " 9/28/2017 08:54:38",
+		"checkAllowed" : " 9/28/2017 08:54:38",
+		"useIncoming" : " 9/28/2017 08:54:38",
+		"newProjectRegistration" : " 9/28/2017 08:54:38",
+		"disallow" : " 9/28/2017 08:54:38",
+		"operationString" : " 9/28/2017 08:54:38",
+		"handleOnDownGrade:onUpgrade:" : " 9/28/2017 08:54:38",
+		"useExisting" : " 9/28/2017 08:54:38",
+		"useLoaded" : " 9/28/2017 08:54:38",
+		"allowEvenIfLocked" : " 9/28/2017 08:54:38",
+		"existingProjectRegistration" : " 9/28/2017 08:54:38",
+		"allow" : " 9/28/2017 08:54:38",
+		"useNew" : " 9/28/2017 08:54:38",
+		"existingProjectRegistration:" : " 9/28/2017 08:54:38"
+	},
+	"class" : { }
+}

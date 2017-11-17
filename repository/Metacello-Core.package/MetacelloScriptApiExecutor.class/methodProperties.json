@@ -1,8 +1,9 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"executeBlock:do:" : "dkh 7/16/2012 15:59",
-		"executeCollection:do:" : "dkh 7/16/2012 15:56",
-		"executeString:do:" : "dkh 09/04/2014 16:41",
-		"projectSpecsFromRepositoryArg" : "dkh 7/16/2012 16:38" } }
+		"projectSpecsFromRepositoryArg" : " 9/28/2017 08:54:38",
+		"executeCollection:do:" : " 9/28/2017 08:54:38",
+		"executeBlock:do:" : " 9/28/2017 08:54:38",
+		"executeString:do:" : " 9/28/2017 08:54:38"
+	},
+	"class" : { }
+}

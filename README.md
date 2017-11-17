@@ -2,8 +2,6 @@
 
 ## INSTALL Preview Version
 
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dalehenrich/metacello-work?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 ### GemStone
 GsUpgrader works on all versions of GemStone against all Versions of GLASS:
 
@@ -21,11 +19,11 @@ Metacello Preview  is pre-installed in Pharo3.0 the following installs the lates
 ```Smalltalk
 Metacello new
   baseline: 'Metacello';
-  repository: 'github://dalehenrich/metacello-work:master/repository';
+  repository: 'github://Metacello/metacello:master/repository';
   get.
 Metacello new
   baseline: 'Metacello';
-  repository: 'github://dalehenrich/metacello-work:master/repository';
+  repository: 'github://Metacello/metacello:master/repository';
   onConflict: [:ex | ex allow];
   load
 ```
@@ -46,16 +44,16 @@ Gofer new
 (Smalltalk at: #Metacello) new
   configuration: 'MetacelloPreview';
   version: #stable;
-  repository: 'github://dalehenrich/metacello-work:configuration';
+  repository: 'github://Metacello/metacello:configuration';
   load.
 "Now load latest version of Metacello"
 Metacello new
   baseline: 'Metacello';
-  repository: 'github://dalehenrich/metacello-work:master/repository';
+  repository: 'github://Metacello/metacello:master/repository';
   get.
 Metacello new
   baseline: 'Metacello';
-  repository: 'github://dalehenrich/metacello-work:master/repository';
+  repository: 'github://Metacello/metacello:master/repository';
   onConflict: [:ex | ex allow];
   load
 ```
@@ -77,17 +75,17 @@ Installer gemsource
 (Smalltalk at: #Metacello) new
   configuration: 'MetacelloPreview';
   version: #stable;
-  repository: 'github://dalehenrich/metacello-work:configuration';
+  repository: 'github://Metacello/metacello:configuration';
   load.
 
 "Now load latest version of Metacello"
 (Smalltalk at: #Metacello) new
   baseline: 'Metacello';
-  repository: 'github://dalehenrich/metacello-work:master/repository';
+  repository: 'github://Metacello/metacello:master/repository';
   get.
 (Smalltalk at: #Metacello) new
   baseline: 'Metacello';
-  repository: 'github://dalehenrich/metacello-work:master/repository';
+  repository: 'github://Metacello/metacello:master/repository';
   load.
 ```
 
@@ -98,9 +96,7 @@ If you are interested in using GitHub with the Metacello Preview, you should rea
 [Getting Started with GitHub][1], the [Metacello User Guide][2], the [Metacello Scripting API][3], and [Issue #136 detail][4].
 
 ### TravisCI Status
-**master branch**: [![Build Status](https://secure.travis-ci.org/dalehenrich/metacello-work.png?branch=master)](http://travis-ci.org/dalehenrich/metacello-work)
-
-**configuration branch**: [![Build Status](https://secure.travis-ci.org/dalehenrich/metacello-work.png?branch=configuration)](http://travis-ci.org/dalehenrich/metacello-work)
+**master branch**: [![Build Status](https://travis-ci.org/Metacello/metacello.svg?branch=master)](https://travis-ci.org/Metacello/metacello)
 
 ### Some things to ponder 
 [Dear package managers: dependency resolution results should be in version control][6] ([twitter comment thread][7]).

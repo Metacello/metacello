@@ -8,8 +8,8 @@ modifySymbolicVersionMethodFor: versionSymbol symbolicVersionSpecsDo: aBlock
     pragma := coll at: 1.
     methodSpec := MetacelloSymbolicVersionMethodSpec new
         project: project;
-        selector: pragma selector;
-        category: (project configuration class whichCategoryIncludesSelector: pragma selector);
+        selector: (MetacelloPlatform current selectorForPragma: pragma);
+        category: (project configuration class whichCategoryIncludesSelector: (MetacelloPlatform current selectorForPragma: pragma));
         versionString: versionSymbol;
         yourself.
     (constructor extractSymbolicVersionSpecsFor: versionSymbol)

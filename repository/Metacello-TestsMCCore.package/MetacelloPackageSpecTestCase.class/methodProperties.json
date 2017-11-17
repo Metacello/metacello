@@ -1,7 +1,8 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"projectClass" : "dkh 6/12/2012 15:41:23.319",
-		"testPackageMergeSpec" : "dkh 6/12/2012 15:41:23.319",
-		"testPackageSpec" : "dkh 6/12/2012 15:41:23.319" } }
+		"projectClass" : " 9/30/2017 13:31:35",
+		"testPackageMergeSpec" : " 9/30/2017 13:31:35",
+		"testPackageSpec" : " 9/30/2017 13:31:35"
+	},
+	"class" : { }
+}

@@ -4,11 +4,11 @@ extractRepositoryFrom: zipFile to: directory
 
     | out err proc errorMessage errorFileName |
     errorFileName := self downloadErrorFileNameFor: zipFile.
-    out := FileStream forceNewFileNamed: '/dev/zip.out'.
+    out := FileStream forceNewFileNamed: '/tmp/zip.out'.
     err := FileStream forceNewFileNamed: errorFileName.
     errorMessage := ''.
     [ 
-    proc := OSProcess thisOSProcess
+    proc := (self class environment at: #OSProcess) thisOSProcess
         forkJob: '/usr/bin/unzip'
         arguments:
             {'-u'.

@@ -1,4 +1,3 @@
 github/bitbucket support
 fileDirectoryClass
-
-	^FileDirectory
+	^ Smalltalk at: #FileDirectory

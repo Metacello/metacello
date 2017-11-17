@@ -1,10 +1,11 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"addToMetacelloPackages:" : "dkh 6/8/2012 14:04:22",
-		"addToMetacelloRepositories:" : "dkh 6/8/2012 14:04:22",
-		"mergeIntoMetacelloPackages:" : "dkh 6/8/2012 14:04:22",
-		"mergeIntoMetacelloRepositories:" : "dkh 6/8/2012 14:04:22",
-		"removeFromMetacelloPackages:" : "dkh 6/8/2012 14:04:22",
-		"removeFromMetacelloRepositories:" : "dkh 6/8/2012 14:04:22" } }
+		"addToMetacelloPackages:" : " 9/28/2017 08:53:29",
+		"removeFromMetacelloRepositories:" : " 9/28/2017 08:53:29",
+		"mergeIntoMetacelloPackages:" : " 9/28/2017 08:53:29",
+		"removeFromMetacelloPackages:" : " 9/28/2017 08:53:29",
+		"addToMetacelloRepositories:" : " 9/28/2017 08:53:29",
+		"mergeIntoMetacelloRepositories:" : " 9/28/2017 08:53:29"
+	},
+	"class" : { }
+}

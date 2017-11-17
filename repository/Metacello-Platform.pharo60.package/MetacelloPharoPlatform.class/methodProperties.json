@@ -1,0 +1,29 @@
+{
+	"instance" : {
+		"tempFileFor:suffix:" : " 10/16/2017 15:27:22",
+		"fileFromPath:relativeTo:" : " 10/16/2017 15:27:22",
+		"parentDirectoryOf:" : " 10/16/2017 15:27:22",
+		"registerPackageNamed:" : " 10/16/2017 15:27:22",
+		"directoryFromPath:relativeTo:" : " 10/16/2017 15:27:22",
+		"defaultRepositoryDescription" : " 10/16/2017 15:27:22",
+		"readStreamOn:do:" : " 10/16/2017 15:27:22",
+		"suspendSystemUpdateEventsDuring:" : " 10/16/2017 15:27:22",
+		"ensureDirectoryExists:" : " 10/16/2017 15:27:22",
+		"string:includesSubstring:" : " 10/16/2017 15:27:22",
+		"extractRepositoryFrom:to:" : " 10/16/2017 15:27:22",
+		"fileHandleOn:" : " 10/16/2017 15:27:22",
+		"downloadJSON:username:pass:" : " 10/16/2017 15:27:22",
+		"fileDirectoryClass" : " 10/16/2017 15:27:22",
+		"selectorForPragma:" : " 10/16/2017 15:27:22",
+		"defaultDirectory" : " 10/16/2017 15:27:22",
+		"newVersionForWorkingCopy:" : " 10/16/2017 15:27:22",
+		"downloadZipArchive:to:" : " 10/16/2017 15:27:22",
+		"deleteFileNamed:" : " 10/16/2017 15:27:22",
+		"compiler" : " 10/16/2017 15:27:22",
+		"packageInfoFor:" : " 10/16/2017 15:27:22",
+		"recursiveDelete:" : " 10/16/2017 15:27:22"
+	},
+	"class" : {
+		"initialize" : " 10/16/2017 15:27:22"
+	}
+}

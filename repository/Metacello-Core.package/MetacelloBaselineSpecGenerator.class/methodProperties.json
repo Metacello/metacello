@@ -1,7 +1,8 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"projectSpecCreationBlock" : "dkh 7/16/2012 10:43",
-		"projectSpecListBlock" : "dkh 7/16/2012 10:44",
-		"projectSpecLookupBlock" : "dkh 7/16/2012 11:28" } }
+		"projectSpecListBlock" : " 9/28/2017 08:54:38",
+		"projectSpecCreationBlock" : " 9/28/2017 08:54:38",
+		"projectSpecLookupBlock" : " 9/28/2017 08:54:38"
+	},
+	"class" : { }
+}
