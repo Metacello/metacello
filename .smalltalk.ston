@@ -7,5 +7,10 @@ SmalltalkCISpec {
       #load : [ 'Tests' ],
       #directory : 'repository'
     }
-  ]
+  ],
+  #testing : {
+    #include : {
+      #classes : [ #SentButNotImplementedTest, #UndefinedSymbolsTest ]
+    }
+  }
 }
