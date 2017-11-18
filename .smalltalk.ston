@@ -8,4 +8,9 @@ SmalltalkCISpec {
       #directory : 'repository'
     }
   ]
+  #testing : {
+    #include : {
+      #classes : [ #SentButNotImplementedTest, #UndefinedSymbolsTest ]
+    }
+  }
 }
