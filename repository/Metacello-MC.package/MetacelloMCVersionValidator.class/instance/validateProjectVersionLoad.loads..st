@@ -1,6 +1,6 @@
 loading
 validateProjectVersionLoad: versionString loads: loadList
-	| issues project currentVersion version |
+	| issues project version |
 	(issues := (self validateProjectVersion: versionString) select: [ :issue | issue isError ]) notEmpty
 		ifTrue: [ ^ issues ].
 	project := self configurationClass project.
