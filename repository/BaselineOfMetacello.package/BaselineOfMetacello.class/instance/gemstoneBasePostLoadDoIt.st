@@ -1,4 +1,5 @@
 doits
 gemstoneBasePostLoadDoIt
-  (MetacelloPlatform current globalNamed: #'MetacelloGemStoneBasePlatform')
-    initialize
+  Smalltalk 
+    at: #'MetacelloGemStoneBasePlatform'
+    ifPresent: [:cls | cls initialize ]
