@@ -7,7 +7,7 @@ extractAtrributesFrom: gsVersion
 
   | tokens attributes attribute |
   attributes := {#'gemstoneCommon'.
-  #'gemstone64'}.
+  #'gemstone'}.
   tokens := gsVersion subStrings: $..
   attribute := ''.
   1 to: tokens size do: [ :index | | token |
@@ -15,6 +15,6 @@ extractAtrributesFrom: gsVersion
       ifTrue: [ ^ attributes ].
     attribute := attribute , token.
     attributes add: ('gsc' , attribute , '.x') asSymbol.
-    attributes add: ('gs64' , attribute , '.x') asSymbol.
+    attributes add: ('gs' , attribute , '.x') asSymbol.
     attribute := attribute , '.' ].
   ^ attributes

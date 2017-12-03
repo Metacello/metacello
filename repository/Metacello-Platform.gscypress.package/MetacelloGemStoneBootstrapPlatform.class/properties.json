@@ -1,0 +1,13 @@
+{
+	"category" : "Metacello-Platform",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"instvars" : [
+		 ],
+	"name" : "MetacelloGemStoneBootstrapPlatform",
+	"pools" : [
+		 ],
+	"super" : "MetacelloGemStoneBasePlatform",
+	"type" : "normal" }
