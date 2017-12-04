@@ -23,7 +23,9 @@ baseline: spec
         group: 'Tests'
           with: #('batch' 'Metacello-TestsCore' 'Metacello-TestsMCCore');
         yourself ].
-  spec for: #'gemstone64' do: [ spec
+  spec for: #'gemstone64' do: [
+      spec
+        package: 'Metacello-BootstrapMetacello';
         package: 'Metacello-Base'
           with: [ spec includes: 'Metacello-GsCypress-Base' ];
         package: 'Metacello-Platform' with: [ spec
@@ -42,6 +44,7 @@ baseline: spec
           with: [ spec requires: #('Metacello-TestsMCCore') ];
         yourself.
       spec
+        group: 'BootstrapMetacello' with: #('Metacello-BootstrapMetacello');
         group: 'Tests' with: #('Metacello-TestsBaselineGsCypress');
         yourself ].
   spec

@@ -1,0 +1,3 @@
+*Metacello-BootstrapMetacello
+flushForScriptGet
+    "noop"
