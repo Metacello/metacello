@@ -295,22 +295,28 @@ baseline: spec
         yourself ].
 
   spec
-    for: #'gemstone'
-    do: [ 
-		self filetree: spec.
-		self gofer: spec. 
-      spec
-        baseline: 'FileTree'
-        with: [ spec repository: 'github://dalehenrich/filetree:gemstone2.4/repository' ].
+    for: #'glass'
+    do: [
+		self gofer: spec.
       spec
         package: 'Metacello-MC'
           with: [ spec requires: #('Gofer') ];
         package: 'Metacello-TestsMC'
           with: [ spec requires: #('Gofer Tests') ];
+        yourself ].
+
+  spec
+    for: #'gemstone'
+    do: [ 
+      spec
+        baseline: 'FileTree'
+        with: [ spec repository: 'github://dalehenrich/filetree:gemstone2.4/repository' ].
+      spec
         package: 'Metacello-Platform'
           with: [ 
               spec
                 file: 'Metacello-Platform.gemstone';
+                requires: 'FileTree';
                 postLoadDoIt: #'gemstone10beta311PostLoadDoIt' ];
         package: 'Metacello-TestsPlatform'
           with: [ 
