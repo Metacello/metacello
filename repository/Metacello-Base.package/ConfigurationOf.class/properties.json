@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "dkh 5/30/2012 16:31",
 	"instvars" : [
-		 ],
+		 "project" ],
 	"name" : "ConfigurationOf",
 	"pools" : [
 		 ],
-	"super" : "AbstractMetacelloConfiguration",
+	"super" : "Object",
 	"type" : "normal" }

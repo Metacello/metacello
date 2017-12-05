@@ -10,5 +10,5 @@
 	"name" : "BaselineOf",
 	"pools" : [
 		 ],
-	"super" : "AbstractMetacelloConfiguration",
+	"super" : "ConfigurationOf",
 	"type" : "normal" }
