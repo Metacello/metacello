@@ -1,7 +1,7 @@
 attributes
 devKitPlatformAttributes
   | baselineClassName |
-  baselineClassName := 'BaselineOfDevKit'.
+  baselineClassName := 'BaselineOfGLASS1'.
   Smalltalk
     at: baselineClassName
     ifPresent: [ :ignored | 
@@ -11,5 +11,5 @@ devKitPlatformAttributes
           (cls registrationForClassNamed: baselineClassName ifAbsent: [  ])
             ifNotNil: [ :registration | 
               registration loadedInImage
-                ifTrue: [ #(#'gsdevkit') ] ] ] ].
-  ^ #(#'glass')
+                ifTrue: [ ^ #(#'glass') ] ] ] ].
+  ^ #(#'gsdevkit')
