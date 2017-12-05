@@ -6,4 +6,4 @@ defaultPlatformAttributes
   | stoneVersionAtts |
   (stoneVersionAtts := self stoneVersionAttributes)
     ifNil: [ ^ #(#'gemstoneCommon' #'gemstone64') ].
-  ^ stoneVersionAtts
+  ^ stoneVersionAtts , self devKitPlatformAttributes
