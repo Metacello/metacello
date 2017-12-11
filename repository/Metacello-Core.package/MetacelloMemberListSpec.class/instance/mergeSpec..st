@@ -1,7 +1,7 @@
 merging
 mergeSpec: anotherSpec
 
-	| newSpec val |
+	| newSpec |
 	newSpec := super mergeSpec: anotherSpec.
 	newSpec list: self list copy.
 	anotherSpec list do: [:groupMember | groupMember applyToList: newSpec ].

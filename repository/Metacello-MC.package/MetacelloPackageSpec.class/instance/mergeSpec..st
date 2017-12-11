@@ -1,7 +1,7 @@
 merging
 mergeSpec: anotherSpec
 
-	| newSpec map anotherPackages anotherRepositories |
+	| newSpec map anotherRepositories |
 	newSpec := super mergeSpec: anotherSpec.
 	map := anotherSpec mergeMap.
 	(anotherRepositories := map at: #repositories) notEmpty
