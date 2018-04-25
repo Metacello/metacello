@@ -1,7 +1,6 @@
 {
+	"class" : {
+		 },
 	"instance" : {
 		"isCriticalWarning" : "",
-		"label" : ""
-	},
-	"class" : { }
-}
+		"label" : "" } }

@@ -1,12 +1,11 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"operationString:" : "",
-		"checkAllowed" : "",
-		"honor" : "",
-		"handleResolutionFor:" : "",
-		"operationString" : "",
 		"break" : "",
-		"defaultAction" : ""
-	},
-	"class" : { }
-}
+		"checkAllowed" : "",
+		"defaultAction" : "",
+		"handleResolutionFor:" : "",
+		"honor" : "",
+		"operationString" : "",
+		"operationString:" : "" } }

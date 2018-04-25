@@ -1,14 +1,13 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"resolveSpecsForPackageOrdering:" : "",
-		"projectDo:packageDo:groupDo:" : "",
 		"answers:" : "",
 		"configMethodCascadeOn:member:last:indent:" : "",
+		"configMethodOn:indent:" : "",
+		"includeSpecNamesForPackageOrdering:" : "",
+		"projectDo:packageDo:groupDo:" : "",
+		"requiredSpecsForPackageOrdering:" : "",
 		"requires:" : "",
 		"requiresSpecsForPackageOrdering:" : "",
-		"includeSpecNamesForPackageOrdering:" : "",
-		"configMethodOn:indent:" : "",
-		"requiredSpecsForPackageOrdering:" : ""
-	},
-	"class" : { }
-}
+		"resolveSpecsForPackageOrdering:" : "" } }

@@ -1,21 +1,18 @@
 {
-	"instance" : {
-		"isCritical" : "",
-		"callSite:" : "",
-		"explanation:" : "",
-		"label" : "",
-		"explanation" : "",
-		"isWarning" : "",
-		"printOn:" : "",
-		"reasonCode:" : "",
-		"isError" : "",
-		"isCriticalWarning" : "",
-		"callSite" : "",
-		"configurationClass:" : "",
-		"reasonCode" : "",
-		"configurationClass" : ""
-	},
 	"class" : {
-		"configurationClass:reasonCode:callSite:explanation:" : ""
-	}
-}
+		"configurationClass:reasonCode:callSite:explanation:" : "" },
+	"instance" : {
+		"callSite" : "",
+		"callSite:" : "",
+		"configurationClass" : "",
+		"configurationClass:" : "",
+		"explanation" : "",
+		"explanation:" : "",
+		"isCritical" : "",
+		"isCriticalWarning" : "",
+		"isError" : "",
+		"isWarning" : "",
+		"label" : "dkh 6/5/2012 19:01:24",
+		"printOn:" : "dkh 6/5/2012 19:01:24",
+		"reasonCode" : "",
+		"reasonCode:" : "" } }

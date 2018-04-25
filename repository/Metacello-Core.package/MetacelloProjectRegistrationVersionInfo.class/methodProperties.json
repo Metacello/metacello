@@ -1,10 +1,9 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"projectVersion:" : "",
-		"versionString:" : "",
 		"projectVersion" : "",
+		"projectVersion:" : "",
+		"setVersionString:" : "",
 		"versionString" : "",
-		"setVersionString:" : ""
-	},
-	"class" : { }
-}
+		"versionString:" : "" } }

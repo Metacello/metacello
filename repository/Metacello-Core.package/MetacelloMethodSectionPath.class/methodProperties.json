@@ -1,7 +1,6 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"asMetacelloAttributePath" : "",
-		"asAttributeOrPath" : ""
-	},
-	"class" : { }
-}
+		"asAttributeOrPath" : "",
+		"asMetacelloAttributePath" : "" } }

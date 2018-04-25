@@ -1,10 +1,7 @@
 {
-	"instance" : {
-		"version" : "",
-		"version:" : "",
-		"signal:" : ""
-	},
 	"class" : {
-		"signal:" : ""
-	}
-}
+		"signal:" : "" },
+	"instance" : {
+		"signal:" : "",
+		"version" : "",
+		"version:" : "" } }

@@ -1,10 +1,9 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"projectSpecListBlock" : "",
 		"projectSpecCreationBlock" : "",
+		"projectSpecListBlock" : "",
+		"projectSpecLookupBlock" : "",
 		"target" : "",
-		"target:" : "",
-		"projectSpecLookupBlock" : ""
-	},
-	"class" : { }
-}
+		"target:" : "" } }

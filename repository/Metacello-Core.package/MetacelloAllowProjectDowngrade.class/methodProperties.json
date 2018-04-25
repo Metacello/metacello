@@ -1,9 +1,8 @@
 {
+	"class" : {
+		 },
 	"instance" : {
+		"defaultAction" : "",
 		"handleOnDownGrade:onUpgrade:" : "",
-		"operationString" : "",
 		"handleResolutionFor:" : "",
-		"defaultAction" : ""
-	},
-	"class" : { }
-}
+		"operationString" : "" } }

@@ -1,18 +1,17 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"additions:" : "",
-		"modifications:" : "",
-		"removals" : "",
-		"configuration" : "",
-		"removals:" : "",
 		"additions" : "",
-		"modifications" : "",
+		"additions:" : "",
+		"configuration" : "",
 		"configuration:" : "",
-		"printOn:" : "",
-		"from:" : "",
 		"from" : "",
-		"to:" : "",
-		"to" : ""
-	},
-	"class" : { }
-}
+		"from:" : "",
+		"modifications" : "",
+		"modifications:" : "",
+		"printOn:" : "",
+		"removals" : "",
+		"removals:" : "",
+		"to" : "",
+		"to:" : "" } }

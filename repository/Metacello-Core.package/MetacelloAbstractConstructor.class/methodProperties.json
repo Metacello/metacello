@@ -1,14 +1,13 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"extractDefaultSymbolicVersionPragmas" : "",
+		"configurationClass" : "dkh 6/5/2012 19:01:24",
 		"extractAllVersionPragmas" : "",
-		"extractSymbolicVersionPragmas" : "",
-		"extractVersionPragmas" : "",
 		"extractCommonDefaultSymbolicVersionPragmas" : "",
-		"extractVersionImportPragmas" : "",
-		"configurationClass" : "",
+		"extractDefaultSymbolicVersionPragmas" : "",
+		"extractPragmas:for:into:" : "",
 		"extractPragmas:into:" : "",
-		"extractPragmas:for:into:" : ""
-	},
-	"class" : { }
-}
+		"extractSymbolicVersionPragmas" : "",
+		"extractVersionImportPragmas" : "",
+		"extractVersionPragmas" : "" } }

@@ -1,6 +1,5 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"handleResolutionFor:" : ""
-	},
-	"class" : { }
-}
+		"handleResolutionFor:" : "" } }

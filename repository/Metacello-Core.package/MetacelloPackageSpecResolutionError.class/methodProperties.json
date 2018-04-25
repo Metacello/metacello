@@ -1,14 +1,13 @@
 {
+	"class" : {
+		 },
 	"instance" : {
 		"description" : "",
-		"repositoryError:" : "",
 		"packageSpec" : "",
-		"repositoryString" : "",
-		"repositoryError" : "",
-		"signal" : "",
-		"repositories:" : "",
 		"packageSpec:" : "",
-		"repositories" : ""
-	},
-	"class" : { }
-}
+		"repositories" : "",
+		"repositories:" : "",
+		"repositoryError" : "",
+		"repositoryError:" : "",
+		"repositoryString" : "",
+		"signal" : "" } }

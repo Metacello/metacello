@@ -1,8 +1,7 @@
 {
+	"class" : {
+		 },
 	"instance" : {
+		"cacheNames" : "",
 		"cacheNames:" : "",
-		"signal:" : "",
-		"cacheNames" : ""
-	},
-	"class" : { }
-}
+		"signal:" : "" } }

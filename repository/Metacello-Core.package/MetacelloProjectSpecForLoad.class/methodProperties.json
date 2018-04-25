@@ -1,14 +1,13 @@
 {
+	"class" : {
+		 },
 	"instance" : {
 		"hasOverride" : "",
+		"overrideProjectSpec" : "",
+		"overrideProjectSpec:" : "",
+		"performCurrentVersionTestAgainst:operator:targetVersionStatus:using:" : "dkh 04/04/2016 13:06",
 		"performLoad" : "",
 		"projectSpec" : "",
-		"overrideProjectSpec:" : "",
 		"projectSpec:" : "",
 		"useDetermineVersionForLoad" : "",
-		"performCurrentVersionTestAgainst:operator:targetVersionStatus:using:" : "",
-		"useDetermineVersionForLoad:" : "",
-		"overrideProjectSpec" : ""
-	},
-	"class" : { }
-}
+		"useDetermineVersionForLoad:" : "" } }

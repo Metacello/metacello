@@ -1,15 +1,14 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"configMethodOn:indent:" : "",
 		"add:" : "",
-		"slideIn:spec:baseIndex:seen:firstTime:for:" : "",
-		"merge:" : "",
-		"packageSpecsInLoadOrderFor:" : "",
-		"packageNamed:ifAbsent:" : "",
-		"remove:" : "",
-		"sortPackageSpecs:packageSpec:groupLoops:for:" : "",
+		"applyIncludesTo:for:firstTime:for:" : "",
+		"configMethodOn:indent:" : "",
 		"copy:to:" : "",
-		"applyIncludesTo:for:firstTime:for:" : ""
-	},
-	"class" : { }
-}
+		"merge:" : "",
+		"packageNamed:ifAbsent:" : "",
+		"packageSpecsInLoadOrderFor:" : "",
+		"remove:" : "",
+		"slideIn:spec:baseIndex:seen:firstTime:for:" : "",
+		"sortPackageSpecs:packageSpec:groupLoops:for:" : "EstebanLorenzano 9/29/2017 13:42" } }

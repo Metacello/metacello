@@ -1,16 +1,15 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"setDescriptionInMetacelloVersion:" : "",
-		"setPreLoadDoItInMetacelloSpec:" : "",
-		"setPostLoadDoItInMetacelloSpec:" : "",
 		"configMethodOn:indent:" : "",
+		"mergeMap" : "",
+		"setAuthorInMetacelloVersion:" : "",
+		"setBlessingInMetacelloVersion:" : "",
+		"setDescriptionInMetacelloVersion:" : "",
+		"setPostLoadDoItInMetacelloSpec:" : "",
+		"setPreLoadDoItInMetacelloSpec:" : "",
+		"setTimestampInMetacelloVersion:" : "",
 		"value" : "",
 		"value:" : "",
-		"setTimestampInMetacelloVersion:" : "",
-		"setBlessingInMetacelloVersion:" : "",
-		"setAuthorInMetacelloVersion:" : "",
-		"value:constructor:" : "",
-		"mergeMap" : ""
-	},
-	"class" : { }
-}
+		"value:constructor:" : "" } }

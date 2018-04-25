@@ -1,20 +1,19 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"defaultAction" : "",
-		"newProjectRegistration:" : "",
-		"checkAllowed" : "",
-		"useIncoming" : "",
-		"newProjectRegistration" : "",
-		"disallow" : "",
-		"operationString" : "",
-		"handleOnDownGrade:onUpgrade:" : "",
-		"useExisting" : "",
-		"useLoaded" : "",
-		"allowEvenIfLocked" : "",
-		"existingProjectRegistration" : "",
 		"allow" : "",
-		"useNew" : "",
-		"existingProjectRegistration:" : ""
-	},
-	"class" : { }
-}
+		"allowEvenIfLocked" : "",
+		"checkAllowed" : "",
+		"defaultAction" : "",
+		"disallow" : "",
+		"existingProjectRegistration" : "",
+		"existingProjectRegistration:" : "",
+		"handleOnDownGrade:onUpgrade:" : "",
+		"newProjectRegistration" : "",
+		"newProjectRegistration:" : "",
+		"operationString" : "",
+		"useExisting" : "",
+		"useIncoming" : "",
+		"useLoaded" : "",
+		"useNew" : "" } }

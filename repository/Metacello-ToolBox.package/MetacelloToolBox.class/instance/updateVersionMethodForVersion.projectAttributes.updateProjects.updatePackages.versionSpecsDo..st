@@ -20,8 +20,8 @@ updateVersionMethodForVersion: inputVersionStringOrSymbol projectAttributes: pro
         ifFalse: [ #() ].
     methodSpec := MetacelloVersionMethodSpec new
         project: project;
-        selector: pragma selector;
-        category: (project configuration class whichCategoryIncludesSelector: pragma selector);
+        selector: (MetacelloPlatform current selectorForPragma: pragma);
+        category: (project configuration class whichCategoryIncludesSelector: (MetacelloPlatform current selectorForPragma:  pragma));
         versionString: sourceVersionString;
         imports: imports;
         yourself.

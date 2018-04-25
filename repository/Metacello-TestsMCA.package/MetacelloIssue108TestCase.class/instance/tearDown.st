@@ -2,7 +2,7 @@ running
 tearDown
   | aGofer finalWorkingCopyList diff |
   super tearDown.
-  Smalltalk removeKey: self repositoryName ifAbsent: [  ].
+  Smalltalk globals removeKey: self repositoryName ifAbsent: [  ].
   self tempRepositories
     do: [ :repo | MCRepositoryGroup default removeIdenticalRepository: repo ].
   aGofer := Gofer new.

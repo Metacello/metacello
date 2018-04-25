@@ -1,8 +1,7 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"operationString" : "",
+		"defaultAction" : "",
 		"handleResolutionFor:" : "",
-		"defaultAction" : ""
-	},
-	"class" : { }
-}
+		"operationString" : "" } }

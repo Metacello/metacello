@@ -1,8 +1,7 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"possibleVersions" : "",
 		"isResumable" : "",
-		"versionString" : ""
-	},
-	"class" : { }
-}
+		"possibleVersions" : "",
+		"versionString" : "" } }

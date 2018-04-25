@@ -1,14 +1,11 @@
 {
+	"class" : {
+		"project:versionString:" : "" },
 	"instance" : {
 		"description" : "",
-		"project" : "",
 		"possibleVersions" : "",
+		"project" : "",
 		"project:" : "",
-		"versionString:" : "",
+		"signal" : "",
 		"versionString" : "",
-		"signal" : ""
-	},
-	"class" : {
-		"project:versionString:" : ""
-	}
-}
+		"versionString:" : "" } }

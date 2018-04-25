@@ -1,8 +1,7 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"exception" : "",
 		"description" : "",
-		"exception:" : ""
-	},
-	"class" : { }
-}
+		"exception" : "",
+		"exception:" : "" } }

@@ -1,10 +1,9 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"applyToList:" : "",
-		"sourceName" : "",
-		"sourceName:" : "",
 		"applyAdd:copy:merge:remove:" : "",
-		"methodUpdateSelector" : ""
-	},
-	"class" : { }
-}
+		"applyToList:" : "",
+		"methodUpdateSelector" : "",
+		"sourceName" : "",
+		"sourceName:" : "" } }

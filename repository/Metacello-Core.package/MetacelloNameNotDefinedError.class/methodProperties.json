@@ -1,6 +1,5 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"isResumable" : ""
-	},
-	"class" : { }
-}
+		"isResumable" : "" } }

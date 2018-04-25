@@ -1,17 +1,16 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"attributePath" : "",
-		"block:" : "",
-		"attributeOrPath" : "",
-		"parent" : "",
-		"printOn:" : "",
-		"methodSections" : "",
 		"addMethodSection:" : "",
+		"attributeOrPath" : "",
+		"attributePath" : "",
 		"block" : "",
+		"block:" : "",
+		"methodSections" : "",
+		"parent" : "",
+		"parent:" : "",
+		"printOn:" : "",
 		"topParent" : "",
 		"versionSpec" : "",
-		"parent:" : "",
-		"versionSpec:" : ""
-	},
-	"class" : { }
-}
+		"versionSpec:" : "" } }

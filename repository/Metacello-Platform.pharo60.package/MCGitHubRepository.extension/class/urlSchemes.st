@@ -1,0 +1,3 @@
+*metacello-platform
+urlSchemes
+	^ #(github)
