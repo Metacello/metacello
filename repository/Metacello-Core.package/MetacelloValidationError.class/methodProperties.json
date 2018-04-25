@@ -1,6 +1,7 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"isError" : "",
-		"label" : "" } }
+		"label" : "",
+		"isError" : ""
+	},
+	"class" : { }
+}

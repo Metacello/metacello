@@ -1,16 +1,17 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"category" : "",
-		"category:" : "",
-		"compileMethod" : "",
-		"methodSections" : "",
-		"methodSections:" : "",
-		"methodSource" : "",
 		"project" : "",
 		"project:" : "",
+		"methodSections:" : "",
+		"versionString:" : "",
+		"methodSections" : "",
 		"selector" : "",
 		"selector:" : "",
+		"methodSource" : "",
 		"versionString" : "",
-		"versionString:" : "" } }
+		"compileMethod" : "",
+		"category:" : "",
+		"category" : ""
+	},
+	"class" : { }
+}

@@ -1,7 +1,8 @@
 {
-	"class" : {
-		 },
 	"instance" : {
+		"methodUpdateSelector" : "",
 		"applyAdd:copy:merge:remove:" : "",
-		"applyToList:" : "",
-		"methodUpdateSelector" : "" } }
+		"applyToList:" : ""
+	},
+	"class" : { }
+}

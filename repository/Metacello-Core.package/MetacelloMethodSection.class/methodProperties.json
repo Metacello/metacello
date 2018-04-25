@@ -1,10 +1,11 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"attribute" : "dkh 9/7/2012 10:45",
-		"attribute:" : "dkh 9/7/2012 10:49",
+		"attribute:" : "",
 		"attributePrintString" : "",
-		"attributes" : "",
+		"attribute" : "",
 		"attributes:" : "",
-		"includesAttributeFrom:" : "" } }
+		"includesAttributeFrom:" : "",
+		"attributes" : ""
+	},
+	"class" : { }
+}

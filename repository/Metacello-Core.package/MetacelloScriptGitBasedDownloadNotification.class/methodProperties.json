@@ -1,8 +1,9 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"projectPath" : "",
-		"projectPath:" : "",
 		"versionString" : "",
-		"versionString:" : "" } }
+		"versionString:" : "",
+		"projectPath" : "",
+		"projectPath:" : ""
+	},
+	"class" : { }
+}

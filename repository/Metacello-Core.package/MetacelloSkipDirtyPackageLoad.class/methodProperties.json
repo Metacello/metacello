@@ -1,7 +1,10 @@
 {
-	"class" : {
-		"signal:" : "" },
 	"instance" : {
-		"defaultAction" : "",
 		"packageSpec" : "",
-		"packageSpec:" : "" } }
+		"packageSpec:" : "",
+		"defaultAction" : ""
+	},
+	"class" : {
+		"signal:" : ""
+	}
+}

@@ -1,27 +1,30 @@
 {
-	"class" : {
-		"on:" : "",
-		"on:project:" : "",
-		"spawnPackageMethodIn:category:named:sourceVersion:targetVersion:blessing:" : "dkh 6/5/2012 19:01:24",
-		"spawnPackageMethodIn:named:sourceVersion:targetVersion:" : "dkh 6/5/2012 19:01:24",
-		"spawnPackageMethodIn:named:sourceVersion:targetVersion:blessing:" : "dkh 6/5/2012 19:01:24",
-		"updatePackageMethodIn:sourceVersion:" : "dkh 6/5/2012 19:01:24" },
 	"instance" : {
-		"calculate:project:" : "",
 		"collectAllSymbolicVersionsFromVersionPragmasInto:using:" : "",
-		"collectAllVersionsFromVersionImportPragmasInto:using:satisfiedPragmas:" : "",
 		"collectAllVersionsFromVersionPragmasInto:using:" : "",
 		"collectDefaultSymbolicVersionsFromVersionPragmasFrom:into:using:" : "",
-		"commonDefaultSymbolicVersionResolverBlock" : "",
+		"calculate:project:" : "",
+		"on:" : "",
+		"verifyVersionImportPragmas:definedIn:" : "",
 		"defaultSymbolicVersionResolverBlock" : "",
-		"defaultSymbolicVersionResolverBlock:" : "EstebanLorenzano 9/16/2017 14:01",
+		"symbolicVersionResolverBlock" : "",
+		"prepareForMethodUpdate:sourceVersion:forceUpdate:generating:" : "",
+		"commonDefaultSymbolicVersionResolverBlock" : "",
+		"validateVersionString:againstSpec:" : "",
+		"on:project:" : "",
+		"collectAllVersionsFromVersionImportPragmasInto:using:satisfiedPragmas:" : "",
+		"spawnPackageMethodIn:category:named:sourceVersion:targetVersion:blessing:" : "",
+		"defaultSymbolicVersionResolverBlock:" : "",
+		"specResolverBlock" : "",
 		"errorMap" : "",
+		"updatePackageMethodIn:sourceVersion:" : ""
+	},
+	"class" : {
+		"spawnPackageMethodIn:named:sourceVersion:targetVersion:blessing:" : "",
 		"on:" : "",
 		"on:project:" : "",
-		"prepareForMethodUpdate:sourceVersion:forceUpdate:generating:" : "dkh 6/5/2012 19:01:24",
-		"spawnPackageMethodIn:category:named:sourceVersion:targetVersion:blessing:" : "dkh 6/5/2012 19:01:24",
-		"specResolverBlock" : "",
-		"symbolicVersionResolverBlock" : "",
-		"updatePackageMethodIn:sourceVersion:" : "dkh 6/5/2012 19:01:24",
-		"validateVersionString:againstSpec:" : "",
-		"verifyVersionImportPragmas:definedIn:" : "EstebanLorenzano 9/27/2017 17:14" } }
+		"spawnPackageMethodIn:category:named:sourceVersion:targetVersion:blessing:" : "",
+		"spawnPackageMethodIn:named:sourceVersion:targetVersion:" : "",
+		"updatePackageMethodIn:sourceVersion:" : ""
+	}
+}

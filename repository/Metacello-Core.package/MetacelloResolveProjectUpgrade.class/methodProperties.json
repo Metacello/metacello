@@ -1,19 +1,20 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"allow" : "",
-		"allowEvenIfLocked" : "",
-		"checkAllowed" : "",
 		"defaultAction" : "",
-		"disallow" : "",
-		"existingProjectRegistration" : "",
-		"existingProjectRegistration:" : "",
-		"handleOnDownGrade:onUpgrade:" : "",
-		"newProjectRegistration" : "",
 		"newProjectRegistration:" : "",
-		"operationString" : "",
-		"useExisting" : "",
+		"checkAllowed" : "",
 		"useIncoming" : "",
+		"newProjectRegistration" : "",
+		"disallow" : "",
+		"operationString" : "",
+		"handleOnDownGrade:onUpgrade:" : "",
+		"useExisting" : "",
 		"useLoaded" : "",
-		"useNew" : "" } }
+		"allowEvenIfLocked" : "",
+		"existingProjectRegistration" : "",
+		"allow" : "",
+		"useNew" : "",
+		"existingProjectRegistration:" : ""
+	},
+	"class" : { }
+}

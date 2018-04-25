@@ -1,6 +1,9 @@
 {
-	"class" : {
-		"issues:message:" : "" },
 	"instance" : {
 		"issues" : "",
-		"issues:" : "" } }
+		"issues:" : ""
+	},
+	"class" : {
+		"issues:message:" : ""
+	}
+}

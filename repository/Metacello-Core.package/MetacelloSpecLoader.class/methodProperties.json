@@ -1,10 +1,13 @@
 {
-	"class" : {
-		"on:" : "" },
 	"instance" : {
-		"load" : "",
-		"loadType" : "",
-		"project" : "",
 		"spec" : "",
+		"project" : "",
 		"spec:" : "",
-		"unload" : "" } }
+		"loadType" : "",
+		"load" : "",
+		"unload" : ""
+	},
+	"class" : {
+		"on:" : ""
+	}
+}

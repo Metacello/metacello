@@ -1,8 +1,9 @@
 {
-	"class" : {
-		 },
 	"instance" : {
 		"prime" : "",
 		"projectSpecSelectBlock" : "",
-		"remove" : "",
-		"reset" : "" } }
+		"reset" : "",
+		"remove" : ""
+	},
+	"class" : { }
+}

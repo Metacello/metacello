@@ -1,6 +1,7 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"defaultAction" : "",
-		"handleResolutionFor:" : "" } }
+		"handleResolutionFor:" : "",
+		"defaultAction" : ""
+	},
+	"class" : { }
+}

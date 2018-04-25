@@ -1,6 +1,7 @@
 {
-	"class" : {
-		 },
 	"instance" : {
 		"versionString" : "",
-		"versionString:" : "" } }
+		"versionString:" : ""
+	},
+	"class" : { }
+}

@@ -1,11 +1,14 @@
 {
-	"class" : {
-		"projectSpec:" : "" },
 	"instance" : {
-		"isResumable" : "",
 		"possibleVersions" : "",
 		"projectSpec" : "",
+		"isResumable" : "",
 		"projectSpec:" : "",
 		"versionDoesNotExistException" : "",
-		"versionDoesNotExistException:" : "",
-		"versionString" : "" } }
+		"versionString" : "",
+		"versionDoesNotExistException:" : ""
+	},
+	"class" : {
+		"projectSpec:" : ""
+	}
+}

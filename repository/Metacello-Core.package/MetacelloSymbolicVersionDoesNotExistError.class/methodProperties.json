@@ -1,6 +1,7 @@
 {
-	"class" : {
-		 },
 	"instance" : {
 		"description" : "",
-		"possibleVersions" : "" } }
+		"possibleVersions" : ""
+	},
+	"class" : { }
+}

@@ -1,5 +1,6 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"projectSpecSelectBlock" : "" } }
+		"projectSpecSelectBlock" : ""
+	},
+	"class" : { }
+}

@@ -1,16 +1,17 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"evaluateMethodSection:version:" : "",
+		"methodSectionsInEvaluationOrder:do:" : "",
 		"extractMethodSectionsFor:" : "",
-		"extractSymbolicVersionSpecsFor:" : "",
-		"methodSection:do:" : "",
 		"methodSection:inEvaluationOrder:do:" : "",
 		"methodSectionAttributes" : "",
-		"methodSections" : "",
 		"methodSectionsDo:" : "",
-		"methodSectionsInEvaluationOrder:do:" : "",
-		"reset" : "",
+		"extractSymbolicVersionSpecsFor:" : "",
 		"setFor:do:" : "",
-		"setFor:version:" : "" } }
+		"methodSection:do:" : "",
+		"methodSections" : "",
+		"reset" : "",
+		"evaluateMethodSection:version:" : "",
+		"setFor:version:" : ""
+	},
+	"class" : { }
+}

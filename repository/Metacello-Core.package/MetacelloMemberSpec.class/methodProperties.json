@@ -1,14 +1,15 @@
 {
-	"class" : {
-		 },
 	"instance" : {
 		"applyAdd:copy:merge:remove:" : "",
-		"applyToList:" : "",
-		"configMethodCascadeOn:last:indent:" : "",
+		"name" : "",
+		"spec" : "",
 		"configMethodOn:indent:" : "",
 		"methodUpdateSelector" : "",
-		"name" : "",
 		"name:" : "",
+		"applyToList:" : "",
+		"configMethodCascadeOn:last:indent:" : "",
 		"sourceName" : "",
-		"spec" : "",
-		"spec:" : "" } }
+		"spec:" : ""
+	},
+	"class" : { }
+}

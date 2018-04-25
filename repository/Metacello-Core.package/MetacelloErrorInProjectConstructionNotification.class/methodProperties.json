@@ -1,9 +1,12 @@
 {
-	"class" : {
-		"versionString:exception:" : "" },
 	"instance" : {
-		"defaultAction" : "",
-		"exception" : "",
 		"exception:" : "",
+		"versionString:" : "",
 		"versionString" : "",
-		"versionString:" : "" } }
+		"exception" : "",
+		"defaultAction" : ""
+	},
+	"class" : {
+		"versionString:exception:" : ""
+	}
+}

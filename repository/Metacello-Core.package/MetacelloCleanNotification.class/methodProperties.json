@@ -1,7 +1,10 @@
 {
-	"class" : {
-		"signal:" : "" },
 	"instance" : {
-		"signal:" : "",
 		"version" : "",
-		"version:" : "" } }
+		"version:" : "",
+		"signal:" : ""
+	},
+	"class" : {
+		"signal:" : ""
+	}
+}

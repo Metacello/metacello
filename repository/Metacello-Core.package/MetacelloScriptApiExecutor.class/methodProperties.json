@@ -1,8 +1,9 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"executeBlock:do:" : "",
+		"projectSpecsFromRepositoryArg" : "",
 		"executeCollection:do:" : "",
-		"executeString:do:" : "",
-		"projectSpecsFromRepositoryArg" : "" } }
+		"executeBlock:do:" : "",
+		"executeString:do:" : ""
+	},
+	"class" : { }
+}

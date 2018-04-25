@@ -1,7 +1,8 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"methodSelectorAndPragma:imports:on:" : "",
 		"methodSource" : "",
-		"versionString" : "" } }
+		"versionString" : "",
+		"methodSelectorAndPragma:imports:on:" : ""
+	},
+	"class" : { }
+}

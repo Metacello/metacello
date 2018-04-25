@@ -1,9 +1,12 @@
 {
-	"class" : {
-		"on:" : "",
-		"on:project:" : "" },
 	"instance" : {
-		"calculate:project:" : "",
 		"extractBaselinePragmaFor:" : "",
-		"on:" : "",
-		"on:project:" : "" } }
+		"on:project:" : "",
+		"calculate:project:" : "",
+		"on:" : ""
+	},
+	"class" : {
+		"on:project:" : "",
+		"on:" : ""
+	}
+}

@@ -1,7 +1,8 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"defaultAction" : "",
 		"projectSpec" : "",
-		"projectSpec:" : "" } }
+		"projectSpec:" : "",
+		"defaultAction" : ""
+	},
+	"class" : { }
+}

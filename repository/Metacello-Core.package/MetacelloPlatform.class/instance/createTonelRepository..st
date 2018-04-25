@@ -4,7 +4,7 @@ createTonelRepository: aRepositorySpec
 	
 	cl := Smalltalk at: #'TonelRepository'.
 	description := aRepositorySpec description.
-	headerSize := 'tonel://' size.
+	headerSize := (aRepositorySpec type, '://') size.
  	^ cl new 
 		directory: (self fileHandleOn: (aRepositorySpec description 
 			copyFrom: headerSize + 1 

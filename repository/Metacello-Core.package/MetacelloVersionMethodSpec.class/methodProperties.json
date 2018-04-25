@@ -1,12 +1,13 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"addMethodSection:versionSpec:" : "",
 		"findMethodSection:sectionIndex:" : "",
-		"imports" : "",
 		"imports:" : "",
-		"methodSection:pre:last:post:indent:" : "",
+		"imports" : "",
 		"methodSelectorAndPragma:imports:versionString:on:" : "",
 		"methodSource" : "",
-		"versionString:" : "" } }
+		"versionString:" : "",
+		"methodSection:pre:last:post:indent:" : "",
+		"addMethodSection:versionSpec:" : ""
+	},
+	"class" : { }
+}

@@ -1,6 +1,7 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"isWarning" : "",
-		"label" : "" } }
+		"label" : "",
+		"isWarning" : ""
+	},
+	"class" : { }
+}
