@@ -10,7 +10,7 @@ copyClass: oldClass as: newName inCategory: newCategoryName
 	newDefinition := newDefinition
 		copyReplaceAll: 'category: ' , (SystemOrganization categoryOfElement: oldClass name) asString printString
 		with: 'category: ' , newCategoryName printString.
-	class := Compiler evaluate: newDefinition logged: true.
+	class := self compiler evaluate: newDefinition logged: true.
 	class class instanceVariableNames: oldClass class instanceVariablesString.
 	class copyAllCategoriesFrom: oldClass.
 	class class copyAllCategoriesFrom: oldClass class.

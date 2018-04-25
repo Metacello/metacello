@@ -1,15 +1,15 @@
 {
 	"instance" : {
-		"applyAdd:copy:merge:remove:" : " 8/31/2017 07:16:49",
-		"name" : " 8/31/2017 07:16:49",
-		"spec" : " 8/31/2017 07:16:49",
-		"configMethodOn:indent:" : " 8/31/2017 07:16:49",
-		"methodUpdateSelector" : " 8/31/2017 07:16:49",
-		"name:" : " 8/31/2017 07:16:49",
-		"applyToList:" : " 8/31/2017 07:16:49",
-		"configMethodCascadeOn:last:indent:" : " 8/31/2017 07:16:49",
-		"sourceName" : " 8/31/2017 07:16:49",
-		"spec:" : " 8/31/2017 07:16:49"
+		"applyAdd:copy:merge:remove:" : "",
+		"name" : "",
+		"spec" : "",
+		"configMethodOn:indent:" : "",
+		"methodUpdateSelector" : "",
+		"name:" : "",
+		"applyToList:" : "",
+		"configMethodCascadeOn:last:indent:" : "",
+		"sourceName" : "",
+		"spec:" : ""
 	},
 	"class" : { }
 }

@@ -1,13 +1,13 @@
 {
 	"instance" : {
-		"findMethodSection:sectionIndex:" : " 8/31/2017 07:16:49",
-		"imports:" : " 8/31/2017 07:16:49",
-		"imports" : " 8/31/2017 07:16:49",
-		"methodSelectorAndPragma:imports:versionString:on:" : " 8/31/2017 07:16:49",
-		"methodSource" : " 8/31/2017 07:16:49",
-		"versionString:" : " 8/31/2017 07:16:49",
-		"methodSection:pre:last:post:indent:" : " 8/31/2017 07:16:49",
-		"addMethodSection:versionSpec:" : " 8/31/2017 07:16:49"
+		"findMethodSection:sectionIndex:" : "",
+		"imports:" : "",
+		"imports" : "",
+		"methodSelectorAndPragma:imports:versionString:on:" : "",
+		"methodSource" : "",
+		"versionString:" : "",
+		"methodSection:pre:last:post:indent:" : "",
+		"addMethodSection:versionSpec:" : ""
 	},
 	"class" : { }
 }

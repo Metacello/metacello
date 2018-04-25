@@ -1,12 +1,12 @@
 {
 	"instance" : {
-		"extractBaselinePragmaFor:" : " 8/31/2017 07:16:49",
-		"on:project:" : " 8/31/2017 07:16:49",
-		"calculate:project:" : " 8/31/2017 07:16:49",
-		"on:" : " 8/31/2017 07:16:49"
+		"extractBaselinePragmaFor:" : "",
+		"on:project:" : "",
+		"calculate:project:" : "",
+		"on:" : ""
 	},
 	"class" : {
-		"on:project:" : " 8/31/2017 07:16:49",
-		"on:" : " 8/31/2017 07:16:49"
+		"on:project:" : "",
+		"on:" : ""
 	}
 }

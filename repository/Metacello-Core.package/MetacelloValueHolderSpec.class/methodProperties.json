@@ -1,16 +1,16 @@
 {
 	"instance" : {
-		"setDescriptionInMetacelloVersion:" : " 8/31/2017 07:16:49",
-		"setPreLoadDoItInMetacelloSpec:" : " 8/31/2017 07:16:49",
-		"setPostLoadDoItInMetacelloSpec:" : " 8/31/2017 07:16:49",
-		"configMethodOn:indent:" : " 8/31/2017 07:16:49",
-		"value" : " 8/31/2017 07:16:49",
-		"value:" : " 8/31/2017 07:16:49",
-		"setTimestampInMetacelloVersion:" : " 8/31/2017 07:16:49",
-		"setBlessingInMetacelloVersion:" : " 8/31/2017 07:16:49",
-		"setAuthorInMetacelloVersion:" : " 8/31/2017 07:16:49",
-		"value:constructor:" : " 8/31/2017 07:16:49",
-		"mergeMap" : " 8/31/2017 07:16:49"
+		"setDescriptionInMetacelloVersion:" : "",
+		"setPreLoadDoItInMetacelloSpec:" : "",
+		"setPostLoadDoItInMetacelloSpec:" : "",
+		"configMethodOn:indent:" : "",
+		"value" : "",
+		"value:" : "",
+		"setTimestampInMetacelloVersion:" : "",
+		"setBlessingInMetacelloVersion:" : "",
+		"setAuthorInMetacelloVersion:" : "",
+		"value:constructor:" : "",
+		"mergeMap" : ""
 	},
 	"class" : { }
 }

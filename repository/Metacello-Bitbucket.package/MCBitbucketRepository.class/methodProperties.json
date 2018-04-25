@@ -1,9 +1,14 @@
 {
-	"class" : {
-		"basicDescription" : "dkh 09/29/2014 12:19",
-		"cacheDirectoryPath" : "topa 5/5/2015 11:23",
-		"isEnabled" : "JohanBrichau 10/11/2014 02:04",
-		"projectTagsUrlFor:" : "dkh 10/14/2014 14:31",
-		"projectZipUrlFor:versionString:" : "dkh 09/29/2014 13:24" },
 	"instance" : {
-		"normalizeTagsData:" : "dkh 10/14/2014 15:21" } }
+		"normalizeTagsData:" : ""
+	},
+	"class" : {
+		"createRepositoryFromSpec:on:" : "EstebanLorenzano 4/25/2018 11:21",
+		"isEnabled" : "",
+		"cacheDirectoryPath" : "",
+		"isAvailableFor:" : "EstebanLorenzano 4/25/2018 11:11",
+		"basicDescription" : "",
+		"projectZipUrlFor:versionString:" : "",
+		"projectTagsUrlFor:" : ""
+	}
+}

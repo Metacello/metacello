@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "dkh 5/4/2012 17:05",
+	"commentStamp" : "",
 	"super" : "MetacelloAbstractVersionConstructor",
 	"category" : "Metacello-Core-Constructors",
 	"classinstvars" : [ ],

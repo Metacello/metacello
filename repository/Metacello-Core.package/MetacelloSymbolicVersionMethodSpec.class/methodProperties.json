@@ -1,9 +1,9 @@
 {
 	"instance" : {
-		"symbolicMethodSelectorAndPragma:symbolicVersionSymbol:on:" : " 8/31/2017 07:16:49",
-		"methodSource" : " 8/31/2017 07:16:49",
-		"versionString:" : " 8/31/2017 07:16:49",
-		"addMethodSection:versionString:" : " 8/31/2017 07:16:49"
+		"symbolicMethodSelectorAndPragma:symbolicVersionSymbol:on:" : "",
+		"methodSource" : "",
+		"versionString:" : "",
+		"addMethodSection:versionString:" : ""
 	},
 	"class" : { }
 }

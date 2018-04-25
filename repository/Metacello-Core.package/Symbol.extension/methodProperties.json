@@ -1,11 +1,11 @@
 {
 	"instance" : {
-		"setForDo:withInMetacelloConfig:" : "dkh 9/5/2012 06:26:03.064",
-		"asMetacelloAttributeList" : "dkh 9/7/2012 13:11",
-		"asMetacelloAttributePath" : "dkh 9/7/2012 13:44",
-		"setForVersion:withInMetacelloConfig:" : "dkh 9/5/2012 06:26:03.064",
-		"setPreLoadDoItInMetacelloSpec:" : "DaleHenrichs 12/21/2010 13:55",
-		"setPostLoadDoItInMetacelloSpec:" : "DaleHenrichs 12/21/2010 13:54"
+		"setForDo:withInMetacelloConfig:" : "",
+		"asMetacelloAttributeList" : "",
+		"asMetacelloAttributePath" : "",
+		"setForVersion:withInMetacelloConfig:" : "",
+		"setPreLoadDoItInMetacelloSpec:" : "",
+		"setPostLoadDoItInMetacelloSpec:" : ""
 	},
 	"class" : { }
 }

@@ -1,10 +1,10 @@
 {
 	"instance" : {
-		"projectSpecListBlock" : " 8/31/2017 07:16:49",
-		"projectSpecCreationBlock" : " 8/31/2017 07:16:49",
-		"target" : " 8/31/2017 07:16:49",
-		"target:" : " 8/31/2017 07:16:49",
-		"projectSpecLookupBlock" : " 8/31/2017 07:16:49"
+		"projectSpecListBlock" : "",
+		"projectSpecCreationBlock" : "",
+		"target" : "",
+		"target:" : "",
+		"projectSpecLookupBlock" : ""
 	},
 	"class" : { }
 }

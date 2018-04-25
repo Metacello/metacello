@@ -1,14 +1,14 @@
 {
 	"instance" : {
-		"possibleVersions" : " 8/31/2017 07:16:49",
-		"projectSpec" : " 8/31/2017 07:16:49",
-		"isResumable" : " 8/31/2017 07:16:49",
-		"projectSpec:" : " 8/31/2017 07:16:49",
-		"versionDoesNotExistException" : " 8/31/2017 07:16:49",
-		"versionString" : " 8/31/2017 07:16:49",
-		"versionDoesNotExistException:" : " 8/31/2017 07:16:49"
+		"possibleVersions" : "",
+		"projectSpec" : "",
+		"isResumable" : "",
+		"projectSpec:" : "",
+		"versionDoesNotExistException" : "",
+		"versionString" : "",
+		"versionDoesNotExistException:" : ""
 	},
 	"class" : {
-		"projectSpec:" : " 8/31/2017 07:16:49"
+		"projectSpec:" : ""
 	}
 }

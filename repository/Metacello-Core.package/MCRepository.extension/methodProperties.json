@@ -1,9 +1,15 @@
 {
 	"instance" : {
-		"repositoryDescription" : "dkh 09/04/2014 13:49",
-		"repositoryVersionString" : "dkh 09/04/2014 13:45",
-		"flushForScriptGet" : "dkh 7/24/2012 21:46",
-		"repositoryBranchName" : "dkh 05/09/2014 10:02"
+		"repositoryDescription" : "",
+		"repositoryVersionString" : "",
+		"flushForScriptGet" : "",
+		"repositoryBranchName" : ""
 	},
-	"class" : { }
+	"class" : {
+		"createRepositoryFromSpec:on:" : "EstebanLorenzano 4/25/2018 11:01",
+		"newRepositoryFromSpec:on:" : "EstebanLorenzano 4/25/2018 11:00",
+		"isAvailableFor:" : "EstebanLorenzano 4/25/2018 11:01",
+		"findFiletreeAlternateFormat:ifFound:" : "EstebanLorenzano 4/25/2018 11:39",
+		"isFiletreeAlternateFormat:" : "EstebanLorenzano 4/25/2018 11:39"
+	}
 }
