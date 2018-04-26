@@ -1,20 +1,20 @@
 {
 	"instance" : {
-		"defaultAction" : " 9/28/2017 08:54:38",
-		"newProjectRegistration:" : " 9/28/2017 08:54:38",
-		"checkAllowed" : " 9/28/2017 08:54:38",
-		"useIncoming" : " 9/28/2017 08:54:38",
-		"newProjectRegistration" : " 9/28/2017 08:54:38",
-		"disallow" : " 9/28/2017 08:54:38",
-		"operationString" : " 9/28/2017 08:54:38",
-		"handleOnDownGrade:onUpgrade:" : " 9/28/2017 08:54:38",
-		"useExisting" : " 9/28/2017 08:54:38",
-		"useLoaded" : " 9/28/2017 08:54:38",
-		"allowEvenIfLocked" : " 9/28/2017 08:54:38",
-		"existingProjectRegistration" : " 9/28/2017 08:54:38",
-		"allow" : " 9/28/2017 08:54:38",
-		"useNew" : " 9/28/2017 08:54:38",
-		"existingProjectRegistration:" : " 9/28/2017 08:54:38"
+		"defaultAction" : "",
+		"newProjectRegistration:" : "",
+		"checkAllowed" : "",
+		"useIncoming" : "",
+		"newProjectRegistration" : "",
+		"disallow" : "",
+		"operationString" : "",
+		"handleOnDownGrade:onUpgrade:" : "",
+		"useExisting" : "",
+		"useLoaded" : "",
+		"allowEvenIfLocked" : "",
+		"existingProjectRegistration" : "",
+		"allow" : "",
+		"useNew" : "",
+		"existingProjectRegistration:" : ""
 	},
 	"class" : { }
 }

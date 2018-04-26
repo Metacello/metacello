@@ -1,14 +1,14 @@
 {
 	"instance" : {
-		"hasOverride" : " 9/28/2017 08:54:38",
-		"performLoad" : " 9/28/2017 08:54:38",
-		"projectSpec" : " 9/28/2017 08:54:38",
-		"overrideProjectSpec:" : " 9/28/2017 08:54:38",
-		"projectSpec:" : " 9/28/2017 08:54:38",
-		"useDetermineVersionForLoad" : " 9/28/2017 08:54:38",
-		"performCurrentVersionTestAgainst:operator:targetVersionStatus:using:" : "dkh 04/04/2016 13:06",
-		"useDetermineVersionForLoad:" : " 9/28/2017 08:54:38",
-		"overrideProjectSpec" : " 9/28/2017 08:54:38"
+		"hasOverride" : "",
+		"performLoad" : "",
+		"projectSpec" : "",
+		"overrideProjectSpec:" : "",
+		"projectSpec:" : "",
+		"useDetermineVersionForLoad" : "",
+		"performCurrentVersionTestAgainst:operator:targetVersionStatus:using:" : "",
+		"useDetermineVersionForLoad:" : "",
+		"overrideProjectSpec" : ""
 	},
 	"class" : { }
 }

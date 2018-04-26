@@ -1,5 +1,6 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"packageSpecClass" : "dkh 07/07/2016 07:17" } }
+		"packageSpecClass" : "dkh 07/07/2016 07:17"
+	},
+	"class" : { }
+}

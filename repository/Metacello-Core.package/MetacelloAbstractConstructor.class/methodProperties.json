@@ -1,14 +1,14 @@
 {
 	"instance" : {
-		"extractDefaultSymbolicVersionPragmas" : " 9/28/2017 08:54:38",
-		"extractAllVersionPragmas" : " 9/28/2017 08:54:38",
-		"extractSymbolicVersionPragmas" : " 9/28/2017 08:54:38",
-		"extractVersionPragmas" : " 9/28/2017 08:54:38",
-		"extractCommonDefaultSymbolicVersionPragmas" : " 9/28/2017 08:54:38",
-		"extractVersionImportPragmas" : " 9/28/2017 08:54:38",
-		"configurationClass" : "dkh 6/5/2012 19:01:24",
-		"extractPragmas:into:" : " 9/28/2017 08:54:38",
-		"extractPragmas:for:into:" : " 9/28/2017 08:54:38"
+		"extractDefaultSymbolicVersionPragmas" : "",
+		"extractAllVersionPragmas" : "",
+		"extractSymbolicVersionPragmas" : "",
+		"extractVersionPragmas" : "",
+		"extractCommonDefaultSymbolicVersionPragmas" : "",
+		"extractVersionImportPragmas" : "",
+		"configurationClass" : "",
+		"extractPragmas:into:" : "",
+		"extractPragmas:for:into:" : ""
 	},
 	"class" : { }
 }

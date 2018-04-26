@@ -1,12 +1,12 @@
 {
 	"instance" : {
-		"exception:" : " 9/28/2017 08:54:38",
-		"versionString:" : " 9/28/2017 08:54:38",
-		"versionString" : " 9/28/2017 08:54:38",
-		"exception" : " 9/28/2017 08:54:38",
-		"defaultAction" : " 9/28/2017 08:54:38"
+		"exception:" : "",
+		"versionString:" : "",
+		"versionString" : "",
+		"exception" : "",
+		"defaultAction" : ""
 	},
 	"class" : {
-		"versionString:exception:" : " 9/28/2017 08:54:38"
+		"versionString:exception:" : ""
 	}
 }

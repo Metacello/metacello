@@ -1,6 +1,6 @@
 help
 defaultTopic: pageSelector for: aConfigurationClass
-	| topic stream helpTopicClass |
+	| stream helpTopicClass |
 	(helpTopicClass := self helpTopicClass) ifNil: [^self error: 'Help system not installed'].
 	stream := WriteStream on: String new.
 	pageSelector == #helpInstallation

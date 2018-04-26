@@ -1,14 +1,11 @@
 {
-	"category" : "Metacello-Cypress-Specs",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
-	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "MetacelloCypressPackageSpec",
-	"pools" : [
-		 ],
+	"commentStamp" : "CyrilFerlicot 2/8/2018 15:55",
 	"super" : "MetacelloPackageSpec",
-	"type" : "normal" }
+	"category" : "Metacello-Cypress-Specs",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MetacelloCypressPackageSpec",
+	"type" : "normal"
+}

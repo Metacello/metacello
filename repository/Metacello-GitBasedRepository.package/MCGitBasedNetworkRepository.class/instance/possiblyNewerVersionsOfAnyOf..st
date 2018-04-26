@@ -1,0 +1,3 @@
+accessing
+possiblyNewerVersionsOfAnyOf: someVersions
+	^ self localRepository possiblyNewerVersionsOfAnyOf: someVersions

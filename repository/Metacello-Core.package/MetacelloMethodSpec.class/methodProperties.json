@@ -1,17 +1,17 @@
 {
 	"instance" : {
-		"project" : " 9/28/2017 08:54:38",
-		"project:" : " 9/28/2017 08:54:38",
-		"methodSections:" : " 9/28/2017 08:54:38",
-		"versionString:" : " 9/28/2017 08:54:38",
-		"methodSections" : " 9/28/2017 08:54:38",
-		"selector" : " 9/28/2017 08:54:38",
-		"selector:" : " 9/28/2017 08:54:38",
-		"methodSource" : " 9/28/2017 08:54:38",
-		"versionString" : " 9/28/2017 08:54:38",
-		"compileMethod" : " 9/28/2017 08:54:38",
-		"category:" : " 9/28/2017 08:54:38",
-		"category" : " 9/28/2017 08:54:38"
+		"project" : "",
+		"project:" : "",
+		"methodSections:" : "",
+		"versionString:" : "",
+		"methodSections" : "",
+		"selector" : "",
+		"selector:" : "",
+		"methodSource" : "",
+		"versionString" : "",
+		"compileMethod" : "",
+		"category:" : "",
+		"category" : ""
 	},
 	"class" : { }
 }

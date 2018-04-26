@@ -1,8 +1,8 @@
 {
 	"instance" : {
-		"methodUpdateSelector" : " 9/28/2017 08:54:38",
-		"applyAdd:copy:merge:remove:" : " 9/28/2017 08:54:38",
-		"applyToList:" : " 9/28/2017 08:54:38"
+		"methodUpdateSelector" : "",
+		"applyAdd:copy:merge:remove:" : "",
+		"applyToList:" : ""
 	},
 	"class" : { }
 }
