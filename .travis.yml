@@ -17,6 +17,10 @@ smalltalk:
     smalltalk_config:
       - .smalltalkA-pharo6.ston
       - .smalltalkB-pharo6.ston
+  - Pharo-7.0
+    smalltalk_config:
+      - .smalltalkA-pharo6.ston
+      - .smalltalkB-pharo6.ston
   - Squeak-4.5
   - Squeak-4.6
   - Squeak-5.0
