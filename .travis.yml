@@ -4,27 +4,26 @@ sudo: false
 os: linux
 
 smalltalk:
-  - GemStone-3.4.0
-  - Pharo-5.0
-  - Squeak-5.1
-  - GemStone-2.4.8
-  - GemStone-3.1.0.6
-  - GemStone-3.2.17
-  - GemStone-3.3.6
-  - Pharo-3.0
-  - Pharo-4.0
-  - Pharo-6.0
-  - Pharo-6.1
-    smalltalk_config:
-      - .smalltalkA-pharo6.ston
-      - .smalltalkB-pharo6.ston
   - Pharo-7.0
     smalltalk_config:
       - .smalltalkA-pharo6.ston
       - .smalltalkB-pharo6.ston
-  - Squeak-4.5
-  - Squeak-4.6
+  - Pharo-6.1
+    smalltalk_config:
+      - .smalltalkA-pharo6.ston
+      - .smalltalkB-pharo6.ston
+  - Pharo-6.0
+  - Pharo-5.0
+  - Pharo-4.0
+  - Pharo-3.0
+  - GemStone-3.3.6
+  - GemStone-2.4.8
+  - GemStone-3.1.0.6
+  - GemStone-3.2.17
+  - Squeak-5.1
   - Squeak-5.0
+  - Squeak-4.6
+  - Squeak-4.5
   - Squeak-trunk
 
 smalltalk_config:
