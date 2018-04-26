@@ -4,14 +4,7 @@ sudo: false
 os: linux
 
 smalltalk:
-  - Pharo-7.0
-    smalltalk_config:
-      - .smalltalkA-pharo6.ston
-      - .smalltalkB-pharo6.ston
   - Pharo-6.1
-    smalltalk_config:
-      - .smalltalkA-pharo6.ston
-      - .smalltalkB-pharo6.ston
   - Pharo-6.0
   - Pharo-5.0
   - Pharo-4.0
