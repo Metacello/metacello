@@ -438,13 +438,13 @@ Metacello registry
 The list command returns a collection of instances of the [MetacelloProjectSpec](#metacelloprojectspec) class.
 
 ## Scripting API Referenece
-###Project Specification
-####configuration:
-####baseline:
-####project:
-####className:
-####version:
-####repository:
+### Project Specification
+#### configuration:
+#### baseline:
+#### project:
+#### className:
+#### version:
+#### repository:
 ##### Repository descriptions
 The **Repository description** is a URL that is used to resolve the location of Metacello repositories.
 
@@ -466,25 +466,25 @@ Where the *scheme* may be any one of the following:
 
 The layout of the *location* is dependent upon the *scheme* being used.
 
-##client://
+## client://
 
 ```
   client:// <full directory path to Monticello repository>
 ```
 
-##dictionary://
+## dictionary://
 
 ```
   dictionary:// <Global name of dictionary containing Monticello repository instance>
 ```
 
-##filetree://
+## filetree://
 
 ```
   filetree:// <full directory path to Filetree repository>
 ```
 
-##ftp://
+## ftp://
 
 ```
   ftp:// <ftp server host name> [: <port> ] </ path>
@@ -492,7 +492,7 @@ The layout of the *location* is dependent upon the *scheme* being used.
 
 *NOTE: Squeak and Pharo only.*
 
-##github://
+## github://
 
 ```
   github:// <github user> / <github project>  [ : <version identifier> ] [ / <repository path> ]
@@ -515,13 +515,13 @@ optional.
 **repository path** is the path to a subdirectory in the project where the repository is rooted. If absent the repository 
 is rooted in the projects HOME directory.
 
-##http://
+## http://
 
 ```
   http:// <http server host name> [: <port> ] </ path to Monticello repository>
 ```
 
-##server://
+## server://
 
 ```
   server:// <full directory path to Monticello repository>
@@ -547,24 +547,24 @@ is rooted in the projects HOME directory.
 * wiresong:
 
 ### Options
-####cacheRepository:
-####ignoreImage
-####onConflict:
-####onConflictUseIncoming
-####onConflictUseIncoming:useLoaded:
-####onConflictUseLoaded
-####onDowngrade:
-####onDowngradeUseIncoming
-####onDowngradeUseIncoming:
-####onLock:
-####onLockBreak
-####onLockBreak:
-####onUpgrade:
-####onUpgradeUseLoaded
-####onUpgradeUseLoaded:
-####onWarning:
-####onWarningLog
-####silently
+#### cacheRepository:
+#### ignoreImage
+#### onConflict:
+#### onConflictUseIncoming
+#### onConflictUseIncoming:useLoaded:
+#### onConflictUseLoaded
+#### onDowngrade:
+#### onDowngradeUseIncoming
+#### onDowngradeUseIncoming:
+#### onLock:
+#### onLockBreak
+#### onLockBreak:
+#### onUpgrade:
+#### onUpgradeUseLoaded
+#### onUpgradeUseLoaded:
+#### onWarning:
+#### onWarningLog
+#### silently
 ### Metacello Project Registry
 ### Classes
 #### MetacelloProjectRegistration
