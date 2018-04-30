@@ -1,5 +1,10 @@
 private
 validateLocalRepository
-	(MCFileTreeFileUtils current directoryExists: localRepository directory) ifTrue: [ ^ self ].
+	| dir |
+
+	dir := self calculateRepositoryDirectory.
+	(dir = localRepository directory 
+		and: [ MCFileTreeFileUtils current directoryExists: dir ]) 
+		ifTrue: [ ^ self ].
 	self flushCache.
- 	self resolveLocalRespository
+ 	self resolveLocalRespository.

@@ -1,19 +1,11 @@
 private
 resolveLocalRespository
-	| platform directory |
+	| directory directoryPath |
   
-	platform := MetacelloPlatform current.
-	directory := self class
-		projectDirectoryFrom: self projectPath
-		version: self projectVersion.
- 	self repoPath isEmpty ifFalse: [ 
-		directory := platform
-			directoryFromPath: self repoPath
-			relativeTo: directory ].
- 
+	directory := self calculateRepositoryDirectory.
+	directoryPath := MCFileTreeFileUtils current directoryPathString: directory.
 	directory exists ifFalse: [ 
-		self error: 'Local directory ', directory fullName, ' does not exists' ].
-	
-	localRepository := platform createRepository: (MetacelloRepositorySpec new 
-		description: 'filetree://', directory fullName;
+		self error: 'Local directory ', directoryPath, ' does not exist.' ].
+	localRepository := MetacelloPlatform current createRepository: (MetacelloRepositorySpec new 
+		description: 'filetree://', directoryPath;
 		yourself)
