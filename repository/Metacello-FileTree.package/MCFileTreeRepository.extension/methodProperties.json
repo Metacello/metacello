@@ -1,9 +1,10 @@
 {
 	"instance" : {
-		"repositoryBranchName" : "",
-		"repositoryDescription" : "",
+		"metacelloProjectClassFor:" : "",
 		"repositoryVersionString" : "",
-		"metacelloProjectClassFor:" : ""
+		"repositoryDescription" : "",
+		"resetDirectory" : "EstebanLorenzano 4/30/2018 11:08",
+		"repositoryBranchName" : ""
 	},
 	"class" : { }
 }
