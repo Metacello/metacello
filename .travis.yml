@@ -5,27 +5,34 @@ os: linux
 
 jobs: 
   include:
-    - smalltalk: Pharo-6.1
-      smalltalk_config: .smalltalk-pharo6.ston
+    - stage: "Stable smalltalk versions"
+      smalltalk: Pharo-6.1
+      smalltalk_config: .smalltalkA-pharo6.ston
     - smalltalk: Pharo-6.0
-    - smalltalk: Pharo-5.0
-#    - smalltalk: Pharo-4.0
-#    - smalltalk: Pharo-3.0
-#    - smalltalk: GemStone-3.3.6
-#    - smalltalk: GemStone-2.4.8
-#    - smalltalk: GemStone-3.1.0.6
-#    - smalltalk: GemStone-3.2.17
-#    - smalltalk: Squeak-5.1
-#    - smalltalk: Squeak-5.0
-#    - smalltalk: Squeak-4.6
-#    - smalltalk: Squeak-4.5
-#  allow_failures:
-#    - smalltalk: Squeak-4.4
-#    - smalltalk: Squeak-4.5
-#    - smalltalk: Squeak-4.6
-#    - smalltalk: Squeak-5.0
-#    - smalltalk: Squeak-5.1
-#    - smalltalk: Squeak-trunk
+    - smalltalk: GemStone-3.3.6
+    - smalltalk: Squeak-5.1
+    - stage: "Alpha smalltalk versions"
+      smalltalk: Pharo-6.1
+      smalltalk_config: .smalltalkA-pharo6.ston
+    - smalltalk: Squeak-trunk
+    - stage: "Older smalltalk versions"
+      smalltalk: Pharo-5.0
+    - smalltalk: Pharo-4.0
+    - smalltalk: Pharo-3.0
+    - smalltalk: GemStone-2.4.8
+    - smalltalk: GemStone-3.1.0.6
+    - smalltalk: GemStone-3.2.17
+    - smalltalk: Squeak-5.1
+    - smalltalk: Squeak-5.0
+    - smalltalk: Squeak-4.6
+    - smalltalk: Squeak-4.5
+  allow_failures:
+    - smalltalk: Squeak-4.4
+    - smalltalk: Squeak-4.5
+    - smalltalk: Squeak-4.6
+    - smalltalk: Squeak-5.0
+
+smalltalk_config: .smalltalkA.ston
 
 cache:
   directories:
