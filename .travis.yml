@@ -5,16 +5,19 @@ os: linux
 
 jobs: 
   include:
+
     - stage: "Stable smalltalk versions"
       smalltalk: Pharo-6.1
       smalltalk_config: .smalltalkA-pharo6.ston
     - smalltalk: Pharo-6.0
     - smalltalk: GemStone-3.3.6
     - smalltalk: Squeak-5.1
+
     - stage: "Alpha smalltalk versions"
-      smalltalk: Pharo-6.1
+      smalltalk: Pharo-7.0
       smalltalk_config: .smalltalkA-pharo6.ston
     - smalltalk: Squeak-trunk
+
     - stage: "Older smalltalk versions"
       smalltalk: Pharo-5.0
     - smalltalk: Pharo-4.0
@@ -26,6 +29,7 @@ jobs:
     - smalltalk: Squeak-5.0
     - smalltalk: Squeak-4.6
     - smalltalk: Squeak-4.5
+
   allow_failures:
     - smalltalk: Squeak-4.4
     - smalltalk: Squeak-4.5
