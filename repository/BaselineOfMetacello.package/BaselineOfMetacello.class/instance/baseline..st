@@ -222,7 +222,9 @@ baseline: spec
         package: 'Metacello-TestsCommonMC'
           with: [ spec file: 'Metacello-TestsCommonMC.pharo20' ];
         package: 'Metacello-Tonel';
-        yourself ].
+        yourself.
+		spec group: 'batch' with: #('Metacello-Core' 'Metacello-GitHub' 'Metacello-Bitbucket' 'Cypress' 'Metacello-Tonel')
+		].
   spec
     for: #(#'pharo6.x' #'pharo7.x')
     do: [ 
