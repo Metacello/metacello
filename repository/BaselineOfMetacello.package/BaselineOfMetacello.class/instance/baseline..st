@@ -225,7 +225,7 @@ baseline: spec
           with: [ spec file: 'Metacello-TestsCommonMC.pharo20' ];
         package: 'Metacello-Tonel' with: [ spec requires: #('Tonel') ]; 
         yourself.
-		spec group: 'Tonel' with: #('Metacello-Tonel')
+		spec group: 'TonelSupport' with: #('Metacello-Tonel')
 		].
   spec
     for: #(#'pharo6.x' #'pharo7.x')
