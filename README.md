@@ -26,6 +26,26 @@ Metacello new
   load
 ```
 
+You can install a version able to handle repositories of the Tonel format in Pharo 3 to 5 with this script:
+
+```Smalltalk
+
+Metacello new
+  baseline: 'Metacello';
+  repository: 'github://Metacello/metacello:master/repository';
+  get.
+Metacello new
+  baseline: 'Metacello';
+  repository: 'github://Metacello/metacello:master/repository';
+  onConflict: [:ex | ex allow];
+  load.
+Metacello new
+  baseline: 'Metacello';
+  repository: 'github://Metacello/metacello:master/repository';
+  onConflict: [:ex | ex allow];
+  load: 'TonelSupport'.
+```
+
 ### Pharo (older than Pharo3.0)
 
 ```Smalltalk
