@@ -26,6 +26,29 @@ Metacello new
   load
 ```
 
+### Pharo4.0, Pharo5.0 (Tonel support)
+
+[Tonel](https://github.com/pharo-vcs/tonel) is a code export format that can be use in order to manage projects with git. It is supported by default since Pharo6.1.
+
+You can install a version able to handle repositories of the Tonel format in Pharo 4 and 5 with this script:
+
+```Smalltalk
+Metacello new
+  baseline: 'Metacello';
+  repository: 'github://Metacello/metacello:master/repository';
+  get.
+Metacello new
+  baseline: 'Metacello';
+  repository: 'github://Metacello/metacello:master/repository';
+  onConflict: [:ex | ex allow];
+  load.
+Metacello new
+  baseline: 'Metacello';
+  repository: 'github://Metacello/metacello:master/repository';
+  onConflict: [:ex | ex allow];
+  load: 'TonelSupport'
+```
+
 ### Pharo (older than Pharo3.0)
 
 ```Smalltalk
