@@ -203,8 +203,10 @@ baseline: spec
   spec
     for: #(#'pharo3.x' #'pharo4.x' #'pharo5.x')
     do: [ 
-		self filetree: spec.
-		self gofer: spec. 
+		self 
+			filetree: spec;
+			gofer: spec;
+			tonel: spec. 
       spec
         package: 'Metacello-FileTree'
           with: [ spec requires: #('Metacello-MC' 'FileTree') ];
@@ -221,7 +223,7 @@ baseline: spec
                 requires: #('Metacello-PharoCommonPlatform') ];
         package: 'Metacello-TestsCommonMC'
           with: [ spec file: 'Metacello-TestsCommonMC.pharo20' ];
-        package: 'Metacello-Tonel';
+        package: 'Metacello-Tonel' with: [ spec requires: #('Metacello-GitHub' 'Tonel') ]; "Metacello-GitHub is needed as dependency because without it, it is not possible to install Tonel which is a Metadataless filetree github repository."
         yourself.
 		spec group: 'batch' with: #('Metacello-Core' 'Metacello-GitHub' 'Metacello-Bitbucket' 'Cypress' 'Metacello-Tonel')
 		].
