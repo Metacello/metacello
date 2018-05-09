@@ -1,3 +1,3 @@
-*Metacello-PharoCommonPlatform
+*Metacello-Tonel
 isAvailableFor: type
 	^ type = 'tonel'

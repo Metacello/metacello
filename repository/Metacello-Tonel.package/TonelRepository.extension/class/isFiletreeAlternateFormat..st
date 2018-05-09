@@ -1,4 +1,4 @@
-*Metacello-PharoCommonPlatform
+*Metacello-Tonel
 isFiletreeAlternateFormat: aRepositorySpec
 	| location propRef |
 	

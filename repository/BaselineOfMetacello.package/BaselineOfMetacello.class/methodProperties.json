@@ -1,11 +1,10 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"reprimeRegistryIssue197" : "dkh 09/30/2014 17:40",
+		"baseline:" : "CyrilFerlicot 5/9/2018 15:42",
 		"filetree:" : "EstebanLorenzano 10/26/2017 11:42",
-		"baseline:" : "EstebanLorenzano 4/30/2018 10:21",
 		"gemstone10beta311PostLoadDoIt" : "dkh 07/24/2012 18:09",
-		"testResourcePostLoadDoIt" : "dkh 6/1/2012 09:18:17",
-		"gofer:" : "EstebanLorenzano 10/26/2017 11:42"
-	},
-	"class" : { }
-}
+		"gofer:" : "EstebanLorenzano 10/26/2017 11:42",
+		"reprimeRegistryIssue197" : "dkh 09/30/2014 17:40",
+		"testResourcePostLoadDoIt" : "dkh 6/1/2012 09:18:17" } }
