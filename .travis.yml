@@ -35,6 +35,8 @@ jobs:
     - smalltalk: Squeak-4.5
     - smalltalk: Squeak-4.6
     - smalltalk: Squeak-5.0
+    - smalltalk: Squeak-5.1
+    - smalltalk: Squeak-trunk
 
 smalltalk_config: .smalltalkA.ston
 
