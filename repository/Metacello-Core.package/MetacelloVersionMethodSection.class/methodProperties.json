@@ -1,17 +1,17 @@
 {
 	"instance" : {
-		"attributePath" : " 9/28/2017 08:54:38",
-		"block:" : " 9/28/2017 08:54:38",
-		"attributeOrPath" : " 9/28/2017 08:54:38",
-		"parent" : " 9/28/2017 08:54:38",
-		"printOn:" : " 9/28/2017 08:54:38",
-		"methodSections" : " 9/28/2017 08:54:38",
-		"addMethodSection:" : " 9/28/2017 08:54:38",
-		"block" : " 9/28/2017 08:54:38",
-		"topParent" : " 9/28/2017 08:54:38",
-		"versionSpec" : " 9/28/2017 08:54:38",
-		"parent:" : " 9/28/2017 08:54:38",
-		"versionSpec:" : " 9/28/2017 08:54:38"
+		"attributePath" : "",
+		"block:" : "",
+		"attributeOrPath" : "",
+		"parent" : "",
+		"printOn:" : "",
+		"methodSections" : "",
+		"addMethodSection:" : "",
+		"block" : "",
+		"topParent" : "",
+		"versionSpec" : "",
+		"parent:" : "",
+		"versionSpec:" : ""
 	},
 	"class" : { }
 }

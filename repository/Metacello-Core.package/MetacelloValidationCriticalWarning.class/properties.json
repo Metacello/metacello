@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "<historical>",
+	"commentStamp" : "",
 	"super" : "MetacelloValidationIssue",
 	"category" : "Metacello-Core-Validation",
 	"classinstvars" : [ ],

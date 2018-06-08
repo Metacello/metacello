@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "MCFileTreeRepository",
+	"super" : "MCRepository",
 	"category" : "Metacello-GitBasedRepository",
 	"classinstvars" : [
 		"repoCacheDirectory",
@@ -14,7 +14,8 @@
 		"projectPath",
 		"projectVersion",
 		"repoPath",
-		"projectVersionPattern"
+		"projectVersionPattern",
+		"localRepository"
 	],
 	"name" : "MCGitBasedNetworkRepository",
 	"type" : "normal"

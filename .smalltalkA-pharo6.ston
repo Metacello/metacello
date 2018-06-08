@@ -1,0 +1,11 @@
+SmalltalkCISpec {
+  #name : 'Metacello',
+  #preLoading: 'tests/preLoading-pharo6.st',
+  #loading : [
+    SCIMetacelloLoadSpec {
+      #baseline : 'Metacello',
+      #load : [ 'TravisCI_1', 'TravisCI_2' ],
+      #directory : 'repository'
+    }
+  ]
+}

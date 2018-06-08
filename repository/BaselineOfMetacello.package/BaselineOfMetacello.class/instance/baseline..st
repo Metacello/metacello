@@ -16,7 +16,7 @@ baseline: spec
                 includes: #('Metacello-MC' 'Metacello-Platform') ];
         package: 'Metacello-Cypress' with: [ spec requires: 'Metacello-Core' ];
         package: 'Metacello-FileTree'
-          with: [ spec requires: #('Metacello-MC' 'FileTree') ];
+          with: [ spec requires: #('Metacello-MC') ];
         package: 'Metacello-GitBasedRepository'
           with: [ spec requires: #('Metacello-MC' 'Metacello-FileTree') ];
         package: 'Metacello-GitHub'
@@ -127,6 +127,8 @@ baseline: spec
                 repository: 'http://seaside.gemtalksystems.com/ss/metacello' ];
         yourself.
       spec
+        package: 'Metacello-FileTree'
+          with: [ spec requires: #('Metacello-MC' 'FileTree') ];
         package: 'Metacello-MC'
           with: [ spec requires: #('Gofer') ];
         package: 'Metacello-TestsMC'
@@ -201,9 +203,13 @@ baseline: spec
   spec
     for: #(#'pharo3.x' #'pharo4.x' #'pharo5.x')
     do: [ 
-		self filetree: spec.
-		self gofer: spec. 
+		self 
+			filetree: spec;
+			gofer: spec;
+			tonel: spec. 
       spec
+        package: 'Metacello-FileTree'
+          with: [ spec requires: #('Metacello-MC' 'FileTree') ];
         package: 'Metacello-MC'
           with: [ spec requires: #('Gofer') ];
         package: 'Metacello-TestsMC'
@@ -217,7 +223,10 @@ baseline: spec
                 requires: #('Metacello-PharoCommonPlatform') ];
         package: 'Metacello-TestsCommonMC'
           with: [ spec file: 'Metacello-TestsCommonMC.pharo20' ];
-        yourself ].
+        package: 'Metacello-Tonel' with: [ spec requires: #('Tonel') ]; 
+        yourself.
+		spec group: 'TonelSupport' with: #('Metacello-Tonel')
+		].
   spec
     for: #(#'pharo6.x' #'pharo7.x')
     do: [ 
@@ -303,6 +312,8 @@ baseline: spec
         baseline: 'FileTree'
         with: [ spec repository: 'github://dalehenrich/filetree:gemstone2.4/repository' ].
       spec
+        package: 'Metacello-FileTree'
+          with: [ spec requires: #('Metacello-MC' 'FileTree') ];
         package: 'Metacello-MC'
           with: [ spec requires: #('Gofer') ];
         package: 'Metacello-TestsMC'

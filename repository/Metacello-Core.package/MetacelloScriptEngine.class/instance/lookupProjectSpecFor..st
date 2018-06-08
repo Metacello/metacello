@@ -2,7 +2,7 @@ project lookup
 lookupProjectSpecFor: aProjectSpec
   "if there is no conflict, choose new spec"
 
-  | registration loadedSpec |
+  | registration |
   registration := MetacelloProjectRegistration
     registrationForProjectSpec: aProjectSpec
     ifAbsent: [ :new | new ]

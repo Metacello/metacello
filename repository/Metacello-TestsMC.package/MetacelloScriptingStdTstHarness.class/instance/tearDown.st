@@ -1,7 +1,6 @@
 running
 tearDown
-  | finalWorkingCopyList diff |
-  super tearDown.
+  | finalWorkingCopyList diff |  
   self tearDownPackages.
   self tearDownRepositories.
   MetacelloProjectRegistration registry: registry.
@@ -16,4 +15,5 @@ tearDown
         cr;
         show:
             'leaked package from ' , self printString , ' -> ' , leak printString ].
-  self assert: diff isEmpty
+  self assert: diff isEmpty.
+  super tearDown 

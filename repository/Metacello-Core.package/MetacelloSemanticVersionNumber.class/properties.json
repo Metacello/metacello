@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "dkh 6/24/2012 18:20",
+	"commentStamp" : "",
 	"super" : "Magnitude",
 	"category" : "Metacello-Core-Model",
 	"classinstvars" : [ ],
