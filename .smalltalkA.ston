@@ -1,5 +1,5 @@
 SmalltalkCISpec {
-  #specName : 'Metacello',
+  #name : 'Metacello TravisCI 1+2',
   #loading : [
     SCIMetacelloLoadSpec {
       #baseline : 'Metacello',

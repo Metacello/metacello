@@ -38,7 +38,7 @@
 		"~>" : ""
 	},
 	"class" : {
-		"fromString:forPattern:" : "",
+		"fromString:forPattern:" : "dkh 05/03/2016 07:12",
 		"extractNumericComponent:forPattern:" : "",
 		"validateVersionNumber:against:" : "",
 		"isSemanticIdentifier:" : "",

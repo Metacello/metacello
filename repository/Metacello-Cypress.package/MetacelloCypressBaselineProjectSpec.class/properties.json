@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "",
+	"commentStamp" : "CyrilFerlicot 2/8/2018 15:55",
 	"super" : "MetacelloMCBaselineOfProjectSpec",
 	"category" : "Metacello-Cypress-Specs",
 	"classinstvars" : [ ],
