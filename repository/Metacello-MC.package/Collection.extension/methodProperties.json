@@ -1,12 +1,12 @@
 {
 	"instance" : {
-		"recordRequiredForMetacelloMCVersion:" : " 9/28/2017 08:53:29",
-		"fetchRequiredForMetacelloMCVersion:" : " 9/28/2017 08:53:29",
-		"removeFromMetacelloRepositories:" : " 9/28/2017 08:53:29",
-		"loadRequiredForMetacelloMCVersion:" : " 9/28/2017 08:53:29",
-		"resolvePackageSpecsNamedForMetacelloMCVersion:visited:ifAbsent:" : " 9/28/2017 08:53:29",
-		"addToMetacelloRepositories:" : " 9/28/2017 08:53:29",
-		"mergeIntoMetacelloRepositories:" : " 9/28/2017 08:53:29"
+		"recordRequiredForMetacelloMCVersion:" : "",
+		"fetchRequiredForMetacelloMCVersion:" : "",
+		"removeFromMetacelloRepositories:" : "",
+		"loadRequiredForMetacelloMCVersion:" : "",
+		"resolvePackageSpecsNamedForMetacelloMCVersion:visited:ifAbsent:" : "",
+		"addToMetacelloRepositories:" : "",
+		"mergeIntoMetacelloRepositories:" : ""
 	},
 	"class" : { }
 }

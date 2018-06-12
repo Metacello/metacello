@@ -1,16 +1,15 @@
 {
-	"category" : "Metacello-TestsMC",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "GoferTest",
+	"category" : "Metacello-TestsMC",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"tempRepositories",
 		"initialWorkingCopyList",
-		"undefinedSymbols" ],
+		"undefinedSymbols"
+	],
 	"name" : "MetacelloDictionaryRepositoryTest",
-	"pools" : [
-		 ],
-	"super" : "GoferTest",
-	"type" : "normal" }
+	"type" : "normal"
+}

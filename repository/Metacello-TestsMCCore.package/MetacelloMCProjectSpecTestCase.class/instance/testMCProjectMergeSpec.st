@@ -1,6 +1,6 @@
 tests
 testMCProjectMergeSpec
-    | projectA projectB project packageA packageB repository |
+    | projectA projectB project repository |
     projectA := self projectSpec
         name: 'Project';
         projectPackage: self project packageSpec;

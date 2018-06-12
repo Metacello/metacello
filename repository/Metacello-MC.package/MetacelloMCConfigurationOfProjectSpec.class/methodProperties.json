@@ -1,15 +1,15 @@
 {
 	"instance" : {
-		"hasConflictWithBaselineSpec:" : " 9/28/2017 08:53:29",
-		"asProjectRegistration" : " 9/28/2017 08:53:29",
-		"hasConflictWithProjectSpec:" : " 9/28/2017 08:53:29",
-		"isConfigurationOfProjectSpec" : " 9/28/2017 08:53:29",
-		"projectLabel" : " 9/28/2017 08:53:29",
-		"constructClassName" : " 9/28/2017 08:53:29",
-		"hasClassName" : " 9/28/2017 08:53:29",
-		"copyForRegistration:onWrite:" : " 9/28/2017 08:53:29",
-		"mergeSpec:" : " 9/28/2017 08:53:29",
-		"asConfigurationProjectSpec" : " 9/28/2017 08:53:29"
+		"hasConflictWithBaselineSpec:" : "",
+		"asProjectRegistration" : "",
+		"hasConflictWithProjectSpec:" : "",
+		"isConfigurationOfProjectSpec" : "",
+		"projectLabel" : "",
+		"constructClassName" : "",
+		"hasClassName" : "",
+		"copyForRegistration:onWrite:" : "",
+		"mergeSpec:" : "",
+		"asConfigurationProjectSpec" : ""
 	},
 	"class" : { }
 }

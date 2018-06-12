@@ -1,18 +1,18 @@
 {
 	"instance" : {
-		"testMergePackageA" : " 9/30/2017 13:31:35",
-		"testRemovePackageB" : " 9/30/2017 13:31:35",
-		"testAddPackageC" : " 9/30/2017 13:31:35",
-		"projectClass" : " 9/30/2017 13:31:35",
-		"testRemovePackageA" : " 9/30/2017 13:31:35",
-		"testRemovePackageD" : " 9/30/2017 13:31:35",
-		"testAddPackageB" : " 9/30/2017 13:31:35",
-		"testCopyToPackage" : " 9/30/2017 13:31:35",
-		"testMergePackageB" : " 9/30/2017 13:31:35",
-		"testRemovePackageC" : " 9/30/2017 13:31:35",
-		"testAddPackageD" : " 9/30/2017 13:31:35",
-		"testAddPackageA" : " 9/30/2017 13:31:35",
-		"testMergePackageD" : " 9/30/2017 13:31:35"
+		"testMergePackageA" : "",
+		"testRemovePackageB" : "",
+		"testAddPackageC" : "",
+		"projectClass" : "",
+		"testRemovePackageA" : "",
+		"testRemovePackageD" : "",
+		"testAddPackageB" : "",
+		"testCopyToPackage" : "",
+		"testMergePackageB" : "",
+		"testRemovePackageC" : "",
+		"testAddPackageD" : "",
+		"testAddPackageA" : "",
+		"testMergePackageD" : ""
 	},
 	"class" : { }
 }

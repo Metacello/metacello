@@ -1,12 +1,12 @@
 {
 	"instance" : {
-		"setUpMonticelloRepository" : " 9/28/2017 07:09:26",
-		"setUpVersionReferences" : " 9/28/2017 07:09:26",
-		"setUpNewerDependency" : " 9/28/2017 07:09:26",
-		"setUp" : " 9/28/2017 07:09:26",
-		"setUpDependency" : " 9/28/2017 07:09:26",
-		"versionReferences" : " 9/28/2017 07:09:26",
-		"monticelloRepository" : " 9/28/2017 07:09:26"
+		"setUpMonticelloRepository" : "",
+		"setUpVersionReferences" : "",
+		"setUpNewerDependency" : "",
+		"setUp" : "",
+		"setUpDependency" : "",
+		"versionReferences" : "",
+		"monticelloRepository" : ""
 	},
 	"class" : { }
 }

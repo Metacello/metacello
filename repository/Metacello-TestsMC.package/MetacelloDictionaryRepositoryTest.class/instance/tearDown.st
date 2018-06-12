@@ -1,6 +1,6 @@
 running
 tearDown
-  | aGofer finalWorkingCopyList diff |  
+  | aGofer finalWorkingCopyList diff |
   aGofer := Gofer new.
   self tearDownPackages: aGofer.
   aGofer references notEmpty

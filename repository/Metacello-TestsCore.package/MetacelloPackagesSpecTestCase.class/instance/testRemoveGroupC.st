@@ -2,7 +2,7 @@ tests
 testRemoveGroupC
     "used by MetacelloAbstractVersionConstructor>>removeGroup:"
 
-    | packages group removed |
+    | packages removed |
     packages := self packagesSpec.
     packages
         add:

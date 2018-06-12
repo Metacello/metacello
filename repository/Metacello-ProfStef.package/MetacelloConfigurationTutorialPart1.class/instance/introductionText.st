@@ -6,3 +6,4 @@ introductionText
 		MetacelloTutorialConfig browse.
 	"2. In the browser view the ''--all--'' category.
 	3. Have fun!"'
+	
