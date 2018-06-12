@@ -1,5 +1,5 @@
 private
 localRepository
-	localRepository ifNil: [ self resolveLocalRespository ].
+	self ensureLocalRepository.
 	self validateLocalRepository.
 	^ localRepository
