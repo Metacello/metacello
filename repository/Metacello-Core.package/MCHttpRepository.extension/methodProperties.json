@@ -1,7 +1,7 @@
 {
 	"instance" : { },
 	"class" : {
-		"isAvailableFor:" : "EstebanLorenzano 4/25/2018 11:22",
-		"createRepositoryFromSpec:on:" : "EstebanLorenzano 4/25/2018 11:22"
+		"isAvailableFor:" : "",
+		"createRepositoryFromSpec:on:" : ""
 	}
 }
