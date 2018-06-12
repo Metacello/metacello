@@ -1,14 +1,11 @@
 {
-	"category" : "Metacello-Cypress-Specs",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "MetacelloCypressBaselineProjectSpec",
-	"pools" : [
-		 ],
 	"super" : "MetacelloMCBaselineOfProjectSpec",
-	"type" : "normal" }
+	"category" : "Metacello-Cypress-Specs",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MetacelloCypressBaselineProjectSpec",
+	"type" : "normal"
+}

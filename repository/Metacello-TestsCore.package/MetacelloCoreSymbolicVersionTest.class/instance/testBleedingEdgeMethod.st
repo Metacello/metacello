@@ -1,5 +1,5 @@
 tests
 testBleedingEdgeMethod
-    | project version |
+    | project |
     project := self projectWith: #(#'platformVersion1.x').
     self assert: (project version: #'bleedingEdge') = project bleedingEdge

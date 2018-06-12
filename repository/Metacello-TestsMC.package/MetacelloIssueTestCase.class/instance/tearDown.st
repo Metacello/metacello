@@ -1,7 +1,6 @@
 running
 tearDown
   | aGofer finalWorkingCopyList diff |
-  super tearDown.
   aGofer := Gofer new.
   self tearDownPackageNames
     do: [ :pName | 
@@ -26,4 +25,5 @@ tearDown
         cr;
         show:
             'leaked package from ' , self printString , ' -> ' , leak printString ].
-  self assert: diff isEmpty
+  self assert: diff isEmpty.
+  super tearDown

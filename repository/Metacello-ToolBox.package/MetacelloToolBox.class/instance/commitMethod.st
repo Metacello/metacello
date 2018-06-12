@@ -1,6 +1,6 @@
 api-configuration
 commitMethod
-	| skipValidation isues |
+	| skipValidation |
 	skipValidation := false.
 	self methodSpec ifNil: [ ^self ].
 	self methodSpec compileMethod.

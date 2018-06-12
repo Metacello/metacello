@@ -1,8 +1,8 @@
 {
 	"instance" : {
-		"compare:using:" : " 9/28/2017 08:53:29",
-		"matchesMetacelloGoferPackage:" : " 9/28/2017 08:53:29",
-		"metacelloPackageNameWithBranch" : " 9/28/2017 08:53:29"
+		"compare:using:" : "",
+		"matchesMetacelloGoferPackage:" : "",
+		"metacelloPackageNameWithBranch" : ""
 	},
 	"class" : { }
 }

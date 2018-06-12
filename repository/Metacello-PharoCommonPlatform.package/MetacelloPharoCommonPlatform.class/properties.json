@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "<historical>",
+	"commentStamp" : "",
 	"super" : "MetacelloPlatform",
 	"category" : "Metacello-PharoCommonPlatform",
 	"classinstvars" : [ ],

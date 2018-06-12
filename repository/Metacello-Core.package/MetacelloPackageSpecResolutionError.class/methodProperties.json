@@ -1,14 +1,14 @@
 {
 	"instance" : {
-		"description" : " 9/28/2017 08:54:38",
-		"repositoryError:" : " 9/28/2017 08:54:38",
-		"packageSpec" : " 9/28/2017 08:54:38",
-		"repositoryString" : " 9/28/2017 08:54:38",
-		"repositoryError" : " 9/28/2017 08:54:38",
-		"signal" : " 9/28/2017 08:54:38",
-		"repositories:" : " 9/28/2017 08:54:38",
-		"packageSpec:" : " 9/28/2017 08:54:38",
-		"repositories" : " 9/28/2017 08:54:38"
+		"description" : "",
+		"repositoryError:" : "",
+		"packageSpec" : "",
+		"repositoryString" : "",
+		"repositoryError" : "",
+		"signal" : "",
+		"repositories:" : "",
+		"packageSpec:" : "",
+		"repositories" : ""
 	},
 	"class" : { }
 }

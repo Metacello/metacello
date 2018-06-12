@@ -1,17 +1,17 @@
 {
 	"instance" : {
-		"findWorkingCopy" : " 9/28/2017 08:53:29",
-		"matchesMetacelloGoferPackage:" : " 9/28/2017 08:53:29",
-		"currentVersionInfo" : " 9/28/2017 08:53:29",
-		"initializeName:packageFilename:" : " 9/28/2017 08:53:29",
-		"workingCopy" : " 9/28/2017 08:53:29",
-		"matches:" : " 9/28/2017 08:53:29",
-		"packageFilename" : " 9/28/2017 08:53:29",
-		"ancestors" : " 9/28/2017 08:53:29",
-		"matchesWorkingCopy:" : " 9/28/2017 08:53:29"
+		"findWorkingCopy" : "",
+		"matchesMetacelloGoferPackage:" : "",
+		"currentVersionInfo" : "",
+		"initializeName:packageFilename:" : "",
+		"workingCopy" : "",
+		"matches:" : "",
+		"packageFilename" : "",
+		"ancestors" : "",
+		"matchesWorkingCopy:" : ""
 	},
 	"class" : {
-		"packageFileName:matchesPackageName:" : " 9/28/2017 08:53:29",
-		"name:packageFilename:" : " 9/28/2017 08:53:29"
+		"packageFileName:matchesPackageName:" : "",
+		"name:packageFilename:" : ""
 	}
 }

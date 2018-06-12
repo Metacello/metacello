@@ -1,6 +1,6 @@
 api-configuration
 updateVersionMethodForVersion: inputVersionStringOrSymbol projectAttributes: projectAttributes updateProjects: updateProjects updatePackages: updatePackages versionSpecsDo: aBlock
-    | constructor updatedSpecs fullVersionSpec version coll pragma imports blessing reversed addedSections visitedSpecs sourceVersionString keptSections |
+    | constructor updatedSpecs fullVersionSpec version coll pragma imports blessing addedSections visitedSpecs sourceVersionString keptSections |
     updatedSpecs := Set new.
     version := project version: inputVersionStringOrSymbol.
     sourceVersionString := version versionString.	"resolve symbolic version"

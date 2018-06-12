@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "dkh 6/1/2012 09:32",
+	"commentStamp" : "",
 	"super" : "MetacelloScriptProjectSpecNotification",
 	"category" : "Metacello-Core-Scripts",
 	"classinstvars" : [ ],

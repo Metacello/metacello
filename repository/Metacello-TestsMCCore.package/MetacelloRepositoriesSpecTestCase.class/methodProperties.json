@@ -1,19 +1,19 @@
 {
 	"instance" : {
-		"testRemoveC" : " 9/30/2017 13:31:35",
-		"testAddF" : " 9/30/2017 13:31:35",
-		"testAddC" : " 9/30/2017 13:31:35",
-		"testMergeB" : " 9/30/2017 13:31:35",
-		"testCopyTo" : " 9/30/2017 13:31:35",
-		"projectClass" : " 9/30/2017 13:31:35",
-		"testRemoveB" : " 9/30/2017 13:31:35",
-		"testAddE" : " 9/30/2017 13:31:35",
-		"testMergeA" : " 9/30/2017 13:31:35",
-		"testAddB" : " 9/30/2017 13:31:35",
-		"testRemoveD" : " 9/30/2017 13:31:35",
-		"testMergeC" : " 9/30/2017 13:31:35",
-		"testRemoveA" : " 9/30/2017 13:31:35",
-		"testAddA" : " 9/30/2017 13:31:35"
+		"testRemoveC" : "",
+		"testAddF" : "",
+		"testAddC" : "",
+		"testMergeB" : "",
+		"testCopyTo" : "",
+		"projectClass" : "",
+		"testRemoveB" : "",
+		"testAddE" : "",
+		"testMergeA" : "",
+		"testAddB" : "",
+		"testRemoveD" : "",
+		"testMergeC" : "",
+		"testRemoveA" : "",
+		"testAddA" : ""
 	},
 	"class" : { }
 }

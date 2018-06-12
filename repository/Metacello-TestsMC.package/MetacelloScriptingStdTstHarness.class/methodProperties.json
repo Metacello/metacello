@@ -1,22 +1,23 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"defaultTimeout" : "dkh 09/25/2015 16:28",
-		"disableUndefinedSymbolTracking" : "dkh 07/06/2016 15:33",
-		"doSilently" : "dkh 09/25/2015 16:28",
-		"hasPackage:" : "dkh 09/25/2015 16:28",
-		"runCase" : "dkh 09/25/2015 16:28",
-		"setUp" : "dkh 07/06/2016 15:34",
-		"setUpRepositories" : "dkh 09/25/2015 16:28",
-		"setUpRepositoryContents" : "dkh 09/25/2015 16:28",
-		"tearDown" : "dkh 07/06/2016 22:32",
-		"tearDownPackageList" : "dkh 09/25/2015 16:28",
-		"tearDownPackages" : "dkh 09/25/2015 16:28",
-		"tearDownRepositories" : "dkh 09/25/2015 16:28",
-		"unloadPackage:" : "dkh 09/25/2015 16:28",
-		"validate:expConfigVersion:expConfigRepo:expBaselineClassName:expBaselineVersion:expBaselineRepo:" : "dkh 09/25/2015 16:28",
-		"validateProjects:" : "dkh 09/25/2015 16:28",
-		"verify:loadedFrom:" : "dkh 09/25/2015 16:28",
-		"verify:version:" : "dkh 09/25/2015 16:28",
-		"verifyPackageNotLoaded:" : "dkh 09/25/2015 16:28" } }
+		"hasPackage:" : "",
+		"defaultTimeout" : "",
+		"tearDown" : "",
+		"tearDownRepositories" : "",
+		"setUpRepositoryContents" : "",
+		"tearDownPackageList" : "",
+		"runCase" : "",
+		"verify:loadedFrom:" : "",
+		"verify:version:" : "",
+		"disableUndefinedSymbolTracking" : "",
+		"tearDownPackages" : "",
+		"unloadPackage:" : "",
+		"validate:expConfigVersion:expConfigRepo:expBaselineClassName:expBaselineVersion:expBaselineRepo:" : "",
+		"validateProjects:" : "",
+		"doSilently" : "",
+		"setUpRepositories" : "",
+		"verifyPackageNotLoaded:" : "",
+		"setUp" : ""
+	},
+	"class" : { }
+}

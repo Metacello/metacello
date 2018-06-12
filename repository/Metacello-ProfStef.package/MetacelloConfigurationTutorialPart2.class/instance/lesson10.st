@@ -4,8 +4,8 @@ lesson10
 		title: 'Lesson 10'
 		lesson: 
 '
-Smalltalk tools browse: MetacelloProjectRefTutorialConfig selector: #baseline10:.
-Smalltalk tools browse: MetacelloProjectRefTutorialConfig selector: #version10:.
+Smalltalk tools browser openOnClass: MetacelloProjectRefTutorialConfig selector: #baseline10:.
+Smalltalk tools browser openOnClass: MetacelloProjectRefTutorialConfig selector: #version10:.
 
 "In lesson07 it was obvious that we copied the configuration information from 
 MetacelloTutorialConfig and adapted it to our project.
