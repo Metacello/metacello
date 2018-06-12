@@ -34,7 +34,7 @@ projectDirectoryFrom: projectPath version: versionString
 			directory := mcPlatform
 				directoryFromPath: (cachePath := archive members first fileName)
 				relativeTo: theCacheDirectory.
-			archive close.
+			mcPlatform closeZipArchive: archive.
 			directory exists
 				ifTrue: [ mcPlatform deleteFileNamed: zipFileName ]
 				ifFalse: [ mcPlatform
