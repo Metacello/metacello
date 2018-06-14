@@ -1,6 +1,6 @@
 tests
 testBasicStableVersion
-    | project version wc expected actual |
+    | project version expected actual |
     project := self projectWith: #(#'platformVersion1.x').
     version := project version: #'stable'.
     expected := 'spec blessing: #''release''.

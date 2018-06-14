@@ -1,10 +1,11 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"configurationPath" : "dkh 6/12/2012 15:41:23.319",
-		"externalPath" : "dkh 6/12/2012 15:41:23.319",
-		"samplePath" : "dkh 6/12/2012 15:41:23.319",
-		"setUpRepositories" : "ChristopheDemarey 5/27/2013 18:11",
-		"setUpRepositoryContents:sourceRepo:targetRepo:" : "dkh 6/12/2012 15:41:23.319",
-		"tearDownRepositories" : "topa 9/20/2017 11:05" } }
+		"externalPath" : "",
+		"tearDownRepositories" : "",
+		"samplePath" : "",
+		"configurationPath" : "",
+		"setUpRepositories" : "",
+		"setUpRepositoryContents:sourceRepo:targetRepo:" : ""
+	},
+	"class" : { }
+}

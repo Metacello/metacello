@@ -1,5 +1,6 @@
 {
 	"instance" : {
+		"ensureLocalRepository" : "EstebanLorenzano 6/12/2018 18:21",
 		"projectTagsUrlFor:" : "",
 		"asRepositorySpecFor:" : "",
 		"goferVersionFrom:" : "",
@@ -13,10 +14,10 @@
 		"resolveLocalRespository" : "",
 		"validateLocalRepository" : "",
 		"metacelloProjectClassFor:" : "",
-		"goferReferences" : "EstebanLorenzano 6/8/2018 15:59",
+		"goferReferences" : "EstebanLorenzano 6/12/2018 16:27",
 		"projectPath:" : "",
 		"projectPath:projectVersion:repoPath:" : "",
-		"flushForScriptGet" : "",
+		"flushForScriptGet" : "EstebanLorenzano 6/12/2018 21:27",
 		"calculateRepositoryDirectory" : "",
 		"projectPath" : "",
 		"repoPath:" : "",
@@ -38,10 +39,10 @@
 		"normalizeTagsData:" : "",
 		"allFileNames" : "",
 		"canUpgradeTo:" : "",
-		"localRepository" : ""
+		"localRepository" : "EstebanLorenzano 6/12/2018 18:21"
 	},
 	"class" : {
-		"projectDirectoryFrom:version:" : "",
+		"projectDirectoryFrom:version:" : "EstebanLorenzano 6/12/2018 18:55",
 		"downloadCacheKey:version:" : "",
 		"initialize" : "",
 		"siteUsername:" : "",

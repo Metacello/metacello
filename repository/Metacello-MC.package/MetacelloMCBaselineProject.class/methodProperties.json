@@ -1,29 +1,29 @@
 {
 	"instance" : {
-		"setBaselineRepositoryDescription:" : " 9/28/2017 08:53:29",
-		"latestVersion" : " 9/28/2017 08:53:29",
-		"latestVersionMatching:excludedBlessings:" : " 9/28/2017 08:53:29",
-		"latestVersion:" : " 9/28/2017 08:53:29",
-		"singletonVersionName" : " 9/28/2017 08:53:29",
-		"hasVersion:" : " 9/28/2017 08:53:29",
-		"asConfigurationProject" : " 9/28/2017 08:53:29",
-		"lastVersion" : " 9/28/2017 08:53:29",
-		"bleedingEdge" : " 9/28/2017 08:53:29",
-		"latestVersionMatching:includedBlessings:excludedBlessings:" : " 9/28/2017 08:53:29",
-		"version" : " 9/28/2017 08:53:29",
-		"stableVersion" : " 9/28/2017 08:53:29",
-		"currentVersion" : " 9/28/2017 08:53:29",
-		"currentVersionAgainst:" : " 9/28/2017 08:53:29",
-		"development" : " 9/28/2017 08:53:29",
-		"symbolicVersionSymbols" : " 9/28/2017 08:53:29",
-		"projectForScriptEngine:unconditionalLoad:" : " 9/28/2017 08:53:29",
-		"latestVersionMatching:includedBlessings:" : " 9/28/2017 08:53:29",
-		"latestVersionMatching:" : " 9/28/2017 08:53:29",
-		"versions" : " 9/28/2017 08:53:29",
-		"asBaselineProject" : " 9/28/2017 08:53:29"
+		"setBaselineRepositoryDescription:" : "",
+		"latestVersion" : "",
+		"latestVersionMatching:excludedBlessings:" : "",
+		"latestVersion:" : "",
+		"singletonVersionName" : "",
+		"hasVersion:" : "",
+		"asConfigurationProject" : "",
+		"lastVersion" : "",
+		"bleedingEdge" : "",
+		"latestVersionMatching:includedBlessings:excludedBlessings:" : "",
+		"version" : "",
+		"stableVersion" : "",
+		"currentVersion" : "",
+		"currentVersionAgainst:" : "",
+		"development" : "",
+		"symbolicVersionSymbols" : "",
+		"projectForScriptEngine:unconditionalLoad:" : "",
+		"latestVersionMatching:includedBlessings:" : "",
+		"latestVersionMatching:" : "",
+		"versions" : "",
+		"asBaselineProject" : ""
 	},
 	"class" : {
-		"singletonVersionName" : " 9/28/2017 08:53:29",
-		"versionConstructorClass" : " 9/28/2017 08:53:29"
+		"singletonVersionName" : "",
+		"versionConstructorClass" : ""
 	}
 }

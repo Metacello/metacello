@@ -1,6 +1,6 @@
 tests
 testBasicBleedingEdgeVersion
-    | project version wc expected actual |
+    | project version expected actual |
     project := self projectWith: #(#'platformVersion1.x').
     version := project version: #'bleedingEdge'.
     expected := 'spec blessing: #''baseline''.

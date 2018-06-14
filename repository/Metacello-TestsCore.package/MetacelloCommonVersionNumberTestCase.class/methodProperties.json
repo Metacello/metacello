@@ -1,19 +1,22 @@
 {
-	"class" : {
-		"isAbstract" : "dkh 6/22/2012 12:13" },
 	"instance" : {
-		"defaultVersion1" : "dkh 05/20/2014 09:52",
-		"testAlphaNumericVersion1" : "dkh 6/22/2012 15:02",
-		"testAlphaNumericVersion2" : "dkh 6/22/2012 14:40",
-		"testAlphaNumericVersion3" : "dkh 6/22/2012 14:40",
-		"testAlphaNumericVersion4" : "dkh 6/22/2012 14:40",
-		"testIncrementDecrementVersion" : "dkh 05/20/2014 10:01",
-		"testIncrementDecrementVersionNumber" : "dkh 05/20/2014 09:58",
-		"testVersion01" : "dkh 6/22/2012 14:36",
-		"testVersion02" : "dkh 6/22/2012 14:36",
-		"testVersion04" : "dkh 6/22/2012 14:36",
-		"testVersion14" : "dkh 6/22/2012 14:37",
-		"testVersion22" : "dkh 6/22/2012 14:39",
-		"testVersion23" : "dkh 6/22/2012 14:39",
-		"testVersion25" : "dkh 6/22/2012 14:39",
-		"versionClass" : "dkh 6/22/2012 12:13" } }
+		"defaultVersion1" : "",
+		"testAlphaNumericVersion2" : "",
+		"testIncrementDecrementVersionNumber" : "",
+		"testVersion23" : "",
+		"testVersion02" : "",
+		"testVersion14" : "",
+		"testIncrementDecrementVersion" : "",
+		"testVersion25" : "",
+		"testAlphaNumericVersion4" : "",
+		"testAlphaNumericVersion1" : "",
+		"testVersion22" : "",
+		"testVersion04" : "",
+		"testVersion01" : "",
+		"testAlphaNumericVersion3" : "",
+		"versionClass" : ""
+	},
+	"class" : {
+		"isAbstract" : ""
+	}
+}
