@@ -6,8 +6,5 @@
 		"resetDirectory" : "",
 		"repositoryBranchName" : ""
 	},
-	"class" : {
-		"isAvailableFor:" : "",
-		"createRepositoryFromSpec:on:" : ""
-	}
+	"class" : { }
 }

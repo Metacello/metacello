@@ -1,3 +1,3 @@
 *Metacello-Core
 isAvailableFor: type
-	^ type = 'directory'
+	^ type = 'filetree'
