@@ -1,17 +1,22 @@
 {
-	"class" : {
-		"basicDescription" : "dkh 09/29/2014 12:20",
-		"cacheDirectory" : "dkh 09/29/2014 12:17",
-		"cacheDirectory:" : "dkh 09/29/2014 12:17",
-		"cacheDirectoryPath" : "topa 5/5/2015 11:24",
-		"downloadCache" : "dkh 09/29/2014 12:17",
-		"eTagsCache" : "dkh 03/18/2015 06:35",
-		"flushDownloadCache" : "dkh 09/29/2014 12:17",
-		"flushETagsCache" : "dkh 03/18/2015 07:35",
-		"isEnabled" : "JohanBrichau 10/11/2014 02:04",
-		"projectTagsUrlFor:" : "dkh 10/14/2014 14:26",
-		"projectZipUrlFor:versionString:" : "dkh 09/29/2014 12:24",
-		"resetCacheDirectoryIfInvalid" : "dkh 09/29/2014 12:17" },
 	"instance" : {
-		"downloadJSONTags" : "dkh 03/18/2015 07:39",
-		"normalizeTagsData:" : "dkh 10/14/2014 15:18" } }
+		"normalizeTagsData:" : "",
+		"downloadJSONTags" : ""
+	},
+	"class" : {
+		"isEnabled" : "",
+		"flushETagsCache" : "",
+		"cacheDirectoryPath" : "",
+		"projectZipUrlFor:versionString:" : "",
+		"cacheDirectory" : "",
+		"cacheDirectory:" : "",
+		"resetCacheDirectoryIfInvalid" : "",
+		"createRepositoryFromSpec:on:" : "",
+		"flushDownloadCache" : "",
+		"isAvailableFor:" : "",
+		"basicDescription" : "",
+		"eTagsCache" : "",
+		"downloadCache" : "",
+		"projectTagsUrlFor:" : ""
+	}
+}

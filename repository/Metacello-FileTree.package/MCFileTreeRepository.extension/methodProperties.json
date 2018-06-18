@@ -3,8 +3,11 @@
 		"metacelloProjectClassFor:" : "",
 		"repositoryVersionString" : "",
 		"repositoryDescription" : "",
-		"resetDirectory" : "EstebanLorenzano 4/30/2018 11:08",
+		"resetDirectory" : "",
 		"repositoryBranchName" : ""
 	},
-	"class" : { }
+	"class" : {
+		"isAvailableFor:" : "",
+		"createRepositoryFromSpec:on:" : ""
+	}
 }

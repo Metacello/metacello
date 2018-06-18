@@ -1,7 +1,0 @@
-{
-	"class" : {
-		"createRepositoryFromSpec:on:" : "EstebanLorenzano 4/25/2018 11:16",
-		"isAvailableFor:" : "EstebanLorenzano 4/25/2018 11:17",
-		"isFiletreeAlternateFormat:" : "EstebanLorenzano 4/25/2018 11:49" },
-	"instance" : {
-		"goferVersionFrom:" : "CyrilFerlicot 5/9/2018 17:03" } }

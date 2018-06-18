@@ -1,3 +1,3 @@
-*Metacello-Core
+testing
 isAvailableFor: type
 	^ type = 'github'
