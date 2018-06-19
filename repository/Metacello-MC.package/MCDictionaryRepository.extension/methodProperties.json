@@ -3,5 +3,8 @@
 		"asRepositorySpecFor:" : "",
 		"versionInfoFromVersionNamed:" : ""
 	},
-	"class" : { }
+	"class" : {
+		"isAvailableFor:" : "",
+		"createRepositoryFromSpec:on:" : ""
+	}
 }

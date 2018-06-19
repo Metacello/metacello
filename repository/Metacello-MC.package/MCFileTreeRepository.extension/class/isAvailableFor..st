@@ -1,3 +1,3 @@
-*Metacello-Core
+*Metacello-MC
 isAvailableFor: type
 	^ type = 'filetree'

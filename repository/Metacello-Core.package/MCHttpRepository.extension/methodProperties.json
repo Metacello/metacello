@@ -1,7 +1,0 @@
-{
-	"instance" : { },
-	"class" : {
-		"isAvailableFor:" : "",
-		"createRepositoryFromSpec:on:" : ""
-	}
-}
