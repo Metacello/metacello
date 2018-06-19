@@ -2,5 +2,8 @@
 	"instance" : {
 		"asRepositorySpecFor:" : ""
 	},
-	"class" : { }
+	"class" : {
+		"isAvailableFor:" : "",
+		"createRepositoryFromSpec:on:" : ""
+	}
 }
