@@ -56,7 +56,13 @@ Metacello new
   load
 ```
 
-### Squeak
+### Squeak5.2 (and newer)
+
+```Smalltalk
+Installer ensureRecentMetacello.
+```
+
+### Squeak (older than Squeak5.2)
 
 ```Smalltalk
 "Get the Metacello configuration (for Squeak users)"
