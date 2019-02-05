@@ -261,6 +261,12 @@ baseline: spec
         baseline: 'FileTree'
         with: [ spec repository: 'github://dalehenrich/filetree:pharo6.0_dev/repository' ] ].
   spec
+    for: #(#'pharo7.x')
+    do: [ 
+      spec
+        baseline: 'FileTree'
+        with: [ spec repository: 'github://dalehenrich/filetree:pharo7.0_dev/repository' ] ].
+  spec
     for: #'squeak'
     do: [ 
 		self filetree: spec.
