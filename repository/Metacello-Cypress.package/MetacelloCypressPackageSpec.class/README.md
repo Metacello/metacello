@@ -1,0 +1,1 @@
+I am a package spec specific to metadataless projects (filetree/tonel).

@@ -13,6 +13,18 @@ Gofer new
 (Smalltalk at: #GsUpgrader) upgradeMetacello.
 ```
 
+### Pharo6.1, Pharo7.0
+
+```Smalltalk
+Iceberg enableMetacelloIntegration: false.
+
+Metacello new
+    baseline: 'Metacello';
+    repository: 'github://metacello/metacello:pharo-6.1_dev/repository';
+    onConflict: [ :ex | ex allow ];
+    load.
+ ```
+
 ### Pharo3.0, Pharo4.0, and Pharo5.0
 Metacello Preview  is pre-installed in Pharo3.0 the following installs the latest released version:
 
@@ -58,7 +70,13 @@ Metacello new
   load
 ```
 
-### Squeak
+### Squeak5.2 (and newer)
+
+```Smalltalk
+Installer ensureRecentMetacello.
+```
+
+### Squeak (older than Squeak5.2)
 
 ```Smalltalk
 "Get the Metacello configuration (for Squeak users)"

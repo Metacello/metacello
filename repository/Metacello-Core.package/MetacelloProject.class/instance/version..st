@@ -1,6 +1,6 @@
 versions
 version: aVersionString
-    | vrsn |
+    
     aVersionString isSymbol
         ifTrue: [ 
             | symbolicVersionString |

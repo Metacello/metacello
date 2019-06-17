@@ -3,7 +3,7 @@ currentPackageLoaded: loadedBlock notLoaded: notLoadedBlock using: anMCLoader
 	"Use currentVersionInfoFor: because it involves the loader and returns versionInfo for a planned load 
 	 (atomic loaders) or currently loaded package"
 
-	| wcName vis |
+	| vis |
 	vis := anMCLoader ancestorsFor: self.
 	vis notNil
 		ifTrue: [ 
