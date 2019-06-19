@@ -1,5 +1,3 @@
-# Work on Metacello has moved to: https://github.com/Metacello/metacello
-
 ## INSTALL Preview Version
 
 ### GemStone
