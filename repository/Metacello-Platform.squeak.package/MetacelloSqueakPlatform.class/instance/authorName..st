@@ -1,4 +1,4 @@
 utilities
 authorName: aString
 
-	^Utilities setAuthorInitials: aString
+	^Utilities authorInitials: aString
