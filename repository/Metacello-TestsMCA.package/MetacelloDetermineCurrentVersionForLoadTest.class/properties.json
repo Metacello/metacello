@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "MetacelloDictionaryRepositoryTest",
 	"category" : "Metacello-TestsMCA",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "MetacelloDetermineCurrentVersionForLoadTest",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "MetacelloDictionaryRepositoryTest",
+	"type" : "normal" }

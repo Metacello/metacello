@@ -1,16 +1,15 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"setUp" : "dkh 6/12/2012 15:41:23.319",
 		"assertClass:" : "dkh 6/12/2012 15:41:23.319",
-		"hasPackage:" : "dkh 6/12/2012 15:41:23.319",
-		"baseline:" : "dkh 6/12/2012 15:41:23.319",
-		"tearDown" : "dkh 6/12/2012 15:41:23.319",
-		"testLoad" : "dkh 6/12/2012 15:41:23.319",
-		"enabled" : "dkh 6/12/2012 15:41:23.319",
-		"baselineAuthentication:" : "dkh 6/12/2012 15:41:23.319",
-		"testAuthentication" : "dkh 6/12/2012 15:41:23.319",
 		"assertClass:selector:" : "dkh 6/12/2012 15:41:23.319",
-		"project" : "dkh 6/12/2012 15:41:23.319"
-	},
-	"class" : { }
-}
+		"baseline:" : "dkh 6/12/2012 15:41:23.319",
+		"baselineAuthentication:" : "dkh 6/12/2012 15:41:23.319",
+		"enabled" : "dkh 6/12/2012 15:41:23.319",
+		"hasPackage:" : "dkh 6/12/2012 15:41:23.319",
+		"project" : "dkh 6/12/2012 15:41:23.319",
+		"setUp" : "dkh 6/12/2012 15:41:23.319",
+		"tearDown" : "dkh 6/12/2012 15:41:23.319",
+		"testAuthentication" : "dkh 6/12/2012 15:41:23.319",
+		"testLoad" : "dkh 6/12/2012 15:41:23.319" } }

@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "MetacelloGoferBasedLoaderTest",
 	"category" : "Metacello-TestsMCA",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "MetacelloGoferBasedAtomicLoaderTest",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "MetacelloGoferBasedLoaderTest",
+	"type" : "normal" }
