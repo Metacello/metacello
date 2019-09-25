@@ -34,10 +34,7 @@ projectDirectoryFrom: projectPath version: versionString
 			directory := mcPlatform
 				directoryFromPath: (cachePath := archive members first fileName)
 				relativeTo: theCacheDirectory.
-			false
-				ifTrue: [
-					"temporary patch for https://github.com/Metacello/metacello/issues/504"
-					archive close ].
+			archive close.
 			directory exists
 				ifTrue: [ mcPlatform deleteFileNamed: zipFileName ]
 				ifFalse: [ mcPlatform
