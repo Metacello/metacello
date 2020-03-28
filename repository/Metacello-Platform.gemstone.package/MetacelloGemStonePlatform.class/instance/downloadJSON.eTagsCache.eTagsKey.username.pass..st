@@ -56,14 +56,16 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
                 ifTrue: [ 
                   | jsonObject |
                   "cached info is not valid"
-                  jsonObject := MCFileTreeJsonParser parse: payload.
+                  jsonObject := payload isEmpty
+                    ifTrue: [ Dictionary new ]
+                    ifFalse: [ MCFileTreeJsonParser parse: payload ].
                   eTagInfo
                     at: 'ETag'
                       put: (headerDict at: 'ETag' ifAbsent: [ '1234' ]);
-                    at: 'Last-Modified' put: (headerDict at: 'Last-Modified');
+                    at: 'last-modified' put: (headerDict at: 'last-modified');
                     at: 'jsonObject' put: jsonObject;
                     at: 'X-RateLimit-Remaining'
-                      put: (headerDict at: 'X-RateLimit-Remaining');
+                      put: (headerDict at: 'X-Ratelimit-Remaining');
                     yourself.
                   self deleteFileNamed: errorFileName.
                   ^ jsonObject ].

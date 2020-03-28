@@ -6,7 +6,7 @@ downloadJSONIfModified: url eTagInfo: eTagInfo username: username pass: pass onE
 
   | jsonFileName errorFileName jsonFile eTagsUrl |
   jsonFileName := self tempFileFor: 'tagsIM-' , self processPID suffix: 'json'.
-  eTagsUrl := url , ' -H "If-Modified-Since: ' , (eTagInfo at: 'Last-Modified')
+  eTagsUrl := url , ' -H "If-Modified-Since: ' , (eTagInfo at: 'last-modified')
     , '"'.
   errorFileName := self
     downloadBasicFile: eTagsUrl
@@ -30,7 +30,7 @@ downloadJSONIfModified: url eTagInfo: eTagInfo username: username pass: pass onE
               "Last-Modified date changed"
               jsonObject := MCFileTreeJsonParser parse: payload.
               eTagInfo
-                at: 'Last-Modified' put: (headerDict at: 'Last-Modified');
+                at: 'last-modified' put: (headerDict at: 'last-modified');
                 at: 'jsonObject' put: jsonObject;
                 at: 'X-RateLimit-Remaining'
                   put: (headerDict at: 'X-RateLimit-Remaining');
