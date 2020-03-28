@@ -23,7 +23,7 @@ downloadJSONIfModified: url eTagInfo: eTagInfo username: username pass: pass onE
         extractHTTPHeader: (ReadStream on: fileStream contents)
         do: [ :headerDict :payload | 
           | status |
-          status := headerDict at: 'Status'.
+          status := headerDict at: 'status'.
           (status beginsWith: '200')
             ifTrue: [ 
               | jsonObject |

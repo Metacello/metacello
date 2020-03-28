@@ -51,7 +51,7 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
             extractHTTPHeader: (ReadStream on: fileStream contents)
             do: [ :headerDict :payload | 
               | status |
-              status := headerDict at: 'Status'.
+              status := headerDict at: 'status'.
               (status beginsWith: '200')
                 ifTrue: [ 
                   | jsonObject |
