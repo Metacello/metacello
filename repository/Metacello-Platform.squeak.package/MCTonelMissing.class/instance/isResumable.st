@@ -1,4 +1,4 @@
-as yet unclassified
+priv handling
 isResumable
 
 	^ true

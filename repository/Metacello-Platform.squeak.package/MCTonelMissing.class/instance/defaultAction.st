@@ -1,4 +1,4 @@
-as yet unclassified
+priv handling
 defaultAction
 
 	(UIManager default confirm: 'Tonel support is missing. Install from github://j4yk/tonel:squeak?')

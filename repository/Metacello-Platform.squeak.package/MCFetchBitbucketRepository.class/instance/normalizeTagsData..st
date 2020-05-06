@@ -1,4 +1,4 @@
-as yet unclassified
+private
 normalizeTagsData: jsonObject
   "return a dictionay mapping the tag name to the commit SHA"
 
