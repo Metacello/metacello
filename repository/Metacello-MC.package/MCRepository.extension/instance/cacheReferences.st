@@ -1,0 +1,3 @@
+*metacello-mc
+cacheReferences
+	^ true

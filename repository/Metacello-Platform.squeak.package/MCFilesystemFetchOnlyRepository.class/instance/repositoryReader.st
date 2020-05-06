@@ -1,7 +1,7 @@
 private
 repositoryReader
 	^ repositoryReader ifNil: [
-		self isTonelRepo
+		repositoryReader := self isTonelRepo
 			ifTrue: [
 				Smalltalk
 					at: #TonelRepository

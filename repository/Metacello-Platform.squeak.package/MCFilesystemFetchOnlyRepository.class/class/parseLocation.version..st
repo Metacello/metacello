@@ -36,4 +36,4 @@ parseLocation: locationUrl version: versionString
   ^ self new
     projectPath: projectPath
     projectVersion: projectVersion
-    repoPath: (repoPath ifNil: ['repository'])
+    repoPath: repoPath
