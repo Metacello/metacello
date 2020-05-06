@@ -1,0 +1,21 @@
+{
+	"category" : "Metacello-Platform",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"RepoCacheDirectory",
+		"RepoDownloadCache" ],
+	"commentStamp" : "tobe 5/6/2020 10:02",
+	"instvars" : [
+		"repoPath",
+		"projectVersion",
+		"projectPath",
+		"projectVersionPattern",
+		"repositoryReader",
+		"readonly",
+		"directory" ],
+	"name" : "MCFilesystemFetchOnlyRepository",
+	"pools" : [
+		 ],
+	"super" : "MCRepository",
+	"type" : "normal" }
