@@ -1,3 +1,3 @@
 testing
 isValid
-    ^ true
+    ^ self repositoryReader isValid

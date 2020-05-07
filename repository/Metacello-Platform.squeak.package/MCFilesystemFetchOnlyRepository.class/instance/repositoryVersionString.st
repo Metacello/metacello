@@ -1,4 +1,4 @@
-private
+accessing
 repositoryVersionString
   "for git-based network repos, answer the SHA associated with the download: a commit SHA or tag SHA"
 
