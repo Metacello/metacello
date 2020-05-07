@@ -4,14 +4,14 @@ sudo: false
 os: linux
 
 smalltalk:
-  - GemStone-3.5.0
+  - GemStone-3.5.1
   - Pharo-5.0
   - Squeak-5.1
   - GemStone-2.4.8
   - GemStone-3.1.0.6
   - GemStone-3.2.17
   - GemStone-3.3.9
-  - GemStone-3.4.3
+  - GemStone-3.4.5
   - Pharo-3.0
   - Pharo-4.0
   - Pharo-6.0
@@ -39,3 +39,6 @@ matrix:
 cache:
   directories:
     - $SMALLTALK_CI_CACHE
+
+notifications:
+  slack: gemtalksystems:ENb7sBznQr32ZxlOCAdFfZdm
