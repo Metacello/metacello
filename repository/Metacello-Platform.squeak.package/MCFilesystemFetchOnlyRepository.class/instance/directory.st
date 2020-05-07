@@ -15,4 +15,6 @@ directory
         ifFalse: [ 
           self flushCache.
           ^ self directory ] ].
+  
+  repositoryReader ifNotNil: [repositoryReader directory: directory].
   ^ directory

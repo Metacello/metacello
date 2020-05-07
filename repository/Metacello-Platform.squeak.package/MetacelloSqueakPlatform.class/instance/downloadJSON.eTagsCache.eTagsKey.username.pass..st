@@ -5,7 +5,7 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
   "To minimize GitHub rate limiting problems, we are caching the ETags for the tag request: https://developer.github.com/v3/#conditional-requests"
 
   | info response |
-  eTagsCache ifNil: [^ self self downloadJSON: url username: username pass: pass].
+  eTagsCache ifNil: [^ self downloadJSON: url username: username pass: pass].
   Transcript cr.
   info := eTagsCache at: eTagsKey ifAbsentPut: [Dictionary new].
   response := self httpGet: url username: username pass: pass do: [:req |

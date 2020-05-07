@@ -1,7 +1,8 @@
 {
 	"category" : "Metacello-Platform",
 	"classinstvars" : [
-		 ],
+		"siteUsername",
+		"sitePassword" ],
 	"classvars" : [
 		"RepoCacheDirectory",
 		"RepoDownloadCache" ],

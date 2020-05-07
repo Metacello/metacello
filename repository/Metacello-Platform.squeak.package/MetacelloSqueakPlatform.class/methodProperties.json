@@ -1,6 +1,6 @@
 {
 	"class" : {
-		"cleanUp:" : "topa 9/21/2017 11:50",
+		"cleanUp:" : "tobe 5/7/2020 09:29",
 		"initialize" : "dkh 6/12/2012 10:18:46.076" },
 	"instance" : {
 		"authorName" : "dkh 6/12/2012 10:18:46.076",
@@ -13,7 +13,7 @@
 		"defaultPlatformAttributes" : "topa 11/8/2017 01:17",
 		"directoryFromPath:relativeTo:" : "tfel 7/29/2014 14:39",
 		"do:displaying:" : "dkh 6/12/2012 10:18:46.076",
-		"downloadJSON:eTagsCache:eTagsKey:username:pass:" : "topa 9/21/2017 14:03",
+		"downloadJSON:eTagsCache:eTagsKey:username:pass:" : "tobe 5/7/2020 10:10",
 		"downloadJSON:username:pass:" : "topa 9/21/2017 14:04",
 		"downloadProgressFor:" : "topa 1/17/2018 13:20",
 		"downloadZipArchive:to:" : "topa 1/17/2018 12:27",

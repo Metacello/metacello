@@ -1,6 +1,9 @@
 {
 	"class" : {
 		"basicDescription" : "tobe 5/3/2020 20:56",
+		"eTagsCache" : "tobe 5/7/2020 09:27",
+		"flushETagsCache" : "tobe 5/7/2020 09:27",
+		"projectTagsUrlFor:" : "tobe 5/7/2020 09:24",
 		"projectZipUrlFor:versionString:" : "tobe 5/3/2020 21:18" },
 	"instance" : {
 		"normalizeTagsData:" : "tobe 5/3/2020 20:55" } }

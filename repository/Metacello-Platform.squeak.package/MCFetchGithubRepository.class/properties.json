@@ -3,7 +3,7 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		 ],
+		"ETagsCache" ],
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
