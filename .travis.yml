@@ -16,9 +16,10 @@ smalltalk:
   - Pharo-4.0
   - Pharo-6.0
   - Pharo-6.1
-  - Squeak-4.5
-  - Squeak-4.6
   - Squeak-5.0
+  - Squeak-5.1
+  - Squeak-5.2
+  - Squeak-5.3
   - Squeak-trunk
 
 smalltalk_config:
