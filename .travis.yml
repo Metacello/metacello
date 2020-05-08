@@ -28,11 +28,10 @@ smalltalk_config:
 
 matrix:
   allow_failures:
-    - smalltalk: Squeak-4.4
-    - smalltalk: Squeak-4.5
-    - smalltalk: Squeak-4.6
     - smalltalk: Squeak-5.0
     - smalltalk: Squeak-5.1
+    - smalltalk: Squeak-5.2
+    - smalltalk: Squeak-5.3
     - smalltalk: Squeak-trunk
     - smalltalk: GemStone-2.4.8
     - smalltalk: Pharo-6.1
