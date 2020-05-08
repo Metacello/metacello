@@ -16,8 +16,8 @@ testIssue234a
     list) first.
   self
     assert:
-      projectSpec registration currentVersionString
-        equals: MetacelloScriptingResource externalCustomIssue234ShortSHA.
+      (projectSpec registration currentVersionString
+        beginsWith: MetacelloScriptingResource externalCustomIssue234ShortSHA).
   self assert: projectSpec registration locked ]
     on: Error
     do: [ :ex | 
