@@ -14,4 +14,5 @@ flushCache
             'Error for: ' , self description printString , ' during flushCache: '
                 , ex description printString ].
   self class flushDownloadCache.
+  repositoryReader := nil.
   directory := nil
