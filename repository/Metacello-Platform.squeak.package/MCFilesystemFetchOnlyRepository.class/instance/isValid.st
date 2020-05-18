@@ -1,3 +1,3 @@
 testing
 isValid
-    ^ self repositoryReader isValid
+    ^ repositoryReader ifNotNil: [self repositoryReader isValid] ifNil: [false]
