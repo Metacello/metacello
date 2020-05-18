@@ -30,7 +30,8 @@ matrix:
     - smalltalk: Pharo-6.1
 
 # on squeak, we do not want to cache images
-before_cache: [[ "${TRAVIS_SMALLTALK_VERSION}" != "Squeak"* ]] || rm -rf "${SMALLTALK_CI_CACHE}"/*
+before_cache: >
+  [[ "${TRAVIS_SMALLTALK_VERSION}" != "Squeak"* ]] || rm -rf "${SMALLTALK_CI_CACHE}"/*
 
 cache:
   directories:
