@@ -1,5 +1,9 @@
 private
 repositoryReader
+	
+	" try accessing the directory once to make sure it exists "
+	self directory.
+	
 	^ repositoryReader ifNil: [
 		repositoryReader := self isTonelRepo
 			ifTrue: [
