@@ -265,6 +265,7 @@ baseline: spec
     do: [ 
 		self filetree: spec.
 		self gofer: spec. 
+      spec baseline: 'Ston' with: [ spec repository: 'github://squeak-smalltalk/squeak-ston:squeak/repository'].
       spec
         baseline: 'FileTree'
           with: [ spec repository: 'github://dalehenrich/filetree:squeak4.3/repository' ];
@@ -275,7 +276,8 @@ baseline: spec
         package: 'Metacello-TestsMC'
           with: [ spec requires: #('Gofer Tests') ];
         package: 'Metacello-Platform'
-          with: [ spec file: 'Metacello-Platform.squeak' ];
+          with: [
+            spec file: 'Metacello-Platform.squeak'; requires: #('Ston') ];
         yourself ].
   spec
     for: #( #'squeak4.1.x' #'squeak4.2.x' #'squeak4.3.x' #'squeak4.4.x' #'squeak4.5.x' )

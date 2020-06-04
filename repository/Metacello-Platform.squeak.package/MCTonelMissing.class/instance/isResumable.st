@@ -1,0 +1,4 @@
+priv handling
+isResumable
+
+	^ true

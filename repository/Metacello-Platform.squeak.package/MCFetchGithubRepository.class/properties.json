@@ -1,0 +1,14 @@
+{
+	"category" : "Metacello-Platform",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"ETagsCache" ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MCFetchGithubRepository",
+	"pools" : [
+		 ],
+	"super" : "MCFilesystemFetchOnlyRepository",
+	"type" : "normal" }

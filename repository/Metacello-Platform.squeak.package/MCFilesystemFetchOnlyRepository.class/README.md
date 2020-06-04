@@ -1,0 +1,3 @@
+A MCDownloadRepository is an abstract class that supports loading repositories from a remote location. Subclasses can specify concrete locations and ways to retrieve repositories. Deserialization is handled as a separate step by finding a `self repositoryReader` that knows how to deserialize the downloaded files.
+
+Note that this class is essentially a copy of MCGitBasedNetworkRepository with the intent to decouple transport from deserialization.

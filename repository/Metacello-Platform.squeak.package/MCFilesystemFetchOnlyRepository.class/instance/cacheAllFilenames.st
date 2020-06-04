@@ -1,0 +1,3 @@
+private
+cacheAllFilenames
+	self repositoryReader cacheAllFilenames

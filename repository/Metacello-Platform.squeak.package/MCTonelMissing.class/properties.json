@@ -1,0 +1,14 @@
+{
+	"category" : "Metacello-Platform",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MCTonelMissing",
+	"pools" : [
+		 ],
+	"super" : "Notification",
+	"type" : "normal" }
