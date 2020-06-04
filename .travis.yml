@@ -4,10 +4,6 @@ sudo: false
 os: linux
 
 smalltalk:
-  - Squeak64-5.1
-  - Squeak64-5.2
-  - Squeak64-5.3
-  - Squeak64-trunk
   - GemStone-3.5.0
   - Pharo-5.0
   - GemStone-2.4.8
@@ -19,6 +15,10 @@ smalltalk:
   - Pharo-4.0
   - Pharo-6.0
   - Pharo-6.1
+  - Squeak64-5.1
+  - Squeak64-5.2
+  - Squeak64-5.3
+  - Squeak64-trunk
 
 smalltalk_config:
   - .smalltalkA.ston
@@ -29,10 +29,6 @@ matrix:
     - smalltalk: GemStone-2.4.8
     - smalltalk: Pharo-6.1
 
-# on squeak, we do not want to cache images
-#before_cache: >
-#  [[ "${TRAVIS_SMALLTALK_VERSION}" != "Squeak"* ]] || rm -rf "${SMALLTALK_CI_CACHE}"/*
-#
-#cache:
-#  directories:
-#    - $SMALLTALK_CI_CACHE
+cache:
+  directories:
+    - $SMALLTALK_CI_CACHE
