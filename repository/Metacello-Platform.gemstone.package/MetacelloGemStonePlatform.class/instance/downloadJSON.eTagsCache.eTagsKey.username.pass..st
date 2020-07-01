@@ -49,7 +49,7 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
       Transcript
         cr;
         show:
-            'MetacelloGemStonePlatform>>downloadJSONIfModified:eTagInfo:username:pass:onError: [1] -----> '
+            'MetacelloGemStonePlatform>>downloadJSONIfModified:eTagInfo:username:pass: [1] -----> '
                 , payload.
       eTagsCache
         ifNil: [ ^ MCFileTreeJsonParser parse: payload ]
@@ -61,7 +61,7 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
               Transcript
                 cr;
                 show:
-                    'MetacelloGemStonePlatform>>downloadJSONIfModified:eTagInfo:username:pass:onError: [2] -----> '
+                    'MetacelloGemStonePlatform>>downloadJSONIfModified:eTagInfo:username:pass: [2] -----> '
                         , payload.
               status := headerDict at: 'status' ifAbsent: [ '403'	"?" ].
               (status beginsWith: '200')
@@ -87,6 +87,9 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
                   eTagInfo
                     at: 'X-Ratelimit-Remaining'
                     put: (headerDict at: 'X-Ratelimit-Remaining').
+                  eTagInfo
+                    at: 'last-modified'
+                    put: (headerDict at: 'last-modified').
                   self deleteFileNamed: errorFileName.
                   ^ self
                     downloadJSONIfModified: url
