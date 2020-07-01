@@ -9,7 +9,7 @@ testIssue332ParsingHeader4
     extractHTTPHeader: stream
     do: [ :headerDict :payload | 
       | tagNames |
-      self assert: (headerDict at: 'Status') = '200 OK'.
+      self assert: (headerDict at: 'status') = '200 OK'.
       self
         assert: (headerDict at: 'ETag') = '"d1531b98e97e99e1ae6cc503149ae9f4"'.
       self

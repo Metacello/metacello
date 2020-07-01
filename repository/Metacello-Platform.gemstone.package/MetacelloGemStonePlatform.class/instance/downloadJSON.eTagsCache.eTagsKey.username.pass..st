@@ -51,7 +51,7 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
             extractHTTPHeader: (ReadStream on: fileStream contents)
             do: [ :headerDict :payload | 
               | status |
-              status := headerDict at: 'status'.
+              status := headerDict at: 'status' ifAbsent: [ '403'	"?" ].
               (status beginsWith: '200')
                 ifTrue: [ 
                   | jsonObject |
@@ -64,7 +64,7 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
                       put: (headerDict at: 'ETag' ifAbsent: [ '1234' ]);
                     at: 'last-modified' put: (headerDict at: 'last-modified');
                     at: 'jsonObject' put: jsonObject;
-                    at: 'X-RateLimit-Remaining'
+                    at: 'X-Ratelimit-Remaining'
                       put: (headerDict at: 'X-Ratelimit-Remaining');
                     yourself.
                   self deleteFileNamed: errorFileName.
@@ -73,8 +73,8 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
                 ifTrue: [ 
                   "eTagCache hit ... need to know if data still valid"
                   eTagInfo
-                    at: 'X-RateLimit-Remaining'
-                    put: (headerDict at: 'X-RateLimit-Remaining').
+                    at: 'X-Ratelimit-Remaining'
+                    put: (headerDict at: 'X-Ratelimit-Remaining').
                   self deleteFileNamed: errorFileName.
                   ^ self
                     downloadJSONIfModified: url

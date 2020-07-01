@@ -32,8 +32,8 @@ downloadJSONIfModified: url eTagInfo: eTagInfo username: username pass: pass onE
               eTagInfo
                 at: 'last-modified' put: (headerDict at: 'last-modified');
                 at: 'jsonObject' put: jsonObject;
-                at: 'X-RateLimit-Remaining'
-                  put: (headerDict at: 'X-RateLimit-Remaining');
+                at: 'X-Ratelimit-Remaining'
+                  put: (headerDict at: 'X-Ratelimit-Remaining');
                 yourself.
               self deleteFileNamed: errorFileName.
               ^ jsonObject ].
@@ -41,8 +41,8 @@ downloadJSONIfModified: url eTagInfo: eTagInfo username: username pass: pass onE
             ifTrue: [ 
               "eTagCache hit ... need to know if data still valid"
               eTagInfo
-                at: 'X-RateLimit-Remaining'
-                put: (headerDict at: 'X-RateLimit-Remaining').
+                at: 'X-Ratelimit-Remaining'
+                put: (headerDict at: 'X-Ratelimit-Remaining').
               self deleteFileNamed: errorFileName.
               ^ eTagInfo at: 'jsonObject' ].
           (status beginsWith: '403')

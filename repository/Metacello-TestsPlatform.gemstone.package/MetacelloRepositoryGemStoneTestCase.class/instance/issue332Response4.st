@@ -7,10 +7,10 @@ Server: GitHub.com
 Date: Wed, 18 Mar 2015 13:16:14 GMT
 Content-Type: application/json; charset=utf-8
 Content-Length: 2936
-Status: 200 OK
-X-RateLimit-Limit: 60
-X-RateLimit-Remaining: 59
-X-RateLimit-Reset: 1426688174
+status: 200 OK
+X-Ratelimit-Limit: 60
+X-Ratelimit-Remaining: 59
+X-Ratelimit-Reset: 1426688174
 Cache-Control: public, max-age=60, s-maxage=60
 Last-Modified: Sat, 14 Feb 2015 21:49:04 GMT
 ETag: "d1531b98e97e99e1ae6cc503149ae9f4"
@@ -20,7 +20,7 @@ X-XSS-Protection: 1; mode=block
 X-Frame-Options: deny
 Content-Security-Policy: default-src ''none''
 Access-Control-Allow-Credentials: true
-Access-Control-Expose-Headers: ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+Access-Control-Expose-Headers: ETag, Link, X-GitHub-OTP, X-Ratelimit-Limit, X-Ratelimit-Remaining, X-Ratelimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
 Access-Control-Allow-Origin: *
 X-GitHub-Request-Id: 3235F557:51F5:E069522:55097A9E
 Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
