@@ -13,6 +13,9 @@ bea35be90ab1ba0be80af4f4275fccbfc071a74f - v2.2.0-gs
 6ae699635ab41ab55219aea0595de208f4e44d27 - v3.0.0-gs
 "
 
+  Transcript
+    cr;
+    show: 'Start testGitHubTagPatternLoad3'.
   [ 
   Metacello new
     baseline: 'External';
@@ -33,4 +36,7 @@ bea35be90ab1ba0be80af4f4275fccbfc071a74f - v2.2.0-gs
         includesSubstring: 'API rate limit exceeded')
         ifFalse: [ 
           "don't fail test because github rate limit exceeded"
-          ex pass ] ]
+          ex pass ] ].
+  Transcript
+    cr;
+    show: 'End testGitHubTagPatternLoad3'
