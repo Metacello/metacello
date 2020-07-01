@@ -28,6 +28,11 @@ downloadJSONIfModified: url eTagInfo: eTagInfo username: username pass: pass onE
             ifTrue: [ 
               | jsonObject |
               "Last-Modified date changed"
+              Transcript
+                cr;
+                show:
+                    'TDMethodDefinition(MetacelloGemStonePlatform>>downloadJSONIfModified:eTagInfo:username:pass:onError: DEBUG: '
+                        , payload printString.
               jsonObject := MCFileTreeJsonParser parse: payload.
               eTagInfo
                 at: 'last-modified' put: (headerDict at: 'last-modified');
