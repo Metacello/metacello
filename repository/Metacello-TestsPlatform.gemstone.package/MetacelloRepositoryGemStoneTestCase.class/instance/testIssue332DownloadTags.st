@@ -9,6 +9,9 @@ testIssue332DownloadTags
 
   "https://github.com/Metacello/metacello/issues/510"
 
+  Transcript
+    cr;
+    show: 'Start testIssue332DownloadTags'.
   [ 
   | repo tags cache expectedTags rateLimitRemaining x |
   cache := MCGitHubRepository eTagsCache.
@@ -40,4 +43,7 @@ testIssue332DownloadTags
         includesSubstring: 'API rate limit exceeded')
         ifFalse: [ 
           "don't fail test because github rate limit exceeded"
-          ex pass ] ]
+          ex pass ] ].
+  Transcript
+    cr;
+    show: 'End testIssue332DownloadTags'

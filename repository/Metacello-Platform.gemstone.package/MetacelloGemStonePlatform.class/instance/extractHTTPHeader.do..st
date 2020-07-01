@@ -10,6 +10,9 @@ extractHTTPHeader: aStream do: aBlock
   [ aStream atEnd ]
     whileFalse: [ 
       line := aStream nextLine.
+      Transcript
+        cr;
+        show: '---> ' , line.
       parsingHeader
         ifTrue: [ 
           line isEmpty
