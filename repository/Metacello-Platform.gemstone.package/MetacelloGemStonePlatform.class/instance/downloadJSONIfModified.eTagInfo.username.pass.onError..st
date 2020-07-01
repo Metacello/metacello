@@ -29,7 +29,7 @@ downloadJSONIfModified: url eTagInfo: eTagInfo username: username pass: pass onE
             show:
                 'MetacelloGemStonePlatform>>downloadJSONIfModified:eTagInfo:username:pass:onError: -----> '
                     , payload printString.
-          status := headerDict at: 'status'.
+          status := headerDict at: 'status' ifAbsent: [ '403' ].
           (status beginsWith: '200')
             ifTrue: [ 
               | jsonObject |

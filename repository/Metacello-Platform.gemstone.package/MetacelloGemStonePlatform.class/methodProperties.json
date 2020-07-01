@@ -18,7 +18,7 @@
 		"downloadBasicFile:to:username:pass:" : "dkh 03/18/2015 05:21",
 		"downloadJSON:eTagsCache:eTagsKey:username:pass:" : "dkh 07/01/2020 14:06",
 		"downloadJSON:username:pass:" : "dkh 03/18/2015 06:44",
-		"downloadJSONIfModified:eTagInfo:username:pass:onError:" : "dkh 07/01/2020 14:08",
+		"downloadJSONIfModified:eTagInfo:username:pass:onError:" : "dkh 07/01/2020 15:02",
 		"downloadZipArchive:to:" : "dkh 10/14/2014 10:51",
 		"extractAtrributesFrom:" : "dkh 10/10/2016 14:56",
 		"extractHTTPHeader:do:" : "dkh 03/18/2015 06:05",
