@@ -23,16 +23,16 @@ downloadJSONIfModified: url eTagInfo: eTagInfo username: username pass: pass onE
         extractHTTPHeader: (ReadStream on: fileStream contents)
         do: [ :headerDict :payload | 
           | status |
+          "Last-Modified date changed"
+          Transcript
+            cr;
+            show:
+                'MetacelloGemStonePlatform>>downloadJSONIfModified:eTagInfo:username:pass:onError: -----> '
+                    , payload printString.
           status := headerDict at: 'status'.
           (status beginsWith: '200')
             ifTrue: [ 
               | jsonObject |
-              "Last-Modified date changed"
-              Transcript
-                cr;
-                show:
-                    'TDMethodDefinition(MetacelloGemStonePlatform>>downloadJSONIfModified:eTagInfo:username:pass:onError: DEBUG: '
-                        , payload printString.
               jsonObject := MCFileTreeJsonParser parse: payload.
               eTagInfo
                 at: 'last-modified' put: (headerDict at: 'last-modified');

@@ -44,13 +44,25 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
     readOnlyFileNamed: jsonFile localName
     do: [ :fileStream | 
       [ 
+      | payload |
+      payload := fileStream contents.
+      Transcript
+        cr;
+        show:
+            'MetacelloGemStonePlatform>>downloadJSONIfModified:eTagInfo:username:pass:onError: [1] -----> '
+                , payload.
       eTagsCache
-        ifNil: [ ^ MCFileTreeJsonParser parse: fileStream contents ]
+        ifNil: [ ^ MCFileTreeJsonParser parse: payload ]
         ifNotNil: [ 
           self
-            extractHTTPHeader: (ReadStream on: fileStream contents)
+            extractHTTPHeader: (ReadStreamPortable on: payload)
             do: [ :headerDict :payload | 
               | status |
+              Transcript
+                cr;
+                show:
+                    'MetacelloGemStonePlatform>>downloadJSONIfModified:eTagInfo:username:pass:onError: [2] -----> '
+                        , payload.
               status := headerDict at: 'status' ifAbsent: [ '403'	"?" ].
               (status beginsWith: '200')
                 ifTrue: [ 
