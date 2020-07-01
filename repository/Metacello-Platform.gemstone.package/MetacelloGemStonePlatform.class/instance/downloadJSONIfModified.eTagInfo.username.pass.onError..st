@@ -33,7 +33,9 @@ downloadJSONIfModified: url eTagInfo: eTagInfo username: username pass: pass onE
           (status beginsWith: '200')
             ifTrue: [ 
               | jsonObject |
-              jsonObject := MCFileTreeJsonParser parse: payload.
+              jsonObject := payload isEmpty
+                ifTrue: [ Dictionary new ]
+                ifFalse: [ MCFileTreeJsonParser parse: payload ].
               eTagInfo
                 at: 'last-modified' put: (headerDict at: 'last-modified');
                 at: 'jsonObject' put: jsonObject;
