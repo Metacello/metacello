@@ -3,10 +3,16 @@ extractHTTPHeader: aStream do: aBlock
   "read up to double newline"
 
   | line header payload parsingHeader |
+  Transcript
+    cr;
+    show: 'start extractHTTPHeader:do:'.
   header := Dictionary new.
   payload := WriteStream on: String new.
   parsingHeader := true.
   line := aStream nextLine.	"strip status"
+  Transcript
+    cr;
+    show: 'status?? ---> ' , line.
   [ aStream atEnd ]
     whileFalse: [ 
       line := aStream nextLine.
@@ -16,7 +22,11 @@ extractHTTPHeader: aStream do: aBlock
       parsingHeader
         ifTrue: [ 
           line isEmpty
-            ifTrue: [ parsingHeader := false ]
+            ifTrue: [ 
+              parsingHeader := false.
+              Transcript
+                cr;
+                show: '======> start parsing payload' ]
             ifFalse: [ 
               | colonIndex key value |
               colonIndex := line indexOf: $:.
@@ -27,4 +37,7 @@ extractHTTPHeader: aStream do: aBlock
           payload
             nextPutAll: line;
             cr ] ].
+  Transcript
+    cr;
+    show: 'end extractHTTPHeader:do:'.
   aBlock value: header value: payload contents
