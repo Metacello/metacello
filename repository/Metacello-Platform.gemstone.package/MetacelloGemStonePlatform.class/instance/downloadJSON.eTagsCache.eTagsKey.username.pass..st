@@ -63,7 +63,7 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
                 show:
                     'MetacelloGemStonePlatform>>downloadJSONIfModified:eTagInfo:username:pass: [2] -----> '
                         , payload.
-              status := headerDict at: 'status' ifAbsent: [ '403'	"?" ].
+              status := headerDict at: 'status'.
               (status beginsWith: '200')
                 ifTrue: [ 
                   | jsonObject |
