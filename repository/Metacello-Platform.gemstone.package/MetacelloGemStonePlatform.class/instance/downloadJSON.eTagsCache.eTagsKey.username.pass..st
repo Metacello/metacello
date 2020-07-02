@@ -60,7 +60,7 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
                     ifTrue: [ Dictionary new ]
                     ifFalse: [ MCFileTreeJsonParser parse: payload ].
                   eTagInfo
-                    at: 'ETag' put: tag;
+                    at: 'ETag' put: (headerDict at: 'etag');
                     at: 'last-modified' put: (headerDict at: 'last-modified');
                     at: 'jsonObject' put: jsonObject;
                     at: 'X-Ratelimit-Remaining'
