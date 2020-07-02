@@ -60,6 +60,8 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
                     yourself.
                   self deleteFileNamed: errorFileName.
                   ^ jsonObject ].
+              (status beginsWith: '304')
+                ifTrue: [ ^ etagInfo at: 'jsonObject' ].
               (status beginsWith: '403')
                 ifTrue: [ 
                   | jsonObject |

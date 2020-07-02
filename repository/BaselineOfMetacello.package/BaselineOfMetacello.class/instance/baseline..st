@@ -347,5 +347,8 @@ baseline: spec
         package: 'Metacello-Platform'
           with: [ spec includes: #('Metacello-GS3x-Platform' 'Metacello-Platform3x') ];
         package: 'Metacello-Platform3x'
-          with: [ spec requires: 'Metacello-Platform' ];
+          with: [ 
+              spec
+                requires: 'Metacello-Platform';
+                postLoadDoIt: #'gemstoneMetacelloGemStonePlatform3xInit' ];
         yourself ]
