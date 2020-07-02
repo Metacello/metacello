@@ -47,6 +47,7 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
                   | jsonObject |
                   "cached info is not valid"
                   jsonObject := MCFileTreeJsonParser parse: payload.
+                  tag := headerDict at: 'etag'.
                   (tag beginsWith: 'W/')
                     ifTrue: [ tag := tag copyFrom: 3 to: tag size ]
                     ifFalse: [ tag := tag copyFrom: 1 to: tag size ].
