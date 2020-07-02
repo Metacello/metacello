@@ -4,21 +4,9 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
 
   "To minimize GitHub rate limiting problems, we are caching the ETags for the tag request: https://developer.github.com/v3/#conditional-requests"
 
-  | jsonFileName errorFileName jsonFile eTagsUrl eTagInfo errorBlock |
+  | jsonFileName errorFileName jsonFile eTagsUrl errorBlock |
   jsonFileName := self tempFileFor: 'tags-' , self processPID suffix: '.json'.
   eTagsUrl := url.
-  eTagsCache
-    ifNotNil: [ 
-      eTagsCache
-        at: eTagsKey
-        ifPresent: [ :info | 
-          | etag |
-          etag := info at: 'ETag' ifAbsent: [ '1234' ].
-          eTagsUrl := eTagsUrl , ' -H ''If-None-Match: ' , etag , ''''.
-          eTagInfo := info ]
-        ifAbsent: [ 
-          eTagInfo := Dictionary new.
-          eTagsCache at: eTagsKey put: eTagInfo ] ].
   errorFileName := self
     downloadBasicFile: eTagsUrl
     to: jsonFileName
@@ -56,36 +44,9 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
                 ifTrue: [ 
                   | jsonObject |
                   "cached info is not valid"
-                  jsonObject := payload isEmpty
-                    ifTrue: [ Dictionary new ]
-                    ifFalse: [ MCFileTreeJsonParser parse: payload ].
-                  eTagInfo
-                    at: 'ETag' put: (headerDict at: 'etag');
-                    at: 'last-modified' put: (headerDict at: 'last-modified');
-                    at: 'jsonObject' put: jsonObject;
-                    at: 'X-Ratelimit-Remaining'
-                      put: (headerDict at: 'ETag' ifAbsent: [ '1234' ]);
-                    yourself.
+                  jsonObject := MCFileTreeJsonParser parse: payload.
                   self deleteFileNamed: errorFileName.
                   ^ jsonObject ].
-              (status beginsWith: '304')
-                ifTrue: [ 
-                  "eTagCache hit ... need to know if data still valid"
-                  eTagInfo
-                    at: 'X-Ratelimit-Remaining'
-                    put: (headerDict at: 'X-Ratelimit-Remaining').
-                  (eTagInfo at: 'last-modified')
-                    = (headerDict at: 'last-modified')
-                    ifTrue: [ ^ eTagInfo at: 'jsonObject' ]
-                    ifFalse: [ 
-                      eTagInfo at: 'last-modified' put: (headerDict at: 'last-modified').
-                      self deleteFileNamed: errorFileName.
-                      ^ self
-                        downloadJSONIfModified: url
-                        eTagInfo: eTagInfo
-                        username: username
-                        pass: pass
-                        onError: errorBlock ] ].
               (status beginsWith: '403')
                 ifTrue: [ 
                   | jsonObject |
