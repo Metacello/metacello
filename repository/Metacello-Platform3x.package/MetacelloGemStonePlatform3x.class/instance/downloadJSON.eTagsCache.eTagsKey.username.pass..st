@@ -4,9 +4,12 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
 
   "To minimize GitHub rate limiting problems, we are caching the ETags for the tag request: https://developer.github.com/v3/#conditional-requests"
 
-  | client header responseCode etagInfo jsonObject clientVerificationEnabled |
-  clientVerificationEnabled := GsSecureSocket
-    certificateVerificationEnabledOnClient.
+  | client header responseCode etagInfo jsonObject clientVerificationEnabled certificateVerificationEnabledOnClientMethodPresent |
+  certificateVerificationEnabledOnClientMethodPresent := GsSecureSocket
+    respondsTo: #'certificateVerificationEnabledOnClient'.
+  clientVerificationEnabled := certificateVerificationEnabledOnClientMethodPresent
+    ifTrue: [ GsSecureSocket certificateVerificationEnabledOnClient ]
+    ifFalse: [ true ].
   [ 
   clientVerificationEnabled
     ifTrue: [ GsSecureSocket disableCertificateVerificationOnClient ].
@@ -59,5 +62,6 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
       'Unexpected responseCode ' , responseCode printString , ' for '
         , url printString ]
     ensure: [ 
-      clientVerificationEnabled
+      (certificateVerificationEnabledOnClientMethodPresent
+        and: [ clientVerificationEnabled ])
         ifTrue: [ GsSecureSocket enableCertificateVerificationOnClient ] ]

@@ -9,11 +9,6 @@ testIssue332DownloadTags
 
   "https://github.com/Metacello/metacello/issues/510"
 
-  Transcript
-    cr;
-    show:
-        'testIssue332DownloadTags --- MetacelloPlatform current is '
-            , MetacelloPlatform current name printString.
   [ 
   | repo tags cache expectedTags rateLimitRemaining x |
   cache := MCGitHubRepository eTagsCache.
