@@ -67,10 +67,15 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
                 cr;
                 show: 'eTagCache'.
               eTagsCache
-                keysAndValuesDo: [ :eKey :eValue | 
+                keysAndValuesDo: [ :eKey :eCache | 
                   Transcript
                     cr;
-                    show: eKey , ' --> ' , eValue ].
+                    show: eKey , '--->'.
+                  eCache
+                    keysAndValuesDo: [ :cacheKey :cacheValue | 
+                      Transcript
+                        cr;
+                        show: cacheKey , ' -> ' , cacheValue ] ].
               status := headerDict at: 'status'.
               (status beginsWith: '200')
                 ifTrue: [ 
