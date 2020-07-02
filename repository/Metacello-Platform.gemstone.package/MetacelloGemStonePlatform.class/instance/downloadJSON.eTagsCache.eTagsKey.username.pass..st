@@ -53,7 +53,7 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
                     ifFalse: [ tag := tag copyFrom: 1 to: tag size ].
                   etagInfo
                     at: 'ETag' put: tag;
-                    at: 'last-modified' put: (headerDict at: 'Last-Modified');
+                    at: 'last-modified' put: (headerDict at: 'last-modified');
                     at: 'jsonObject' put: jsonObject;
                     at: 'X-Ratelimit-Remaining'
                       put: (headerDict at: 'X-Ratelimit-Remaining');
