@@ -4,9 +4,11 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
 
   "To minimize GitHub rate limiting problems, we are caching the ETags for the tag request: https://developer.github.com/v3/#conditional-requests"
 
-  | jsonFileName errorFileName jsonFile eTagsUrl errorBlock |
+  | jsonFileName errorFileName jsonFile eTagsUrl errorBlock etagInfo |
   jsonFileName := self tempFileFor: 'tags-' , self processPID suffix: '.json'.
   eTagsUrl := url.
+  etagInfo := Dictionary new.
+  eTagsCache at: eTagsKey put: etagInfo.
   errorFileName := self
     downloadBasicFile: eTagsUrl
     to: jsonFileName
@@ -38,13 +40,23 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
           self
             extractHTTPHeader: (ReadStreamPortable on: fileStream contents)
             do: [ :headerDict :payload | 
-              | status |
+              | status tag |
               status := headerDict at: 'status'.
               (status beginsWith: '200')
                 ifTrue: [ 
                   | jsonObject |
                   "cached info is not valid"
                   jsonObject := MCFileTreeJsonParser parse: payload.
+                  (tag beginsWith: 'W/')
+                    ifTrue: [ tag := tag copyFrom: 3 to: tag size ]
+                    ifFalse: [ tag := tag copyFrom: 1 to: tag size ].
+                  etagInfo
+                    at: 'ETag' put: tag;
+                    at: 'last-modified' put: (headerDict at: 'Last-Modified');
+                    at: 'jsonObject' put: jsonObject;
+                    at: 'X-Ratelimit-Remaining'
+                      put: (headerDict at: 'X-Ratelimit-Remaining');
+                    yourself.
                   self deleteFileNamed: errorFileName.
                   ^ jsonObject ].
               (status beginsWith: '403')
