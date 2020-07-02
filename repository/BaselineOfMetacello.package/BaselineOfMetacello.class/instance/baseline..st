@@ -338,6 +338,13 @@ baseline: spec
         package: 'Metacello-GS3x-Platform'
           with: [ spec requires: 'Metacello-Platform' ];
         package: 'Metacello-Platform'
+          with: [ spec includes: 'Metacello-GS3x-Platform' ];
+        yourself ].
+  spec
+    for: #'gs3.3.x'
+    do: [ 
+      spec
+        package: 'Metacello-Platform'
           with: [ spec includes: #('Metacello-GS3x-Platform' 'Metacello-Platform3x') ];
         package: 'Metacello-Platform3x'
           with: [ spec requires: 'Metacello-Platform' ];
