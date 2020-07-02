@@ -23,19 +23,12 @@ downloadJSONIfModified: url eTagInfo: eTagInfo username: username pass: pass onE
         extractHTTPHeader: (ReadStream on: fileStream contents)
         do: [ :headerDict :payload | 
           | status |
-          "Last-Modified date changed"
-          Transcript
-            cr;
-            show:
-                'MetacelloGemStonePlatform>>downloadJSONIfModified:eTagInfo:username:pass:onError: -----> '
-                    , payload printString.
           status := headerDict at: 'status'.
           (status beginsWith: '200')
             ifTrue: [ 
               | jsonObject |
-              jsonObject := payload isEmpty
-                ifTrue: [ self halt ]
-                ifFalse: [ MCFileTreeJsonParser parse: payload ].
+              "Last-Modified date changed"
+              jsonObject := MCFileTreeJsonParser parse: payload.
               eTagInfo
                 at: 'last-modified' put: (headerDict at: 'last-modified');
                 at: 'jsonObject' put: jsonObject;
@@ -51,7 +44,7 @@ downloadJSONIfModified: url eTagInfo: eTagInfo username: username pass: pass onE
                 at: 'X-Ratelimit-Remaining'
                 put: (headerDict at: 'X-Ratelimit-Remaining').
               self deleteFileNamed: errorFileName.
-              ^ eTagInfo at: 'jsonObject' ifAbsent: [ Dictionary new ] ].
+              ^ eTagInfo at: 'jsonObject' ].
           (status beginsWith: '403')
             ifTrue: [ 
               | jsonObject |

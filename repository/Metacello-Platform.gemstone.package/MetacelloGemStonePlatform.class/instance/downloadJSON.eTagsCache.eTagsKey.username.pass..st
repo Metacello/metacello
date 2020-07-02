@@ -44,42 +44,27 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
     readOnlyFileNamed: jsonFile localName
     do: [ :fileStream | 
       [ 
-      | contents |
-      contents := fileStream contents.
-      Transcript
-        cr;
-        show:
-            'MetacelloGemStonePlatform>>downloadJSONIfModified:eTagInfo:username:pass: [1] -----> '
-                , contents.
       eTagsCache
-        ifNil: [ ^ MCFileTreeJsonParser parse: contents ]
+        ifNil: [ ^ MCFileTreeJsonParser parse: fileStream contents ]
         ifNotNil: [ 
           self
-            extractHTTPHeader: (ReadStreamPortable on: contents)
+            extractHTTPHeader: (ReadStreamPortable on: fileStream contents)
             do: [ :headerDict :payload | 
               | status |
-              Transcript
-                cr;
-                show:
-                    'MetacelloGemStonePlatform>>downloadJSONIfModified:eTagInfo:username:pass: [2] -----> '
-                        , payload.
               status := headerDict at: 'status'.
               (status beginsWith: '200')
                 ifTrue: [ 
-                  | jsonObject tag |
+                  | jsonObject |
                   "cached info is not valid"
-                  payload isEmpty
-                    ifTrue: [ jsonObject := Dictionary new ]
-                    ifFalse: [ jsonObject := MCFileTreeJsonParser parse: payload ].
-                  tag := headerDict at: 'etag' ifAbsent: [ '1234' ].
-                  (tag beginsWith: 'W/')
-                    ifTrue: [ tag := tag copyFrom: 3 to: tag size ].
+                  jsonObject := payload isEmpty
+                    ifTrue: [ Dictionary new ]
+                    ifFalse: [ MCFileTreeJsonParser parse: payload ].
                   eTagInfo
                     at: 'ETag' put: tag;
                     at: 'last-modified' put: (headerDict at: 'last-modified');
                     at: 'jsonObject' put: jsonObject;
                     at: 'X-Ratelimit-Remaining'
-                      put: (headerDict at: 'X-Ratelimit-Remaining');
+                      put: (headerDict at: 'ETag' ifAbsent: [ '1234' ]);
                     yourself.
                   self deleteFileNamed: errorFileName.
                   ^ jsonObject ].
