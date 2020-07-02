@@ -4,9 +4,12 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
 
   "To minimize GitHub rate limiting problems, we are caching the ETags for the tag request: https://developer.github.com/v3/#conditional-requests"
 
-  "GsSecureSocket disableCertificateVerificationOnClient must be sent before using etags"
-
-  | client header responseCode etagInfo jsonObject |
+  | client header responseCode etagInfo jsonObject clientVerificationEnabled |
+  clientVerificationEnabled := GsSecureSocket
+    certificateVerificationEnabledOnClient.
+  [ 
+  clientVerificationEnabled
+    ifTrue: [ GsSecureSocket disableCertificateVerificationOnClient ].
   client := ZnClient new
     systemPolicy;
     url: url;
@@ -54,4 +57,7 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
   self
     error:
       'Unexpected responseCode ' , responseCode printString , ' for '
-        , url printString
+        , url printString ]
+    ensure: [ 
+      clientVerificationEnabled
+        ifTrue: [ GsSecureSocket enableCertificateVerificationOnClient ] ]
