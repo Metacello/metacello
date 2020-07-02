@@ -63,6 +63,14 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
                 show:
                     'MetacelloGemStonePlatform>>downloadJSONIfModified:eTagInfo:username:pass: [2] -----> '
                         , payload.
+              Transcript
+                cr;
+                show: 'eTagCache'.
+              eTagsCache
+                keysAndValuesDo: [ :eKey :eValue | 
+                  Transcript
+                    cr;
+                    show: eKey , ' --> ' , eValue ].
               status := headerDict at: 'status'.
               (status beginsWith: '200')
                 ifTrue: [ 
