@@ -63,30 +63,19 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
                 show:
                     'MetacelloGemStonePlatform>>downloadJSONIfModified:eTagInfo:username:pass: [2] -----> '
                         , payload.
-              Transcript
-                cr;
-                show: 'eTagCache'.
-              eTagsCache
-                keysAndValuesDo: [ :eKey :eCache | 
-                  Transcript
-                    cr;
-                    show: eKey , '--->'.
-                  eCache
-                    keysAndValuesDo: [ :cacheKey :cacheValue | 
-                      Transcript
-                        cr;
-                        show: cacheKey , ' -> ' , cacheValue printString ] ].
               status := headerDict at: 'status'.
               (status beginsWith: '200')
                 ifTrue: [ 
-                  | jsonObject |
+                  | jsonObject tag |
                   "cached info is not valid"
-                  jsonObject := payload isEmpty
-                    ifTrue: [ Dictionary new ]
-                    ifFalse: [ MCFileTreeJsonParser parse: payload ].
+                  payload isEmpty
+                    ifTrue: [ jsonObject := Dictionary new ]
+                    ifFalse: [ jsonObject := MCFileTreeJsonParser parse: payload ].
+                  tag := headerDict at: 'etag' ifAbsent: [ '1234' ].
+                  (tag beginsWith: 'W/')
+                    ifTrue: [ tag := tag copyFrom: 3 to: tag size ].
                   eTagInfo
-                    at: 'ETag'
-                      put: (headerDict at: 'ETag' ifAbsent: [ '1234' ]);
+                    at: 'ETag' put: tag;
                     at: 'last-modified' put: (headerDict at: 'last-modified');
                     at: 'jsonObject' put: jsonObject;
                     at: 'X-Ratelimit-Remaining'
@@ -100,16 +89,18 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
                   eTagInfo
                     at: 'X-Ratelimit-Remaining'
                     put: (headerDict at: 'X-Ratelimit-Remaining').
-                  eTagInfo
-                    at: 'last-modified'
-                    put: (headerDict at: 'last-modified').
-                  self deleteFileNamed: errorFileName.
-                  ^ self
-                    downloadJSONIfModified: url
-                    eTagInfo: eTagInfo
-                    username: username
-                    pass: pass
-                    onError: errorBlock ].
+                  (eTagInfo at: 'last-modified')
+                    = (headerDict at: 'last-modified')
+                    ifTrue: [ ^ eTagInfo at: 'jsonObject' ]
+                    ifFalse: [ 
+                      eTagInfo at: 'last-modified' put: (headerDict at: 'last-modified').
+                      self deleteFileNamed: errorFileName.
+                      ^ self
+                        downloadJSONIfModified: url
+                        eTagInfo: eTagInfo
+                        username: username
+                        pass: pass
+                        onError: errorBlock ] ].
               (status beginsWith: '403')
                 ifTrue: [ 
                   | jsonObject |

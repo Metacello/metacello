@@ -9,12 +9,10 @@ extractHTTPHeader: aStream do: aBlock
   header := Dictionary new.
   payload := WriteStream on: String new.
   parsingHeader := true.
-  false
-    ifTrue: [ 
-      line := aStream nextLine.	"strip status"
-      Transcript
-        cr;
-        show: 'status?? ---> ' , line ].
+  line := aStream nextLine.	"strip status"
+  Transcript
+    cr;
+    show: 'status?? ---> ' , line.
   [ aStream atEnd ]
     whileFalse: [ 
       line := aStream nextLine.

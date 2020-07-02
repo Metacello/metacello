@@ -1,5 +1,5 @@
 {
-	"category" : "BaselineOfMetacello",
+	"category" : "Metacello-Platform3x",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
@@ -7,8 +7,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "BaselineOfMetacello",
+	"name" : "MetacelloGemStonePlatform3x",
 	"pools" : [
 		 ],
-	"super" : "BaselineOf",
+	"super" : "MetacelloGemStonePlatform",
 	"type" : "normal" }
