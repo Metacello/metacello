@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "MetacelloConfigAbstractAPITestCase",
 	"category" : "Metacello-TestsMCA",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "MetacelloConfigCoreAPITestCase",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "MetacelloConfigAbstractAPITestCase",
+	"type" : "normal" }
