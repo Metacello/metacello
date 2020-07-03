@@ -4,21 +4,10 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
 
   "To minimize GitHub rate limiting problems, we are caching the ETags for the tag request: https://developer.github.com/v3/#conditional-requests"
 
-  | jsonFileName errorFileName jsonFile eTagsUrl eTagInfo errorBlock |
+  | jsonFileName errorFileName jsonFile eTagsUrl errorBlock etagInfo |
   jsonFileName := self tempFileFor: 'tags-' , self processPID suffix: '.json'.
   eTagsUrl := url.
-  eTagsCache
-    ifNotNil: [ 
-      eTagsCache
-        at: eTagsKey
-        ifPresent: [ :info | 
-          | etag |
-          etag := info at: 'ETag' ifAbsent: [ '1234' ].
-          eTagsUrl := eTagsUrl , ' -H ''If-None-Match: ' , etag , ''''.
-          eTagInfo := info ]
-        ifAbsent: [ 
-          eTagInfo := Dictionary new.
-          eTagsCache at: eTagsKey put: eTagInfo ] ].
+  etagInfo := eTagsCache at: eTagsKey ifAbsentPut: [ Dictionary new ].
   errorFileName := self
     downloadBasicFile: eTagsUrl
     to: jsonFileName
@@ -48,38 +37,30 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
         ifNil: [ ^ MCFileTreeJsonParser parse: fileStream contents ]
         ifNotNil: [ 
           self
-            extractHTTPHeader: (ReadStream on: fileStream contents)
+            extractHTTPHeader: (ReadStreamPortable on: fileStream contents)
             do: [ :headerDict :payload | 
-              | status |
-              status := headerDict at: 'Status'.
+              | status tag |
+              status := headerDict at: 'status' ifAbsent: [ '403' ].
               (status beginsWith: '200')
                 ifTrue: [ 
                   | jsonObject |
                   "cached info is not valid"
                   jsonObject := MCFileTreeJsonParser parse: payload.
-                  eTagInfo
-                    at: 'ETag'
-                      put: (headerDict at: 'ETag' ifAbsent: [ '1234' ]);
-                    at: 'Last-Modified' put: (headerDict at: 'Last-Modified');
+                  tag := headerDict at: 'etag'.
+                  (tag beginsWith: 'W/')
+                    ifTrue: [ tag := tag copyFrom: 3 to: tag size ]
+                    ifFalse: [ tag := tag copyFrom: 1 to: tag size ].
+                  etagInfo
+                    at: 'ETag' put: tag;
+                    at: 'last-modified' put: (headerDict at: 'last-modified');
                     at: 'jsonObject' put: jsonObject;
-                    at: 'X-RateLimit-Remaining'
-                      put: (headerDict at: 'X-RateLimit-Remaining');
+                    at: 'X-Ratelimit-Remaining'
+                      put: (headerDict at: 'X-Ratelimit-Remaining');
                     yourself.
                   self deleteFileNamed: errorFileName.
                   ^ jsonObject ].
               (status beginsWith: '304')
-                ifTrue: [ 
-                  "eTagCache hit ... need to know if data still valid"
-                  eTagInfo
-                    at: 'X-RateLimit-Remaining'
-                    put: (headerDict at: 'X-RateLimit-Remaining').
-                  self deleteFileNamed: errorFileName.
-                  ^ self
-                    downloadJSONIfModified: url
-                    eTagInfo: eTagInfo
-                    username: username
-                    pass: pass
-                    onError: errorBlock ].
+                ifTrue: [ ^ etagInfo at: 'jsonObject' ifAbsent: [ MCFileTreeJsonParser parse: payload ] ].
               (status beginsWith: '403')
                 ifTrue: [ 
                   | jsonObject |

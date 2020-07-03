@@ -15,9 +15,9 @@ testIssue332DownloadTags
   repo := MCGitHubRepository
     parseLocation: 'github://dalehenrich/external:master/repository'
     version: nil.
-  tags := repo downloadJSONTags.	"prime the value of X-RateLimit-Remaining"
+  tags := repo downloadJSONTags.	"prime the value of X-Ratelimit-Remaining"
   rateLimitRemaining := (cache at: 'dalehenrich/external')
-    at: 'X-RateLimit-Remaining'.
+    at: 'X-Ratelimit-Remaining'.
   Transcript
     cr;
     show:
@@ -25,7 +25,7 @@ testIssue332DownloadTags
   tags := repo downloadJSONTags.
   expectedTags := #('1.0-beta.32Tests' 'v1.1.1-gs' 'v1.1.2-gs' 'v1.2.0-gs' 'v1.2.0.1-gs' 'v1.2.0.2-gs' 'v1.3.0-gs' 'v2.1.0-gs' 'v2.2.0-gs' 'v3.0.0-gs').
   expectedTags do: [ :tag | tags at: tag ifAbsent: [ self assert: false ] ].
-  x := (cache at: 'dalehenrich/external') at: 'X-RateLimit-Remaining'.
+  x := (cache at: 'dalehenrich/external') at: 'X-Ratelimit-Remaining'.
   Transcript
     cr;
     show: 'testIssue332DownloadTags final rate limit: ' , x asString ]
