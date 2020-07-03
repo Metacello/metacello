@@ -1,21 +1,20 @@
 {
+	"class" : {
+		 },
 	"instance" : {
+		"configurationRepository" : "dkh 9/11/2012 15:16",
 		"hasPackage:" : "dkh 9/11/2012 15:16",
+		"monticelloRepository" : "dkh 9/11/2012 15:16",
+		"project" : "dkh 9/11/2012 15:16",
+		"projectClass" : "dkh 9/11/2012 15:16",
+		"projectName" : "dkh 9/11/2012 15:17",
+		"projectWith:" : "dkh 9/11/2012 15:43",
+		"runCase" : "ChristopheDemarey 4/29/2013 16:31",
 		"setUp" : "dkh 10/16/2014 09:56",
 		"tearDown" : "topa 9/20/2017 11:04",
 		"tearDownPackageNames" : "dkh 9/11/2012 15:18",
-		"testForDoListAttribute2Atrribute1Active" : "dkh 05/09/2013 12:13",
-		"runCase" : "ChristopheDemarey 4/29/2013 16:31",
-		"projectClass" : "dkh 9/11/2012 15:16",
-		"testForDoListNotActive" : "dkh 05/09/2013 12:13",
-		"monticelloRepository" : "dkh 9/11/2012 15:16",
-		"projectWith:" : "dkh 9/11/2012 15:43",
 		"testForDoListAtrribute1Active" : "dkh 05/09/2013 12:13",
-		"configurationRepository" : "dkh 9/11/2012 15:16",
 		"testForDoListAtrribute2Active" : "dkh 05/09/2013 12:13",
-		"projectName" : "dkh 9/11/2012 15:17",
 		"testForDoListAttribute1Atrribute2Active" : "dkh 05/09/2013 12:13",
-		"project" : "dkh 9/11/2012 15:16"
-	},
-	"class" : { }
-}
+		"testForDoListAttribute2Atrribute1Active" : "dkh 05/09/2013 12:13",
+		"testForDoListNotActive" : "dkh 05/09/2013 12:13" } }

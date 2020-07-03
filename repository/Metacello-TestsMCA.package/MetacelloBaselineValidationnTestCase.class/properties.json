@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "dkh 10/09/2014 16:52",
-	"super" : "MetacelloScriptingStdTstHarness",
 	"category" : "Metacello-TestsMCA",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 10/09/2014 16:52",
+	"instvars" : [
+		 ],
 	"name" : "MetacelloBaselineValidationnTestCase",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "MetacelloScriptingStdTstHarness",
+	"type" : "normal" }

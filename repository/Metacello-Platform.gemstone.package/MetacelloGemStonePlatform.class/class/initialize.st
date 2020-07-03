@@ -2,6 +2,9 @@ initialize-release
 initialize
   "self initialize"
 
-  self select.
-  SystemLoginNotification subscribe: self name.
-  self sessionStart
+  Smalltalk
+    at: #'MetacelloGemStonePlatform3x'
+    ifAbsent: [ 
+      self select.
+      SystemLoginNotification subscribe: self name.
+      self sessionStart ]

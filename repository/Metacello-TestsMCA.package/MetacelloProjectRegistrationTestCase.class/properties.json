@@ -1,16 +1,17 @@
 {
-	"commentStamp" : "",
-	"super" : "TestCase",
 	"category" : "Metacello-TestsMCA",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"registrationA",
 		"registrationB",
 		"baselineProjectSpec",
-		"configurationProjectSpec"
-	],
+		"configurationProjectSpec" ],
 	"name" : "MetacelloProjectRegistrationTestCase",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

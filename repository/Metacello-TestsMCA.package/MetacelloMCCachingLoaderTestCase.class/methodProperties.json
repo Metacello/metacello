@@ -1,12 +1,11 @@
 {
+	"class" : {
+		 },
 	"instance" : {
 		"baseline10:" : "dkh 6/12/2012 15:41:23.319",
-		"testVersion10Fetch" : "dkh 6/12/2012 15:41:23.319",
 		"testBaselineFetch" : "dkh 6/12/2012 15:41:23.319",
-		"version20:" : "dkh 6/12/2012 15:41:23.319",
-		"testDualFetch" : "dkh 6/12/2012 15:41:23.319",
 		"testBaselineLoad" : "dkh 6/12/2012 15:41:23.319",
-		"version10:" : "dkh 6/12/2012 15:41:23.319"
-	},
-	"class" : { }
-}
+		"testDualFetch" : "dkh 6/12/2012 15:41:23.319",
+		"testVersion10Fetch" : "dkh 6/12/2012 15:41:23.319",
+		"version10:" : "dkh 6/12/2012 15:41:23.319",
+		"version20:" : "dkh 6/12/2012 15:41:23.319" } }

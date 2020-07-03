@@ -6,7 +6,7 @@ downloadJSONIfModified: url eTagInfo: eTagInfo username: username pass: pass onE
 
   | jsonFileName errorFileName jsonFile eTagsUrl |
   jsonFileName := self tempFileFor: 'tagsIM-' , self processPID suffix: 'json'.
-  eTagsUrl := url , ' -H "If-Modified-Since: ' , (eTagInfo at: 'Last-Modified')
+  eTagsUrl := url , ' -H "If-Modified-Since: ' , (eTagInfo at: 'last-modified')
     , '"'.
   errorFileName := self
     downloadBasicFile: eTagsUrl
@@ -23,17 +23,17 @@ downloadJSONIfModified: url eTagInfo: eTagInfo username: username pass: pass onE
         extractHTTPHeader: (ReadStream on: fileStream contents)
         do: [ :headerDict :payload | 
           | status |
-          status := headerDict at: 'Status'.
+          status := headerDict at: 'status'.
           (status beginsWith: '200')
             ifTrue: [ 
               | jsonObject |
               "Last-Modified date changed"
               jsonObject := MCFileTreeJsonParser parse: payload.
               eTagInfo
-                at: 'Last-Modified' put: (headerDict at: 'Last-Modified');
+                at: 'last-modified' put: (headerDict at: 'last-modified');
                 at: 'jsonObject' put: jsonObject;
-                at: 'X-RateLimit-Remaining'
-                  put: (headerDict at: 'X-RateLimit-Remaining');
+                at: 'X-Ratelimit-Remaining'
+                  put: (headerDict at: 'X-Ratelimit-Remaining');
                 yourself.
               self deleteFileNamed: errorFileName.
               ^ jsonObject ].
@@ -41,8 +41,8 @@ downloadJSONIfModified: url eTagInfo: eTagInfo username: username pass: pass onE
             ifTrue: [ 
               "eTagCache hit ... need to know if data still valid"
               eTagInfo
-                at: 'X-RateLimit-Remaining'
-                put: (headerDict at: 'X-RateLimit-Remaining').
+                at: 'X-Ratelimit-Remaining'
+                put: (headerDict at: 'X-Ratelimit-Remaining').
               self deleteFileNamed: errorFileName.
               ^ eTagInfo at: 'jsonObject' ].
           (status beginsWith: '403')

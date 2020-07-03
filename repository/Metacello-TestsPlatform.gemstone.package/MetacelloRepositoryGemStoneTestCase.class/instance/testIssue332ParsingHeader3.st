@@ -9,7 +9,7 @@ testIssue332ParsingHeader3
     extractHTTPHeader: stream
     do: [ :headerDict :payload | 
       | tagNames |
-      self assert: (headerDict at: 'Status') = '304 Not Modified'.
+      self assert: (headerDict at: 'status') = '304 Not Modified'.
       self assert: (headerDict at: 'ETag' ifAbsent: [  ]) isNil.
       self
         assert:
