@@ -7,8 +7,7 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
   | jsonFileName errorFileName jsonFile eTagsUrl errorBlock etagInfo |
   jsonFileName := self tempFileFor: 'tags-' , self processPID suffix: '.json'.
   eTagsUrl := url.
-  etagInfo := Dictionary new.
-  eTagsCache at: eTagsKey put: etagInfo.
+  etagInfo := eTagsCache at: eTagsKey ifAbsentPut: [ Dictionary new ].
   errorFileName := self
     downloadBasicFile: eTagsUrl
     to: jsonFileName
@@ -41,7 +40,7 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
             extractHTTPHeader: (ReadStreamPortable on: fileStream contents)
             do: [ :headerDict :payload | 
               | status tag |
-              status := headerDict at: 'status'.
+              status := headerDict at: 'status' ifAbsent: [ '403' ].
               (status beginsWith: '200')
                 ifTrue: [ 
                   | jsonObject |
