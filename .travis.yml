@@ -28,6 +28,7 @@ smalltalk_config:
 matrix:
   allow_failures:
     - smalltalk: GemStone-2.4.8
+    - smalltalk: Pharo-6.0
     - smalltalk: Pharo-6.1
 
 cache:
