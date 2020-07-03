@@ -61,7 +61,7 @@ downloadJSON: url eTagsCache: eTagsCache eTagsKey: eTagsKey username: username p
                   self deleteFileNamed: errorFileName.
                   ^ jsonObject ].
               (status beginsWith: '304')
-                ifTrue: [ ^ etagInfo at: 'jsonObject' ].
+                ifTrue: [ ^ etagInfo at: 'jsonObject' ifAbsent: [ MCFileTreeJsonParser parse: payload ] ].
               (status beginsWith: '403')
                 ifTrue: [ 
                   | jsonObject |
