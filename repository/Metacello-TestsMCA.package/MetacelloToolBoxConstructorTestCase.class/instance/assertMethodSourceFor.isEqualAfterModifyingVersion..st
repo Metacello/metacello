@@ -17,4 +17,4 @@ assertMethodSourceFor: configurationName isEqualAfterModifyingVersion: versionSt
     ifTrue: [ self assert: original trimBoth = modified trimBoth ]
     ifFalse: [ 
       "Squeak"
-      self assert: original withBlanksTrimmed = modified withBlanksTrimmed ]
+	self assertBaselineSource: original equals: modified ]
