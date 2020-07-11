@@ -2,7 +2,8 @@
 	"class" : {
 		 },
 	"instance" : {
-		"assertMethodSourceFor:isEqualAfterModifyingVersion:" : "EstebanLorenzano 10/2/2017 08:49",
+		"assertBaselineSource:equals:" : "smalltalkCI 7/11/2020 22:51",
+		"assertMethodSourceFor:isEqualAfterModifyingVersion:" : "smalltalkCI 7/11/2020 22:45",
 		"assertVersionSpecFor:isEqualAfterModifyingVersion:" : "dkh 6/12/2012 15:41:23.319",
 		"atomicConfigurationRepository" : "dkh 6/12/2012 15:41:23.319",
 		"configurationNameList" : "dkh 6/12/2012 15:41:23.319",
