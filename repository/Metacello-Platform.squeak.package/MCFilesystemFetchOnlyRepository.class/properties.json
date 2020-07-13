@@ -14,7 +14,8 @@
 		"projectVersionPattern",
 		"repositoryReader",
 		"readonly",
-		"directory" ],
+		"directory",
+		"repoPathValid" ],
 	"name" : "MCFilesystemFetchOnlyRepository",
 	"pools" : [
 		 ],
