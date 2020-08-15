@@ -2,7 +2,7 @@ private
 resetCacheDirectoryIfInvalid
   "Reset if invalid"
 
-  RepoCacheDirectory notNil
+  repoCacheDirectory notNil
     and: [ 
-      (MCFileTreeFileUtils current directoryExists: RepoCacheDirectory)
-        ifFalse: [ RepoCacheDirectory := nil ] ]
+      (MCFileTreeFileUtils current directoryExists: repoCacheDirectory)
+        ifFalse: [ repoCacheDirectory := nil ] ]

@@ -1,5 +1,5 @@
 private
 cacheDirectory
   self resetCacheDirectoryIfInvalid.
-  RepoCacheDirectory ifNil: [ RepoCacheDirectory := self defaultCacheDirectory ].
-  ^ RepoCacheDirectory
+  repoCacheDirectory ifNil: [ repoCacheDirectory := self defaultCacheDirectory ].
+  ^ repoCacheDirectory
