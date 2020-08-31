@@ -2,4 +2,4 @@ initialization
 flushDownloadCache
   "self flushDownloadCache"
 
-  RepoDownloadCache := nil
+  repoDownloadCache := nil
