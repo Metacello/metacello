@@ -9,9 +9,6 @@ defaultPlatformAttributes
 
 	major := both upTo: $..
 	minor := both upToEnd.
-	attributes
-		add: ('squeak', major, '.x') asSymbol;
-		add: ('squeak', major, '.', minor, '.x') asSymbol.
 	(systemVersion version endsWith: 'alpha')
 		ifTrue: ["For alphas it is sensible to pretend to be the previous version, 
 				so that things can be tested and then moved forward."
@@ -23,9 +20,12 @@ defaultPlatformAttributes
 						  so for now use a list of known jumps or roll down to 10 "
 						| priorVersion priorMajor |
 						priorMajor := major asInteger - 1.
-						priorVersion := #(('1' '1.31') ('2' '2.8') ('3' '3.10') ('4' '4.5' "on purpose NOT 4.6") ('5' '5.1'))
+						priorVersion := #(('1' '1.31') ('2' '2.8') ('3' '3.10') ('4' '4.5' "on purpose NOT 4.6") ('5' '5.3'))
 							at: priorMajor ifAbsent: [{priorMajor asString . priorMajor asString, '.10'}].
 						attributes
 							add: ('squeak', priorVersion first, '.x') asSymbol;
 							add: ('squeak', priorVersion second, '.x') asSymbol]].
+	attributes
+		add: ('squeak', major, '.x') asSymbol;
+		add: ('squeak', major, '.', minor, '.x') asSymbol.
 	^ attributes
