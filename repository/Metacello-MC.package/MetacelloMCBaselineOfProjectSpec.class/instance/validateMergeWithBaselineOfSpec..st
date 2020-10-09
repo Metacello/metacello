@@ -1,0 +1,3 @@
+merging
+validateMergeWithBaselineOfSpec: aSpec
+  ^ true
