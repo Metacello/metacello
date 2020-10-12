@@ -9,4 +9,3 @@ downloadZipArchive: url to: outputFileName username: username pass: pass
         ^ self error: 'Error downloading ', url, ' to ', outputFileName, '. Server said: ', message].
 
     ^ ZipArchive new readFrom: outputFileName
-           

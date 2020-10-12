@@ -1,13 +1,13 @@
 github support
-downloadZipArchive: url to: outputFileName
+downloadZipArchive: url to: outputFileName username: username pass: pass
 	"download zip archive from <url> into <outputFileName>"
 
 	| archive zipfile errorFileName |
 	errorFileName := self
 		downloadBasicFile: url
 		to: outputFileName
-		username: nil
-		pass: nil.
+		username: username
+		pass: pass.
 	archive := ZipArchive new.
 	zipfile := self fileHandleOn: outputFileName.
 	zipfile containingDirectory
