@@ -1,3 +1,4 @@
 private
 projectZipUrlFor: projectPath versionString: versionString
-  ^ 'https://github.com/' , projectPath , '/zipball/' , versionString
+
+	^ 'https://api.github.com/repos/' , projectPath , '/zipball/' , versionString

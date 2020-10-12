@@ -30,7 +30,9 @@ projectDirectoryFrom: projectPath version: versionString
 				suffix: '.zip'.
 			archive := mcPlatform
 				downloadZipArchive: url
-				to: zipFileName.
+				to: zipFileName
+				username: self siteUsername
+				pass: self sitePassword.
 			directory := mcPlatform
 				directoryFromPath: (cachePath := archive members first fileName)
 				relativeTo: theCacheDirectory.
