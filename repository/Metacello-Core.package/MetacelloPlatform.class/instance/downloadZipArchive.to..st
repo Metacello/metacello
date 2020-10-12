@@ -1,5 +1,4 @@
 github/bitbucket support
 downloadZipArchive: url to: outputFileName
-  "download zip archive from <url> into <outputFileName>"
 
-  self subclassResponsibility
+	^ self downloadZipArchive: url to: outputFileName username: nil pass: nil
