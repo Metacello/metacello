@@ -127,4 +127,6 @@ Interesting problem - non-reproducable builds when using non-exact dependent pro
 [6]: https://blog.ometer.com/2017/01/10/dear-package-managers-dependency-resolution-results-should-be-in-version-control/
 [7]: https://twitter.com/migueldeicaza/status/868450752347480064
 
+## Contribution
 
+See [docs/Contribute.md](docs/Contribute.md).
