@@ -1,3 +1,3 @@
 private
 cacheAllFileNamesDuring: aBlock
-	self repositoryReader cacheAllFileNamesDuring: aBlock
+	^ self repositoryReader cacheAllFileNamesDuring: aBlock
