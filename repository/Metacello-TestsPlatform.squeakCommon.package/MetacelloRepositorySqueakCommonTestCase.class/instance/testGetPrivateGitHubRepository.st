@@ -3,8 +3,8 @@ testGetPrivateGitHubRepository
 
 	| prevPassword prevUsername baseline |
 	(Smalltalk classNamed: #MCFetchGithubRepository) ifNil: [
-		Transcript showln: 'Skipping test, not applicable'.
-		thisContext return].
+		Transcript cr; show: 'Skipping test, not applicable'.
+		thisContext home return].
 	
 	prevUsername := MCFetchGithubRepository siteUsername.
 	prevPassword := MCFetchGithubRepository sitePassword.
