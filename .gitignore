@@ -5,3 +5,6 @@ Session.vim
 .netrwhist
 *~
 **/.DS_Store
+
+# Editors
+.vscode

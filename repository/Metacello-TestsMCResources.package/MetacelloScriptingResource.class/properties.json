@@ -1,15 +1,16 @@
 {
-	"commentStamp" : "",
-	"super" : "TestResource",
 	"category" : "Metacello-TestsMCResources",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"configurationRepository",
 		"externalRepository",
-		"sampleRepository"
-	],
+		"sampleRepository" ],
 	"name" : "MetacelloScriptingResource",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "TestResource",
+	"type" : "normal" }
