@@ -6,5 +6,5 @@ githubUser: userName project: projectName commitish: commitish path: path
 		'github://' , userName , '/' , projectName , (
 			(commitish isNil or: [commitish isEmpty])
 				ifTrue: ['']
-				ifFalse: [':' , commitish , '/']
-		) , path)
+				ifFalse: [':' , commitish]
+		) , '/' , path)
