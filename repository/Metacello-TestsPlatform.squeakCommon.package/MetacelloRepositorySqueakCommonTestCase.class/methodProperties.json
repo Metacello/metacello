@@ -16,5 +16,6 @@
 		"testDirectoryRepository" : "EstebanLorenzano 10/9/2017 19:52",
 		"testFileTreeRepository" : "DamienCassou 4/4/2014 15:30",
 		"testFtpRepository" : "dkh 6/12/2012 10:19:43.983",
-		"testGetPrivateGitHubRepository" : "ct 10/26/2020 00:12",
+		"testGetGithubRepositoryScriptingAPI" : "ct 11/7/2020 15:48",
+		"testGetGithubRepositorySiteCredentials" : "ct 11/7/2020 15:48",
 		"testHttpRepository" : "dkh 6/12/2012 10:19:43.983" } }

@@ -7,6 +7,9 @@ repositoriesFrom: aMetacelloMVRepositorySpecs ignoreOverrides: ignoreOverrides
 	repos := OrderedCollection new.
 	aMetacelloMVRepositorySpecs do: [:aSpec | | description repo |
 		description := aSpec description.
-		(repo := repositories detect: [:rep | rep description = description ] ifNone: [ aSpec createRepository ]) ~~ nil
-			ifTrue: [ repos add: repo ]].
+		(repo := repositories
+			detect: [:rep | rep description = description ]
+			ifFound: [:rep | aSpec updateRepository: rep ]
+			ifNone: [ aSpec createRepository ]) ~~ nil
+				ifTrue: [ repos add: repo ]].
 	^repos
