@@ -2,7 +2,7 @@ accessing
 directory
   directory
     ifNil: [
-      directory := self class
+      directory := self
         projectDirectoryFrom: self projectPath
         version: self projectVersion.
       self repoPath isEmpty

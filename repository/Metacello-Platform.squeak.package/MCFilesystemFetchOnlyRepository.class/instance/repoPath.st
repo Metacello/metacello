@@ -2,7 +2,7 @@ accessing
 repoPath
 	^ repoPath ifNil: [ | basicDirectory |
 		" if we were not given a repo path, there may be a .project file with more info "
-		basicDirectory := self class
+		basicDirectory := self
 			projectDirectoryFrom: self projectPath
 			version: self projectVersion.
 		

@@ -1,10 +1,8 @@
 {
-	"commentStamp" : "dkh 7/12/2012 14:49",
-	"super" : "Object",
 	"category" : "Metacello-Core-Scripts",
 	"classinstvars" : [ ],
-	"pools" : [ ],
 	"classvars" : [ ],
+	"commentStamp" : "dkh 7/12/2012 14:49",
 	"instvars" : [
 		"options",
 		"roots",
@@ -16,8 +14,11 @@
 		"projectArg",
 		"classNameArg",
 		"versionArg",
-		"repositoryArg"
-	],
+		"repositoryArg",
+		"passwordArg",
+		"usernameArg" ],
 	"name" : "MetacelloScriptExecutor",
+	"pools" : [ ],
+	"super" : "Object",
 	"type" : "normal"
 }

@@ -1,14 +1,14 @@
 utility
 projectDirectoryFrom: projectPath version: versionString
 	| mcPlatform theCacheDirectory projectDirectory downloadCacheKey cachePath pid |
-	downloadCacheKey := self
+	downloadCacheKey := self class
 		downloadCacheKey: projectPath
 		version: versionString.
 	mcPlatform := MetacelloPlatform current.
 	theCacheDirectory := mcPlatform
 		directoryFromPath: versionString
-		relativeTo: (self cacheDirectoryFor: projectPath).
-	cachePath := self downloadCache at: downloadCacheKey ifAbsent: [  ].
+		relativeTo: (self class cacheDirectoryFor: projectPath).
+	cachePath := self class downloadCache at: downloadCacheKey ifAbsent: [  ].
 	(cachePath isNil
 		or: [ (projectDirectory := mcPlatform
 				directoryFromPath: cachePath
@@ -19,20 +19,20 @@ projectDirectoryFrom: projectPath version: versionString
 				versionString: versionString;
 				signal.	"for testing purposes"
 			mcPlatform ensureDirectoryExists: theCacheDirectory.
-			url := self
+			url := self class
 				projectZipUrlFor: projectPath
 				versionString: versionString.
 			pid := mcPlatform processPID.
 			zipFileName := mcPlatform
 				tempFileFor:
-					self basicDescription , '-' , pid , '-'
+					self class basicDescription , '-' , pid , '-'
 						, (downloadCacheKey select: [ :c | c isAlphaNumeric ])
 				suffix: '.zip'.
 			archive := mcPlatform
 				downloadZipArchive: url
 				to: zipFileName
-				username: self siteUsername
-				pass: self sitePassword.
+				username: self username
+				pass: self password.
 			directory := mcPlatform
 				directoryFromPath: (cachePath := archive members first fileName)
 				relativeTo: theCacheDirectory.
@@ -42,7 +42,7 @@ projectDirectoryFrom: projectPath version: versionString
 				ifFalse: [ mcPlatform
 						extractRepositoryFrom: zipFileName
 						to: theCacheDirectory fullName ].
-			self downloadCache at: downloadCacheKey put: cachePath.
+			self class downloadCache at: downloadCacheKey put: cachePath.
 			projectDirectory := mcPlatform
 				directoryFromPath: cachePath
 				relativeTo: theCacheDirectory ].
