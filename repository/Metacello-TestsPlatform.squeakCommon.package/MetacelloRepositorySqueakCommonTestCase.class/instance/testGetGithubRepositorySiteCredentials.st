@@ -1,5 +1,5 @@
 tests
-testGetPrivateGitHubRepository
+testGetGithubRepositorySiteCredentials
 
 	| prevPassword prevUsername baseline |
 	(Smalltalk classNamed: #MCFetchGithubRepository) ifNil: [

@@ -15,7 +15,15 @@ createRepository: aRepositorySpec
 				user: aRepositorySpec username
 				password: aRepositorySpec password].
 	
-	type = 'github' ifTrue: [^ MCFetchGithubRepository location: aRepositorySpec description].
-	type = 'bitbucket' ifTrue: [^ MCFetchBitbucketRepository location: aRepositorySpec description].
+	type = 'github' ifTrue: [
+		^ MCFetchGithubRepository
+			location: aRepositorySpec description
+			username: aRepositorySpec username
+			password: aRepositorySpec password].
+	type = 'bitbucket' ifTrue: [
+		^ MCFetchBitbucketRepository
+			location: aRepositorySpec description
+			username: aRepositorySpec username
+			password: aRepositorySpec password].
 	
 	^ super createRepository: aRepositorySpec
