@@ -536,6 +536,7 @@ is rooted in the projects HOME directory.
 * croquet:
 * filetreeDirectory:
 * gemsource:
+* githubUser:project:path:
 * githubUser:project:commitish:path:
 * impara:
 * renggli:

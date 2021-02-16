@@ -3,5 +3,7 @@
 		 },
 	"instance" : {
 		"disableUndefinedSymbolTracking" : "dkh 07/06/2016 15:59",
-		"testGettingStartedWithGitHub1" : "dkh 07/06/2016 16:00",
+        "testGettingStartedWithGitHub1" : "dkh 07/06/2016 16:00",
+        "testGettingStartedWithGitHub2" : "ct 02/15/2021 20:10",
+        "testGettingStartedWithGitHub3" : "ct 02/15/2021 20:10",
 		"testLockCommandReference6" : "dkh 07/06/2016 16:00" } }
