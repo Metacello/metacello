@@ -1,0 +1,4 @@
+testing
+isProjectPathCaseSensitive
+
+	^ false
