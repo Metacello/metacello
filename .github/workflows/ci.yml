@@ -1,0 +1,28 @@
+name: smalltalkCI
+
+on: 
+  push:
+  pull_request:
+    branches:
+      master
+  schedule:
+    - cron: "15 2 11 * *" #run job on the 11th day of every month on the 15th minute of the 2nd hour
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    strategy:
+      fail-fast: false
+      matrix:
+        smalltalk: [ Squeak64-5.2, Squeak64-5.3, Squeak64-trunk ]
+        config: [ .smalltalkA.ston, .smalltalkB.ston ]
+    name: ${{ matrix.smalltalk }} ${{ matrix.config }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: hpi-swa/setup-smalltalkCI@v1
+        with:
+          smalltalk-image: ${{ matrix.smalltalk }}
+      - name: Run tests
+        run: smalltalkci -s ${{ matrix.smalltalk }} ${{ matrix.config }}
+        shell: bash
+        timeout-minutes: 20
