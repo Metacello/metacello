@@ -1,3 +1,7 @@
+# Metacello
+
+[![smalltalkCI](https://github.com/Metacello/metacello/actions/workflows/ci.yml/badge.svg)](https://github.com/Metacello/metacello/actions/workflows/ci.yml)
+
 ## INSTALL Preview Version
 
 ### GemStone
@@ -110,9 +114,6 @@ See the [.travis.yml file](./.travis.yml) for list of supported platforms and ve
 
 If you are interested in using GitHub with the Metacello Preview, you should read The excellent [chapter on Metacello in Deep Into Pharo][5], then check out 
 [Getting Started with GitHub][1], the [Metacello User Guide][2], the [Metacello Scripting API][3], [Issue #136 detail][4], and [Metacello API Reference][8].
-
-### TravisCI Status
-**master branch**: [![Build Status](https://travis-ci.org/Metacello/metacello.svg?branch=master)](https://travis-ci.org/Metacello/metacello)
 
 ### Some things to ponder 
 [Dear package managers: dependency resolution results should be in version control][6] ([twitter comment thread][7]).
