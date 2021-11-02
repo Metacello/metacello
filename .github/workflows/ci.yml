@@ -14,8 +14,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        smalltalk: [ GemStone64-3.6.1, GemStone64-3.5.7, GemStone64-3.4.5, Squeak64-5.1, 
-                     Squeak64-5.2, Squeak64-5.3, Squeak64-trunk ]
+        smalltalk: [ Squeak64-5.2, Squeak64-5.3, Squeak64-trunk ]
         config: [ .smalltalkA.ston, .smalltalkB.ston ]
     name: ${{ matrix.smalltalk }} ${{ matrix.config }}
     steps:
