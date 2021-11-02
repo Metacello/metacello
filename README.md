@@ -1,6 +1,6 @@
 # Metacello
 
-[![smalltalkCI](https://github.com/Metacello/metacello/actions/workflows/ci.yml/badge.svg)](https://github.com/Metacello/metacello/actions/workflows/ci.yml)
+[![smalltalkCI](https://github.com/Metacello/metacello/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/Metacello/metacello/actions/workflows/ci.yml?query=branch%3Amaster)
 
 ## INSTALL Preview Version
 
