@@ -109,7 +109,7 @@ Installer gemsource
 See the [.travis.yml file](./.travis.yml) for list of supported platforms and versions.
 
 If you are interested in using GitHub with the Metacello Preview, you should read The excellent [chapter on Metacello in Deep Into Pharo][5], then check out 
-[Getting Started with GitHub][1], the [Metacello User Guide][2], the [Metacello Scripting API][3], and [Issue #136 detail][4].
+[Getting Started with GitHub][1], the [Metacello User Guide][2], the [Metacello Scripting API][3], [Issue #136 detail][4], and [Metacello API Reference][8].
 
 ### TravisCI Status
 **master branch**: [![Build Status](https://travis-ci.org/Metacello/metacello.svg?branch=master)](https://travis-ci.org/Metacello/metacello)
@@ -126,6 +126,7 @@ Interesting problem - non-reproducable builds when using non-exact dependent pro
 [5]: http://pharobooks.gforge.inria.fr/PharoByExampleTwo-Eng/latest/Metacello.pdf
 [6]: https://blog.ometer.com/2017/01/10/dear-package-managers-dependency-resolution-results-should-be-in-version-control/
 [7]: https://twitter.com/migueldeicaza/status/868450752347480064
+[8]: docs/APIReference.md
 
 ## Contribution
 

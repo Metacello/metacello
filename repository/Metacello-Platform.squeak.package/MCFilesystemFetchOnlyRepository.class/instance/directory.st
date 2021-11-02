@@ -8,7 +8,7 @@ directory
       self repoPath isEmpty
         ifFalse: [ 
           directory := MetacelloPlatform current
-            directoryFromPath: self repoPath
+            directoryFromPath: (self repoPath copy replaceAll: $/ with: MCFileTreeFileDirectoryUtils pathNameDelimiter)
             relativeTo: directory ] ]
     ifNotNil: [ 
       (MCFileTreeFileUtils current directoryExists: directory)
