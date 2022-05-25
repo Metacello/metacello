@@ -1,0 +1,4 @@
+*Metacello-Squeak6Compatibility-*metacello-platform
+setAuthorInMetacelloConfig: aMetacelloConfig
+
+	aMetacelloConfig setAuthorWithBlock: self

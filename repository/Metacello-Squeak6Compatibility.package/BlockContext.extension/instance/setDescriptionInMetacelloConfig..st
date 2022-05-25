@@ -1,0 +1,4 @@
+*Metacello-Squeak6Compatibility-*metacello-platform
+setDescriptionInMetacelloConfig: aMetacelloConfig
+
+	aMetacelloConfig setDescriptionWithBlock: self
