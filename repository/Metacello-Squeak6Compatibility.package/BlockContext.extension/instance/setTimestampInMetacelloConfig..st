@@ -1,4 +1,4 @@
-*metacello-platform
+*Metacello-Squeak6Compatibility-*metacello-platform
 setTimestampInMetacelloConfig: aMetacelloConfig
 
 	aMetacelloConfig setTimestampWithBlock: self

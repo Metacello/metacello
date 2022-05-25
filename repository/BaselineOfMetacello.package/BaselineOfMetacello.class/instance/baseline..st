@@ -275,7 +275,7 @@ baseline: spec
         package: 'Metacello-TestsMC' with: [ spec requires: #('Gofer Tests') ];
         package: 'Metacello-Platform'
           with: [
-            spec file: 'Metacello-Platform.squeak'; requires: #('Ston') ];
+            spec file: 'Metacello-Platform.squeak'; requires: #('Ston' 'squeak-compatibility') ];
         yourself ].
   spec
     for:
@@ -294,6 +294,14 @@ baseline: spec
         package: 'Metacello-Platform'
           with: [ spec requires: #('WebClient' 'SqueakSSL-Core') ];
         yourself ].
+  spec group: 'squeak-compatibility' with: #().
+  spec
+    for:
+      #(#'squeak4.x' #'squeak5.x')
+    do: [ 
+      spec
+        package: 'Metacello-Squeak6Compatibility';
+        group: 'squeak-compatibility' with: #('Metacello-Squeak6Compatibility') ].
   spec
     for: #'gemstone'
     do: [ 
