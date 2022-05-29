@@ -1,5 +1,13 @@
-| preamble zip |
+| zip packageNames firstPackageNames preamble |
 zip := ZipArchive new.
+
+packageNames := ((BaselineOfMetacello project version: 'baseline')
+	allPackagesForSpecNamed: #default)
+		collect: #name.
+firstPackageNames := #('Metacello-Base' 'Metacello-Core' 'MonticelloFileTree-Core'). "To overcome cyclic dependencies, define starter packages manually"
+packageNames := firstPackageNames , ((packageNames copyWithoutAll: firstPackageNames)
+	topologicallySortedUsing: [:a :b | ((DependencyBrowser new selectPackage: a; packageDeps) includes: b) not]). "O(n**2) bust fast enough for now"
+
 preamble := String streamContents: [:preambleStream |
 	preambleStream
 		nextPutAll: '| loader |
@@ -7,7 +15,7 @@ preamble := String streamContents: [:preambleStream |
 Smalltalk globals removeKey: #Metacello].
 loader := MCVersionLoader new.';
 		cr.
-	(((BaselineOfMetacello project version: 'baseline') allPackagesForSpecNamed: #default) collect: #name) do: [:name | | stream version |
+	packageNames do: [:name | | stream version |
 		stream := RWBinaryOrTextStream on: (String new: 10000).
 		version := MCVersion
 			package: (MCPackage named: name)
